@@ -1,0 +1,3459 @@
+[
+  {
+    "tag": "discovery",
+    "dice": "d12",
+    "variants": [
+      {
+        "tag": "unnatural_feature",
+        "title": "Unnatural Feature. How does it affect its surroundings?",
+        "min": 1,
+        "max": 1,
+        "variants": [
+          {
+            "tag": "arcane",
+            "min": 1,
+            "max": 9,
+            "variants": [
+              {
+                "tag": "residue",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "blight",
+                "min": 3,
+                "max": 5
+              },
+              {
+                "tag": "alteration_mutation",
+                "title": "alteration/mutation",
+                "min": 6,
+                "max": 7
+              },
+              {
+                "tag": "enchantment",
+                "min": 8,
+                "max": 10
+              },
+              {
+                "tag": "source_repository",
+                "title": "source/repository",
+                "min": 11,
+                "max": 12
+              }
+            ],
+            "additional": [
+              "details.alignment",
+              "details.magic_type"
+            ]
+          },
+          {
+            "tag": "divine",
+            "min": 10,
+            "max": 11,
+            "variants": [
+              {
+                "tag": "distortion_warp",
+                "title": "distortion/warp",
+                "min": 1,
+                "max": 4
+              },
+              {
+                "tag": "portal_gate",
+                "title": "portal/gate",
+                "min": 5,
+                "max": 8
+              },
+              {
+                "tag": "rift_tear",
+                "title": "rift/tear",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "outpost",
+                "min": 11,
+                "max": 12
+              }
+            ],
+            "additional": [
+              "details.alignment",
+              "details.element"
+            ]
+          },
+          {
+            "tag": "planar",
+            "min": 12,
+            "max": 12,
+            "variants": [
+              {
+                "tag": "mark_sign",
+                "title": "mark/sign",
+                "min": 1,
+                "max": 3
+              },
+              {
+                "tag": "cursed place",
+                "min": 4,
+                "max": 6
+              },
+              {
+                "tag": "hallowed place",
+                "min": 7,
+                "max": 9
+              },
+              {
+                "tag": "watched place",
+                "min": 10,
+                "max": 11
+              },
+              {
+                "tag": "presence",
+                "min": 12,
+                "max": 12
+              }
+            ],
+            "additional": [
+              "details.alignment",
+              "details.aspect"
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "natural_feature",
+        "title": "Natural Feature. Describe how they notice it and what sets it apart.",
+        "min": 2,
+        "max": 4,
+        "variants": [
+          {
+            "tag": "lair",
+            "min": 1,
+            "max": 2,
+            "variants": [
+              {
+                "tag": "burrow",
+                "min": 1,
+                "max": 3
+              },
+              {
+                "tag": "cave_tunnels",
+                "title": "cave/tunnels",
+                "min": 4,
+                "max": 7
+              },
+              {
+                "tag": "nest_aerie",
+                "title": "nest/aerie",
+                "min": 8,
+                "max": 9
+              },
+              {
+                "tag": "hive",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "ruins",
+                "min": 11,
+                "max": 12,
+                "generate_outer": "discovery.structure.ruin"
+              }
+            ],
+            "additional": [
+              "creature",
+              "details.visibility"
+            ]
+          },
+          {
+            "tag": "obstacle",
+            "min": 3,
+            "max": 4,
+            "variants": [
+              {
+                "tag": "difficult_ground",
+                "title": "difficult ground (specific to terrain)",
+                "min": 1,
+                "max": 5
+              },
+              {
+                "tag": "cliff_crevasse_chasm",
+                "title": "cliff/crevasse/chasm",
+                "min": 6,
+                "max": 8
+              },
+              {
+                "tag": "ravine_gorge",
+                "title": "ravine/gorge",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "oddity",
+                "min": 11,
+                "max": 12,
+                "generate_outer": "details.oddity"
+              }
+            ]
+          },
+          {
+            "tag": "terrain_change",
+            "min": 5,
+            "max": 7,
+            "variants": [
+              {
+                "tag": "limited_area",
+                "title": "limited area of an another Terrain type",
+                "min": 1,
+                "max": 4,
+                "generate_outer": "details.terrain"
+              },
+              {
+                "tag": "crevice_hole_pit_cave",
+                "title": "crevice/hole/pit/cave",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "altitude_change",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "canyon_valley",
+                "title": "canyon/valley",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "rise_peak",
+                "title": "rise/peak in distance",
+                "min": 11,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "water_feature",
+            "min": 8,
+            "max": 9,
+            "variants": [
+              {
+                "tag": "spring_hotspring",
+                "title": "spring/hotspring",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "waterfall_geyser",
+                "title": "waterfall/geyser",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "creek_stream_brook",
+                "title": "creek/stream/brook",
+                "min": 3,
+                "max": 6
+              },
+              {
+                "tag": "pond_lake",
+                "title": "pond/lake",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "river",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "sea_ocean",
+                "title": "sea/ocean",
+                "min": 11,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "landmark",
+            "min": 10,
+            "max": 11,
+            "variants": [
+              {
+                "tag": "water_based)",
+                "title": "water-based (waterfall, geyser, etc.)",
+                "min": 1,
+                "max": 3
+              },
+              {
+                "tag": "plant_based)",
+                "title": "plant-based (ancient tree, giant flowers, etc.)",
+                "min": 4,
+                "max": 6
+              },
+              {
+                "tag": "earth_based",
+                "title": "earth-based (peak, formation, crater, etc.)",
+                "min": 7,
+                "max": 10
+              },
+              {
+                "tag": "oddity",
+                "min": 11,
+                "max": 12,
+                "generate_outer": "details.oddity"
+              }
+            ]
+          },
+          {
+            "tag": "Resource",
+            "min": 12,
+            "max": 12,
+            "variants": [
+              {
+                "tag": "game_fruit_vegetable",
+                "title": "game/fruit/vegetable",
+                "min": 1,
+                "max": 4
+              },
+              {
+                "tag": "herb_spice_dye source",
+                "title": "herb/spice/dye source",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "timber_stone",
+                "title": "timber/stone",
+                "min": 7,
+                "max": 9
+              },
+              {
+                "tag": "ore",
+                "title": "ore (copper, iron, etc.)",
+                "min": 10,
+                "max": 11
+              },
+              {
+                "tag": "precious metal/gems",
+                "title": "precious_metal",
+                "min": 12,
+                "max": 12
+              }
+            ],
+            "additional": [
+              "details.size",
+              "details.visibility"
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "evidence",
+        "title": "Evidence. Consider the implications and be ready for them to take the bait.",
+        "min": 5,
+        "max": 6,
+        "variants": [
+          {
+            "tag": "tracks_spoor",
+            "title": "Tracks/Spoor",
+            "min": 1,
+            "max": 6,
+            "variants": [
+              {
+                "tag": "faint_unclear",
+                "title": "faint/unclear",
+                "min": 1,
+                "max": 3
+              },
+              {
+                "tag": "definite_clear",
+                "title": "definite/clear",
+                "min": 4,
+                "max": 6
+              },
+              {
+                "tag": "multiple",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "signs_of_violence",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "trail_of_blood",
+                "title": "trail of blood/other",
+                "min": 11,
+                "max": 12
+              }
+            ],
+            "additional": [
+              "details.age",
+              "creature"
+            ]
+          },
+          {
+            "tag": "remains_debris",
+            "title": "Remains/Debris",
+            "min": 7,
+            "max": 10,
+            "variants": [
+              {
+                "tag": "bones",
+                "min": 1,
+                "max": 4
+              },
+              {
+                "tag": "corpse_carcass",
+                "title": "corpse/carcass",
+                "min": 5,
+                "max": 7
+              },
+              {
+                "tag": "site_of_violence",
+                "min": 8,
+                "max": 9
+              },
+              {
+                "tag": "junk_refuse",
+                "title": "junk/refuse",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "lost_supplies",
+                "title": "lost supplies/cargo",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "tools_weapons_armor",
+                "title": "tools/weapons/armor",
+                "min": 12,
+                "max": 12
+              }
+            ],
+            "additional": [
+              "details.age",
+              "details.visibility"
+            ]
+          },
+          {
+            "tag": "stash_cache",
+            "title": "Stash/Cache",
+            "min": 11,
+            "max": 12,
+            "variants": [
+              {
+                "tag": "trinkets_coins",
+                "title": "trinkets/coins",
+                "min": 1,
+                "max": 3
+              },
+              {
+                "tag": "tools_weapons_armor",
+                "title": "tools/weapons/armor",
+                "min": 4,
+                "max": 5
+              },
+              {
+                "tag": "map",
+                "min": 6,
+                "max": 7
+              },
+              {
+                "tag": "food_supplies",
+                "title": "food/supplies",
+                "min": 8,
+                "max": 9
+              },
+              {
+                "tag": "treasure",
+                "min": 10,
+                "max": 12
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "creature",
+        "title": "Creature. Not an immediate threat, but might become one.",
+        "min": 7,
+        "max": 8,
+        "generate_outer": "creature"
+      },
+      {
+        "tag": "structure",
+        "title": "Structure. Who built it? Is it connected to anything else they made nearby?",
+        "min": 9,
+        "max": 12,
+        "variants": [
+          {
+            "tag": "enigmatic",
+            "min": 1,
+            "max": 1,
+            "variants": [
+              {
+                "tag": "earthworks",
+                "min": 1,
+                "max": 4
+              },
+              {
+                "tag": "megalith",
+                "min": 5,
+                "max": 8
+              },
+              {
+                "tag": "statue_idol_totem",
+                "title": "statue/idol/totem",
+                "min": 9,
+                "max": 11
+              },
+              {
+                "tag": "oddity",
+                "min": 12,
+                "max": 12,
+                "generate_outer": "details.oddity"
+              }
+            ],
+            "additional": [
+              [
+                "details.age",
+                "1d8+4"
+              ],
+              [
+                "details.size",
+                "1d8+4"
+              ],
+              "details.visibility"
+            ]
+          },
+          {
+            "tag": "infrastructure",
+            "min": 2,
+            "max": 3,
+            "variants": [
+              {
+                "tag": "track_path",
+                "title": "track/path",
+                "min": 1,
+                "max": 4
+              },
+              {
+                "tag": "road",
+                "min": 5,
+                "max": 8
+              },
+              {
+                "tag": "bridge_ford",
+                "title": "bridge/ford",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "mine_quarry",
+                "title": "mine/quarry",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "aqueduct_canal_portal",
+                "title": "aqueduct/canal/portal",
+                "min": 12,
+                "max": 12
+              }
+            ],
+            "additional": [
+              [
+                "creature",
+                "1d4+4"
+              ]
+            ]
+          },
+          {
+            "tag": "dwelling",
+            "min": 4,
+            "max": 4,
+            "variants": [
+              {
+                "tag": "campsite",
+                "min": 1,
+                "max": 3
+              },
+              {
+                "tag": "hovel_hut",
+                "title": "hovel/hut",
+                "min": 4,
+                "max": 6
+              },
+              {
+                "tag": "farm",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "inn_roadhouse",
+                "title": "inn/roadhouse",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "tower_keep_estate",
+                "title": "tower/keep/estate",
+                "min": 11,
+                "max": 12
+              }
+            ],
+            "additional": [
+              [
+                "creature",
+                "1d4+4"
+              ]
+            ]
+          },
+          {
+            "tag": "burial_religious",
+            "title": "Burial/Religious",
+            "min": 5,
+            "max": 6,
+            "variants": [
+              {
+                "tag": "grave_marker",
+                "title": "grave marker/barrow",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "graveyard_necropolis",
+                "title": "graveyard/necropolis",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "tomb_crypt",
+                "title": "tomb/crypt",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "shrine",
+                "min": 7,
+                "max": 9
+              },
+              {
+                "tag": "temple_retreat",
+                "title": "temple/retreat",
+                "min": 10,
+                "max": 11
+              },
+              {
+                "tag": "great temple",
+                "min": 12,
+                "max": 12
+              }
+            ],
+            "additional": [
+              [
+                "creature",
+                "1d4+4"
+              ],
+              "details.alignment",
+              "details.aspect"
+            ]
+          },
+          {
+            "tag": "steading",
+            "min": 7,
+            "max": 8,
+            "generate_outer": "steading"
+          },
+          {
+            "tag": "ruin",
+            "min": 9,
+            "max": 12,
+            "variants": [
+              {
+                "tag": "infrastructure",
+                "min": 1,
+                "max": 2,
+                "additional": [
+                  [
+                    "discovery.structure.infrastructure",
+                    "1d6+6"
+                  ]
+                ]
+              },
+              {
+                "tag": "dwelling",
+                "min": 3,
+                "max": 4,
+                "additional": [
+                  [
+                    "discovery.structure.dwelling",
+                    "1d8+4"
+                  ]
+                ]
+              },
+              {
+                "tag": "burial_religious",
+                "title": "Burial/Religious",
+                "min": 5,
+                "max": 6,
+                "additional": [
+                  [
+                    "discovery.structure.burial_religious",
+                    "1d8+4"
+                  ]
+                ]
+              },
+              {
+                "tag": "steading",
+                "min": 7,
+                "max": 8,
+                "additional": [
+                  [
+                    "steading",
+                    "1d10+2"
+                  ]
+                ]
+              },
+              {
+                "tag": "dungeon",
+                "min": 9,
+                "max": 12,
+                "additional": [
+                  "dungeon"
+                ]
+              }
+            ],
+            "additional": [
+              [
+                "creature",
+                "1d4+4"
+              ],
+              [
+                "details.age",
+                "1d8+4"
+              ],
+              "details.ruination",
+              "details.visibility"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "danger",
+    "dice": "d12",
+    "variants": [
+      {
+        "tag": "unnatural_entity",
+        "title": "Unnatural Entity. Describe it—creepy, twisted, awe-inspiring.",
+        "min": 1,
+        "max": 1,
+        "variants": [
+          {
+            "tag": "undead",
+            "min": 1,
+            "max": 8,
+            "variants": [
+              {
+                "tag": "haunt_wisp",
+                "title": "haunt/wisp",
+                "min": 1,
+                "max": 4
+              },
+              {
+                "tag": "ghost_spectre",
+                "title": "ghost/spectre",
+                "min": 5,
+                "max": 8
+              },
+              {
+                "tag": "banshee",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "wraith_wight",
+                "title": "wraith/wight",
+                "min": 10,
+                "max": 11
+              },
+              {
+                "tag": "spirit_lord",
+                "title": "spirit lord/master",
+                "min": 12,
+                "max": 12
+              }
+            ],
+            "additional": [
+              "details.ability",
+              "details.activity",
+              "details.alignment",
+              "details.disposition"
+            ]
+          },
+          {
+            "tag": "planar",
+            "min": 9,
+            "max": 11,
+            "variants": [
+              {
+                "tag": "imp",
+                "title": "imp (Small)",
+                "min": 1,
+                "max": 3
+              },
+              {
+                "tag": "lesser_elemental",
+                "min": 4,
+                "max": 6
+              },
+              {
+                "tag": "lesser_demon",
+                "title": "lesser demon/horror",
+                "min": 7,
+                "max": 9
+              },
+              {
+                "tag": "greater_elemental",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "greater_demon",
+                "title": "greater demon/horror",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "devil",
+                "title": "devil/elemental lord",
+                "min": 12,
+                "max": 12
+              }
+            ],
+            "additional": [
+              "details.ability",
+              "details.activity",
+              "details.alignment",
+              "details.disposition",
+              "details.element",
+              "details.feature",
+              "details.tags"
+            ]
+          },
+          {
+            "tag": "divine",
+            "min": 12,
+            "max": 12,
+            "variants": [
+              {
+                "tag": "agent",
+                "min": 1,
+                "max": 5
+              },
+              {
+                "tag": "champion",
+                "min": 6,
+                "max": 9
+              },
+              {
+                "tag": "army",
+                "title": "army (Horde)",
+                "min": 10,
+                "max": 11
+              },
+              {
+                "tag": "avatar",
+                "min": 12,
+                "max": 12
+              }
+            ],
+            "additional": [
+              "details.ability",
+              "details.activity",
+              "details.alignment",
+              "details.aspect",
+              "details.disposition",
+              "details.element",
+              "details.feature",
+              "details.tags"
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "hazard",
+        "title": "Hazard . Threaten them (or their stuff).",
+        "min": 2,
+        "max": 6,
+        "variants": [
+          {
+            "tag": "unnatural",
+            "min": 1,
+            "max": 2,
+            "variants": [
+              {
+                "tag": "taint_blight_curse",
+                "title": "taint/blight/curse",
+                "min": 1,
+                "max": 3
+              },
+              {
+                "tag": "arcane_trap",
+                "title": "arcane trap/effect",
+                "min": 4,
+                "max": 8
+              },
+              {
+                "tag": "planar_trap",
+                "title": "taint/blight/curse",
+                "min": 9,
+                "max": 11
+              },
+              {
+                "tag": "divine",
+                "min": 12,
+                "max": 12
+              }
+            ],
+            "additional": [
+              "details.aspect",
+              "details.visibility"
+            ]
+          },
+          {
+            "tag": "natural",
+            "min": 3,
+            "max": 10,
+            "variants": [
+              {
+                "tag": "blinding_mist",
+                "title": "blinding mist/fog",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "bog_mire_quicksand",
+                "title": "bog/mire/quicksand",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "pitfall_sinkhole_chasm",
+                "title": "pitfall/sinkhole/chasm",
+                "min": 5,
+                "max": 7
+              },
+              {
+                "tag": "poison_disease",
+                "title": "poison/disease",
+                "min": 8,
+                "max": 9
+              },
+              {
+                "tag": "flood_fire_tornado",
+                "title": "flood/fire/tornado",
+                "min": 10,
+                "max": 11
+              },
+              {
+                "tag": "Oddity",
+                "min": 12,
+                "max": 12,
+                "generate_outer": "details.oddity"
+              }
+            ]
+          },
+          {
+            "tag": "trap",
+            "min": 11,
+            "max": 12,
+            "variants": [
+              {
+                "tag": "alarm",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "ensnaring_paralyzing",
+                "title": "ensnaring/paralyzing",
+                "min": 3,
+                "max": 5
+              },
+              {
+                "tag": "injurious",
+                "title": "injurious (pit, etc.)",
+                "min": 6,
+                "max": 8
+              },
+              {
+                "tag": "gas_fire_poison",
+                "title": "gas/fire/poison",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "ambush",
+                "min": 10,
+                "max": 12
+              }
+            ],
+            "additional": [
+              "creature",
+              "details.aspect",
+              "details.visibility"
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "creature",
+        "min": 7,
+        "max": 12,
+        "generate_outer": "creature"
+      }
+    ]
+  },
+  {
+    "tag": "creature",
+    "dice": "d12",
+    "variants": [
+      {
+        "tag": "beast",
+        "title": "Beast . Start with a real-world creature, then put a spin in it.",
+        "min": 1,
+        "max": 4,
+        "variants": [
+          {
+            "tag": "earthbound",
+            "min": 1,
+            "max": 7,
+            "variants": [
+              {
+                "tag": "termite_tick_louse",
+                "title": "termite/tick/louse",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "snail_slug_worm",
+                "title": "snail/slug/worm",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "ant_centipede_scorpion",
+                "title": "ant/centipede/scorpion",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "snake_lizard",
+                "title": "snake/lizard",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "vole_rat_weasel",
+                "title": "vole/rat/weasel",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "boar_pig",
+                "title": "boar/pig",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "dog_fox_wolf",
+                "title": "dog/fox/wolf",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "cat_lion_panther",
+                "title": "cat/lion/panther",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "deer_horse_camel",
+                "title": "deer/horse/camel",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "ox_rhino",
+                "title": "ox/rhino",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "bear_ape_gorilla",
+                "title": "bear/ape/gorilla",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "mammoth_dinosaur",
+                "title": "mammoth/dinosaur",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "airborne",
+            "min": 8,
+            "max": 10,
+            "variants": [
+              {
+                "tag": "mosquito_firefly",
+                "title": "mosquito/firefly",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "locust_dragonfly_moth",
+                "title": "locust/dragonfly/moth",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "bee_wasp",
+                "title": "bee/wasp",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "chicken_duck_goose",
+                "title": "chicken/duck/goose",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "songbird_parrot",
+                "title": "songbird/parrot",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "gull_waterbird",
+                "title": "gull/waterbird",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "heron_crane_stork",
+                "title": "heron/crane/stork",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "crow_raven",
+                "title": "crow/raven",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "hawk_falcon",
+                "title": "hawk/falcon",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "eagle_owl",
+                "title": "eagle/owl",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "condor",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "pteranodon",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "water_going",
+            "title": "Water-Going",
+            "min": 11,
+            "max": 12,
+            "variants": [
+              {
+                "tag": "insect",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "jelly_anemone",
+                "title": "jelly/anemone",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "clam_oyster_snail",
+                "title": "clam/oyster/snail",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "eel_snake",
+                "title": "eel/snake",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "frog_toad",
+                "title": "frog/toad",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "fish",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "crab_lobster",
+                "title": "crab/lobster",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "turtle",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "alligator_crocodile",
+                "title": "alligator/crocodile",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "dolphin_shark",
+                "title": "dolphin/shark",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "squid_octopus",
+                "title": "squid/octopus",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "whale",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          }
+        ],
+        "additional": [
+          "details.activity",
+          "details.disposition",
+          "details.no_appearing",
+          "details.size"
+        ]
+      },
+      {
+        "tag": "human",
+        "min": 5,
+        "max": 6,
+        "additional": [
+          "details.activity",
+          "details.alignment",
+          "details.disposition",
+          "details.no_appearing",
+          "details.npc_tables"
+        ]
+      },
+      {
+        "tag": "humanoid",
+        "title": "Humanoid. If you roll a classic fantasy species, adapt it to your setting.",
+        "min": 7,
+        "max": 8,
+        "variants": [
+          {
+            "tag": "common",
+            "min": 1,
+            "max": 7,
+            "variants": [
+              {
+                "tag": "halfling",
+                "title": "halfling (Small: It’s about halfling size.)",
+                "min": 1,
+                "max": 3
+              },
+              {
+                "tag": "goblin_kobold",
+                "title": "goblin/kobold (Small: It’s about halfling size.)",
+                "min": 4,
+                "max": 5
+              },
+              {
+                "tag": "dwarf_gnome",
+                "title": "dwarf/gnome (Small: It’s about halfling size.)",
+                "min": 6,
+                "max": 7
+              },
+              {
+                "tag": "orc_hobgoblin_gnoll",
+                "title": "orc/hobgoblin/gnoll",
+                "min": 8,
+                "max": 9
+              },
+              {
+                "tag": "half-elf/half-orc, etc.",
+                "title": "half-elf/half-orc, etc.",
+                "min": 10,
+                "max": 11
+              },
+              {
+                "tag": "elf",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "uncommon",
+            "min": 8,
+            "max": 10,
+            "variants": [
+              {
+                "tag": "fey",
+                "title": "fey (Tiny: It’s much smaller than a halfling.)",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "catfolk_dogfolk",
+                "title": "catfolk/dogfolk",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "lizardfolk_merfolk",
+                "title": "lizardfolk/merfolk",
+                "min": 4,
+                "max": 6
+              },
+              {
+                "tag": "birdfolk",
+                "title": "birdfolk",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "ogre_troll",
+                "title": "ogre/troll (Large: It’s much bigger than a human, about as big as a cart.)",
+                "min": 8,
+                "max": 10
+              },
+              {
+                "tag": "cyclops_giant",
+                "title": "cyclops/giant (Large: It’s much bigger than a human, about as big as a cart.)",
+                "min": 11,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "hybrid",
+            "min": 11,
+            "max": 12,
+            "variants": [
+              {
+                "tag": "centaur",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "werewolf_werebear",
+                "title": "werewolf/werebear",
+                "min": 3,
+                "max": 5
+              },
+              {
+                "tag": "werecreature",
+                "title": "werecreature (human + Beast)",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "human_beast",
+                "title": "human + Beast",
+                "min": 7,
+                "max": 10,
+                "additional": [
+                  "creature.human",
+                  "creature.beast"
+                ]
+              },
+              {
+                "tag": "human_2beast",
+                "title": "human + 2 Beast",
+                "min": 11,
+                "max": 12,
+                "additional": [
+                  "creature.human",
+                  "creature.beast",
+                  "creature.beast"
+                ]
+              }
+            ]
+          }
+        ],
+        "additional": [
+          "details.activity",
+          "details.alignment",
+          "details.disposition",
+          "details.no_appearing",
+          "details.npc_tables"
+        ]
+      },
+      {
+        "tag": "monster",
+        "title": "Monster . Give every monster life!",
+        "min": 9,
+        "max": 12,
+        "variants": [
+          {
+            "tag": "unusual",
+            "min": 1,
+            "max": 7,
+            "variants": [
+              {
+                "tag": "plant_fungus",
+                "title": "plant/fungus",
+                "min": 1,
+                "max": 3
+              },
+              {
+                "tag": "undead_human",
+                "min": 4,
+                "max": 5,
+                "generate_outer": "creature.human"
+              },
+              {
+                "tag": "undead_humanoid",
+                "min": 6,
+                "max": 6,
+                "generate_outer": "creature.humanoid"
+              },
+              {
+                "tag": "beast_beast",
+                "title": "Beast + Beast",
+                "min": 7,
+                "max": 8,
+                "additional": [
+                  "creature.beast",
+                  "creature.beast"
+                ]
+              },
+              {
+                "tag": "beast_ability",
+                "title": "Beast + Ability",
+                "min": 9,
+                "max": 10,
+                "additional": [
+                  "creature.beast",
+                  "details.ability"
+                ]
+              },
+              {
+                "tag": "Beast_Feature",
+                "title": "Beast + Feature",
+                "min": 11,
+                "max": 12,
+                "additional": [
+                  "creature.beast",
+                  "details.feature"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "rare",
+            "min": 8,
+            "max": 10,
+            "variants": [
+              {
+                "tag": "slime_ooze",
+                "title": "slime/ooze (Amorphous: Its anatomy and organs are bizarre and unnatural.)",
+                "min": 1,
+                "max": 3
+              },
+              {
+                "tag": "creation",
+                "title": "creation (Construct: It was made, not born)",
+                "min": 4,
+                "max": 6
+              },
+              {
+                "tag": "beast_oddity",
+                "title": "Beast + Oddity",
+                "min": 7,
+                "max": 9,
+                "additional": [
+                  "creature.beast",
+                  "details.oddity"
+                ]
+              },
+              {
+                "tag": "unnatural_entity",
+                "min": 10,
+                "max": 12,
+                "generate_outer": "danger.unnatural_entity"
+              }
+            ]
+          },
+          {
+            "tag": "legendary",
+            "min": 11,
+            "max": 12,
+            "variants": [
+              {
+                "tag": "dragon_colossus",
+                "title": "dragon/colossus (Huge: It’s as big as a small house or larger.)",
+                "min": 1,
+                "max": 3
+              },
+              {
+                "tag": "unusual_huge",
+                "title": "Unusual + Huge (It’s as big as a small house or larger.)",
+                "min": 4,
+                "max": 6,
+                "generate_outer": "creature.monster.unusual"
+              },
+              {
+                "tag": "rare_huge",
+                "title": "Rare + Huge (It’s as big as a small house or larger.)",
+                "min": 7,
+                "max": 9,
+                "generate_outer": "creature.monster.rare"
+              },
+              {
+                "tag": "beast_dragon",
+                "title": "Beast + dragon",
+                "min": 10,
+                "max": 10,
+                "generate_outer": "creature.beast"
+              },
+              {
+                "tag": "unusual_dragon",
+                "title": "Unusual + dragon",
+                "min": 11,
+                "max": 11,
+                "generate_outer": "creature.monster.unusual"
+              },
+              {
+                "tag": "rare_dragon",
+                "title": "Rare + dragon",
+                "min": 12,
+                "max": 12,
+                "generate_outer": "creature.monster.rare"
+              }
+            ]
+          }
+        ],
+        "additional": [
+          "details.activity",
+          "details.alignment",
+          "details.disposition",
+          "details.no_appearing",
+          "details.size"
+        ],
+        "optional": [
+          "details.ability",
+          "details.adjective",
+          "details.age",
+          "details.aspect",
+          "details.condition",
+          "details.feature",
+          "details.tags"
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "details",
+    "dice": "d12",
+    "details": [
+      {
+        "tag": "ability",
+        "variants": [
+          {
+            "tag": "bless_curse",
+            "title": "bless/curse",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "entangle_trap_snare",
+            "title": "entangle/trap/snare",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "poison_disease",
+            "title": "poison/disease",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "paralyze_petrify",
+            "title": "paralyze/petrify",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "mimic_camouflage",
+            "title": "mimic/camouflage",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "seduce_hypnotize",
+            "title": "seduce/hypnotize",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "dissolve_disintegrate",
+            "title": "dissolve/disintegrate",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "magic_type",
+            "min": 8,
+            "max": 8,
+            "generate_outer": "details.magic_type"
+          },
+          {
+            "tag": "drain_life_magic",
+            "title": "drain life/magic",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "immunity_element",
+            "title": "immunity: Element",
+            "min": 10,
+            "max": 10,
+            "additional": [
+              "details.element"
+            ]
+          },
+          {
+            "tag": "read_control_minds",
+            "title": "read/control minds",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "roll_twice_on_this_table",
+            "min": 12,
+            "max": 12,
+            "additional": [
+              "details.ability",
+              "details.ability"
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "activity",
+        "variants": [
+          {
+            "tag": "laying_trap_ambush",
+            "title": "laying trap/ambush",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "fighting_at_war",
+            "title": "fighting/at war",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "prowling_on_patrol",
+            "title": "prowling/on patrol",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "hunting_foraging",
+            "title": "hunting/foraging",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "eating_resting",
+            "title": "eating/resting",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "crafting_praying",
+            "title": "crafting/praying",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "traveling_relocating",
+            "title": "traveling/relocating",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "exploring_lost",
+            "title": "exploring/lost",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "returning_home",
+            "title": "returning home",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "building_excavating",
+            "title": "building/excavating",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "sleeping",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "dying",
+            "min": 12,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "adjective",
+        "variants": [
+          {
+            "tag": "slick_slimy",
+            "title": "slick/slimy",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "rough_hard_sharp",
+            "title": "rough/hard/sharp",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "smooth_soft_dull",
+            "title": "smooth/soft/dull",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "corroded_rusty",
+            "title": "paralyze/petrify",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "rotten_decaying",
+            "title": "rotten/decaying",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "broken_brittle",
+            "title": "broken/brittle",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "stinking_smelly",
+            "title": "stinking/smelly",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "weak_thin_drained",
+            "title": "weak/thin/drained",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "strong_fat_full",
+            "title": "strong/fat/full",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "pale_poor_shallow",
+            "title": "pale/poor/shallow",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "dark/rich/deep",
+            "title": "dark/rich/deep",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "colorful",
+            "min": 12,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "age",
+        "variants": [
+          {
+            "tag": "being_born_built",
+            "title": "being born/built",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "young_recent",
+            "title": "young/recent",
+            "min": 2,
+            "max": 4
+          },
+          {
+            "tag": "middle_aged",
+            "title": "middle-aged",
+            "min": 5,
+            "max": 7
+          },
+          {
+            "tag": "old",
+            "min": 8,
+            "max": 9
+          },
+          {
+            "tag": "ancient",
+            "min": 10,
+            "max": 11
+          },
+          {
+            "tag": "pre-historic",
+            "min": 12,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "alignment",
+        "variants": [
+          {
+            "tag": "chaotic",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "tag": "evil",
+            "min": 3,
+            "max": 4
+          },
+          {
+            "tag": "neutral",
+            "min": 5,
+            "max": 8
+          },
+          {
+            "tag": "good",
+            "min": 9,
+            "max": 10
+          },
+          {
+            "tag": "lawful",
+            "min": 11,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "aspect",
+        "variants": [
+          {
+            "tag": "power_strength",
+            "title": "power/strength",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "trickery_dexterity",
+            "title": "trickery/dexterity",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "time_constitution",
+            "title": "time/constitution",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "knowledge_intelligence",
+            "title": "knowledge/intelligence",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "nature_wisdom",
+            "title": "nature/wisdom",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "culture_charisma",
+            "title": "culture/charisma",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "war_lies_discord",
+            "title": "war/lies/discord",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "peace_truth_balance",
+            "title": "peace/truth/balance",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "hate_envy",
+            "title": "hate/envy",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "love_admiration",
+            "title": "love/admiration",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "element",
+            "min": 11,
+            "max": 11,
+            "generate_outer": "details.element"
+          },
+          {
+            "tag": "roll_twice_on_this_table",
+            "min": 12,
+            "max": 12,
+            "additional": [
+              "details.aspect",
+              "details.aspect"
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "condition",
+        "variants": [
+          {
+            "tag": "being_born_built",
+            "title": "being born/built",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "intact_healthy_stable",
+            "title": "intact/healthy/stable",
+            "min": 2,
+            "max": 4
+          },
+          {
+            "tag": "occupied_active_alert",
+            "title": "occupied/active/alert",
+            "min": 5,
+            "max": 7
+          },
+          {
+            "tag": "worn_tired_weak",
+            "title": "worn/tired/weak",
+            "min": 8,
+            "max": 9
+          },
+          {
+            "tag": "vacant_lost",
+            "title": "vacant/lost",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "ruined_defiled_dying",
+            "title": "ruined/defiled/dying",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "disappeared_dead",
+            "title": "disappeared/dead",
+            "min": 12,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "disposition",
+        "variants": [
+          {
+            "tag": "attacking",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "hostile_aggressive",
+            "title": "hostile/aggressive",
+            "min": 2,
+            "max": 4
+          },
+          {
+            "tag": "cautious_doubtful",
+            "title": "cautious/doubtful",
+            "min": 5,
+            "max": 6
+          },
+          {
+            "tag": "fearful_fleeing",
+            "title": "fearful/fleeing",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "neutral",
+            "min": 8,
+            "max": 10
+          },
+          {
+            "tag": "curious_hopeful",
+            "title": "curious/hopeful",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "friendly",
+            "min": 12,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "element",
+        "variants": [
+          {
+            "tag": "air",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "tag": "earth",
+            "min": 3,
+            "max": 4
+          },
+          {
+            "tag": "fire",
+            "min": 5,
+            "max": 6
+          },
+          {
+            "tag": "water",
+            "min": 7,
+            "max": 8
+          },
+          {
+            "tag": "life",
+            "min": 9,
+            "max": 10
+          },
+          {
+            "tag": "death",
+            "min": 11,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "feature",
+        "variants": [
+          {
+            "tag": "heavily_armored",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "winged_flying",
+            "title": "winged/flying",
+            "min": 2,
+            "max": 3
+          },
+          {
+            "tag": "multiple_heads_headless",
+            "title": "multiple heads/headless",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "many_eyes_one_eye",
+            "title": "many eyes/one eye",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "many_limbs_tails",
+            "title": "many limbs/tails",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "tentacles_tendrils",
+            "title": "tentacles/tendrils",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "aspect",
+            "min": 8,
+            "max": 8,
+            "additional": [
+              "details.aspect"
+            ]
+          },
+          {
+            "tag": "element",
+            "min": 9,
+            "max": 9,
+            "additional": [
+              "details.element"
+            ]
+          },
+          {
+            "tag": "magic_type",
+            "min": 10,
+            "max": 10,
+            "additional": [
+              "details.magic_type"
+            ]
+          },
+          {
+            "tag": "oddity",
+            "min": 11,
+            "max": 11,
+            "additional": [
+              "details.oddity"
+            ]
+          },
+          {
+            "tag": "roll_twice_on_this_table",
+            "min": 12,
+            "max": 12,
+            "additional": [
+              "details.feature",
+              "details.feature"
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "magic_type",
+        "variants": [
+          {
+            "tag": "divination",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "tag": "enchantment",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "evocation",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "illusion",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "necromancy",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "summoning",
+            "min": 11,
+            "max": 11
+          }
+        ]
+      },
+      {
+        "tag": "no_appearing",
+        "variants": [
+          {
+            "tag": "solitary",
+            "title": "Solitary: It lives and fights alone.",
+            "min": 1,
+            "max": 4
+          },
+          {
+            "tag": "group",
+            "title": "Group: Usually seen in small numbers, 3–6 or so.",
+            "min": 5,
+            "max": 9,
+            "numbers": "1d6+2"
+          },
+          {
+            "tag": "horde",
+            "title": "Horde: Where there’s one, there’s more. A lot more.",
+            "min": 10,
+            "max": 12,
+            "numbers": "4d6"
+          }
+        ]
+      },
+      {
+        "tag": "oddity",
+        "variants": [
+          {
+            "tag": "weird_color_smell_sound",
+            "title": "weird color/smell/sound",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "geometric",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "web_network_system",
+            "title": "web/network/system",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "crystalline_glass_like",
+            "title": "crystalline/glass-like",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "fungal",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "gaseous_smokey",
+            "title": "gaseous/smokey",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "mirage_illusion",
+            "title": "mirage/illusion",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "volcanic_explosive",
+            "title": "volcanic/explosive",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "magnetic_repellant",
+            "title": "magnetic/repellant",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "devoid_of_life",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "unexpectedly_alive",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "roll_twice_on_this_table",
+            "min": 12,
+            "max": 12,
+            "additional": [
+              "details.oddity",
+              "details.oddity"
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "orientation",
+        "variants": [
+          {
+            "tag": "down_earthward",
+            "title": "down/earthward",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "tag": "north",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "northeast",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "east",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "southeast",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "south",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "southwest",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "west",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "northwest",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "up_skyward",
+            "title": "up/skyward",
+            "min": 11,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "ruination",
+        "variants": [
+          {
+            "tag": "arcane_disaster",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "damnation_curse",
+            "title": "damnation/curse",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "earthquake_fire_flood",
+            "title": "earthquake/fire/flood",
+            "min": 3,
+            "max": 4
+          },
+          {
+            "tag": "plague_famine_drought",
+            "title": "plague/famine/drought",
+            "min": 5,
+            "max": 6
+          },
+          {
+            "tag": "overrun_by_monsters",
+            "min": 7,
+            "max": 8
+          },
+          {
+            "tag": "war_invasion",
+            "title": "war/invasion",
+            "min": 9,
+            "max": 10
+          },
+          {
+            "tag": "depleted_resources",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "better_prospects_elsewhere",
+            "min": 12,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "size",
+        "variants": [
+          {
+            "tag": "tiny",
+            "title": "Tiny: It’s much smaller than a halfling.",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "small",
+            "title": "Small: It’s about halfling size.",
+            "min": 2,
+            "max": 3
+          },
+          {
+            "tag": "medium_sized",
+            "title": "medium-sized",
+            "min": 4,
+            "max": 9
+          },
+          {
+            "tag": "large",
+            "title": "Large: It’s much bigger than a human, about as big as a cart.",
+            "min": 10,
+            "max": 11
+          },
+          {
+            "tag": "huge",
+            "title": "Huge: It’s as big as a small house or larger.",
+            "min": 12,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "tags",
+        "variants": [
+          {
+            "tag": "Amorphous",
+            "title": "Amorphous: Its anatomy and organs are bizarre and unnatural.",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "Cautious",
+            "title": "Cautious: It prizes survival over aggression.",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "Construct",
+            "title": "Construct: It was made, not born.",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "Devious",
+            "title": "Devious: Its main danger lies beyond the simple clash of battle.",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "Intelligent",
+            "title": "Intelligent: It’s smart enough that some individuals pick up other skills. The GM can adapt the monster by adding tags to reflect specific training, like a mage or warrior.",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "Magical",
+            "title": "Magical: It is by nature magical through and through.",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "Organized",
+            "title": "Organized: It has a group structure that aids it in survival. Defeating one may cause the wrath of others. One may sound an alarm.",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "Planar",
+            "title": "Planar: It’s from beyond this world.",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "Stealthy",
+            "title": "Stealthy: It can avoid detection and prefers to attack with the element of surprise.",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "Terrifying",
+            "title": "Terrifying: Its presence and appearance evoke fear.",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "roll_twice_on_this_table",
+            "min": 12,
+            "max": 12,
+            "additional": [
+              "details.tags",
+              "details.tags"
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "terrain",
+        "variants": [
+          {
+            "tag": "wasteland_desert",
+            "title": "wasteland/desert",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "flatland_plain",
+            "title": "flatland/plain",
+            "min": 2,
+            "max": 3
+          },
+          {
+            "tag": "wetland_marsh_swamp",
+            "title": "wetland/marsh/swamp",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "woodland_forest_jungle",
+            "title": "woodland/forest/jungle",
+            "min": 5,
+            "max": 7
+          },
+          {
+            "tag": "highland_hills",
+            "min": 8,
+            "max": 9
+          },
+          {
+            "tag": "mountains",
+            "min": 10,
+            "max": 11
+          },
+          {
+            "tag": "oddity",
+            "min": 12,
+            "max": 12,
+            "generate_outer": "details.oddity"
+          }
+        ]
+      },
+      {
+        "tag": "visibility",
+        "variants": [
+          {
+            "tag": "buried_camouflaged_nigh_invisible",
+            "title": "buried/camouflaged/nigh invisible",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "tag": "partly_covered_overgrown_hidden",
+            "title": "partly covered/overgrown/hidden",
+            "min": 3,
+            "max": 6
+          },
+          {
+            "tag": "obvious_in_plain_sight",
+            "title": "obvious/in plain sight",
+            "min": 7,
+            "max": 9
+          },
+          {
+            "tag": "visible_at_near_distance",
+            "min": 10,
+            "max": 11
+          },
+          {
+            "tag": "visible_at_great_distance_focal_point",
+            "title": "visible at great distance/focal point",
+            "min": 12,
+            "max": 12
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "dungeons_content",
+    "title": "Area type & contents",
+    "dice": "d12",
+    "variants": [
+      {
+        "tag": "common_empty",
+        "title": "Common, empty (Unthemed)",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "tag": "common_danger",
+        "title": "Common, Danger (Unthemed)",
+        "min": 2,
+        "max": 2,
+        "additional": [
+          "dungeons_danger"
+        ]
+      },
+      {
+        "tag": "common_discovery_danger",
+        "title": "Common, Discovery + Danger (Unthemed)",
+        "min": 3,
+        "max": 4,
+        "additional": [
+          "dungeons_discovery",
+          "dungeons_danger"
+        ]
+      },
+      {
+        "tag": "common_discovery",
+        "title": "Common, Discovery (Unthemed)",
+        "min": 5,
+        "max": 6,
+        "additional": [
+          "dungeons_discovery"
+        ]
+      },
+      {
+        "tag": "common_danger",
+        "title": "Common, Danger (Themed)",
+        "min": 7,
+        "max": 7,
+        "additional": [
+          "dungeons_danger"
+        ]
+      },
+      {
+        "tag": "common_discovery_danger",
+        "title": "Common, Discovery + Danger (Themed)",
+        "min": 8,
+        "max": 8,
+        "additional": [
+          "dungeons_discovery",
+          "dungeons_danger"
+        ]
+      },
+      {
+        "tag": "common_discovery",
+        "title": "Common, Discovery (Themed)",
+        "min": 9,
+        "max": 9,
+        "additional": [
+          "dungeons_discovery"
+        ]
+      },
+      {
+        "tag": "unique_danger",
+        "title": "Unique, Danger (Themed)",
+        "min": 10,
+        "max": 10,
+        "additional": [
+          "dungeons_danger"
+        ]
+      },
+      {
+        "tag": "unique_discovery_danger",
+        "title": "Unique, Discovery + Danger (Themed)",
+        "min": 11,
+        "max": 11,
+        "additional": [
+          "dungeons_discovery",
+          "dungeons_danger"
+        ]
+      },
+      {
+        "tag": "unique_discovery",
+        "title": "Unique, Discovery (Themed)",
+        "min": 12,
+        "max": 12,
+        "additional": [
+          "dungeons_discovery"
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "dungeons_discovery",
+    "title": "Dungeon Discovery. A starting point: extrapolate, embellish, integrate.",
+    "dice": "d12",
+    "variants": [
+      {
+        "tag": "dressing",
+        "min": 1,
+        "max": 3,
+        "variants": [
+          {
+            "tag": "junk_debris",
+            "title": "junk/debris",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "tracks_marks",
+            "title": "tracks/marks",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "signs_of_battle",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "writing_carving",
+            "title": "writing/carving",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "warning",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "dead_creature",
+            "min": 6,
+            "max": 6,
+            "additional": [
+              "creature"
+            ]
+          },
+          {
+            "tag": "bones_remains",
+            "title": "bones/remains",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "book_scroll_map",
+            "title": "book/scroll/map",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "broken_door_wall",
+            "title": "broken door/wall",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "breeze_wind_smell",
+            "title": "breeze/wind/smell",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "lichen_moss_fungus",
+            "title": "lichen/moss/fungus",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "oddity",
+            "min": 12,
+            "max": 12,
+            "additional": [
+              "details.oddity"
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "feature",
+        "min": 4,
+        "max": 9,
+        "variants": [
+          {
+            "tag": "cave_in_collapse",
+            "title": "cave-in/collapse",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "pit_shaft_chasm",
+            "title": "pit/shaft/chasm",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "pillars_columns",
+            "title": "pillars/columns",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "locked_door_gate",
+            "title": "locked door/gate",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "alcoves_niches",
+            "title": "alcoves/niches",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "bridge_stairs_ramp",
+            "title": "bridge/stairs/ramp",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "fountain_well_pool",
+            "title": "fountain/well/pool",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "puzzle",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "altar_dais_platform",
+            "title": "altar/dais/platform",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "statue_idol",
+            "title": "statue/idol",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "magic_pool_statue_idol",
+            "title": "magic pool/statue/idol",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "connection_to_another_dungeon",
+            "min": 12,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "find",
+        "min": 10,
+        "max": 12,
+        "variants": [
+          {
+            "tag": "trinkets",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "tools",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "weapons_armor",
+            "title": "weapons/armor",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "supplies_trade goods",
+            "title": "supplies/trade goods",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "coins_gems_jewelry",
+            "title": "coins/gems/jewelry",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "poisons_potions",
+            "title": "poisons/potions",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "adventurer_captive",
+            "title": "adventurer/captive",
+            "min": 7,
+            "max": 7,
+            "additional": [
+              "creature",
+              "1d4+4"
+            ]
+          },
+          {
+            "tag": "magic_item",
+            "min": 8,
+            "max": 8,
+            "additional": [
+              "details.ability",
+              "details.magic_type"
+            ]
+          },
+          {
+            "tag": "scroll_book",
+            "title": "scroll/book",
+            "min": 9,
+            "max": 9,
+            "additional": [
+              "details.ability",
+              "details.magic_type"
+            ]
+          },
+          {
+            "tag": "magic_weapon_armor",
+            "title": "magic weapon/armor",
+            "min": 10,
+            "max": 10,
+            "additional": [
+              "details.ability",
+              "details.magic_type"
+            ]
+          },
+          {
+            "tag": "artifact",
+            "min": 11,
+            "max": 11,
+            "additional": [
+              "details.ability",
+              "details.magic_type",
+              "details.aspect"
+            ],
+            "optional": "details.element"
+          },
+          {
+            "tag": "roll_twice",
+            "min": 12,
+            "max": 12,
+            "additional": [
+              "dungeons_discovery.find",
+              "dungeons_discovery.find"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "dungeons_danger",
+    "title": "Dungeon Danger. If they would notice, show signs of an approaching threat.",
+    "dice": "d12",
+    "variants": [
+      {
+        "tag": "trap",
+        "min": 1,
+        "max": 4,
+        "variants": [
+          {
+            "tag": "alarm",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "ensnaring_paralyzing",
+            "title": "ensnaring/paralyzing",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "pit",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "crushing",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "piercing_puncturing",
+            "title": "piercing/puncturing",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "chopping_slashing",
+            "title": "chopping/slashing",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "confusing",
+            "title": "confusing (maze, etc.)",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "gas",
+            "title": "gas (poison, etc.)",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "element",
+            "min": 9,
+            "max": 9,
+            "additional": [
+              "details.element"
+            ]
+          },
+          {
+            "tag": "ambush",
+            "min": 10,
+            "max": 10,
+            "additional": [
+              "creature"
+            ]
+          },
+          {
+            "tag": "magical",
+            "min": 11,
+            "max": 11,
+            "additional": [
+              "details.ability"
+            ]
+          },
+          {
+            "tag": "roll_twice",
+            "min": 12,
+            "max": 12,
+            "additional": [
+              "dungeons_danger.trap",
+              "dungeons_danger.trap"
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "creature",
+        "min": 5,
+        "max": 11,
+        "variants": [
+          {
+            "tag": "waiting_in_ambush",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "fighting_squabbling",
+            "title": "fighting/squabbling",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "prowling_on_patrol",
+            "title": "prowling/on patrol",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "looking_for_food",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "eating_resting",
+            "title": "eating/resting",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "guarding",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "on_the_move",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "searching_scavenging",
+            "title": "searching/scavenging",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "returning_to_den",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "making_plans",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "sleeping",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "dying",
+            "min": 12,
+            "max": 12
+          }
+        ],
+        "additional": [
+          "creature"
+        ]
+      },
+      {
+        "tag": "entity",
+        "min": 12,
+        "max": 12,
+        "variants": [
+          {
+            "tag": "alien_interloper",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "vermin_lord",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "criminal_mastermind",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "warlord",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "high_priest",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "oracle",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "wizard_witch_alchemist",
+            "title": "wizard/witch/alchemist",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "monster_lord",
+            "min": 8,
+            "max": 8,
+            "additional": [
+              "creature.monster"
+            ]
+          },
+          {
+            "tag": "evil_spirit_ghost",
+            "title": "evil spirit/ghost",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "undead_lord",
+            "title": "undead lord (lich, etc.)",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "demon",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "dark_god",
+            "min": 12,
+            "max": 12
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "followers",
+    "dice": "d12",
+    "details": [
+      {
+        "tag": "competence",
+        "variants": [
+          {
+            "tag": "a_liability",
+            "title": "A liability: Quality -1, +0 tags",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "tag": "competent",
+            "title": "Competent: Quality +0, +1 tags",
+            "min": 4,
+            "max": 9
+          },
+          {
+            "tag": "fully_capable",
+            "title": "Fully capable: Quality +1, +2 tags",
+            "min": 10,
+            "max": 11
+          },
+          {
+            "tag": "exceptional",
+            "title": "Exceptional: Quality +2, +4 tags",
+            "min": 12,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "background",
+        "variants": [
+          {
+            "tag": "life_of_servitude",
+            "title": "Life of servitude/oppression: +Meek: they accept their lowly lot, and will do degrading or unreasonable things without needing to Follow Orders.",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "tag": "past_their_prime",
+            "title": "Past their prime: -1 to Quality, +1 -Wise: they know all about ____, and can roll +Quality to Spout Lore about it on your behalf. Examples: Woods-wise, Sea-wise, Herb-wise.",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "tag": "has_lived_a_life_of_danger",
+            "title": "Has lived a life of danger: +2 tags",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "tag": "unremarkable",
+            "min": 6,
+            "max": 9
+          },
+          {
+            "tag": "has_lived_a_life_of_privilege",
+            "title": "Has lived a life of privilege: +1 tag",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "specialist",
+            "title": "Specialist: +1 to Quality, -2 tags",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "roll_twice_on_this_table",
+            "min": 12,
+            "max": 12,
+            "additional": [
+              "followers.details",
+              "followers.details"
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "loyalty",
+        "variants": [
+          {
+            "tag": "0",
+            "title": "0 (little faith in leader’s cause)",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "tag": "+1",
+            "min": 3,
+            "max": 10
+          },
+          {
+            "tag": "+2",
+            "title": "+2 (great faith in leader’s cause)",
+            "min": 11,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "instinct",
+        "variants": [
+          {
+            "tag": "loot_pillage_and_burn",
+            "title": "Loot, pillage, and burn",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "hold_a_grudge_and_seek_payback",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "question_leadership_or_authority",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "lord_over_others",
+            "min": 4,
+            "max": 5
+          },
+          {
+            "tag": "act_impulsively",
+            "min": 6,
+            "max": 7
+          },
+          {
+            "tag": "give_in_to_temptation",
+            "min": 8,
+            "max": 9
+          },
+          {
+            "tag": "slack_off",
+            "min": 10,
+            "max": 11
+          },
+          {
+            "tag": "avoid_danger_or_punishment",
+            "min": 12,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "cost",
+        "variants": [
+          {
+            "tag": "Debauchery",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "Vengeance",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "Lucre",
+            "min": 3,
+            "max": 5
+          },
+          {
+            "tag": "Renown",
+            "min": 6,
+            "max": 7
+          },
+          {
+            "tag": "Glory",
+            "min": 8,
+            "max": 9
+          },
+          {
+            "tag": "Affection",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "Knowledge",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "Good",
+            "min": 12,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "hit_points",
+        "variants": [
+          {
+            "tag": "3_hp",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "tag": "6_hp",
+            "min": 4,
+            "max": 9
+          },
+          {
+            "tag": "9_hp",
+            "min": 10,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "damage_die",
+        "variants": [
+          {
+            "tag": "d4",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "tag": "d6",
+            "min": 4,
+            "max": 9
+          },
+          {
+            "tag": "d8",
+            "min": 10,
+            "max": 12
+          }
+        ]
+      }
+    ]
+  }
+]
