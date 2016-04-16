@@ -1,0 +1,28 @@
+{
+  "name": "pwinds-generator",
+  "homepage": "https://github.com/Odan316/pwinds-generator",
+  "authors": [
+    "Sergey Andreev <si.andreev316@gmail.com>"
+  ],
+  "description": "In-game entities generator for \"Perilous Winds\" RPG Ruleset",
+  "main": "index.html",
+  "keywords": [
+    "perilous",
+    "winds",
+    "generator",
+    "rpg"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-treeview": "^1.2.0",
+    "bootstrap": "^3.0.0",
+    "jquery": "^2.1.0"
+  }
+}
