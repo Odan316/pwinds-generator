@@ -46,13 +46,18 @@
     </div>
     <div class="row">
         <div class="col-md-3">
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <button id="clear" class="btn btn-danger" type="submit">Очистить</button>
+                </div>
+            </div>
             <!-- Dice roll block -->
             <div class="row">
                 <div class="col-md-12">
                     <div class="input-group form-group">
                         <input type="text" class="form-control" id="diceRoller" placeholder="{x}d{y}+{z}">
                         <div class="input-group-btn">
-                            <button class="btn btn-warning roll-dice" type="submit">Roll</button>
+                            <button class="btn btn-primary roll-dice" type="submit">Roll</button>
                         </div>
                     </div>
                 </div>
@@ -60,7 +65,8 @@
             <!-- Generator objects tree block -->
             <div class="row">
                 <div class="col-md-12">
-                    <button class="btn btn-warning generate-start" data-obj="discovery" type="submit">Сгенерить
+                    <div id="entitiesTree"></div>
+                    <!--<button class="btn btn-warning generate-start" data-obj="discovery" type="submit">Сгенерить
                         Discovery
                     </button>
                     <button class="btn btn-warning generate-start" data-obj="creature" type="submit">Сгенерить
@@ -72,8 +78,7 @@
                     <button class="btn btn-warning generate-start" data-obj="dungeons_content" type="submit">
                         Сгенерить
                         Dungeons content
-                    </button>
-                    <button id="clear" class="btn btn-danger" type="submit">Очистить</button>
+                    </button>-->
                 </div>
             </div>
         </div>
@@ -90,6 +95,7 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="vendor/jquery/dist/jquery.min.js"></script>
 <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="vendor/bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="js/ie10-viewport-bug-workaround.js"></script>
 <script src="js/scripts.js"></script>

@@ -4,10 +4,12 @@ $(function () {
         generator.objects = data;
     });
 
-    $(".generate-start").on("click", function () {
+    $('#entitiesTree').treeview({data: generator.getEntitiesTree()});
+
+    $(document).on("click", ".generate-start", function () {
         var obj = $(this).data('obj');
         var generated = generator.generate(obj);
-        $(this).parents('#home').find(".output").prepend(generated);
+        $(".output").prepend(generated);
     });
 
     $("#clear").on("click", function () {
@@ -219,6 +221,47 @@ function Generator() {
         var rand = min - 0.5 + Math.random() * (max - min + 1);
         rand = Math.round(rand);
         return rand;
+    };
+
+    this.getEntitiesTree = function() {
+        var tree = [
+            {
+                text: "<button class='btn btn-warning generate-start' data-obj='discovery' type='submit'>Discovery</button>",
+                nodes: [
+                    {
+                        text: "Child 1",
+                        nodes: [
+                            {
+                                text: "Grandchild 1"
+                            },
+                            {
+                                text: "Grandchild 2"
+                            }
+                        ]
+                    },
+                    {
+                        text: "Child 2"
+                    }
+                ]
+            },
+            {
+                text: "<button class='btn btn-sm btn-warning generate-start' data-obj='creature'>Creature</button>"
+            },
+            {
+                text: "<button class='btn btn-xs btn-warning generate-start' data-obj='danger'>Danger</button>"
+            },
+            {
+                text: "Dungeons content&nbsp;&nbsp;<button class='btn btn-xs btn-warning generate-start' data-obj='dungeons_content'><span class='glyphicon glyphicon-asterisk'></span></button>"
+            },
+            {
+                text: "Dungeons content&nbsp;&nbsp;<button class='btn btn-sm btn-warning generate-start' data-obj='dungeons_content'><span class='glyphicon glyphicon-flash'></span></button>"
+            },
+            {
+                text: "Dungeons content&nbsp;&nbsp;&nbsp;<button class='btn btn-warning generate-start' data-obj='dungeons_content'><span class='glyphicon glyphicon-flash'></span></button>"
+            }
+        ];
+
+        return tree;
     };
 }
 
