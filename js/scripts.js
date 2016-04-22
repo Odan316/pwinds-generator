@@ -1,12 +1,13 @@
 $(function () {
     var generator = new Generator();
     var entitiesStorage = new EntitiesStorage();
+    var dice = new Dice();
+    var outputDiv = $(".output");
 
     $.get("data/obj.json", function (data) {
         generator.objects = data;
         entitiesStorage.load(data);
         var treeHelper = new TreeViewHelper();
-        //console.log(entitiesStorage.getTree());
 
         var entitiesTree = $('#entitiesTree');
         entitiesTree.treeview({data: treeHelper.prepareTree(entitiesStorage.getTree())});
@@ -16,17 +17,17 @@ $(function () {
     $(document).on("click", ".generate-start", function () {
         var obj = $(this).data('obj');
         var generated = generator.generate(obj);
-        $(".output").prepend(generated);
+        outputDiv.prepend(generated);
     });
 
     $("#clear").on("click", function () {
-        $(".output").html("");
+        outputDiv.html("");
     });
 
     $(".roll-dice").on("click", function () {
-        var dice = $('#diceRoller').val();
-        var result = generator.roll(dice);
-        $(this).parents('#home').find(".output").prepend("<div class='generatedOutput'><span class='startingElement'>Custom roll: </span>"+result+"</div>");
+        var formula = $('#diceRoller').val();
+        var result = dice.roll(formula);
+        outputDiv.prepend("<div class='generatedOutput'><span class='startingElement'>Custom roll: </span>"+result+"</div>");
     });
 
 
@@ -573,6 +574,8 @@ function StorageLink(linkInfo) {
  * @constructor
  */
 function Dice() {
+    this.loadedDices = [];
+
     /**
      * Returns random integer via dice formula
      *
@@ -580,7 +583,7 @@ function Dice() {
      * @returns {number}
      */
     this.roll = function(diceFormula) {
-        var result = this.dices.shift();
+        var result = this.loadedDices.shift();
         if (result == undefined){
             var regexp = /^(\d*)d(\d+)[-+]*(\d*)$/;
             var formulaArray = diceFormula.match(regexp);
