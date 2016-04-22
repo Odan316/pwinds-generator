@@ -355,6 +355,14 @@ function Entity(){
      */
     this._variants = null;
 
+    /**
+     * List of child entities, that not generates via dices, but serves for forming tree
+     *
+     * @type {Entity[]|null}
+     * @private
+     */
+    this._details = null;
+
     this.load = function(data) {
         if("tag" in data){
             self._tag = data.tag;
@@ -371,6 +379,14 @@ function Entity(){
                 var innerEntity = new VariantEntity();
                 innerEntity.load(value);
                 self._variants.push(innerEntity);
+            });
+        }
+        if("details" in data){
+            self._details = [];
+            _.forEach(data.details, function(value){
+                var innerEntity = new Entity();
+                innerEntity.load(value);
+                self._details.push(innerEntity);
             });
         }
     };
@@ -406,6 +422,9 @@ function Entity(){
         var subTree = [];
 
         _.forEach(self._variants, function(entity){
+            subTree.push(entity.getTreeNode());
+        });
+        _.forEach(self._details, function(entity){
             subTree.push(entity.getTreeNode());
         });
 
@@ -454,13 +473,6 @@ function VariantEntity() {
      * @private
      */
     this._max = null;
-
-    /**
-     * List of
-     * @type {null}
-     * @private
-     */
-    this._details = null;
 
     /**
      * List of additional entities, calculator generates every entity from list. Each element is path to entity in tree.
