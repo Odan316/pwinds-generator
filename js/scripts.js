@@ -5,12 +5,13 @@ $(function () {
     $.get("data/obj.json", function (data) {
         generator.objects = data;
         entitiesStorage.load(data);
-        console.log(entitiesStorage);
-    });
+        var treeHelper = new TreeViewHelper();
+        //console.log(entitiesStorage.getTree());
 
-    var entitiesTree = $('#entitiesTree');
-    entitiesTree.treeview({data: generator.getEntitiesTree()});
-    entitiesTree.treeview('collapseAll', { silent: true });
+        var entitiesTree = $('#entitiesTree');
+        entitiesTree.treeview({data: treeHelper.prepareTree(entitiesStorage.getTree())});
+        entitiesTree.treeview('collapseAll', { silent: true });
+    });
 
     $(document).on("click", ".generate-start", function () {
         var obj = $(this).data('obj');
@@ -273,6 +274,10 @@ function GeneratedElement(title, tag, roll) {
     this.additionalProperties = [];
 }
 
+/**
+ * Object, that contains tree of entities and gives main functions
+ * @constructor
+ */
 function EntitiesStorage() {
     var self = this;
 
@@ -292,7 +297,21 @@ function EntitiesStorage() {
             rootEntity.load(value);
             self._rootEntities.push(rootEntity);
         });
-    }
+    };
+
+    /**
+     * Returns tree of entities
+     * @returns {Array}
+     */
+    this.getTree = function() {
+        var tree = [];
+
+        _.forEach(self._rootEntities, function(entity){
+            tree.push(entity.getTreeNode());
+        });
+
+        return tree;
+    };
 }
 
 /**
@@ -354,6 +373,61 @@ function Entity(){
                 self._variants.push(innerEntity);
             });
         }
+    };
+
+    /**
+     * Returns entity tag
+     *
+     * @returns {String|null|*}
+     */
+    this.getTag = function() {
+        return this._tag
+    };
+
+    /**
+     * Return entity title of (if it is empty) beautified tag
+     *
+     * @returns {Array}
+     */
+    this.getTitle = function() {
+        if (this._title !== null) {
+            return this._title;
+        } else {
+            return this._tag.beautifyTag();
+        }
+    };
+
+    /**
+     * Transforms _variants entities to simple subtree
+     *
+     * @returns {Array}
+     */
+    this.getSubTree = function() {
+        var subTree = [];
+
+        _.forEach(self._variants, function(entity){
+            subTree.push(entity.getTreeNode());
+        });
+
+        return subTree;
+    };
+
+    /**
+     * Transforms entity into simple array with subtree
+     *
+     * @returns {{text}}
+     */
+    this.getTreeNode = function() {
+        var node = {
+            tag: self.getTag(),
+            title: self.getTag().beautifyTag()
+        };
+        var nodes = self.getSubTree();
+        if(nodes.length > 0){
+            node.nodes = nodes;
+        }
+
+        return node;
     }
 }
 
@@ -525,6 +599,28 @@ function Dice() {
     };
 }
 
+/**
+ * Helper, that transforms simple entities tree in treeView compatible data config
+ * @constructor
+ */
+function TreeViewHelper() {
+    var self = this;
+
+    this.prepareTree = function(tree) {
+        var parsedTree = [];
+        _.forEach(tree, function(node){
+            var parsedNode = {
+                text: "<button class='btn btn-xs btn-warning generate-start' data-obj='"+node.tag+"'>"+node.title+"</button>"
+            };
+            var nodes = self.prepareTree(node.nodes);
+            if(nodes.length > 0){
+                parsedNode.nodes = nodes;
+            }
+            parsedTree.push(parsedNode);
+        });
+        return parsedTree;
+    }
+}
 
 String.prototype.capitalizeFirstLetter = function () {
     return this.charAt(0).toUpperCase() + this.slice(1);
