@@ -1,10 +1,16 @@
 $(function () {
     var generator = new Generator();
+    var entitiesStorage = new EntitiesStorage();
+
     $.get("data/obj.json", function (data) {
         generator.objects = data;
+        entitiesStorage.load(data);
+        console.log(entitiesStorage);
     });
 
-    $('#entitiesTree').treeview({data: generator.getEntitiesTree()});
+    var entitiesTree = $('#entitiesTree');
+    entitiesTree.treeview({data: generator.getEntitiesTree()});
+    entitiesTree.treeview('collapseAll', { silent: true });
 
     $(document).on("click", ".generate-start", function () {
         var obj = $(this).data('obj');
@@ -226,7 +232,7 @@ function Generator() {
     this.getEntitiesTree = function() {
         var tree = [
             {
-                text: "<button class='btn btn-warning generate-start' data-obj='discovery' type='submit'>Discovery</button>",
+                text: "<button class='btn btn-xs btn-warning generate-start' data-obj='discovery'>Discovery</button>",
                 nodes: [
                     {
                         text: "Child 1",
@@ -245,19 +251,13 @@ function Generator() {
                 ]
             },
             {
-                text: "<button class='btn btn-sm btn-warning generate-start' data-obj='creature'>Creature</button>"
+                text: "<button class='btn btn-xs btn-warning generate-start' data-obj='creature'>Creature</button>"
             },
             {
                 text: "<button class='btn btn-xs btn-warning generate-start' data-obj='danger'>Danger</button>"
             },
             {
-                text: "Dungeons content&nbsp;&nbsp;<button class='btn btn-xs btn-warning generate-start' data-obj='dungeons_content'><span class='glyphicon glyphicon-asterisk'></span></button>"
-            },
-            {
-                text: "Dungeons content&nbsp;&nbsp;<button class='btn btn-sm btn-warning generate-start' data-obj='dungeons_content'><span class='glyphicon glyphicon-flash'></span></button>"
-            },
-            {
-                text: "Dungeons content&nbsp;&nbsp;&nbsp;<button class='btn btn-warning generate-start' data-obj='dungeons_content'><span class='glyphicon glyphicon-flash'></span></button>"
+                text: "<button class='btn btn-xs btn-warning generate-start' data-obj='dungeons_content'>Dungeons content</button>"
             }
         ];
 
@@ -272,6 +272,259 @@ function GeneratedElement(title, tag, roll) {
     this.innerElement = undefined;
     this.additionalProperties = [];
 }
+
+function EntitiesStorage() {
+    var self = this;
+
+    /**
+     *
+     * List of root entities
+     *
+     * @type {Entity[]|null}
+     * @private
+     */
+    var _rootEntities = null;
+
+    this.load = function(data) {
+        self._rootEntities = [];
+        _.forEach(data, function(value){
+            var rootEntity = new Entity();
+            rootEntity.load(value);
+            self._rootEntities.push(rootEntity);
+        });
+    }
+}
+
+/**
+ * Base entity class, also serves as root entity class
+ *
+ * @constructor
+ */
+function Entity(){
+    var self = this;
+
+    /**
+     * Entity tag, for in search via path
+     *
+     * @type {String|null}
+     * @private
+     */
+    this._tag = null;
+
+    /**
+     * Entity title, for interface
+     *
+     * @type {String|null}
+     * @private
+     */
+    this._title = null;
+
+    /**
+     * Dice formula, for randomizing result from _variants
+     * Has default value as d12
+     *
+     * @type {String|null}
+     * @private
+     */
+    this._dice = "d12";
+
+    /**
+     * List of child entities, calculator rolls _dice and finds appropriate child by _min and _max
+     *
+     * @type {Entity[]|null}
+     * @private
+     */
+    this._variants = null;
+
+    this.load = function(data) {
+        if("tag" in data){
+            self._tag = data.tag;
+        }
+        if("title" in data){
+            self._title = data.title;
+        }
+        if("dice" in data){
+            self._dice = data.dice;
+        }
+        if("variants" in data){
+            self._variants = [];
+            _.forEach(data.variants, function(value){
+                var innerEntity = new VariantEntity();
+                innerEntity.load(value);
+                self._variants.push(innerEntity);
+            });
+        }
+    }
+}
+
+/**
+ * Class of child entity, that lies in entities tree (always in variants array)
+ *
+ * @constructor
+ */
+function VariantEntity() {
+    Entity.call(this);
+    var self = this;
+
+    /**
+     * Minimal dice value, when finding randomized result in _variants
+     *
+     * @type {int|null}
+     * @private
+     */
+    this._min = null;
+
+    /**
+     * Maximal dice value, when finding randomized result in _variants
+     * @type {int|null}
+     * @private
+     */
+    this._max = null;
+
+    /**
+     * List of
+     * @type {null}
+     * @private
+     */
+    this._details = null;
+
+    /**
+     * List of additional entities, calculator generates every entity from list. Each element is path to entity in tree.
+     *
+     * @type {StorageLink[]|null}
+     * @private
+     */
+    this._additional = null;
+
+    /**
+     * List of additional entities, calculator generates every entity from list. Each element is path to entity in tree.
+     *
+     * @type StorageLink[]|null}
+     * @private
+     */
+    this._optional = null;
+
+    /**
+     * Link on other entity for generating instead of child entity
+     *
+     * @type {StorageLink|null}
+     * @private
+     */
+    this._generate_outer = null;
+
+    /**
+     * Dice formula for simply add random number
+     *
+     * @type {String[]|null}
+     * @private
+     */
+    this._numbers = null;
+
+    var parentLoad = this.load;
+    this.load = function(data) {
+        parentLoad.call(this, data);
+        if("min" in data){
+            self._min = data.min;
+        }
+        if("max" in data){
+            self._max = data.max;
+        }
+        if("additional" in data){
+            self._additional = [];
+            _.forEach(data.additional, function(value){
+                self._additional.push(new StorageLink(value));
+            });
+        }
+        if("optional" in data){
+            self._optional = [];
+            _.forEach(data.optional, function(value){
+                self._optional.push(new StorageLink(value));
+            });
+        }
+        if("numbers" in data){
+            self._numbers = data.numbers;
+        }
+        if("generate_outer" in data) {
+            self._generate_outer = new StorageLink(data.generate_outer);
+        }
+    }
+}
+
+/**
+ * Link on entity in storage entities tree
+ *
+ * @param {String|Array} linkInfo
+ * @constructor
+ */
+function StorageLink(linkInfo) {
+    var self = this;
+
+    /**
+     * Path to entity
+     *
+     * @type {String|null}
+     * @private
+     */
+    var _path = null;
+
+    /**
+     * Dice for rolling, if entity must be generated
+     * @type {null}
+     * @private
+     */
+    var _dice = null;
+
+    if(_.isString(linkInfo)){
+        this._path = linkInfo.split('.');
+    } else if(_.isArray(linkInfo)){
+        this._path = linkInfo[0].split('.');
+        this._dice = linkInfo[1];
+    }
+}
+
+/**
+ * Object that can return random integer via dice formula
+ * @constructor
+ */
+function Dice() {
+    /**
+     * Returns random integer via dice formula
+     *
+     * @param {String} diceFormula with template {x}d{y}+{z} or {x}d{y}-{z}, where 'x' and 'z' are alimentary
+     * @returns {number}
+     */
+    this.roll = function(diceFormula) {
+        var result = this.dices.shift();
+        if (result == undefined){
+            var regexp = /^(\d*)d(\d+)[-+]*(\d*)$/;
+            var formulaArray = diceFormula.match(regexp);
+
+            if(formulaArray != null) {
+                var multiplier = (formulaArray[1] != "" ? formulaArray[1] : 1);
+                var addition = (formulaArray[3] != "" ? formulaArray[3] : 0);
+                var roll = randomInteger(1, parseInt(formulaArray[2]));
+
+                result = parseInt(multiplier)*roll + parseInt(addition);
+            }
+
+        }
+        return result;
+    };
+
+    /**
+     * Returns random integer in range from min to max
+     *
+     * @param {number} min
+     * @param {number} max
+     * @returns {number}
+     */
+    var randomInteger = function (min, max) {
+        var rand = min - 0.5 + Math.random() * (max - min + 1);
+        rand = Math.round(rand);
+        return rand;
+    };
+}
+
 
 String.prototype.capitalizeFirstLetter = function () {
     return this.charAt(0).toUpperCase() + this.slice(1);
