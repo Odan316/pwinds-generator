@@ -1,23 +1,25 @@
 $(function () {
-    var generator = new Generator();
-    var entitiesStorage = new EntitiesStorage();
     var dice = new Dice();
     var outputDiv = $(".output");
 
     $.get("data/obj.json", function (data) {
-        generator.objects = data;
-        entitiesStorage.load(data);
+        var generator = new Generator();
+        var entitiesStorage = new EntitiesStorage();
         var treeHelper = new TreeViewHelper();
+
+        generator.objects = data;
+
+        entitiesStorage.load(data);
 
         var entitiesTree = $('#entitiesTree');
         entitiesTree.treeview({data: treeHelper.prepareTree(entitiesStorage.getTree())});
         entitiesTree.treeview('collapseAll', { silent: true });
-    });
 
-    $(document).on("click", ".generate-start", function () {
-        var obj = $(this).data('obj');
-        var generated = generator.generate(obj);
-        outputDiv.prepend(generated);
+        $(document).on("click", ".generate-start", function () {
+            var obj = $(this).data('obj');
+            var generated = generator.generate(obj);
+            outputDiv.prepend(generated);
+        });
     });
 
     $("#clear").on("click", function () {
