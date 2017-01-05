@@ -4,21 +4,18 @@ $(function () {
 
     $.get("data/obj.json", function (data) {
         var generator = new Generator();
-        var entitiesStorage = new EntitiesStorage();
         var treeHelper = new TreeViewHelper();
 
-        generator.objects = data;
-
-        entitiesStorage.load(data);
+        generator.loadStorage(data);
 
         var entitiesTree = $('#entitiesTree');
-        entitiesTree.treeview({data: treeHelper.prepareTree(entitiesStorage.getTree())});
+        entitiesTree.treeview({data: treeHelper.prepareTree(generator.getStorage().getTree())});
         entitiesTree.treeview('collapseAll', { silent: true });
 
         $(document).on("click", ".generate-start", function () {
-            var obj = $(this).data('obj');
-            var generated = generator.generate(obj);
-            outputDiv.prepend(generated);
+            var objectToGenerate = $(this).data('obj');
+            var generatedEntity = generator.generate(objectToGenerate);
+            outputDiv.prepend(generatedEntity.toHTML());
         });
     });
 
@@ -35,7 +32,7 @@ $(function () {
 
 });
 
-function Generator() {
+function GeneratorOld() {
     this.objects = [];
     this.output = undefined;
     this.dices = [];
@@ -277,6 +274,64 @@ function GeneratedElement(title, tag, roll) {
     this.additionalProperties = [];
 }
 
+function Generator() {
+    /**
+     * Save context in closure
+     * @type {Generator}
+     */
+    var self = this;
+
+    /**
+     * Link on entities tree container
+     * @type {EntitiesStorage|null}
+     */
+    var _storage = null;
+
+    /**
+     *
+     * @param {String} entityPath Path to entity in tree. Path "obj1.obj2.obj3" will generate obj3
+     */
+    this.generate = function (entityPath) {
+        var entityLink = new StorageLink(entityPath);
+
+        var generatedEntity = new GeneratedEntity(this.getTitle(this.findObject(entityLink)));
+
+        return true;
+    };
+
+    /**
+     * Creates new EntitiesStorage and call .load to fill it with data
+     *
+     * @param {Array} data
+     */
+    this.loadStorage = function(data) {
+        _storage = new EntitiesStorage();
+        _storage.load(data);
+    };
+
+    /**
+     * Returns link on inner EntitiesStorage object
+     *
+     * @returns {EntitiesStorage|null}
+     */
+    this.getStorage = function() {
+        return _storage;
+    }
+}
+
+function GeneratedEntity(title, tag, roll) {
+    this.tag = tag;
+    this.title = title;
+    this.roll = roll;
+    this.additionalProperties = [];
+
+
+    this.toHTML = function() {
+
+    }
+}
+
+
 /**
  * Object, that contains tree of entities and gives main functions
  * @constructor
@@ -294,11 +349,11 @@ function EntitiesStorage() {
     var _rootEntities = null;
 
     this.load = function(data) {
-        self._rootEntities = [];
+        _rootEntities = [];
         _.forEach(data, function(value){
             var rootEntity = new Entity();
             rootEntity.load(value);
-            self._rootEntities.push(rootEntity);
+            _rootEntities.push(rootEntity);
         });
     };
 
@@ -309,7 +364,7 @@ function EntitiesStorage() {
     this.getTree = function() {
         var tree = [];
 
-        _.forEach(self._rootEntities, function(entity){
+        _.forEach(_rootEntities, function(entity){
             tree.push(entity.getTreeNode());
         });
 
@@ -331,7 +386,7 @@ function Entity(){
      * @type {String|null}
      * @private
      */
-    this._tag = null;
+    self._tag = null;
 
     /**
      * Entity title, for interface
@@ -339,7 +394,7 @@ function Entity(){
      * @type {String|null}
      * @private
      */
-    this._title = null;
+    self._title = null;
 
     /**
      * Dice formula, for randomizing result from _variants
@@ -348,7 +403,7 @@ function Entity(){
      * @type {String|null}
      * @private
      */
-    this._dice = "d12";
+    self._dice = "d12";
 
     /**
      * List of child entities, calculator rolls _dice and finds appropriate child by _min and _max
@@ -356,7 +411,7 @@ function Entity(){
      * @type {Entity[]|null}
      * @private
      */
-    this._variants = null;
+    self._variants = null;
 
     /**
      * List of child entities, that not generates via dices, but serves for forming tree
@@ -364,8 +419,18 @@ function Entity(){
      * @type {Entity[]|null}
      * @private
      */
-    this._details = null;
+    self._details = null;
 
+    /**
+     * Loads JSON data in Entity object
+     *
+     * @param data
+     * @param data.tag
+     * @param data.title
+     * @param data.dice
+     * @param data.variants
+     * @param data.details
+     */
     this.load = function(data) {
         if("tag" in data){
             self._tag = data.tag;
@@ -400,7 +465,7 @@ function Entity(){
      * @returns {String|null|*}
      */
     this.getTag = function() {
-        return this._tag
+        return self._tag
     };
 
     /**
@@ -409,10 +474,10 @@ function Entity(){
      * @returns {Array}
      */
     this.getTitle = function() {
-        if (this._title !== null) {
-            return this._title;
+        if (self._title !== null) {
+            return self._title;
         } else {
-            return this._tag.beautifyTag();
+            return self._tag.beautifyTag();
         }
     };
 
@@ -554,20 +619,28 @@ function StorageLink(linkInfo) {
      * @type {String|null}
      * @private
      */
-    var _path = null;
+    self._path = null;
 
     /**
      * Dice for rolling, if entity must be generated
+     *
      * @type {null}
      * @private
      */
     var _dice = null;
 
+    /**
+     * Constructor
+     */
     if(_.isString(linkInfo)){
-        this._path = linkInfo.split('.');
+        _path = linkInfo.split('.');
     } else if(_.isArray(linkInfo)){
-        this._path = linkInfo[0].split('.');
-        this._dice = linkInfo[1];
+        _path = linkInfo[0].split('.');
+        _dice = linkInfo[1];
+    }
+
+    this.getNext = function() {
+
     }
 }
 
@@ -623,13 +696,14 @@ function Dice() {
 function TreeViewHelper() {
     var self = this;
 
-    this.prepareTree = function(tree) {
+    this.prepareTree = function(tree, parentPath) {
         var parsedTree = [];
         _.forEach(tree, function(node){
+            var nodePath = parentPath != undefined ? parentPath + '.' + node.tag : node.tag;
             var parsedNode = {
-                text: "<button class='btn btn-xs btn-warning generate-start' data-obj='"+node.tag+"'>"+node.title+"</button>"
+                text: "<button class='btn btn-xs btn-warning generate-start' data-obj='"+nodePath+"'>"+node.title+"</button>"
             };
-            var nodes = self.prepareTree(node.nodes);
+            var nodes = self.prepareTree(node.nodes, nodePath);
             if(nodes.length > 0){
                 parsedNode.nodes = nodes;
             }

@@ -1,3 +1,7 @@
+h1 {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 52px;
+}
 .output {
   text-align: left;
   height: 400px;

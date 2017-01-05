@@ -1,7 +1,6 @@
 [
   {
     "tag": "discovery",
-    "dice": "d12",
     "variants": [
       {
         "tag": "unnatural_feature",
