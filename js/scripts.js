@@ -79,7 +79,7 @@ function Generator() {
 
     /**
      * Generate one new {GeneratedEntity} (function to call it recursive)
-     * @param entity {Entity}
+     * @param entity {Entity|VariantEntity}
      * @param customDice
      */
     var generateEntity = function(entity, customDice) {
@@ -97,6 +97,26 @@ function Generator() {
             generatedEntity.roll = roll;
 
             generatedEntity.variant = generateEntity(entity.getChildEntityByRoll(roll));
+        }
+
+        // Generate additional entities
+        if(entity.hasAdditional()){
+            _.forEach(entity.getAdditionalEntitiesLinks(), function(additionalEntityLink) {
+                var additionalEntity = additionalEntityLink.getEntity(self.getStorage());
+                generatedEntity.additional.push(generateEntity(additionalEntity, additionalEntityLink.getDice()));
+            });
+        }
+
+        // Generate optional entities
+        if(entity.hasOptional()){
+            _.forEach(entity.getOptionalEntitiesLinks(), function(additionalEntityLink) {
+                var additionalEntity = additionalEntityLink.getEntity(self.getStorage());
+                generatedEntity.optional.push(generateEntity(additionalEntity, additionalEntityLink.getDice()));
+            });
+        }
+
+        if(entity instanceof VariantEntity && entity.hasNumbers()){
+            generatedEntity.numbers = _dice.roll(entity.getNumbers())
         }
 
         return generatedEntity;
@@ -137,6 +157,9 @@ function GeneratedEntity(tag, title) {
     this.variant = null;
 
     this.additional = [];
+    this.optional = [];
+
+    this.numbers = null;
 }
 
 /**
@@ -236,6 +259,22 @@ function Entity(){
     var _variants = null;
 
     /**
+     * List of additional entities, calculator generates every entity from list. Each element is path to entity in tree.
+     *
+     * @type {StorageLink[]|null}
+     * @private
+     */
+    var _additional = null;
+
+    /**
+     * List of optional entities, similar to 'additional', but shows as separate block.
+     *
+     * @type StorageLink[]|null}
+     * @private
+     */
+    var _optional = null;
+
+    /**
      * Loads JSON data in Entity object
      *
      * @param data
@@ -243,6 +282,8 @@ function Entity(){
      * @param data.title
      * @param data.dice
      * @param data.variants
+     * @param data.additional
+     * @param data.optional
      */
     this.load = function(data) {
         if("tag" in data){
@@ -260,6 +301,18 @@ function Entity(){
                 var innerEntity = new VariantEntity();
                 innerEntity.load(value);
                 _variants.push(innerEntity);
+            });
+        }
+        if("additional" in data){
+            _additional = [];
+            _.forEach(data.additional, function(value){
+                _additional.push(new StorageLink(value));
+            });
+        }
+        if("optional" in data){
+            _optional = [];
+            _.forEach(data.optional, function(value){
+                _optional.push(new StorageLink(value));
             });
         }
     };
@@ -372,6 +425,38 @@ function Entity(){
      */
     this.hasVariants = function() {
         return _variants != null && _variants.length > 0;
+    };
+
+    /**
+     * Return true if entity has additional properties
+     * @returns {boolean}
+     */
+    this.hasAdditional = function() {
+        return _additional != null && _additional.length > 0;
+    };
+
+    /**
+     * Returns array of storage links for additional entities
+     * @returns {StorageLink[]|null}
+     */
+    this.getAdditionalEntitiesLinks = function() {
+        return _additional;
+    };
+
+    /**
+     * Return true if entity has optional properties
+     * @returns {boolean}
+     */
+    this.hasOptional = function() {
+        return _optional != null && _optional.length > 0;
+    };
+
+    /**
+     * Returns array of storage links for optional entities
+     * @returns {StorageLink[]|null}
+     */
+    this.getOptionalEntitiesLinks = function() {
+        return _optional;
     }
 }
 
@@ -399,22 +484,6 @@ function VariantEntity() {
     var _max = null;
 
     /**
-     * List of additional entities, calculator generates every entity from list. Each element is path to entity in tree.
-     *
-     * @type {StorageLink[]|null}
-     * @private
-     */
-    var _additional = null;
-
-    /**
-     * List of optional entities, similar to 'additional', but shows as separate block.
-     *
-     * @type StorageLink[]|null}
-     * @private
-     */
-    var _optional = null;
-
-    /**
      * Link on other entity for generating instead of child entity
      *
      * @type {StorageLink|null}
@@ -440,6 +509,14 @@ function VariantEntity() {
         return _max;
     };
 
+    this.hasNumbers = function() {
+        return _numbers != null;
+    };
+
+    this.getNumbers = function() {
+        return _numbers;
+    };
+
     /**
      * @inherit
      *
@@ -460,25 +537,13 @@ function VariantEntity() {
         if("max" in data){
             _max = data.max;
         }
-        if("additional" in data){
-            _additional = [];
-            _.forEach(data.additional, function(value){
-                _additional.push(new StorageLink(value));
-            });
-        }
-        if("optional" in data){
-            _optional = [];
-            _.forEach(data.optional, function(value){
-                _optional.push(new StorageLink(value));
-            });
-        }
         if("numbers" in data){
             _numbers = data.numbers;
         }
         if("generate_outer" in data) {
             _generate_outer = new StorageLink(data.generate_outer);
         }
-    }
+    };
 }
 
 /**
@@ -546,7 +611,7 @@ function StorageLink(linkInfo) {
  * @constructor
  */
 function Dice() {
-    this.loadedDices = [];
+    this.loadedDices = [10 ];
 
     /**
      * Returns random integer via dice formula
@@ -610,8 +675,19 @@ function TreeViewHelper() {
     }
 }
 
+/**
+ * Class for printing generated entities
+ *
+ * @constructor
+ */
 function SimplePrinter() {
 
+    /**
+     * Prints generated Entity tree
+     *
+     * @param {GeneratedEntity} generatedEntity
+     * @returns {*|jQuery|HTMLElement}
+     */
     this.printEntity = function(generatedEntity) {
         var $output = $("<div class=\"generatedOutput\">");
 
@@ -623,11 +699,19 @@ function SimplePrinter() {
         return $output;
     };
 
-    var printEntityProperties = function(generatedEntity){
+    /**
+     * Prints generated entity's properties (for calling recursive)
+     * @param {GeneratedEntity} generatedEntity
+     * @returns {*|jQuery|HTMLElement}
+     */
+    var printEntityProperties = function(generatedEntity, propertyEntity){
         var $entityPropertiesOutput = $("<div class=\"entityProperties\">");
 
         if(generatedEntity.variant != null){
             var $entityTitle = $("<h4 class=\"variantTitle\">");
+            if(propertyEntity){
+                $entityTitle.append($("<span class=\"type\">").text("" + generatedEntity.title + ": "));
+            }
             $entityTitle.append($("<span class=\"roll\">").text("(" + generatedEntity.roll + ") "));
             $entityTitle.append($("<span class=\"title\">").text(generatedEntity.variant.title));
             $entityPropertiesOutput.append($entityTitle);
@@ -635,6 +719,31 @@ function SimplePrinter() {
             $entityPropertiesOutput.append(printEntityProperties(generatedEntity.variant));
         }
 
+
+        if(generatedEntity.additional.length > 0){
+            var $subTitle = $("<h5 class=\"propertiesTitle\">").text("Additional:");
+            $entityPropertiesOutput.append($subTitle);
+            var $subProperties = $("<div class=\"entitySubProperties\">");
+            _.forEach(generatedEntity.additional, function(propertyEntity){
+                $subProperties.append(printEntityProperties(propertyEntity, true));
+            });
+            $entityPropertiesOutput.append($subProperties);
+        }
+
+        if(generatedEntity.optional.length > 0){
+            $subTitle = $("<h5 class=\"propertiesTitle\">").text("Optional:");
+            $entityPropertiesOutput.append($subTitle);
+            $subProperties = $("<div class=\"entitySubProperties\">");
+            _.forEach(generatedEntity.optional, function(propertyEntity){
+                $subProperties.append(printEntityProperties(propertyEntity, true));
+            });
+            $entityPropertiesOutput.append($subProperties);
+        }
+
+        if(generatedEntity.numbers != null){
+            $subTitle = $("<h5 class=\"propertiesTitle\">").text("Numbers: " + generatedEntity.numbers);
+            $entityPropertiesOutput.append($subTitle);
+        }
 
         return $entityPropertiesOutput;
     };
