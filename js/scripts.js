@@ -83,40 +83,50 @@ function Generator() {
      * @param customDice
      */
     var generateEntity = function(entity, customDice) {
+        var generatedEntity;
 
-        // Create entity object
-        var generatedEntity = new GeneratedEntity(entity.getTag(), entity.getTitle());
+        // Generate entity by outer link
+        if(entity instanceof VariantEntity && entity.hasOuterLink()){
+            var outerEntityLink = entity.getOuterLink();
+            var outerEntity = outerEntityLink.getEntity(self.getStorage());
+            generatedEntity = generateEntity(outerEntity, outerEntityLink.getDice());
+        } else {
 
-        // Generate variant
-        if(entity.hasVariants()){
-            if(customDice){
-                var roll = _dice.roll(customDice);
-            } else {
-                roll = _dice.roll(entity.getDice());
+            // Create entity object
+            generatedEntity = new GeneratedEntity(entity.getTag(), entity.getTitle());
+
+            // Generate variant
+            if(entity.hasVariants()){
+                if(customDice){
+                    var roll = _dice.roll(customDice);
+                } else {
+                    roll = _dice.roll(entity.getDice());
+                }
+                generatedEntity.roll = roll;
+
+                generatedEntity.variant = generateEntity(entity.getChildEntityByRoll(roll));
             }
-            generatedEntity.roll = roll;
 
-            generatedEntity.variant = generateEntity(entity.getChildEntityByRoll(roll));
-        }
+            // Generate additional entities
+            if(entity.hasAdditional()){
+                _.forEach(entity.getAdditionalEntitiesLinks(), function(additionalEntityLink) {
+                    var additionalEntity = additionalEntityLink.getEntity(self.getStorage());
+                    generatedEntity.additional.push(generateEntity(additionalEntity, additionalEntityLink.getDice()));
+                });
+            }
 
-        // Generate additional entities
-        if(entity.hasAdditional()){
-            _.forEach(entity.getAdditionalEntitiesLinks(), function(additionalEntityLink) {
-                var additionalEntity = additionalEntityLink.getEntity(self.getStorage());
-                generatedEntity.additional.push(generateEntity(additionalEntity, additionalEntityLink.getDice()));
-            });
-        }
+            // Generate optional entities
+            if(entity.hasOptional()){
+                _.forEach(entity.getOptionalEntitiesLinks(), function(additionalEntityLink) {
+                    var additionalEntity = additionalEntityLink.getEntity(self.getStorage());
+                    generatedEntity.optional.push(generateEntity(additionalEntity, additionalEntityLink.getDice()));
+                });
+            }
 
-        // Generate optional entities
-        if(entity.hasOptional()){
-            _.forEach(entity.getOptionalEntitiesLinks(), function(additionalEntityLink) {
-                var additionalEntity = additionalEntityLink.getEntity(self.getStorage());
-                generatedEntity.optional.push(generateEntity(additionalEntity, additionalEntityLink.getDice()));
-            });
-        }
-
-        if(entity instanceof VariantEntity && entity.hasNumbers()){
-            generatedEntity.numbers = _dice.roll(entity.getNumbers())
+            // Generate numbers property
+            if(entity instanceof VariantEntity && entity.hasNumbers()){
+                generatedEntity.numbers = _dice.roll(entity.getNumbers())
+            }
         }
 
         return generatedEntity;
@@ -517,6 +527,14 @@ function VariantEntity() {
         return _numbers;
     };
 
+    this.hasOuterLink = function() {
+        return _generate_outer != null;
+    };
+
+    this.getOuterLink = function() {
+        return _generate_outer;
+    };
+
     /**
      * @inherit
      *
@@ -611,7 +629,12 @@ function StorageLink(linkInfo) {
  * @constructor
  */
 function Dice() {
-    this.loadedDices = [10 ];
+    /**
+     * Property for debugging - you can set consequence of rolls
+     *
+     * @type {number[]}
+     */
+    this.loadedDices = [];
 
     /**
      * Returns random integer via dice formula
