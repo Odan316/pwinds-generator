@@ -1,6 +1,16 @@
-h1 {
+h1,
+h2,
+h3 {
   font-family: 'UnifrakturCook', cursive;
+}
+h1 {
   font-size: 52px;
+}
+h2 button {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h2 .output-clear {
+  margin-left: 15px;
 }
 .output {
   text-align: left;
@@ -11,15 +21,17 @@ h1 {
 }
 .output .generatedOutput {
   border-bottom: 1px solid black;
+  padding-bottom: 15px;
 }
-.output .generatedOutput .startingElement {
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: 20px;
+.output .generatedOutput .entityTitle {
+  text-decoration: underline;
 }
-.output .generatedOutput .innerElement {
+.output .generatedOutput .entityProperties {
   margin-left: 20px;
 }
-.output .generatedOutput .title {
+.output .generatedOutput .entityProperties .variantTitle .title {
   font-weight: bold;
+}
+.output .generatedOutput .customRollResult {
+  font-size: 42px;
 }

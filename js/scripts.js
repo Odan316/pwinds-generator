@@ -18,11 +18,11 @@ $(function () {
             var generatedEntity = generator.generate(objectToGenerate);
             console.log(generatedEntity);
 
-            outputDiv.prepend(printer.print(generatedEntity));
+            outputDiv.prepend(printer.printEntity(generatedEntity));
         });
     });
 
-    $("#clear").on("click", function () {
+    $(".output-clear").on("click", function () {
         outputDiv.html("");
     });
 
@@ -34,7 +34,7 @@ $(function () {
             $formulaInput.val(formula);
         }
         var result = dice.roll(formula);
-        outputDiv.prepend("<div class='generatedOutput'><span class='startingElement'>Custom roll: </span>"+result+"</div>");
+        outputDiv.prepend("<div class='generatedOutput'><h3 class='entityTitle'>Custom roll (" + formula + ")</h3><p class=\"customRollResult\">"+result+"</p></div>");
     });
 
 
@@ -612,13 +612,32 @@ function TreeViewHelper() {
 
 function SimplePrinter() {
 
-    this.print = function(generatedEntity) {
-        var $output = $("<div>").addClass("generatedOutput");
+    this.printEntity = function(generatedEntity) {
+        var $output = $("<div class=\"generatedOutput\">");
 
-        $output.append($('<p>').text(generatedEntity.title));
+        var $entityTitle = $("<h3 class=\"entityTitle\">").text(generatedEntity.title);
+        $output.append($entityTitle);
+
+        $output.append(printEntityProperties(generatedEntity));
 
         return $output;
-    }
+    };
+
+    var printEntityProperties = function(generatedEntity){
+        var $entityPropertiesOutput = $("<div class=\"entityProperties\">");
+
+        if(generatedEntity.variant != null){
+            var $entityTitle = $("<h4 class=\"variantTitle\">");
+            $entityTitle.append($("<span class=\"roll\">").text("(" + generatedEntity.roll + ") "));
+            $entityTitle.append($("<span class=\"title\">").text(generatedEntity.variant.title));
+            $entityPropertiesOutput.append($entityTitle);
+
+            $entityPropertiesOutput.append(printEntityProperties(generatedEntity.variant));
+        }
+
+
+        return $entityPropertiesOutput;
+    };
 }
 
 String.prototype.capitalizeFirstLetter = function () {
