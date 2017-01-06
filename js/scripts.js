@@ -5,6 +5,7 @@ $(function () {
     $.get("data/obj.json", function (data) {
         var generator = new Generator();
         var treeHelper = new TreeViewHelper();
+        var printer = new SimplePrinter();
 
         generator.loadStorage(data);
 
@@ -15,7 +16,9 @@ $(function () {
         $(document).on("click", ".generate-start", function () {
             var objectToGenerate = $(this).data('obj');
             var generatedEntity = generator.generate(objectToGenerate);
-            outputDiv.prepend(generatedEntity.toHTML());
+            console.log(generatedEntity);
+
+            outputDiv.prepend(printer.print(generatedEntity));
         });
     });
 
@@ -24,7 +27,12 @@ $(function () {
     });
 
     $(".roll-dice").on("click", function () {
-        var formula = $('#diceRoller').val();
+        var $formulaInput = $('#diceRoller');
+        var formula = $formulaInput.val();
+        if(_.isEmpty(formula)){
+            formula = "3d6";
+            $formulaInput.val(formula);
+        }
         var result = dice.roll(formula);
         outputDiv.prepend("<div class='generatedOutput'><span class='startingElement'>Custom roll: </span>"+result+"</div>");
     });
@@ -32,248 +40,11 @@ $(function () {
 
 });
 
-function GeneratorOld() {
-    this.objects = [];
-    this.output = undefined;
-    this.dices = [];
-    this.generate = function (objectName) {
-        //his.dices = [3, 5, 4];
-        var generatedElement = new GeneratedElement(this.getTitle(this.findObject(objectName)));
-
-        generatedElement.innerElement = this.generatePart(objectName);
-
-        this.output = generatedElement;
-
-        console.log(this.output);
-
-        var result = this.formatOutput();
-
-        this.output = undefined;
-
-        return result;
-    };
-    this.generatePart = function (objectsPath, tag) {
-        try {
-            var dice = "d12";
-            if ( Object.prototype.toString.call( objectsPath ) === '[object Array]' ) {
-                dice = objectsPath[1];
-                objectsPath = objectsPath[0];
-            }
-
-            var objects = this.findObjects(objectsPath);
-            if(objects.length == 0){
-                return new GeneratedElement("<span class=\"text-danger\">Нет данных для окончания генерации</span>");
-            }
-            var roll = this.roll(dice);
-            for (var i = 0; i < objects.length; i++) {
-                var object = objects[i];
-                if (object.min <= roll && object.max >= roll) {
-                    return this.handleObject(object, objectsPath, tag, roll);
-                }
-            }
-        } catch (err) {
-            console.log(err);
-            return new GeneratedElement("<span class=\"text-danger\">Here is error</span>");
-        }
-    };
-    this.handleObject = function(object, objectsPath, tag, roll) {
-        if(!object){
-            return new GeneratedElement("<span class=\"text-danger\">Нет данных для окончания генерации</span>");
-        }
-
-        var newElement = new GeneratedElement(this.getTitle(object), tag, roll);
-
-        if (object.variants) {
-            if(objectsPath != ""){
-                var realPath = objectsPath + "." + object.tag;
-            } else {
-                realPath = object.tag;
-            }
-            newElement.innerElement = this.generatePart(realPath, object.tag)
-        } else if (object.generate_outer) {
-            var innerObject = this.findObject(object.generate_outer);
-            var workingPathArr = object.generate_outer.split(".");
-            workingPathArr.pop();
-            if(workingPathArr.length > 0){
-                var workingPath = workingPathArr.join(".");
-            } else {
-                workingPath = "";
-            }
-            newElement.innerElement = this.handleObject(innerObject, workingPath);
-        }
-
-        if (object.additional) {
-            for (var j = 0; j < object.additional.length; j++) {
-                if (object.additional[j] !== undefined) {
-                    if (Object.prototype.toString.call( object.additional[j] ) === '[object Array]') {
-                        var str = object.additional[j][0];
-                    } else {
-                        str = object.additional[j];
-                    }
-                    var arr = str.split(".");
-                    newElement.additionalProperties.push(this.generatePart(object.additional[j], arr[arr.length-1]));
-                }
-            }
-        }
-
-        return newElement;
-    };
-    this.formatOutput = function () {
-        var result = $("<div class=\"generatedOutput\">");
-        var row = $("<div class=\"startingElement\">");
-        row.append($("<span>").text(this.output.title));
-        row.appendTo(result);
-
-        if (this.output.innerElement !== undefined) {
-            row = this.formatOutputPart(this.output.innerElement);
-            row.appendTo(result);
-        }
-
-        return result;
-    };
-    this.formatOutputPart = function (element) {
-        var outputPart = $("<div class=\"innerElement\">");
-        if (element.tag !== undefined) {
-            outputPart.append($("<span>").text(element.tag + ": "));
-        }
-        if (element.roll !== undefined) {
-            outputPart.append($("<span>").text(element.roll + " - "));
-        }
-        outputPart.append($("<span class=\"title\">").html(element.title));
-        if (element.innerElement !== undefined) {
-            row = this.formatOutputPart(element.innerElement);
-            row.appendTo(outputPart);
-        }
-        if (element.additionalProperties.length > 0) {
-            outputPart.append($("<p>Дополнительные свойства</p>"));
-            for (var i = 0; i < element.additionalProperties.length; i++) {
-                if (element.additionalProperties[i] !== undefined) {
-                    var row = this.formatOutputPart(element.additionalProperties[i]);
-                    row.appendTo(outputPart);
-                }
-            }
-        }
-        return outputPart;
-    };
-    this.getTitle = function (object) {
-        var title = "";
-        if (object.title !== undefined) {
-            title = object.title;
-        } else {
-            title = object.tag.beautifyTag();
-        }
-
-        if (object.descr !== undefined) {
-            title = title + " " + object.descr;
-        }
-
-        return title;
-
-    };
-    this.findObject = function (path) {
-        var pathArr = path.split(".");
-        var object;
-        var objects = this.objects;
-        for (var i = 0; i < pathArr.length; i++) {
-            var tag = pathArr[i];
-            var found = false;
-            for (var j = 0; j < objects.length; j++) {
-                if (objects[j].tag == tag) {
-                    found = true;
-                    object = objects[j];
-                    if (object.variants)
-                        objects = object.variants;
-                    else if (object.details)
-                        objects = object.details;
-                    break;
-                }
-            }
-            if (!found) {
-                console.log("Can't found obj with path '" + path + "' on step '" + tag + "'");
-                object = null;
-                break;
-            }
-        }
-        return object;
-    };
-    this.findObjects = function (path) {
-        var object = this.findObject(path);
-        if(object == null){
-            return [];
-        } else {
-            if (object.variants)
-                return object.variants;
-            else if (object.details)
-                return object.details;
-        }
-    };
-    this.roll = function (dice) {
-        var result = this.dices.shift();
-        if (result == undefined){
-            var regexp = /^(\d*)d(\d+)[-+]*(\d*)$/;
-            var found = dice.match(regexp);
-
-            if(found != null) {
-                var multiplier = (found[1] != "" ? found[1] : 1);
-                var addition = (found[3] != "" ? found[3] : 0);
-                var roll = this.randomInteger(1, parseInt(found[2]));
-
-                result = parseInt(multiplier)*roll + parseInt(addition);
-            }
-
-        }
-        return result;
-    };
-    this.randomInteger = function (min, max) {
-        var rand = min - 0.5 + Math.random() * (max - min + 1);
-        rand = Math.round(rand);
-        return rand;
-    };
-
-    this.getEntitiesTree = function() {
-        var tree = [
-            {
-                text: "<button class='btn btn-xs btn-warning generate-start' data-obj='discovery'>Discovery</button>",
-                nodes: [
-                    {
-                        text: "Child 1",
-                        nodes: [
-                            {
-                                text: "Grandchild 1"
-                            },
-                            {
-                                text: "Grandchild 2"
-                            }
-                        ]
-                    },
-                    {
-                        text: "Child 2"
-                    }
-                ]
-            },
-            {
-                text: "<button class='btn btn-xs btn-warning generate-start' data-obj='creature'>Creature</button>"
-            },
-            {
-                text: "<button class='btn btn-xs btn-warning generate-start' data-obj='danger'>Danger</button>"
-            },
-            {
-                text: "<button class='btn btn-xs btn-warning generate-start' data-obj='dungeons_content'>Dungeons content</button>"
-            }
-        ];
-
-        return tree;
-    };
-}
-
-function GeneratedElement(title, tag, roll) {
-    this.tag = tag;
-    this.title = title;
-    this.roll = roll;
-    this.innerElement = undefined;
-    this.additionalProperties = [];
-}
-
+/**
+ * Main object, that contains all data for generation and provides main methods to controller scripts
+ *
+ * @constructor
+ */
 function Generator() {
     /**
      * Save context in closure
@@ -288,15 +59,47 @@ function Generator() {
     var _storage = null;
 
     /**
+     * Dice instance
      *
+     * @type {Dice}
+     * @private
+     */
+    var _dice = new Dice();
+
+    /**
+     * Generates new {GeneratedEntity} by string path
      * @param {String} entityPath Path to entity in tree. Path "obj1.obj2.obj3" will generate obj3
      */
     this.generate = function (entityPath) {
         var entityLink = new StorageLink(entityPath);
+        var entity = entityLink.getEntity(self.getStorage());
 
-        var generatedEntity = new GeneratedEntity(this.getTitle(this.findObject(entityLink)));
+        return generateEntity(entity, entityLink.getDice());
+    };
 
-        return true;
+    /**
+     * Generate one new {GeneratedEntity} (function to call it recursive)
+     * @param entity {Entity}
+     * @param customDice
+     */
+    var generateEntity = function(entity, customDice) {
+
+        // Create entity object
+        var generatedEntity = new GeneratedEntity(entity.getTag(), entity.getTitle());
+
+        // Generate variant
+        if(entity.hasVariants()){
+            if(customDice){
+                var roll = _dice.roll(customDice);
+            } else {
+                roll = _dice.roll(entity.getDice());
+            }
+            generatedEntity.roll = roll;
+
+            generatedEntity.variant = generateEntity(entity.getChildEntityByRoll(roll));
+        }
+
+        return generatedEntity;
     };
 
     /**
@@ -319,28 +122,30 @@ function Generator() {
     }
 }
 
-function GeneratedEntity(title, tag, roll) {
+/**
+ * Object, that contains raw generated data
+ *
+ * @constructor
+ * @param tag
+ * @param title
+ */
+function GeneratedEntity(tag, title) {
     this.tag = tag;
     this.title = title;
-    this.roll = roll;
-    this.additionalProperties = [];
+    this.roll = null;
 
+    this.variant = null;
 
-    this.toHTML = function() {
-
-    }
+    this.additional = [];
 }
-
 
 /**
  * Object, that contains tree of entities and gives main functions
+ *
  * @constructor
  */
 function EntitiesStorage() {
-    var self = this;
-
     /**
-     *
      * List of root entities
      *
      * @type {Entity[]|null}
@@ -358,7 +163,7 @@ function EntitiesStorage() {
     };
 
     /**
-     * Returns tree of entities
+     * Returns simplified tree of entities
      * @returns {Array}
      */
     this.getTree = function() {
@@ -370,6 +175,25 @@ function EntitiesStorage() {
 
         return tree;
     };
+
+    /**
+     * Return entity by tag
+     *
+     * @param tag
+     * @returns {Entity}
+     */
+    this.getRootEntity = function(tag) {
+
+        var entity = _.find(_rootEntities, function(o) { return o.getTag() == tag; });
+
+        if(entity != undefined){
+            return entity;
+        } else {
+            //TODO: надо обрабатывать
+            console.log("EntitiesStorage | No root entity with tag '" + tag + "'");
+            return null;
+        }
+    }
 }
 
 /**
@@ -378,15 +202,13 @@ function EntitiesStorage() {
  * @constructor
  */
 function Entity(){
-    var self = this;
-
     /**
      * Entity tag, for in search via path
      *
      * @type {String|null}
      * @private
      */
-    self._tag = null;
+    var _tag = null;
 
     /**
      * Entity title, for interface
@@ -394,7 +216,7 @@ function Entity(){
      * @type {String|null}
      * @private
      */
-    self._title = null;
+    var _title = null;
 
     /**
      * Dice formula, for randomizing result from _variants
@@ -403,7 +225,7 @@ function Entity(){
      * @type {String|null}
      * @private
      */
-    self._dice = "d12";
+    var _dice = "d12";
 
     /**
      * List of child entities, calculator rolls _dice and finds appropriate child by _min and _max
@@ -411,15 +233,7 @@ function Entity(){
      * @type {Entity[]|null}
      * @private
      */
-    self._variants = null;
-
-    /**
-     * List of child entities, that not generates via dices, but serves for forming tree
-     *
-     * @type {Entity[]|null}
-     * @private
-     */
-    self._details = null;
+    var _variants = null;
 
     /**
      * Loads JSON data in Entity object
@@ -429,32 +243,23 @@ function Entity(){
      * @param data.title
      * @param data.dice
      * @param data.variants
-     * @param data.details
      */
     this.load = function(data) {
         if("tag" in data){
-            self._tag = data.tag;
+            _tag = data.tag;
         }
         if("title" in data){
-            self._title = data.title;
+            _title = data.title;
         }
         if("dice" in data){
-            self._dice = data.dice;
+            _dice = data.dice;
         }
         if("variants" in data){
-            self._variants = [];
+            _variants = [];
             _.forEach(data.variants, function(value){
                 var innerEntity = new VariantEntity();
                 innerEntity.load(value);
-                self._variants.push(innerEntity);
-            });
-        }
-        if("details" in data){
-            self._details = [];
-            _.forEach(data.details, function(value){
-                var innerEntity = new Entity();
-                innerEntity.load(value);
-                self._details.push(innerEntity);
+                _variants.push(innerEntity);
             });
         }
     };
@@ -462,23 +267,50 @@ function Entity(){
     /**
      * Returns entity tag
      *
-     * @returns {String|null|*}
+     * @returns {String|null}
      */
     this.getTag = function() {
-        return self._tag
+        return _tag;
     };
 
     /**
      * Return entity title of (if it is empty) beautified tag
      *
-     * @returns {Array}
+     * @returns {String|null}
      */
     this.getTitle = function() {
-        if (self._title !== null) {
-            return self._title;
+        if (_title !== null) {
+            return _title;
         } else {
-            return self._tag.beautifyTag();
+            return _tag.beautifyTag();
         }
+    };
+
+    /**
+     * Returns entity dice
+     *
+     * @returns {String|null}
+     */
+    this.getDice = function() {
+        return _dice;
+    };
+
+    /**
+     * Transforms entity into simple array with subtree
+     *
+     * @returns {{text}}
+     */
+    this.getTreeNode = function() {
+        var node = {
+            tag: this.getTag(),
+            title: this.getTag().beautifyTag()
+        };
+        var nodes = this.getSubTree();
+        if(nodes.length > 0){
+            node.nodes = nodes;
+        }
+
+        return node;
     };
 
     /**
@@ -489,10 +321,7 @@ function Entity(){
     this.getSubTree = function() {
         var subTree = [];
 
-        _.forEach(self._variants, function(entity){
-            subTree.push(entity.getTreeNode());
-        });
-        _.forEach(self._details, function(entity){
+        _.forEach(_variants, function(entity){
             subTree.push(entity.getTreeNode());
         });
 
@@ -500,21 +329,49 @@ function Entity(){
     };
 
     /**
-     * Transforms entity into simple array with subtree
+     * Return entity by tag
      *
-     * @returns {{text}}
+     * @param tag
+     * @returns {Entity}
      */
-    this.getTreeNode = function() {
-        var node = {
-            tag: self.getTag(),
-            title: self.getTag().beautifyTag()
-        };
-        var nodes = self.getSubTree();
-        if(nodes.length > 0){
-            node.nodes = nodes;
-        }
+    this.getChildEntityByTag = function(tag) {
 
-        return node;
+        var entity = _.find(_variants, function(o) { return o.getTag() == tag; });
+
+        if(entity != undefined){
+            return entity;
+        } else {
+            //TODO: надо обрабатывать
+            console.log("Entity '"+_tag+"' | No child entity with tag '" + tag + "'");
+            return null;
+        }
+    };
+
+    /**
+     * Return entity by roll
+     *
+     * @param roll
+     * @returns {Entity}
+     */
+    this.getChildEntityByRoll = function(roll) {
+
+        var entity = _.find(_variants, function(o) { return o.getMin() <= roll && o.getMax() >= roll; });
+
+        if(entity != undefined){
+            return entity;
+        } else {
+            //TODO: надо обрабатывать
+            console.log("Entity '"+_tag+"' | No child entity with roll '" + roll + "'");
+            return null;
+        }
+    };
+
+    /**
+     * Return true if entity has variants|childs
+     * @returns {boolean}
+     */
+    this.hasVariants = function() {
+        return _variants != null && _variants.length > 0;
     }
 }
 
@@ -525,7 +382,6 @@ function Entity(){
  */
 function VariantEntity() {
     Entity.call(this);
-    var self = this;
 
     /**
      * Minimal dice value, when finding randomized result in _variants
@@ -533,14 +389,14 @@ function VariantEntity() {
      * @type {int|null}
      * @private
      */
-    this._min = null;
+    var _min = null;
 
     /**
      * Maximal dice value, when finding randomized result in _variants
      * @type {int|null}
      * @private
      */
-    this._max = null;
+    var _max = null;
 
     /**
      * List of additional entities, calculator generates every entity from list. Each element is path to entity in tree.
@@ -548,15 +404,15 @@ function VariantEntity() {
      * @type {StorageLink[]|null}
      * @private
      */
-    this._additional = null;
+    var _additional = null;
 
     /**
-     * List of additional entities, calculator generates every entity from list. Each element is path to entity in tree.
+     * List of optional entities, similar to 'additional', but shows as separate block.
      *
      * @type StorageLink[]|null}
      * @private
      */
-    this._optional = null;
+    var _optional = null;
 
     /**
      * Link on other entity for generating instead of child entity
@@ -564,42 +420,63 @@ function VariantEntity() {
      * @type {StorageLink|null}
      * @private
      */
-    this._generate_outer = null;
+    var _generate_outer = null;
 
     /**
-     * Dice formula for simply add random number
+     * Dice formula that calculates in-game number of entities
      *
      * @type {String[]|null}
      * @private
      */
-    this._numbers = null;
+    var _numbers = null;
 
     var parentLoad = this.load;
+
+    this.getMin = function() {
+        return _min;
+    };
+
+    this.getMax = function() {
+        return _max;
+    };
+
+    /**
+     * @inherit
+     *
+     * @param data
+     * @param data.min
+     * @param data.max
+     * @param data.additional
+     * @param data.optional
+     * @param data.numbers
+     * @param data.generate_outer
+     */
     this.load = function(data) {
         parentLoad.call(this, data);
+
         if("min" in data){
-            self._min = data.min;
+            _min = data.min;
         }
         if("max" in data){
-            self._max = data.max;
+            _max = data.max;
         }
         if("additional" in data){
-            self._additional = [];
+            _additional = [];
             _.forEach(data.additional, function(value){
-                self._additional.push(new StorageLink(value));
+                _additional.push(new StorageLink(value));
             });
         }
         if("optional" in data){
-            self._optional = [];
+            _optional = [];
             _.forEach(data.optional, function(value){
-                self._optional.push(new StorageLink(value));
+                _optional.push(new StorageLink(value));
             });
         }
         if("numbers" in data){
-            self._numbers = data.numbers;
+            _numbers = data.numbers;
         }
         if("generate_outer" in data) {
-            self._generate_outer = new StorageLink(data.generate_outer);
+            _generate_outer = new StorageLink(data.generate_outer);
         }
     }
 }
@@ -611,15 +488,13 @@ function VariantEntity() {
  * @constructor
  */
 function StorageLink(linkInfo) {
-    var self = this;
-
     /**
      * Path to entity
      *
-     * @type {String|null}
+     * @type {Array|null}
      * @private
      */
-    self._path = null;
+    var _path = null;
 
     /**
      * Dice for rolling, if entity must be generated
@@ -627,7 +502,7 @@ function StorageLink(linkInfo) {
      * @type {null}
      * @private
      */
-    var _dice = null;
+    var _dice;
 
     /**
      * Constructor
@@ -639,13 +514,35 @@ function StorageLink(linkInfo) {
         _dice = linkInfo[1];
     }
 
-    this.getNext = function() {
+    /**
+     * Returns entity by path
+     *
+     * @param storage {EntitiesStorage}
+     */
+    this.getEntity = function(storage) {
+        var entity = storage.getRootEntity(_path[0]);
 
+        if(_path.length > 1){
+            for(var i = 1; i < _path.length; i++){
+                entity = entity.getChildEntityByTag(_path[i]);
+            }
+        }
+
+        return entity;
+    };
+
+    /**
+     * Returns custom dice formula (if set)
+     * @returns {String|null}
+     */
+    this.getDice = function() {
+        return _dice;
     }
 }
 
 /**
  * Object that can return random integer via dice formula
+ *
  * @constructor
  */
 function Dice() {
@@ -710,6 +607,17 @@ function TreeViewHelper() {
             parsedTree.push(parsedNode);
         });
         return parsedTree;
+    }
+}
+
+function SimplePrinter() {
+
+    this.print = function(generatedEntity) {
+        var $output = $("<div>").addClass("generatedOutput");
+
+        $output.append($('<p>').text(generatedEntity.title));
+
+        return $output;
     }
 }
 

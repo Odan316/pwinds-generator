@@ -1,6 +1,7 @@
 [
   {
     "tag": "discovery",
+    "dice": "d12",
     "variants": [
       {
         "tag": "unnatural_feature",
@@ -1430,7 +1431,7 @@
       },
       {
         "tag": "monster",
-        "title": "Monster . Give every monster life!",
+        "title": "Monster. Give every monster life!",
         "min": 9,
         "max": 12,
         "variants": [
@@ -1595,7 +1596,7 @@
   {
     "tag": "details",
     "dice": "d12",
-    "details": [
+    "variants": [
       {
         "tag": "ability",
         "variants": [
