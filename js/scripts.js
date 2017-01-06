@@ -67,6 +67,14 @@ function Generator() {
     var _dice = new Dice();
 
     /**
+     * Errors collection instance
+     *
+     * @type {Errors}
+     * @private
+     */
+    var _errors = new Errors();
+
+    /**
      * Generates new {GeneratedEntity} by string path
      * @param {String} entityPath Path to entity in tree. Path "obj1.obj2.obj3" will generate obj3
      */
@@ -85,13 +93,18 @@ function Generator() {
     var generateEntity = function(entity, customDice) {
         var generatedEntity;
 
+        if(entity == null){
+        // Generate error entity
+            generatedEntity = new GeneratedErrorEntity(_errors.ERROR_ENTITY_NOT_FOUND);
+
+        } else if(entity instanceof VariantEntity && entity.hasOuterLink()){
         // Generate entity by outer link
-        if(entity instanceof VariantEntity && entity.hasOuterLink()){
             var outerEntityLink = entity.getOuterLink();
             var outerEntity = outerEntityLink.getEntity(self.getStorage());
             generatedEntity = generateEntity(outerEntity, outerEntityLink.getDice());
-        } else {
 
+        } else {
+        // Generate entity by normal way
             // Create entity object
             generatedEntity = new GeneratedEntity(entity.getTag(), entity.getTitle());
 
@@ -170,6 +183,30 @@ function GeneratedEntity(tag, title) {
     this.optional = [];
 
     this.numbers = null;
+}
+
+/**
+ * Object, that contains error rather than normal generated entity
+ * @constructor
+ */
+function GeneratedErrorEntity(errorType) {
+    this.type = errorType;
+}
+
+/**
+ * Object, that contains error codes
+ * @constructor
+ */
+function Errors() {
+    this.ERROR_ENTITY_NOT_FOUND = 1;
+
+    var _errorTitles = {
+        1: "Requested entity is not found"
+    };
+
+    this.getErrorText = function(errorType) {
+        return _errorTitles[errorType];
+    };
 }
 
 /**
@@ -706,6 +743,14 @@ function TreeViewHelper() {
 function SimplePrinter() {
 
     /**
+     * Errors collection instance
+     *
+     * @type {Errors}
+     * @private
+     */
+    var _errors = new Errors();
+
+    /**
      * Prints generated Entity tree
      *
      * @param {GeneratedEntity} generatedEntity
@@ -730,42 +775,48 @@ function SimplePrinter() {
     var printEntityProperties = function(generatedEntity, propertyEntity){
         var $entityPropertiesOutput = $("<div class=\"entityProperties\">");
 
-        if(generatedEntity.variant != null){
-            var $entityTitle = $("<h4 class=\"variantTitle\">");
-            if(propertyEntity){
-                $entityTitle.append($("<span class=\"type\">").text("" + generatedEntity.title + ": "));
+        if(generatedEntity instanceof GeneratedErrorEntity){
+            var $errorTitle = $("<h4 class=\"errorTitle\">").text(_errors.getErrorText(generatedEntity.type));
+            $entityPropertiesOutput.append($errorTitle);
+        } else {
+
+            if(generatedEntity.variant != null){
+                var $entityTitle = $("<h4 class=\"variantTitle\">");
+                if(propertyEntity){
+                    $entityTitle.append($("<span class=\"type\">").text("" + generatedEntity.title + ": "));
+                }
+                $entityTitle.append($("<span class=\"roll\">").text("(" + generatedEntity.roll + ") "));
+                $entityTitle.append($("<span class=\"title\">").text(generatedEntity.variant.title));
+                $entityPropertiesOutput.append($entityTitle);
+
+                $entityPropertiesOutput.append(printEntityProperties(generatedEntity.variant));
             }
-            $entityTitle.append($("<span class=\"roll\">").text("(" + generatedEntity.roll + ") "));
-            $entityTitle.append($("<span class=\"title\">").text(generatedEntity.variant.title));
-            $entityPropertiesOutput.append($entityTitle);
-
-            $entityPropertiesOutput.append(printEntityProperties(generatedEntity.variant));
-        }
 
 
-        if(generatedEntity.additional.length > 0){
-            var $subTitle = $("<h5 class=\"propertiesTitle\">").text("Additional:");
-            $entityPropertiesOutput.append($subTitle);
-            var $subProperties = $("<div class=\"entitySubProperties\">");
-            _.forEach(generatedEntity.additional, function(propertyEntity){
-                $subProperties.append(printEntityProperties(propertyEntity, true));
-            });
-            $entityPropertiesOutput.append($subProperties);
-        }
+            if(generatedEntity.additional.length > 0){
+                var $subTitle = $("<h5 class=\"propertiesTitle\">").text("Additional:");
+                $entityPropertiesOutput.append($subTitle);
+                var $subProperties = $("<div class=\"entitySubProperties\">");
+                _.forEach(generatedEntity.additional, function(propertyEntity){
+                    $subProperties.append(printEntityProperties(propertyEntity, true));
+                });
+                $entityPropertiesOutput.append($subProperties);
+            }
 
-        if(generatedEntity.optional.length > 0){
-            $subTitle = $("<h5 class=\"propertiesTitle\">").text("Optional:");
-            $entityPropertiesOutput.append($subTitle);
-            $subProperties = $("<div class=\"entitySubProperties\">");
-            _.forEach(generatedEntity.optional, function(propertyEntity){
-                $subProperties.append(printEntityProperties(propertyEntity, true));
-            });
-            $entityPropertiesOutput.append($subProperties);
-        }
+            if(generatedEntity.optional.length > 0){
+                $subTitle = $("<h5 class=\"propertiesTitle\">").text("Optional:");
+                $entityPropertiesOutput.append($subTitle);
+                $subProperties = $("<div class=\"entitySubProperties\">");
+                _.forEach(generatedEntity.optional, function(propertyEntity){
+                    $subProperties.append(printEntityProperties(propertyEntity, true));
+                });
+                $entityPropertiesOutput.append($subProperties);
+            }
 
-        if(generatedEntity.numbers != null){
-            $subTitle = $("<h5 class=\"propertiesTitle\">").text("Numbers: " + generatedEntity.numbers);
-            $entityPropertiesOutput.append($subTitle);
+            if(generatedEntity.numbers != null){
+                $subTitle = $("<h5 class=\"propertiesTitle\">").text("Numbers: " + generatedEntity.numbers);
+                $entityPropertiesOutput.append($subTitle);
+            }
         }
 
         return $entityPropertiesOutput;
