@@ -24,6 +24,8 @@
     "bootstrap-treeview": "^1.2.0",
     "bootstrap": "^3.0.0",
     "jquery": "^2.1.0",
-    "lodash": "^4.11.1"
+    "lodash": "^4.11.1",
+    "requirejs": "^2.3.2",
+    "requirejs-plugins": "^1.0.3"
   }
 }
