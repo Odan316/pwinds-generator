@@ -1,5 +1,15 @@
 @color-error: #a94442;
 
+html, body{
+  height: 100%;
+}
+
+body {
+  & > .container-fluid{
+    min-height: 100%;
+  }
+}
+
 h1, h2, h3 {
   font-family: 'UnifrakturCook', cursive;
 }
@@ -21,7 +31,7 @@ h2 {
 
 .output{
   text-align: left;
-  height: 400px;
+  height: 700px;
   overflow-y: scroll;
   border-bottom: 1px solid black;
   border-top: 1px solid black;
