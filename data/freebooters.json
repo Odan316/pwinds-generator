@@ -637,11 +637,251 @@
       {
         "tag": "name",
         "min": 1,
-        "max": 98,
+        "max": 2,
         "generate_outer": "name"
       },
       {
         "tag": "arm",
+        "min": 3,
+        "max": 4
+      },
+      {
+        "tag": "ash",
+        "min": 5,
+        "max": 6
+      },
+      {
+        "tag": "beast",
+        "min": 7,
+        "max": 8
+      },
+      {
+        "tag": "behemoth",
+        "min": 9,
+        "max": 10
+      },
+      {
+        "tag": "blood",
+        "min": 11,
+        "max": 12
+      },
+      {
+        "tag": "child",
+        "min": 13,
+        "max": 14
+      },
+      {
+        "tag": "cinder",
+        "min": 15,
+        "max": 16
+      },
+      {
+        "tag": "corpse",
+        "min": 17,
+        "max": 18
+      },
+      {
+        "tag": "crystal",
+        "min": 19,
+        "max": 20
+      },
+      {
+        "tag": "dagger",
+        "min": 21,
+        "max": 22
+      },
+      {
+        "tag": "death",
+        "min": 23,
+        "max": 24
+      },
+      {
+        "tag": "demon",
+        "min": 25,
+        "max": 26
+      },
+      {
+        "tag": "devil",
+        "min": 27,
+        "max": 28
+      },
+      {
+        "tag": "doom",
+        "min": 29,
+        "max": 30
+      },
+      {
+        "tag": "dragon",
+        "min": 31,
+        "max": 32
+      },
+      {
+        "tag": "eye",
+        "min": 33,
+        "max": 34
+      },
+      {
+        "tag": "fear",
+        "min": 35,
+        "max": 36
+      },
+      {
+        "tag": "finger",
+        "min": 37,
+        "max": 38
+      },
+      {
+        "tag": "fire",
+        "min": 39,
+        "max": 40
+      },
+      {
+        "tag": "foot",
+        "min": 41,
+        "max": 42
+      },
+      {
+        "tag": "frog",
+        "min": 43,
+        "max": 44
+      },
+      {
+        "tag": "ghost",
+        "min": 45,
+        "max": 46
+      },
+      {
+        "tag": "giant",
+        "min": 47,
+        "max": 48
+      },
+      {
+        "tag": "goblin",
+        "min": 49,
+        "max": 50
+      },
+      {
+        "tag": "god",
+        "min": 51,
+        "max": 52
+      },
+      {
+        "tag": "hand",
+        "min": 53,
+        "max": 54
+      },
+      {
+        "tag": "head",
+        "min": 55,
+        "max": 56
+      },
+      {
+        "tag": "heart",
+        "min": 57,
+        "max": 58
+      },
+      {
+        "tag": "horror",
+        "min": 59,
+        "max": 60
+      },
+      {
+        "tag": "hero",
+        "min": 61,
+        "max": 62
+      },
+      {
+        "tag": "horn",
+        "min": 63,
+        "max": 64
+      },
+      {
+        "tag": "king",
+        "min": 65,
+        "max": 66
+      },
+      {
+        "tag": "knave",
+        "min": 67,
+        "max": 68
+      },
+      {
+        "tag": "priest",
+        "min": 69,
+        "max": 70
+      },
+      {
+        "tag": "prophet",
+        "min": 71,
+        "max": 72
+      },
+      {
+        "tag": "queen",
+        "min": 73,
+        "max": 74
+      },
+      {
+        "tag": "shard",
+        "min": 75,
+        "max": 76
+      },
+      {
+        "tag": "skull",
+        "min": 77,
+        "max": 78
+      },
+      {
+        "tag": "souls",
+        "min": 79,
+        "max": 80
+      },
+      {
+        "tag": "spear",
+        "min": 81,
+        "max": 82
+      },
+      {
+        "tag": "spirit",
+        "min": 83,
+        "max": 84
+      },
+      {
+        "tag": "stone",
+        "min": 85,
+        "max": 86
+      },
+      {
+        "tag": "sword",
+        "min": 87,
+        "max": 88
+      },
+      {
+        "tag": "troll",
+        "min": 89,
+        "max": 90
+      },
+      {
+        "tag": "warrior",
+        "min": 91,
+        "max": 92
+      },
+      {
+        "tag": "water",
+        "min": 93,
+        "max": 94
+      },
+      {
+        "tag": "witch",
+        "min": 95,
+        "max": 96
+      },
+      {
+        "tag": "wizard",
+        "min": 97,
+        "max": 98
+      },
+      {
+        "tag": "worm",
         "min": 99,
         "max": 100
       }
