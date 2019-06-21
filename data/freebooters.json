@@ -1,0 +1,134 @@
+[
+  {
+    "tag": "dungeon_name",
+    "dice": "d12",
+    "variants": [
+      {
+        "tag": "The [Place]",
+        "min": 1,
+        "max": 2,
+        "template": [
+          {
+            "static": "The"
+          },
+          {
+            "dynamic": {
+              "generate_outer": "dungeon_place"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "(The) [Adjective] [Place]",
+        "min": 3,
+        "max": 4,
+        "template": [
+          {
+            "static": "(The)"
+          },
+          {
+            "dynamic": {
+              "generate_outer": "dungeon_adjective"
+            }
+          },
+          {
+            "dynamic": {
+              "generate_outer": "dungeon_place"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "(The) [Place] of (the) [Noun]",
+        "min": 5,
+        "max": 6,
+        "template": [
+          {
+            "static": "(The)"
+          },
+          {
+            "dynamic": {
+              "generate_outer": "dungeon_place"
+            }
+          },
+          {
+            "static": "of (the)"
+          },
+          {
+            "dynamic": {
+              "generate_outer": "dungeon_noun"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "(The) [Noun]'s [Place]",
+        "min": 7,
+        "max": 8,
+        "template": [
+          {
+            "static": "(The)"
+          },
+          {
+            "dynamic": {
+              "generate_outer": "dungeon_noun"
+            }
+          },
+          {
+            "static": "'s"
+          },
+          {
+            "dynamic": {
+              "generate_outer": "dungeon_place"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "[Place] of the [Adjective] [Noun]",
+        "min": 9,
+        "max": 10,
+        "template": [
+          {
+            "dynamic": {
+              "generate_outer": "dungeon_place"
+            }
+          },
+          {
+            "static": "of the"
+          },
+          {
+            "dynamic": {
+              "generate_outer": "dungeon_adjective"
+            }
+          },
+          {
+            "dynamic": {
+              "generate_outer": "dungeon_noun"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "The [Adjective] [Noun]",
+        "min": 11,
+        "max": 12,
+        "template": [
+          {
+            "static": "The"
+          },
+          {
+            "dynamic": {
+              "generate_outer": "dungeon_adjective"
+            }
+          },
+          {
+            "dynamic": {
+              "generate_outer": "dungeon_noun"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

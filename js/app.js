@@ -6,7 +6,7 @@ define([
     'components/Generator',
     'components/TreeViewHelper',
     'components/SimplePrinter',
-    'json!/data/obj.json'
+    'json!/data/freebooters.json'
 ], function($, _, treeview, Dice, Generator, TreeViewHelper, SimplePrinter, generatorData){
     var run = function(){
         var dice = new Dice();
