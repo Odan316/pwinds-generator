@@ -636,9 +636,9 @@
     "variants": [
       {
         "tag": "name",
+        "title": "John Doe",
         "min": 1,
-        "max": 2,
-        "generate_outer": "name"
+        "max": 2
       },
       {
         "tag": "arm",
@@ -883,17 +883,6 @@
       {
         "tag": "worm",
         "min": 99,
-        "max": 100
-      }
-    ]
-  },
-  {
-    "tag": "name",
-    "dice": "d100",
-    "variants": [
-      {
-        "tag": "John Doe",
-        "min": 1,
         "max": 100
       }
     ]
