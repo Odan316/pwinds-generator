@@ -45,6 +45,14 @@ define([
          */
         var _numbers = null;
 
+        /**
+         * Static value, entity simply returns it
+         *
+         * @type {String|null}
+         * @private
+         */
+        var _static = null;
+
         var parentLoad = this.load;
 
         this.getMin = function() {
@@ -71,6 +79,14 @@ define([
             return _generate_outer;
         };
 
+        this.isStatic = function(){
+            return _static != null;
+        };
+
+        this.getStaticValue = function(){
+          return _static;
+        };
+
         /**
          * @inherit
          *
@@ -81,6 +97,7 @@ define([
          * @param data.optional
          * @param data.numbers
          * @param data.generate_outer
+         * @param data.static
          */
         this.load = function(data) {
             parentLoad.call(this, data);
@@ -96,6 +113,9 @@ define([
             }
             if("generate_outer" in data) {
                 _generate_outer = new StorageLink(data.generate_outer);
+            }
+            if("static" in data) {
+                _static = data.static;
             }
         };
     };

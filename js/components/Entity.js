@@ -45,6 +45,14 @@ define([
         var _variants = null;
 
         /**
+         * Template for generation combined entity
+         *
+         * @type {Entity[]|null}
+         * @private
+         */
+        var _template = null;
+
+        /**
          * List of additional entities, calculator generates every entity from list. Each element is path to entity in tree.
          *
          * @type {StorageLink[]|null}
@@ -99,6 +107,14 @@ define([
                 _optional = [];
                 _.forEach(data.optional, function(value){
                     _optional.push(new StorageLink(value));
+                });
+            }
+            if("template" in data){
+                _template = [];
+                _.forEach(data.template, function(value){
+                    var innerEntity = new VariantEntity();
+                    innerEntity.load(value);
+                    _template.push(innerEntity);
                 });
             }
         };
@@ -175,9 +191,9 @@ define([
          */
         this.getChildEntityByTag = function(tag) {
 
-            var entity = _.find(_variants, function(o) { return o.getTag() == tag; });
+            var entity = _.find(_variants, function(o) { return o.getTag() === tag; });
 
-            if(entity != undefined){
+            if(entity !== undefined){
                 return entity;
             } else {
                 //TODO: надо обрабатывать
@@ -196,7 +212,7 @@ define([
 
             var entity = _.find(_variants, function(o) { return o.getMin() <= roll && o.getMax() >= roll; });
 
-            if(entity != undefined){
+            if(entity !== undefined){
                 return entity;
             } else {
                 //TODO: надо обрабатывать
@@ -243,7 +259,23 @@ define([
          */
         this.getOptionalEntitiesLinks = function() {
             return _optional;
-        }
+        };
+
+        /**
+         * Returns true if entity has template for combine entities to result
+         * @returns {boolean}
+         */
+        this.hasTemplate = function() {
+            return _template != null;
+        };
+
+        /**
+         * Returns template for combine entities to result
+         * @type {Entity[]|null}
+         */
+        this.getTemplate = function() {
+            return _template;
+        };
     };
 
     return Entity;

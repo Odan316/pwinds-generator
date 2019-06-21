@@ -62,7 +62,6 @@ define([
                     $entityPropertiesOutput.append(printEntityProperties(generatedEntity.variant));
                 }
 
-
                 if(generatedEntity.additional.length > 0){
                     var $subTitle = $("<h5 class=\"propertiesTitle\">").text("Additional:");
                     $entityPropertiesOutput.append($subTitle);
@@ -91,7 +90,7 @@ define([
 
             return $entityPropertiesOutput;
         };
-    }
+    };
 
     return SimplePrinter;
 });

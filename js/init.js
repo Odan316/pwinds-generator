@@ -1,5 +1,6 @@
 requirejs.config({
     waitSeconds: 30,
+    urlArgs: "bust=" + (new Date()).getTime(),
     shim : {
         "bootstrap" : { "deps" :['jquery'] }
     },

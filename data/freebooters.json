@@ -12,9 +12,7 @@
             "static": "The"
           },
           {
-            "dynamic": {
-              "generate_outer": "dungeon_place"
-            }
+            "generate_outer": "dungeon_place"
           }
         ]
       },
@@ -27,14 +25,10 @@
             "static": "(The)"
           },
           {
-            "dynamic": {
-              "generate_outer": "dungeon_adjective"
-            }
+            "generate_outer": "dungeon_adjective"
           },
           {
-            "dynamic": {
-              "generate_outer": "dungeon_place"
-            }
+            "generate_outer": "dungeon_place"
           }
         ]
       },
@@ -47,17 +41,13 @@
             "static": "(The)"
           },
           {
-            "dynamic": {
-              "generate_outer": "dungeon_place"
-            }
+            "generate_outer": "dungeon_place"
           },
           {
             "static": "of (the)"
           },
           {
-            "dynamic": {
-              "generate_outer": "dungeon_noun"
-            }
+            "generate_outer": "dungeon_noun"
           }
         ]
       },
@@ -70,17 +60,13 @@
             "static": "(The)"
           },
           {
-            "dynamic": {
-              "generate_outer": "dungeon_noun"
-            }
+            "generate_outer": "dungeon_noun"
           },
           {
             "static": "'s"
           },
           {
-            "dynamic": {
-              "generate_outer": "dungeon_place"
-            }
+            "generate_outer": "dungeon_place"
           }
         ]
       },
@@ -90,22 +76,16 @@
         "max": 10,
         "template": [
           {
-            "dynamic": {
-              "generate_outer": "dungeon_place"
-            }
+            "generate_outer": "dungeon_place"
           },
           {
             "static": "of the"
           },
           {
-            "dynamic": {
-              "generate_outer": "dungeon_adjective"
-            }
+            "generate_outer": "dungeon_adjective"
           },
           {
-            "dynamic": {
-              "generate_outer": "dungeon_noun"
-            }
+            "generate_outer": "dungeon_noun"
           }
         ]
       },
@@ -118,16 +98,307 @@
             "static": "The"
           },
           {
-            "dynamic": {
-              "generate_outer": "dungeon_adjective"
-            }
+            "generate_outer": "dungeon_adjective"
           },
           {
-            "dynamic": {
-              "generate_outer": "dungeon_noun"
-            }
+            "generate_outer": "dungeon_noun"
           }
         ]
+      }
+    ]
+  },
+  {
+    "tag": "dungeon_place",
+    "dice": "d100",
+    "variants": [
+      {
+        "tag": "Archive",
+        "min": 1,
+        "max": 2
+      },
+      {
+        "tag": "Blight",
+        "min": 3,
+        "max": 4
+      },
+      {
+        "tag": "Boneyard",
+        "min": 5,
+        "max": 6
+      },
+      {
+        "tag": "Catacomb",
+        "min": 7,
+        "max": 8
+      },
+      {
+        "tag": "Cave(s)",
+        "min": 9,
+        "max": 10
+      },
+      {
+        "tag": "Cavern(s)",
+        "min": 11,
+        "max": 12
+      },
+      {
+        "tag": "Citadel",
+        "min": 13,
+        "max": 14
+      },
+      {
+        "tag": "Cliff",
+        "min": 15,
+        "max": 16
+      },
+      {
+        "tag": "Crack",
+        "min": 17,
+        "max": 18
+      },
+      {
+        "tag": "Crag",
+        "min": 19,
+        "max": 20
+      },
+      {
+        "tag": "Crypt",
+        "min": 21,
+        "max": 22
+      },
+      {
+        "tag": "Curse",
+        "min": 23,
+        "max": 24
+      },
+      {
+        "tag": "Deep",
+        "min": 25,
+        "max": 26
+      },
+      {
+        "tag": "Delve",
+        "min": 27,
+        "max": 28
+      },
+      {
+        "tag": "Den",
+        "min": 29,
+        "max": 30
+      },
+      {
+        "tag": "Finger",
+        "min": 31,
+        "max": 32
+      },
+      {
+        "tag": "Fist",
+        "min": 33,
+        "max": 34
+      },
+      {
+        "tag": "Fort",
+        "min": 35,
+        "max": 36
+      },
+      {
+        "tag": "Fortress",
+        "min": 37,
+        "max": 38
+      },
+      {
+        "tag": "Grave",
+        "min": 39,
+        "max": 40
+      },
+      {
+        "tag": "Haunt",
+        "min": 41,
+        "max": 42
+      },
+      {
+        "tag": "Hold",
+        "min": 43,
+        "max": 44
+      },
+      {
+        "tag": "Hole(s)",
+        "min": 45,
+        "max": 46
+      },
+      {
+        "tag": "Hollow(s)",
+        "min": 47,
+        "max": 48
+      },
+      {
+        "tag": "Home",
+        "min": 49,
+        "max": 50
+      },
+      {
+        "tag": "House",
+        "min": 51,
+        "max": 52
+      },
+      {
+        "tag": "Jaws",
+        "min": 53,
+        "max": 54
+      },
+      {
+        "tag": "Keep",
+        "min": 55,
+        "max": 56
+      },
+      {
+        "tag": "Lair",
+        "min": 57,
+        "max": 58
+      },
+      {
+        "tag": "Maw",
+        "min": 59,
+        "max": 60
+      },
+      {
+        "tag": "Maze",
+        "min": 61,
+        "max": 62
+      },
+      {
+        "tag": "Mountain",
+        "min": 63,
+        "max": 64
+      },
+      {
+        "tag": "Mouth",
+        "min": 65,
+        "max": 66
+      },
+      {
+        "tag": "Peak",
+        "min": 67,
+        "max": 68
+      },
+      {
+        "tag": "Pit",
+        "min": 69,
+        "max": 70
+      },
+      {
+        "tag": "Remnant",
+        "min": 71,
+        "max": 72
+      },
+      {
+        "tag": "Retreat",
+        "min": 73,
+        "max": 74
+      },
+      {
+        "tag": "Ruin",
+        "min": 75,
+        "max": 76
+      },
+      {
+        "tag": "Shrine",
+        "min": 77,
+        "max": 78
+      },
+      {
+        "tag": "Skull",
+        "min": 79,
+        "max": 80
+      },
+      {
+        "tag": "Spire",
+        "min": 81,
+        "max": 82
+      },
+      {
+        "tag": "Temple",
+        "min": 83,
+        "max": 84
+      },
+      {
+        "tag": "Throne",
+        "min": 85,
+        "max": 86
+      },
+      {
+        "tag": "Tomb",
+        "min": 87,
+        "max": 88
+      },
+      {
+        "tag": "Tooth",
+        "min": 89,
+        "max": 90
+      },
+      {
+        "tag": "Tower",
+        "min": 91,
+        "max": 92
+      },
+      {
+        "tag": "Tunnel(s)",
+        "min": 93,
+        "max": 94
+      },
+      {
+        "tag": "Vault",
+        "min": 95,
+        "max": 96
+      },
+      {
+        "tag": "Warren",
+        "min": 97,
+        "max": 98
+      },
+      {
+        "tag": "Wreck",
+        "min": 99,
+        "max": 100
+      }
+    ]
+  },
+  {
+    "tag": "dungeon_adjective",
+    "dice": "d100",
+    "variants": [
+      {
+        "tag": "Ancient",
+        "min": 1,
+        "max": 100
+      }
+    ]
+  },
+  {
+    "tag": "dungeon_noun",
+    "dice": "d100",
+    "variants": [
+      {
+        "tag": "name",
+        "min": 1,
+        "max": 98,
+        "generate_outer": "name"
+      },
+      {
+        "tag": "arm",
+        "min": 99,
+        "max": 100
+      }
+    ]
+  },
+  {
+    "tag": "name",
+    "dice": "d100",
+    "variants": [
+      {
+        "tag": "John Doe",
+        "min": 1,
+        "max": 100
       }
     ]
   }

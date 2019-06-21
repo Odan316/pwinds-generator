@@ -61,18 +61,44 @@ define([
          */
         var generateEntity = function(entity, customDice) {
             var generatedEntity;
+            console.log("CALL");
 
             if(entity == null){
                 // Generate error entity
                 generatedEntity = new GeneratedErrorEntity(_errors.ERROR_ENTITY_NOT_FOUND);
 
+            } else if(entity instanceof VariantEntity && entity.isStatic()) {
+                console.log("STATIC");
+                // Generate (simply return) static value
+                generatedEntity = new GeneratedEntity("static", "Static Entity");
+                generatedEntity.variant = new GeneratedEntity("static", entity.getStaticValue());
+
             } else if(entity instanceof VariantEntity && entity.hasOuterLink()){
                 // Generate entity by outer link
+                console.log("OUTER");
                 var outerEntityLink = entity.getOuterLink();
                 var outerEntity = outerEntityLink.getEntity(self.getStorage());
                 generatedEntity = generateEntity(outerEntity, outerEntityLink.getDice());
 
+            } else if(entity.hasTemplate()){
+                // Generate entity by template
+                console.log('TEMPLATE');
+                var generatedEntityTag = "";
+                _.forEach(entity.getTemplate(), function(templatePartEntity){
+                    let generatedEntityPart = generateEntity(templatePartEntity);
+                    console.log(generatedEntityPart);
+                    let glue = generatedEntityTag !== "" || generatedEntityPart.variant.title.charAt(0) !== '\'' ? " " : "";
+                    let partTitle = generatedEntityPart.variant.title;
+                    if(generatedEntityPart.variant.variant !== null){
+                        partTitle = generatedEntityPart.variant.variant.title;
+                    }
+                    generatedEntityTag += (glue + partTitle);
+                });
+
+                generatedEntity = new GeneratedEntity(generatedEntityTag, generatedEntityTag.beautifyTag());
+
             } else {
+                console.log("DEFAULT");
                 // Generate entity by normal way
                 // Create entity object
                 generatedEntity = new GeneratedEntity(entity.getTag(), entity.getTitle());
