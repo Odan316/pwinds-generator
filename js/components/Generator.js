@@ -71,7 +71,14 @@ define([
                 generatedEntity = new GeneratedEntity("static", "Static Entity");
                 generatedEntity.variant = new GeneratedEntity("static", entity.getStaticValue());
 
-            } else if(entity instanceof VariantEntity && entity.hasOuterLink()){
+            } else if(entity instanceof VariantEntity && entity.isRollResult()) {
+                // Generate (simply return) static value
+                generatedEntity = new GeneratedEntity(entity.getTag(), entity.getTitle());
+                let rollResult = _dice.roll(entity.getDiceResultFormula());
+                generatedEntity.variant = new GeneratedEntity();
+                generatedEntity.roll = rollResult;
+
+            }  else if(entity instanceof VariantEntity && entity.hasOuterLink()){
                 // Generate entity by outer link
                 var outerEntityLink = entity.getOuterLink();
                 var outerEntity = outerEntityLink.getEntity(self.getStorage());
@@ -111,9 +118,19 @@ define([
 
                 // Generate additional entities
                 if(entity.hasAdditional()){
-                    _.forEach(entity.getAdditionalEntitiesLinks(), function(additionalEntityLink) {
-                        var additionalEntity = additionalEntityLink.getEntity(self.getStorage());
-                        generatedEntity.additional.push(generateEntity(additionalEntity, additionalEntityLink.getDice()));
+                    _.forEach(entity.getAdditionalEntitiesLinks(), function(additionalEntityData) {
+                        let additionalEntity = null;
+                        let customDice = null;
+                        if(additionalEntityData instanceof StorageLink){
+                            additionalEntity = additionalEntityData.getEntity(self.getStorage());
+                            customDice = additionalEntity.getDice();
+                        } else if(additionalEntityData instanceof VariantEntity) {
+                            additionalEntity = additionalEntityData;
+                        }
+
+                        if(additionalEntity !== null){
+                            generatedEntity.additional.push(generateEntity(additionalEntity, customDice));
+                        }
                     });
                 }
 
@@ -125,7 +142,7 @@ define([
                     });
                 }
 
-                // Generate numbers property
+                // DEPRECATED! Generate numbers property
                 if(entity instanceof VariantEntity && entity.hasNumbers()){
                     generatedEntity.numbers = _dice.roll(entity.getNumbers())
                 }

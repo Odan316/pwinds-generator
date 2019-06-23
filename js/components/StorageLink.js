@@ -60,7 +60,7 @@ define([
         this.getDice = function() {
             return _dice;
         }
-    }
+    };
 
     return StorageLink;
 });
