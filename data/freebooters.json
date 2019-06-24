@@ -3,7 +3,8 @@
     "tag": "dungeon",
     "additional": [
       "dungeon.name",
-      "dungeon.size"
+      "dungeon.size",
+      "dungeon.overview"
     ],
     "dictionaries": [
       {
@@ -1277,6 +1278,107 @@
                 "additional":[
                   "dungeon.theme.grim"
                 ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "overview",
+        "additional": [
+          "dungeon.overview_situation",
+          "dungeon.overview_entrance"
+        ]
+      },
+      {
+        "tag": "overview_origin",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "caves",
+            "min": 1,
+            "max": 1,
+            "generate_outer": "origins.caves"
+          }
+        ]
+      },
+      {
+        "tag": "overview_situation",
+        "title": "Situation - Where does it sit?",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "above_ground",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "tag": "partially",
+            "title": "Partially above and partially below ground",
+            "min": 3,
+            "max": 4
+          },
+          {
+            "tag": "below_ground",
+            "min": 5,
+            "max": 11
+          },
+          {
+            "tag": "extraordinary",
+            "title": "Extraordinary (floating, ephemereal, etc.)",
+            "min": 12,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "overview_entrance",
+        "title": "Entrance condition",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "sealed_shut",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "hidden",
+            "title": "Purposefully hidden",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "concealed",
+            "title": "Concealed by  natural feature or terrain",
+            "min": 3,
+            "max": 4
+          },
+          {
+            "tag": "buried",
+            "title": "Buried (in earth, rubble, etc.)",
+            "min": 5,
+            "max": 6
+          },
+          {
+            "tag": "blocked",
+            "title": "Blocked by obstacle or out of reach",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "clear",
+            "title": "Clear/obvious",
+            "min": 8,
+            "max": 10
+          },
+          {
+            "tag": "multiple",
+            "title": "Multiple entrances",
+            "min": 11,
+            "max": 12,
+            "additional": [
+              {
+                "roll_result": "d10"
               }
             ]
           }
