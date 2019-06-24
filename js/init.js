@@ -8,7 +8,7 @@ requirejs.config({
         "require": "../vendor/requirejs/require",
         "jquery": "../vendor/jquery/dist/jquery.min",
         "bootstrap": "../vendor/bootstrap/dist/js/bootstrap.min",
-        "lodash": "../vendor/lodash/dist/lodash.core.min",
+        "lodash": "../vendor/lodash/dist/lodash.min",
         "bootstrap-treeview": "../vendor/bootstrap-treeview/dist/bootstrap-treeview.min",
         "text": "../vendor/requirejs-plugins/lib/text",
         "json": "../vendor/requirejs-plugins/src/json"

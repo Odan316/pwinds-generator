@@ -970,6 +970,14 @@
               {
                 "tag": "unique_areas",
                 "roll_result": "1d4+1"
+              },
+              {
+                "tag": "subdungeon",
+                "repeat": "1d4+1",
+                "generate_outer": [
+                  "dungeon",
+                  "d10+1"
+                ]
               }
             ]
           }
@@ -1378,7 +1386,9 @@
             "max": 12,
             "additional": [
               {
-                "roll_result": "d10"
+                "tag": "entrances_amount",
+                "repeat": "d10",
+                "roll_result": "d6+1"
               }
             ]
           }

@@ -1,6 +1,6 @@
 define([
-
-], function(){
+    'lodash'
+], function(_){
     /**
      * Object that can return random integer via dice formula
      *
@@ -22,7 +22,10 @@ define([
          */
         this.roll = function(diceFormula) {
             var result = this.loadedDices.shift();
-            if (result == undefined){
+            if (result === undefined){
+                if(_.isNumber(diceFormula) || _.isEqual(diceFormula, _.toNumber(diceFormula))){
+                    return _.toNumber(diceFormula);
+                }
                 var regexp = /^(\d*)d(\d+)[-+]*(\d*)$/;
                 var formulaArray = diceFormula.match(regexp);
 

@@ -3,8 +3,9 @@ define([
     'jquery',
     'lodash',
     'components/Entity',
-    'components/StorageLink'
-], function(require, $, _, Entity, StorageLink){
+    'components/StorageLink',
+    'components/Dice'
+], function(require, $, _, Entity, StorageLink, Dice){
     /**
      * Class of child entity, that lies in entities tree (always in variants array)
      *
@@ -66,7 +67,7 @@ define([
 
         /**
          * Number of entities to generate
-         * 
+         *
          * @type {null}
          * @private
          */
@@ -128,12 +129,14 @@ define([
         };
 
         /**
-         * Returns number of repeating of generating entity
-         * @returns {number}
+         * Returns formula of repeating of generating entity
+         * @returns {String|Number}
          */
         this.getRepeat = function()
         {
-            return _repeat !== null ? _repeat : 1;
+            let formula = _repeat !== null ? _repeat : 1;
+            let dice = new Dice();
+            return dice.roll(formula);
         };
 
         /**
