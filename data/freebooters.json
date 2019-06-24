@@ -1271,10 +1271,12 @@
               },
               {
                 "tag": "grim",
-                "title": "Roll from GRIM, but turned to 11",
+                "title": "GRIM, but turned to 11",
                 "min": 12,
                 "max": 12,
-                "generate_outer": "dungeon.theme.grim"
+                "additional":[
+                  "dungeon.theme.grim"
+                ]
               }
             ]
           }
