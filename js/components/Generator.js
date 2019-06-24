@@ -8,13 +8,13 @@ define([
     'components/VariantEntity',
     'components/GeneratedEntity',
     'components/GeneratedErrorEntity'
-], function($, _, Dice, EntitiesStorage, Errors, StorageLink, VariantEntity, GeneratedEntity, GeneratedErrorEntity) {
+], function ($, _, Dice, EntitiesStorage, Errors, StorageLink, VariantEntity, GeneratedEntity, GeneratedErrorEntity) {
     /**
      * Main object, that contains all data for generation and provides main methods to controller scripts
      *
      * @constructor
      */
-    var Generator = function() {
+    var Generator = function () {
         /**
          * Save context in closure
          * @type {Generator}
@@ -59,39 +59,39 @@ define([
          * @param entity {Entity|VariantEntity}
          * @param customDice
          */
-        var generateEntity = function(entity, customDice) {
+        var generateEntity = function (entity, customDice) {
             var generatedEntity;
 
-            if(entity == null){
+            if (entity == null) {
                 // Generate error entity
                 generatedEntity = new GeneratedErrorEntity(_errors.ERROR_ENTITY_NOT_FOUND);
 
-            } else if(entity instanceof VariantEntity && entity.isStatic()) {
+            } else if (entity instanceof VariantEntity && entity.isStatic()) {
                 // Generate (simply return) static value
-                generatedEntity = new GeneratedEntity("static", "Static Entity");
+                generatedEntity = new GeneratedEntity(entity.getTag(), entity.getTitle());
                 generatedEntity.variant = new GeneratedEntity("static", entity.getStaticValue());
 
-            } else if(entity instanceof VariantEntity && entity.isRollResult()) {
+            } else if (entity instanceof VariantEntity && entity.isRollResult()) {
                 // Generate (simply return) static value
                 generatedEntity = new GeneratedEntity(entity.getTag(), entity.getTitle());
                 let rollResult = _dice.roll(entity.getDiceResultFormula());
                 generatedEntity.variant = new GeneratedEntity();
                 generatedEntity.roll = rollResult;
 
-            }  else if(entity instanceof VariantEntity && entity.hasOuterLink()){
+            } else if (entity instanceof VariantEntity && entity.hasOuterLink()) {
                 // Generate entity by outer link
                 var outerEntityLink = entity.getOuterLink();
                 var outerEntity = outerEntityLink.getEntity(self.getStorage());
                 generatedEntity = generateEntity(outerEntity, outerEntityLink.getDice());
 
-            } else if(entity.hasTemplate()){
+            } else if (entity.hasTemplate()) {
                 // Generate entity by template
                 var generatedEntityTag = "";
-                _.forEach(entity.getTemplate(), function(templatePartEntity){
+                _.forEach(entity.getTemplate(), function (templatePartEntity) {
                     let generatedEntityPart = generateEntity(templatePartEntity);
                     let glue = generatedEntityTag !== "" || generatedEntityPart.variant.title.charAt(0) !== '\'' ? " " : "";
                     let partTitle = generatedEntityPart.variant.title;
-                    if(generatedEntityPart.variant.variant !== null){
+                    if (generatedEntityPart.variant.variant !== null) {
                         partTitle = generatedEntityPart.variant.variant.title;
                     }
                     generatedEntityTag += (glue + partTitle);
@@ -105,8 +105,8 @@ define([
                 generatedEntity = new GeneratedEntity(entity.getTag(), entity.getTitle());
 
                 // Generate variant
-                if(entity.hasVariants()){
-                    if(customDice){
+                if (entity.hasVariants()) {
+                    if (customDice) {
                         var roll = _dice.roll(customDice);
                     } else {
                         roll = _dice.roll(entity.getDice());
@@ -117,33 +117,35 @@ define([
                 }
 
                 // Generate additional entities
-                if(entity.hasAdditional()){
-                    _.forEach(entity.getAdditionalEntitiesLinks(), function(additionalEntityData) {
+                if (entity.hasAdditional()) {
+                    _.forEach(entity.getAdditionalEntitiesLinks(), function (additionalEntityData) {
                         let additionalEntity = null;
                         let customDice = null;
-                        if(additionalEntityData instanceof StorageLink){
+                        if (additionalEntityData instanceof StorageLink) {
                             additionalEntity = additionalEntityData.getEntity(self.getStorage());
                             customDice = additionalEntity.getDice();
-                        } else if(additionalEntityData instanceof VariantEntity) {
+                        } else if (additionalEntityData instanceof VariantEntity) {
                             additionalEntity = additionalEntityData;
                         }
 
-                        if(additionalEntity !== null){
-                            generatedEntity.additional.push(generateEntity(additionalEntity, customDice));
+                        if (additionalEntity !== null) {
+                            for (let i = 0; i < additionalEntity.getRepeat(); i++) {
+                                generatedEntity.additional.push(generateEntity(additionalEntity, customDice));
+                            }
                         }
                     });
                 }
 
                 // Generate optional entities
-                if(entity.hasOptional()){
-                    _.forEach(entity.getOptionalEntitiesLinks(), function(additionalEntityLink) {
+                if (entity.hasOptional()) {
+                    _.forEach(entity.getOptionalEntitiesLinks(), function (additionalEntityLink) {
                         var additionalEntity = additionalEntityLink.getEntity(self.getStorage());
                         generatedEntity.optional.push(generateEntity(additionalEntity, additionalEntityLink.getDice()));
                     });
                 }
 
                 // DEPRECATED! Generate numbers property
-                if(entity instanceof VariantEntity && entity.hasNumbers()){
+                if (entity instanceof VariantEntity && entity.hasNumbers()) {
                     generatedEntity.numbers = _dice.roll(entity.getNumbers())
                 }
             }
@@ -156,7 +158,7 @@ define([
          *
          * @param {Array} data
          */
-        this.loadStorage = function(data) {
+        this.loadStorage = function (data) {
             _storage = new EntitiesStorage();
             _storage.load(data);
         };
@@ -166,7 +168,7 @@ define([
          *
          * @returns {EntitiesStorage|null}
          */
-        this.getStorage = function() {
+        this.getStorage = function () {
             return _storage;
         }
     };

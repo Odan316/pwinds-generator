@@ -147,7 +147,11 @@ define([
          * @returns {String|null}
          */
         this.getTag = function() {
-            return _tag;
+            if(_tag != null){
+                return _tag;
+            } else {
+                return "no_tag";
+            }
         };
 
         /**
@@ -159,7 +163,7 @@ define([
             if (_title !== null) {
                 return _title;
             } else {
-                return _tag.beautifyTag();
+                return this.getTag().beautifyTag();
             }
         };
 

@@ -4,9 +4,8 @@
     "additional": [
       "dungeon.name",
       "dungeon.size"
-      ],
-    "dictionaries":
-    [
+    ],
+    "dictionaries": [
       {
         "tag": "name",
         "dice": "d12",
@@ -910,6 +909,10 @@
               {
                 "tag": "unique_areas",
                 "roll_result": "d1"
+              },
+              {
+                "generate_outer": "dungeon.theme",
+                "repeat": 2
               }
             ]
           },
@@ -921,6 +924,10 @@
               {
                 "tag": "unique_areas",
                 "roll_result": "d3+1"
+              },
+              {
+                "generate_outer": "dungeon.theme",
+                "repeat": 3
               }
             ]
           },
@@ -932,6 +939,10 @@
               {
                 "tag": "unique_areas",
                 "roll_result": "d4+1"
+              },
+              {
+                "generate_outer": "dungeon.theme",
+                "repeat": 4
               }
             ]
           },
@@ -943,6 +954,10 @@
               {
                 "tag": "unique_areas",
                 "roll_result": "d6+8"
+              },
+              {
+                "generate_outer": "dungeon.theme",
+                "repeat": 5
               }
             ]
           },
@@ -956,6 +971,362 @@
                 "roll_result": "1d4+1"
               }
             ]
+          }
+        ]
+      },
+      {
+        "tag": "theme",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "hopeful",
+            "min": 1,
+            "max": 2,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "nature",
+                "title": "Nature/growth",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "law",
+                "title": "Law/order",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "beauty",
+                "title": "Beauty/wonder",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "healing",
+                "title": "Healing/recovery",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "protection",
+                "title": "Protection/defence",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "completion",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "inheritance",
+                "title": "Inheritance/legacy",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "balance",
+                "title": "Balance/harmony",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "light",
+                "title": "Light/life",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "prophecy",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "divine",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "transcendence",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "mysterious",
+            "min": 3,
+            "max": 6,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "burglary",
+                "title": "Burglary/theft",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "desire",
+                "title": "Desire/obsession",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "secrets",
+                "title": "Secrets/deception",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "imitation",
+                "title": "Imitation/mimicry",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "inversion",
+                "title": "Inversion/reversal",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "element",
+                "min": 6,
+                "max": 6,
+                "generate_outer": "danger.element"
+              },
+              {
+                "tag": "transformation",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "shadow",
+                "title": "Shadow/spirits",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "cryptic_knowledge",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "madness",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "magic",
+                "min": 11,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "grim",
+            "min": 7,
+            "max": 11,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "pride",
+                "title": "Pride/hubris",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "hunger",
+                "title": "Hunger/gluttony",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "greed",
+                "title": "Greed/avarice",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "wildness",
+                "title": "Wildness/savagery",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "worship",
+                "title": "Worship/sacrifice",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "forbidden_knowledge",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "control",
+                "title": "Control/dominance",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "pain",
+                "title": "Pain/torture",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "wrath",
+                "title": "Wrath/war",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "tragedy",
+                "title": "Tragedy/loss",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "chaos",
+                "title": "Chaos/corruption",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "darkness",
+                "title": "Darkness/death",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "gonzo",
+            "min": 12,
+            "max": 12,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "constructs",
+                "title": "Constructs/robots",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "unexpected_sentience",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "space",
+                "title": "Space/time travel",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "advanced_technology",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "utter_insanity",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "alien_life",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "cosmic_alignment",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "other_dimensions",
+                "title": "Other dimension(s)",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "other_plane",
+                "title": "Other plane(s)",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "unspeakable_horrors",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "elder_gods",
+                "title": "Elder gods/demons",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "grim",
+                "title": "Roll from GRIM, but turned to 11",
+                "min": 12,
+                "max": 12,
+                "generate_outer": "dungeon.theme.grim"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "danger",
+    "dice": "d12",
+    "variants": [
+      {
+        "tag": "element",
+        "min": 1,
+        "max": 12,
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "death",
+            "title":  "Death/void/darkness",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "tag": "air",
+            "title":  "Air/sky/stars",
+            "min": 3,
+            "max": 4
+          },
+          {
+            "tag": "earth",
+            "title":  "Earth/stone/plants",
+            "min": 5,
+            "max": 6
+          },
+          {
+            "tag": "fire",
+            "title":  "Fire/metal/smoke",
+            "min": 7,
+            "max": 8
+          },
+          {
+            "tag": "water",
+            "title":  "Water/ice/mist",
+            "min": 9,
+            "max": 10
+          },
+          {
+            "tag": "life",
+            "title":  "Life/spirit/light",
+            "min": 11,
+            "max": 12
           }
         ]
       }

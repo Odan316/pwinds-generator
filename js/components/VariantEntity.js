@@ -9,6 +9,7 @@ define([
      * Class of child entity, that lies in entities tree (always in variants array)
      *
      * @constructor
+     * @inheritDoc Entity
      */
     var VariantEntity = function() {
         var Entity = require('components/Entity');
@@ -62,6 +63,14 @@ define([
          * @private
          */
         var _roll_result = null;
+
+        /**
+         * Number of entities to generate
+         * 
+         * @type {null}
+         * @private
+         */
+        var _repeat = null;
 
         var parentLoad = this.load;
 
@@ -119,6 +128,15 @@ define([
         };
 
         /**
+         * Returns number of repeating of generating entity
+         * @returns {number}
+         */
+        this.getRepeat = function()
+        {
+            return _repeat !== null ? _repeat : 1;
+        };
+
+        /**
          * @inherit
          *
          * @param data
@@ -129,6 +147,7 @@ define([
          * @param data.generate_outer
          * @param data.static
          * @param data.roll_result
+         * @param data.repeat
          */
         this.load = function(data) {
             parentLoad.call(this, data);
@@ -150,6 +169,9 @@ define([
             }
             if("roll_result" in data) {
                 _roll_result = data.roll_result;
+            }
+            if("repeat" in data) {
+                _repeat = data.repeat;
             }
         };
     };
