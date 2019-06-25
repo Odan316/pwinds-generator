@@ -1295,7 +1295,8 @@
         "tag": "overview",
         "additional": [
           "dungeon.overview_situation",
-          "dungeon.overview_entrance"
+          "dungeon.overview_entrance",
+          "dungeon.overview_cause"
         ]
       },
       {
@@ -1391,6 +1392,62 @@
                 "roll_result": "d6+1"
               }
             ]
+          }
+        ]
+      },
+      {
+        "tag": "overview_cause",
+        "title": "Cause of ruin",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "arcane_disaster",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "damnation",
+            "title": "Damnation/curse",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "earthquake",
+            "title": "Earthquake/flood/fire",
+            "min": 3,
+            "max": 4
+          },
+          {
+            "tag": "plague",
+            "title": "Plague/famine/drought",
+            "min": 5,
+            "max": 6
+          },
+          {
+            "tag": "overrun_by_monsters",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "hubris",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "war",
+            "title": "War/invasion",
+            "min": 9,
+            "max": 10
+          },
+          {
+            "tag": "depleted_resources",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "better_prospects_everywhere2",
+            "min": 12,
+            "max": 12
           }
         ]
       }
