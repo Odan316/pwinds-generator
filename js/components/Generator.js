@@ -123,7 +123,8 @@ define([
                         let customDice = null;
                         if (additionalEntityData instanceof StorageLink) {
                             additionalEntity = additionalEntityData.getEntity(self.getStorage());
-                            customDice = additionalEntity.getDice();
+                            customDice = additionalEntityData.getDice();
+                            console.log(customDice);
                         } else if (additionalEntityData instanceof VariantEntity) {
                             additionalEntity = additionalEntityData;
                         }

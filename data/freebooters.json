@@ -1686,7 +1686,8 @@
                 "max": 12
               }
             ]
-          },{
+          },
+          {
             "tag": "prisoners",
             "dice": "d12",
             "variants": [
@@ -1801,7 +1802,8 @@
                 "max": 12
               }
             ]
-          },{
+          },
+          {
             "tag": "resource",
             "dice": "d12",
             "variants": [
@@ -1863,7 +1865,114 @@
         "tag": "crypt",
         "title": "Crypt/tomb",
         "min": 5,
-        "max": 5
+        "max": 5,
+        "additional": [
+          "dungeon_type.crypt.builder",
+          "dungeon_type.crypt.burial_subject"
+        ],
+        "dictionaries": [
+          {
+            "tag": "builder",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "surface_civilization",
+                "min": 1,
+                "max": 5
+              },
+              {
+                "tag": "underworld_civilization",
+                "min": 6,
+                "max": 7
+              },
+              {
+                "tag": "religious_order",
+                "min": 8,
+                "max": 9
+              },
+              {
+                "tag": "monarch",
+                "title": "Monarch/overlord",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "wizard",
+                "title": "Wizard/lunatic",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "sorcerer",
+                "title": "Sorcerer-king/queen",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "burial_subject",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "fiend",
+                "title": "Fiend/demon/devil",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "horror",
+                "title": "Horror/abomination",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "commoners",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "hero",
+                "title": "Hero/martyr",
+                "min": 4,
+                "max": 5
+              },
+              {
+                "tag": "minor_noble",
+                "min": 6,
+                "max": 7
+              },
+              {
+                "tag": "monarch",
+                "title": "Monarch/overlord",
+                "min": 8,
+                "max": 9
+              },
+              {
+                "tag": "high_priest",
+                "title": "High priest/saint",
+                "min": 10,
+                "max": 11
+              },
+              {
+                "tag": "double",
+                "title": "Double subjects (combine)",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  [
+                    "dungeon_type.crypt.burial_subject",
+                    "d10"
+                  ],
+                  [
+                    "dungeon_type.crypt.burial_subject",
+                    "d10"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "tag": "lair",
