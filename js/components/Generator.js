@@ -124,7 +124,6 @@ define([
                         if (additionalEntityData instanceof StorageLink) {
                             additionalEntity = additionalEntityData.getEntity(self.getStorage());
                             customDice = additionalEntityData.getDice();
-                            console.log(customDice);
                         } else if (additionalEntityData instanceof VariantEntity) {
                             additionalEntity = additionalEntityData;
                         }

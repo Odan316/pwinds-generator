@@ -1103,7 +1103,7 @@
                 "tag": "element",
                 "min": 6,
                 "max": 6,
-                "generate_outer": "danger.element"
+                "generate_outer": "details.element"
               },
               {
                 "tag": "transformation",
@@ -1978,7 +1978,146 @@
         "tag": "lair",
         "title": "Lair/den/hideout",
         "min": 6,
-        "max": 6
+        "max": 6,
+        "additional": [
+          "dungeon_type.lair.entrance",
+          "dungeon_type.lair.main_occupant"
+        ],
+        "dictionaries": [
+          {
+            "tag": "entrance",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "underwater",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "thicket",
+                "title": "Dense thicket/forest",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "tunnel",
+                "title": "Tunnel/cave/grotto",
+                "min": 3,
+                "max": 6
+              },
+              {
+                "tag": "labyrinth",
+                "title": "Natural labyrinth/maze",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "hut",
+                "title": "Hut/shack/homestead",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "abandoned_temple",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "tower",
+                "title": "Tower/fortification",
+                "min": 10,
+                "max": 11
+              },
+              {
+                "tag": "keep",
+                "title": "Ruined keep/castle",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "main_occupant",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "beast",
+                "title": "Beast (horde)",
+                "min": 1,
+                "max": 2,
+                "additional": [
+                  "creature.beast"
+                ]
+              },
+              {
+                "tag": "bandit",
+                "title": "Bandit/smugglers",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "wanted_criminal",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "humanoid",
+                "title": "Humanoid (group)",
+                "min": 5,
+                "max": 5,
+                "additional": [
+                  "creature.humanoid"
+                ]
+              },
+              {
+                "tag": "cult",
+                "title": "Cult (chaotic evil)",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "wizard",
+                "title": "Wizard/witch",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "monster1",
+                "min": 8,
+                "max": 9,
+                "generate_outer": "creature.monster.fearsome"
+              },
+              {
+                "tag": "monster2",
+                "min": 10,
+                "max": 10,
+                "generate_outer": "creature.monster.supernatural"
+              },
+              {
+                "tag": "monster3",
+                "min": 11,
+                "max": 11,
+                "generate_outer": "creature.monster.legendary"
+              },
+              {
+                "tag": "double",
+                "title": "Double occupant (combine)",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  [
+                    "dungeon_type.lair.main_occupant",
+                    "d8"
+                  ],
+                  [
+                    "dungeon_type.lair.main_occupant",
+                    "d8"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "tag": "stronghold",
@@ -2006,9 +2145,792 @@
     ]
   },
   {
-    "tag": "danger",
+    "tag": "danger"
+  },
+  {
+    "tag": "creature",
     "dice": "d12",
     "variants": [
+      {
+        "tag": "monster",
+        "min": 1,
+        "max": 3,
+        "variants": [
+          {
+            "tag": "legendary",
+            "min": 1,
+            "max": 1,
+            "variants": [
+              {
+                "tag": "oddity",
+                "title": "ODDITY + huge",
+                "min": 1,
+                "max": 2,
+                "additional": [
+                  "details.oddity"
+                ]
+              },
+              {
+                "tag": "dragon1",
+                "title": "Dragon/titan + COLOR",
+                "min": 3,
+                "max": 4,
+                "additional": [
+                  "details.color"
+                ]
+              },
+              {
+                "tag": "dragon2",
+                "title": "Dragon/titan + BEAST",
+                "min": 5,
+                "max": 6,
+                "additional": [
+                  "creature.beast"
+                ]
+              },
+              {
+                "tag": "dragon3",
+                "title": "Dragon/titan",
+                "min": 7,
+                "max": 9
+              },
+              {
+                "tag": "beast",
+                "title": "BEAST + huge",
+                "min": 10,
+                "max": 12,
+                "additional": [
+                  "creature.beast"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "supernatural",
+            "min": 2,
+            "max": 3,
+            "variants": [
+              {
+                "tag": "lord",
+                "title": "Divine/demonic lord",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "elemental",
+                "title": "Elemental (ELEMENT)",
+                "min": 2,
+                "max": 3,
+                "additional": [
+                  "details.element"
+                ]
+              },
+              {
+                "tag": "imp",
+                "title": "Imp/demon",
+                "min": 4,
+                "max": 6
+              },
+              {
+                "tag": "wight",
+                "title": "Wight/wraith",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "wisp",
+                "title": "Wisp/ghost/specter",
+                "min": 9,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "fearsome",
+            "min": 4,
+            "max": 12,
+            "variants": [
+              {
+                "tag": "beast_ability",
+                "title": "BEAST + ABILITY",
+                "min": 1,
+                "max": 3,
+                "additional": [
+                  "creature.beast",
+                  "details.ability"
+                ]
+              },
+              {
+                "tag": "beast_oddity",
+                "title": "BEAST + ODDITY",
+                "min": 4,
+                "max": 5,
+                "additional": [
+                  "creature.beast",
+                  "details.oddity"
+                ]
+              },
+              {
+                "tag": "beast_large",
+                "title": "BEAST + large",
+                "min": 6,
+                "max": 7,
+                "additional": [
+                  "creature.beast"
+                ]
+              },
+              {
+                "tag": "slime",
+                "title": "Slime/ooze",
+                "min": 8,
+                "max": 10
+              },
+              {
+                "tag": "plant",
+                "title": "Plant/fungus",
+                "min": 11,
+                "max": 12
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "beast",
+        "min": 4,
+        "max": 7,
+        "variants": [
+          {
+            "tag": "water-going",
+            "min": 1,
+            "max": 2,
+            "variants": [
+              {
+                "tag": "whale",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "squid",
+                "title": "Squid/octopus",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "dolphin",
+                "title": "Dolphin/shark",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "alligator",
+                "title": "Alligator/crocodile",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "turtle",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "crab",
+                "title": "Crab/clam/lobster",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "fish",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "frog",
+                "title": "Frog/toad",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "eel",
+                "title": "Eel/snake",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "clam",
+                "title": "Clam/oyster/snail",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "jelly",
+                "title": "Jelly/anemone",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "insect",
+                "title": "Insect/barnacle",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "airborne",
+            "min": 3,
+            "max": 5,
+            "variants": [
+              {
+                "tag": "pteranadon",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "condor",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "owl",
+                "title": "eagle/owl",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "hawk",
+                "title": "Hawk/falcon",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "crow",
+                "title": "Crow/raven",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "heron",
+                "title": "Heron/crane/stork",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "gull",
+                "title": "Gull/waterbird",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "songbird",
+                "title": "Songbird/parrot",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "chicken",
+                "title": "Chicken/duck/goose",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "bee",
+                "title": "Bee/wasp/hornet",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "moth",
+                "title": "Locust/dragonfly/moth",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "gnat",
+                "title": "Gnat/mosquito/firefly",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "earthbound",
+            "min": 6,
+            "max": 12,
+            "variants": [
+              {
+                "tag": "dinosaur",
+                "title": "Dinosaur/megafauna",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "elephant",
+                "title": "Elephant/mammoth",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "ox",
+                "title": "Ox/rhinoceros",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "bear",
+                "title": "Bear/ape/gorilla",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "deer",
+                "title": "Deer/horse/camel",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "cat",
+                "title": "Cat/lion/panther",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "dog",
+                "title": "Dog/wolf/boar/pig",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "snake",
+                "title": "Snake/lizard/armadillo",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "mouse",
+                "title": "Mouse/rat/weasel",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "ant",
+                "title": "Ant/centipede/scorpion",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "snail",
+                "title": "Snail/slug/worm",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "termite",
+                "title": "Termite/tick/louse",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "humanoid",
+        "min": 8,
+        "max": 9,
+        "variants": [
+          {
+            "tag": "rare",
+            "min": 1,
+            "max": 2,
+            "variants": [
+              {
+                "tag": "human_monster",
+                "title": "Human + MONSTER",
+                "min": 1,
+                "max": 2,
+                "additional": [
+                  "creature.monster"
+                ]
+              },
+              {
+                "tag": "undead",
+                "title": "Major undead",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "werebeast",
+                "title": "WereBEAST",
+                "min": 5,
+                "max": 6,
+                "additional": [
+                  "creature.beast"
+                ]
+              },
+              {
+                "tag": "human_beast",
+                "title": "Human + BEAST",
+                "min": 7,
+                "max": 8,
+                "additional": [
+                  "creature.beast"
+                ]
+              },
+              {
+                "tag": "fey",
+                "title": "Fey/fairy",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "elf",
+                "title": "Elf",
+                "min": 11,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "uncommon",
+            "min": 3,
+            "max": 5,
+            "variants": [
+              {
+                "tag": "cyclops",
+                "title": "Cyclops/giant",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "ogre",
+                "title": "Ogre/troll",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "undead",
+                "title": "Minor undead",
+                "min": 4,
+                "max": 7
+              },
+              {
+                "tag": "lizardfolk",
+                "title": "Lizardfolk/merfolk",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "catfolk",
+                "title": "Catfolk/birdfolk",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "dwarf",
+                "title": "Dwarf/gnome",
+                "min": 10,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "common",
+            "min": 6,
+            "max": 12,
+            "variants": [
+              {
+                "tag": "orc",
+                "title": "orc/hobgoblin/gnoll",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "goblin",
+                "title": "Goblin/kobold",
+                "min": 3,
+                "max": 5
+              },
+              {
+                "tag": "half",
+                "title": "Half-elf, half-orc, etc.",
+                "min": 6,
+                "max": 7
+              },
+              {
+                "tag": "halfling",
+                "min": 8,
+                "max": 9
+              },
+              {
+                "tag": "mixed",
+                "title": "Mixed party (group)",
+                "min": 10,
+                "max": 12
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "human",
+        "min": 10,
+        "max": 12
+      }
+    ]
+  },
+  {
+    "tag": "details",
+    "dictionaries": [
+      {
+        "tag": "ability",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "bless",
+            "title": "Bless/curse",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "entrap",
+            "title": "Entrap/paralyse",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "levitate",
+            "title": "Levitate/fly/teleport",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "telepathy",
+            "title": "Telepathy/mind control",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "mimic",
+            "title": "Mimic/camouflage",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "seduce",
+            "title": "Seduce/hypnotize",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "dissolve",
+            "title": "Dissolve/disintegrate",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "aspect",
+            "title": "Based on ASPECT",
+            "min": 8,
+            "max": 8,
+            "additional": [
+              "details.aspect"
+            ]
+          },
+          {
+            "tag": "element",
+            "title": "Based on ELEMENT",
+            "min": 9,
+            "max": 9,
+            "additional": [
+              "details.element"
+            ]
+          },
+          {
+            "tag": "drain",
+            "title": "Drain life/magic",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "magic_type",
+            "min": 11,
+            "max": 11,
+            "generate_outer": "details.magic_type"
+          },
+          {
+            "tag": "double_ability",
+            "min": 12,
+            "max": 12,
+            "additional": [
+              [
+                "details.ability",
+                "d10+1"
+              ],
+              [
+                "details.ability",
+                "d10+1"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "aspect",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "war",
+            "title": "War/discord",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "hate",
+            "title": "Hate/envy",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "power",
+            "title": "Power/strength",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "trickery",
+            "title": "trickery/dexterity",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "time",
+            "title": "Time/constitution",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "lore",
+            "title": "Lore/intelligence",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "nature",
+            "title": "Nature/wisdom",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "culture",
+            "title": "Culture/charisma",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "luck",
+            "title": "Luck/fortune",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "love",
+            "title": "Love/admiration",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "peace",
+            "title": "Peace/balance",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "glory",
+            "title": "Glory/divinity",
+            "min": 12,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "color",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "white",
+            "title": "White/bright/pale",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "red",
+            "title": "Red/pink/maroon",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "orange",
+            "title": "Orange/peach",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "yellow",
+            "title": "Yellow/mustard/ochre",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "green",
+            "title": "Green/chartreuse/sage",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "blue",
+            "title": "Blue/aquamarine/indigo",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "violet",
+            "title": "Violet/purple",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "gray",
+            "title": "Gray/slate",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "brown",
+            "title": "Brown/beige",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "black",
+            "title": "Black/dark",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "metallic",
+            "title": "Metallic/prismatic",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "transparent",
+            "title": "Transparent/clear",
+            "min": 12,
+            "max": 12
+          }
+        ]
+      },
       {
         "tag": "element",
         "min": 1,
@@ -2063,271 +2985,72 @@
             "max": 12
           }
         ]
-      }
-    ]
-  },
-  {
-    "tag": "creature",
-    "dice": "d12",
-    "variants": [
+      },
       {
-        "tag": "beast",
-        "min": 1,
-        "max": 4,
+        "tag": "magic_type",
+        "dice": "d12",
         "variants": [
           {
-            "tag": "earthbound",
+            "tag": "necromancy",
             "min": 1,
-            "max": 7,
-            "variants": [
-              {
-                "tag": "termite",
-                "title": "Termite/tick/louse",
-                "min": 1,
-                "max": 1
-              },
-              {
-                "tag": "snail",
-                "title": "Snail/slug/worm",
-                "min": 2,
-                "max": 2
-              },
-              {
-                "tag": "ant",
-                "title": "Ant/centipede/scorpion",
-                "min": 3,
-                "max": 3
-              },
-              {
-                "tag": "snake",
-                "title": "Snake/lizard",
-                "min": 4,
-                "max": 4
-              },
-              {
-                "tag": "vole",
-                "title": "Vole/rat/weasel",
-                "min": 5,
-                "max": 5
-              },
-              {
-                "tag": "boar",
-                "title": "Boar/pig",
-                "min": 6,
-                "max": 6
-              },
-              {
-                "tag": "dog",
-                "title": "Dog/fox/wolf",
-                "min": 7,
-                "max": 7
-              },
-              {
-                "tag": "cat",
-                "title": "Cat/lion/panther",
-                "min": 8,
-                "max": 8
-              },
-              {
-                "tag": "deer",
-                "title": "Deer/horse/camel",
-                "min": 9,
-                "max": 9
-              },
-              {
-                "tag": "ox",
-                "title": "Ox/phino",
-                "min": 10,
-                "max": 10
-              },
-              {
-                "tag": "bear",
-                "title": "Bear/ape/gorilla",
-                "min": 11,
-                "max": 11
-              },
-              {
-                "tag": "mammoth",
-                "title": "Mammoth/dinosaur",
-                "min": 12,
-                "max": 12
-              }
-            ]
+            "max": 1
           },
           {
-            "tag": "airborne",
+            "tag": "evocation",
+            "title": "Evocation/destruction",
+            "min": 2,
+            "max": 3
+          },
+          {
+            "tag": "conjuration",
+            "title": "Conjuration/summoning",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "illusion",
+            "title": "Illusion/glamour",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "enchantment",
+            "title": "Enchantment/artifice",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "transformation",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "warding",
+            "title": "Warding/binding",
             "min": 8,
-            "max": 10,
-            "variants": [
-              {
-                "tag": "gnat",
-                "title": "Gnat/mosquito/firefly",
-                "min": 1,
-                "max": 1
-              },
-              {
-                "tag": "moth",
-                "title": "Moth/locust/dragonfly",
-                "min": 2,
-                "max": 2
-              },
-              {
-                "tag": "bee",
-                "title": "Bee/wasp/hornet",
-                "min": 3,
-                "max": 3
-              },
-              {
-                "tag": "chicken",
-                "title": "Chicken/duck/goose",
-                "min": 4,
-                "max": 4
-              },
-              {
-                "tag": "songbird",
-                "title": "Songbird/parrot",
-                "min": 5,
-                "max": 5
-              },
-              {
-                "tag": "gull",
-                "title": "Gull/waterbird",
-                "min": 6,
-                "max": 6
-              },
-              {
-                "tag": "heron",
-                "title": "Heron/crane/stork",
-                "min": 7,
-                "max": 7
-              },
-              {
-                "tag": "crow",
-                "title": "Crow/raven",
-                "min": 8,
-                "max": 8
-              },
-              {
-                "tag": "hawk",
-                "title": "Hawk/falcon/eagle",
-                "min": 9,
-                "max": 9
-              },
-              {
-                "tag": "owl",
-                "title": "Owl/vulture/condor",
-                "min": 10,
-                "max": 10
-              },
-              {
-                "tag": "bat",
-                "min": 11,
-                "max": 11
-              },
-              {
-                "tag": "pterosaur",
-                "min": 12,
-                "max": 12
-              }
-            ]
+            "max": 8
           },
           {
-            "tag": "water-going",
+            "tag": "elemental",
+            "title": "ELEMENTAL",
+            "min": 9,
+            "max": 10,
+            "additional": "details.element"
+          },
+          {
+            "tag": "restoration",
+            "title": "Restoration/healing",
             "min": 11,
-            "max": 12,
-            "variants": [
-              {
-                "tag": "insect",
-                "min": 1,
-                "max": 1
-              },
-              {
-                "tag": "jelly",
-                "title": "Jelly/amoeba/anemone",
-                "min": 2,
-                "max": 2
-              },
-              {
-                "tag": "clam",
-                "title": "Clam/oyster/snail",
-                "min": 3,
-                "max": 3
-              },
-              {
-                "tag": "eel",
-                "title": "Eel/snake",
-                "min": 4,
-                "max": 4
-              },
-              {
-                "tag": "frog",
-                "title": "Frog/toad",
-                "min": 5,
-                "max": 5
-              },
-              {
-                "tag": "fish",
-                "min": 6,
-                "max": 6
-              },
-              {
-                "tag": "crab",
-                "title": "Crab/lobster",
-                "min": 7,
-                "max": 7
-              },
-              {
-                "tag": "turtle",
-                "min": 8,
-                "max": 8
-              },
-              {
-                "tag": "alligator",
-                "title": "Alligator/crocodile",
-                "min": 9,
-                "max": 9
-              },
-              {
-                "tag": "dolphin",
-                "title": "Dolphin/shark",
-                "min": 10,
-                "max": 10
-              },
-              {
-                "tag": "squid",
-                "title": "Squid/octopus",
-                "min": 11,
-                "max": 11
-              },
-              {
-                "tag": "whale",
-                "min": 12,
-                "max": 12
-              }
-            ]
+            "max": 11
+          },
+          {
+            "tag": "divination",
+            "title": "Divination/scrying",
+            "min": 12,
+            "max": 12
           }
         ]
       },
-      {
-        "tag": "human",
-        "min": 5,
-        "max": 6
-      },
-      {
-        "tag": "humanoid",
-        "min": 7,
-        "max": 8
-      },
-      {
-        "tag": "monster",
-        "min": 9,
-        "max": 12
-      }
-    ]
-  },
-  {
-    "tag": "details",
-    "dictionaries": [
       {
         "tag": "oddity",
         "dice": "d12",
