@@ -126,7 +126,7 @@ define([
             if("additional" in data){
                 _additional = [];
                 _.forEach(data.additional, function(value){
-                    if(_.isString(value)){
+                    if(_.isString(value) || _.isArray(value)){
                         _additional.push(new StorageLink(value));
                     } else {
                         let innerEntity = new VariantEntity();
@@ -216,6 +216,9 @@ define([
             var subTree = [];
 
             _.forEach(_variants, function(entity){
+                subTree.push(entity.getTreeNode());
+            });
+            _.forEach(_dictionaries, function(entity){
                 subTree.push(entity.getTreeNode());
             });
 

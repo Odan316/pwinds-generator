@@ -2290,7 +2290,7 @@
             "max": 11
           },
           {
-            "tag": "number",
+            "tag": "double_oddity",
             "min": 12,
             "max": 12,
             "additional": [
