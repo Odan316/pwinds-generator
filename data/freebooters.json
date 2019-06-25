@@ -2211,7 +2211,98 @@
         "tag": "temple",
         "title": "Temple/sanctuary",
         "min": 8,
-        "max": 8
+        "max": 8,
+        "additional": [
+          "dungeon_type.temple.builder",
+          "dungeon_type.temple.domain"
+        ],
+        "dictionaries": [
+          {
+            "tag": "builder",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "alien",
+                "title": "Alien/otherworldly religion",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "forgotten_religion",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "ancient_religion",
+                "min": 4,
+                "max": 7
+              },
+              {
+                "tag": "active_religion",
+                "min": 8,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "domain",
+            "title": "Domain or deity",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "element",
+                "min": 1,
+                "max": 3,
+                "additional": [
+                  "details.element"
+                ]
+              },
+              {
+                "tag": "aspect",
+                "min": 4,
+                "max": 5,
+                "additional": [
+                  "details.aspect"
+                ]
+              },
+              {
+                "tag": "element_aspect",
+                "min": 6,
+                "max": 9,
+                "additional": [
+                  "details.element",
+                  "details.aspect"
+                ]
+              },
+              {
+                "tag": "oddity",
+                "min": 10,
+                "max": 10,
+                "additional": [
+                  "details.oddity"
+                ]
+              },
+              {
+                "tag": "oddity_element",
+                "min": 11,
+                "max": 11,
+                "additional": [
+                  "details.oddity",
+                  "details.element"
+                ]
+              },
+              {
+                "tag": "oddity_aspect",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "details.oddity",
+                  "details.aspect"
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "tag": "archive",
