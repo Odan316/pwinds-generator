@@ -3,9 +3,8 @@ define([
     'jquery',
     'lodash',
     'components/Entity',
-    'components/StorageLink',
-    'components/Dice'
-], function(require, $, _, Entity, StorageLink, Dice){
+    'components/StorageLink'
+], function(require, $, _, Entity, StorageLink){
     /**
      * Class of child entity, that lies in entities tree (always in variants array)
      *
@@ -65,14 +64,6 @@ define([
          */
         var _roll_result = null;
 
-        /**
-         * Number of entities to generate
-         *
-         * @type {null}
-         * @private
-         */
-        var _repeat = null;
-
         var parentLoad = this.load;
 
         this.getMin = function() {
@@ -129,17 +120,6 @@ define([
         };
 
         /**
-         * Returns formula of repeating of generating entity
-         * @returns {String|Number}
-         */
-        this.getRepeat = function()
-        {
-            let formula = _repeat !== null ? _repeat : 1;
-            let dice = new Dice();
-            return dice.roll(formula);
-        };
-
-        /**
          * @inherit
          *
          * @param data
@@ -150,7 +130,6 @@ define([
          * @param data.generate_outer
          * @param data.static
          * @param data.roll_result
-         * @param data.repeat
          */
         this.load = function(data) {
             parentLoad.call(this, data);
@@ -172,9 +151,6 @@ define([
             }
             if("roll_result" in data) {
                 _roll_result = data.roll_result;
-            }
-            if("repeat" in data) {
-                _repeat = data.repeat;
             }
         };
     };

@@ -3,8 +3,9 @@ define([
     'jquery',
     'lodash',
     'components/VariantEntity',
-    'components/StorageLink'
-], function(require, $, _, VariantEntity, StorageLink){
+    'components/StorageLink',
+    'components/Dice'
+], function(require, $, _, VariantEntity, StorageLink, Dice){
     /**
      * Base entity class, also serves as root entity class
      *
@@ -67,6 +68,14 @@ define([
         var _additional = null;
 
         /**
+         * Number of entities to generate
+         *
+         * @type {null}
+         * @private
+         */
+        var _repeat = null;
+
+        /**
          * List of optional entities, similar to 'additional', but shows as separate block.
          *
          * @type StorageLink[]|null}
@@ -86,6 +95,7 @@ define([
          * @param data.additional
          * @param data.optional
          * @param data.template
+         * @param data.repeat
          */
         this.load = function(data) {
             if("tag" in data){
@@ -138,6 +148,9 @@ define([
                     innerEntity.load(value);
                     _template.push(innerEntity);
                 });
+            }
+            if("repeat" in data) {
+                _repeat = data.repeat;
             }
         };
 
@@ -322,6 +335,17 @@ define([
          */
         this.getTemplate = function() {
             return _template;
+        };
+
+        /**
+         * Returns formula of repeating of generating entity
+         * @returns {String|Number}
+         */
+        this.getRepeat = function()
+        {
+            let formula = _repeat !== null ? _repeat : 1;
+            let dice = new Dice();
+            return dice.roll(formula);
         };
     };
 

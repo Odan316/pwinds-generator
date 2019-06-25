@@ -129,6 +129,7 @@ define([
                         }
 
                         if (additionalEntity !== null) {
+                            console.log(generatedEntity);
                             for (let i = 0; i < additionalEntity.getRepeat(); i++) {
                                 generatedEntity.additional.push(generateEntity(additionalEntity, customDice));
                             }

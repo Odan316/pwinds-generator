@@ -1283,7 +1283,7 @@
                 "title": "GRIM, but turned to 11",
                 "min": 12,
                 "max": 12,
-                "additional":[
+                "additional": [
                   "dungeon.theme.grim"
                 ]
               }
@@ -1294,21 +1294,10 @@
       {
         "tag": "overview",
         "additional": [
+          "dungeon_type",
           "dungeon.overview_situation",
           "dungeon.overview_entrance",
           "dungeon.overview_cause"
-        ]
-      },
-      {
-        "tag": "overview_origin",
-        "dice": "d12",
-        "variants": [
-          {
-            "tag": "caves",
-            "min": 1,
-            "max": 1,
-            "generate_outer": "origins.caves"
-          }
         ]
       },
       {
@@ -1454,6 +1443,68 @@
     ]
   },
   {
+    "tag": "dungeon_type",
+    "dice": "d12",
+    "variants": [
+      {
+        "tag": "caves",
+        "title": "Caves/caverns",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "tag": "ruined_settlement",
+        "min": 2,
+        "max": 2
+      },
+      {
+        "tag": "prison",
+        "min": 3,
+        "max": 3
+      },
+      {
+        "tag": "mine",
+        "min": 4,
+        "max": 4
+      },
+      {
+        "tag": "crypt",
+        "title": "Crypt/tomb",
+        "min": 5,
+        "max": 5
+      },
+      {
+        "tag": "lair",
+        "title": "Lair/den/hideout",
+        "min": 6,
+        "max": 6
+      },
+      {
+        "tag": "stronghold",
+        "title": "Stronghold/fortress",
+        "min": 7,
+        "max": 7
+      },
+      {
+        "tag": "temple",
+        "title": "Temple/sanctuary",
+        "min": 8,
+        "max": 8
+      },
+      {
+        "tag": "archive",
+        "title": "Archive/laboratory",
+        "min": 9,
+        "max": 9
+      },
+      {
+        "tag": "origin_unknown",
+        "min": 10,
+        "max": 12
+      }
+    ]
+  },
+  {
     "tag": "danger",
     "dice": "d12",
     "variants": [
@@ -1465,37 +1516,37 @@
         "variants": [
           {
             "tag": "death",
-            "title":  "Death/void/darkness",
+            "title": "Death/void/darkness",
             "min": 1,
             "max": 2
           },
           {
             "tag": "air",
-            "title":  "Air/sky/stars",
+            "title": "Air/sky/stars",
             "min": 3,
             "max": 4
           },
           {
             "tag": "earth",
-            "title":  "Earth/stone/plants",
+            "title": "Earth/stone/plants",
             "min": 5,
             "max": 6
           },
           {
             "tag": "fire",
-            "title":  "Fire/metal/smoke",
+            "title": "Fire/metal/smoke",
             "min": 7,
             "max": 8
           },
           {
             "tag": "water",
-            "title":  "Water/ice/mist",
+            "title": "Water/ice/mist",
             "min": 9,
             "max": 10
           },
           {
             "tag": "life",
-            "title":  "Life/spirit/light",
+            "title": "Life/spirit/light",
             "min": 11,
             "max": 12
           }
