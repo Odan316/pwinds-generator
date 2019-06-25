@@ -1548,7 +1548,91 @@
       {
         "tag": "ruined_settlement",
         "min": 2,
-        "max": 2
+        "max": 2,
+        "additional": [
+          "dungeon_type.ruined_settlement.builder",
+          "dungeon_type.ruined_settlement.settlement_type"
+        ],
+        "dictionaries": [
+          {
+            "tag": "builder",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "kobold",
+                "title": "Kobold/goblin/orc",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "human",
+                "min": 2,
+                "max": 6
+              },
+              {
+                "tag": "halfling",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "dwarf",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "elf",
+                "min": 9,
+                "max": 1
+              },
+              {
+                "tag": "Beast people",
+                "min": 10,
+                "max": 11,
+                "additional": [
+                  "creature.beast"
+                ]
+              },
+              {
+                "tag": "strange",
+                "title": "Strange/otherworldly",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "settlement_type",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "unknown",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "village",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "keep",
+                "title": "Keep/castle",
+                "min": 5,
+                "max": 7
+              },
+              {
+                "tag": "town",
+                "min": 8,
+                "max": 10
+              },
+              {
+                "tag": "city",
+                "min": 11,
+                "max": 12
+              }
+            ]
+          }
+        ]
       },
       {
         "tag": "prison",
@@ -1644,6 +1728,265 @@
             "max": 12
           }
         ]
+      }
+    ]
+  },
+  {
+    "tag": "creature",
+    "dice": "d12",
+    "variants": [
+      {
+        "tag": "beast",
+        "min": 1,
+        "max": 4,
+        "variants": [
+          {
+            "tag": "earthbound",
+            "min": 1,
+            "max": 7,
+            "variants": [
+              {
+                "tag": "termite",
+                "title": "Termite/tick/louse",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "snail",
+                "title": "Snail/slug/worm",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "ant",
+                "title": "Ant/centipede/scorpion",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "snake",
+                "title": "Snake/lizard",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "vole",
+                "title": "Vole/rat/weasel",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "boar",
+                "title": "Boar/pig",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "dog",
+                "title": "Dog/fox/wolf",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "cat",
+                "title": "Cat/lion/panther",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "deer",
+                "title": "Deer/horse/camel",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "ox",
+                "title": "Ox/phino",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "bear",
+                "title": "Bear/ape/gorilla",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "mammoth",
+                "title": "Mammoth/dinosaur",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "airborne",
+            "min": 8,
+            "max": 10,
+            "variants": [
+              {
+                "tag": "gnat",
+                "title": "Gnat/mosquito/firefly",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "moth",
+                "title": "Moth/locust/dragonfly",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "bee",
+                "title": "Bee/wasp/hornet",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "chicken",
+                "title": "Chicken/duck/goose",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "songbird",
+                "title": "Songbird/parrot",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "gull",
+                "title": "Gull/waterbird",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "heron",
+                "title": "Heron/crane/stork",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "crow",
+                "title": "Crow/raven",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "hawk",
+                "title": "Hawk/falcon/eagle",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "owl",
+                "title": "Owl/vulture/condor",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "bat",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "pterosaur",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "water-going",
+            "min": 11,
+            "max": 12,
+            "variants": [
+              {
+                "tag": "insect",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "jelly",
+                "title": "Jelly/amoeba/anemone",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "clam",
+                "title": "Clam/oyster/snail",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "eel",
+                "title": "Eel/snake",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "frog",
+                "title": "Frog/toad",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "fish",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "crab",
+                "title": "Crab/lobster",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "turtle",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "alligator",
+                "title": "Alligator/crocodile",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "dolphin",
+                "title": "Dolphin/shark",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "squid",
+                "title": "Squid/octopus",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "whale",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "human",
+        "min": 5,
+        "max": 6
+      },
+      {
+        "tag": "humanoid",
+        "min": 7,
+        "max": 8
+      },
+      {
+        "tag": "monster",
+        "min": 9,
+        "max": 12
       }
     ]
   }
