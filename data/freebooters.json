@@ -2123,7 +2123,89 @@
         "tag": "stronghold",
         "title": "Stronghold/fortress",
         "min": 7,
-        "max": 7
+        "max": 7,
+        "additional": [
+          "dungeon_type.stronghold.builder",
+          "dungeon_type.stronghold.enemy"
+        ],
+        "dictionaries": [
+          {
+            "tag": "builder",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "surface_civilization",
+                "min": 1,
+                "max": 5
+              },
+              {
+                "tag": "underworld_civilization",
+                "min": 6,
+                "max": 7
+              },
+              {
+                "tag": "religious_figure",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "monarch",
+                "title": "Monarch/overlord",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "wizard",
+                "title": "Wizard/lunatic",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "sorcerer",
+                "title": "Sorcerer-king/queen",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "enemy",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "otherworldly_force",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "creature",
+                "title": "Creature horde",
+                "min": 2,
+                "max": 4,
+                "additional": [
+                  "creature"
+                ]
+              },
+              {
+                "tag": "rival_religion",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "rival_faction",
+                "title": "Rival faction/culture",
+                "min": 7,
+                "max": 11
+              },
+              {
+                "tag": "rebels",
+                "title": "Rebels/insurgents",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          }
+        ]
       },
       {
         "tag": "temple",
