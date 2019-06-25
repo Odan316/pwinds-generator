@@ -1848,8 +1848,12 @@
               },
               {
                 "tag": "unusual",
+                "title": "Unusual (from ODDITY)",
                 "min": 12,
-                "max": 12
+                "max": 12,
+                "additional": [
+                  "details.oddity"
+                ]
               }
             ]
           }
@@ -2198,6 +2202,94 @@
         "tag": "monster",
         "min": 9,
         "max": 12
+      }
+    ]
+  },
+  {
+    "tag": "details",
+    "dictionaries": [
+      {
+        "tag": "oddity",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "bright",
+            "title": "Bright/garish/harsh",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "geometric",
+            "title": "Geometric/concentric",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "web",
+            "title": "Web/network",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "crystalline",
+            "title": "Crystalline/glassy",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "fungal",
+            "title": "Fungal/slimy/moldy",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "gaseous",
+            "title": "Gaseous/misty/smoky",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "mirage",
+            "title": "Mirage/illusion",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "volcanic",
+            "title": "Volcanic/explosive",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "magnetic",
+            "title": "Magnetic/repellant",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "multilevel",
+            "title": "Multilevel/tiered",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "absurd",
+            "title": "Absurd/impossible",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "number",
+            "min": 12,
+            "max": 12,
+            "additional": [
+              {
+                "roll_result": "d10+1",
+                "repeat": 2
+              }
+            ]
+          }
+        ]
       }
     ]
   }
