@@ -1745,7 +1745,115 @@
       {
         "tag": "mine",
         "min": 4,
-        "max": 4
+        "max": 4,
+        "additional": [
+          "dungeon_type.mine.builder",
+          "dungeon_type.mine.resource"
+        ],
+        "dictionaries": [
+          {
+            "tag": "builder",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "surface_civilization",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "underworld_civilization",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "dwarf",
+                "title": "Dwarf/gnome",
+                "min": 5,
+                "max": 7
+              },
+              {
+                "tag": "magnate",
+                "title": "Magnate/merchant",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "religious_order",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "monarch",
+                "title": "Monarch/overlord",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "wizard",
+                "title": "Wizard/lunatic",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "sorcerer",
+                "title": "Sorcerer-king/queen",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },{
+            "tag": "resource",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "salt",
+                "title": "Salt/mineral",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "clay",
+                "title": "Clay/stone/limestone",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "copper",
+                "title": "Copper/tin/iron/lead",
+                "min": 4,
+                "max": 6
+              },
+              {
+                "tag": "silver",
+                "title": "Silver/gold",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "gems",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "mithril",
+                "title": "Mithril/special ore",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "magical",
+                "title": "Magical/planar",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "unusual",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          }
+        ]
       },
       {
         "tag": "crypt",
