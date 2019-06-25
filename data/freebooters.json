@@ -1907,39 +1907,50 @@
         "dice": "d12",
         "variants": [
           {
-            "tag": "death",
-            "title": "Death/void/darkness",
+            "tag": "void",
             "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "death",
+            "title": "Death/darkness",
+            "min": 2,
             "max": 2
           },
           {
-            "tag": "air",
-            "title": "Air/sky/stars",
+            "tag": "fire",
+            "title": "Fire/metal/smoke",
             "min": 3,
             "max": 4
           },
           {
             "tag": "earth",
-            "title": "Earth/stone/plants",
+            "title": "Earth/stone/vegetation",
             "min": 5,
             "max": 6
           },
           {
-            "tag": "fire",
-            "title": "Fire/metal/smoke",
+            "tag": "water",
+            "title": "Water/ice/mist",
             "min": 7,
             "max": 8
           },
           {
-            "tag": "water",
-            "title": "Water/ice/mist",
+            "tag": "air",
+            "title": "Air/wind/storm",
             "min": 9,
             "max": 10
           },
           {
             "tag": "life",
-            "title": "Life/spirit/light",
+            "title": "Life/light",
             "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "stars",
+            "title": "Stars/cosmos",
+            "min": 12,
             "max": 12
           }
         ]
@@ -2283,10 +2294,14 @@
             "min": 12,
             "max": 12,
             "additional": [
-              {
-                "roll_result": "d10+1",
-                "repeat": 2
-              }
+              [
+                "details.oddity",
+                "d10+1"
+              ],
+              [
+                "details.oddity",
+                "d10+1"
+              ]
             ]
           }
         ]
