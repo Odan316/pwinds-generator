@@ -2308,7 +2308,121 @@
         "tag": "archive",
         "title": "Archive/laboratory",
         "min": 9,
-        "max": 9
+        "max": 9,
+        "additional": [
+          "dungeon_type.archive.builder",
+          "dungeon_type.archive.subject"
+        ],
+        "dictionaries": [
+          {
+            "tag": "builder",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "otherworldly_entity",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "scholar",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "alchemist",
+                "title": "Alchemist/enchanter",
+                "min": 4,
+                "max": 6
+              },
+              {
+                "tag": "wizard",
+                "title": "Wizard/warlock",
+                "min": 7,
+                "max": 10
+              },
+              {
+                "tag": "guild",
+                "title": "Guild/convocation",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "lich",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "subject",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "botany",
+                "title": "Botany/biology",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "zoology",
+                "title": "Zoology/cryptozoology",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "astrology",
+                "title": "Astrology/astronomy",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "element",
+                "min": 4,
+                "max": 5,
+                "additional": [
+                  "details.element"
+                ]
+              },
+              {
+                "tag": "magic_type",
+                "min": 6,
+                "max": 8,
+                "additional": [
+                  "details.magic_type"
+                ]
+              },
+              {
+                "tag": "oddity",
+                "min": 9,
+                "max": 9,
+                "additional": [
+                  "details.oddity"
+                ]
+              },
+              {
+                "tag": "otherworldly_studies",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "double",
+                "title": "Double subject",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  [
+                    "dungeon_type.archive.subject",
+                    "d10"
+                  ],
+                  [
+                    "dungeon_type.archive.subject",
+                    "d10"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "tag": "origin_unknown",
