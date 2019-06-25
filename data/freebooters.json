@@ -1450,7 +1450,100 @@
         "tag": "caves",
         "title": "Caves/caverns",
         "min": 1,
-        "max": 1
+        "max": 1,
+        "additional": [
+          "dungeon_type.caves.cave_type",
+          "dungeon_type.caves.main_entrance"
+        ],
+        "dictionaries": [
+          {
+            "tag": "cave_type",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "borrowed_by_monster",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "formed_by_lava_tubes",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "solutional1",
+                "title": "Solutional (limestone)",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "solutional2",
+                "title": "Solutional (chalk)",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "solutional3",
+                "title": "Solutional (dolomite)",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "solutional4",
+                "title": "Solutional (salt)",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "eroded_by_water",
+                "min": 8,
+                "max": 9
+              },
+              {
+                "tag": "formed_by_glacier",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "formed_by_earthquake",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "crystalline",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "main_entrance",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "cave_mouth",
+                "min": 1,
+                "max": 6
+              },
+              {
+                "tag": "crevice",
+                "title": "Crevice/chasm/gorge",
+                "min": 7,
+                "max": 9
+              },
+              {
+                "tag": "sinkhole",
+                "min": 10,
+                "max": 11
+              },
+              {
+                "tag": "swallow_hole",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          }
+        ]
       },
       {
         "tag": "ruined_settlement",
