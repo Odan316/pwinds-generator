@@ -1637,7 +1637,110 @@
       {
         "tag": "prison",
         "min": 3,
-        "max": 3
+        "max": 3,
+        "additional": [
+          "dungeon_type.prison.builder",
+          "dungeon_type.prison.prisoners"
+        ],
+        "dictionaries": [
+          {
+            "tag": "builder",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "surface_civilization",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "underworld_civilization",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "religious_order",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "monarch",
+                "title": "Monarch/overlord",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "wizard",
+                "title": "Wizard/lunatic",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "sorcerer",
+                "title": "Sorcerer-king/queen",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "extraplanar_entity",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },{
+            "tag": "prisoners",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "unspeakable_horror",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "demons",
+                "title": "Demons/devil",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "terrible_monsters",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "lunatics",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "poor",
+                "title": "Poor/indigent",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "criminal_underclass",
+                "min": 6,
+                "max": 9
+              },
+              {
+                "tag": "insurgents",
+                "title": "Insurgents/traitors",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "religious_minority",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "research_subjects",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          }
+        ]
       },
       {
         "tag": "mine",
