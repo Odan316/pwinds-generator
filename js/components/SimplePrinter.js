@@ -40,6 +40,7 @@ define([
         /**
          * Prints generated entity's properties (for calling recursive)
          * @param {GeneratedEntity} generatedEntity
+         * @param {Boolean} propertyEntity
          * @returns {*|jQuery|HTMLElement}
          */
         var printEntityProperties = function(generatedEntity, propertyEntity){
@@ -55,7 +56,9 @@ define([
                     if(propertyEntity){
                         $entityTitle.append($("<span class=\"type\">").text("" + generatedEntity.title + ": "));
                     }
-                    $entityTitle.append($("<span class=\"roll\">").text("(" + generatedEntity.roll + ") "));
+                    if(generatedEntity.roll !== null){
+                        $entityTitle.append($("<span class=\"roll\">").text("(" + generatedEntity.roll + ") "));
+                    }
                     $entityTitle.append($("<span class=\"title\">").text(generatedEntity.variant.title));
                     $entityPropertiesOutput.append($entityTitle);
 
