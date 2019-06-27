@@ -1458,7 +1458,7 @@
         "dictionaries": [
           {
             "tag": "area",
-            "dice":  "d12",
+            "dice": "d12",
             "use_mod": true,
             "variants": [
               {
@@ -1469,9 +1469,10 @@
                 "additional": [
                   "danger",
                   {
-                    "tag":  "exploration",
+                    "tag": "exploration",
                     "static": "+3"
-                  }
+                  },
+                  "dungeon_type.caves.exits"
                 ]
               }
             ]
@@ -1558,6 +1559,142 @@
               },
               {
                 "tag": "swallow_hole",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "exits",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "1",
+                "min": 1,
+                "max": 1,
+                "additional": [
+                  "details.exit_direction",
+                  "dungeon_type.caves.connection"
+                ]
+              },
+              {
+                "tag": "2",
+                "min": 2,
+                "max": 5,
+                "additional": [
+                  {
+                    "repeat": 2,
+                    "additional": [
+                      "details.exit_direction",
+                      "dungeon_type.caves.connection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "3",
+                "min": 6,
+                "max": 8,
+                "additional": [
+                  {
+                    "repeat": 3,
+                    "additional": [
+                      "details.exit_direction",
+                      "dungeon_type.caves.connection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "4",
+                "min": 9,
+                "max": 10,
+                "additional": [
+                  {
+                    "repeat": 4,
+                    "additional": [
+                      "details.exit_direction",
+                      "dungeon_type.caves.connection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "5",
+                "min": 11,
+                "max": 11,
+                "additional": [
+                  {
+                    "repeat": 5,
+                    "additional": [
+                      "details.exit_direction",
+                      "dungeon_type.caves.connection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "6",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  {
+                    "repeat": 6,
+                    "additional": [
+                      "details.exit_direction",
+                      "dungeon_type.caves.connection"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "connection",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "hole",
+                "title": "Hole/pit/sinkhole",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "crack",
+                "title": "Crack/fissure/chasm",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "tube",
+                "title": "Tube/crawlspace",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "gap",
+                "title": "Gap/dropoff",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "watercourse",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "tunnel",
+                "min": 6,
+                "max": 10
+              },
+              {
+                "tag": "shaft",
+                "title": "Shaft/chimney",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "adjacent_area",
                 "min": 12,
                 "max": 12
               }
@@ -2571,47 +2708,47 @@
   },
   {
     "tag": "danger",
-    "dice":  "d12",
+    "dice": "d12",
     "variants": [
       {
         "tag": "hazard",
-        "min":  1,
+        "min": 1,
         "max": 5,
-        "dice":  "d12",
+        "dice": "d12",
         "variants": [
           {
             "tag": "unnatural",
-            "min":  1,
+            "min": 1,
             "max": 1,
-            "dice":  "d12",
+            "dice": "d12",
             "variants": [
               {
                 "tag": "demonic",
                 "title": "Demonic power/effect",
-                "min":  1,
+                "min": 1,
                 "max": 1
               },
               {
                 "tag": "thought",
                 "title": "Thought/mind control",
-                "min":  2,
+                "min": 2,
                 "max": 2
               },
               {
                 "tag": "blight",
                 "title": "Blight/curse/corruption",
-                "min":  3,
+                "min": 3,
                 "max": 3
               },
               {
                 "tag": "mimicry",
-                "min":  4,
+                "min": 4,
                 "max": 4
               },
               {
                 "tag": "planar",
                 "title": "Planar power/effect",
-                "min":  5,
+                "min": 5,
                 "max": 6,
                 "additional": [
                   "details.element"
@@ -2620,7 +2757,7 @@
               {
                 "tag": "magical",
                 "title": "Magical power/effect",
-                "min":  7,
+                "min": 7,
                 "max": 11,
                 "additional": [
                   "details.magic_type"
@@ -2629,82 +2766,82 @@
               {
                 "tag": "divine",
                 "title": "Divine test/influence",
-                "min":  12,
+                "min": 12,
                 "max": 12
               }
             ]
           },
           {
             "tag": "natural",
-            "min":  2,
+            "min": 2,
             "max": 8,
             "dice": "d12",
             "variants": [
               {
                 "tag": "cave_in",
                 "title": "Cave-in/collapse",
-                "min":  1,
+                "min": 1,
                 "max": 1
               },
               {
                 "tag": "poison",
                 "title": "Poison/disease",
-                "min":  2,
+                "min": 2,
                 "max": 2
               },
               {
                 "tag": "unexpected_pitfall",
-                "min":  3,
+                "min": 3,
                 "max": 3
               },
               {
                 "tag": "angle",
                 "title": "Dangerous angle/slope",
-                "min":  4,
+                "min": 4,
                 "max": 4
               },
               {
                 "tag": "treacherous_footing",
-                "min":  5,
+                "min": 5,
                 "max": 5
               },
               {
                 "tag": "slick",
                 "title": "Slick/slippery floor",
-                "min":  6,
+                "min": 6,
                 "max": 6
               },
               {
                 "tag": "precarious_position",
-                "min":  7,
+                "min": 7,
                 "max": 7
               },
               {
                 "tag": "vulnerable_position",
-                "min":  8,
+                "min": 8,
                 "max": 8
               },
               {
                 "tag": "fog",
                 "title": "Fog/mist/smoke",
-                "min":  9,
+                "min": 9,
                 "max": 9
               },
               {
                 "tag": "structural_weakness",
-                "min":  10,
+                "min": 10,
                 "max": 10
               },
               {
                 "tag": "tight",
                 "title": "Tight/narrow place",
-                "min":  11,
+                "min": 11,
                 "max": 11
               },
               {
                 "tag": "double",
                 "title": "Double natural danger",
-                "min":  12,
+                "min": 12,
                 "max": 12,
                 "additional": [
                   [
@@ -2721,63 +2858,63 @@
           },
           {
             "tag": "trap",
-            "min":  9,
+            "min": 9,
             "max": 12,
             "dice": "d12",
             "variants": [
               {
                 "tag": "ambush",
-                "min":  1,
+                "min": 1,
                 "max": 1
               },
               {
                 "tag": "alarm",
-                "min":  2,
+                "min": 2,
                 "max": 2
               },
               {
                 "tag": "ensnaring",
                 "title": "Ensnaring/paralyzing",
-                "min":  3,
+                "min": 3,
                 "max": 3
               },
               {
                 "tag": "pit",
-                "min":  4,
+                "min": 4,
                 "max": 4
               },
               {
                 "tag": "crushing",
-                "min":  5,
+                "min": 5,
                 "max": 5
               },
               {
                 "tag": "piercing",
                 "title": "Piercing/slashing",
-                "min":  6,
+                "min": 6,
                 "max": 6
               },
               {
                 "tag": "asphyxiating",
-                "min":  7,
+                "min": 7,
                 "max": 7
               },
               {
                 "tag": "soporific",
                 "title": "Soporific/confusing",
-                "min":  8,
+                "min": 8,
                 "max": 8
               },
               {
                 "tag": "poisonous",
                 "title": "Poisonous (gas, etc.)",
-                "min":  9,
+                "min": 9,
                 "max": 9
               },
               {
                 "tag": "element",
                 "title": "ELEMENT-based",
-                "min":  10,
+                "min": 10,
                 "max": 10,
                 "additional": [
                   "details.element"
@@ -2786,7 +2923,7 @@
               {
                 "tag": "element",
                 "title": "ELEMENT-based",
-                "min":  10,
+                "min": 10,
                 "max": 10,
                 "additional": [
                   "details.element"
@@ -2795,7 +2932,7 @@
               {
                 "tag": "magic_type",
                 "title": "MAGIC TYPE-based",
-                "min":  11,
+                "min": 11,
                 "max": 11,
                 "additional": [
                   "details.magic_type"
@@ -2804,7 +2941,7 @@
               {
                 "tag": "double",
                 "title": "Double trap danger",
-                "min":  12,
+                "min": 12,
                 "max": 12,
                 "additional": [
                   [
@@ -2823,87 +2960,87 @@
       },
       {
         "tag": "creature",
-        "min":  6,
+        "min": 6,
         "max": 11,
         "generate_outer": "creature"
       },
       {
         "tag": "leader",
-        "min":  12,
+        "min": 12,
         "max": 12,
         "dice": "d12",
         "variants": [
           {
             "tag": "human",
             "min": 1,
-            "max":  6,
+            "max": 6,
             "dice": "d12",
             "variants": [
               {
                 "tag": "scavenger",
                 "title": "Scavenger/robber",
-                "min":  1,
+                "min": 1,
                 "max": 1
               },
               {
                 "tag": "wanted_criminal",
-                "min":  2,
+                "min": 2,
                 "max": 2
               },
               {
                 "tag": "bandit_chief",
-                "min":  3,
+                "min": 3,
                 "max": 3
               },
               {
                 "tag": "mercenary_captain",
-                "min":  4,
+                "min": 4,
                 "max": 4
               },
               {
                 "tag": "adventurer",
-                "min":  5,
+                "min": 5,
                 "max": 5
               },
               {
                 "tag": "shaman",
                 "title": "Shaman/priest/cultist",
-                "min":  6,
+                "min": 6,
                 "max": 6
               },
               {
                 "tag": "hih_priest",
                 "title": "High priest/oracle",
-                "min":  7,
+                "min": 7,
                 "max": 7
               },
               {
                 "tag": "sage",
                 "title": "Sage/alchemist",
-                "min":  8,
+                "min": 8,
                 "max": 8
               },
               {
                 "tag": "boss",
                 "title": "Boss/lord/chief",
-                "min":  9,
+                "min": 9,
                 "max": 9
               },
               {
                 "tag": "warchief",
                 "title": "Warchief/warlord",
-                "min":  10,
+                "min": 10,
                 "max": 10
               },
               {
                 "tag": "wizard",
                 "title": "Wizard/witch/warlock",
-                "min":  11,
+                "min": 11,
                 "max": 11
               },
               {
                 "tag": "figure_of_renown",
-                "min":  12,
+                "min": 12,
                 "max": 12
               }
             ]
@@ -2911,74 +3048,74 @@
           {
             "tag": "humanoid",
             "min": 7,
-            "max":  10,
+            "max": 10,
             "dice": "d12",
             "variants": [
               {
                 "tag": "scavenger",
                 "title": "Scavenger/robber",
-                "min":  1,
+                "min": 1,
                 "max": 1
               },
               {
                 "tag": "wanted_criminal",
-                "min":  2,
+                "min": 2,
                 "max": 2
               },
               {
                 "tag": "bandit_chief",
-                "min":  3,
+                "min": 3,
                 "max": 3
               },
               {
                 "tag": "mercenary_captain",
-                "min":  4,
+                "min": 4,
                 "max": 4
               },
               {
                 "tag": "adventurer",
-                "min":  5,
+                "min": 5,
                 "max": 5
               },
               {
                 "tag": "shaman",
                 "title": "Shaman/priest/cultist",
-                "min":  6,
+                "min": 6,
                 "max": 6
               },
               {
                 "tag": "hih_priest",
                 "title": "High priest/oracle",
-                "min":  7,
+                "min": 7,
                 "max": 7
               },
               {
                 "tag": "sage",
                 "title": "Sage/alchemist",
-                "min":  8,
+                "min": 8,
                 "max": 8
               },
               {
                 "tag": "boss",
                 "title": "Boss/lord/chief",
-                "min":  9,
+                "min": 9,
                 "max": 9
               },
               {
                 "tag": "warchief",
                 "title": "Warchief/warlord",
-                "min":  10,
+                "min": 10,
                 "max": 10
               },
               {
                 "tag": "wizard",
                 "title": "Wizard/witch/warlock",
-                "min":  11,
+                "min": 11,
                 "max": 11
               },
               {
                 "tag": "figure_of_renown",
-                "min":  12,
+                "min": 12,
                 "max": 12
               }
             ]
@@ -2986,40 +3123,40 @@
           {
             "tag": "other",
             "min": 11,
-            "max":  12,
+            "max": 12,
             "dice": "d12",
             "variants": [
               {
                 "tag": "vermin_lord",
-                "min":  1,
+                "min": 1,
                 "max": 1
               },
               {
                 "tag": "spirit",
                 "title": "Spirit/specter/ghost",
-                "min":  2,
+                "min": 2,
                 "max": 3
               },
               {
                 "tag": "undead_lieutenant",
-                "min":  4,
+                "min": 4,
                 "max": 5
               },
               {
                 "tag": "undead_lord",
                 "title": "Undead lord/lich",
-                "min":  6,
+                "min": 6,
                 "max": 7
               },
               {
                 "tag": "demon",
-                "min":  8,
+                "min": 8,
                 "max": 9
               },
               {
                 "tag": "monster_lord",
                 "title": "MONSTER lord",
-                "min":  10,
+                "min": 10,
                 "max": 10,
                 "additional": [
                   "creature.monster"
@@ -3028,12 +3165,12 @@
               {
                 "tag": "demon_lord",
                 "title": "Demon lord/devil",
-                "min":  11,
+                "min": 11,
                 "max": 11
               },
               {
                 "tag": "alien_interloper",
-                "min":  12,
+                "min": 12,
                 "max": 12
               }
             ]
@@ -3050,13 +3187,13 @@
         "tag": "monster",
         "min": 1,
         "max": 3,
-        "dice":"d12",
+        "dice": "d12",
         "variants": [
           {
             "tag": "legendary",
             "min": 1,
             "max": 1,
-            "dice":"d12",
+            "dice": "d12",
             "variants": [
               {
                 "tag": "oddity",
@@ -3106,7 +3243,7 @@
             "tag": "supernatural",
             "min": 2,
             "max": 3,
-            "dice":"d12",
+            "dice": "d12",
             "variants": [
               {
                 "tag": "lord",
@@ -3147,7 +3284,7 @@
             "tag": "fearsome",
             "min": 4,
             "max": 12,
-            "dice":"d12",
+            "dice": "d12",
             "variants": [
               {
                 "tag": "beast_ability",
@@ -3198,13 +3335,13 @@
         "tag": "beast",
         "min": 4,
         "max": 7,
-        "dice":"d12",
+        "dice": "d12",
         "variants": [
           {
             "tag": "water-going",
             "min": 1,
             "max": 2,
-            "dice":"d12",
+            "dice": "d12",
             "variants": [
               {
                 "tag": "whale",
@@ -3281,7 +3418,7 @@
             "tag": "airborne",
             "min": 3,
             "max": 5,
-            "dice":"d12",
+            "dice": "d12",
             "variants": [
               {
                 "tag": "pteranadon",
@@ -3359,7 +3496,7 @@
             "tag": "earthbound",
             "min": 6,
             "max": 12,
-            "dice":"d12",
+            "dice": "d12",
             "variants": [
               {
                 "tag": "dinosaur",
@@ -3441,13 +3578,13 @@
         "tag": "humanoid",
         "min": 8,
         "max": 9,
-        "dice":"d12",
+        "dice": "d12",
         "variants": [
           {
             "tag": "rare",
             "min": 1,
             "max": 2,
-            "dice":"d12",
+            "dice": "d12",
             "variants": [
               {
                 "tag": "human_monster",
@@ -3500,7 +3637,7 @@
             "tag": "uncommon",
             "min": 3,
             "max": 5,
-            "dice":"d12",
+            "dice": "d12",
             "variants": [
               {
                 "tag": "cyclops",
@@ -3544,7 +3681,7 @@
             "tag": "common",
             "min": 6,
             "max": 12,
-            "dice":"d12",
+            "dice": "d12",
             "variants": [
               {
                 "tag": "orc",
@@ -4042,6 +4179,42 @@
                 "d10+1"
               ]
             ]
+          }
+        ]
+      },
+      {
+        "tag": "exit_direction",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "down",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "tag": "back",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "forward",
+            "min": 5,
+            "max": 7
+          },
+          {
+            "tag": "left",
+            "min": 8,
+            "max": 9
+          },
+          {
+            "tag": "right",
+            "min": 10,
+            "max": 11
+          },
+          {
+            "tag": "up",
+            "min": 12,
+            "max": 12
           }
         ]
       }
