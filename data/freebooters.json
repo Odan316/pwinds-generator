@@ -1465,13 +1465,80 @@
                 "tag": "common1",
                 "title": "Common",
                 "min": 1,
-                "max": 12,
+                "max": 3,
                 "additional": [
                   "danger",
                   {
                     "tag": "exploration",
                     "static": "+3"
                   },
+                  "dungeon_type.caves.common_area",
+                  "dungeon_type.caves.exits"
+                ]
+              },
+              {
+                "tag": "common2",
+                "title": "Common",
+                "min": 4,
+                "max": 6,
+                "additional": [
+                  "danger",
+                  "dungeon_type.caves.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "+2"
+                  },
+                  "dungeon_type.caves.common_area",
+                  "dungeon_type.caves.exits"
+                ]
+              },
+              {
+                "tag": "common3",
+                "title": "Common",
+                "min": 7,
+                "max": 8,
+                "additional": [
+                  "danger",
+                  "dungeon_type.caves.discovery",
+                  "dungeon_type.caves.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "+1"
+                  },
+                  "dungeon_type.caves.common_area",
+                  "dungeon_type.caves.exits"
+                ]
+              },
+              {
+                "tag": "common1",
+                "title": "Common",
+                "min": 9,
+                "max": 11,
+                "additional": [
+                  {
+                    "tag": "Contents",
+                    "static": "Nothing unusual"
+                  },
+                  {
+                    "tag": "exploration",
+                    "static": "+1"
+                  },
+                  "dungeon_type.caves.common_area",
+                  "dungeon_type.caves.exits"
+                ]
+              },
+              {
+                "tag": "common5",
+                "title": "Common",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "dungeon_type.caves.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "+1"
+                  },
+                  "dungeon_type.caves.common_area",
                   "dungeon_type.caves.exits"
                 ]
               }
@@ -1565,6 +1632,147 @@
             ]
           },
           {
+            "tag": "common_area",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "collapsed_area",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "tunnel_network",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "cave",
+                "title": "Cave/room",
+                "min": 4,
+                "max": 6
+              },
+              {
+                "tag": "gallery",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "cavern",
+                "title": "Cavern/chamber",
+                "min": 8,
+                "max": 9
+              },
+              {
+                "tag": "cave_cluster",
+                "min": 10,
+                "max": 10,
+                "additional": [
+                  {
+                    "tag": "caves_amount",
+                    "roll_result": "d4+1"
+                  }
+                ]
+              },
+              {
+                "tag": "multilevel_cavern",
+                "min": 11,
+                "max": 11,
+                "additional": [
+                  {
+                    "tag": "level_amount",
+                    "roll_result": "d4+1"
+                  }
+                ]
+              },
+              {
+                "tag": "roll_other",
+                "title": "Roll on any different COMMON AREA table",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "unique_area",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "midden",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "bottomless_cve",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "ice_cave",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "underground_maze",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "bandit_hideout",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "lair",
+                "title": "Lair of the MONSTER",
+                "min": 6,
+                "max": 7,
+                "additional": [
+                  "creature.monster"
+                ]
+              },
+              {
+                "tag": "underground_maze",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "vast_cavern",
+                "min": 8,
+                "max": 8,
+                "additional": [
+                  {
+                    "generate_outer": "discovery.structure",
+                    "repeat": "d4+1"
+                  }
+                ]
+              },
+              {
+                "tag": "strange_cavern",
+                "min": 9,
+                "max": 9,
+                "additional": [
+                  "details.oddity"
+                ]
+              },
+              {
+                "tag": "lake_of_lava",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "gateway_to_wilderness",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "roll_other",
+                "title": "Roll on any different UNIQUE AREA table",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
             "tag": "exits",
             "dice": "d12",
             "variants": [
@@ -1651,6 +1859,57 @@
           },
           {
             "tag": "connection",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "hole",
+                "title": "Hole/pit/sinkhole",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "crack",
+                "title": "Crack/fissure/chasm",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "tube",
+                "title": "Tube/crawlspace",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "gap",
+                "title": "Gap/dropoff",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "watercourse",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "tunnel",
+                "min": 6,
+                "max": 10
+              },
+              {
+                "tag": "shaft",
+                "title": "Shaft/chimney",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "adjacent_area",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "discovery",
             "dice": "d12",
             "variants": [
               {
@@ -3720,6 +3979,233 @@
         "tag": "human",
         "min": 10,
         "max": 12
+      }
+    ]
+  },
+  {
+    "tag": "discovery",
+    "roll": "d12",
+    "variants": [
+      {
+        "tag": "unnatural_feature",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "tag": "natural_feature",
+        "min": 2,
+        "max": 6
+      },
+      {
+        "tag": "evidence",
+        "min": 7,
+        "max": 9
+      },
+      {
+        "tag": "structure",
+        "min": 10,
+        "max": 12,
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "enigmatic",
+            "min": 1,
+            "max": 1,
+            "roll": "d12",
+            "variants": [
+              {
+                "tag": "oddity",
+                "min": 1,
+                "max": 4,
+                "additional": [
+                  "details.oddity"
+                ]
+              },
+              {
+                "tag": "mound",
+                "title": "Mound/earthwork",
+                "min": 5,
+                "max": 7
+              },
+              {
+                "tag": "monument",
+                "title": "Monument/megalith",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "statue",
+                "title": "Statue/idol/totem",
+                "min": 9,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "infrastructure",
+            "min": 2,
+            "max": 3,
+            "roll": "d12",
+            "variants": [
+              {
+                "tag": "signpost",
+                "title": "Signpost/marker",
+                "min": 1,
+                "max": 3
+              },
+              {
+                "tag": "bridge",
+                "title": "Bridge/aqueduct",
+                "min": 4,
+                "max": 5
+              },
+              {
+                "tag": "track",
+                "title": "Track/path/trail/road",
+                "min": 6,
+                "max": 11
+              },
+              {
+                "tag": "mine",
+                "title": "Mine/quarry",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "dwelling",
+            "min": 4,
+            "max": 5,
+            "roll": "d12",
+            "variants": [
+              {
+                "tag": "campsite",
+                "title": "Campsite/hovel/hut",
+                "min": 1,
+                "max": 4
+              },
+              {
+                "tag": "farmstead",
+                "min": 5,
+                "max": 8
+              },
+              {
+                "tag": "inn",
+                "title": "Inn/toll house/mill",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "tower",
+                "title": "Tower/keep/castle/quarry",
+                "min": 11,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "religious",
+            "min": 6,
+            "max": 7,
+            "roll": "d12",
+            "variants": [
+              {
+                "tag": "grave_marker",
+                "min": 1,
+                "max": 3
+              },
+              {
+                "tag": "graveyard",
+                "title": "Graveyard/burial ground",
+                "min": 4,
+                "max": 6
+              },
+              {
+                "tag": "tomb",
+                "title": "Tomb/crypt/barrow",
+                "min": 7,
+                "max": 9
+              },
+              {
+                "tag": "temple",
+                "title": "Temple/monastery",
+                "min": 10,
+                "max": 11
+              },
+              {
+                "tag": "great_temple",
+                "title": "Great temple/sanctuary",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "ruin",
+            "min": 8,
+            "max": 11,
+            "roll": "d12",
+            "variants": [
+              {
+                "tag": "dungeon",
+                "min": 1,
+                "max": 4,
+                "additional": [
+                  "dungeon"
+                ]
+              },
+              {
+                "tag": "settlement",
+                "title": "SETTLEMENT - generation not realised yet",
+                "min": 4,
+                "max": 6
+              },
+              {
+                "tag": "religious",
+                "title": "Religious ruin",
+                "min": 7,
+                "max": 8,
+                "additional": [
+                  [
+                    "discovery.structure.religious",
+                    "d8+4"
+                  ]
+                ]
+              },
+              {
+                "tag": "dwelling",
+                "title": "Dwelling ruin",
+                "min": 9,
+                "max": 10,
+                "additional": [
+                  [
+                    "discovery.structure.dwelling",
+                    "d8+4"
+                  ]
+                ]
+              },
+              {
+                "tag": "infrastructure",
+                "title": "Infrastructure ruin",
+                "min": 11,
+                "max": 12,
+                "additional": [
+                  [
+                    "discovery.structure.infrastructure",
+                    "d8+4"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "settlement",
+            "title": "SETTLEMENT - generation not realised yet",
+            "min": 12,
+            "max": 12
+          }
+        ]
       }
     ]
   },
