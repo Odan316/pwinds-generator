@@ -1458,8 +1458,9 @@
         "dictionaries": [
           {
             "tag": "area",
+            "hint": "$modifier",
             "dice": "d12",
-            "use_mod": true,
+            "use_modifier": true,
             "variants": [
               {
                 "tag": "common1",
@@ -4414,6 +4415,14 @@
           }
         ]
       }
+    ]
+  },
+  {
+    "tag": "booty",
+    "hint": "$dice",
+    "dice": "d6",
+    "use_custom_dice": true,
+    "variants": [
     ]
   },
   {

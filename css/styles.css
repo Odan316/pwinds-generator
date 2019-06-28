@@ -19,6 +19,9 @@ h2 button {
 h2 .output-clear {
   margin-left: 15px;
 }
+.treeview .hint {
+  margin-left: 5px;
+}
 .output {
   text-align: left;
   height: 700px;
@@ -56,3 +59,4 @@ h2 .output-clear {
 .output .generatedOutput .customRollResult {
   font-size: 42px;
 }
+/*# sourceMappingURL=styles.css.map */

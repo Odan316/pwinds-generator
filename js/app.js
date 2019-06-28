@@ -20,7 +20,10 @@ define([
         generator.loadStorage(generatorData);
 
         var entitiesTree = $('#entitiesTree');
-        entitiesTree.treeview({data: treeHelper.prepareTree(generator.getStorage().getTree())});
+        entitiesTree.treeview({
+            data: treeHelper.prepareTree(generator.getStorage().getTree()),
+            highlightSelected: false
+        });
         entitiesTree.treeview('collapseAll', { silent: true });
 
         $(document).on("click", ".generate-start", function () {

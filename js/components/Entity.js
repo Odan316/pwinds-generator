@@ -29,6 +29,14 @@ define([
         var _title = null;
 
         /**
+         * Entity hint, for interface. There are possibility to set fast tags, but it is in progress
+         *
+         * @type {String|null}
+         * @private
+         */
+        var _hint = null;
+
+        /**
          * Dice formula, for randomizing result from _variants
          * Has default value as d12
          *
@@ -37,6 +45,21 @@ define([
          */
         var _dice = "d12";
 
+        /**
+         * Whether to use user-provided modifier for roll
+         *
+         * @type {boolean}
+         * @private
+         */
+        var _use_modifier = false;
+
+        /**
+         * Whether to use user-provided formula for roll instead of "dice" property
+         *
+         * @type {boolean}
+         * @private
+         */
+        var _use_custom_dice = false;
         /**
          * List of child entities, calculator rolls _dice and finds appropriate child by _min and _max
          *
@@ -89,7 +112,10 @@ define([
          * @param data
          * @param data.tag
          * @param data.title
+         * @param data.hint
          * @param data.dice
+         * @param data.use_modifier
+         * @param data.use_custom_dice
          * @param data.variants
          * @param data.dictionaries
          * @param data.additional
@@ -104,8 +130,17 @@ define([
             if("title" in data){
                 _title = data.title;
             }
+            if("hint" in data){
+                _hint = data.hint;
+            }
             if("dice" in data){
                 _dice = data.dice;
+            }
+            if("use_modifier" in data){
+                _use_modifier = data.use_modifier;
+            }
+            if("use_custom_dice" in data){
+                _use_custom_dice = data.use_custom_dice;
             }
             if("variants" in data){
                 _variants = [];
@@ -181,12 +216,60 @@ define([
         };
 
         /**
+         * Return hint text, if available, also convert fast hints from tag to text
+         *
+         * @returns {string}
+         */
+        this.getHint = function() {
+            if (_hint === "$dice") {
+                _hint = "Use 'Roll' field to enter dice formula for this entity";
+            } else if (_hint === "$modifier") {
+                _hint = "Use 'Mod +' field to enter dynamic modifier for this roll";
+            }
+
+            return _hint;
+        };
+
+        /**
          * Returns entity dice
          *
          * @returns {String|null}
          */
         this.getDice = function() {
-            return _dice;
+            let dice = _dice;
+            if(this.useCustomDice()){
+                let customDice = $("#diceRoller").val();
+                if(!_.isEmpty(customDice)){
+                    dice = customDice;
+                }
+            }
+            if(this.useCustomModifier()){
+                let customMod = $("#diceModifier").val();
+                if(!_.isEmpty(customMod)) {
+                    dice += ('+' + customMod);
+                }
+            }
+            console.log(dice);
+            return dice;
+        };
+
+        /**
+         * Forces use of user-provided modifier
+         *
+         * @returns {Boolean}
+         */
+        this.useCustomModifier =function() {
+            return _use_modifier;
+        };
+
+
+        /**
+         * Forces use of user-provided dice
+         *
+         * @returns {Boolean}
+         */
+        this.useCustomDice = function() {
+            return _use_custom_dice;
         };
 
         /**
@@ -197,7 +280,8 @@ define([
         this.getTreeNode = function() {
             var node = {
                 tag: this.getTag(),
-                title: this.getTag().beautifyTag()
+                title: this.getTag().beautifyTag(),
+                hint: this.getHint()
             };
             var nodes = this.getSubTree();
             if(nodes.length > 0){

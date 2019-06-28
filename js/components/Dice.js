@@ -26,15 +26,16 @@ define([
                 if(_.isNumber(diceFormula) || _.isEqual(diceFormula, _.toNumber(diceFormula))){
                     return _.toNumber(diceFormula);
                 }
-                var regexp = /^(\d*)d(\d+)[-+]*(\d*)$/;
+                var regexp = /^(\d*)d(\d+)[-+]*(\d*)[-+]*(\d*)$/;
                 var formulaArray = diceFormula.match(regexp);
 
                 if(formulaArray != null) {
-                    var multiplier = (formulaArray[1] != "" ? formulaArray[1] : 1);
-                    var addition = (formulaArray[3] != "" ? formulaArray[3] : 0);
+                    var multiplier = (formulaArray[1] !== "" ? formulaArray[1] : 1);
+                    var addition = (formulaArray[3] !== "" ? formulaArray[3] : 0);
+                    var addition2 = (formulaArray[4] !== "" ? formulaArray[4] : 0);
                     var roll = randomInteger(1, parseInt(formulaArray[2]));
 
-                    result = parseInt(multiplier)*roll + parseInt(addition);
+                    result = parseInt(multiplier)*roll + parseInt(addition) + parseInt(addition2);
                 }
 
             }
