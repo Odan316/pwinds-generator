@@ -1541,6 +1541,90 @@
                   "dungeon_type.caves.common_area",
                   "dungeon_type.caves.exits"
                 ]
+              },
+              {
+                "tag": "unique1",
+                "title": "Unique",
+                "min": 13,
+                "max": 13,
+                "additional": [
+                  "danger",
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.caves.unique_area",
+                  "dungeon_type.caves.exits"
+                ]
+              },
+              {
+                "tag": "unique2",
+                "title": "Unique",
+                "min": 14,
+                "max": 14,
+                "additional": [
+                  {
+                    "tag": "Contents",
+                    "static": "Nothing unusual"
+                  },
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.caves.unique_area",
+                  "dungeon_type.caves.exits"
+                ]
+              },
+              {
+                "tag": "unique3",
+                "title": "Unique",
+                "min": 15,
+                "max": 15,
+                "additional": [
+                  "danger",
+                  "dungeon_type.caves.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.caves.unique_area",
+                  "dungeon_type.caves.exits"
+                ]
+              },
+              {
+                "tag": "unique4",
+                "title": "Unique",
+                "min": 16,
+                "max": 16,
+                "additional": [
+                  "danger",
+                  "dungeon_type.caves.discovery",
+                  "dungeon_type.caves.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.caves.unique_area",
+                  "dungeon_type.caves.exits"
+                ]
+              },
+              {
+                "tag": "unique5",
+                "title": "Unique",
+                "min": 17,
+                "max": 100,
+                "additional": [
+                  {
+                    "repeat": "d4",
+                    "generate_outer": "dungeon_type.caves.discovery"
+                  },
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.caves.unique_area",
+                  "dungeon_type.caves.exits"
+                ]
               }
             ]
           },
@@ -1913,49 +1997,172 @@
             "dice": "d12",
             "variants": [
               {
-                "tag": "hole",
-                "title": "Hole/pit/sinkhole",
+                "tag": "feature",
                 "min": 1,
-                "max": 1
+                "max": 8,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "pit",
+                    "title": "Pit/fissure/chasm",
+                    "min": 1,
+                    "max": 1
+                  },
+                  {
+                    "tag": "treacherous",
+                    "title": "Treacherous/slippery",
+                    "min": 2,
+                    "max": 2
+                  },
+                  {
+                    "tag": "dramatic_slope",
+                    "min": 3,
+                    "max": 3
+                  },
+                  {
+                    "tag": "dense_columns",
+                    "min": 4,
+                    "max": 4
+                  },
+                  {
+                    "tag": "pockets",
+                    "title": "Pockets/depressions",
+                    "min": 5,
+                    "max": 5
+                  },
+                  {
+                    "tag": "natural_alcoves",
+                    "title": "Natural alcoves/niches",
+                    "min": 6,
+                    "max": 6
+                  },
+                  {
+                    "tag": "vertical_space",
+                    "min": 7,
+                    "max": 7
+                  },
+                  {
+                    "tag": "ledges",
+                    "title": "Ledges/ramps/bridges",
+                    "min": 8,
+                    "max": 8
+                  },
+                  {
+                    "tag": "precipice",
+                    "title": "Precipice/overlook",
+                    "min": 9,
+                    "max": 9
+                  },
+                  {
+                    "tag": "multilevel_space",
+                    "min": 10,
+                    "max": 10
+                  },
+                  {
+                    "tag": "advantageous_position",
+                    "min": 11,
+                    "max": 11
+                  },
+                  {
+                    "tag": "oddity",
+                    "min": 12,
+                    "max": 12,
+                    "additional": [
+                      "details.oddity"
+                    ]
+                  }
+                ]
               },
               {
-                "tag": "crack",
-                "title": "Crack/fissure/chasm",
-                "min": 2,
-                "max": 2
-              },
-              {
-                "tag": "tube",
-                "title": "Tube/crawlspace",
-                "min": 3,
-                "max": 3
-              },
-              {
-                "tag": "gap",
-                "title": "Gap/dropoff",
-                "min": 4,
-                "max": 4
-              },
-              {
-                "tag": "watercourse",
-                "min": 5,
-                "max": 5
-              },
-              {
-                "tag": "tunnel",
-                "min": 6,
-                "max": 10
-              },
-              {
-                "tag": "shaft",
-                "title": "Shaft/chimney",
-                "min": 11,
-                "max": 11
-              },
-              {
-                "tag": "adjacent_area",
-                "min": 12,
-                "max": 12
+                "tag": "find",
+                "min": 9,
+                "max": 12,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "lair",
+                    "title": "Lair of CREATURE",
+                    "min": 1,
+                    "max": 1,
+                    "additional": [
+                      "creature"
+                    ]
+                  },
+                  {
+                    "tag": "edible",
+                    "title": "Edible fungi/lichen",
+                    "min": 2,
+                    "max": 2
+                  },
+                  {
+                    "tag": "bioluminescent_fungi",
+                    "min": 3,
+                    "max": 3
+                  },
+                  {
+                    "tag": "evidence_of_inhabitant",
+                    "min": 4,
+                    "max": 4
+                  },
+                  {
+                    "tag": "sign_of_danger",
+                    "min": 5,
+                    "max": 5
+                  },
+                  {
+                    "tag": "explorers",
+                    "min": 6,
+                    "max": 6,
+                    "additional": [
+                      {
+                        "tag": "explorers_amount",
+                        "roll_result": "d4"
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "spring",
+                    "title": "Spring/stream/pool",
+                    "min": 7,
+                    "max": 8
+                  },
+                  {
+                    "tag": "cascade",
+                    "title": "Cascade/waterfall",
+                    "min": 9,
+                    "max": 9
+                  },
+                  {
+                    "tag": "campsite",
+                    "title": "Campsite/supplies",
+                    "min": 10,
+                    "max": 10
+                  },
+                  {
+                    "tag": "booty1",
+                    "title": "Booty",
+                    "min": 11,
+                    "max": 11,
+                    "additional": [
+                      [
+                        "booty",
+                        "d4+1"
+                      ]
+                    ]
+                  },
+                  {
+                    "tag": "booty2",
+                    "title": "Booty",
+                    "min": 12,
+                    "max": 12,
+                    "additional": [
+                      [
+                        "booty",
+                        "d6+1"
+                      ]
+                    ]
+                  }
+                ]
               }
             ]
           }
