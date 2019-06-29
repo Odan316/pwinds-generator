@@ -65,6 +65,7 @@ define([
             if (entity == null) {
                 // Generate error entity
                 generatedEntity = new GeneratedErrorEntity(_errors.ERROR_ENTITY_NOT_FOUND);
+                return generatedEntity;
 
             } else if (entity instanceof VariantEntity && entity.isStatic()) {
                 // Generate (simply return) static value
@@ -115,7 +116,7 @@ define([
 
                     generatedEntity.variant = generateEntity(entity.getChildEntityByRoll(roll));
                 }
-
+            }
                 // Generate additional entities
                 if (entity.hasAdditional()) {
                     _.forEach(entity.getAdditionalEntitiesLinks(), function (additionalEntityData) {
@@ -148,7 +149,7 @@ define([
                 if (entity instanceof VariantEntity && entity.hasNumbers()) {
                     generatedEntity.numbers = _dice.roll(entity.getNumbers())
                 }
-            }
+
 
             return generatedEntity;
         };
