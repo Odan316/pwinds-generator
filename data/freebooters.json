@@ -5175,9 +5175,13 @@
               },
               {
                 "tag": "weapon",
-                "title": "WEAPON/ARMOUR (not realised yet)",
+                "title": "WEAPON/ARMOR",
                 "min": 10,
-                "max": 10
+                "max": 10,
+                "additional": [
+                  "booty.weapon",
+                  "booty.armor"
+                ]
               },
               {
                 "tag": "fine",
@@ -5214,7 +5218,86 @@
             "min": 1,
             "max": 3,
             "variants": [
-
+              {
+                "tag": "grain",
+                "title": "Grain/lumber/stone",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "preserved_food",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "pottery",
+                "title": "Pottery/glassware",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "furs",
+                "title": "Furs/hides/textiles",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "herbs",
+                "title": "Herbs/ingredients",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "ore",
+                "title": "Raw ore/ingots",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "beer",
+                "title": "Beer/wine/spirits",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "spices",
+                "title": "Spices/tea/tobacco",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "body_parts",
+                "title": "Monster BODY PART",
+                "min": 9,
+                "max": 9,
+                "additional": [
+                  "booty.body_part"
+                ]
+              },
+              {
+                "tag": "contraband",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "weapon",
+                "title": "WEAPON/ARMOR (not realised yet)",
+                "min": 11,
+                "max": 11,
+                "additional": [
+                  "booty.weapon",
+                  "booty.armor"
+                ]
+              },
+              {
+                "tag": "specialty",
+                "title": "SPECIALTY supplies",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "booty.specialty"
+                ]
+              }
             ]
           },
           {
@@ -5224,6 +5307,92 @@
             "max": 6,
             "variants": [
 
+              {
+                "tag": "fine_common",
+                "title": "'Fine' COMMON ITEM",
+                "min": 1,
+                "max": 1,
+                "additional": [
+                  "booty.item.common_item"
+                ]
+              },
+              {
+                "tag": "exquisite_common",
+                "title": "'Exquisite' COMMON ITEM",
+                "min": 2,
+                "max": 2,
+                "additional": [
+                  "booty.item.common_item"
+                ]
+              },
+              {
+                "tag": "desk",
+                "title": "Desk/table/shelving",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "dresser",
+                "title": "Dresser/armoire",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "sculpture",
+                "title": "Sculpture/painting",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "carpet",
+                "title": "Carpet/rug/tapestry",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "idol",
+                "title": "Idol/statue/figurine",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "mirror",
+                "title": "Mirror/hourglass",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "musical_instrument",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "fine",
+                "title": "Roll again, add 'fine'",
+                "min": 10,
+                "max": 10,
+                "additional": [
+                  "booty.valuable.art_object"
+                ]
+              },
+              {
+                "tag": "exquisite",
+                "title": "Roll again, add 'exquisite'",
+                "min": 11,
+                "max": 11,
+                "additional": [
+                  "booty.valuable.art_object"
+                ]
+              },
+              {
+                "tag": "rarity",
+                "title": "Roll RARITY valuable",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "booty.valuable.rarity"
+                ]
+              }
             ]
           },
           {
@@ -5234,6 +5403,84 @@
             "max": 9,
             "variants": [
 
+              {
+                "tag": "uncut",
+                "title": "Uncut/small/flawed gem",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "handful",
+                "title": "Handful of gems/jewels",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "large",
+                "title": "Large gem/jewel",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "charm",
+                "title": "Charm/holy symbol",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "ring",
+                "title": "Ring/earring",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "bracelet",
+                "title": "Bracelet/anklet/armlet",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "necklace",
+                "title": "Necklace/amulet/periapt",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "broach",
+                "title": "Broach/buckle/pin",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "circlet",
+                "title": "Circlet/tiara/crown",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "scepter",
+                "title": "Scepter/sign of office",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "armor",
+                "title": "Jewelled ARMOR",
+                "min": 11,
+                "max": 11,
+                "additional": [
+                 "booty.armor"
+                ]
+              },
+              {
+                "tag": "weapon",
+                "title": "Jewelled WEAPON",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "booty.weapon"
+                ]
+              }
             ]
           },
           {
