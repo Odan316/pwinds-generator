@@ -4791,6 +4791,394 @@
           }
         ]
       }
+    ],
+    "dictionaries": [
+      {
+        "tag": "body_part",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "skin",
+            "title": "Skin/hide/fur/shell",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "tag": "blood",
+            "title": "Blood/ichor",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "internal_organ",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "gland",
+            "title": "Gland/sac/node",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "appendage",
+            "title": "Appendage/limb",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "sinew",
+            "title": "Sinew/muscle/bone",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "teeth",
+            "title": "Teeth/tusk/horns",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "ears",
+            "title": "Ears/nose/tongue",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "eyes",
+            "title": "Eyes/sensory organs",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "brain",
+            "min": 12,
+            "max": 12
+          }
+        ],
+        "additional": [
+          "booty.body_part_property"
+        ]
+      },
+      {
+        "tag": "body_part_property",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "protection",
+            "title": "Protection/ward",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "tag": "Spice",
+            "title": "Spice/perfume",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "ink",
+            "title": "Ink/dye/stain",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "narcotic",
+            "title": "Narcotic/aphrodisiac",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "poison",
+            "min": 6,
+            "max": 7
+          },
+          {
+            "tag": "curative",
+            "title": "Curative/restorative",
+            "min": 8,
+            "max": 9
+          },
+          {
+            "tag": "spell_component",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "supply",
+            "min": 11,
+            "max": 11,
+            "additional": [
+              "booty.specialty"
+            ]
+          },
+          {
+            "tag": "fine",
+            "title": "Roll again, add 'fine'",
+            "min": 12,
+            "max": 12,
+            "additional": [
+              [
+                "booty.body_part_property",
+                "d10+1"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "item",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "incidental_item",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "decanter",
+                "title": "Decanter/vessel/cup",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "pots",
+                "title": "Pots/pans/cauldron",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "dishware",
+                "title": "Dishware/utensils",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "tools",
+                "title": "Tools/harsware",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "bedding",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "trophy",
+                "title": "Trophy/keepsake",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "candlestick",
+                "title": "Candlestick/lamp",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "rope",
+                "title": "Rope/chain/net",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "rug",
+                "title": "Rug/mat/carpet",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "flag",
+                "title": "Flag/banner",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "fine",
+                "title": "Roll again, add 'fine'",
+                "min": 11,
+                "max": 11,
+                "additional": [
+                  [
+                    "booty.item.incidental_item",
+                    "d10"
+                  ]
+                ]
+              },
+              {
+                "tag": "common",
+                "title": "Roll 'Common item'",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "booty.item.common_item"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "common_item",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "decanter",
+                "title": "Decanter/vessel/cup",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "pots",
+                "title": "Pots/pans/cauldron",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "dishware",
+                "title": "Dishware/utensils",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "tools",
+                "title": "Tools/harsware",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "bedding",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "trophy",
+                "title": "Trophy/keepsake",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "candlestick",
+                "title": "Candlestick/lamp",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "rope",
+                "title": "Rope/chain/net",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "rug",
+                "title": "Rug/mat/carpet",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "flag",
+                "title": "Flag/banner",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "fine",
+                "title": "Roll again, add 'fine'",
+                "min": 11,
+                "max": 11,
+                "additional": [
+                  [
+                    "booty.item.incidental_item",
+                    "d10"
+                  ]
+                ]
+              },
+              {
+                "tag": "common",
+                "title": "Roll 'Common item'",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "booty.item.common_item"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "_useful_item",
+            "dice": "d12",
+            "variants": [
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "specialty",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "cookery",
+            "title": "Cookery/brewing",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "poison",
+            "title": "Poison/alchemy",
+            "min": 2,
+            "max": 3
+          },
+          {
+            "tag": "stealth",
+            "title": "Stealth/espionage",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "cartography",
+            "title": "Cartography/navigation",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "travel",
+            "title": "Travel/transportation",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "architecture",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "smithing",
+            "title": "Smithing/forging",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "engineering",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "healing",
+            "title": "Healing/apothecary",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "divination",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "invention",
+            "title": "Invention/wizardry",
+            "min": 12,
+            "max": 12
+          }
+        ]
+      }
     ]
   },
   {
