@@ -35,5 +35,3 @@ Written in JSON format
 ##TODO: 
 
 Settlements
-
-Weapons and armour

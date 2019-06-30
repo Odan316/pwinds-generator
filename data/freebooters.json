@@ -5210,11 +5210,11 @@
       },
       {
         "tag": "valuable",
-        "dice":  "d12",
+        "dice": "d12",
         "variants": [
           {
             "tag": "trade_good",
-            "dice":  "d12",
+            "dice": "d12",
             "min": 1,
             "max": 3,
             "variants": [
@@ -5302,11 +5302,10 @@
           },
           {
             "tag": "art_object",
-            "dice":  "d12",
+            "dice": "d12",
             "min": 4,
             "max": 6,
             "variants": [
-
               {
                 "tag": "fine_common",
                 "title": "'Fine' COMMON ITEM",
@@ -5398,11 +5397,10 @@
           {
             "tag": "gem",
             "title": "Gem/jewelry",
-            "dice":  "d12",
+            "dice": "d12",
             "min": 7,
             "max": 9,
             "variants": [
-
               {
                 "tag": "uncut",
                 "title": "Uncut/small/flawed gem",
@@ -5469,7 +5467,7 @@
                 "min": 11,
                 "max": 11,
                 "additional": [
-                 "booty.armor"
+                  "booty.armor"
                 ]
               },
               {
@@ -5485,20 +5483,184 @@
           },
           {
             "tag": "rarity",
-            "dice":  "d12",
+            "dice": "d12",
             "min": 10,
             "max": 11,
             "variants": [
-
+              {
+                "tag": "salve",
+                "title": "Salve/ointment/potion/elixir",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "spell_scroll",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "magical_incidental",
+                "title": "Magical INCIDENTAL ITEM",
+                "min": 4,
+                "max": 4,
+                "additional": [
+                  "booty.item.incidental_item"
+                ]
+              },
+              {
+                "tag": "magical_common",
+                "title": "Magical COMMON ITEM",
+                "min": 5,
+                "max": 5,
+                "additional": [
+                  [
+                    "booty.item.common_item",
+                    "d10"
+                  ]
+                ]
+              },
+              {
+                "tag": "magical_useful",
+                "title": "Magical USEFUL ITEM",
+                "min": 6,
+                "max": 6,
+                "additional": [
+                  [
+                    "booty.item.useful_item",
+                    "d10"
+                  ]
+                ]
+              },
+              {
+                "tag": "magical_gem",
+                "title": "Magical GEM/JEWELRY",
+                "min": 7,
+                "max": 7,
+                "additional": [
+                  "booty.valuable.gem"
+                ]
+              },
+              {
+                "tag": "magical_wand",
+                "title": "Magical wand/staff/rod/orb",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "spellbook",
+                "min": 9,
+                "max": 9,
+                "additional": [
+                  {
+                    "tag": "spells_amount",
+                    "roll_result": "2d4"
+                  }
+                ]
+              },
+              {
+                "tag": "magical_weapon",
+                "title": "Magical WEAPON",
+                "min": 10,
+                "max": 10,
+                "additional": [
+                  "booty.weapon"
+                ]
+              },
+              {
+                "tag": "magical_armor",
+                "title": "Magical ARMOR",
+                "min": 11,
+                "max": 11,
+                "additional": [
+                  "booty.armor"
+                ]
+              },
+              {
+                "tag": "divine",
+                "title": "'Divine' symbol/object",
+                "min": 12,
+                "max": 12
+              }
             ]
           },
           {
             "tag": "unique_artifact",
-            "dice":  "d12",
+            "dice": "d12",
             "min": 12,
             "max": 12,
             "variants": [
-
+              {
+                "tag": "magical_incidental",
+                "title": "Magical INCIDENTAL ITEM",
+                "min": 1,
+                "max": 1,
+                "additional": [
+                  "booty.item.incidental_item"
+                ]
+              },
+              {
+                "tag": "magical_common",
+                "title": "Magical COMMON ITEM",
+                "min": 2,
+                "max": 2,
+                "additional": [
+                  [
+                    "booty.item.common_item",
+                    "d10"
+                  ]
+                ]
+              },
+              {
+                "tag": "magical_useful",
+                "title": "Magical USEFUL ITEM",
+                "min": 3,
+                "max": 4,
+                "additional": [
+                  [
+                    "booty.item.useful_item",
+                    "d10"
+                  ]
+                ]
+              },
+              {
+                "tag": "magical_gem",
+                "title": "Magical GEM/JEWELRY",
+                "min": 5,
+                "max": 5,
+                "additional": [
+                  "booty.valuable.gem"
+                ]
+              },
+              {
+                "tag": "magical_wand",
+                "title": "Magical wand/staff/rod/orb",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "magical_weapon",
+                "title": "Magical WEAPON",
+                "min": 7,
+                "max": 8,
+                "additional": [
+                  "booty.weapon"
+                ]
+              },
+              {
+                "tag": "magical_armor",
+                "title": "Magical ARMOR",
+                "min": 9,
+                "max": 10,
+                "additional": [
+                  "booty.armor"
+                ]
+              },
+              {
+                "tag": "divine",
+                "title": "'Divine' symbol/object",
+                "min": 11,
+                "max": 12
+              }
             ]
           }
         ]
@@ -5549,7 +5711,7 @@
             "title": "Roll 1d8+2, add shield",
             "min": 11,
             "max": 11,
-            "additional":  [
+            "additional": [
               [
                 "booty.armor",
                 "d8+2"
@@ -5561,7 +5723,7 @@
             "title": "Roll 1d10, add 'fine'",
             "min": 12,
             "max": 12,
-            "additional":  [
+            "additional": [
               [
                 "booty.armor",
                 "d10"
