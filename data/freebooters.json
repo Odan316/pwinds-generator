@@ -5504,6 +5504,73 @@
         ]
       },
       {
+        "tag": "armor",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "buckler",
+            "title": "Buckler/shield",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "tag": "furs",
+            "title": "Furs/hide",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "leather",
+            "min": 4,
+            "max": 6
+          },
+          {
+            "tag": "scale_armor",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "chainmail",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "splint_armor",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "plate_armor",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "add_shield",
+            "title": "Roll 1d8+2, add shield",
+            "min": 11,
+            "max": 11,
+            "additional":  [
+              [
+                "booty.armor",
+                "d8+2"
+              ]
+            ]
+          },
+          {
+            "tag": "fine",
+            "title": "Roll 1d10, add 'fine'",
+            "min": 12,
+            "max": 12,
+            "additional":  [
+              [
+                "booty.armor",
+                "d10"
+              ]
+            ]
+          }
+        ]
+      },
+      {
         "tag": "specialty",
         "dice": "d12",
         "variants": [
@@ -5567,6 +5634,58 @@
           {
             "tag": "invention",
             "title": "Invention/wizardry",
+            "min": 12,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "weapon",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "staff",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "knife",
+            "title": "Knife/dagger/shortsword",
+            "min": 2,
+            "max": 3
+          },
+          {
+            "tag": "club",
+            "title": "Club/cudgel/mace",
+            "min": 4,
+            "max": 5
+          },
+          {
+            "tag": "spear",
+            "title": "Spear/flail/polearm",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "sword",
+            "title": "Sword/axe/warhammer",
+            "min": 7,
+            "max": 8
+          },
+          {
+            "tag": "great_weapon",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "sling",
+            "title": "Sling/bow/crossbow",
+            "min": 10,
+            "max": 11
+          },
+          {
+            "tag": "exotic",
+            "title": "Exotic/unusual",
             "min": 12,
             "max": 12
           }
