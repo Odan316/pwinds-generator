@@ -4933,6 +4933,8 @@
           {
             "tag": "incidental_item",
             "dice": "d12",
+            "min": 1,
+            "max": 4,
             "variants": [
               {
                 "tag": "decanter",
@@ -5019,63 +5021,66 @@
           {
             "tag": "common_item",
             "dice": "d12",
+            "min": 5,
+            "max": 8,
             "variants": [
               {
-                "tag": "decanter",
-                "title": "Decanter/vessel/cup",
+                "tag": "footwear",
+                "title": "Footwear/shoes/boots",
                 "min": 1,
                 "max": 1
               },
               {
-                "tag": "pots",
-                "title": "Pots/pans/cauldron",
+                "tag": "clothing",
+                "title": "Clothing/gloves/cloak",
                 "min": 2,
                 "max": 2
               },
               {
-                "tag": "dishware",
-                "title": "Dishware/utensils",
+                "tag": "hat",
+                "title": "Hat/helmet/mask",
                 "min": 3,
                 "max": 3
               },
               {
-                "tag": "tools",
-                "title": "Tools/harsware",
+                "tag": "trinket",
+                "title": "Trinket/charm/talisman",
                 "min": 4,
                 "max": 4
               },
               {
-                "tag": "bedding",
+                "tag": "grog",
+                "title": "Grog/spirit/wine",
                 "min": 5,
                 "max": 5
               },
               {
-                "tag": "trophy",
-                "title": "Trophy/keepsake",
+                "tag": "pouch",
+                "title": "Pouch/pack/saddlebags",
                 "min": 6,
                 "max": 6
               },
               {
-                "tag": "candlestick",
-                "title": "Candlestick/lamp",
+                "tag": "box",
+                "title": "Box/barrrel/coffer/chest",
                 "min": 7,
                 "max": 7
               },
               {
-                "tag": "rope",
-                "title": "Rope/chain/net",
+                "tag": "soap",
+                "title": "Soap/musk/perfume",
                 "min": 8,
                 "max": 8
               },
               {
-                "tag": "rug",
-                "title": "Rug/mat/carpet",
+                "tag": "holy",
+                "title": "Holy/arcane symbol",
                 "min": 9,
                 "max": 9
               },
               {
-                "tag": "flag",
-                "title": "Flag/banner",
+                "tag": "conveyance",
+                "title": "Conveyance/cart/wagon",
                 "min": 10,
                 "max": 10
               },
@@ -5086,18 +5091,18 @@
                 "max": 11,
                 "additional": [
                   [
-                    "booty.item.incidental_item",
+                    "booty.item.common_item",
                     "d10"
                   ]
                 ]
               },
               {
-                "tag": "common",
-                "title": "Roll 'Common item'",
+                "tag": "useful",
+                "title": "Roll 'Useful item'",
                 "min": 12,
                 "max": 12,
                 "additional": [
-                  "booty.item.common_item"
+                  "booty.item.useful_item"
                 ]
               }
             ]
@@ -5105,7 +5110,148 @@
           {
             "tag": "_useful_item",
             "dice": "d12",
+            "min": 9,
+            "max": 12,
             "variants": [
+              {
+                "tag": "evidence",
+                "title": "Evidence/message/map",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "tools",
+                "title": "Tools/crowbar/shovel",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "foodstuffs",
+                "min": 3,
+                "max": 3,
+                "additional": [
+                  {
+                    "tag": "rations",
+                    "roll_result": "d6"
+                  }
+                ]
+              },
+              {
+                "tag": "book",
+                "title": "Book/scroll",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "key",
+                "title": "Key/lockpick/password",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "healing_supplies",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "illumination",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "fuel",
+                "title": "Fuel/ammunition",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "tools",
+                "title": "SPECIALTY tools",
+                "min": 9,
+                "max": 9,
+                "additional": [
+                  "booty.specialty"
+                ]
+              },
+              {
+                "tag": "weapon",
+                "title": "WEAPON/ARMOUR (not realised yet)",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "fine",
+                "title": "Roll again, add 'fine'",
+                "min": 11,
+                "max": 11,
+                "additional": [
+                  [
+                    "booty.item.useful_item",
+                    "d10"
+                  ]
+                ]
+              },
+              {
+                "tag": "valuable",
+                "title": "Roll 'Valuable'",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "booty.valuable"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "valuable",
+        "dice":  "d12",
+        "variants": [
+          {
+            "tag": "trade_good",
+            "dice":  "d12",
+            "min": 1,
+            "max": 3,
+            "variants": [
+
+            ]
+          },
+          {
+            "tag": "art_object",
+            "dice":  "d12",
+            "min": 4,
+            "max": 6,
+            "variants": [
+
+            ]
+          },
+          {
+            "tag": "gem",
+            "title": "Gem/jewelry",
+            "dice":  "d12",
+            "min": 7,
+            "max": 9,
+            "variants": [
+
+            ]
+          },
+          {
+            "tag": "rarity",
+            "dice":  "d12",
+            "min": 10,
+            "max": 11,
+            "variants": [
+
+            ]
+          },
+          {
+            "tag": "unique_artifact",
+            "dice":  "d12",
+            "min": 12,
+            "max": 12,
+            "variants": [
+
             ]
           }
         ]
