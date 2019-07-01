@@ -185,7 +185,7 @@ define([
                 });
             }
             if("repeat" in data) {
-                _repeat = data.repeat;
+                _repeat = _.toString(data.repeat);
             }
         };
 

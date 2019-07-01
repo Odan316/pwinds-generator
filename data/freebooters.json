@@ -1474,6 +1474,7 @@
                     "static": "+3"
                   },
                   "dungeon_type.caves.common_area",
+                  "dungeon_type.caves.dressing",
                   "dungeon_type.caves.exits"
                 ]
               },
@@ -1490,6 +1491,7 @@
                     "static": "+2"
                   },
                   "dungeon_type.caves.common_area",
+                  "dungeon_type.caves.dressing",
                   "dungeon_type.caves.exits"
                 ]
               },
@@ -1507,6 +1509,7 @@
                     "static": "+1"
                   },
                   "dungeon_type.caves.common_area",
+                  "dungeon_type.caves.dressing",
                   "dungeon_type.caves.exits"
                 ]
               },
@@ -1525,6 +1528,7 @@
                     "static": "+1"
                   },
                   "dungeon_type.caves.common_area",
+                  "dungeon_type.caves.dressing",
                   "dungeon_type.caves.exits"
                 ]
               },
@@ -1540,6 +1544,7 @@
                     "static": "+1"
                   },
                   "dungeon_type.caves.common_area",
+                  "dungeon_type.caves.dressing",
                   "dungeon_type.caves.exits"
                 ]
               },
@@ -1555,6 +1560,7 @@
                     "static": "reset to zero"
                   },
                   "dungeon_type.caves.unique_area",
+                  "dungeon_type.caves.dressing",
                   "dungeon_type.caves.exits"
                 ]
               },
@@ -1573,6 +1579,7 @@
                     "static": "reset to zero"
                   },
                   "dungeon_type.caves.unique_area",
+                  "dungeon_type.caves.dressing",
                   "dungeon_type.caves.exits"
                 ]
               },
@@ -1589,6 +1596,7 @@
                     "static": "reset to zero"
                   },
                   "dungeon_type.caves.unique_area",
+                  "dungeon_type.caves.dressing",
                   "dungeon_type.caves.exits"
                 ]
               },
@@ -1606,6 +1614,7 @@
                     "static": "reset to zero"
                   },
                   "dungeon_type.caves.unique_area",
+                  "dungeon_type.caves.dressing",
                   "dungeon_type.caves.exits"
                 ]
               },
@@ -1624,6 +1633,7 @@
                     "static": "reset to zero"
                   },
                   "dungeon_type.caves.unique_area",
+                  "dungeon_type.caves.dressing",
                   "dungeon_type.caves.exits"
                 ]
               }
@@ -2146,7 +2156,7 @@
                     "max": 11,
                     "additional": [
                       [
-                        "booty",
+                        "booty.owned_booty",
                         "d4+1"
                       ]
                     ]
@@ -2158,12 +2168,85 @@
                     "max": 12,
                     "additional": [
                       [
-                        "booty",
+                        "booty.owned_booty",
                         "d6+1"
                       ]
                     ]
                   }
                 ]
+              }
+            ]
+          },
+          {
+            "tag": "dressing",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "sound",
+                "title": "Sound/odor",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "signs",
+                "title": "Signs of battle/struggle",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "remains_creature",
+                "title": "Remains of CREATURE",
+                "min": 3,
+                "max": 3,
+                "additional": [
+                  "creature"
+                ]
+              },
+              {
+                "tag": "remains_of_explorer",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "silt",
+                "title": "Silt/mud",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "rubble",
+                "title": "Rubble/debris",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "geologic_pattern",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "fungi",
+                "title": "Fungi/lichen",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "stalagmites",
+                "title": "Stalagmites/stalactites",
+                "min": 9,
+                "max": 10
+
+              },
+              {
+                "tag": "crystal",
+                "title": "Crystal/calcite formation",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "breeze",
+                "min": 12,
+                "max": 12
               }
             ]
           }
