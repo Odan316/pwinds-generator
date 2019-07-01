@@ -249,7 +249,7 @@ define([
                     dice += ('+' + customMod);
                 }
             }
-            console.log(dice);
+
             return dice;
         };
 
@@ -430,7 +430,7 @@ define([
          */
         this.getRepeat = function()
         {
-            let formula = _repeat !== null ? _repeat : 1;
+            let formula = _repeat !== null ? _repeat : "1";
             let dice = new Dice();
             return dice.roll(formula);
         };

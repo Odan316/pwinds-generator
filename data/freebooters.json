@@ -4423,7 +4423,7 @@
       {
         "tag": "inherent_booty",
         "hint": "$dice",
-        "dice": "d4",
+        "dice": "d16",
         "use_custom_dice": true,
         "variants": [
           {
@@ -4488,7 +4488,7 @@
             "additional": [
               {
                 "tag": "value",
-                "static": "4d6 x2"
+                "static": "4d6 x 2"
               },
               "booty.body_part"
             ]
@@ -4502,7 +4502,7 @@
             "additional": [
               {
                 "tag": "value",
-                "static": "6d6 x2"
+                "static": "6d6 x 2"
               }
             ]
           },
@@ -4515,7 +4515,7 @@
             "additional": [
               {
                 "tag": "value",
-                "static": "3d8 x5"
+                "static": "3d8 x 5"
               },
               "booty.body_part"
             ]
@@ -4529,7 +4529,7 @@
             "additional": [
               {
                 "tag": "value",
-                "static": "4d8 x5"
+                "static": "4d8 x 5"
               }
             ]
           },
@@ -4538,18 +4538,11 @@
             "title": "Booty",
             "min": 9,
             "max": 9,
+            "static": "(HP/2) rations",
             "additional": [
               {
                 "tag": "value",
-                "static": "5d8 x5"
-              },
-              {
-                "tag": "inherent",
-                "static": "(HP/2) rations"
-              },
-              {
-                "tag": "owned",
-                "static": "Currency"
+                "static": "5d8 x 5"
               }
             ]
           },
@@ -4558,25 +4551,14 @@
             "title": "Booty",
             "min": 10,
             "max": 10,
+            "static": "BODY PART, and roll again",
             "additional": [
               {
-                "tag": "inherent",
-                "generate_outer": "booty.body_part",
-                "additional": [
-                  "booty"
-                ]
-              },
-              {
-                "tag": "owned",
-                "generate_outer": "booty.valuable",
-                "additional": [
-                  "booty"
-                ]
-              },
-              {
                 "tag": "value",
-                "static": "6d8 x5"
-              }
+                "static": "6d8 x 5"
+              },
+              "booty.body_part",
+              "booty.inherent_booty"
             ]
           },
           {
@@ -4584,18 +4566,11 @@
             "title": "Booty",
             "min": 11,
             "max": 11,
+            "static": "(HP) rations",
             "additional": [
               {
-                "tag": "inherent",
-                "static": "(HP) rations"
-              },
-              {
-                "tag": "owned",
-                "generate_outer": "booty.valuable"
-              },
-              {
                 "tag": "value",
-                "static": "8d8 x5"
+                "static": "8d8 x 5"
               }
             ]
           },
@@ -4604,25 +4579,14 @@
             "title": "Booty",
             "min": 12,
             "max": 12,
+            "static": "BODY PART, and roll again",
             "additional": [
               {
-                "tag": "inherent",
-                "generate_outer": "booty.body_part",
-                "additional": [
-                  "booty"
-                ]
-              },
-              {
-                "tag": "owned",
-                "static": "currency",
-                "additional": [
-                  "booty"
-                ]
-              },
-              {
                 "tag": "value",
-                "static": "10d8 x5"
-              }
+                "static": "10d8 x 5"
+              },
+              "booty.body_part",
+              "booty.inherent_booty"
             ]
           },
           {
@@ -4630,19 +4594,13 @@
             "title": "Booty",
             "min": 13,
             "max": 13,
+            "static": "BODY PART",
             "additional": [
               {
-                "tag": "inherent",
-                "generate_outer": "booty.body_part"
-              },
-              {
-                "tag": "owned",
-                "generate_outer": "booty.valuable"
-              },
-              {
                 "tag": "value",
-                "static": "5d10 x10"
-              }
+                "static": "5d10 x 10"
+              },
+              "booty.body_part"
             ]
           },
           {
@@ -4650,25 +4608,14 @@
             "title": "Booty",
             "min": 14,
             "max": 14,
+            "static": "BODY PART, and roll again",
             "additional": [
               {
-                "tag": "inherent",
-                "generate_outer": "booty.body_part",
-                "additional": [
-                  "booty"
-                ]
-              },
-              {
-                "tag": "owned",
-                "generate_outer": "booty.valuable",
-                "additional": [
-                  "booty"
-                ]
-              },
-              {
                 "tag": "value",
-                "static": "6d10 x10"
-              }
+                "static": "6d10 x 10"
+              },
+              "booty.body_part",
+              "booty.inherent_booty"
             ]
           },
           {
@@ -4676,51 +4623,28 @@
             "title": "Booty",
             "min": 15,
             "max": 15,
+            "static": "BODY PART",
             "additional": [
               {
-                "tag": "inherent",
-                "generate_outer": "booty.body_part"
-              },
-              {
-                "tag": "owned",
-                "generate_outer": [
-                  "booty.valuable",
-                  "d8+4"
-                ]
-              },
-              {
                 "tag": "value",
-                "static": "8d10 x10"
-              }
+                "static": "8d10 x 10"
+              },
+              "booty.body_part"
             ]
           },
           {
             "tag": "booty16",
             "title": "Booty",
             "min": 16,
-            "max": 16,
+            "max": 100,
+            "static": "BODY PART, and roll again",
             "additional": [
               {
-                "tag": "inherent",
-                "generate_outer": "booty.body_part",
-                "additional": [
-                  "booty"
-                ]
-              },
-              {
-                "tag": "owned",
-                "generate_outer": [
-                  "booty.valuable",
-                  "d6+6"
-                ],
-                "additional": [
-                  "booty"
-                ]
-              },
-              {
                 "tag": "value",
-                "static": "10d10 x10"
-              }
+                "static": "10d10 x 10"
+              },
+              "booty.body_part",
+              "booty.inherent_booty"
             ]
           }
         ]
@@ -4728,7 +4652,7 @@
       {
         "tag": "owned_booty",
         "hint": "$dice",
-        "dice": "d4",
+        "dice": "d16",
         "use_custom_dice": true,
         "variants": [
           {
@@ -4736,18 +4660,11 @@
             "title": "Booty",
             "min": 1,
             "max": 1,
+            "static": "Nothing",
             "additional": [
               {
                 "tag": "value",
                 "static": "0"
-              },
-              {
-                "tag": "inherent",
-                "static": "nothing"
-              },
-              {
-                "tag": "owned",
-                "static": "nothing"
               }
             ]
           },
@@ -4756,18 +4673,11 @@
             "title": "Booty",
             "min": 2,
             "max": 2,
+            "static": "Currency 1d4",
             "additional": [
               {
                 "tag": "value",
-                "static": "1d4"
-              },
-              {
-                "tag": "inherent",
-                "static": "1 ration"
-              },
-              {
-                "tag": "owned",
-                "static": "Currency"
+                "roll_result": "1d4"
               }
             ]
           },
@@ -4776,28 +4686,16 @@
             "title": "Booty",
             "min": 3,
             "max": 3,
+            "static": "ITEM (d10)",
             "additional": [
               {
                 "tag": "value",
                 "static": "2d6"
               },
-              {
-                "tag": "inherent",
-                "static": "BODY PART",
-                "additional": [
-                  "booty.body_part"
-                ]
-              },
-              {
-                "tag": "owned",
-                "static": "ITEM (d10)",
-                "additional": [
-                  [
-                    "booty.item",
-                    "d10"
-                  ]
-                ]
-              }
+              [
+                "booty.item",
+                "d10"
+              ]
             ]
           },
           {
@@ -4805,22 +4703,13 @@
             "title": "Booty",
             "min": 4,
             "max": 4,
+            "static": "Currency 4d6 and roll again",
             "additional": [
               {
                 "tag": "value",
-                "static": "4d6"
+                "roll_result": "4d6"
               },
-              {
-                "tag": "inherent",
-                "static": "(HP/5) rations"
-              },
-              {
-                "tag": "owned",
-                "static": "Currency and roll again",
-                "additional": [
-                  "booty"
-                ]
-              }
+              "booty.owned_booty"
             ]
           },
           {
@@ -4828,21 +4717,11 @@
             "title": "Booty",
             "min": 5,
             "max": 5,
+            "static": "Currency 4d6 x 2",
             "additional": [
               {
                 "tag": "value",
-                "static": "4d6 x2"
-              },
-              {
-                "tag": "inherent",
-                "static": "BODY PART",
-                "additional": [
-                  "booty.body_part"
-                ]
-              },
-              {
-                "tag": "owned",
-                "static": "Currency"
+                "roll_result": "4d6x2"
               }
             ]
           },
@@ -4851,26 +4730,14 @@
             "title": "Booty",
             "min": 6,
             "max": 6,
+            "static": "ITEM, and roll again",
             "additional": [
               {
                 "tag": "value",
-                "static": "6d6 x2"
+                "static": "6d6 x 2"
               },
-              {
-                "tag": "inherent",
-                "static": "(HP/4) rations"
-              },
-              {
-                "tag": "owned",
-                "static": "ITEM, and roll again",
-                "additional": [
-                  [
-                    "booty.item",
-                    "d10"
-                  ],
-                  "booty"
-                ]
-              }
+              "booty.item",
+              "booty.owned_booty"
             ]
           },
           {
@@ -4878,28 +4745,16 @@
             "title": "Booty",
             "min": 7,
             "max": 7,
+            "static": "VALUABLE (d10)",
             "additional": [
               {
                 "tag": "value",
-                "static": "3d8 x5"
+                "static": "3d8 x 5"
               },
-              {
-                "tag": "inherent",
-                "static": "BODY PART",
-                "additional": [
-                  "booty.body_part"
-                ]
-              },
-              {
-                "tag": "owned",
-                "static": "VALUABLE (d10)",
-                "additional":[
-                  [
-                    "booty.valuable",
-                    "d10"
-                  ]
-                ]
-              }
+              [
+                "booty.valuable",
+                "d10"
+              ]
             ]
           },
           {
@@ -4907,22 +4762,13 @@
             "title": "Booty",
             "min": 8,
             "max": 8,
+            "static": "Currency 4d8 x 5 and roll again",
             "additional": [
               {
                 "tag": "value",
-                "static": "4d8 x5"
+                "roll_result": "4d8x5"
               },
-              {
-                "tag": "inherent",
-                "static": "(HP/3) rations"
-              },
-              {
-                "tag": "owned",
-                "static": "Currency and roll again",
-                "additional": [
-                  "booty"
-                ]
-              }
+              "booty.owned_booty"
             ]
           },
           {
@@ -4930,18 +4776,11 @@
             "title": "Booty",
             "min": 9,
             "max": 9,
+            "static": "Currency",
             "additional": [
               {
                 "tag": "value",
-                "static": "5d8 x5"
-              },
-              {
-                "tag": "inherent",
-                "static": "(HP/2) rations"
-              },
-              {
-                "tag": "owned",
-                "static": "Currency"
+                "roll_result": "5d8x5"
               }
             ]
           },
@@ -4950,25 +4789,14 @@
             "title": "Booty",
             "min": 10,
             "max": 10,
+            "static": "VALUABLE, and roll again",
             "additional": [
               {
-                "tag": "inherent",
-                "generate_outer": "booty.body_part",
-                "additional": [
-                  "booty"
-                ]
-              },
-              {
-                "tag": "owned",
-                "generate_outer": "booty.valuable",
-                "additional": [
-                  "booty"
-                ]
-              },
-              {
                 "tag": "value",
-                "static": "6d8 x5"
-              }
+                "static": "6d8 x 5"
+              },
+              "booty.valuable",
+              "booty.owned_booty"
             ]
           },
           {
@@ -4976,19 +4804,13 @@
             "title": "Booty",
             "min": 11,
             "max": 11,
+            "static": "VALUABLE",
             "additional": [
               {
-                "tag": "inherent",
-                "static": "(HP) rations"
-              },
-              {
-                "tag": "owned",
-                "generate_outer": "booty.valuable"
-              },
-              {
                 "tag": "value",
-                "static": "8d8 x5"
-              }
+                "static": "8d8 x 5"
+              },
+              "booty.valuable"
             ]
           },
           {
@@ -4996,25 +4818,13 @@
             "title": "Booty",
             "min": 12,
             "max": 12,
+            "static": "Currency, and roll again",
             "additional": [
               {
-                "tag": "inherent",
-                "generate_outer": "booty.body_part",
-                "additional": [
-                  "booty"
-                ]
-              },
-              {
-                "tag": "owned",
-                "static": "currency",
-                "additional": [
-                  "booty"
-                ]
-              },
-              {
                 "tag": "value",
-                "static": "10d8 x5"
-              }
+                "roll_result": "10d8x5"
+              },
+              "booty.owned_booty"
             ]
           },
           {
@@ -5022,19 +4832,13 @@
             "title": "Booty",
             "min": 13,
             "max": 13,
+            "static": "VALUABLE",
             "additional": [
               {
-                "tag": "inherent",
-                "generate_outer": "booty.body_part"
-              },
-              {
-                "tag": "owned",
-                "generate_outer": "booty.valuable"
-              },
-              {
                 "tag": "value",
-                "static": "5d10 x10"
-              }
+                "static": "5d10 x 10"
+              },
+              "booty.valuable"
             ]
           },
           {
@@ -5042,25 +4846,14 @@
             "title": "Booty",
             "min": 14,
             "max": 14,
+            "static": "VALUABLE, and roll again",
             "additional": [
               {
-                "tag": "inherent",
-                "generate_outer": "booty.body_part",
-                "additional": [
-                  "booty"
-                ]
-              },
-              {
-                "tag": "owned",
-                "generate_outer": "booty.valuable",
-                "additional": [
-                  "booty"
-                ]
-              },
-              {
                 "tag": "value",
-                "static": "6d10 x10"
-              }
+                "static": "6d10 x 10"
+              },
+              "booty.valuable",
+              "booty.owned_booty"
             ]
           },
           {
@@ -5068,22 +4861,16 @@
             "title": "Booty",
             "min": 15,
             "max": 15,
+            "static": "VALUABLE (1d8+4)",
             "additional": [
               {
-                "tag": "inherent",
-                "generate_outer": "booty.body_part"
-              },
-              {
-                "tag": "owned",
-                "generate_outer": [
-                  "booty.valuable",
-                  "d8+4"
-                ]
-              },
-              {
                 "tag": "value",
-                "static": "8d10 x10"
-              }
+                "static": "8d10 x 10"
+              },
+              [
+                "booty.valuable",
+                "d8+4"
+              ]
             ]
           },
           {
@@ -5091,28 +4878,17 @@
             "title": "Booty",
             "min": 16,
             "max": 16,
+            "static": "VALUABLE (1d6+6), and roll again",
             "additional": [
               {
-                "tag": "inherent",
-                "generate_outer": "booty.body_part",
-                "additional": [
-                  "booty"
-                ]
-              },
-              {
-                "tag": "owned",
-                "generate_outer": [
-                  "booty.valuable",
-                  "d6+6"
-                ],
-                "additional": [
-                  "booty"
-                ]
-              },
-              {
                 "tag": "value",
-                "static": "10d10 x10"
-              }
+                "static": "10d10 x 10"
+              },
+              [
+                "booty.valuable",
+                "d6+6"
+              ],
+              "booty.owned_booty"
             ]
           }
         ]

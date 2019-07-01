@@ -12,7 +12,6 @@ define([], function () {
                 let nodePath = parentPath !== undefined ? parentPath + '.' + node.tag : node.tag;
                 let hintHtml = "";
                 if (node.hint !== null) {
-                    console.log(node.hint);
                     hintHtml = '<span class="hint glyphicon glyphicon-question-sign" title="' + node.hint + '"></span>';
                 }
 
