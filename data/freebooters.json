@@ -1820,7 +1820,7 @@
                 "tag": "lair",
                 "title": "Lair of the MONSTER",
                 "min": 6,
-                "max": 7,
+                "max": 6,
                 "additional": [
                   "creature.monster"
                 ]
@@ -2235,7 +2235,6 @@
                 "title": "Stalagmites/stalactites",
                 "min": 9,
                 "max": 10
-
               },
               {
                 "tag": "crystal",
@@ -2261,6 +2260,189 @@
           "dungeon_type.ruined_settlement.settlement_type"
         ],
         "dictionaries": [
+          {
+            "tag": "area",
+            "hint": "$modifier",
+            "dice": "d12",
+            "use_modifier": true,
+            "variants": [
+              {
+                "tag": "common1",
+                "title": "Common",
+                "min": 1,
+                "max": 3,
+                "additional": [
+                  "danger",
+                  {
+                    "tag": "exploration",
+                    "static": "+3"
+                  },
+                  "dungeon_type.ruined_settlement.common_area",
+                  "dungeon_type.ruined_settlement.dressing",
+                  "dungeon_type.ruined_settlement.exits"
+                ]
+              },
+              {
+                "tag": "common2",
+                "title": "Common",
+                "min": 4,
+                "max": 6,
+                "additional": [
+                  "danger",
+                  "dungeon_type.ruined_settlement.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "+2"
+                  },
+                  "dungeon_type.ruined_settlement.common_area",
+                  "dungeon_type.ruined_settlement.dressing",
+                  "dungeon_type.ruined_settlement.exits"
+                ]
+              },
+              {
+                "tag": "common3",
+                "title": "Common",
+                "min": 7,
+                "max": 8,
+                "additional": [
+                  "danger",
+                  "dungeon_type.ruined_settlement.discovery",
+                  "dungeon_type.ruined_settlement.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "+1"
+                  },
+                  "dungeon_type.ruined_settlement.common_area",
+                  "dungeon_type.ruined_settlement.dressing",
+                  "dungeon_type.ruined_settlement.exits"
+                ]
+              },
+              {
+                "tag": "common1",
+                "title": "Common",
+                "min": 9,
+                "max": 11,
+                "additional": [
+                  {
+                    "tag": "Contents",
+                    "static": "Nothing unusual"
+                  },
+                  {
+                    "tag": "exploration",
+                    "static": "+1"
+                  },
+                  "dungeon_type.ruined_settlement.common_area",
+                  "dungeon_type.ruined_settlement.dressing",
+                  "dungeon_type.ruined_settlement.exits"
+                ]
+              },
+              {
+                "tag": "common5",
+                "title": "Common",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "dungeon_type.ruined_settlement.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "+1"
+                  },
+                  "dungeon_type.ruined_settlement.common_area",
+                  "dungeon_type.ruined_settlement.dressing",
+                  "dungeon_type.ruined_settlement.exits"
+                ]
+              },
+              {
+                "tag": "unique1",
+                "title": "Unique",
+                "min": 13,
+                "max": 13,
+                "additional": [
+                  "danger",
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.ruined_settlement.unique_area",
+                  "dungeon_type.ruined_settlement.dressing",
+                  "dungeon_type.ruined_settlement.exits"
+                ]
+              },
+              {
+                "tag": "unique2",
+                "title": "Unique",
+                "min": 14,
+                "max": 14,
+                "additional": [
+                  {
+                    "tag": "Contents",
+                    "static": "Nothing unusual"
+                  },
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.ruined_settlement.unique_area",
+                  "dungeon_type.ruined_settlement.dressing",
+                  "dungeon_type.ruined_settlement.exits"
+                ]
+              },
+              {
+                "tag": "unique3",
+                "title": "Unique",
+                "min": 15,
+                "max": 15,
+                "additional": [
+                  "danger",
+                  "dungeon_type.ruined_settlement.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.ruined_settlement.unique_area",
+                  "dungeon_type.ruined_settlement.dressing",
+                  "dungeon_type.ruined_settlement.exits"
+                ]
+              },
+              {
+                "tag": "unique4",
+                "title": "Unique",
+                "min": 16,
+                "max": 16,
+                "additional": [
+                  "danger",
+                  "dungeon_type.ruined_settlement.discovery",
+                  "dungeon_type.ruined_settlement.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.ruined_settlement.unique_area",
+                  "dungeon_type.ruined_settlement.dressing",
+                  "dungeon_type.ruined_settlement.exits"
+                ]
+              },
+              {
+                "tag": "unique5",
+                "title": "Unique",
+                "min": 17,
+                "max": 100,
+                "additional": [
+                  {
+                    "repeat": "d4",
+                    "generate_outer": "dungeon_type.ruined_settlement.discovery"
+                  },
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.ruined_settlement.unique_area",
+                  "dungeon_type.ruined_settlement.dressing",
+                  "dungeon_type.ruined_settlement.exits"
+                ]
+              }
+            ]
+          },
           {
             "tag": "builder",
             "dice": "d12",
@@ -2338,7 +2520,92 @@
                 "max": 12
               }
             ]
-          }
+          },
+          {
+            "tag": "exits",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "1",
+                "min": 1,
+                "max": 1,
+                "additional": [
+                  "details.exit_direction",
+                  "dungeon_type.ruined_settlement.connection"
+                ]
+              },
+              {
+                "tag": "2",
+                "min": 2,
+                "max": 5,
+                "additional": [
+                  {
+                    "repeat": 2,
+                    "additional": [
+                      "details.exit_direction",
+                      "dungeon_type.ruined_settlement.connection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "3",
+                "min": 6,
+                "max": 8,
+                "additional": [
+                  {
+                    "repeat": 3,
+                    "additional": [
+                      "details.exit_direction",
+                      "dungeon_type.ruined_settlement.connection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "4",
+                "min": 9,
+                "max": 10,
+                "additional": [
+                  {
+                    "repeat": 4,
+                    "additional": [
+                      "details.exit_direction",
+                      "dungeon_type.ruined_settlement.connection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "5",
+                "min": 11,
+                "max": 11,
+                "additional": [
+                  {
+                    "repeat": 5,
+                    "additional": [
+                      "details.exit_direction",
+                      "dungeon_type.ruined_settlement.connection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "6",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  {
+                    "repeat": 6,
+                    "additional": [
+                      "details.exit_direction",
+                      "dungeon_type.ruined_settlement.connection"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
         ]
       },
       {
@@ -2350,6 +2617,189 @@
           "dungeon_type.prison.prisoners"
         ],
         "dictionaries": [
+          {
+            "tag": "area",
+            "hint": "$modifier",
+            "dice": "d12",
+            "use_modifier": true,
+            "variants": [
+              {
+                "tag": "common1",
+                "title": "Common",
+                "min": 1,
+                "max": 3,
+                "additional": [
+                  "danger",
+                  {
+                    "tag": "exploration",
+                    "static": "+3"
+                  },
+                  "dungeon_type.prison.common_area",
+                  "dungeon_type.prison.dressing",
+                  "dungeon_type.prison.exits"
+                ]
+              },
+              {
+                "tag": "common2",
+                "title": "Common",
+                "min": 4,
+                "max": 6,
+                "additional": [
+                  "danger",
+                  "dungeon_type.prison.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "+2"
+                  },
+                  "dungeon_type.prison.common_area",
+                  "dungeon_type.prison.dressing",
+                  "dungeon_type.prison.exits"
+                ]
+              },
+              {
+                "tag": "common3",
+                "title": "Common",
+                "min": 7,
+                "max": 8,
+                "additional": [
+                  "danger",
+                  "dungeon_type.prison.discovery",
+                  "dungeon_type.prison.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "+1"
+                  },
+                  "dungeon_type.prison.common_area",
+                  "dungeon_type.prison.dressing",
+                  "dungeon_type.prison.exits"
+                ]
+              },
+              {
+                "tag": "common1",
+                "title": "Common",
+                "min": 9,
+                "max": 11,
+                "additional": [
+                  {
+                    "tag": "Contents",
+                    "static": "Nothing unusual"
+                  },
+                  {
+                    "tag": "exploration",
+                    "static": "+1"
+                  },
+                  "dungeon_type.prison.common_area",
+                  "dungeon_type.prison.dressing",
+                  "dungeon_type.prison.exits"
+                ]
+              },
+              {
+                "tag": "common5",
+                "title": "Common",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "dungeon_type.prison.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "+1"
+                  },
+                  "dungeon_type.prison.common_area",
+                  "dungeon_type.prison.dressing",
+                  "dungeon_type.prison.exits"
+                ]
+              },
+              {
+                "tag": "unique1",
+                "title": "Unique",
+                "min": 13,
+                "max": 13,
+                "additional": [
+                  "danger",
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.prison.unique_area",
+                  "dungeon_type.prison.dressing",
+                  "dungeon_type.prison.exits"
+                ]
+              },
+              {
+                "tag": "unique2",
+                "title": "Unique",
+                "min": 14,
+                "max": 14,
+                "additional": [
+                  {
+                    "tag": "Contents",
+                    "static": "Nothing unusual"
+                  },
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.prison.unique_area",
+                  "dungeon_type.prison.dressing",
+                  "dungeon_type.prison.exits"
+                ]
+              },
+              {
+                "tag": "unique3",
+                "title": "Unique",
+                "min": 15,
+                "max": 15,
+                "additional": [
+                  "danger",
+                  "dungeon_type.prison.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.prison.unique_area",
+                  "dungeon_type.prison.dressing",
+                  "dungeon_type.prison.exits"
+                ]
+              },
+              {
+                "tag": "unique4",
+                "title": "Unique",
+                "min": 16,
+                "max": 16,
+                "additional": [
+                  "danger",
+                  "dungeon_type.prison.discovery",
+                  "dungeon_type.prison.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.prison.unique_area",
+                  "dungeon_type.prison.dressing",
+                  "dungeon_type.prison.exits"
+                ]
+              },
+              {
+                "tag": "unique5",
+                "title": "Unique",
+                "min": 17,
+                "max": 100,
+                "additional": [
+                  {
+                    "repeat": "d4",
+                    "generate_outer": "dungeon_type.prison.discovery"
+                  },
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.prison.unique_area",
+                  "dungeon_type.prison.dressing",
+                  "dungeon_type.prison.exits"
+                ]
+              }
+            ]
+          },
           {
             "tag": "builder",
             "dice": "d12",
@@ -2443,6 +2893,517 @@
               },
               {
                 "tag": "research_subjects",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "common_area",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "latrine",
+                "title": "Latrine/midden/lump",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "passageway",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "guardpost",
+                "title": "Guardpost/checkpoint/gateway",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "cellblock",
+                "min": 5,
+                "max": 7
+              },
+              {
+                "tag": "storeroom",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "mess",
+                "title": "Mess/kitchen/larder",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "yard",
+                "title": "Yard/common area/well",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "barraks",
+                "title": "Barraks/quarters/kennels",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "workshops",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "unique_area",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "burial_pits",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "oubilette",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "sealed_cellblock",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "torture_chamber",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "quarry",
+                "title": "Quarry/excavation site",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "hall_of_judgement",
+                "title": "Hall of Judgement",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "hall_of_subjugation",
+                "title": "Hall of Subjugation",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "shrine",
+                "title": "Shrine of ElEMENT/ASPECT",
+                "min": 8,
+                "max": 8,
+                "additional": [
+                  "details.element",
+                  "details.aspect"
+                ]
+              },
+              {
+                "tag": "administrative_offices",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "wardens_quarter",
+                "title": "Warden's quarter",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "mine_entrance",
+                "title": "MINE entrance (adjacent dungeon)",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "roll_other",
+                "title": "Roll on any different UNIQUE AREA table",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "exits",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "1",
+                "min": 1,
+                "max": 1,
+                "additional": [
+                  "details.exit_direction",
+                  "dungeon_type.prison.connection"
+                ]
+              },
+              {
+                "tag": "2",
+                "min": 2,
+                "max": 5,
+                "additional": [
+                  {
+                    "repeat": 2,
+                    "additional": [
+                      "details.exit_direction",
+                      "dungeon_type.prison.connection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "3",
+                "min": 6,
+                "max": 8,
+                "additional": [
+                  {
+                    "repeat": 3,
+                    "additional": [
+                      "details.exit_direction",
+                      "dungeon_type.prison.connection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "4",
+                "min": 9,
+                "max": 10,
+                "additional": [
+                  {
+                    "repeat": 4,
+                    "additional": [
+                      "details.exit_direction",
+                      "dungeon_type.prison.connection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "5",
+                "min": 11,
+                "max": 11,
+                "additional": [
+                  {
+                    "repeat": 5,
+                    "additional": [
+                      "details.exit_direction",
+                      "dungeon_type.prison.connection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "6",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  {
+                    "repeat": 6,
+                    "additional": [
+                      "details.exit_direction",
+                      "dungeon_type.prison.connection"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "connection",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "collapsed_passage",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "window",
+                "title": "Window/hole/pit",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "fissure",
+                "title": "Fissure/broken wall",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "door",
+                "title": "Door/gate to passage",
+                "min": 4,
+                "max": 5
+              },
+              {
+                "tag": "locked_door",
+                "title": "Locked door/gate to adjacent area",
+                "min": 6,
+                "max": 9
+              },
+              {
+                "tag": "shaft",
+                "title": "Shaft/chute",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "secret_passage",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "escape_tunnel",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "discovery",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "feature",
+                "min": 1,
+                "max": 8,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "pit",
+                    "title": "Pit/fissure/chasm",
+                    "min": 1,
+                    "max": 1
+                  },
+                  {
+                    "tag": "obstacle",
+                    "min": 2,
+                    "max": 2
+                  },
+                  {
+                    "tag": "locked_door",
+                    "title": "Locked door/gate",
+                    "min": 3,
+                    "max": 4
+                  },
+                  {
+                    "tag": "uneven",
+                    "title": "Uneven/broken door",
+                    "min": 5,
+                    "max": 5
+                  },
+                  {
+                    "tag": "barred_wall",
+                    "title": "Barred wall/window",
+                    "min": 6,
+                    "max": 6
+                  },
+                  {
+                    "tag": "alcoves",
+                    "title": "Alcoves/niches",
+                    "min": 7,
+                    "max": 7
+                  },
+                  {
+                    "tag": "ledges",
+                    "title": "Ledges/stairs/catwalks",
+                    "min": 8,
+                    "max": 8
+                  },
+                  {
+                    "tag": "wall_carving",
+                    "title": "Wall carving/status",
+                    "min": 9,
+                    "max": 9
+                  },
+                  {
+                    "tag": "iron_bars",
+                    "title": "Iron bars/rings/rungs",
+                    "min": 10,
+                    "max": 10
+                  },
+                  {
+                    "tag": "close_quarters",
+                    "title": "Close quarters/chokepoint",
+                    "min": 11,
+                    "max": 11
+                  },
+                  {
+                    "tag": "window",
+                    "title": "Window/airshaft",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "find",
+                "min": 9,
+                "max": 12,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "lair",
+                    "title": "Lair of CREATURE",
+                    "min": 1,
+                    "max": 1,
+                    "additional": [
+                      "creature"
+                    ]
+                  },
+                  {
+                    "tag": "evidence_of_inhabitant",
+                    "min": 2,
+                    "max": 2
+                  },
+                  {
+                    "tag": "prisoners",
+                    "title": "1d4 prisoners/escapees",
+                    "min": 3,
+                    "max": 3,
+                    "additional":  [
+                      {
+                        "tag": "amount of persons",
+                        "roll_result":  "d4"
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "common_item",
+                    "title": "COMMON ITEM",
+                    "min": 4,
+                    "max": 5,
+                    "additional": [
+                      "booty.item.common_item"
+                    ]
+                  },
+                  {
+                    "tag": "useful_item",
+                    "title": "USEFUL ITEM",
+                    "min": 6,
+                    "max": 6,
+                    "additional": [
+                      "booty.item.useful_item"
+                    ]
+                  },
+                  {
+                    "tag": "map",
+                    "title": "Map/message",
+                    "min": 7,
+                    "max": 7
+                  },
+                  {
+                    "tag": "key_to_obstacle",
+                    "min": 8,
+                    "max": 8
+                  },
+                  {
+                    "tag": "fountain",
+                    "title": "Fountain/well/pool",
+                    "min": 9,
+                    "max": 10
+                  },
+                  {
+                    "tag": "booty1",
+                    "title": "Booty",
+                    "min": 11,
+                    "max": 11,
+                    "additional": [
+                      [
+                        "booty.owned_booty",
+                        "d4+1"
+                      ]
+                    ]
+                  },
+                  {
+                    "tag": "booty2",
+                    "title": "Booty",
+                    "min": 12,
+                    "max": 12,
+                    "additional": [
+                      [
+                        "booty.owned_booty",
+                        "d6+1"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "dressing",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "sound",
+                "title": "Sound/odor",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "waste",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "scrawled_warning",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "signs",
+                "title": "Signs of battle/struggle",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "remains_creature",
+                "title": "Remains of CREATURE",
+                "min": 5,
+                "max": 5,
+                "additional": [
+                  "creature"
+                ]
+              },
+              {
+                "tag": "remains_of_prisoners",
+                "min": 6,
+                "max": 7
+              },
+              {
+                "tag": "rubble",
+                "title": "Rubble/debris",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "rotten_food",
+                "title": "Rotten food/supplies",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "signage",
+                "title": "Signage/plaque",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "furniture",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "breeze",
                 "min": 12,
                 "max": 12
               }
