@@ -1797,7 +1797,7 @@
                 "max": 1
               },
               {
-                "tag": "bottomless_cve",
+                "tag": "bottomless_cave",
                 "min": 2,
                 "max": 2
               },
@@ -1832,12 +1832,13 @@
               },
               {
                 "tag": "vast_cavern",
+                "title": "Vast cavern, holds 14d STRUCTURES",
                 "min": 8,
                 "max": 8,
                 "additional": [
                   {
                     "generate_outer": "discovery.structure",
-                    "repeat": "d4+1"
+                    "repeat": "d4"
                   }
                 ]
               },
@@ -3346,8 +3347,8 @@
                 "max": 10
               },
               {
-                "tag": "barraks",
-                "title": "Barraks/quarters/kennels",
+                "tag": "barracks",
+                "title": "Barracks/quarters/kennels",
                 "min": 11,
                 "max": 11
               },
@@ -3402,7 +3403,7 @@
               },
               {
                 "tag": "shrine",
-                "title": "Shrine of ElEMENT/ASPECT",
+                "title": "Shrine of ELEMENT/ASPECT",
                 "min": 8,
                 "max": 8,
                 "additional": [
@@ -3825,6 +3826,189 @@
         ],
         "dictionaries": [
           {
+            "tag": "area",
+            "hint": "$modifier",
+            "dice": "d12",
+            "use_modifier": true,
+            "variants": [
+              {
+                "tag": "common1",
+                "title": "Common",
+                "min": 1,
+                "max": 3,
+                "additional": [
+                  "danger",
+                  {
+                    "tag": "exploration",
+                    "static": "+3"
+                  },
+                  "dungeon_type.mine.common_area",
+                  "dungeon_type.mine.dressing",
+                  "dungeon_type.mine.exits"
+                ]
+              },
+              {
+                "tag": "common2",
+                "title": "Common",
+                "min": 4,
+                "max": 6,
+                "additional": [
+                  "danger",
+                  "dungeon_type.mine.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "+2"
+                  },
+                  "dungeon_type.mine.common_area",
+                  "dungeon_type.mine.dressing",
+                  "dungeon_type.mine.exits"
+                ]
+              },
+              {
+                "tag": "common3",
+                "title": "Common",
+                "min": 7,
+                "max": 8,
+                "additional": [
+                  "danger",
+                  "dungeon_type.mine.discovery",
+                  "dungeon_type.mine.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "+1"
+                  },
+                  "dungeon_type.mine.common_area",
+                  "dungeon_type.mine.dressing",
+                  "dungeon_type.mine.exits"
+                ]
+              },
+              {
+                "tag": "common1",
+                "title": "Common",
+                "min": 9,
+                "max": 11,
+                "additional": [
+                  {
+                    "tag": "Contents",
+                    "static": "Nothing unusual"
+                  },
+                  {
+                    "tag": "exploration",
+                    "static": "+1"
+                  },
+                  "dungeon_type.mine.common_area",
+                  "dungeon_type.mine.dressing",
+                  "dungeon_type.mine.exits"
+                ]
+              },
+              {
+                "tag": "common5",
+                "title": "Common",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "dungeon_type.mine.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "+1"
+                  },
+                  "dungeon_type.mine.common_area",
+                  "dungeon_type.mine.dressing",
+                  "dungeon_type.mine.exits"
+                ]
+              },
+              {
+                "tag": "unique1",
+                "title": "Unique",
+                "min": 13,
+                "max": 13,
+                "additional": [
+                  "danger",
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.mine.unique_area",
+                  "dungeon_type.mine.dressing",
+                  "dungeon_type.mine.exits"
+                ]
+              },
+              {
+                "tag": "unique2",
+                "title": "Unique",
+                "min": 14,
+                "max": 14,
+                "additional": [
+                  {
+                    "tag": "Contents",
+                    "static": "Nothing unusual"
+                  },
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.mine.unique_area",
+                  "dungeon_type.mine.dressing",
+                  "dungeon_type.mine.exits"
+                ]
+              },
+              {
+                "tag": "unique3",
+                "title": "Unique",
+                "min": 15,
+                "max": 15,
+                "additional": [
+                  "danger",
+                  "dungeon_type.mine.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.mine.unique_area",
+                  "dungeon_type.mine.dressing",
+                  "dungeon_type.mine.exits"
+                ]
+              },
+              {
+                "tag": "unique4",
+                "title": "Unique",
+                "min": 16,
+                "max": 16,
+                "additional": [
+                  "danger",
+                  "dungeon_type.mine.discovery",
+                  "dungeon_type.mine.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.mine.unique_area",
+                  "dungeon_type.mine.dressing",
+                  "dungeon_type.mine.exits"
+                ]
+              },
+              {
+                "tag": "unique5",
+                "title": "Unique",
+                "min": 17,
+                "max": 100,
+                "additional": [
+                  {
+                    "repeat": "d4",
+                    "generate_outer": "dungeon_type.mine.discovery"
+                  },
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.mine.unique_area",
+                  "dungeon_type.mine.dressing",
+                  "dungeon_type.mine.exits"
+                ]
+              }
+            ]
+          },
+          {
             "tag": "builder",
             "dice": "d12",
             "variants": [
@@ -3927,6 +4111,234 @@
                 "max": 12,
                 "additional": [
                   "details.oddity"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "common_area",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "collapsed_area",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "waste_pits",
+                "title": "Waste pits (tailings, etc.)",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "mining_tunnel_network",
+                "min": 3,
+                "max": 6
+              },
+              {
+                "tag": "natural_caves",
+                "title": "Natural caves/cavern/chasm",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "underground_stream",
+                "title": "Underground stream/river/pool/lake",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "miners_quarters",
+                "title": "Miners' quarters/common rooms",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "holding_area",
+                "title": "Holding/processing area",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "storeroom",
+                "title": "Storeroom/workshop",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "roll_other",
+                "title": "Roll on any different COMMON AREA table",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "unique_area",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "pit",
+                "title": "Pit of Doom",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "labyrinth",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "excavation_site",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "great_chasm",
+                "title": "Great Chasm/Bridge",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "reservoir",
+                "title": "Reservoir/cistern/aqueduct/canal",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "vast_cavern",
+                "title": "Vast cavern, holds 14d STRUCTURES",
+                "min": 6,
+                "max": 6,
+                "additional": [
+                  {
+                    "generate_outer": "discovery.structure",
+                    "repeat": "d4"
+                  }
+                ]
+              },
+              {
+                "tag": "strange_cavern",
+                "min": 7,
+                "max": 7,
+                "additional": [
+                  "details.oddity"
+                ]
+              },
+              {
+                "tag": "enchanted_pool",
+                "title": "Enchanted pool (ABILITY)",
+                "min": 8,
+                "max": 8,
+                "additional": [
+                  "details.ability"
+                ]
+              },
+              {
+                "tag": "mother_lode",
+                "title": "Mother Lode/Treasure vault",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "gateway_to_wilderness",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "extraplanar_portal",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "roll_other",
+                "title": "Roll on any different UNIQUE AREA table",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "exits",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "1",
+                "min": 1,
+                "max": 1,
+                "additional": [
+                  "details.exit_direction",
+                  "dungeon_type.mine.connection"
+                ]
+              },
+              {
+                "tag": "2",
+                "min": 2,
+                "max": 5,
+                "additional": [
+                  {
+                    "repeat": 2,
+                    "additional": [
+                      "details.exit_direction",
+                      "dungeon_type.mine.connection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "3",
+                "min": 6,
+                "max": 8,
+                "additional": [
+                  {
+                    "repeat": 3,
+                    "additional": [
+                      "details.exit_direction",
+                      "dungeon_type.mine.connection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "4",
+                "min": 9,
+                "max": 10,
+                "additional": [
+                  {
+                    "repeat": 4,
+                    "additional": [
+                      "details.exit_direction",
+                      "dungeon_type.mine.connection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "5",
+                "min": 11,
+                "max": 11,
+                "additional": [
+                  {
+                    "repeat": 5,
+                    "additional": [
+                      "details.exit_direction",
+                      "dungeon_type.mine.connection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "6",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  {
+                    "repeat": 6,
+                    "additional": [
+                      "details.exit_direction",
+                      "dungeon_type.mine.connection"
+                    ]
+                  }
                 ]
               }
             ]
