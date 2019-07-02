@@ -2522,6 +2522,136 @@
             ]
           },
           {
+            "tag": "common_area",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "sewers",
+                "title": "Sewers/midden/dump",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "settlement_defences",
+                "title": "Settlement defences (walls, moat, etc.)",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "shacks",
+                "title": "Shacks/slums/poor quarter",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "homes",
+                "title": "Homes/residential quarter",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "watering_holr",
+                "title": "Watering hole/well/cistern/aqueduct",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "workshops",
+                "title": "Workshops/industrial quarter",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "shops",
+                "title": "Shops/market/mercantile quarter",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "docks",
+                "title": "Docks/trading post/caravansaray",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "temple",
+                "title": "Temple/religious quarter",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "unique_area",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "graveyard",
+                "title": "Graveyard/necropolis",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "monument",
+                "title": "Monument/statue/obelisk",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "gallows",
+                "title": "Gallows/arena/theater",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "main_marketplace",
+                "title": "Main marketplace/bazaar",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "main_plaza",
+                "title": "Main plaza/parade ground",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "guardhouse",
+                "title": "Guardhouse/barracks",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "shrine",
+                "title": "Shrine/Temple (ELEMENT/ASPECT)",
+                "min": 7,
+                "max": 7,
+                "additional": [
+                  "details.element",
+                  "details.aspect"
+                ]
+              },
+              {
+                "tag": "shamans_hut",
+                "title": "Shaman's hut/library/wizard's tower",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "leaders_hut",
+                "title": "Leader's hut/Palace",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "dungeon_entrance",
+                "title": "DUNGEON entrance",
+                "min": 10,
+                "max": 12
+              }
+            ]
+          },
+          {
             "tag": "exits",
             "dice": "d12",
             "variants": [
@@ -2606,6 +2736,280 @@
               }
             ]
           },
+          {
+            "tag": "connection",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "sinkhole",
+                "title": "Sinkhole/fissure",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "natural_barrier",
+                "title": "Natural barrier/obstacle",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "difficult_terrain",
+                "title": "Difficult/treacherous terrain",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "adjacent_area",
+                "min": 5,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "discovery",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "feature",
+                "min": 1,
+                "max": 8,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "potholes",
+                    "title": "Potholes/pitfalls",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "barrier",
+                    "title": "Barrier/obstacle",
+                    "min": 3,
+                    "max": 3
+                  },
+                  {
+                    "tag": "hiding_places",
+                    "min": 4,
+                    "max": 4
+                  },
+                  {
+                    "tag": "unstable_structure",
+                    "title": "Unstable/rickery structure",
+                    "min": 5,
+                    "max": 5
+                  },
+                  {
+                    "tag": "treacherous_footing",
+                    "min": 6,
+                    "max": 7
+                  },
+                  {
+                    "tag": "hidden_find",
+                    "title": "Hidden FIND",
+                    "min": 8,
+                    "max": 9,
+                    "additional": [
+                     "dungeon_type.ruined_settlement.discovery.find"
+                    ]
+                  },
+                  {
+                    "tag": "water_source",
+                    "title": "Water source/feature",
+                    "min": 10,
+                    "max": 10
+                  },
+                  {
+                    "tag": "vantage_point",
+                    "min": 11,
+                    "max": 11
+                  },
+                  {
+                    "tag": "defensible_position",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "find",
+                "min": 9,
+                "max": 12,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "lair",
+                    "title": "Lair of CREATURE",
+                    "min": 1,
+                    "max": 1,
+                    "additional": [
+                      "creature"
+                    ]
+                  },
+                  {
+                    "tag": "evidence",
+                    "title": "Evidence of CREATURE",
+                    "min": 2,
+                    "max": 3,
+                    "additional": [
+                      "creature"
+                    ]
+                  },
+                  {
+                    "tag": "evidence_of_explorers",
+                    "min": 4,
+                    "max": 4
+                  },
+                  {
+                    "tag": "explorers",
+                    "min": 5,
+                    "max": 5,
+                    "additional": [
+                      {
+                        "tag": "explorers_amount",
+                        "roll_result": "d4"
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "common_item",
+                    "title": "COMMON ITEM",
+                    "min": 6,
+                    "max": 7,
+                    "additional": [
+                      "booty.item.common_item"
+                    ]
+                  },
+                  {
+                    "tag": "useful_item",
+                    "title": "USEFUL ITEM",
+                    "min": 8,
+                    "max": 9,
+                    "additional": [
+                      "booty.item.useful_item"
+                    ]
+                  },
+                  {
+                    "tag": "booty1",
+                    "title": "Booty",
+                    "min": 10,
+                    "max": 10,
+                    "additional": [
+                      [
+                        "booty.owned_booty",
+                        "d4+1"
+                      ]
+                    ]
+                  },
+                  {
+                    "tag": "booty2",
+                    "title": "Booty",
+                    "min": 11,
+                    "max": 11,
+                    "additional": [
+                      [
+                        "booty.owned_booty",
+                        "d6+1"
+                      ]
+                    ]
+                  },
+                  {
+                    "tag": "booty3",
+                    "title": "Booty",
+                    "min": 12,
+                    "max": 12,
+                    "additional": [
+                      [
+                        "booty.owned_booty",
+                        "d8+1"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "dressing",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "sound",
+                "title": "Sound/odor",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "signs",
+                "title": "Signs of battle/struggle",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "remains_creature",
+                "title": "Remains of CREATURE",
+                "min": 3,
+                "max": 3,
+                "additional": [
+                  "creature"
+                ]
+              },
+              {
+                "tag": "remains_of_inhabitants",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "broken_furniture",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "broken_pillars",
+                "title": "Broken pillars/columns",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "statue",
+                "title": "Statue/monument",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "signage",
+                "title": "Signage/plaque",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "emblem",
+                "title": "Emblem/banner/crest",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "religious_iconography",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "double",
+                "title": "Roll d10 twice",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  [
+                    "dungeon_type.ruined_settlement.dressing",
+                    "d10"
+                  ],
+                  [
+                    "dungeon_type.ruined_settlement.dressing",
+                    "d10"
+                  ]
+                ]
+              }
+            ]
+          }
         ]
       },
       {
@@ -6253,7 +6657,7 @@
             ]
           },
           {
-            "tag": "_useful_item",
+            "tag": "useful_item",
             "dice": "d12",
             "min": 9,
             "max": 12,
