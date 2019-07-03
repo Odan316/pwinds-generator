@@ -1877,7 +1877,7 @@
                 "min": 1,
                 "max": 1,
                 "additional": [
-                  "details.exit_direction",
+                  "details.direction",
                   "dungeon_type.caves.connection"
                 ]
               },
@@ -1889,7 +1889,7 @@
                   {
                     "repeat": 2,
                     "additional": [
-                      "details.exit_direction",
+                      "details.direction",
                       "dungeon_type.caves.connection"
                     ]
                   }
@@ -1903,7 +1903,7 @@
                   {
                     "repeat": 3,
                     "additional": [
-                      "details.exit_direction",
+                      "details.direction",
                       "dungeon_type.caves.connection"
                     ]
                   }
@@ -1917,7 +1917,7 @@
                   {
                     "repeat": 4,
                     "additional": [
-                      "details.exit_direction",
+                      "details.direction",
                       "dungeon_type.caves.connection"
                     ]
                   }
@@ -1931,7 +1931,7 @@
                   {
                     "repeat": 5,
                     "additional": [
-                      "details.exit_direction",
+                      "details.direction",
                       "dungeon_type.caves.connection"
                     ]
                   }
@@ -1945,7 +1945,7 @@
                   {
                     "repeat": 6,
                     "additional": [
-                      "details.exit_direction",
+                      "details.direction",
                       "dungeon_type.caves.connection"
                     ]
                   }
@@ -2661,7 +2661,7 @@
                 "min": 1,
                 "max": 1,
                 "additional": [
-                  "details.exit_direction",
+                  "details.direction",
                   "dungeon_type.ruined_settlement.connection"
                 ]
               },
@@ -2673,7 +2673,7 @@
                   {
                     "repeat": 2,
                     "additional": [
-                      "details.exit_direction",
+                      "details.direction",
                       "dungeon_type.ruined_settlement.connection"
                     ]
                   }
@@ -2687,7 +2687,7 @@
                   {
                     "repeat": 3,
                     "additional": [
-                      "details.exit_direction",
+                      "details.direction",
                       "dungeon_type.ruined_settlement.connection"
                     ]
                   }
@@ -2701,7 +2701,7 @@
                   {
                     "repeat": 4,
                     "additional": [
-                      "details.exit_direction",
+                      "details.direction",
                       "dungeon_type.ruined_settlement.connection"
                     ]
                   }
@@ -2715,7 +2715,7 @@
                   {
                     "repeat": 5,
                     "additional": [
-                      "details.exit_direction",
+                      "details.direction",
                       "dungeon_type.ruined_settlement.connection"
                     ]
                   }
@@ -2729,7 +2729,7 @@
                   {
                     "repeat": 6,
                     "additional": [
-                      "details.exit_direction",
+                      "details.direction",
                       "dungeon_type.ruined_settlement.connection"
                     ]
                   }
@@ -3445,7 +3445,7 @@
                 "min": 1,
                 "max": 1,
                 "additional": [
-                  "details.exit_direction",
+                  "details.direction",
                   "dungeon_type.prison.connection"
                 ]
               },
@@ -3457,7 +3457,7 @@
                   {
                     "repeat": 2,
                     "additional": [
-                      "details.exit_direction",
+                      "details.direction",
                       "dungeon_type.prison.connection"
                     ]
                   }
@@ -3471,7 +3471,7 @@
                   {
                     "repeat": 3,
                     "additional": [
-                      "details.exit_direction",
+                      "details.direction",
                       "dungeon_type.prison.connection"
                     ]
                   }
@@ -3485,7 +3485,7 @@
                   {
                     "repeat": 4,
                     "additional": [
-                      "details.exit_direction",
+                      "details.direction",
                       "dungeon_type.prison.connection"
                     ]
                   }
@@ -3499,7 +3499,7 @@
                   {
                     "repeat": 5,
                     "additional": [
-                      "details.exit_direction",
+                      "details.direction",
                       "dungeon_type.prison.connection"
                     ]
                   }
@@ -3513,7 +3513,7 @@
                   {
                     "repeat": 6,
                     "additional": [
-                      "details.exit_direction",
+                      "details.direction",
                       "dungeon_type.prison.connection"
                     ]
                   }
@@ -3625,7 +3625,7 @@
                   },
                   {
                     "tag": "wall_carving",
-                    "title": "Wall carving/status",
+                    "title": "Wall carving/statue",
                     "min": 9,
                     "max": 9
                   },
@@ -4267,7 +4267,7 @@
                 "min": 1,
                 "max": 1,
                 "additional": [
-                  "details.exit_direction",
+                  "details.direction",
                   "dungeon_type.mine.connection"
                 ]
               },
@@ -4279,7 +4279,7 @@
                   {
                     "repeat": 2,
                     "additional": [
-                      "details.exit_direction",
+                      "details.direction",
                       "dungeon_type.mine.connection"
                     ]
                   }
@@ -4293,7 +4293,7 @@
                   {
                     "repeat": 3,
                     "additional": [
-                      "details.exit_direction",
+                      "details.direction",
                       "dungeon_type.mine.connection"
                     ]
                   }
@@ -4307,7 +4307,7 @@
                   {
                     "repeat": 4,
                     "additional": [
-                      "details.exit_direction",
+                      "details.direction",
                       "dungeon_type.mine.connection"
                     ]
                   }
@@ -4321,7 +4321,7 @@
                   {
                     "repeat": 5,
                     "additional": [
-                      "details.exit_direction",
+                      "details.direction",
                       "dungeon_type.mine.connection"
                     ]
                   }
@@ -4335,10 +4335,331 @@
                   {
                     "repeat": 6,
                     "additional": [
-                      "details.exit_direction",
+                      "details.direction",
                       "dungeon_type.mine.connection"
                     ]
                   }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "connection",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "dead_end",
+                "title": "Dead-end tunnel",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "opening",
+                "title": "Out-of-reach opening",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "fissure",
+                "title": "Fissure/crack/cave",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "waterway",
+                "title": "Waterway/bridge",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "tunnel",
+                "min": 6,
+                "max": 8
+              },
+              {
+                "tag": "shaft",
+                "title": "Shaft/chute",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "secret_passage",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "adit_to_surface",
+                "title": "Adit to surface/outside",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "discovery",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "feature",
+                "min": 1,
+                "max": 8,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "pit",
+                    "title": "Pit/fissure/chasm",
+                    "min": 1,
+                    "max": 1
+                  },
+                  {
+                    "tag": "uneven",
+                    "title": "Uneven/broken door",
+                    "min": 2,
+                    "max": 2
+                  },
+                  {
+                    "tag": "rubble_heaps",
+                    "min": 3,
+                    "max": 3
+                  },
+                  {
+                    "tag": "locked_door",
+                    "title": "Locked door/gate",
+                    "min": 4,
+                    "max": 4
+                  },
+                  {
+                    "tag": "alcoves",
+                    "title": "Alcoves/niches",
+                    "min": 5,
+                    "max": 5
+                  },
+                  {
+                    "tag": "ledges",
+                    "title": "Ledges/stairs/walkways",
+                    "min": 6,
+                    "max": 6
+                  },
+                  {
+                    "tag": "wall_carving",
+                    "title": "Wall carving/statue",
+                    "min": 7,
+                    "max": 7
+                  },
+                  {
+                    "tag": "processing_equipment",
+                    "min": 8,
+                    "max": 8
+                  },
+                  {
+                    "tag": "fountain",
+                    "title": "Fountain/well/pool",
+                    "min": 9,
+                    "max": 9
+                  },
+                  {
+                    "tag": "obstacle",
+                    "title": "Obstacle/puzzle",
+                    "min": 10,
+                    "max": 10
+                  },
+                  {
+                    "tag": "elevator",
+                    "title": "Elevator/winch",
+                    "min": 11,
+                    "max": 11
+                  },
+                  {
+                    "tag": "airshaft",
+                    "title": "airshaft",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "find",
+                "min": 9,
+                "max": 12,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "mining_tools",
+                    "title": "Mining tools/supplies",
+                    "min": 1,
+                    "max": 1
+                  },
+                  {
+                    "tag": "pictographic_narrative",
+                    "min": 2,
+                    "max": 2
+                  },
+                  {
+                    "tag": "lair",
+                    "title": "Lair of CREATURE",
+                    "min": 3,
+                    "max": 3,
+                    "additional": [
+                      "creature"
+                    ]
+                  },
+                  {
+                    "tag": "evidence",
+                    "title": "Evidence of CREATURE",
+                    "min": 4,
+                    "max": 4,
+                    "additional": [
+                      "creature"
+                    ]
+                  },
+                  {
+                    "tag": "common_item",
+                    "title": "COMMON ITEM",
+                    "min": 5,
+                    "max": 5,
+                    "additional": [
+                      "booty.item.common_item"
+                    ]
+                  },
+                  {
+                    "tag": "useful_item",
+                    "title": "USEFUL ITEM",
+                    "min": 6,
+                    "max": 6,
+                    "additional": [
+                      "booty.item.useful_item"
+                    ]
+                  },
+                  {
+                    "tag": "map",
+                    "title": "Map/message",
+                    "min": 7,
+                    "max": 7
+                  },
+                  {
+                    "tag": "key_to_obstacle",
+                    "title": "Key to obstacle/puzzle",
+                    "min": 8,
+                    "max": 8
+                  },
+                  {
+                    "tag": "vein",
+                    "title": "Vein/seam (RESOURCE)",
+                    "min": 9,
+                    "max": 10
+                  },
+                  {
+                    "tag": "booty1",
+                    "title": "Booty",
+                    "min": 11,
+                    "max": 11,
+                    "additional": [
+                      [
+                        "booty.owned_booty",
+                        "d4+1"
+                      ]
+                    ]
+                  },
+                  {
+                    "tag": "booty2",
+                    "title": "Booty",
+                    "min": 12,
+                    "max": 12,
+                    "additional": [
+                      [
+                        "booty.owned_booty",
+                        "d6+1"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "dressing",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "sound",
+                "title": "Sound (DIRECTION)",
+                "min": 1,
+                "max": 1,
+                "additional": [
+                  "details.direction"
+                ]
+              },
+              {
+                "tag": "scrawled_warning",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "signs",
+                "title": "Signs of battle/struggle",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "remains_creature",
+                "title": "Remains of CREATURE",
+                "min": 4,
+                "max": 4,
+                "additional": [
+                  "creature"
+                ]
+              },
+              {
+                "tag": "remains_of_miners",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "broken_tools",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "signage",
+                "title": "Signage/inscription",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "tailings",
+                "title": "Tailings/waste",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "temperature_change",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "odor",
+                "title": "Odor (DIRECTION)",
+                "min": 10,
+                "max": 10,
+                "additional": [
+                  "details.direction"
+                ]
+              },
+              {
+                "tag": "breeze",
+                "title": "Breeze (DIRECTION)",
+                "min": 11,
+                "max": 11,
+                "additional": [
+                  "details.direction"
+                ]
+              },
+              {
+                "tag": "oddity",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "details.oddity"
                 ]
               }
             ]
@@ -8276,7 +8597,7 @@
         ]
       },
       {
-        "tag": "exit_direction",
+        "tag": "direction",
         "dice": "d12",
         "variants": [
           {
