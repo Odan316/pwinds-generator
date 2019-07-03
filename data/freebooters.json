@@ -4471,7 +4471,7 @@
                   },
                   {
                     "tag": "airshaft",
-                    "title": "airshaft",
+                    "title": "Airshaft",
                     "min": 12,
                     "max": 12
                   }
@@ -4677,6 +4677,189 @@
         ],
         "dictionaries": [
           {
+            "tag": "area",
+            "hint": "$modifier",
+            "dice": "d12",
+            "use_modifier": true,
+            "variants": [
+              {
+                "tag": "common1",
+                "title": "Common",
+                "min": 1,
+                "max": 3,
+                "additional": [
+                  "danger",
+                  {
+                    "tag": "exploration",
+                    "static": "+3"
+                  },
+                  "dungeon_type.crypt.common_area",
+                  "dungeon_type.crypt.dressing",
+                  "dungeon_type.crypt.exits"
+                ]
+              },
+              {
+                "tag": "common2",
+                "title": "Common",
+                "min": 4,
+                "max": 6,
+                "additional": [
+                  "danger",
+                  "dungeon_type.crypt.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "+2"
+                  },
+                  "dungeon_type.crypt.common_area",
+                  "dungeon_type.crypt.dressing",
+                  "dungeon_type.crypt.exits"
+                ]
+              },
+              {
+                "tag": "common3",
+                "title": "Common",
+                "min": 7,
+                "max": 8,
+                "additional": [
+                  "danger",
+                  "dungeon_type.crypt.discovery",
+                  "dungeon_type.crypt.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "+1"
+                  },
+                  "dungeon_type.crypt.common_area",
+                  "dungeon_type.crypt.dressing",
+                  "dungeon_type.crypt.exits"
+                ]
+              },
+              {
+                "tag": "common1",
+                "title": "Common",
+                "min": 9,
+                "max": 11,
+                "additional": [
+                  {
+                    "tag": "Contents",
+                    "static": "Nothing unusual"
+                  },
+                  {
+                    "tag": "exploration",
+                    "static": "+1"
+                  },
+                  "dungeon_type.crypt.common_area",
+                  "dungeon_type.crypt.dressing",
+                  "dungeon_type.crypt.exits"
+                ]
+              },
+              {
+                "tag": "common5",
+                "title": "Common",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "dungeon_type.crypt.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "+1"
+                  },
+                  "dungeon_type.crypt.common_area",
+                  "dungeon_type.crypt.dressing",
+                  "dungeon_type.crypt.exits"
+                ]
+              },
+              {
+                "tag": "unique1",
+                "title": "Unique",
+                "min": 13,
+                "max": 13,
+                "additional": [
+                  "danger",
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.crypt.unique_area",
+                  "dungeon_type.crypt.dressing",
+                  "dungeon_type.crypt.exits"
+                ]
+              },
+              {
+                "tag": "unique2",
+                "title": "Unique",
+                "min": 14,
+                "max": 14,
+                "additional": [
+                  {
+                    "tag": "Contents",
+                    "static": "Nothing unusual"
+                  },
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.crypt.unique_area",
+                  "dungeon_type.crypt.dressing",
+                  "dungeon_type.crypt.exits"
+                ]
+              },
+              {
+                "tag": "unique3",
+                "title": "Unique",
+                "min": 15,
+                "max": 15,
+                "additional": [
+                  "danger",
+                  "dungeon_type.crypt.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.crypt.unique_area",
+                  "dungeon_type.crypt.dressing",
+                  "dungeon_type.crypt.exits"
+                ]
+              },
+              {
+                "tag": "unique4",
+                "title": "Unique",
+                "min": 16,
+                "max": 16,
+                "additional": [
+                  "danger",
+                  "dungeon_type.crypt.discovery",
+                  "dungeon_type.crypt.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.crypt.unique_area",
+                  "dungeon_type.crypt.dressing",
+                  "dungeon_type.crypt.exits"
+                ]
+              },
+              {
+                "tag": "unique5",
+                "title": "Unique",
+                "min": 17,
+                "max": 100,
+                "additional": [
+                  {
+                    "repeat": "d4",
+                    "generate_outer": "dungeon_type.crypt.discovery"
+                  },
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.crypt.unique_area",
+                  "dungeon_type.crypt.dressing",
+                  "dungeon_type.crypt.exits"
+                ]
+              }
+            ]
+          },
+          {
             "tag": "builder",
             "dice": "d12",
             "variants": [
@@ -4774,6 +4957,530 @@
                     "d10"
                   ]
                 ]
+              }
+            ]
+          },
+          {
+            "tag": "common_area",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "collapsed_area",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "false_treasure",
+                "title": "False treasure vault/tomb (+TRAP)",
+                "min": 2,
+                "max": 2,
+                "additional": [
+                 "danger.hazard.trap"
+                ]
+              },
+              {
+                "tag": "passage_trap",
+                "title": "Passage (+TRAP)",
+                "min": 3,
+                "max": 4,
+                "additional": [
+                  "danger.hazard.trap"
+                ]
+              },
+              {
+                "tag": "crypt_lined_passage",
+                "title": "Crypt-lined passage/chamber",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "passage",
+                "title": "Passage",
+                "min": 6,
+                "max": 7
+              },
+              {
+                "tag": "chamber",
+                "min": 8,
+                "max": 10
+              },
+              {
+                "tag": "gallery",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "roll_other",
+                "title": "Roll on any different COMMON AREA table",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "unique_area",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "maze",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "catacombs",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "well_room",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "sacrificial_chamber",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "shrine",
+                "title": "Shrine of [ELEMENT/ASPECT]",
+                "min": 5,
+                "max": 5,
+                "additional": [
+                  "details.element",
+                  "details.aspect"
+                ]
+              },
+              {
+                "tag": "mortuary_temple",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "necropolis",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "hall_of_offerings",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "burial_vault",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "secret_burial_vault",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "treasury_vault",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "roll_other",
+                "title": "Roll on any different UNIQUE AREA table",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "exits",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "1",
+                "min": 1,
+                "max": 1,
+                "additional": [
+                  "details.direction",
+                  "dungeon_type.crypt.connection"
+                ]
+              },
+              {
+                "tag": "2",
+                "min": 2,
+                "max": 5,
+                "additional": [
+                  {
+                    "repeat": 2,
+                    "additional": [
+                      "details.direction",
+                      "dungeon_type.crypt.connection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "3",
+                "min": 6,
+                "max": 8,
+                "additional": [
+                  {
+                    "repeat": 3,
+                    "additional": [
+                      "details.direction",
+                      "dungeon_type.crypt.connection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "4",
+                "min": 9,
+                "max": 10,
+                "additional": [
+                  {
+                    "repeat": 4,
+                    "additional": [
+                      "details.direction",
+                      "dungeon_type.crypt.connection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "5",
+                "min": 11,
+                "max": 11,
+                "additional": [
+                  {
+                    "repeat": 5,
+                    "additional": [
+                      "details.direction",
+                      "dungeon_type.crypt.connection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "6",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  {
+                    "repeat": 6,
+                    "additional": [
+                      "details.direction",
+                      "dungeon_type.crypt.connection"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "connection",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "sealed_passage",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "dead_end",
+                "title": "Dead-end passage",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "opening",
+                "title": "Out-of-reach opening",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "fissure",
+                "title": "Fissure/crack/cave",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "pit",
+                "title": "Pit/shaft",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "open_passage",
+                "min": 7,
+                "max": 9
+              },
+              {
+                "tag": "adjacent_area",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "tomb_robbers_tunnel",
+                "title": "Tomb robbers' tunnel",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "secret_passage",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "discovery",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "feature",
+                "min": 1,
+                "max": 8,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "pit",
+                    "title": "Pit/fissure/chasm",
+                    "min": 1,
+                    "max": 1
+                  },
+                  {
+                    "tag": "sealed_door",
+                    "title": "Sealed opening/door",
+                    "min": 2,
+                    "max": 3
+                  },
+                  {
+                    "tag": "obstacle",
+                    "title": "Obstacle/puzzle",
+                    "min": 4,
+                    "max": 4
+                  },
+                  {
+                    "tag": "uneven",
+                    "title": "Uneven/broken floor",
+                    "min": 5,
+                    "max": 5
+                  },
+                  {
+                    "tag": "alcoves",
+                    "title": "Alcoves/niches",
+                    "min": 6,
+                    "max": 6
+                  },
+                  {
+                    "tag": "ledges",
+                    "title": "Ledges/stairs/ramos",
+                    "min": 7,
+                    "max": 7
+                  },
+                  {
+                    "tag": "wall_carving",
+                    "title": "Wall carving/statue",
+                    "min": 8,
+                    "max": 9
+                  },
+                  {
+                    "tag": "vertical_space",
+                    "min": 10,
+                    "max": 10
+                  },
+                  {
+                    "tag": "multilevel_space",
+                    "title": "Multi-level space",
+                    "min": 11,
+                    "max": 11
+                  },
+                  {
+                    "tag": "airshaft",
+                    "title": "Airshaft/lightshaft",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "find",
+                "min": 9,
+                "max": 12,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "embalming_supplies",
+                    "min": 1,
+                    "max": 1
+                  },
+                  {
+                    "tag": "pictographic_narrative",
+                    "min": 2,
+                    "max": 2
+                  },
+                  {
+                    "tag": "tomb_robbers",
+                    "title": "1d4 tomb robbers",
+                    "min": 3,
+                    "max": 3,
+                    "additinal": [
+                      {
+                        "tag": "robbers_amount",
+                        "roll_result":  "d4"
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "lair",
+                    "title": "Lair of CREATURE",
+                    "min": 4,
+                    "max": 4,
+                    "additional": [
+                      "creature"
+                    ]
+                  },
+                  {
+                    "tag": "map",
+                    "title": "Map/message",
+                    "min": 5,
+                    "max": 5
+                  },
+                  {
+                    "tag": "key_to_obstacle",
+                    "title": "Key to obstacle/puzzle",
+                    "min": 6,
+                    "max": 6
+                  },
+                  {
+                    "tag": "sarcophagus",
+                    "title": "Sarcophagus/reliquary",
+                    "min": 7,
+                    "max": 8
+                  },
+                  {
+                    "tag": "booty1",
+                    "title": "Booty",
+                    "min": 9,
+                    "max": 9,
+                    "additional": [
+                      [
+                        "booty.owned_booty",
+                        "d6+1"
+                      ]
+                    ]
+                  },
+                  {
+                    "tag": "booty2",
+                    "title": "Booty",
+                    "min": 10,
+                    "max": 10,
+                    "additional": [
+                      [
+                        "booty.owned_booty",
+                        "d8+1"
+                      ]
+                    ]
+                  },
+                  {
+                    "tag": "booty3",
+                    "title": "Booty",
+                    "min": 11,
+                    "max": 11,
+                    "additional": [
+                      [
+                        "booty.owned_booty",
+                        "d10+1"
+                      ]
+                    ]
+                  },
+                  {
+                    "tag": "booty4",
+                    "title": "Booty",
+                    "min": 12,
+                    "max": 12,
+                    "additional": [
+                      [
+                        "booty.owned_booty",
+                        "d12+1"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "dressing",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "sound",
+                "title": "Sound/odor",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "scrawled_warning",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "remains_creature",
+                "title": "Remains of CREATURE",
+                "min": 3,
+                "max": 3,
+                "additional": [
+                  "creature"
+                ]
+              },
+              {
+                "tag": "remains_of_robbers",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "vandalized_statues",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "religious_iconography",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "mural",
+                "title": "Mural/mosaic",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "pots",
+                "title": "Pots/urns",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "inscription",
+                "title": "Inscription/epitaph",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "coffins",
+                "title": "Broken/open coffins",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "platform",
+                "title": "Platform/dais/altar",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "breeze",
+                "min": 12,
+                "max": 12
               }
             ]
           }
