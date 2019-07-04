@@ -5793,6 +5793,189 @@
         ],
         "dictionaries": [
           {
+            "tag": "area",
+            "hint": "$modifier",
+            "dice": "d12",
+            "use_modifier": true,
+            "variants": [
+              {
+                "tag": "common1",
+                "title": "Common",
+                "min": 1,
+                "max": 3,
+                "additional": [
+                  "danger",
+                  {
+                    "tag": "exploration",
+                    "static": "+3"
+                  },
+                  "dungeon_type.stronghold.common_area",
+                  "dungeon_type.stronghold.dressing",
+                  "dungeon_type.stronghold.exits"
+                ]
+              },
+              {
+                "tag": "common2",
+                "title": "Common",
+                "min": 4,
+                "max": 6,
+                "additional": [
+                  "danger",
+                  "dungeon_type.stronghold.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "+2"
+                  },
+                  "dungeon_type.stronghold.common_area",
+                  "dungeon_type.stronghold.dressing",
+                  "dungeon_type.stronghold.exits"
+                ]
+              },
+              {
+                "tag": "common3",
+                "title": "Common",
+                "min": 7,
+                "max": 8,
+                "additional": [
+                  "danger",
+                  "dungeon_type.stronghold.discovery",
+                  "dungeon_type.stronghold.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "+1"
+                  },
+                  "dungeon_type.stronghold.common_area",
+                  "dungeon_type.stronghold.dressing",
+                  "dungeon_type.stronghold.exits"
+                ]
+              },
+              {
+                "tag": "common1",
+                "title": "Common",
+                "min": 9,
+                "max": 11,
+                "additional": [
+                  {
+                    "tag": "Contents",
+                    "static": "Nothing unusual"
+                  },
+                  {
+                    "tag": "exploration",
+                    "static": "+1"
+                  },
+                  "dungeon_type.stronghold.common_area",
+                  "dungeon_type.stronghold.dressing",
+                  "dungeon_type.stronghold.exits"
+                ]
+              },
+              {
+                "tag": "common5",
+                "title": "Common",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "dungeon_type.stronghold.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "+1"
+                  },
+                  "dungeon_type.stronghold.common_area",
+                  "dungeon_type.stronghold.dressing",
+                  "dungeon_type.stronghold.exits"
+                ]
+              },
+              {
+                "tag": "unique1",
+                "title": "Unique",
+                "min": 13,
+                "max": 13,
+                "additional": [
+                  "danger",
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.stronghold.unique_area",
+                  "dungeon_type.stronghold.dressing",
+                  "dungeon_type.stronghold.exits"
+                ]
+              },
+              {
+                "tag": "unique2",
+                "title": "Unique",
+                "min": 14,
+                "max": 14,
+                "additional": [
+                  {
+                    "tag": "Contents",
+                    "static": "Nothing unusual"
+                  },
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.stronghold.unique_area",
+                  "dungeon_type.stronghold.dressing",
+                  "dungeon_type.stronghold.exits"
+                ]
+              },
+              {
+                "tag": "unique3",
+                "title": "Unique",
+                "min": 15,
+                "max": 15,
+                "additional": [
+                  "danger",
+                  "dungeon_type.stronghold.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.stronghold.unique_area",
+                  "dungeon_type.stronghold.dressing",
+                  "dungeon_type.stronghold.exits"
+                ]
+              },
+              {
+                "tag": "unique4",
+                "title": "Unique",
+                "min": 16,
+                "max": 16,
+                "additional": [
+                  "danger",
+                  "dungeon_type.stronghold.discovery",
+                  "dungeon_type.stronghold.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.stronghold.unique_area",
+                  "dungeon_type.stronghold.dressing",
+                  "dungeon_type.stronghold.exits"
+                ]
+              },
+              {
+                "tag": "unique5",
+                "title": "Unique",
+                "min": 17,
+                "max": 100,
+                "additional": [
+                  {
+                    "repeat": "d4",
+                    "generate_outer": "dungeon_type.stronghold.discovery"
+                  },
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.stronghold.unique_area",
+                  "dungeon_type.stronghold.dressing",
+                  "dungeon_type.stronghold.exits"
+                ]
+              }
+            ]
+          },
+          {
             "tag": "builder",
             "dice": "d12",
             "variants": [
@@ -5865,6 +6048,513 @@
                 "title": "Rebels/insurgents",
                 "min": 12,
                 "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "common_area",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "latrine",
+                "title": "Latrine/midden/lump",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "fortified_gate",
+                "title": "Fortified gate/guardpost",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "passageways",
+                "min": 4,
+                "max": 5
+              },
+              {
+                "tag": "common_quarters",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "storeroom",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "mess",
+                "title": "Mess/kitchen/larder",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "courtyard",
+                "title": "Courtyard/well room",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "barracks",
+                "title": "Barracks/stables/kennels/aviary",
+                "min": 10,
+                "max": 11
+              },
+              {
+                "tag": "workshops",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "unique_area",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "dungeon",
+                "title": "Dungeon/torture chamber",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "menagerie",
+                "title": "Menagerie/arena",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "feasting_hall",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "shrine",
+                "title": "Shrine/Temple of ELEMENT/ASPECT",
+                "min": 4,
+                "max": 4,
+                "additional": [
+                  "details.element",
+                  "details.aspect"
+                ]
+              },
+              {
+                "tag": "armory",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "trophy_hall",
+                "title": "Trophy hall/Hall of Ancestor",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "audience_room",
+                "title": "Audience/Throne room",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "advisor_quarters",
+                "title": "Advisor's/Lieutenant's quarters",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "leaders_quarters",
+                "title": "Leader's/Lord's quarters",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "secret_room",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "treasure_chamber",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "roll_other",
+                "title": "Roll on any different UNIQUE AREA table",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "exits",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "1",
+                "min": 1,
+                "max": 1,
+                "additional": [
+                  "details.direction",
+                  "dungeon_type.stronghold.connection"
+                ]
+              },
+              {
+                "tag": "2",
+                "min": 2,
+                "max": 5,
+                "additional": [
+                  {
+                    "repeat": 2,
+                    "additional": [
+                      "details.direction",
+                      "dungeon_type.stronghold.connection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "3",
+                "min": 6,
+                "max": 8,
+                "additional": [
+                  {
+                    "repeat": 3,
+                    "additional": [
+                      "details.direction",
+                      "dungeon_type.stronghold.connection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "4",
+                "min": 9,
+                "max": 10,
+                "additional": [
+                  {
+                    "repeat": 4,
+                    "additional": [
+                      "details.direction",
+                      "dungeon_type.stronghold.connection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "5",
+                "min": 11,
+                "max": 11,
+                "additional": [
+                  {
+                    "repeat": 5,
+                    "additional": [
+                      "details.direction",
+                      "dungeon_type.stronghold.connection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "6",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  {
+                    "repeat": 6,
+                    "additional": [
+                      "details.direction",
+                      "dungeon_type.stronghold.connection"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "connection",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "window",
+                "title": "Window/opening",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "ladder",
+                "title": "Ladder/stairwell",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "door",
+                "title": "Door/gate to passage",
+                "min": 4,
+                "max": 5
+              },
+              {
+                "tag": "passage",
+                "min": 6,
+                "max": 8
+              },
+              {
+                "tag": "locked_door",
+                "title": "Locked door/gate to adjacent area",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "secret_passage",
+                "min": 11,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "discovery",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "feature",
+                "min": 1,
+                "max": 8,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "machilocations",
+                    "title": "Machilocations/murder holes",
+                    "min": 1,
+                    "max": 1
+                  },
+                  {
+                    "tag": "obstacle",
+                    "min": 2,
+                    "max": 2
+                  },
+                  {
+                    "tag": "locked_door",
+                    "title": "Locked door/gate",
+                    "min": 3,
+                    "max": 4
+                  },
+                  {
+                    "tag": "alcoves",
+                    "title": "Alcoves/niches",
+                    "min": 5,
+                    "max": 6
+                  },
+                  {
+                    "tag": "balcony",
+                    "title": "Balcony/stairs/ramps",
+                    "min": 7,
+                    "max": 7
+                  },
+                  {
+                    "tag": "carving",
+                    "title": "Carving/statue",
+                    "min": 8,
+                    "max": 8
+                  },
+                  {
+                    "tag": "well",
+                    "title": "Fountain/well",
+                    "min": 9,
+                    "max": 10
+                  },
+                  {
+                    "tag": "vantage_point",
+                    "min": 11,
+                    "max": 11
+                  },
+                  {
+                    "tag": "defensible_position",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "find",
+                "min": 9,
+                "max": 12,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "lair",
+                    "title": "Lair of CREATURE",
+                    "min": 1,
+                    "max": 1,
+                    "additional": [
+                      "creature"
+                    ]
+                  },
+                  {
+                    "tag": "evidence",
+                    "title": "Evidence of CREATURE",
+                    "min": 2,
+                    "max": 2,
+                    "additional": [
+                      "creature"
+                    ]
+                  },
+                  {
+                    "tag": "prisoner",
+                    "title": "Prisoner/escapee",
+                    "min": 3,
+                    "max": 3
+                  },
+                  {
+                    "tag": "map",
+                    "title": "Map/message/record",
+                    "min": 4,
+                    "max": 4
+                  },
+                  {
+                    "tag": "common_item",
+                    "title": "COMMON ITEM",
+                    "min": 5,
+                    "max": 5,
+                    "additional": [
+                      "booty.item.common_item"
+                    ]
+                  },
+                  {
+                    "tag": "useful_item",
+                    "title": "USEFUL ITEM",
+                    "min": 6,
+                    "max": 7,
+                    "additional": [
+                      "booty.item.useful_item"
+                    ]
+                  },
+                  {
+                    "tag": "key_to_obstacle",
+                    "min": 8,
+                    "max": 8
+                  },
+                  {
+                    "tag": "supply_stockpile",
+                    "min": 9,
+                    "max": 9
+                  },
+                  {
+                    "tag": "weapons",
+                    "title": "WEAPON/ARMOR",
+                    "min": 10,
+                    "max": 10,
+                    "additional": [
+                      "booty.weapon",
+                      "booty.armor"
+                    ]
+                  },
+                  {
+                    "tag": "booty1",
+                    "title": "Booty",
+                    "min": 11,
+                    "max": 11,
+                    "additional": [
+                      [
+                        "booty.owned_booty",
+                        "d6+1"
+                      ]
+                    ]
+                  },
+                  {
+                    "tag": "booty2",
+                    "title": "Booty",
+                    "min": 12,
+                    "max": 12,
+                    "additional": [
+                      [
+                        "booty.owned_booty",
+                        "d8+1"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "dressing",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "sound",
+                "title": "Sound/odor",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "signs",
+                "title": "Signs of battle/struggle",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "remains_creature",
+                "title": "Remains of CREATURE",
+                "min": 3,
+                "max": 3,
+                "additional": [
+                  "creature"
+                ]
+              },
+              {
+                "tag": "rubble",
+                "title": "Rubble/debris",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "pillars",
+                "title": "Pillars/columns",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "emblem",
+                "title": "Emblem/banner/crest",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "light_source",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "fire_pit",
+                "title": "Fire pit/braziers",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "signage",
+                "title": "Signage/plaque",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "furniture",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "double",
+                "title": "Roll d10 twice",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  [
+                    "dungeon_type.stronghold.dressing",
+                    "d10"
+                  ],
+                  [
+                    "dungeon_type.stronghold.dressing",
+                    "d10"
+                  ]
+                ]
               }
             ]
           }
