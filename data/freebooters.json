@@ -5629,6 +5629,156 @@
                 ]
               }
             ]
+          },
+          {
+            "tag": "common_area",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "area_cave",
+                "title": "Area from CAVE/CAVERNS table",
+                "min": 1,
+                "max": 3,
+                "additional": [
+                  "dungeon_type.cave.area"
+                ]
+              },
+              {
+                "tag": "area_ruin",
+                "title": "Area from RUINED SETTLEMENT table",
+                "min": 4,
+                "max": 6,
+                "additional": [
+                  "dungeon_type.ruined_settlement.area"
+                ]
+              },
+              {
+                "tag": "area_prison",
+                "title": "Area from PRISON table",
+                "min": 7,
+                "max": 7,
+                "additional": [
+                  "dungeon_type.prison.area"
+                ]
+              },
+              {
+                "tag": "area_mine",
+                "title": "Area from MINE table",
+                "min": 8,
+                "max": 8,
+                "additional": [
+                  "dungeon_type.mine.area"
+                ]
+              },
+              {
+                "tag": "area_crypt",
+                "title": "Area from CRYPT/TOMB table",
+                "min": 9,
+                "max": 9,
+                "additional": [
+                  "dungeon_type.crypt.area"
+                ]
+              },
+              {
+                "tag": "area_stronghold",
+                "title": "Area from STRONGHOLD table",
+                "min": 10,
+                "max": 10,
+                "additional": [
+                  "dungeon_type.stronghold.area"
+                ]
+              },
+              {
+                "tag": "area_unknown",
+                "title": "Area from ORIGIN UNKNOWN table",
+                "min": 11,
+                "max": 12,
+                "additional": [
+                  "dungeon_type.origin_unknown.area"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "unique_area",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "waste_pit",
+                "title": "Waste pit/midden",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "burial_ground",
+                "title": "Burial ground/boneyard",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "guardroom",
+                "title": "Guardroom/ambuscade",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "storeroom",
+                "title": "Storeroom/larder",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "well_rom",
+                "title": "Well room/watering hole",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "barracks",
+                "title": "Barraks/brood pit",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "shrine",
+                "title": "Shrine of [ELEMENT/ASPECT]",
+                "min": 7,
+                "max": 7,
+                "additional": [
+                  "details.element",
+                  "details.aspect"
+                ]
+              },
+              {
+                "tag": "armory",
+                "title": "Armory/trophy room",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "audience_room",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "occupant_lair",
+                "title": "[OCCUPANT]'s quarters/lair",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "stronghold",
+                "title": "Stronghold/treasure hoard",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "roll_other",
+                "title": "Roll on any different UNIQUE AREA table",
+                "min": 12,
+                "max": 12
+              }
+            ]
           }
         ]
       },
