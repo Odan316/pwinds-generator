@@ -7331,6 +7331,189 @@
         ],
         "dictionaries": [
           {
+            "tag": "area",
+            "hint": "$modifier",
+            "dice": "d12",
+            "use_modifier": true,
+            "variants": [
+              {
+                "tag": "common1",
+                "title": "Common",
+                "min": 1,
+                "max": 3,
+                "additional": [
+                  "danger",
+                  {
+                    "tag": "exploration",
+                    "static": "+3"
+                  },
+                  "dungeon_type.archive.common_area",
+                  "dungeon_type.archive.dressing",
+                  "dungeon_type.archive.exits"
+                ]
+              },
+              {
+                "tag": "common2",
+                "title": "Common",
+                "min": 4,
+                "max": 6,
+                "additional": [
+                  "danger",
+                  "dungeon_type.archive.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "+2"
+                  },
+                  "dungeon_type.archive.common_area",
+                  "dungeon_type.archive.dressing",
+                  "dungeon_type.archive.exits"
+                ]
+              },
+              {
+                "tag": "common3",
+                "title": "Common",
+                "min": 7,
+                "max": 8,
+                "additional": [
+                  "danger",
+                  "dungeon_type.archive.discovery",
+                  "dungeon_type.archive.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "+1"
+                  },
+                  "dungeon_type.archive.common_area",
+                  "dungeon_type.archive.dressing",
+                  "dungeon_type.archive.exits"
+                ]
+              },
+              {
+                "tag": "common1",
+                "title": "Common",
+                "min": 9,
+                "max": 11,
+                "additional": [
+                  {
+                    "tag": "Contents",
+                    "static": "Nothing unusual"
+                  },
+                  {
+                    "tag": "exploration",
+                    "static": "+1"
+                  },
+                  "dungeon_type.archive.common_area",
+                  "dungeon_type.archive.dressing",
+                  "dungeon_type.archive.exits"
+                ]
+              },
+              {
+                "tag": "common5",
+                "title": "Common",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "dungeon_type.archive.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "+1"
+                  },
+                  "dungeon_type.archive.common_area",
+                  "dungeon_type.archive.dressing",
+                  "dungeon_type.archive.exits"
+                ]
+              },
+              {
+                "tag": "unique1",
+                "title": "Unique",
+                "min": 13,
+                "max": 13,
+                "additional": [
+                  "danger",
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.archive.unique_area",
+                  "dungeon_type.archive.dressing",
+                  "dungeon_type.archive.exits"
+                ]
+              },
+              {
+                "tag": "unique2",
+                "title": "Unique",
+                "min": 14,
+                "max": 14,
+                "additional": [
+                  {
+                    "tag": "Contents",
+                    "static": "Nothing unusual"
+                  },
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.archive.unique_area",
+                  "dungeon_type.archive.dressing",
+                  "dungeon_type.archive.exits"
+                ]
+              },
+              {
+                "tag": "unique3",
+                "title": "Unique",
+                "min": 15,
+                "max": 15,
+                "additional": [
+                  "danger",
+                  "dungeon_type.archive.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.archive.unique_area",
+                  "dungeon_type.archive.dressing",
+                  "dungeon_type.archive.exits"
+                ]
+              },
+              {
+                "tag": "unique4",
+                "title": "Unique",
+                "min": 16,
+                "max": 16,
+                "additional": [
+                  "danger",
+                  "dungeon_type.archive.discovery",
+                  "dungeon_type.archive.discovery",
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.archive.unique_area",
+                  "dungeon_type.archive.dressing",
+                  "dungeon_type.archive.exits"
+                ]
+              },
+              {
+                "tag": "unique5",
+                "title": "Unique",
+                "min": 17,
+                "max": 100,
+                "additional": [
+                  {
+                    "repeat": "d4",
+                    "generate_outer": "dungeon_type.archive.discovery"
+                  },
+                  {
+                    "tag": "exploration",
+                    "static": "reset to zero"
+                  },
+                  "dungeon_type.archive.unique_area",
+                  "dungeon_type.archive.dressing",
+                  "dungeon_type.archive.exits"
+                ]
+              }
+            ]
+          },
+          {
             "tag": "builder",
             "dice": "d12",
             "variants": [
@@ -7432,6 +7615,515 @@
                   ],
                   [
                     "dungeon_type.archive.subject",
+                    "d10"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "common_area",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "latrine",
+                "title": "Latrine/waste disposal",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "passage",
+                "title": "Hallway/passage",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "chamber",
+                "title": "Chamber/room",
+                "min": 4,
+                "max": 6
+              },
+              {
+                "tag": "mess",
+                "title": "Mess/kitchen/larder",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "garden",
+                "title": "Garden/herbarium",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "reading_room",
+                "title": "Reading room/study",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "workshop",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "supply_closet",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "roll_other",
+                "title": "Roll on any different COMMON AREA table",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "unique_area",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "chamber",
+                "title": "Chamber of [ODDITY]",
+                "min": 1,
+                "max": 1,
+                "additional": [
+                  "details.oddity"
+                ]
+              },
+              {
+                "tag": "specimen_collection",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "hall_of_curiosities",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "hall_of_lore",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "amphitheater",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "library",
+                "title": "Library/Scriptorium",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "laboratory",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "observatory",
+                "title": "Observatory/scrying chamber",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "builders_quarter",
+                "title": "[BUILDER]'s quarters",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "summoning_chamber",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "secret_library",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "roll_other",
+                "title": "Roll on any different UNIQUE AREA table",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "exits",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "1",
+                "min": 1,
+                "max": 1,
+                "additional": [
+                  "details.direction",
+                  "dungeon_type.archive.connection"
+                ]
+              },
+              {
+                "tag": "2",
+                "min": 2,
+                "max": 5,
+                "additional": [
+                  {
+                    "repeat": 2,
+                    "additional": [
+                      "details.direction",
+                      "dungeon_type.archive.connection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "3",
+                "min": 6,
+                "max": 8,
+                "additional": [
+                  {
+                    "repeat": 3,
+                    "additional": [
+                      "details.direction",
+                      "dungeon_type.archive.connection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "4",
+                "min": 9,
+                "max": 10,
+                "additional": [
+                  {
+                    "repeat": 4,
+                    "additional": [
+                      "details.direction",
+                      "dungeon_type.archive.connection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "5",
+                "min": 11,
+                "max": 11,
+                "additional": [
+                  {
+                    "repeat": 5,
+                    "additional": [
+                      "details.direction",
+                      "dungeon_type.archive.connection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "6",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  {
+                    "repeat": 6,
+                    "additional": [
+                      "details.direction",
+                      "dungeon_type.archive.connection"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "connection",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "ladder",
+                "title": "Ladder/stairwell",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "passage",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "door_to_passage",
+                "min": 4,
+                "max": 5
+              },
+              {
+                "tag": "door_to_adjacent_area",
+                "title": "Door/opening to adjacent area",
+                "min": 6,
+                "max": 7
+              },
+              {
+                "tag": "locked_door_to_adjacent_area",
+                "min": 8,
+                "max": 10
+              },
+              {
+                "tag": "secret_passage",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "magic_door",
+                "title": "Magic door/portal",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "discovery",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "feature",
+                "min": 1,
+                "max": 8,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "round_space",
+                    "title": "Round/circular space",
+                    "min": 1,
+                    "max": 1
+                  },
+                  {
+                    "tag": "geometric_space",
+                    "min": 2,
+                    "max": 2
+                  },
+                  {
+                    "tag": "window",
+                    "title": "Window/clerestory",
+                    "min": 3,
+                    "max": 3
+                  },
+                  {
+                    "tag": "alcoves",
+                    "title": "Alcoves/niches",
+                    "min": 4,
+                    "max": 4
+                  },
+                  {
+                    "tag": "reading_nook",
+                    "min": 5,
+                    "max": 5
+                  },
+                  {
+                    "tag": "veranda",
+                    "title": "Veranda/balcony",
+                    "min": 6,
+                    "max": 6
+                  },
+                  {
+                    "tag": "vertical_space",
+                    "min": 7,
+                    "max": 7
+                  },
+                  {
+                    "tag": "multilevel_space",
+                    "min": 8,
+                    "max": 8
+                  },
+                  {
+                    "tag": "well",
+                    "title": "Well/pool/fountain",
+                    "min": 9,
+                    "max": 10
+                  },
+                  {
+                    "tag": "oddity",
+                    "title": "ODDITY",
+                    "min": 11,
+                    "max": 11,
+                    "additional": [
+                      "details.oddity"
+                    ]
+                  },
+                  {
+                    "tag": "airshaft",
+                    "title": "Airshaft/lightshaft",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "find",
+                "min": 9,
+                "max": 12,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "escaped_specimen",
+                    "title": "Escaped/lost specimen",
+                    "min": 1,
+                    "max": 1
+                  },
+                  {
+                    "tag": "map",
+                    "title": "Map/notes/formula",
+                    "min": 2,
+                    "max": 2
+                  },
+                  {
+                    "tag": "common_item",
+                    "title": "COMMON ITEM",
+                    "min": 3,
+                    "max": 3,
+                    "additional": [
+                      "booty.item.common_item"
+                    ]
+                  },
+                  {
+                    "tag": "useful_item",
+                    "title": "USEFUL ITEM",
+                    "min": 4,
+                    "max": 4,
+                    "additional": [
+                      "booty.item.useful_item"
+                    ]
+                  },
+                  {
+                    "tag": "monster_part",
+                    "title": "MONSTER BODY PART",
+                    "min": 5,
+                    "max": 5,
+                    "additional": [
+                      "creature.monster",
+                      "booty.body_part"
+                    ]
+                  },
+                  {
+                    "tag": "books",
+                    "title": "Books/scrolls",
+                    "min": 6,
+                    "max": 8
+                  },
+                  {
+                    "tag": "alchemical_suplies",
+                    "title": "Alchemical/magical supplies",
+                    "min": 9,
+                    "max": 9
+                  },
+                  {
+                    "tag": "booty1",
+                    "title": "BOOTY",
+                    "min": 10,
+                    "max": 10,
+                    "additional": [
+                      [
+                        "booty.owned_booty",
+                        "d4+1"
+                      ]
+                    ]
+                  },
+                  {
+                    "tag": "booty2",
+                    "title": "BOOTY",
+                    "min": 11,
+                    "max": 11,
+                    "additional": [
+                      [
+                        "booty.owned_booty",
+                        "d6+1"
+                      ]
+                    ]
+                  },
+                  {
+                    "tag": "booty3",
+                    "title": "BOOTY",
+                    "min": 12,
+                    "max": 12,
+                    "additional": [
+                      [
+                        "booty.owned_booty",
+                        "d8+1"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "dressing",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "sound",
+                "title": "Sound/odor",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "rugs",
+                "title": "Rugs/carpets",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "quiet",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "statues",
+                "title": "Statues/carvings",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "mural",
+                "title": "Mural/mosaic",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "light_source",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "fire_pit",
+                "title": "Fire pit/braziers",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "furniture",
+                "min": 8,
+                "max": 9
+              },
+              {
+                "tag": "symbols",
+                "title": "Astrological/occult/arcane symbols",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "double",
+                "title": "Roll d10 twice",
+                "min": 11,
+                "max": 12,
+                "additional": [
+                  [
+                    "dungeon_type.archive.dressing",
+                    "d10"
+                  ],
+                  [
+                    "dungeon_type.archive.dressing",
                     "d10"
                   ]
                 ]
