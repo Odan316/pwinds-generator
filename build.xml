@@ -27,8 +27,7 @@
             depends="prepare"
             unless="bower.done"
             description="Installing bower dependencies">
-        <exec executable="php" dir="${workspace}/../builds/${NOW_STAMP}" failonerror="true">
-            <arg value="bower" />
+        <exec executable="bower" dir="${workspace}/../builds/${NOW_STAMP}" failonerror="true">
             <arg value="install" />
         </exec>
         <property name="bower.done" value="true"/>
