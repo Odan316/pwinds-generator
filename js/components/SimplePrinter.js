@@ -40,6 +40,7 @@ define([
         /**
          * Prints generated entity's properties (for calling recursive)
          * @param {GeneratedEntity} generatedEntity
+         * @param {Boolean} propertyEntity
          * @returns {*|jQuery|HTMLElement}
          */
         var printEntityProperties = function(generatedEntity, propertyEntity){
@@ -55,18 +56,19 @@ define([
                     if(propertyEntity){
                         $entityTitle.append($("<span class=\"type\">").text("" + generatedEntity.title + ": "));
                     }
-                    $entityTitle.append($("<span class=\"roll\">").text("(" + generatedEntity.roll + ") "));
+                    if(generatedEntity.roll !== null){
+                        $entityTitle.append($("<span class=\"roll\">").text("(" + generatedEntity.roll + ") "));
+                    }
                     $entityTitle.append($("<span class=\"title\">").text(generatedEntity.variant.title));
                     $entityPropertiesOutput.append($entityTitle);
 
                     $entityPropertiesOutput.append(printEntityProperties(generatedEntity.variant));
                 }
 
-
                 if(generatedEntity.additional.length > 0){
-                    var $subTitle = $("<h5 class=\"propertiesTitle\">").text("Additional:");
+                    let $subTitle = $("<h5 class=\"propertiesTitle\">").text("Additional:");
                     $entityPropertiesOutput.append($subTitle);
-                    var $subProperties = $("<div class=\"entitySubProperties\">");
+                    let $subProperties = $("<div class=\"entitySubProperties\">");
                     _.forEach(generatedEntity.additional, function(propertyEntity){
                         $subProperties.append(printEntityProperties(propertyEntity, true));
                     });
@@ -74,9 +76,9 @@ define([
                 }
 
                 if(generatedEntity.optional.length > 0){
-                    $subTitle = $("<h5 class=\"propertiesTitle\">").text("Optional:");
+                    let $subTitle = $("<h5 class=\"propertiesTitle\">").text("Optional:");
                     $entityPropertiesOutput.append($subTitle);
-                    $subProperties = $("<div class=\"entitySubProperties\">");
+                    let $subProperties = $("<div class=\"entitySubProperties\">");
                     _.forEach(generatedEntity.optional, function(propertyEntity){
                         $subProperties.append(printEntityProperties(propertyEntity, true));
                     });
@@ -84,14 +86,14 @@ define([
                 }
 
                 if(generatedEntity.numbers != null){
-                    $subTitle = $("<h5 class=\"propertiesTitle\">").text("Numbers: " + generatedEntity.numbers);
+                    let $subTitle = $("<h5 class=\"propertiesTitle\">").text("Numbers: " + generatedEntity.numbers);
                     $entityPropertiesOutput.append($subTitle);
                 }
             }
 
             return $entityPropertiesOutput;
         };
-    }
+    };
 
     return SimplePrinter;
 });

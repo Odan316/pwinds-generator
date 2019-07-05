@@ -9,6 +9,7 @@ define([
      * Class of child entity, that lies in entities tree (always in variants array)
      *
      * @constructor
+     * @inheritDoc Entity
      */
     var VariantEntity = function() {
         var Entity = require('components/Entity');
@@ -38,12 +39,30 @@ define([
         var _generate_outer = null;
 
         /**
-         * Dice formula that calculates in-game number of entities
+         * Dice formula that calculates in-game number of entities.
+         * DEPRECATED, use "roll_result" instead
          *
          * @type {String[]|null}
          * @private
+         * @deprecated
          */
         var _numbers = null;
+
+        /**
+         * Static value, entity simply returns it
+         *
+         * @type {String|null}
+         * @private
+         */
+        var _static = null;
+
+        /**
+         * Dice formula that calculates in-game number as value
+         *
+         * @type {String|null}
+         * @private
+         */
+        var _roll_result = null;
 
         var parentLoad = this.load;
 
@@ -55,10 +74,18 @@ define([
             return _max;
         };
 
+        /**
+         * @deprecated
+         * @returns {boolean}
+         */
         this.hasNumbers = function() {
             return _numbers != null;
         };
 
+        /**
+         * @deprecated
+         * @returns {String[]}
+         */
         this.getNumbers = function() {
             return _numbers;
         };
@@ -71,6 +98,27 @@ define([
             return _generate_outer;
         };
 
+        this.isStatic = function(){
+            return _static != null;
+        };
+
+        this.getStaticValue = function(){
+          return _static;
+        };
+
+        this.isRollResult = function(){
+            return _roll_result != null;
+        };
+
+        /**
+         * Returns dice formula for number generating
+         *
+         * @returns {String}
+         */
+        this.getDiceResultFormula = function(){
+            return _roll_result;
+        };
+
         /**
          * @inherit
          *
@@ -79,8 +127,9 @@ define([
          * @param data.max
          * @param data.additional
          * @param data.optional
-         * @param data.numbers
          * @param data.generate_outer
+         * @param data.static
+         * @param data.roll_result
          */
         this.load = function(data) {
             parentLoad.call(this, data);
@@ -96,6 +145,12 @@ define([
             }
             if("generate_outer" in data) {
                 _generate_outer = new StorageLink(data.generate_outer);
+            }
+            if("static" in data) {
+                _static = data.static;
+            }
+            if("roll_result" in data) {
+                _roll_result = data.roll_result;
             }
         };
     };

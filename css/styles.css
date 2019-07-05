@@ -19,6 +19,9 @@ h2 button {
 h2 .output-clear {
   margin-left: 15px;
 }
+.treeview .hint {
+  margin-left: 5px;
+}
 .output {
   text-align: left;
   height: 700px;

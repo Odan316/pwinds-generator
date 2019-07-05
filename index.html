@@ -55,12 +55,18 @@
             </div>
             <!-- Dice roll block -->
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-xs-12 col-sm-6">
                     <div class="input-group form-group">
-                        <input type="text" class="form-control" id="diceRoller" placeholder="{x}d{y}+{z}" value="">
+                        <input type="text" class="form-control" id="diceRoller" placeholder="{x}d{y}+{z}" value="" />
                         <div class="input-group-btn">
                             <button class="btn btn-primary roll-dice" type="submit">Roll</button>
                         </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="input-group form-group">
+                        <div class="input-group-addon">Mod +</div>
+                        <input type="text" class="form-control" id="diceModifier" placeholder="0" value="" />
                     </div>
                 </div>
             </div>
@@ -87,8 +93,7 @@
 </div>
 
 
-<!-- Require JS initialization
-================================================== -->
+<!-- Require JS initialization -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script data-main="js/init" src="vendor/requirejs/require.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
