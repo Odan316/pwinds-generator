@@ -5,13 +5,13 @@ define([
     'components/VariantEntity',
     'components/StorageLink',
     'components/Dice'
-], function(require, $, _, VariantEntity, StorageLink, Dice){
+], function (require, $, _, VariantEntity, StorageLink, Dice) {
     /**
      * Base entity class, also serves as root entity class
      *
      * @constructor
      */
-    var Entity = function(){
+    var Entity = function () {
         /**
          * Entity tag, for in search via path
          *
@@ -35,6 +35,14 @@ define([
          * @private
          */
         var _hint = null;
+
+        /**
+         * Whether to hide from entities tree
+         *
+         * @type {boolean}
+         * @private
+         */
+        let _hide = false;
 
         /**
          * Dice formula, for randomizing result from _variants
@@ -107,12 +115,21 @@ define([
         var _optional = null;
 
         /**
+         * Additional variables
+         *
+         * @type {{}}
+         * @private
+         */
+        let _vars = {};
+
+        /**
          * Loads JSON data in Entity object
          *
          * @param data
          * @param data.tag
          * @param data.title
          * @param data.hint
+         * @param data.hide
          * @param data.dice
          * @param data.use_modifier
          * @param data.use_custom_dice
@@ -122,46 +139,50 @@ define([
          * @param data.optional
          * @param data.template
          * @param data.repeat
+         * @param data.vars
          */
-        this.load = function(data) {
-            if("tag" in data){
+        this.load = function (data) {
+            if ("tag" in data) {
                 _tag = data.tag;
             }
-            if("title" in data){
+            if ("title" in data) {
                 _title = data.title;
             }
-            if("hint" in data){
+            if ("hint" in data) {
                 _hint = data.hint;
             }
-            if("dice" in data){
+            if ("hide" in data) {
+                _hide = data.hide;
+            }
+            if ("dice" in data) {
                 _dice = data.dice;
             }
-            if("use_modifier" in data){
+            if ("use_modifier" in data) {
                 _use_modifier = data.use_modifier;
             }
-            if("use_custom_dice" in data){
+            if ("use_custom_dice" in data) {
                 _use_custom_dice = data.use_custom_dice;
             }
-            if("variants" in data){
+            if ("variants" in data) {
                 _variants = [];
-                _.forEach(data.variants, function(value){
+                _.forEach(data.variants, function (value) {
                     let innerEntity = new VariantEntity();
                     innerEntity.load(value);
                     _variants.push(innerEntity);
                 });
             }
-            if("dictionaries" in data){
+            if ("dictionaries" in data) {
                 _dictionaries = [];
-                _.forEach(data.dictionaries, function(value){
+                _.forEach(data.dictionaries, function (value) {
                     let innerEntity = new VariantEntity();
                     innerEntity.load(value);
                     _dictionaries.push(innerEntity);
                 });
             }
-            if("additional" in data){
+            if ("additional" in data) {
                 _additional = [];
-                _.forEach(data.additional, function(value){
-                    if(_.isString(value) || _.isArray(value)){
+                _.forEach(data.additional, function (value) {
+                    if (_.isString(value) || _.isArray(value)) {
                         _additional.push(new StorageLink(value));
                     } else {
                         let innerEntity = new VariantEntity();
@@ -170,22 +191,25 @@ define([
                     }
                 });
             }
-            if("optional" in data){
+            if ("optional" in data) {
                 _optional = [];
-                _.forEach(data.optional, function(value){
+                _.forEach(data.optional, function (value) {
                     _optional.push(new StorageLink(value));
                 });
             }
-            if("template" in data){
+            if ("template" in data) {
                 _template = [];
-                _.forEach(data.template, function(value){
+                _.forEach(data.template, function (value) {
                     let innerEntity = new VariantEntity();
                     innerEntity.load(value);
                     _template.push(innerEntity);
                 });
             }
-            if("repeat" in data) {
+            if ("repeat" in data) {
                 _repeat = _.toString(data.repeat);
+            }
+            if ("vars" in data) {
+                _vars = data.vars;
             }
         };
 
@@ -194,8 +218,8 @@ define([
          *
          * @returns {String|null}
          */
-        this.getTag = function() {
-            if(_tag != null){
+        this.getTag = function () {
+            if (_tag != null) {
                 return _tag;
             } else {
                 return "no_tag";
@@ -207,7 +231,7 @@ define([
          *
          * @returns {String|null}
          */
-        this.getTitle = function() {
+        this.getTitle = function () {
             if (_title !== null) {
                 return _title;
             } else {
@@ -220,7 +244,7 @@ define([
          *
          * @returns {string}
          */
-        this.getHint = function() {
+        this.getHint = function () {
             if (_hint === "$dice") {
                 _hint = "Use 'Roll' field to enter dice formula for this entity";
             } else if (_hint === "$modifier") {
@@ -231,21 +255,30 @@ define([
         };
 
         /**
+         * Returns whether to hide entity from user
+         * @returns {boolean}
+         */
+        this.getHide = function () {
+            return _hide;
+        };
+
+
+        /**
          * Returns entity dice
          *
          * @returns {String|null}
          */
-        this.getDice = function() {
+        this.getDice = function () {
             let dice = _dice;
-            if(this.useCustomDice()){
+            if (this.useCustomDice()) {
                 let customDice = $("#diceRoller").val();
-                if(!_.isEmpty(customDice)){
+                if (!_.isEmpty(customDice)) {
                     dice = customDice;
                 }
             }
-            if(this.useCustomModifier()){
+            if (this.useCustomModifier()) {
                 let customMod = $("#diceModifier").val();
-                if(!_.isEmpty(customMod)) {
+                if (!_.isEmpty(customMod)) {
                     dice += ('+' + customMod);
                 }
             }
@@ -258,7 +291,7 @@ define([
          *
          * @returns {Boolean}
          */
-        this.useCustomModifier =function() {
+        this.useCustomModifier = function () {
             return _use_modifier;
         };
 
@@ -268,7 +301,7 @@ define([
          *
          * @returns {Boolean}
          */
-        this.useCustomDice = function() {
+        this.useCustomDice = function () {
             return _use_custom_dice;
         };
 
@@ -277,14 +310,14 @@ define([
          *
          * @returns {{text}}
          */
-        this.getTreeNode = function() {
+        this.getTreeNode = function () {
             var node = {
                 tag: this.getTag(),
                 title: this.getTag().beautifyTag(),
                 hint: this.getHint()
             };
             var nodes = this.getSubTree();
-            if(nodes.length > 0){
+            if (nodes.length > 0) {
                 node.nodes = nodes;
             }
 
@@ -296,14 +329,18 @@ define([
          *
          * @returns {Array}
          */
-        this.getSubTree = function() {
+        this.getSubTree = function () {
             var subTree = [];
 
-            _.forEach(_variants, function(entity){
-                subTree.push(entity.getTreeNode());
+            _.forEach(_variants, function (entity) {
+                if (!entity.getHide()) {
+                    subTree.push(entity.getTreeNode());
+                }
             });
-            _.forEach(_dictionaries, function(entity){
-                subTree.push(entity.getTreeNode());
+            _.forEach(_dictionaries, function (entity) {
+                if (!entity.getHide()) {
+                    subTree.push(entity.getTreeNode());
+                }
             });
 
             return subTree;
@@ -315,19 +352,23 @@ define([
          * @param tag
          * @returns {Entity}
          */
-        this.getChildEntityByTag = function(tag) {
+        this.getChildEntityByTag = function (tag) {
 
-            let entity = _.find(_dictionaries, function(o) { return o.getTag() === tag; });
+            let entity = _.find(_dictionaries, function (o) {
+                return o.getTag() === tag;
+            });
 
-            if(entity === undefined){
-                entity = _.find(_variants, function(o) { return o.getTag() === tag; });
+            if (entity === undefined) {
+                entity = _.find(_variants, function (o) {
+                    return o.getTag() === tag;
+                });
             }
 
-            if(entity !== undefined){
+            if (entity !== undefined) {
                 return entity;
             } else {
                 //TODO: надо обрабатывать
-                console.log("Entity '"+_tag+"' | No child entity with tag '" + tag + "'");
+                console.log("Entity '" + _tag + "' | No child entity with tag '" + tag + "'");
                 return null;
             }
         };
@@ -338,15 +379,17 @@ define([
          * @param roll
          * @returns {Entity}
          */
-        this.getChildEntityByRoll = function(roll) {
+        this.getChildEntityByRoll = function (roll) {
 
-            var entity = _.find(_variants, function(o) { return o.getMin() <= roll && o.getMax() >= roll; });
+            var entity = _.find(_variants, function (o) {
+                return o.getMin() <= roll && o.getMax() >= roll;
+            });
 
-            if(entity !== undefined){
+            if (entity !== undefined) {
                 return entity;
             } else {
                 //TODO: надо обрабатывать
-                console.log("Entity '"+_tag+"' | No child entity with roll '" + roll + "'");
+                console.log("Entity '" + _tag + "' | No child entity with roll '" + roll + "'");
                 return null;
             }
         };
@@ -355,7 +398,7 @@ define([
          * Return true if entity has variants|childs
          * @returns {boolean}
          */
-        this.hasVariants = function() {
+        this.hasVariants = function () {
             return _variants != null && _variants.length > 0;
         };
 
@@ -364,7 +407,7 @@ define([
          * Returns true if entity has sub-entities
          * @returns {boolean}
          */
-        this.hasDictionaries = function() {
+        this.hasDictionaries = function () {
             return _dictionaries != null;
         };
 
@@ -372,7 +415,7 @@ define([
          * Returns list of sub-entities
          * @type {Entity[]|null}
          */
-        this.getDictionaries = function() {
+        this.getDictionaries = function () {
             return _dictionaries;
         };
 
@@ -380,7 +423,7 @@ define([
          * Return true if entity has additional properties
          * @returns {boolean}
          */
-        this.hasAdditional = function() {
+        this.hasAdditional = function () {
             return _additional != null && _additional.length > 0;
         };
 
@@ -388,7 +431,7 @@ define([
          * Returns array of storage links for additional entities
          * @returns {StorageLink[]|null}
          */
-        this.getAdditionalEntitiesLinks = function() {
+        this.getAdditionalEntitiesLinks = function () {
             return _additional;
         };
 
@@ -396,7 +439,7 @@ define([
          * Return true if entity has optional properties
          * @returns {boolean}
          */
-        this.hasOptional = function() {
+        this.hasOptional = function () {
             return _optional != null && _optional.length > 0;
         };
 
@@ -404,7 +447,7 @@ define([
          * Returns array of storage links for optional entities
          * @returns {StorageLink[]|null}
          */
-        this.getOptionalEntitiesLinks = function() {
+        this.getOptionalEntitiesLinks = function () {
             return _optional;
         };
 
@@ -412,7 +455,7 @@ define([
          * Returns true if entity has template for combine entities to result
          * @returns {boolean}
          */
-        this.hasTemplate = function() {
+        this.hasTemplate = function () {
             return _template != null;
         };
 
@@ -420,7 +463,7 @@ define([
          * Returns template for combine entities to result
          * @type {Entity[]|null}
          */
-        this.getTemplate = function() {
+        this.getTemplate = function () {
             return _template;
         };
 
@@ -428,11 +471,18 @@ define([
          * Returns formula of repeating of generating entity
          * @returns {String|Number}
          */
-        this.getRepeat = function()
-        {
+        this.getRepeat = function () {
             let formula = _repeat !== null ? _repeat : "1";
             let dice = new Dice();
             return dice.roll(formula);
+        };
+
+        /**
+         * Returns additional variables
+         * @type {Entity[]|null}
+         */
+        this.getVars = function () {
+            return _vars;
         };
     };
 

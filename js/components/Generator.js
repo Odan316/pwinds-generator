@@ -43,6 +43,8 @@ define([
          */
         var _errors = new Errors();
 
+        let _vars = {};
+
         /**
          * Generates new {GeneratedEntity} by string path
          * @param {String} entityPath Path to entity in tree. Path "obj1.obj2.obj3" will generate obj3
@@ -50,6 +52,9 @@ define([
         this.generate = function (entityPath) {
             var entityLink = new StorageLink(entityPath);
             var entity = entityLink.getEntity(self.getStorage());
+
+            // Reset generation variables
+            _vars = {};
 
             return generateEntity(entity, entityLink.getDice());
         };
@@ -59,15 +64,19 @@ define([
          * @param entity {Entity|VariantEntity}
          * @param customDice
          */
-        var generateEntity = function (entity, customDice) {
+        let generateEntity = function (entity, customDice) {
             var generatedEntity;
 
             if (entity == null) {
                 // Generate error entity
                 generatedEntity = new GeneratedErrorEntity(_errors.ERROR_ENTITY_NOT_FOUND);
-                return generatedEntity;
 
-            } else if (entity instanceof VariantEntity && entity.isStatic()) {
+                return generatedEntity;
+            } else {
+                $.extend(_vars, entity.getVars());
+            }
+
+            if (entity instanceof VariantEntity && entity.isStatic()) {
                 // Generate (simply return) static value
                 generatedEntity = new GeneratedEntity(entity.getTag(), entity.getTitle());
                 generatedEntity.variant = new GeneratedEntity("static", entity.getStaticValue());
@@ -82,7 +91,7 @@ define([
             } else if (entity instanceof VariantEntity && entity.hasOuterLink()) {
                 // Generate entity by outer link
                 var outerEntityLink = entity.getOuterLink();
-                var outerEntity = outerEntityLink.getEntity(self.getStorage());
+                var outerEntity = outerEntityLink.getEntity(self.getStorage(), _vars);
                 generatedEntity = generateEntity(outerEntity, outerEntityLink.getDice());
 
             } else if (entity.hasTemplate()) {
@@ -123,7 +132,7 @@ define([
                         let additionalEntity = null;
                         let customDice = null;
                         if (additionalEntityData instanceof StorageLink) {
-                            additionalEntity = additionalEntityData.getEntity(self.getStorage());
+                            additionalEntity = additionalEntityData.getEntity(self.getStorage(), _vars);
                             customDice = additionalEntityData.getDice();
                         } else if (additionalEntityData instanceof VariantEntity) {
                             additionalEntity = additionalEntityData;
@@ -140,7 +149,7 @@ define([
                 // Generate optional entities
                 if (entity.hasOptional()) {
                     _.forEach(entity.getOptionalEntitiesLinks(), function (additionalEntityLink) {
-                        var additionalEntity = additionalEntityLink.getEntity(self.getStorage());
+                        var additionalEntity = additionalEntityLink.getEntity(self.getStorage(), _vars);
                         generatedEntity.optional.push(generateEntity(additionalEntity, additionalEntityLink.getDice()));
                     });
                 }

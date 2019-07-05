@@ -40,17 +40,28 @@ define([
          * Returns entity by path
          *
          * @param storage {EntitiesStorage}
+         * @param vars {{}}
          */
-        this.getEntity = function(storage) {
-            var entity = storage.getRootEntity(_path[0]);
+        this.getEntity = function(storage, vars) {
+            let entity = storage.getRootEntity(this.handlePathPart(_path[0], vars));
 
             if(_path.length > 1){
-                for(var i = 1; i < _path.length; i++){
-                    entity = entity.getChildEntityByTag(_path[i]);
+                for(let i = 1; i < _path.length; i++){
+                    entity = entity.getChildEntityByTag(this.handlePathPart(_path[i], vars));
                 }
             }
 
             return entity;
+        };
+
+        this.handlePathPart = function(pathPart, vars){
+            if(pathPart.charAt(0) === '$'){
+                if(vars[pathPart] !== undefined){
+                    pathPart = vars[pathPart];
+                }
+            }
+
+            return pathPart;
         };
 
         /**

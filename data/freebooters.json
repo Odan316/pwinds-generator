@@ -1459,185 +1459,10 @@
           {
             "tag": "area",
             "hint": "$modifier",
-            "dice": "d12",
-            "use_modifier": true,
-            "variants": [
-              {
-                "tag": "common1",
-                "title": "Common",
-                "min": 1,
-                "max": 3,
-                "additional": [
-                  "danger",
-                  {
-                    "tag": "exploration",
-                    "static": "+3"
-                  },
-                  "dungeon_type.caves.common_area",
-                  "dungeon_type.caves.dressing",
-                  "dungeon_type.caves.exits"
-                ]
-              },
-              {
-                "tag": "common2",
-                "title": "Common",
-                "min": 4,
-                "max": 6,
-                "additional": [
-                  "danger",
-                  "dungeon_type.caves.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "+2"
-                  },
-                  "dungeon_type.caves.common_area",
-                  "dungeon_type.caves.dressing",
-                  "dungeon_type.caves.exits"
-                ]
-              },
-              {
-                "tag": "common3",
-                "title": "Common",
-                "min": 7,
-                "max": 8,
-                "additional": [
-                  "danger",
-                  "dungeon_type.caves.discovery",
-                  "dungeon_type.caves.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "+1"
-                  },
-                  "dungeon_type.caves.common_area",
-                  "dungeon_type.caves.dressing",
-                  "dungeon_type.caves.exits"
-                ]
-              },
-              {
-                "tag": "common1",
-                "title": "Common",
-                "min": 9,
-                "max": 11,
-                "additional": [
-                  {
-                    "tag": "Contents",
-                    "static": "Nothing unusual"
-                  },
-                  {
-                    "tag": "exploration",
-                    "static": "+1"
-                  },
-                  "dungeon_type.caves.common_area",
-                  "dungeon_type.caves.dressing",
-                  "dungeon_type.caves.exits"
-                ]
-              },
-              {
-                "tag": "common5",
-                "title": "Common",
-                "min": 12,
-                "max": 12,
-                "additional": [
-                  "dungeon_type.caves.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "+1"
-                  },
-                  "dungeon_type.caves.common_area",
-                  "dungeon_type.caves.dressing",
-                  "dungeon_type.caves.exits"
-                ]
-              },
-              {
-                "tag": "unique1",
-                "title": "Unique",
-                "min": 13,
-                "max": 13,
-                "additional": [
-                  "danger",
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.caves.unique_area",
-                  "dungeon_type.caves.dressing",
-                  "dungeon_type.caves.exits"
-                ]
-              },
-              {
-                "tag": "unique2",
-                "title": "Unique",
-                "min": 14,
-                "max": 14,
-                "additional": [
-                  {
-                    "tag": "Contents",
-                    "static": "Nothing unusual"
-                  },
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.caves.unique_area",
-                  "dungeon_type.caves.dressing",
-                  "dungeon_type.caves.exits"
-                ]
-              },
-              {
-                "tag": "unique3",
-                "title": "Unique",
-                "min": 15,
-                "max": 15,
-                "additional": [
-                  "danger",
-                  "dungeon_type.caves.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.caves.unique_area",
-                  "dungeon_type.caves.dressing",
-                  "dungeon_type.caves.exits"
-                ]
-              },
-              {
-                "tag": "unique4",
-                "title": "Unique",
-                "min": 16,
-                "max": 16,
-                "additional": [
-                  "danger",
-                  "dungeon_type.caves.discovery",
-                  "dungeon_type.caves.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.caves.unique_area",
-                  "dungeon_type.caves.dressing",
-                  "dungeon_type.caves.exits"
-                ]
-              },
-              {
-                "tag": "unique5",
-                "title": "Unique",
-                "min": 17,
-                "max": 100,
-                "additional": [
-                  {
-                    "repeat": "d4",
-                    "generate_outer": "dungeon_type.caves.discovery"
-                  },
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.caves.unique_area",
-                  "dungeon_type.caves.dressing",
-                  "dungeon_type.caves.exits"
-                ]
-              }
-            ]
+            "vars": {
+              "$dungeon_type": "caves"
+            },
+            "generate_outer":  "details.area"
           },
           {
             "tag": "cave_type",
@@ -1870,88 +1695,10 @@
           },
           {
             "tag": "exits",
-            "dice": "d12",
-            "variants": [
-              {
-                "tag": "1",
-                "min": 1,
-                "max": 1,
-                "additional": [
-                  "details.direction",
-                  "dungeon_type.caves.connection"
-                ]
-              },
-              {
-                "tag": "2",
-                "min": 2,
-                "max": 5,
-                "additional": [
-                  {
-                    "repeat": 2,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.caves.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "3",
-                "min": 6,
-                "max": 8,
-                "additional": [
-                  {
-                    "repeat": 3,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.caves.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "4",
-                "min": 9,
-                "max": 10,
-                "additional": [
-                  {
-                    "repeat": 4,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.caves.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "5",
-                "min": 11,
-                "max": 11,
-                "additional": [
-                  {
-                    "repeat": 5,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.caves.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "6",
-                "min": 12,
-                "max": 12,
-                "additional": [
-                  {
-                    "repeat": 6,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.caves.connection"
-                    ]
-                  }
-                ]
-              }
-            ]
+            "vars": {
+              "$dungeon_type": "caves"
+            },
+            "generate_outer": "details.exits"
           },
           {
             "tag": "connection",
@@ -2264,185 +2011,10 @@
           {
             "tag": "area",
             "hint": "$modifier",
-            "dice": "d12",
-            "use_modifier": true,
-            "variants": [
-              {
-                "tag": "common1",
-                "title": "Common",
-                "min": 1,
-                "max": 3,
-                "additional": [
-                  "danger",
-                  {
-                    "tag": "exploration",
-                    "static": "+3"
-                  },
-                  "dungeon_type.ruined_settlement.common_area",
-                  "dungeon_type.ruined_settlement.dressing",
-                  "dungeon_type.ruined_settlement.exits"
-                ]
-              },
-              {
-                "tag": "common2",
-                "title": "Common",
-                "min": 4,
-                "max": 6,
-                "additional": [
-                  "danger",
-                  "dungeon_type.ruined_settlement.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "+2"
-                  },
-                  "dungeon_type.ruined_settlement.common_area",
-                  "dungeon_type.ruined_settlement.dressing",
-                  "dungeon_type.ruined_settlement.exits"
-                ]
-              },
-              {
-                "tag": "common3",
-                "title": "Common",
-                "min": 7,
-                "max": 8,
-                "additional": [
-                  "danger",
-                  "dungeon_type.ruined_settlement.discovery",
-                  "dungeon_type.ruined_settlement.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "+1"
-                  },
-                  "dungeon_type.ruined_settlement.common_area",
-                  "dungeon_type.ruined_settlement.dressing",
-                  "dungeon_type.ruined_settlement.exits"
-                ]
-              },
-              {
-                "tag": "common1",
-                "title": "Common",
-                "min": 9,
-                "max": 11,
-                "additional": [
-                  {
-                    "tag": "Contents",
-                    "static": "Nothing unusual"
-                  },
-                  {
-                    "tag": "exploration",
-                    "static": "+1"
-                  },
-                  "dungeon_type.ruined_settlement.common_area",
-                  "dungeon_type.ruined_settlement.dressing",
-                  "dungeon_type.ruined_settlement.exits"
-                ]
-              },
-              {
-                "tag": "common5",
-                "title": "Common",
-                "min": 12,
-                "max": 12,
-                "additional": [
-                  "dungeon_type.ruined_settlement.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "+1"
-                  },
-                  "dungeon_type.ruined_settlement.common_area",
-                  "dungeon_type.ruined_settlement.dressing",
-                  "dungeon_type.ruined_settlement.exits"
-                ]
-              },
-              {
-                "tag": "unique1",
-                "title": "Unique",
-                "min": 13,
-                "max": 13,
-                "additional": [
-                  "danger",
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.ruined_settlement.unique_area",
-                  "dungeon_type.ruined_settlement.dressing",
-                  "dungeon_type.ruined_settlement.exits"
-                ]
-              },
-              {
-                "tag": "unique2",
-                "title": "Unique",
-                "min": 14,
-                "max": 14,
-                "additional": [
-                  {
-                    "tag": "Contents",
-                    "static": "Nothing unusual"
-                  },
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.ruined_settlement.unique_area",
-                  "dungeon_type.ruined_settlement.dressing",
-                  "dungeon_type.ruined_settlement.exits"
-                ]
-              },
-              {
-                "tag": "unique3",
-                "title": "Unique",
-                "min": 15,
-                "max": 15,
-                "additional": [
-                  "danger",
-                  "dungeon_type.ruined_settlement.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.ruined_settlement.unique_area",
-                  "dungeon_type.ruined_settlement.dressing",
-                  "dungeon_type.ruined_settlement.exits"
-                ]
-              },
-              {
-                "tag": "unique4",
-                "title": "Unique",
-                "min": 16,
-                "max": 16,
-                "additional": [
-                  "danger",
-                  "dungeon_type.ruined_settlement.discovery",
-                  "dungeon_type.ruined_settlement.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.ruined_settlement.unique_area",
-                  "dungeon_type.ruined_settlement.dressing",
-                  "dungeon_type.ruined_settlement.exits"
-                ]
-              },
-              {
-                "tag": "unique5",
-                "title": "Unique",
-                "min": 17,
-                "max": 100,
-                "additional": [
-                  {
-                    "repeat": "d4",
-                    "generate_outer": "dungeon_type.ruined_settlement.discovery"
-                  },
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.ruined_settlement.unique_area",
-                  "dungeon_type.ruined_settlement.dressing",
-                  "dungeon_type.ruined_settlement.exits"
-                ]
-              }
-            ]
+            "vars": {
+              "$dungeon_type": "ruined_settlement"
+            },
+            "generate_outer":  "details.area"
           },
           {
             "tag": "builder",
@@ -2654,88 +2226,10 @@
           },
           {
             "tag": "exits",
-            "dice": "d12",
-            "variants": [
-              {
-                "tag": "1",
-                "min": 1,
-                "max": 1,
-                "additional": [
-                  "details.direction",
-                  "dungeon_type.ruined_settlement.connection"
-                ]
-              },
-              {
-                "tag": "2",
-                "min": 2,
-                "max": 5,
-                "additional": [
-                  {
-                    "repeat": 2,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.ruined_settlement.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "3",
-                "min": 6,
-                "max": 8,
-                "additional": [
-                  {
-                    "repeat": 3,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.ruined_settlement.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "4",
-                "min": 9,
-                "max": 10,
-                "additional": [
-                  {
-                    "repeat": 4,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.ruined_settlement.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "5",
-                "min": 11,
-                "max": 11,
-                "additional": [
-                  {
-                    "repeat": 5,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.ruined_settlement.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "6",
-                "min": 12,
-                "max": 12,
-                "additional": [
-                  {
-                    "repeat": 6,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.ruined_settlement.connection"
-                    ]
-                  }
-                ]
-              }
-            ]
+            "vars": {
+              "$dungeon_type": "ruined_settlement"
+            },
+            "generate_outer": "details.exits"
           },
           {
             "tag": "connection",
@@ -3025,185 +2519,10 @@
           {
             "tag": "area",
             "hint": "$modifier",
-            "dice": "d12",
-            "use_modifier": true,
-            "variants": [
-              {
-                "tag": "common1",
-                "title": "Common",
-                "min": 1,
-                "max": 3,
-                "additional": [
-                  "danger",
-                  {
-                    "tag": "exploration",
-                    "static": "+3"
-                  },
-                  "dungeon_type.prison.common_area",
-                  "dungeon_type.prison.dressing",
-                  "dungeon_type.prison.exits"
-                ]
-              },
-              {
-                "tag": "common2",
-                "title": "Common",
-                "min": 4,
-                "max": 6,
-                "additional": [
-                  "danger",
-                  "dungeon_type.prison.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "+2"
-                  },
-                  "dungeon_type.prison.common_area",
-                  "dungeon_type.prison.dressing",
-                  "dungeon_type.prison.exits"
-                ]
-              },
-              {
-                "tag": "common3",
-                "title": "Common",
-                "min": 7,
-                "max": 8,
-                "additional": [
-                  "danger",
-                  "dungeon_type.prison.discovery",
-                  "dungeon_type.prison.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "+1"
-                  },
-                  "dungeon_type.prison.common_area",
-                  "dungeon_type.prison.dressing",
-                  "dungeon_type.prison.exits"
-                ]
-              },
-              {
-                "tag": "common1",
-                "title": "Common",
-                "min": 9,
-                "max": 11,
-                "additional": [
-                  {
-                    "tag": "Contents",
-                    "static": "Nothing unusual"
-                  },
-                  {
-                    "tag": "exploration",
-                    "static": "+1"
-                  },
-                  "dungeon_type.prison.common_area",
-                  "dungeon_type.prison.dressing",
-                  "dungeon_type.prison.exits"
-                ]
-              },
-              {
-                "tag": "common5",
-                "title": "Common",
-                "min": 12,
-                "max": 12,
-                "additional": [
-                  "dungeon_type.prison.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "+1"
-                  },
-                  "dungeon_type.prison.common_area",
-                  "dungeon_type.prison.dressing",
-                  "dungeon_type.prison.exits"
-                ]
-              },
-              {
-                "tag": "unique1",
-                "title": "Unique",
-                "min": 13,
-                "max": 13,
-                "additional": [
-                  "danger",
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.prison.unique_area",
-                  "dungeon_type.prison.dressing",
-                  "dungeon_type.prison.exits"
-                ]
-              },
-              {
-                "tag": "unique2",
-                "title": "Unique",
-                "min": 14,
-                "max": 14,
-                "additional": [
-                  {
-                    "tag": "Contents",
-                    "static": "Nothing unusual"
-                  },
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.prison.unique_area",
-                  "dungeon_type.prison.dressing",
-                  "dungeon_type.prison.exits"
-                ]
-              },
-              {
-                "tag": "unique3",
-                "title": "Unique",
-                "min": 15,
-                "max": 15,
-                "additional": [
-                  "danger",
-                  "dungeon_type.prison.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.prison.unique_area",
-                  "dungeon_type.prison.dressing",
-                  "dungeon_type.prison.exits"
-                ]
-              },
-              {
-                "tag": "unique4",
-                "title": "Unique",
-                "min": 16,
-                "max": 16,
-                "additional": [
-                  "danger",
-                  "dungeon_type.prison.discovery",
-                  "dungeon_type.prison.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.prison.unique_area",
-                  "dungeon_type.prison.dressing",
-                  "dungeon_type.prison.exits"
-                ]
-              },
-              {
-                "tag": "unique5",
-                "title": "Unique",
-                "min": 17,
-                "max": 100,
-                "additional": [
-                  {
-                    "repeat": "d4",
-                    "generate_outer": "dungeon_type.prison.discovery"
-                  },
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.prison.unique_area",
-                  "dungeon_type.prison.dressing",
-                  "dungeon_type.prison.exits"
-                ]
-              }
-            ]
+            "vars": {
+              "$dungeon_type": "prison"
+            },
+            "generate_outer":  "details.area"
           },
           {
             "tag": "builder",
@@ -3438,88 +2757,10 @@
           },
           {
             "tag": "exits",
-            "dice": "d12",
-            "variants": [
-              {
-                "tag": "1",
-                "min": 1,
-                "max": 1,
-                "additional": [
-                  "details.direction",
-                  "dungeon_type.prison.connection"
-                ]
-              },
-              {
-                "tag": "2",
-                "min": 2,
-                "max": 5,
-                "additional": [
-                  {
-                    "repeat": 2,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.prison.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "3",
-                "min": 6,
-                "max": 8,
-                "additional": [
-                  {
-                    "repeat": 3,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.prison.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "4",
-                "min": 9,
-                "max": 10,
-                "additional": [
-                  {
-                    "repeat": 4,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.prison.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "5",
-                "min": 11,
-                "max": 11,
-                "additional": [
-                  {
-                    "repeat": 5,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.prison.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "6",
-                "min": 12,
-                "max": 12,
-                "additional": [
-                  {
-                    "repeat": 6,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.prison.connection"
-                    ]
-                  }
-                ]
-              }
-            ]
+            "vars": {
+              "$dungeon_type": "prison"
+            },
+            "generate_outer": "details.exits"
           },
           {
             "tag": "connection",
@@ -3828,185 +3069,10 @@
           {
             "tag": "area",
             "hint": "$modifier",
-            "dice": "d12",
-            "use_modifier": true,
-            "variants": [
-              {
-                "tag": "common1",
-                "title": "Common",
-                "min": 1,
-                "max": 3,
-                "additional": [
-                  "danger",
-                  {
-                    "tag": "exploration",
-                    "static": "+3"
-                  },
-                  "dungeon_type.mine.common_area",
-                  "dungeon_type.mine.dressing",
-                  "dungeon_type.mine.exits"
-                ]
-              },
-              {
-                "tag": "common2",
-                "title": "Common",
-                "min": 4,
-                "max": 6,
-                "additional": [
-                  "danger",
-                  "dungeon_type.mine.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "+2"
-                  },
-                  "dungeon_type.mine.common_area",
-                  "dungeon_type.mine.dressing",
-                  "dungeon_type.mine.exits"
-                ]
-              },
-              {
-                "tag": "common3",
-                "title": "Common",
-                "min": 7,
-                "max": 8,
-                "additional": [
-                  "danger",
-                  "dungeon_type.mine.discovery",
-                  "dungeon_type.mine.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "+1"
-                  },
-                  "dungeon_type.mine.common_area",
-                  "dungeon_type.mine.dressing",
-                  "dungeon_type.mine.exits"
-                ]
-              },
-              {
-                "tag": "common1",
-                "title": "Common",
-                "min": 9,
-                "max": 11,
-                "additional": [
-                  {
-                    "tag": "Contents",
-                    "static": "Nothing unusual"
-                  },
-                  {
-                    "tag": "exploration",
-                    "static": "+1"
-                  },
-                  "dungeon_type.mine.common_area",
-                  "dungeon_type.mine.dressing",
-                  "dungeon_type.mine.exits"
-                ]
-              },
-              {
-                "tag": "common5",
-                "title": "Common",
-                "min": 12,
-                "max": 12,
-                "additional": [
-                  "dungeon_type.mine.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "+1"
-                  },
-                  "dungeon_type.mine.common_area",
-                  "dungeon_type.mine.dressing",
-                  "dungeon_type.mine.exits"
-                ]
-              },
-              {
-                "tag": "unique1",
-                "title": "Unique",
-                "min": 13,
-                "max": 13,
-                "additional": [
-                  "danger",
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.mine.unique_area",
-                  "dungeon_type.mine.dressing",
-                  "dungeon_type.mine.exits"
-                ]
-              },
-              {
-                "tag": "unique2",
-                "title": "Unique",
-                "min": 14,
-                "max": 14,
-                "additional": [
-                  {
-                    "tag": "Contents",
-                    "static": "Nothing unusual"
-                  },
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.mine.unique_area",
-                  "dungeon_type.mine.dressing",
-                  "dungeon_type.mine.exits"
-                ]
-              },
-              {
-                "tag": "unique3",
-                "title": "Unique",
-                "min": 15,
-                "max": 15,
-                "additional": [
-                  "danger",
-                  "dungeon_type.mine.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.mine.unique_area",
-                  "dungeon_type.mine.dressing",
-                  "dungeon_type.mine.exits"
-                ]
-              },
-              {
-                "tag": "unique4",
-                "title": "Unique",
-                "min": 16,
-                "max": 16,
-                "additional": [
-                  "danger",
-                  "dungeon_type.mine.discovery",
-                  "dungeon_type.mine.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.mine.unique_area",
-                  "dungeon_type.mine.dressing",
-                  "dungeon_type.mine.exits"
-                ]
-              },
-              {
-                "tag": "unique5",
-                "title": "Unique",
-                "min": 17,
-                "max": 100,
-                "additional": [
-                  {
-                    "repeat": "d4",
-                    "generate_outer": "dungeon_type.mine.discovery"
-                  },
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.mine.unique_area",
-                  "dungeon_type.mine.dressing",
-                  "dungeon_type.mine.exits"
-                ]
-              }
-            ]
+            "vars": {
+              "$dungeon_type": "mine"
+            },
+            "generate_outer":  "details.area"
           },
           {
             "tag": "builder",
@@ -4260,88 +3326,10 @@
           },
           {
             "tag": "exits",
-            "dice": "d12",
-            "variants": [
-              {
-                "tag": "1",
-                "min": 1,
-                "max": 1,
-                "additional": [
-                  "details.direction",
-                  "dungeon_type.mine.connection"
-                ]
-              },
-              {
-                "tag": "2",
-                "min": 2,
-                "max": 5,
-                "additional": [
-                  {
-                    "repeat": 2,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.mine.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "3",
-                "min": 6,
-                "max": 8,
-                "additional": [
-                  {
-                    "repeat": 3,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.mine.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "4",
-                "min": 9,
-                "max": 10,
-                "additional": [
-                  {
-                    "repeat": 4,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.mine.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "5",
-                "min": 11,
-                "max": 11,
-                "additional": [
-                  {
-                    "repeat": 5,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.mine.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "6",
-                "min": 12,
-                "max": 12,
-                "additional": [
-                  {
-                    "repeat": 6,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.mine.connection"
-                    ]
-                  }
-                ]
-              }
-            ]
+            "vars": {
+              "$dungeon_type": "mine"
+            },
+            "generate_outer": "details.exits"
           },
           {
             "tag": "connection",
@@ -4679,185 +3667,10 @@
           {
             "tag": "area",
             "hint": "$modifier",
-            "dice": "d12",
-            "use_modifier": true,
-            "variants": [
-              {
-                "tag": "common1",
-                "title": "Common",
-                "min": 1,
-                "max": 3,
-                "additional": [
-                  "danger",
-                  {
-                    "tag": "exploration",
-                    "static": "+3"
-                  },
-                  "dungeon_type.crypt.common_area",
-                  "dungeon_type.crypt.dressing",
-                  "dungeon_type.crypt.exits"
-                ]
-              },
-              {
-                "tag": "common2",
-                "title": "Common",
-                "min": 4,
-                "max": 6,
-                "additional": [
-                  "danger",
-                  "dungeon_type.crypt.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "+2"
-                  },
-                  "dungeon_type.crypt.common_area",
-                  "dungeon_type.crypt.dressing",
-                  "dungeon_type.crypt.exits"
-                ]
-              },
-              {
-                "tag": "common3",
-                "title": "Common",
-                "min": 7,
-                "max": 8,
-                "additional": [
-                  "danger",
-                  "dungeon_type.crypt.discovery",
-                  "dungeon_type.crypt.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "+1"
-                  },
-                  "dungeon_type.crypt.common_area",
-                  "dungeon_type.crypt.dressing",
-                  "dungeon_type.crypt.exits"
-                ]
-              },
-              {
-                "tag": "common1",
-                "title": "Common",
-                "min": 9,
-                "max": 11,
-                "additional": [
-                  {
-                    "tag": "Contents",
-                    "static": "Nothing unusual"
-                  },
-                  {
-                    "tag": "exploration",
-                    "static": "+1"
-                  },
-                  "dungeon_type.crypt.common_area",
-                  "dungeon_type.crypt.dressing",
-                  "dungeon_type.crypt.exits"
-                ]
-              },
-              {
-                "tag": "common5",
-                "title": "Common",
-                "min": 12,
-                "max": 12,
-                "additional": [
-                  "dungeon_type.crypt.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "+1"
-                  },
-                  "dungeon_type.crypt.common_area",
-                  "dungeon_type.crypt.dressing",
-                  "dungeon_type.crypt.exits"
-                ]
-              },
-              {
-                "tag": "unique1",
-                "title": "Unique",
-                "min": 13,
-                "max": 13,
-                "additional": [
-                  "danger",
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.crypt.unique_area",
-                  "dungeon_type.crypt.dressing",
-                  "dungeon_type.crypt.exits"
-                ]
-              },
-              {
-                "tag": "unique2",
-                "title": "Unique",
-                "min": 14,
-                "max": 14,
-                "additional": [
-                  {
-                    "tag": "Contents",
-                    "static": "Nothing unusual"
-                  },
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.crypt.unique_area",
-                  "dungeon_type.crypt.dressing",
-                  "dungeon_type.crypt.exits"
-                ]
-              },
-              {
-                "tag": "unique3",
-                "title": "Unique",
-                "min": 15,
-                "max": 15,
-                "additional": [
-                  "danger",
-                  "dungeon_type.crypt.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.crypt.unique_area",
-                  "dungeon_type.crypt.dressing",
-                  "dungeon_type.crypt.exits"
-                ]
-              },
-              {
-                "tag": "unique4",
-                "title": "Unique",
-                "min": 16,
-                "max": 16,
-                "additional": [
-                  "danger",
-                  "dungeon_type.crypt.discovery",
-                  "dungeon_type.crypt.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.crypt.unique_area",
-                  "dungeon_type.crypt.dressing",
-                  "dungeon_type.crypt.exits"
-                ]
-              },
-              {
-                "tag": "unique5",
-                "title": "Unique",
-                "min": 17,
-                "max": 100,
-                "additional": [
-                  {
-                    "repeat": "d4",
-                    "generate_outer": "dungeon_type.crypt.discovery"
-                  },
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.crypt.unique_area",
-                  "dungeon_type.crypt.dressing",
-                  "dungeon_type.crypt.exits"
-                ]
-              }
-            ]
+            "vars": {
+              "$dungeon_type": "crypt"
+            },
+            "generate_outer":  "details.area"
           },
           {
             "tag": "builder",
@@ -5091,88 +3904,10 @@
           },
           {
             "tag": "exits",
-            "dice": "d12",
-            "variants": [
-              {
-                "tag": "1",
-                "min": 1,
-                "max": 1,
-                "additional": [
-                  "details.direction",
-                  "dungeon_type.crypt.connection"
-                ]
-              },
-              {
-                "tag": "2",
-                "min": 2,
-                "max": 5,
-                "additional": [
-                  {
-                    "repeat": 2,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.crypt.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "3",
-                "min": 6,
-                "max": 8,
-                "additional": [
-                  {
-                    "repeat": 3,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.crypt.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "4",
-                "min": 9,
-                "max": 10,
-                "additional": [
-                  {
-                    "repeat": 4,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.crypt.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "5",
-                "min": 11,
-                "max": 11,
-                "additional": [
-                  {
-                    "repeat": 5,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.crypt.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "6",
-                "min": 12,
-                "max": 12,
-                "additional": [
-                  {
-                    "repeat": 6,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.crypt.connection"
-                    ]
-                  }
-                ]
-              }
-            ]
+            "vars": {
+              "$dungeon_type": "crypt"
+            },
+            "generate_outer": "details.exits"
           },
           {
             "tag": "connection",
@@ -5497,6 +4232,10 @@
         ],
         "dictionaries": [
           {
+            "tag": "area",
+            "static": "NOT REALISED"
+          },
+          {
             "tag": "entrance",
             "title": "Entrance via",
             "dice": "d12",
@@ -5795,185 +4534,10 @@
           {
             "tag": "area",
             "hint": "$modifier",
-            "dice": "d12",
-            "use_modifier": true,
-            "variants": [
-              {
-                "tag": "common1",
-                "title": "Common",
-                "min": 1,
-                "max": 3,
-                "additional": [
-                  "danger",
-                  {
-                    "tag": "exploration",
-                    "static": "+3"
-                  },
-                  "dungeon_type.stronghold.common_area",
-                  "dungeon_type.stronghold.dressing",
-                  "dungeon_type.stronghold.exits"
-                ]
-              },
-              {
-                "tag": "common2",
-                "title": "Common",
-                "min": 4,
-                "max": 6,
-                "additional": [
-                  "danger",
-                  "dungeon_type.stronghold.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "+2"
-                  },
-                  "dungeon_type.stronghold.common_area",
-                  "dungeon_type.stronghold.dressing",
-                  "dungeon_type.stronghold.exits"
-                ]
-              },
-              {
-                "tag": "common3",
-                "title": "Common",
-                "min": 7,
-                "max": 8,
-                "additional": [
-                  "danger",
-                  "dungeon_type.stronghold.discovery",
-                  "dungeon_type.stronghold.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "+1"
-                  },
-                  "dungeon_type.stronghold.common_area",
-                  "dungeon_type.stronghold.dressing",
-                  "dungeon_type.stronghold.exits"
-                ]
-              },
-              {
-                "tag": "common1",
-                "title": "Common",
-                "min": 9,
-                "max": 11,
-                "additional": [
-                  {
-                    "tag": "Contents",
-                    "static": "Nothing unusual"
-                  },
-                  {
-                    "tag": "exploration",
-                    "static": "+1"
-                  },
-                  "dungeon_type.stronghold.common_area",
-                  "dungeon_type.stronghold.dressing",
-                  "dungeon_type.stronghold.exits"
-                ]
-              },
-              {
-                "tag": "common5",
-                "title": "Common",
-                "min": 12,
-                "max": 12,
-                "additional": [
-                  "dungeon_type.stronghold.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "+1"
-                  },
-                  "dungeon_type.stronghold.common_area",
-                  "dungeon_type.stronghold.dressing",
-                  "dungeon_type.stronghold.exits"
-                ]
-              },
-              {
-                "tag": "unique1",
-                "title": "Unique",
-                "min": 13,
-                "max": 13,
-                "additional": [
-                  "danger",
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.stronghold.unique_area",
-                  "dungeon_type.stronghold.dressing",
-                  "dungeon_type.stronghold.exits"
-                ]
-              },
-              {
-                "tag": "unique2",
-                "title": "Unique",
-                "min": 14,
-                "max": 14,
-                "additional": [
-                  {
-                    "tag": "Contents",
-                    "static": "Nothing unusual"
-                  },
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.stronghold.unique_area",
-                  "dungeon_type.stronghold.dressing",
-                  "dungeon_type.stronghold.exits"
-                ]
-              },
-              {
-                "tag": "unique3",
-                "title": "Unique",
-                "min": 15,
-                "max": 15,
-                "additional": [
-                  "danger",
-                  "dungeon_type.stronghold.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.stronghold.unique_area",
-                  "dungeon_type.stronghold.dressing",
-                  "dungeon_type.stronghold.exits"
-                ]
-              },
-              {
-                "tag": "unique4",
-                "title": "Unique",
-                "min": 16,
-                "max": 16,
-                "additional": [
-                  "danger",
-                  "dungeon_type.stronghold.discovery",
-                  "dungeon_type.stronghold.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.stronghold.unique_area",
-                  "dungeon_type.stronghold.dressing",
-                  "dungeon_type.stronghold.exits"
-                ]
-              },
-              {
-                "tag": "unique5",
-                "title": "Unique",
-                "min": 17,
-                "max": 100,
-                "additional": [
-                  {
-                    "repeat": "d4",
-                    "generate_outer": "dungeon_type.stronghold.discovery"
-                  },
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.stronghold.unique_area",
-                  "dungeon_type.stronghold.dressing",
-                  "dungeon_type.stronghold.exits"
-                ]
-              }
-            ]
+            "vars": {
+              "$dungeon_type": "stronghold"
+            },
+            "generate_outer":  "details.area"
           },
           {
             "tag": "builder",
@@ -6187,88 +4751,10 @@
           },
           {
             "tag": "exits",
-            "dice": "d12",
-            "variants": [
-              {
-                "tag": "1",
-                "min": 1,
-                "max": 1,
-                "additional": [
-                  "details.direction",
-                  "dungeon_type.stronghold.connection"
-                ]
-              },
-              {
-                "tag": "2",
-                "min": 2,
-                "max": 5,
-                "additional": [
-                  {
-                    "repeat": 2,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.stronghold.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "3",
-                "min": 6,
-                "max": 8,
-                "additional": [
-                  {
-                    "repeat": 3,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.stronghold.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "4",
-                "min": 9,
-                "max": 10,
-                "additional": [
-                  {
-                    "repeat": 4,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.stronghold.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "5",
-                "min": 11,
-                "max": 11,
-                "additional": [
-                  {
-                    "repeat": 5,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.stronghold.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "6",
-                "min": 12,
-                "max": 12,
-                "additional": [
-                  {
-                    "repeat": 6,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.stronghold.connection"
-                    ]
-                  }
-                ]
-              }
-            ]
+            "vars": {
+              "$dungeon_type": "stronghold"
+            },
+            "generate_outer": "details.exits"
           },
           {
             "tag": "connection",
@@ -6573,185 +5059,10 @@
           {
             "tag": "area",
             "hint": "$modifier",
-            "dice": "d12",
-            "use_modifier": true,
-            "variants": [
-              {
-                "tag": "common1",
-                "title": "Common",
-                "min": 1,
-                "max": 3,
-                "additional": [
-                  "danger",
-                  {
-                    "tag": "exploration",
-                    "static": "+3"
-                  },
-                  "dungeon_type.temple.common_area",
-                  "dungeon_type.temple.dressing",
-                  "dungeon_type.temple.exits"
-                ]
-              },
-              {
-                "tag": "common2",
-                "title": "Common",
-                "min": 4,
-                "max": 6,
-                "additional": [
-                  "danger",
-                  "dungeon_type.temple.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "+2"
-                  },
-                  "dungeon_type.temple.common_area",
-                  "dungeon_type.temple.dressing",
-                  "dungeon_type.temple.exits"
-                ]
-              },
-              {
-                "tag": "common3",
-                "title": "Common",
-                "min": 7,
-                "max": 8,
-                "additional": [
-                  "danger",
-                  "dungeon_type.temple.discovery",
-                  "dungeon_type.temple.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "+1"
-                  },
-                  "dungeon_type.temple.common_area",
-                  "dungeon_type.temple.dressing",
-                  "dungeon_type.temple.exits"
-                ]
-              },
-              {
-                "tag": "common1",
-                "title": "Common",
-                "min": 9,
-                "max": 11,
-                "additional": [
-                  {
-                    "tag": "Contents",
-                    "static": "Nothing unusual"
-                  },
-                  {
-                    "tag": "exploration",
-                    "static": "+1"
-                  },
-                  "dungeon_type.temple.common_area",
-                  "dungeon_type.temple.dressing",
-                  "dungeon_type.temple.exits"
-                ]
-              },
-              {
-                "tag": "common5",
-                "title": "Common",
-                "min": 12,
-                "max": 12,
-                "additional": [
-                  "dungeon_type.temple.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "+1"
-                  },
-                  "dungeon_type.temple.common_area",
-                  "dungeon_type.temple.dressing",
-                  "dungeon_type.temple.exits"
-                ]
-              },
-              {
-                "tag": "unique1",
-                "title": "Unique",
-                "min": 13,
-                "max": 13,
-                "additional": [
-                  "danger",
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.temple.unique_area",
-                  "dungeon_type.temple.dressing",
-                  "dungeon_type.temple.exits"
-                ]
-              },
-              {
-                "tag": "unique2",
-                "title": "Unique",
-                "min": 14,
-                "max": 14,
-                "additional": [
-                  {
-                    "tag": "Contents",
-                    "static": "Nothing unusual"
-                  },
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.temple.unique_area",
-                  "dungeon_type.temple.dressing",
-                  "dungeon_type.temple.exits"
-                ]
-              },
-              {
-                "tag": "unique3",
-                "title": "Unique",
-                "min": 15,
-                "max": 15,
-                "additional": [
-                  "danger",
-                  "dungeon_type.temple.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.temple.unique_area",
-                  "dungeon_type.temple.dressing",
-                  "dungeon_type.temple.exits"
-                ]
-              },
-              {
-                "tag": "unique4",
-                "title": "Unique",
-                "min": 16,
-                "max": 16,
-                "additional": [
-                  "danger",
-                  "dungeon_type.temple.discovery",
-                  "dungeon_type.temple.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.temple.unique_area",
-                  "dungeon_type.temple.dressing",
-                  "dungeon_type.temple.exits"
-                ]
-              },
-              {
-                "tag": "unique5",
-                "title": "Unique",
-                "min": 17,
-                "max": 100,
-                "additional": [
-                  {
-                    "repeat": "d4",
-                    "generate_outer": "dungeon_type.temple.discovery"
-                  },
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.temple.unique_area",
-                  "dungeon_type.temple.dressing",
-                  "dungeon_type.temple.exits"
-                ]
-              }
-            ]
+            "vars": {
+              "$dungeon_type": "temple"
+            },
+            "generate_outer":  "details.area"
           },
           {
             "tag": "builder",
@@ -6965,88 +5276,10 @@
           },
           {
             "tag": "exits",
-            "dice": "d12",
-            "variants": [
-              {
-                "tag": "1",
-                "min": 1,
-                "max": 1,
-                "additional": [
-                  "details.direction",
-                  "dungeon_type.temple.connection"
-                ]
-              },
-              {
-                "tag": "2",
-                "min": 2,
-                "max": 5,
-                "additional": [
-                  {
-                    "repeat": 2,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.temple.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "3",
-                "min": 6,
-                "max": 8,
-                "additional": [
-                  {
-                    "repeat": 3,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.temple.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "4",
-                "min": 9,
-                "max": 10,
-                "additional": [
-                  {
-                    "repeat": 4,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.temple.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "5",
-                "min": 11,
-                "max": 11,
-                "additional": [
-                  {
-                    "repeat": 5,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.temple.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "6",
-                "min": 12,
-                "max": 12,
-                "additional": [
-                  {
-                    "repeat": 6,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.temple.connection"
-                    ]
-                  }
-                ]
-              }
-            ]
+            "vars": {
+              "$dungeon_type": "temple"
+            },
+            "generate_outer": "details.exits"
           },
           {
             "tag": "connection",
@@ -7333,185 +5566,10 @@
           {
             "tag": "area",
             "hint": "$modifier",
-            "dice": "d12",
-            "use_modifier": true,
-            "variants": [
-              {
-                "tag": "common1",
-                "title": "Common",
-                "min": 1,
-                "max": 3,
-                "additional": [
-                  "danger",
-                  {
-                    "tag": "exploration",
-                    "static": "+3"
-                  },
-                  "dungeon_type.archive.common_area",
-                  "dungeon_type.archive.dressing",
-                  "dungeon_type.archive.exits"
-                ]
-              },
-              {
-                "tag": "common2",
-                "title": "Common",
-                "min": 4,
-                "max": 6,
-                "additional": [
-                  "danger",
-                  "dungeon_type.archive.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "+2"
-                  },
-                  "dungeon_type.archive.common_area",
-                  "dungeon_type.archive.dressing",
-                  "dungeon_type.archive.exits"
-                ]
-              },
-              {
-                "tag": "common3",
-                "title": "Common",
-                "min": 7,
-                "max": 8,
-                "additional": [
-                  "danger",
-                  "dungeon_type.archive.discovery",
-                  "dungeon_type.archive.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "+1"
-                  },
-                  "dungeon_type.archive.common_area",
-                  "dungeon_type.archive.dressing",
-                  "dungeon_type.archive.exits"
-                ]
-              },
-              {
-                "tag": "common1",
-                "title": "Common",
-                "min": 9,
-                "max": 11,
-                "additional": [
-                  {
-                    "tag": "Contents",
-                    "static": "Nothing unusual"
-                  },
-                  {
-                    "tag": "exploration",
-                    "static": "+1"
-                  },
-                  "dungeon_type.archive.common_area",
-                  "dungeon_type.archive.dressing",
-                  "dungeon_type.archive.exits"
-                ]
-              },
-              {
-                "tag": "common5",
-                "title": "Common",
-                "min": 12,
-                "max": 12,
-                "additional": [
-                  "dungeon_type.archive.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "+1"
-                  },
-                  "dungeon_type.archive.common_area",
-                  "dungeon_type.archive.dressing",
-                  "dungeon_type.archive.exits"
-                ]
-              },
-              {
-                "tag": "unique1",
-                "title": "Unique",
-                "min": 13,
-                "max": 13,
-                "additional": [
-                  "danger",
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.archive.unique_area",
-                  "dungeon_type.archive.dressing",
-                  "dungeon_type.archive.exits"
-                ]
-              },
-              {
-                "tag": "unique2",
-                "title": "Unique",
-                "min": 14,
-                "max": 14,
-                "additional": [
-                  {
-                    "tag": "Contents",
-                    "static": "Nothing unusual"
-                  },
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.archive.unique_area",
-                  "dungeon_type.archive.dressing",
-                  "dungeon_type.archive.exits"
-                ]
-              },
-              {
-                "tag": "unique3",
-                "title": "Unique",
-                "min": 15,
-                "max": 15,
-                "additional": [
-                  "danger",
-                  "dungeon_type.archive.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.archive.unique_area",
-                  "dungeon_type.archive.dressing",
-                  "dungeon_type.archive.exits"
-                ]
-              },
-              {
-                "tag": "unique4",
-                "title": "Unique",
-                "min": 16,
-                "max": 16,
-                "additional": [
-                  "danger",
-                  "dungeon_type.archive.discovery",
-                  "dungeon_type.archive.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.archive.unique_area",
-                  "dungeon_type.archive.dressing",
-                  "dungeon_type.archive.exits"
-                ]
-              },
-              {
-                "tag": "unique5",
-                "title": "Unique",
-                "min": 17,
-                "max": 100,
-                "additional": [
-                  {
-                    "repeat": "d4",
-                    "generate_outer": "dungeon_type.archive.discovery"
-                  },
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.archive.unique_area",
-                  "dungeon_type.archive.dressing",
-                  "dungeon_type.archive.exits"
-                ]
-              }
-            ]
+            "vars": {
+              "$dungeon_type": "archive"
+            },
+            "generate_outer":  "details.area"
           },
           {
             "tag": "builder",
@@ -7755,88 +5813,10 @@
           },
           {
             "tag": "exits",
-            "dice": "d12",
-            "variants": [
-              {
-                "tag": "1",
-                "min": 1,
-                "max": 1,
-                "additional": [
-                  "details.direction",
-                  "dungeon_type.archive.connection"
-                ]
-              },
-              {
-                "tag": "2",
-                "min": 2,
-                "max": 5,
-                "additional": [
-                  {
-                    "repeat": 2,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.archive.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "3",
-                "min": 6,
-                "max": 8,
-                "additional": [
-                  {
-                    "repeat": 3,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.archive.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "4",
-                "min": 9,
-                "max": 10,
-                "additional": [
-                  {
-                    "repeat": 4,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.archive.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "5",
-                "min": 11,
-                "max": 11,
-                "additional": [
-                  {
-                    "repeat": 5,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.archive.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "6",
-                "min": 12,
-                "max": 12,
-                "additional": [
-                  {
-                    "repeat": 6,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.archive.connection"
-                    ]
-                  }
-                ]
-              }
-            ]
+            "vars": {
+              "$dungeon_type": "archive"
+            },
+            "generate_outer": "details.exits"
           },
           {
             "tag": "connection",
@@ -8144,185 +6124,10 @@
           {
             "tag": "area",
             "hint": "$modifier",
-            "dice": "d12",
-            "use_modifier": true,
-            "variants": [
-              {
-                "tag": "common1",
-                "title": "Common",
-                "min": 1,
-                "max": 3,
-                "additional": [
-                  "danger",
-                  {
-                    "tag": "exploration",
-                    "static": "+3"
-                  },
-                  "dungeon_type.origin_unknown.common_area",
-                  "dungeon_type.origin_unknown.dressing",
-                  "dungeon_type.origin_unknown.exits"
-                ]
-              },
-              {
-                "tag": "common2",
-                "title": "Common",
-                "min": 4,
-                "max": 6,
-                "additional": [
-                  "danger",
-                  "dungeon_type.origin_unknown.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "+2"
-                  },
-                  "dungeon_type.origin_unknown.common_area",
-                  "dungeon_type.origin_unknown.dressing",
-                  "dungeon_type.origin_unknown.exits"
-                ]
-              },
-              {
-                "tag": "common3",
-                "title": "Common",
-                "min": 7,
-                "max": 8,
-                "additional": [
-                  "danger",
-                  "dungeon_type.origin_unknown.discovery",
-                  "dungeon_type.origin_unknown.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "+1"
-                  },
-                  "dungeon_type.origin_unknown.common_area",
-                  "dungeon_type.origin_unknown.dressing",
-                  "dungeon_type.origin_unknown.exits"
-                ]
-              },
-              {
-                "tag": "common1",
-                "title": "Common",
-                "min": 9,
-                "max": 11,
-                "additional": [
-                  {
-                    "tag": "Contents",
-                    "static": "Nothing unusual"
-                  },
-                  {
-                    "tag": "exploration",
-                    "static": "+1"
-                  },
-                  "dungeon_type.origin_unknown.common_area",
-                  "dungeon_type.origin_unknown.dressing",
-                  "dungeon_type.origin_unknown.exits"
-                ]
-              },
-              {
-                "tag": "common5",
-                "title": "Common",
-                "min": 12,
-                "max": 12,
-                "additional": [
-                  "dungeon_type.origin_unknown.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "+1"
-                  },
-                  "dungeon_type.origin_unknown.common_area",
-                  "dungeon_type.origin_unknown.dressing",
-                  "dungeon_type.origin_unknown.exits"
-                ]
-              },
-              {
-                "tag": "unique1",
-                "title": "Unique",
-                "min": 13,
-                "max": 13,
-                "additional": [
-                  "danger",
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.origin_unknown.unique_area",
-                  "dungeon_type.origin_unknown.dressing",
-                  "dungeon_type.origin_unknown.exits"
-                ]
-              },
-              {
-                "tag": "unique2",
-                "title": "Unique",
-                "min": 14,
-                "max": 14,
-                "additional": [
-                  {
-                    "tag": "Contents",
-                    "static": "Nothing unusual"
-                  },
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.origin_unknown.unique_area",
-                  "dungeon_type.origin_unknown.dressing",
-                  "dungeon_type.origin_unknown.exits"
-                ]
-              },
-              {
-                "tag": "unique3",
-                "title": "Unique",
-                "min": 15,
-                "max": 15,
-                "additional": [
-                  "danger",
-                  "dungeon_type.origin_unknown.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.origin_unknown.unique_area",
-                  "dungeon_type.origin_unknown.dressing",
-                  "dungeon_type.origin_unknown.exits"
-                ]
-              },
-              {
-                "tag": "unique4",
-                "title": "Unique",
-                "min": 16,
-                "max": 16,
-                "additional": [
-                  "danger",
-                  "dungeon_type.origin_unknown.discovery",
-                  "dungeon_type.origin_unknown.discovery",
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.origin_unknown.unique_area",
-                  "dungeon_type.origin_unknown.dressing",
-                  "dungeon_type.origin_unknown.exits"
-                ]
-              },
-              {
-                "tag": "unique5",
-                "title": "Unique",
-                "min": 17,
-                "max": 100,
-                "additional": [
-                  {
-                    "repeat": "d4",
-                    "generate_outer": "dungeon_type.origin_unknown.discovery"
-                  },
-                  {
-                    "tag": "exploration",
-                    "static": "reset to zero"
-                  },
-                  "dungeon_type.origin_unknown.unique_area",
-                  "dungeon_type.origin_unknown.dressing",
-                  "dungeon_type.origin_unknown.exits"
-                ]
-              }
-            ]
+            "vars": {
+              "$dungeon_type": "origin_unknown"
+            },
+            "generate_outer":  "details.area"
           },
           {
             "tag": "entrance",
@@ -8612,88 +6417,10 @@
           },
           {
             "tag": "exits",
-            "dice": "d12",
-            "variants": [
-              {
-                "tag": "1",
-                "min": 1,
-                "max": 1,
-                "additional": [
-                  "details.direction",
-                  "dungeon_type.origin_unknown.connection"
-                ]
-              },
-              {
-                "tag": "2",
-                "min": 2,
-                "max": 5,
-                "additional": [
-                  {
-                    "repeat": 2,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.origin_unknown.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "3",
-                "min": 6,
-                "max": 8,
-                "additional": [
-                  {
-                    "repeat": 3,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.origin_unknown.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "4",
-                "min": 9,
-                "max": 10,
-                "additional": [
-                  {
-                    "repeat": 4,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.origin_unknown.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "5",
-                "min": 11,
-                "max": 11,
-                "additional": [
-                  {
-                    "repeat": 5,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.origin_unknown.connection"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "6",
-                "min": 12,
-                "max": 12,
-                "additional": [
-                  {
-                    "repeat": 6,
-                    "additional": [
-                      "details.direction",
-                      "dungeon_type.origin_unknown.connection"
-                    ]
-                  }
-                ]
-              }
-            ]
+            "vars": {
+              "$dungeon_type": "origin_unknown"
+            },
+            "generate_outer": "details.exits"
           },
           {
             "tag": "connection",
@@ -12281,6 +10008,271 @@
                 "details.oddity",
                 "d10+1"
               ]
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "area",
+        "hide": true,
+        "dice": "d12",
+        "use_modifier": true,
+        "variants": [
+          {
+            "tag": "common1",
+            "title": "Common",
+            "min": 1,
+            "max": 3,
+            "additional": [
+              {
+                "tag": "exploration",
+                "static": "+3"
+              },
+              "dungeon_type.$dungeon_type.common_area",
+              "dungeon_type.$dungeon_type.dressing",
+              "dungeon_type.$dungeon_type.exits",
+              "danger"
+            ]
+          },
+          {
+            "tag": "common2",
+            "title": "Common",
+            "min": 4,
+            "max": 6,
+            "additional": [
+              {
+                "tag": "exploration",
+                "static": "+2"
+              },
+              "dungeon_type.$dungeon_type.common_area",
+              "dungeon_type.$dungeon_type.dressing",
+              "dungeon_type.$dungeon_type.exits",
+              "danger",
+              "dungeon_type.$dungeon_type.discovery"
+            ]
+          },
+          {
+            "tag": "common3",
+            "title": "Common",
+            "min": 7,
+            "max": 8,
+            "additional": [
+              {
+                "tag": "exploration",
+                "static": "+1"
+              },
+              "dungeon_type.$dungeon_type.common_area",
+              "dungeon_type.$dungeon_type.dressing",
+              "dungeon_type.$dungeon_type.exits",
+              "danger",
+              "dungeon_type.$dungeon_type.discovery",
+              "dungeon_type.$dungeon_type.discovery"
+            ]
+          },
+          {
+            "tag": "common1",
+            "title": "Common",
+            "min": 9,
+            "max": 11,
+            "additional": [
+              {
+                "tag": "exploration",
+                "static": "+1"
+              },
+              "dungeon_type.$dungeon_type.common_area",
+              "dungeon_type.$dungeon_type.dressing",
+              "dungeon_type.$dungeon_type.exits",
+              {
+                "tag": "Contents",
+                "static": "Nothing unusual"
+              }
+            ]
+          },
+          {
+            "tag": "common5",
+            "title": "Common",
+            "min": 12,
+            "max": 12,
+            "additional": [
+              {
+                "tag": "exploration",
+                "static": "+1"
+              },
+              "dungeon_type.$dungeon_type.common_area",
+              "dungeon_type.$dungeon_type.dressing",
+              "dungeon_type.$dungeon_type.exits",
+              "dungeon_type.$dungeon_type.discovery"
+            ]
+          },
+          {
+            "tag": "unique1",
+            "title": "Unique",
+            "min": 13,
+            "max": 13,
+            "additional": [
+              {
+                "tag": "exploration",
+                "static": "reset to zero"
+              },
+              "dungeon_type.$dungeon_type.unique_area",
+              "dungeon_type.$dungeon_type.dressing",
+              "dungeon_type.$dungeon_type.exits",
+              "danger"
+            ]
+          },
+          {
+            "tag": "unique2",
+            "title": "Unique",
+            "min": 14,
+            "max": 14,
+            "additional": [
+              {
+                "tag": "exploration",
+                "static": "reset to zero"
+              },
+              "dungeon_type.$dungeon_type.unique_area",
+              "dungeon_type.$dungeon_type.dressing",
+              "dungeon_type.$dungeon_type.exits",
+              {
+                "tag": "Contents",
+                "static": "Nothing unusual"
+              }
+            ]
+          },
+          {
+            "tag": "unique3",
+            "title": "Unique",
+            "min": 15,
+            "max": 15,
+            "additional": [
+              {
+                "tag": "exploration",
+                "static": "reset to zero"
+              },
+              "dungeon_type.$dungeon_type.unique_area",
+              "dungeon_type.$dungeon_type.dressing",
+              "dungeon_type.$dungeon_type.exits",
+              "danger",
+              "dungeon_type.$dungeon_type.discovery"
+            ]
+          },
+          {
+            "tag": "unique4",
+            "title": "Unique",
+            "min": 16,
+            "max": 16,
+            "additional": [
+              {
+                "tag": "exploration",
+                "static": "reset to zero"
+              },
+              "dungeon_type.$dungeon_type.unique_area",
+              "dungeon_type.$dungeon_type.dressing",
+              "dungeon_type.$dungeon_type.exits",
+              "danger",
+              "dungeon_type.$dungeon_type.discovery",
+              "dungeon_type.$dungeon_type.discovery"
+            ]
+          },
+          {
+            "tag": "unique5",
+            "title": "Unique",
+            "min": 17,
+            "max": 100,
+            "additional": [
+              {
+                "tag": "exploration",
+                "static": "reset to zero"
+              },
+              "dungeon_type.$dungeon_type.unique_area",
+              "dungeon_type.$dungeon_type.dressing",
+              "dungeon_type.$dungeon_type.exits",
+              {
+                "repeat": "d4",
+                "generate_outer": "dungeon_type.$dungeon_type.discovery"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "exits",
+        "hide": true,
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "1, including entrance",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "2, including entrance",
+            "min": 2,
+            "max": 5,
+            "additional": [
+              {
+                "repeat": 1,
+                "additional": [
+                  "details.direction",
+                  "dungeon_type.$dungeon_type.connection"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "3, including entrance",
+            "min": 6,
+            "max": 8,
+            "additional": [
+              {
+                "repeat": 2,
+                "additional": [
+                  "details.direction",
+                  "dungeon_type.$dungeon_type.connection"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "4, including entrance",
+            "min": 9,
+            "max": 10,
+            "additional": [
+              {
+                "repeat": 3,
+                "additional": [
+                  "details.direction",
+                  "dungeon_type.$dungeon_type.connection"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "5, including entrance",
+            "min": 11,
+            "max": 11,
+            "additional": [
+              {
+                "repeat": 4,
+                "additional": [
+                  "details.direction",
+                  "dungeon_type.$dungeon_type.connection"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "6, including entrance",
+            "min": 12,
+            "max": 12,
+            "additional": [
+              {
+                "repeat": 5,
+                "additional": [
+                  "details.direction",
+                  "dungeon_type.$dungeon_type.connection"
+                ]
+              }
             ]
           }
         ]
