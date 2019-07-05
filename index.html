@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.png?v=1">
 
-    <title>Perilous Winds Generator</title>
+    <title>PbtA Generators</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -32,18 +32,32 @@
 
 <body>
 
-<!--<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Perilous Winds Generator</a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">PbtA Generators</a>
         </div>
-    </div>
-</nav>-->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav main-menu">
+                <li class="active"><a href="#freebooters" class="data-choose">FotF Generator</a></li>
+                <li><a href="#perilous" class="data-choose">PW Generator</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+</nav>
 
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12 text-center">
-            <h1>Perilous Winds Generator</h1>
+            <h1>PbtA Generators</h1>
         </div>
     </div>
     <div class="row">
@@ -57,7 +71,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-6">
                     <div class="input-group form-group">
-                        <input type="text" class="form-control" id="diceRoller" placeholder="{x}d{y}+{z}" value="" />
+                        <input type="text" class="form-control" id="diceRoller" placeholder="{x}d{y}+{z}" value=""/>
                         <div class="input-group-btn">
                             <button class="btn btn-primary roll-dice" type="submit">Roll</button>
                         </div>
@@ -66,7 +80,7 @@
                 <div class="col-xs-12 col-sm-6">
                     <div class="input-group form-group">
                         <div class="input-group-addon">Mod +</div>
-                        <input type="text" class="form-control" id="diceModifier" placeholder="0" value="" />
+                        <input type="text" class="form-control" id="diceModifier" placeholder="0" value=""/>
                     </div>
                 </div>
             </div>
@@ -81,7 +95,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <h2>Output
-                        <button class="btn btn-xs btn-danger output-clear" type="submit">Clear</button></h2>
+                        <button class="btn btn-xs btn-danger output-clear" type="submit">Clear</button>
+                    </h2>
                 </div>
             </div>
             <div class="row">

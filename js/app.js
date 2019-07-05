@@ -6,25 +6,56 @@ define([
     'components/Generator',
     'components/TreeViewHelper',
     'components/SimplePrinter',
-    'json!/data/freebooters.json',
+    //'json!/data/freebooters.json',
     //'json!/data/perilous.json',
-], function($, _, treeview, Dice, Generator, TreeViewHelper, SimplePrinter, generatorData){
-    var run = function(){
+], function ($, _, treeview, Dice, Generator, TreeViewHelper, SimplePrinter) {
+
+    let generator;
+    let treeHelper;
+
+    let loadDataFile = function () {
+        let dataFileName = window.location.hash;
+        if (dataFileName === "") {
+            dataFileName = $('.main-menu li a:first').attr('href');
+        }
+
+        if (dataFileName.charAt(0) === "#") {
+            dataFileName = dataFileName.substr(1);
+        }
+
+        console.log(dataFileName);
+        $.ajax({
+            type: "GET",
+            url: "data/" + dataFileName + ".json",
+            async: true,
+            success: function (generatorData) {
+                generator.loadStorage(generatorData);
+
+                let entitiesTree = $('#entitiesTree');
+                entitiesTree.treeview({
+                    data: treeHelper.prepareTree(generator.getStorage().getTree()),
+                    highlightSelected: false
+                });
+                entitiesTree.treeview('collapseAll', {silent: true});
+            }
+        });
+    };
+
+    var run = function () {
         var dice = new Dice();
         var $outputDiv = $(".output");
-
-        var generator = new Generator();
-        var treeHelper = new TreeViewHelper();
+        treeHelper = new TreeViewHelper();
         var printer = new SimplePrinter();
 
-        generator.loadStorage(generatorData);
+        generator = new Generator();
+        loadDataFile();
 
-        var entitiesTree = $('#entitiesTree');
-        entitiesTree.treeview({
-            data: treeHelper.prepareTree(generator.getStorage().getTree()),
-            highlightSelected: false
+        $(window).on("hashchange", function () {
+            $(".main-menu li").removeClass("active");
+            $('.main-menu li a[href="' + window.location.hash + '"]').parent('li').addClass('active');
+            $outputDiv.html("");
+            loadDataFile();
         });
-        entitiesTree.treeview('collapseAll', { silent: true });
 
         $(document).on("click", ".generate-start", function () {
             var objectToGenerate = $(this).data('obj');
@@ -41,13 +72,13 @@ define([
         $(".roll-dice").on("click", function () {
             var $formulaInput = $('#diceRoller');
             var formula = $formulaInput.val();
-            if(_.isEmpty(formula)){
+            if (_.isEmpty(formula)) {
                 formula = "3d6";
                 $formulaInput.val(formula);
             }
             var result = dice.roll(formula);
             $outputDiv.prepend("<div class='generatedOutput'><h3 class='entityTitle'>Custom roll ("
-                + formula + ")</h3><p class=\"customRollResult\">"+result+"</p></div>");
+                + formula + ")</h3><p class=\"customRollResult\">" + result + "</p></div>");
         });
     };
 
