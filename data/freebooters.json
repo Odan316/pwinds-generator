@@ -1832,7 +1832,7 @@
               },
               {
                 "tag": "vast_cavern",
-                "title": "Vast cavern, holds 14d STRUCTURES",
+                "title": "Vast cavern, holds 1d4 STRUCTURES",
                 "min": 8,
                 "max": 8,
                 "additional": [
