@@ -2,7 +2,8 @@ requirejs.config({
     waitSeconds: 30,
     urlArgs: "bust=" + (new Date()).getTime(),
     shim : {
-        "bootstrap" : { "deps" :['jquery'] }
+        "bootstrap" : { "deps" :['jquery'] },
+        "bootstrap-treeview" : { "deps" :['jquery'] }
     },
     paths: {
         "require": "../vendor/requirejs/require",

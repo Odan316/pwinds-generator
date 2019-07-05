@@ -1371,14 +1371,14 @@
           },
           {
             "tag": "multiple",
-            "title": "Multiple entrances",
+            "title": "Multiple entrances: roll 1d10 1d6+1 times",
             "min": 11,
             "max": 12,
             "additional": [
               {
                 "tag": "entrances_amount",
-                "repeat": "d10",
-                "roll_result": "d6+1"
+                "repeat": "d6+1",
+                "generate_outer": "dungeon.overview_entrance"
               }
             ]
           }
@@ -2472,7 +2472,7 @@
               {
                 "tag": "elf",
                 "min": 9,
-                "max": 1
+                "max": 9
               },
               {
                 "tag": "Beast people",
@@ -2810,7 +2810,7 @@
                     "min": 8,
                     "max": 9,
                     "additional": [
-                     "dungeon_type.ruined_settlement.discovery.find"
+                      "dungeon_type.ruined_settlement.discovery.find"
                     ]
                   },
                   {
@@ -3674,10 +3674,10 @@
                     "title": "1d4 prisoners/escapees",
                     "min": 3,
                     "max": 3,
-                    "additional":  [
+                    "additional": [
                       {
                         "tag": "amount of persons",
-                        "roll_result":  "d4"
+                        "roll_result": "d4"
                       }
                     ]
                   },
@@ -4975,7 +4975,7 @@
                 "min": 2,
                 "max": 2,
                 "additional": [
-                 "danger.hazard.trap"
+                  "danger.hazard.trap"
                 ]
               },
               {
@@ -5325,7 +5325,7 @@
                     "additinal": [
                       {
                         "tag": "robbers_amount",
-                        "roll_result":  "d4"
+                        "roll_result": "d4"
                       }
                     ]
                   },
@@ -9013,7 +9013,7 @@
                 "min": 9,
                 "max": 9,
                 "additional": [
-                 "details.oddity"
+                  "details.oddity"
                 ]
               },
               {
