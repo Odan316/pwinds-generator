@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="tokc.shop" default="build">
+    <target name="build"
+            depends="prepare, bower, set-links"
+            description=""/>
+
+    <target name="prepare"
+            unless="prepare.done"
+            description="Prepare for build">
+
+        <tstamp>
+            <format property="NOW_STAMP" pattern="yyyy-MM-dd_hh:mm" locale="en"/>
+        </tstamp>
+
+        <mkdir dir="${workspace}/../builds/${NOW_STAMP}"/>
+        <copy todir="${workspace}/../builds/${NOW_STAMP}">
+            <fileset dir="${workspace}"/>
+        </copy>
+
+        <symlink link="${workspace}/../builds/${NOW_STAMP}/vendor"
+                 resource="${workspace}/../shared/vendor" />
+
+        <property name="prepare.done" value="true"/>
+    </target>
+
+    <target name="bower"
+            depends="prepare"
+            unless="bower.done"
+            description="Installing bower dependencies">
+        <exec executable="php" dir="${workspace}/../builds/${NOW_STAMP}" failonerror="true">
+            <arg value="bower" />
+            <arg value="install" />
+        </exec>
+        <property name="bower.done" value="true"/>
+    </target>
+
+    <target name="set-links"
+            unless="set-links.done"
+            depends="prepare, bower"
+            description="Set links for build">
+        <symlink action="delete"
+                 link="${workspace}/../www"
+                 failonerror="true" />
+        <symlink link="${workspace}/../www"
+                 resource="${workspace}/../builds/${NOW_STAMP}"
+                 failonerror="true" />
+        <property name="set-links.done" value="true"/>
+    </target>
+
+</project>
