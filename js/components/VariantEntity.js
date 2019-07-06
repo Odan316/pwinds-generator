@@ -40,7 +40,7 @@ define([
 
         /**
          * Dice formula that calculates in-game number of entities.
-         * DEPRECATED, use "roll_result" instead
+         * DEPRECATED, use "static" or "roll_result" instead
          *
          * @type {String[]|null}
          * @private
