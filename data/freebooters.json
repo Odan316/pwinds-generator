@@ -8016,6 +8016,7 @@
   },
   {
     "tag": "booty",
+    "static": "Please generate either \"Inherent booty\", or \"Owned booty\" (they are inside this entity)",
     "dictionaries": [
       {
         "tag": "inherent_booty",

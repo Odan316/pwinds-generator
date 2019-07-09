@@ -22,8 +22,10 @@ File should be written in JSON format and placed under /data directory
         "use_modifier"; true,
         // If set, dice formula from Roll field will be used instead of formula from "dice"
         "use_custom_dice" : true,
-        // array of entity variants for generation. 
-        // All entities lower that top-levelcan have additional fields
+        // Static value to be returned instead of generation with dice
+        "static": "Always one value",
+        // Array of entity variants for generation. 
+        // all entities lower that top-levelcan have additional fields
         "variants": [
         {
             "tag": "variant_tag",
@@ -36,8 +38,6 @@ File should be written in JSON format and placed under /data directory
             // If set, instead of generating this entity, other entity fill be found and generated.
             // Used for gemerate similar entities in different places
             "generate_outer": "outer_entity_tag",
-            // Static value to be returned instead of generation with dice
-            "static": "Always one value",
             // If set, number will be rolled and returned
             "roll_result": "2d4+5",
             // DEPRECATED - for ol data files only, use "static" or "roll_result" instead

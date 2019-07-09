@@ -49,14 +49,6 @@ define([
         var _numbers = null;
 
         /**
-         * Static value, entity simply returns it
-         *
-         * @type {String|null}
-         * @private
-         */
-        var _static = null;
-
-        /**
          * Dice formula that calculates in-game number as value
          *
          * @type {String|null}
@@ -98,14 +90,6 @@ define([
             return _generate_outer;
         };
 
-        this.isStatic = function(){
-            return _static != null;
-        };
-
-        this.getStaticValue = function(){
-          return _static;
-        };
-
         this.isRollResult = function(){
             return _roll_result != null;
         };
@@ -128,7 +112,6 @@ define([
          * @param data.additional
          * @param data.optional
          * @param data.generate_outer
-         * @param data.static
          * @param data.roll_result
          */
         this.load = function(data) {
@@ -145,9 +128,6 @@ define([
             }
             if("generate_outer" in data) {
                 _generate_outer = new StorageLink(data.generate_outer);
-            }
-            if("static" in data) {
-                _static = data.static;
             }
             if("roll_result" in data) {
                 _roll_result = data.roll_result;

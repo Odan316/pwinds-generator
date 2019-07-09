@@ -76,7 +76,7 @@ define([
                 $.extend(_vars, entity.getVars());
             }
 
-            if (entity instanceof VariantEntity && entity.isStatic()) {
+            if (entity.isStatic()) {
                 // Generate (simply return) static value
                 generatedEntity = new GeneratedEntity(entity.getTag(), entity.getTitle());
                 generatedEntity.variant = new GeneratedEntity("static", entity.getStaticValue());

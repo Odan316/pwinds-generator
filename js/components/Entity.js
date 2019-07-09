@@ -68,6 +68,15 @@ define([
          * @private
          */
         var _use_custom_dice = false;
+
+        /**
+         * Static value, entity simply returns it
+         *
+         * @type {String|null}
+         * @private
+         */
+        var _static = null;
+
         /**
          * List of child entities, calculator rolls _dice and finds appropriate child by _min and _max
          *
@@ -133,6 +142,7 @@ define([
          * @param data.dice
          * @param data.use_modifier
          * @param data.use_custom_dice
+         * @param data.static
          * @param data.variants
          * @param data.dictionaries
          * @param data.additional
@@ -162,6 +172,9 @@ define([
             }
             if ("use_custom_dice" in data) {
                 _use_custom_dice = data.use_custom_dice;
+            }
+            if("static" in data) {
+                _static = data.static;
             }
             if ("variants" in data) {
                 _variants = [];
@@ -381,15 +394,14 @@ define([
          */
         this.getChildEntityByRoll = function (roll) {
 
-            var entity = _.find(_variants, function (o) {
+            let entity = _.find(_variants, function (o) {
                 return o.getMin() <= roll && o.getMax() >= roll;
             });
 
+            // If exact variant is absent due to roll is too high - take variant with highest roll
             if(entity === undefined){
                 let lastVariant = _.last(_variants);
-                //console.log(lastVariant);
                 if(lastVariant !== undefined && roll > lastVariant.getMax()){
-                    //console.log(lastVariant);
                     entity = lastVariant;
                 }
             }
@@ -401,6 +413,15 @@ define([
                 console.log("Entity '" + _tag + "' | No child entity with roll '" + roll + "'");
                 return null;
             }
+        };
+
+
+        this.isStatic = function(){
+            return _static != null;
+        };
+
+        this.getStaticValue = function(){
+            return _static;
         };
 
         /**
