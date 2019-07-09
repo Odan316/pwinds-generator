@@ -8233,7 +8233,7 @@
             "tag": "booty16",
             "title": "Booty",
             "min": 16,
-            "max": 100,
+            "max": 16,
             "static": "BODY PART, and roll again",
             "additional": [
               {
@@ -10178,7 +10178,7 @@
             "tag": "unique5",
             "title": "Unique",
             "min": 17,
-            "max": 100,
+            "max": 17,
             "additional": [
               {
                 "tag": "exploration",

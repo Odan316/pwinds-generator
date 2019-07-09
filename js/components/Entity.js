@@ -385,6 +385,15 @@ define([
                 return o.getMin() <= roll && o.getMax() >= roll;
             });
 
+            if(entity === undefined){
+                let lastVariant = _.last(_variants);
+                //console.log(lastVariant);
+                if(lastVariant !== undefined && roll > lastVariant.getMax()){
+                    //console.log(lastVariant);
+                    entity = lastVariant;
+                }
+            }
+
             if (entity !== undefined) {
                 return entity;
             } else {
