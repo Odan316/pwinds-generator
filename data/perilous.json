@@ -1834,7 +1834,7 @@
         "additional": [
           {
             "tag": "effect",
-            "additional":  [
+            "additional": [
               "details.ability",
               "details.magic_type"
             ]
@@ -1892,7 +1892,7 @@
         "additional": [
           {
             "tag": "effect",
-            "additional":  [
+            "additional": [
               "details.ability",
               "details.magic_type"
             ]
@@ -1945,6 +1945,50 @@
           {
             "tag": "worth",
             "roll_result": "5d4x100"
+          }
+        ]
+      },
+      {
+        "tag": "treasure_15",
+        "title": "Everything needed to learn a new spell, and roll again",
+        "min": 15,
+        "max": 15,
+        "additional": [
+          "treasure"
+        ]
+      },
+      {
+        "tag": "treasure_16",
+        "title": "A portal or secret path (or direction to one), and roll again",
+        "min": 16,
+        "max": 16,
+        "additional": [
+          "treasure"
+        ]
+      },
+      {
+        "tag": "treasure_17",
+        "title": "Something relating to one of the characters, and roll again",
+        "min": 17,
+        "max": 17,
+        "additional": [
+          "treasure"
+        ]
+      },
+      {
+        "tag": "treasure_18",
+        "title": "A hoard: 1d10x1000 coins and 1d10x10 gems worth 2d6x100 each",
+        "min": 18,
+        "max": 18,
+        "additional": [
+          {
+            "tag": "coins",
+            "roll_result": "1d10x1000"
+          },
+          {
+            "tag": "gems",
+            "repeat": "d10x10",
+            "roll_result": "2d6x100"
           }
         ]
       }
