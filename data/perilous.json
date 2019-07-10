@@ -1,5 +1,894 @@
 [
   {
+    "tag": "map",
+    "title": "Draw the map",
+    "static":  "Choose one of the sub-entities",
+    "dictionaries": [
+      {
+        "tag": "region_name",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "adjective_terrain",
+            "title": "[Adjective] [Terrain]",
+            "min": 1,
+            "max": 4,
+            "template": [
+              {
+                "generate_outer": "map.region_name.adjective"
+              },
+              {
+                "generate_outer": "map.region_name.terrain"
+              }
+            ]
+          },
+          {
+            "tag": "terrain_noun",
+            "title": "[Terrain] of (the) [Noun]",
+            "min": 5,
+            "max": 6,
+            "template": [
+              {
+                "generate_outer": "map.region_name.Terrain"
+              },
+              {
+                "static": "of (the)"
+              },
+              {
+                "generate_outer": "map.region_name.noun"
+              }
+            ]
+          },
+          {
+            "tag": "terrain_adjective",
+            "title": "The [Terrain] [Adjective]",
+            "min": 7,
+            "max": 8,
+            "template": [
+              {
+                "static": "The"
+              },
+              {
+                "generate_outer": "map.region_name.terrain"
+              },
+              {
+                "generate_outer": "map.region_name.adjective"
+              }
+            ]
+          },
+          {
+            "tag": "noun_terrain",
+            "title": "[Noun] [Terrain]",
+            "min": 9,
+            "max": 10,
+            "template": [
+              {
+                "generate_outer": "map.region_name.noun"
+              },
+              {
+                "generate_outer": "map.region_name.terrain"
+              }
+            ]
+          },
+          {
+            "tag": "nouns_adjective_terrain",
+            "title": "[Noun]'s [Adjective] [Terrain]",
+            "min": 11,
+            "max": 11,
+            "template": [
+              {
+                "generate_outer": "map.region_name.noun"
+              },
+              {
+                "static": "'s"
+              },
+              {
+                "generate_outer": "map.region_name.adjective"
+              },
+              {
+                "generate_outer": "map.region_name.terrain"
+              }
+            ]
+          },
+          {
+            "tag": "adjective_terrain_noun",
+            "title": "[Adjective] [Terrain] of (the) [Noun]",
+            "min": 12,
+            "max": 12,
+            "template": [
+              {
+                "generate_outer": "map.region_name.adjective"
+              },
+              {
+                "generate_outer": "map.region_name.terrain"
+              },
+              {
+                "static": "of (the)"
+              },
+              {
+                "generate_outer": "map.region_name.noun"
+              }
+            ]
+          }
+        ],
+        "dictionaries": [
+          {
+            "tag": "terrain",
+            "title": "Terrain",
+            "dice": "d100",
+            "variants": [
+              {
+                "tag": "bay",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "bluffs",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "bog",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "cliffs",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "desert",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "downs",
+                "min": 11,
+                "max": 12
+              },
+              {
+                "tag": "dunes",
+                "min": 13,
+                "max": 14
+              },
+              {
+                "tag": "expanse",
+                "min": 15,
+                "max": 16
+              },
+              {
+                "tag": "fells",
+                "min": 17,
+                "max": 18
+              },
+              {
+                "tag": "fen",
+                "min": 19,
+                "max": 20
+              },
+              {
+                "tag": "flats",
+                "min": 21,
+                "max": 22
+              },
+              {
+                "tag": "foothills",
+                "min": 23,
+                "max": 24
+              },
+              {
+                "tag": "forest",
+                "min": 25,
+                "max": 26
+              },
+              {
+                "tag": "groves",
+                "min": 27,
+                "max": 28
+              },
+              {
+                "tag": "heath",
+                "min": 29,
+                "max": 30
+              },
+              {
+                "tag": "heights",
+                "min": 31,
+                "max": 32
+              },
+              {
+                "tag": "hills",
+                "min": 33,
+                "max": 34
+              },
+              {
+                "tag": "hollows",
+                "min": 35,
+                "max": 36
+              },
+              {
+                "tag": "jungle",
+                "min": 37,
+                "max": 38
+              },
+              {
+                "tag": "lake",
+                "min": 39,
+                "max": 40
+              },
+              {
+                "tag": "lowland",
+                "min": 41,
+                "max": 42
+              },
+              {
+                "tag": "march",
+                "min": 43,
+                "max": 44
+              },
+              {
+                "tag": "marsh",
+                "min": 45,
+                "max": 46
+              },
+              {
+                "tag": "meadows",
+                "min": 47,
+                "max": 48
+              },
+              {
+                "tag": "moor",
+                "min": 49,
+                "max": 50
+              },
+              {
+                "tag": "morass",
+                "min": 51,
+                "max": 52
+              },
+              {
+                "tag": "mounds",
+                "min": 53,
+                "max": 54
+              },
+              {
+                "tag": "mountains",
+                "min": 55,
+                "max": 56
+              },
+              {
+                "tag": "peaks",
+                "min": 57,
+                "max": 58
+              },
+              {
+                "tag": "plains",
+                "min": 59,
+                "max": 60
+              },
+              {
+                "tag": "prairie",
+                "min": 61,
+                "max": 62
+              },
+              {
+                "tag": "quagmire",
+                "min": 63,
+                "max": 64
+              },
+              {
+                "tag": "range",
+                "min": 65,
+                "max": 66
+              },
+              {
+                "tag": "reach",
+                "min": 67,
+                "max": 68
+              },
+              {
+                "tag": "sands",
+                "min": 69,
+                "max": 70
+              },
+              {
+                "tag": "savanna",
+                "min": 71,
+                "max": 72
+              },
+              {
+                "tag": "scraps",
+                "min": 73,
+                "max": 74
+              },
+              {
+                "tag": "sea",
+                "min": 75,
+                "max": 76
+              },
+              {
+                "tag": "slough",
+                "min": 77,
+                "max": 78
+              },
+              {
+                "tag": "sound",
+                "min": 79,
+                "max": 80
+              },
+              {
+                "tag": "steppe",
+                "min": 81,
+                "max": 82
+              },
+              {
+                "tag": "swamp",
+                "min": 83,
+                "max": 84
+              },
+              {
+                "tag": "sweep",
+                "min": 85,
+                "max": 86
+              },
+              {
+                "tag": "teeth",
+                "min": 87,
+                "max": 88
+              },
+              {
+                "tag": "thicket",
+                "min": 89,
+                "max": 90
+              },
+              {
+                "tag": "upland",
+                "min": 91,
+                "max": 92
+              },
+              {
+                "tag": "wall",
+                "min": 93,
+                "max": 94
+              },
+              {
+                "tag": "waste",
+                "min": 95,
+                "max": 96
+              },
+              {
+                "tag": "wasteland",
+                "min": 97,
+                "max": 98
+              },
+              {
+                "tag": "woods",
+                "min": 99,
+                "max": 100
+              }
+            ]
+          },
+          {
+            "tag": "adjective",
+            "title": "Adjective",
+            "dice": "d100",
+            "variants": [
+              {
+                "tag": "ageless",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "ashen",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "black",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "blessed",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "blighted",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "blue",
+                "min": 11,
+                "max": 12
+              },
+              {
+                "tag": "broken",
+                "min": 13,
+                "max": 14
+              },
+              {
+                "tag": "burning",
+                "min": 15,
+                "max": 16
+              },
+              {
+                "tag": "cold",
+                "min": 17,
+                "max": 18
+              },
+              {
+                "tag": "cursed",
+                "min": 19,
+                "max": 20
+              },
+              {
+                "tag": "dark",
+                "min": 21,
+                "max": 22
+              },
+              {
+                "tag": "dead",
+                "min": 23,
+                "max": 24
+              },
+              {
+                "tag": "deadly",
+                "min": 25,
+                "max": 26
+              },
+              {
+                "tag": "deep",
+                "min": 27,
+                "max": 28
+              },
+              {
+                "tag": "desolate",
+                "min": 29,
+                "max": 30
+              },
+              {
+                "tag": "diamond",
+                "min": 31,
+                "max": 32
+              },
+              {
+                "tag": "dim",
+                "min": 33,
+                "max": 34
+              },
+              {
+                "tag": "dismal",
+                "min": 35,
+                "max": 36
+              },
+              {
+                "tag": "dun",
+                "min": 37,
+                "max": 38
+              },
+              {
+                "tag": "eerie",
+                "min": 39,
+                "max": 40
+              },
+              {
+                "tag": "endless",
+                "min": 41,
+                "max": 42
+              },
+              {
+                "tag": "fallen",
+                "min": 43,
+                "max": 44
+              },
+              {
+                "tag": "far",
+                "min": 45,
+                "max": 46
+              },
+              {
+                "tag": "fell",
+                "min": 47,
+                "max": 48
+              },
+              {
+                "tag": "flaming",
+                "min": 49,
+                "max": 50
+              },
+              {
+                "tag": "forgotten",
+                "min": 51,
+                "max": 52
+              },
+              {
+                "tag": "forsaken",
+                "min": 53,
+                "max": 54
+              },
+              {
+                "tag": "frozen",
+                "min": 55,
+                "max": 56
+              },
+              {
+                "tag": "glittering",
+                "min": 57,
+                "max": 58
+              },
+              {
+                "tag": "golden",
+                "min": 59,
+                "max": 60
+              },
+              {
+                "tag": "green",
+                "min": 61,
+                "max": 62
+              },
+              {
+                "tag": "grim",
+                "min": 63,
+                "max": 64
+              },
+              {
+                "tag": "holy",
+                "min": 65,
+                "max": 66
+              },
+              {
+                "tag": "impassable",
+                "min": 67,
+                "max": 68
+              },
+              {
+                "tag": "jagged",
+                "min": 69,
+                "max": 70
+              },
+              {
+                "tag": "light",
+                "min": 71,
+                "max": 72
+              },
+              {
+                "tag": "long",
+                "min": 73,
+                "max": 74
+              },
+              {
+                "tag": "misty",
+                "min": 75,
+                "max": 76
+              },
+              {
+                "tag": "perilous",
+                "min": 77,
+                "max": 78
+              },
+              {
+                "tag": "purple",
+                "min": 79,
+                "max": 80
+              },
+              {
+                "tag": "red",
+                "min": 81,
+                "max": 82
+              },
+              {
+                "tag": "savage",
+                "min": 83,
+                "max": 84
+              },
+              {
+                "tag": "shadowy",
+                "min": 85,
+                "max": 86
+              },
+              {
+                "tag": "shattered",
+                "min": 87,
+                "max": 88
+              },
+              {
+                "tag": "shifting",
+                "min": 89,
+                "max": 90
+              },
+              {
+                "tag": "shining",
+                "min": 91,
+                "max": 92
+              },
+              {
+                "tag": "silver",
+                "min": 93,
+                "max": 94
+              },
+              {
+                "tag": "white",
+                "min": 95,
+                "max": 96
+              },
+              {
+                "tag": "wicked",
+                "min": 97,
+                "max": 98
+              },
+              {
+                "tag": "yellow",
+                "min": 99,
+                "max": 100
+              }
+            ]
+          },
+          {
+            "tag": "noun",
+            "title": "Noun",
+            "dice": "d100",
+            "variants": [
+              {
+                "tag": "name",
+                "title": "John Doe",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "ash",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "bone",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "darkness",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "dead",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "death",
+                "min": 11,
+                "max": 12
+              },
+              {
+                "tag": "desolation",
+                "min": 13,
+                "max": 14
+              },
+              {
+                "tag": "despair",
+                "min": 15,
+                "max": 16
+              },
+              {
+                "tag": "devil",
+                "min": 17,
+                "max": 18
+              },
+              {
+                "tag": "doom",
+                "min": 19,
+                "max": 20
+              },
+              {
+                "tag": "dragon",
+                "min": 21,
+                "max": 22
+              },
+              {
+                "tag": "fate",
+                "min": 23,
+                "max": 24
+              },
+              {
+                "tag": "fear",
+                "min": 25,
+                "max": 26
+              },
+              {
+                "tag": "fire",
+                "min": 27,
+                "max": 28
+              },
+              {
+                "tag": "fury",
+                "min": 29,
+                "max": 30
+              },
+              {
+                "tag": "ghost",
+                "min": 31,
+                "max": 32
+              },
+              {
+                "tag": "giant",
+                "min": 33,
+                "max": 34
+              },
+              {
+                "tag": "god",
+                "min": 35,
+                "max": 36
+              },
+              {
+                "tag": "gold",
+                "min": 37,
+                "max": 38
+              },
+              {
+                "tag": "heaven",
+                "min": 39,
+                "max": 40
+              },
+              {
+                "tag": "hell",
+                "min": 41,
+                "max": 42
+              },
+              {
+                "tag": "honor",
+                "min": 43,
+                "max": 44
+              },
+              {
+                "tag": "hope",
+                "min": 45,
+                "max": 46
+              },
+              {
+                "tag": "horror",
+                "min": 47,
+                "max": 48
+              },
+              {
+                "tag": "king",
+                "min": 49,
+                "max": 50
+              },
+              {
+                "tag": "life",
+                "min": 51,
+                "max": 52
+              },
+              {
+                "tag": "light",
+                "min": 53,
+                "max": 54
+              },
+              {
+                "tag": "lord",
+                "min": 55,
+                "max": 56
+              },
+              {
+                "tag": "mist",
+                "min": 57,
+                "max": 58
+              },
+              {
+                "tag": "peril",
+                "min": 59,
+                "max": 60
+              },
+              {
+                "tag": "queen",
+                "min": 61,
+                "max": 62
+              },
+              {
+                "tag": "rain",
+                "min": 63,
+                "max": 64
+              },
+              {
+                "tag": "refuge",
+                "min": 65,
+                "max": 66
+              },
+              {
+                "tag": "regret",
+                "min": 67,
+                "max": 68
+              },
+              {
+                "tag": "saviour",
+                "min": 69,
+                "max": 70
+              },
+              {
+                "tag": "shadow",
+                "min": 71,
+                "max": 72
+              },
+              {
+                "tag": "silver",
+                "min": 73,
+                "max": 74
+              },
+              {
+                "tag": "skull",
+                "min": 75,
+                "max": 76
+              },
+              {
+                "tag": "sky",
+                "min": 77,
+                "max": 78
+              },
+              {
+                "tag": "smoke",
+                "min": 79,
+                "max": 80
+              },
+              {
+                "tag": "snake",
+                "min": 81,
+                "max": 82
+              },
+              {
+                "tag": "sorrow",
+                "min": 83,
+                "max": 84
+              },
+              {
+                "tag": "storm",
+                "min": 85,
+                "max": 86
+              },
+              {
+                "tag": "sun",
+                "min": 87,
+                "max": 88
+              },
+              {
+                "tag": "thorn",
+                "min": 89,
+                "max": 90
+              },
+              {
+                "tag": "thunder",
+                "min": 91,
+                "max": 92
+              },
+              {
+                "tag": "traitor",
+                "min": 93,
+                "max": 94
+              },
+              {
+                "tag": "troll",
+                "min": 95,
+                "max": 96
+              },
+              {
+                "tag": "victory",
+                "min": 97,
+                "max": 98
+              },
+              {
+                "tag": "witch",
+                "min": 99,
+                "max": 100
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "tag": "discovery",
     "dice": "d12",
     "variants": [
@@ -48,7 +937,7 @@
             ]
           },
           {
-            "tag": "divine",
+            "tag": "planar",
             "min": 10,
             "max": 11,
             "variants": [
@@ -82,7 +971,7 @@
             ]
           },
           {
-            "tag": "planar",
+            "tag": "divine",
             "min": 12,
             "max": 12,
             "variants": [
