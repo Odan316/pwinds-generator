@@ -15,12 +15,16 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143400470-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'UA-143400470-1');
     </script>
-    
+
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -62,6 +66,14 @@
                 <li>
                     <button type="button" class="btn btn-warning navbar-btn" data-toggle="modal" data-target="#about">
                         About
+                    </button>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <button type="button" class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#updates">
+                        What's new
                     </button>
                 </li>
             </ul>
@@ -128,7 +140,7 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
-                <h2 class="modal-title" id="myModalLabel">About</h2>
+                <h2 class="modal-title" id="aboutLabel">About</h2>
             </div>
             <div class="modal-body">
                 This is online tool for generation various in-game entities for role-playing tabletop games based on
@@ -158,6 +170,29 @@
     </div>
 </div>
 
+<div class="modal fade" id="updates" tabindex="-1" role="dialog" aria-labelledby="updatesLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h2 class="modal-title" id="updatesLabel">What's new</h2>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3>2019-07-10</h3>
+                        <ul>
+                            <li>GUI - "What's new" section added :)</li>
+                            <li>Perilous Wilds: Region name and Place name generators</li>
+                            <li>Freebooters: Booty value generation alongside with value dice formula</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Require JS initialization -->
 <!-- Placed at the end of the document so the pages load faster -->
