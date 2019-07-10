@@ -29,7 +29,7 @@
             "max": 6,
             "template": [
               {
-                "generate_outer": "map.region_name.Terrain"
+                "generate_outer": "map.region_name.terrain"
               },
               {
                 "static": "of (the)"
@@ -879,6 +879,893 @@
               },
               {
                 "tag": "witch",
+                "min": 99,
+                "max": 100
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "place_name",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "the_place",
+            "title": "The [Place]",
+            "min": 1,
+            "max": 2,
+            "template": [
+              {
+                "static": "The"
+              },
+              {
+                "generate_outer": "map.place_name.place"
+              }
+            ]
+          },
+          {
+            "tag": "the_adjective_place",
+            "title": "The [Adjective] [Place]",
+            "min": 3,
+            "max": 4,
+            "template": [
+              {
+                "static": "The"
+              },
+              {
+                "generate_outer": "map.place_name.adjective"
+              },
+              {
+                "generate_outer": "map.place_name.place"
+              }
+            ]
+          },
+          {
+            "tag": "terrain_adjective",
+            "title": "The [Place] of (the) [Noun]",
+            "min": 5,
+            "max": 6,
+            "template": [
+              {
+                "static": "The"
+              },
+              {
+                "generate_outer": "map.place_name.place"
+              },
+              {
+                "static": "of (the)"
+              },
+              {
+                "generate_outer": "map.place_name.noun"
+              }
+            ]
+          },
+          {
+            "tag": "the_nouns_place",
+            "title": "The [Noun]'s [Place]",
+            "min": 7,
+            "max": 8,
+            "template": [
+              {
+                "static": "The"
+              },
+              {
+                "generate_outer": "map.place_name.noun"
+              },
+              {
+                "static": "'s"
+              },
+              {
+                "generate_outer": "map.place_name.place"
+              }
+            ]
+          },
+          {
+            "tag": "place_adjective_noun",
+            "title": "[Place] of the [Adjective] [Noun]",
+            "min": 9,
+            "max": 10,
+            "template": [
+              {
+                "generate_outer": "map.place_name.place"
+              },
+              {
+                "static": "of the"
+              },
+              {
+                "generate_outer": "map.place_name.adjective"
+              },
+              {
+                "generate_outer": "map.place_name.noun"
+              }
+            ]
+          },
+          {
+            "tag": "adjective_noun",
+            "title": "The [Adjective] [Noun]",
+            "min": 11,
+            "max": 12,
+            "template": [
+              {
+                "static": "The"
+              },
+              {
+                "generate_outer": "map.place_name.adjective"
+              },
+              {
+                "generate_outer": "map.place_name.noun"
+              }
+            ]
+          }
+        ],
+        "dictionaries": [
+          {
+            "tag": "place",
+            "dice": "d100",
+            "variants": [
+              {
+                "tag": "barrier",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "beach",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "bowl",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "camp",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "cave",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "circle",
+                "min": 11,
+                "max": 12
+              },
+              {
+                "tag": "city",
+                "min": 13,
+                "max": 14
+              },
+              {
+                "tag": "cliff",
+                "min": 15,
+                "max": 16
+              },
+              {
+                "tag": "crater",
+                "min": 17,
+                "max": 18
+              },
+              {
+                "tag": "crossing",
+                "min": 19,
+                "max": 20
+              },
+              {
+                "tag": "crypt",
+                "min": 21,
+                "max": 22
+              },
+              {
+                "tag": "den",
+                "min": 23,
+                "max": 24
+              },
+              {
+                "tag": "ditch",
+                "min": 25,
+                "max": 26
+              },
+              {
+                "tag": "falls",
+                "min": 27,
+                "max": 28
+              },
+              {
+                "tag": "fence",
+                "min": 29,
+                "max": 30
+              },
+              {
+                "tag": "field",
+                "min": 31,
+                "max": 32
+              },
+              {
+                "tag": "fort",
+                "min": 33,
+                "max": 34
+              },
+              {
+                "tag": "gate",
+                "min": 35,
+                "max": 36
+              },
+              {
+                "tag": "grove",
+                "min": 37,
+                "max": 38
+              },
+              {
+                "tag": "hill",
+                "min": 39,
+                "max": 40
+              },
+              {
+                "tag": "hole",
+                "min": 41,
+                "max": 42
+              },
+              {
+                "tag": "hut",
+                "min": 43,
+                "max": 44
+              },
+              {
+                "tag": "keep",
+                "min": 45,
+                "max": 46
+              },
+              {
+                "tag": "lake",
+                "min": 47,
+                "max": 48
+              },
+              {
+                "tag": "marsh",
+                "min": 49,
+                "max": 50
+              },
+              {
+                "tag": "meadow",
+                "min": 51,
+                "max": 52
+              },
+              {
+                "tag": "mountain",
+                "min": 53,
+                "max": 54
+              },
+              {
+                "tag": "pit",
+                "min": 55,
+                "max": 56
+              },
+              {
+                "tag": "post",
+                "min": 57,
+                "max": 58
+              },
+              {
+                "tag": "ridge",
+                "min": 59,
+                "max": 60
+              },
+              {
+                "tag": "ring",
+                "min": 61,
+                "max": 62
+              },
+              {
+                "tag": "rise",
+                "min": 63,
+                "max": 64
+              },
+              {
+                "tag": "road",
+                "min": 65,
+                "max": 66
+              },
+              {
+                "tag": "rock",
+                "min": 67,
+                "max": 68
+              },
+              {
+                "tag": "ruin",
+                "min": 69,
+                "max": 70
+              },
+              {
+                "tag": "shrine",
+                "min": 71,
+                "max": 72
+              },
+              {
+                "tag": "spire",
+                "min": 73,
+                "max": 74
+              },
+              {
+                "tag": "spring",
+                "min": 75,
+                "max": 76
+              },
+              {
+                "tag": "stone",
+                "min": 77,
+                "max": 78
+              },
+              {
+                "tag": "tangle",
+                "min": 79,
+                "max": 80
+              },
+              {
+                "tag": "temple",
+                "min": 81,
+                "max": 82
+              },
+              {
+                "tag": "throne",
+                "min": 83,
+                "max": 84
+              },
+              {
+                "tag": "tomb",
+                "min": 85,
+                "max": 86
+              },
+              {
+                "tag": "tower",
+                "min": 87,
+                "max": 88
+              },
+              {
+                "tag": "town",
+                "min": 89,
+                "max": 90
+              },
+              {
+                "tag": "tree",
+                "min": 91,
+                "max": 92
+              },
+              {
+                "tag": "vale",
+                "min": 93,
+                "max": 94
+              },
+              {
+                "tag": "valley",
+                "min": 95,
+                "max": 96
+              },
+              {
+                "tag": "village",
+                "min": 97,
+                "max": 98
+              },
+              {
+                "tag": "wall",
+                "min": 99,
+                "max": 100
+              }
+            ]
+          },
+          {
+            "tag": "adjective",
+            "title": "Adjective",
+            "dice": "d100",
+            "variants": [
+              {
+                "tag": "ancient",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "ashen",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "black",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "bloody",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "blue",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "bright",
+                "min": 11,
+                "max": 12
+              },
+              {
+                "tag": "broken",
+                "min": 13,
+                "max": 14
+              },
+              {
+                "tag": "burning",
+                "min": 15,
+                "max": 16
+              },
+              {
+                "tag": "clouded",
+                "min": 17,
+                "max": 18
+              },
+              {
+                "tag": "copper",
+                "min": 19,
+                "max": 20
+              },
+              {
+                "tag": "cracked",
+                "min": 21,
+                "max": 22
+              },
+              {
+                "tag": "dark",
+                "min": 23,
+                "max": 24
+              },
+              {
+                "tag": "dead",
+                "min": 25,
+                "max": 26
+              },
+              {
+                "tag": "doomed",
+                "min": 27,
+                "max": 28
+              },
+              {
+                "tag": "endless",
+                "min": 29,
+                "max": 30
+              },
+              {
+                "tag": "fallen",
+                "min": 31,
+                "max": 32
+              },
+              {
+                "tag": "far",
+                "min": 33,
+                "max": 34
+              },
+              {
+                "tag": "fearsome",
+                "min": 35,
+                "max": 36
+              },
+              {
+                "tag": "floating",
+                "min": 37,
+                "max": 38
+              },
+              {
+                "tag": "forbidden",
+                "min": 39,
+                "max": 40
+              },
+              {
+                "tag": "frozen",
+                "min": 41,
+                "max": 42
+              },
+              {
+                "tag": "ghostly",
+                "min": 43,
+                "max": 44
+              },
+              {
+                "tag": "gloomy",
+                "min": 45,
+                "max": 46
+              },
+              {
+                "tag": "golden",
+                "min": 47,
+                "max": 48
+              },
+              {
+                "tag": "grim",
+                "min": 49,
+                "max": 50
+              },
+              {
+                "tag": "hidden",
+                "min": 51,
+                "max": 52
+              },
+              {
+                "tag": "high",
+                "min": 53,
+                "max": 54
+              },
+              {
+                "tag": "iron",
+                "min": 55,
+                "max": 56
+              },
+              {
+                "tag": "jagged",
+                "min": 57,
+                "max": 58
+              },
+              {
+                "tag": "lonely",
+                "min": 59,
+                "max": 60
+              },
+              {
+                "tag": "lost",
+                "min": 61,
+                "max": 62
+              },
+              {
+                "tag": "low",
+                "min": 63,
+                "max": 64
+              },
+              {
+                "tag": "near",
+                "min": 65,
+                "max": 66
+              },
+              {
+                "tag": "petrified",
+                "min": 67,
+                "max": 68
+              },
+              {
+                "tag": "red",
+                "min": 69,
+                "max": 70
+              },
+              {
+                "tag": "screaming",
+                "min": 71,
+                "max": 72
+              },
+              {
+                "tag": "sharp",
+                "min": 73,
+                "max": 74
+              },
+              {
+                "tag": "shattered",
+                "min": 75,
+                "max": 76
+              },
+              {
+                "tag": "shifting",
+                "min": 77,
+                "max": 78
+              },
+              {
+                "tag": "shining",
+                "min": 79,
+                "max": 80
+              },
+              {
+                "tag": "shivering",
+                "min": 81,
+                "max": 82
+              },
+              {
+                "tag": "shrouded",
+                "min": 83,
+                "max": 84
+              },
+              {
+                "tag": "silver",
+                "min": 85,
+                "max": 86
+              },
+              {
+                "tag": "stalwart",
+                "min": 87,
+                "max": 88
+              },
+              {
+                "tag": "stoney",
+                "min": 89,
+                "max": 90
+              },
+              {
+                "tag": "sunken",
+                "min": 91,
+                "max": 92
+              },
+              {
+                "tag": "thorny",
+                "min": 93,
+                "max": 94
+              },
+              {
+                "tag": "thundering",
+                "min": 95,
+                "max": 96
+              },
+              {
+                "tag": "white",
+                "min": 97,
+                "max": 98
+              },
+              {
+                "tag": "withered",
+                "min": 99,
+                "max": 100
+              }
+            ]
+          },
+          {
+            "tag": "noun",
+            "title": "Noun",
+            "dice": "d100",
+            "variants": [
+              {
+                "tag": "name",
+                "title": "John Doe",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "arm",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "ash",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "blood",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "child",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "cinder",
+                "min": 11,
+                "max": 12
+              },
+              {
+                "tag": "corpse",
+                "min": 13,
+                "max": 14
+              },
+              {
+                "tag": "crystal",
+                "min": 15,
+                "max": 16
+              },
+              {
+                "tag": "dagger",
+                "min": 17,
+                "max": 18
+              },
+              {
+                "tag": "death",
+                "min": 19,
+                "max": 20
+              },
+              {
+                "tag": "demon",
+                "min": 21,
+                "max": 22
+              },
+              {
+                "tag": "devil",
+                "min": 23,
+                "max": 24
+              },
+              {
+                "tag": "doom",
+                "min": 25,
+                "max": 26
+              },
+              {
+                "tag": "eye",
+                "min": 27,
+                "max": 28
+              },
+              {
+                "tag": "fear",
+                "min": 29,
+                "max": 30
+              },
+              {
+                "tag": "finger",
+                "min": 31,
+                "max": 32
+              },
+              {
+                "tag": "fire",
+                "min": 33,
+                "max": 34
+              },
+              {
+                "tag": "foot",
+                "min": 35,
+                "max": 36
+              },
+              {
+                "tag": "ghost",
+                "min": 37,
+                "max": 38
+              },
+              {
+                "tag": "giant",
+                "min": 39,
+                "max": 40
+              },
+              {
+                "tag": "goblin",
+                "min": 41,
+                "max": 42
+              },
+              {
+                "tag": "god",
+                "min": 43,
+                "max": 44
+              },
+              {
+                "tag": "gold",
+                "min": 45,
+                "max": 46
+              },
+              {
+                "tag": "hand",
+                "min": 47,
+                "max": 48
+              },
+              {
+                "tag": "head",
+                "min": 49,
+                "max": 50
+              },
+              {
+                "tag": "heart",
+                "min": 51,
+                "max": 52
+              },
+              {
+                "tag": "hero",
+                "min": 53,
+                "max": 54
+              },
+              {
+                "tag": "hope",
+                "min": 55,
+                "max": 56
+              },
+              {
+                "tag": "king",
+                "min": 57,
+                "max": 58
+              },
+              {
+                "tag": "knave",
+                "min": 59,
+                "max": 60
+              },
+              {
+                "tag": "knight",
+                "min": 61,
+                "max": 62
+              },
+              {
+                "tag": "muck",
+                "min": 63,
+                "max": 64
+              },
+              {
+                "tag": "mud",
+                "min": 65,
+                "max": 66
+              },
+              {
+                "tag": "priest",
+                "min": 67,
+                "max": 68
+              },
+              {
+                "tag": "queen",
+                "min": 69,
+                "max": 70
+              },
+              {
+                "tag": "sailor",
+                "min": 71,
+                "max": 72
+              },
+              {
+                "tag": "silver",
+                "min": 73,
+                "max": 74
+              },
+              {
+                "tag": "skull",
+                "min": 75,
+                "max": 76
+              },
+              {
+                "tag": "smoke",
+                "min": 77,
+                "max": 78
+              },
+              {
+                "tag": "souls",
+                "min": 79,
+                "max": 80
+              },
+              {
+                "tag": "spear",
+                "min": 81,
+                "max": 82
+              },
+              {
+                "tag": "spirit",
+                "min": 83,
+                "max": 84
+              },
+              {
+                "tag": "stone",
+                "min": 85,
+                "max": 86
+              },
+              {
+                "tag": "sword",
+                "min": 87,
+                "max": 88
+              },
+              {
+                "tag": "thief",
+                "min": 89,
+                "max": 90
+              },
+              {
+                "tag": "troll",
+                "min": 91,
+                "max": 92
+              },
+              {
+                "tag": "warrior",
+                "min": 93,
+                "max": 94
+              },
+              {
+                "tag": "water",
+                "min": 95,
+                "max": 96
+              },
+              {
+                "tag": "witch",
+                "min": 97,
+                "max": 98
+              },
+              {
+                "tag": "wizard",
                 "min": 99,
                 "max": 100
               }
