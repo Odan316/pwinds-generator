@@ -8025,7 +8025,7 @@
         "use_custom_dice": true,
         "variants": [
           {
-            "tag": "booty1",
+            "tag": "booty_1",
             "title": "Booty",
             "min": 1,
             "max": 1,
@@ -8038,7 +8038,7 @@
             ]
           },
           {
-            "tag": "booty2",
+            "tag": "booty_2",
             "title": "Booty",
             "min": 2,
             "max": 2,
@@ -8046,12 +8046,13 @@
             "additional": [
               {
                 "tag": "value",
-                "static": "1d4"
+                "title": "Value - 1d4",
+                "roll_result": "d4"
               }
             ]
           },
           {
-            "tag": "booty3",
+            "tag": "booty_3",
             "title": "Booty",
             "min": 3,
             "max": 3,
@@ -8059,13 +8060,14 @@
             "additional": [
               {
                 "tag": "value",
-                "static": "2d6"
+                "title": "Value - 2d6",
+                "roll_result": "2d6"
               },
               "booty.body_part"
             ]
           },
           {
-            "tag": "booty4",
+            "tag": "booty_4",
             "title": "Booty",
             "min": 4,
             "max": 4,
@@ -8073,12 +8075,13 @@
             "additional": [
               {
                 "tag": "value",
-                "static": "4d6"
+                "title": "Value - 4d6",
+                "roll_result": "4d6"
               }
             ]
           },
           {
-            "tag": "booty5",
+            "tag": "booty_5",
             "title": "Booty",
             "min": 5,
             "max": 5,
@@ -8086,13 +8089,14 @@
             "additional": [
               {
                 "tag": "value",
-                "static": "4d6 x 2"
+                "title": "Value - 4d6 x 2",
+                "roll_result": "4d6x2"
               },
               "booty.body_part"
             ]
           },
           {
-            "tag": "booty6",
+            "tag": "booty_6",
             "title": "Booty",
             "min": 6,
             "max": 6,
@@ -8100,12 +8104,13 @@
             "additional": [
               {
                 "tag": "value",
-                "static": "6d6 x 2"
+                "title": "Value - 6d6 x 2",
+                "roll_result": "6d6x2"
               }
             ]
           },
           {
-            "tag": "booty7",
+            "tag": "booty_7",
             "title": "Booty",
             "min": 7,
             "max": 7,
@@ -8113,13 +8118,14 @@
             "additional": [
               {
                 "tag": "value",
-                "static": "3d8 x 5"
+                "title": "Value - 3d8 x 5",
+                "roll_result": "3d8x5"
               },
               "booty.body_part"
             ]
           },
           {
-            "tag": "booty8",
+            "tag": "booty_8",
             "title": "Booty",
             "min": 8,
             "max": 8,
@@ -8127,12 +8133,13 @@
             "additional": [
               {
                 "tag": "value",
-                "static": "4d8 x 5"
+                "title": "Value - 4d8 x 5",
+                "roll_result": "4d8x5"
               }
             ]
           },
           {
-            "tag": "booty9",
+            "tag": "booty_9",
             "title": "Booty",
             "min": 9,
             "max": 9,
@@ -8140,12 +8147,13 @@
             "additional": [
               {
                 "tag": "value",
-                "static": "5d8 x 5"
+                "title": "Value - 5d8 x 5",
+                "roll_result": "5d8x5"
               }
             ]
           },
           {
-            "tag": "booty10",
+            "tag": "booty_10",
             "title": "Booty",
             "min": 10,
             "max": 10,
@@ -8153,14 +8161,15 @@
             "additional": [
               {
                 "tag": "value",
-                "static": "6d8 x 5"
+                "title": "Value - 6d8 x 5",
+                "roll_result": "6d8x5"
               },
               "booty.body_part",
               "booty.inherent_booty"
             ]
           },
           {
-            "tag": "booty11",
+            "tag": "booty_11",
             "title": "Booty",
             "min": 11,
             "max": 11,
@@ -8168,12 +8177,13 @@
             "additional": [
               {
                 "tag": "value",
-                "static": "8d8 x 5"
+                "title": "Value - 8d8 x 5",
+                "roll_result": "8d8x5"
               }
             ]
           },
           {
-            "tag": "booty12",
+            "tag": "booty_12",
             "title": "Booty",
             "min": 12,
             "max": 12,
@@ -8181,14 +8191,15 @@
             "additional": [
               {
                 "tag": "value",
-                "static": "10d8 x 5"
+                "title": "Value - 10d8 x 5",
+                "roll_result": "10d8x5"
               },
               "booty.body_part",
               "booty.inherent_booty"
             ]
           },
           {
-            "tag": "booty13",
+            "tag": "booty_13",
             "title": "Booty",
             "min": 13,
             "max": 13,
@@ -8196,13 +8207,14 @@
             "additional": [
               {
                 "tag": "value",
-                "static": "5d10 x 10"
+                "title": "Value - 5d10 x 10",
+                "roll_result": "5d10x10"
               },
               "booty.body_part"
             ]
           },
           {
-            "tag": "booty14",
+            "tag": "booty_14",
             "title": "Booty",
             "min": 14,
             "max": 14,
@@ -8210,14 +8222,15 @@
             "additional": [
               {
                 "tag": "value",
-                "static": "6d10 x 10"
+                "title": "Value - 6d10 x 10",
+                "roll_result": "6d10x10"
               },
               "booty.body_part",
               "booty.inherent_booty"
             ]
           },
           {
-            "tag": "booty15",
+            "tag": "booty_15",
             "title": "Booty",
             "min": 15,
             "max": 15,
@@ -8225,13 +8238,14 @@
             "additional": [
               {
                 "tag": "value",
-                "static": "8d10 x 10"
+                "title": "Value - 8d10 x 10",
+                "roll_result": "8d10x10"
               },
               "booty.body_part"
             ]
           },
           {
-            "tag": "booty16",
+            "tag": "booty_16",
             "title": "Booty",
             "min": 16,
             "max": 16,
@@ -8239,7 +8253,8 @@
             "additional": [
               {
                 "tag": "value",
-                "static": "10d10 x 10"
+                "title": "Value - 10d10 x 10",
+                "roll_result": "10d10x10"
               },
               "booty.body_part",
               "booty.inherent_booty"
@@ -8254,7 +8269,7 @@
         "use_custom_dice": true,
         "variants": [
           {
-            "tag": "booty1",
+            "tag": "booty_1",
             "title": "Booty",
             "min": 1,
             "max": 1,
@@ -8267,7 +8282,7 @@
             ]
           },
           {
-            "tag": "booty2",
+            "tag": "booty_2",
             "title": "Booty",
             "min": 2,
             "max": 2,
@@ -8275,12 +8290,13 @@
             "additional": [
               {
                 "tag": "value",
-                "roll_result": "1d4"
+                "title": "Value - 1d4",
+                "roll_result": "d4"
               }
             ]
           },
           {
-            "tag": "booty3",
+            "tag": "booty_3",
             "title": "Booty",
             "min": 3,
             "max": 3,
@@ -8288,7 +8304,8 @@
             "additional": [
               {
                 "tag": "value",
-                "static": "2d6"
+                "title": "Value - 2d6",
+                "roll_result": "2d6"
               },
               [
                 "booty.item",
@@ -8297,7 +8314,7 @@
             ]
           },
           {
-            "tag": "booty4",
+            "tag": "booty_4",
             "title": "Booty",
             "min": 4,
             "max": 4,
@@ -8311,7 +8328,7 @@
             ]
           },
           {
-            "tag": "booty5",
+            "tag": "booty_5",
             "title": "Booty",
             "min": 5,
             "max": 5,
@@ -8324,7 +8341,7 @@
             ]
           },
           {
-            "tag": "booty6",
+            "tag": "booty_6",
             "title": "Booty",
             "min": 6,
             "max": 6,
@@ -8332,14 +8349,15 @@
             "additional": [
               {
                 "tag": "value",
-                "static": "6d6 x 2"
+                "title": "Value - 6d6 x 2",
+                "roll_result": "6d6x2"
               },
               "booty.item",
               "booty.owned_booty"
             ]
           },
           {
-            "tag": "booty7",
+            "tag": "booty_7",
             "title": "Booty",
             "min": 7,
             "max": 7,
@@ -8347,7 +8365,8 @@
             "additional": [
               {
                 "tag": "value",
-                "static": "3d8 x 5"
+                "title": "Value - 3d8 x 5",
+                "roll_result": "3d8x5"
               },
               [
                 "booty.valuable",
@@ -8356,7 +8375,7 @@
             ]
           },
           {
-            "tag": "booty8",
+            "tag": "booty_8",
             "title": "Booty",
             "min": 8,
             "max": 8,
@@ -8370,7 +8389,7 @@
             ]
           },
           {
-            "tag": "booty9",
+            "tag": "booty_9",
             "title": "Booty",
             "min": 9,
             "max": 9,
@@ -8383,7 +8402,7 @@
             ]
           },
           {
-            "tag": "booty10",
+            "tag": "booty_10",
             "title": "Booty",
             "min": 10,
             "max": 10,
@@ -8391,14 +8410,15 @@
             "additional": [
               {
                 "tag": "value",
-                "static": "6d8 x 5"
+                "title": "Value - 6d8 x 5",
+                "roll_result": "6d8x5"
               },
               "booty.valuable",
               "booty.owned_booty"
             ]
           },
           {
-            "tag": "booty11",
+            "tag": "booty_11",
             "title": "Booty",
             "min": 11,
             "max": 11,
@@ -8406,13 +8426,14 @@
             "additional": [
               {
                 "tag": "value",
-                "static": "8d8 x 5"
+                "title": "Value - 8d8 x 5",
+                "roll_result": "8d8x5"
               },
               "booty.valuable"
             ]
           },
           {
-            "tag": "booty12",
+            "tag": "booty_12",
             "title": "Booty",
             "min": 12,
             "max": 12,
@@ -8426,7 +8447,7 @@
             ]
           },
           {
-            "tag": "booty13",
+            "tag": "booty_13",
             "title": "Booty",
             "min": 13,
             "max": 13,
@@ -8434,13 +8455,14 @@
             "additional": [
               {
                 "tag": "value",
-                "static": "5d10 x 10"
+                "title": "Value - 5d10 x 10",
+                "roll_result": "5d10x10"
               },
               "booty.valuable"
             ]
           },
           {
-            "tag": "booty14",
+            "tag": "booty_14",
             "title": "Booty",
             "min": 14,
             "max": 14,
@@ -8448,14 +8470,15 @@
             "additional": [
               {
                 "tag": "value",
-                "static": "6d10 x 10"
+                "title": "Value - 6d10 x 10",
+                "roll_result": "6d10x10"
               },
               "booty.valuable",
               "booty.owned_booty"
             ]
           },
           {
-            "tag": "booty15",
+            "tag": "booty_15",
             "title": "Booty",
             "min": 15,
             "max": 15,
@@ -8463,7 +8486,8 @@
             "additional": [
               {
                 "tag": "value",
-                "static": "8d10 x 10"
+                "title": "Value - 8d10x 10",
+                "roll_result": "8d10x10"
               },
               [
                 "booty.valuable",
@@ -8472,7 +8496,7 @@
             ]
           },
           {
-            "tag": "booty16",
+            "tag": "booty_16",
             "title": "Booty",
             "min": 16,
             "max": 16,
@@ -8480,7 +8504,8 @@
             "additional": [
               {
                 "tag": "value",
-                "static": "10d10 x 10"
+                "title": "Value - 10d10 x 10",
+                "roll_result": "10d10x10"
               },
               [
                 "booty.valuable",

@@ -49,10 +49,14 @@ define([
                     let resultMultiplier = (formulaArray[7] !== "" ? formulaArray[7] : 1);
 
                     // Roll the dice
-                    let rollResult = dice !== null ? randomInteger(1, dice) : 1;
+
+                    let rollResult = 0;
+                    for(let i = 0; i < diceMultiplier; i++){
+                        rollResult += (dice !== null ? randomInteger(1, dice) : 1);
+                    }
 
                     // Apply all modifiers
-                    result = (diceMultiplier * rollResult + addNumber1 + addNumber2) * resultMultiplier;
+                    result = (rollResult + addNumber1 + addNumber2) * resultMultiplier;
                 }
 
             }
