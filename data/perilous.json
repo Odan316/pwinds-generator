@@ -1777,7 +1777,7 @@
   },
   {
     "tag": "treasure",
-    "dice": "d18",
+    "dice": "2d6",
     "use_custom_dice": true,
     "variants": [
       {
@@ -2171,11 +2171,13 @@
         "title": "Unnatural Feature. How does it affect its surroundings?",
         "min": 1,
         "max": 1,
+        "dice": "d12",
         "variants": [
           {
             "tag": "arcane",
             "min": 1,
             "max": 9,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "residue",
@@ -2189,7 +2191,7 @@
               },
               {
                 "tag": "alteration_mutation",
-                "title": "alteration/mutation",
+                "title": "Alteration/mutation",
                 "min": 6,
                 "max": 7
               },
@@ -2200,7 +2202,7 @@
               },
               {
                 "tag": "source_repository",
-                "title": "source/repository",
+                "title": "Source/repository",
                 "min": 11,
                 "max": 12
               }
@@ -2214,22 +2216,23 @@
             "tag": "planar",
             "min": 10,
             "max": 11,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "distortion_warp",
-                "title": "distortion/warp",
+                "title": "Distortion/warp",
                 "min": 1,
                 "max": 4
               },
               {
                 "tag": "portal_gate",
-                "title": "portal/gate",
+                "title": "Portal/gate",
                 "min": 5,
                 "max": 8
               },
               {
                 "tag": "rift_tear",
-                "title": "rift/tear",
+                "title": "Rift/tear",
                 "min": 9,
                 "max": 10
               },
@@ -2248,25 +2251,26 @@
             "tag": "divine",
             "min": 12,
             "max": 12,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "mark_sign",
-                "title": "mark/sign",
+                "title": "Mark/sign",
                 "min": 1,
                 "max": 3
               },
               {
-                "tag": "cursed place",
+                "tag": "cursed_place",
                 "min": 4,
                 "max": 6
               },
               {
-                "tag": "hallowed place",
+                "tag": "hallowed_place",
                 "min": 7,
                 "max": 9
               },
               {
-                "tag": "watched place",
+                "tag": "watched_place",
                 "min": 10,
                 "max": 11
               },
@@ -2288,11 +2292,13 @@
         "title": "Natural Feature. Describe how they notice it and what sets it apart.",
         "min": 2,
         "max": 4,
+        "dice": "d12",
         "variants": [
           {
             "tag": "lair",
             "min": 1,
             "max": 2,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "burrow",
@@ -2301,13 +2307,13 @@
               },
               {
                 "tag": "cave_tunnels",
-                "title": "cave/tunnels",
+                "title": "Cave/tunnels",
                 "min": 4,
                 "max": 7
               },
               {
                 "tag": "nest_aerie",
-                "title": "nest/aerie",
+                "title": "Nest/aerie",
                 "min": 8,
                 "max": 9
               },
@@ -2332,22 +2338,23 @@
             "tag": "obstacle",
             "min": 3,
             "max": 4,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "difficult_ground",
-                "title": "difficult ground (specific to terrain)",
+                "title": "Difficult ground (specific to terrain)",
                 "min": 1,
                 "max": 5
               },
               {
                 "tag": "cliff_crevasse_chasm",
-                "title": "cliff/crevasse/chasm",
+                "title": "Cliff/crevasse/chasm",
                 "min": 6,
                 "max": 8
               },
               {
                 "tag": "ravine_gorge",
-                "title": "ravine/gorge",
+                "title": "Ravine/gorge",
                 "min": 9,
                 "max": 10
               },
@@ -2363,17 +2370,18 @@
             "tag": "terrain_change",
             "min": 5,
             "max": 7,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "limited_area",
-                "title": "limited area of an another Terrain type",
+                "title": "Limited area of an another TERRAIN type",
                 "min": 1,
                 "max": 4,
                 "generate_outer": "details.terrain"
               },
               {
                 "tag": "crevice_hole_pit_cave",
-                "title": "crevice/hole/pit/cave",
+                "title": "Crevice/hole/pit/cave",
                 "min": 5,
                 "max": 6
               },
@@ -2384,13 +2392,13 @@
               },
               {
                 "tag": "canyon_valley",
-                "title": "canyon/valley",
+                "title": "Canyon/valley",
                 "min": 9,
                 "max": 10
               },
               {
                 "tag": "rise_peak",
-                "title": "rise/peak in distance",
+                "title": "Rise/peak in distance",
                 "min": 11,
                 "max": 12
               }
@@ -2400,28 +2408,29 @@
             "tag": "water_feature",
             "min": 8,
             "max": 9,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "spring_hotspring",
-                "title": "spring/hotspring",
+                "title": "Spring/hotspring",
                 "min": 1,
                 "max": 1
               },
               {
                 "tag": "waterfall_geyser",
-                "title": "waterfall/geyser",
+                "title": "Waterfall/geyser",
                 "min": 2,
                 "max": 2
               },
               {
                 "tag": "creek_stream_brook",
-                "title": "creek/stream/brook",
+                "title": "Creek/stream/brook",
                 "min": 3,
                 "max": 6
               },
               {
                 "tag": "pond_lake",
-                "title": "pond/lake",
+                "title": "Pond/lake",
                 "min": 7,
                 "max": 8
               },
@@ -2432,7 +2441,7 @@
               },
               {
                 "tag": "sea_ocean",
-                "title": "sea/ocean",
+                "title": "Sea/ocean",
                 "min": 11,
                 "max": 12
               }
@@ -2442,22 +2451,23 @@
             "tag": "landmark",
             "min": 10,
             "max": 11,
+            "dice": "d12",
             "variants": [
               {
-                "tag": "water_based)",
-                "title": "water-based (waterfall, geyser, etc.)",
+                "tag": "water_based",
+                "title": "Water-based (waterfall, geyser, etc.)",
                 "min": 1,
                 "max": 3
               },
               {
-                "tag": "plant_based)",
-                "title": "plant-based (ancient tree, giant flowers, etc.)",
+                "tag": "plant_based",
+                "title": "Plant-based (ancient tree, giant flowers, etc.)",
                 "min": 4,
                 "max": 6
               },
               {
                 "tag": "earth_based",
-                "title": "earth-based (peak, formation, crater, etc.)",
+                "title": "Earth-based (peak, formation, crater, etc.)",
                 "min": 7,
                 "max": 10
               },
@@ -2473,34 +2483,35 @@
             "tag": "Resource",
             "min": 12,
             "max": 12,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "game_fruit_vegetable",
-                "title": "game/fruit/vegetable",
+                "title": "Game/fruit/vegetable",
                 "min": 1,
                 "max": 4
               },
               {
                 "tag": "herb_spice_dye source",
-                "title": "herb/spice/dye source",
+                "title": "Herb/spice/dye source",
                 "min": 5,
                 "max": 6
               },
               {
                 "tag": "timber_stone",
-                "title": "timber/stone",
+                "title": "Timber/stone",
                 "min": 7,
                 "max": 9
               },
               {
                 "tag": "ore",
-                "title": "ore (copper, iron, etc.)",
+                "title": "Ore (copper, iron, etc.)",
                 "min": 10,
                 "max": 11
               },
               {
-                "tag": "precious metal/gems",
-                "title": "precious_metal",
+                "tag": "precious_metal",
+                "title": "Precious metal/gems",
                 "min": 12,
                 "max": 12
               }
@@ -2517,22 +2528,24 @@
         "title": "Evidence. Consider the implications and be ready for them to take the bait.",
         "min": 5,
         "max": 6,
+        "dice": "d12",
         "variants": [
           {
             "tag": "tracks_spoor",
             "title": "Tracks/Spoor",
             "min": 1,
             "max": 6,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "faint_unclear",
-                "title": "faint/unclear",
+                "title": "Faint/unclear",
                 "min": 1,
                 "max": 3
               },
               {
                 "tag": "definite_clear",
-                "title": "definite/clear",
+                "title": "Definite/clear",
                 "min": 4,
                 "max": 6
               },
@@ -2548,7 +2561,7 @@
               },
               {
                 "tag": "trail_of_blood",
-                "title": "trail of blood/other",
+                "title": "Trail of blood/other",
                 "min": 11,
                 "max": 12
               }
@@ -2563,6 +2576,7 @@
             "title": "Remains/Debris",
             "min": 7,
             "max": 10,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "bones",
@@ -2571,7 +2585,7 @@
               },
               {
                 "tag": "corpse_carcass",
-                "title": "corpse/carcass",
+                "title": "Corpse/carcass",
                 "min": 5,
                 "max": 7
               },
@@ -2582,19 +2596,19 @@
               },
               {
                 "tag": "junk_refuse",
-                "title": "junk/refuse",
+                "title": "Junk/refuse",
                 "min": 10,
                 "max": 10
               },
               {
                 "tag": "lost_supplies",
-                "title": "lost supplies/cargo",
+                "title": "Lost supplies/cargo",
                 "min": 11,
                 "max": 11
               },
               {
                 "tag": "tools_weapons_armor",
-                "title": "tools/weapons/armor",
+                "title": "Tools/weapons/armor",
                 "min": 12,
                 "max": 12
               }
@@ -2612,13 +2626,13 @@
             "variants": [
               {
                 "tag": "trinkets_coins",
-                "title": "trinkets/coins",
+                "title": "Trinkets/coins",
                 "min": 1,
                 "max": 3
               },
               {
                 "tag": "tools_weapons_armor",
-                "title": "tools/weapons/armor",
+                "title": "Tools/weapons/armor",
                 "min": 4,
                 "max": 5
               },
@@ -2629,14 +2643,17 @@
               },
               {
                 "tag": "food_supplies",
-                "title": "food/supplies",
+                "title": "Food/supplies",
                 "min": 8,
                 "max": 9
               },
               {
                 "tag": "treasure",
                 "min": 10,
-                "max": 12
+                "max": 12,
+                "additional":  [
+                  "treasure"
+                ]
               }
             ]
           }
@@ -2654,11 +2671,13 @@
         "title": "Structure. Who built it? Is it connected to anything else they made nearby?",
         "min": 9,
         "max": 12,
+        "dice": "d12",
         "variants": [
           {
             "tag": "enigmatic",
             "min": 1,
             "max": 1,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "earthworks",
@@ -2672,7 +2691,7 @@
               },
               {
                 "tag": "statue_idol_totem",
-                "title": "statue/idol/totem",
+                "title": "Statue/idol/totem",
                 "min": 9,
                 "max": 11
               },
@@ -2699,10 +2718,11 @@
             "tag": "infrastructure",
             "min": 2,
             "max": 3,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "track_path",
-                "title": "track/path",
+                "title": "Track/path",
                 "min": 1,
                 "max": 4
               },
@@ -2713,19 +2733,19 @@
               },
               {
                 "tag": "bridge_ford",
-                "title": "bridge/ford",
+                "title": "Bridge/ford",
                 "min": 9,
                 "max": 10
               },
               {
                 "tag": "mine_quarry",
-                "title": "mine/quarry",
+                "title": "Mine/quarry",
                 "min": 11,
                 "max": 11
               },
               {
                 "tag": "aqueduct_canal_portal",
-                "title": "aqueduct/canal/portal",
+                "title": "Aqueduct/canal/portal",
                 "min": 12,
                 "max": 12
               }
@@ -2741,6 +2761,7 @@
             "tag": "dwelling",
             "min": 4,
             "max": 4,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "campsite",
@@ -2749,7 +2770,7 @@
               },
               {
                 "tag": "hovel_hut",
-                "title": "hovel/hut",
+                "title": "Hovel/hut",
                 "min": 4,
                 "max": 6
               },
@@ -2760,13 +2781,13 @@
               },
               {
                 "tag": "inn_roadhouse",
-                "title": "inn/roadhouse",
+                "title": "Inn/roadhouse",
                 "min": 9,
                 "max": 10
               },
               {
                 "tag": "tower_keep_estate",
-                "title": "tower/keep/estate",
+                "title": "Tower/keep/estate",
                 "min": 11,
                 "max": 12
               }
@@ -2783,22 +2804,23 @@
             "title": "Burial/Religious",
             "min": 5,
             "max": 6,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "grave_marker",
-                "title": "grave marker/barrow",
+                "title": "Grave marker/barrow",
                 "min": 1,
                 "max": 2
               },
               {
                 "tag": "graveyard_necropolis",
-                "title": "graveyard/necropolis",
+                "title": "Graveyard/necropolis",
                 "min": 3,
                 "max": 4
               },
               {
                 "tag": "tomb_crypt",
-                "title": "tomb/crypt",
+                "title": "Tomb/crypt",
                 "min": 5,
                 "max": 6
               },
@@ -2809,12 +2831,12 @@
               },
               {
                 "tag": "temple_retreat",
-                "title": "temple/retreat",
+                "title": "Temple/retreat",
                 "min": 10,
                 "max": 11
               },
               {
-                "tag": "great temple",
+                "tag": "great_temple",
                 "min": 12,
                 "max": 12
               }
@@ -2838,6 +2860,7 @@
             "tag": "ruin",
             "min": 9,
             "max": 12,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "infrastructure",
@@ -3762,6 +3785,7 @@
     "dictionaries": [
       {
         "tag": "ability",
+        "dice": "d12",
         "variants": [
           {
             "tag": "bless",
@@ -3845,6 +3869,7 @@
       },
       {
         "tag": "activity",
+        "dice": "d12",
         "variants": [
           {
             "tag": "laying_trap_ambush",
@@ -3920,6 +3945,7 @@
       },
       {
         "tag": "adjective",
+        "dice": "d12",
         "variants": [
           {
             "tag": "slick_slimy",
@@ -3996,22 +4022,23 @@
       },
       {
         "tag": "age",
+        "dice": "d12",
         "variants": [
           {
             "tag": "being_born_built",
-            "title": "being born/built",
+            "title": "Being born/built",
             "min": 1,
             "max": 1
           },
           {
             "tag": "young_recent",
-            "title": "young/recent",
+            "title": "Young/recent",
             "min": 2,
             "max": 4
           },
           {
             "tag": "middle_aged",
-            "title": "middle-aged",
+            "title": "Middle-aged",
             "min": 5,
             "max": 7
           },
@@ -4026,7 +4053,8 @@
             "max": 11
           },
           {
-            "tag": "pre-historic",
+            "tag": "pre_historic",
+            "title": "Pre-historic",
             "min": 12,
             "max": 12
           }
@@ -4034,6 +4062,7 @@
       },
       {
         "tag": "alignment",
+        "dice": "d12",
         "variants": [
           {
             "tag": "chaotic",
@@ -4064,64 +4093,65 @@
       },
       {
         "tag": "aspect",
+        "dice": "d12",
         "variants": [
           {
             "tag": "power_strength",
-            "title": "power/strength",
+            "title": "Power/strength",
             "min": 1,
             "max": 1
           },
           {
             "tag": "trickery_dexterity",
-            "title": "trickery/dexterity",
+            "title": "Trickery/dexterity",
             "min": 2,
             "max": 2
           },
           {
             "tag": "time_constitution",
-            "title": "time/constitution",
+            "title": "Time/constitution",
             "min": 3,
             "max": 3
           },
           {
             "tag": "knowledge_intelligence",
-            "title": "knowledge/intelligence",
+            "title": "Knowledge/intelligence",
             "min": 4,
             "max": 4
           },
           {
             "tag": "nature_wisdom",
-            "title": "nature/wisdom",
+            "title": "Nature/wisdom",
             "min": 5,
             "max": 5
           },
           {
             "tag": "culture_charisma",
-            "title": "culture/charisma",
+            "title": "Culture/charisma",
             "min": 6,
             "max": 6
           },
           {
             "tag": "war_lies_discord",
-            "title": "war/lies/discord",
+            "title": "War/lies/discord",
             "min": 7,
             "max": 7
           },
           {
             "tag": "peace_truth_balance",
-            "title": "peace/truth/balance",
+            "title": "Peace/truth/balance",
             "min": 8,
             "max": 8
           },
           {
             "tag": "hate_envy",
-            "title": "hate/envy",
+            "title": "Hate/envy",
             "min": 9,
             "max": 9
           },
           {
             "tag": "love_admiration",
-            "title": "love/admiration",
+            "title": "Love/admiration",
             "min": 10,
             "max": 10
           },
@@ -4144,6 +4174,7 @@
       },
       {
         "tag": "condition",
+        "dice": "d12",
         "variants": [
           {
             "tag": "being_born_built",
@@ -4191,6 +4222,7 @@
       },
       {
         "tag": "disposition",
+        "dice": "d12",
         "variants": [
           {
             "tag": "attacking",
@@ -4235,6 +4267,7 @@
       },
       {
         "tag": "element",
+        "dice": "d12",
         "variants": [
           {
             "tag": "air",
@@ -4270,6 +4303,7 @@
       },
       {
         "tag": "feature",
+        "dice": "d12",
         "variants": [
           {
             "tag": "heavily_armored",
@@ -4351,6 +4385,7 @@
       },
       {
         "tag": "magic_type",
+        "dice": "d12",
         "variants": [
           {
             "tag": "divination",
@@ -4386,6 +4421,7 @@
       },
       {
         "tag": "no_appearing",
+        "dice": "d12",
         "variants": [
           {
             "tag": "solitary",
@@ -4411,10 +4447,11 @@
       },
       {
         "tag": "oddity",
+        "dice": "d12",
         "variants": [
           {
             "tag": "weird_color_smell_sound",
-            "title": "weird color/smell/sound",
+            "title": "Weird color/smell/sound",
             "min": 1,
             "max": 1
           },
@@ -4425,13 +4462,13 @@
           },
           {
             "tag": "web_network_system",
-            "title": "web/network/system",
+            "title": "Web/network/system",
             "min": 3,
             "max": 3
           },
           {
             "tag": "crystalline_glass_like",
-            "title": "crystalline/glass-like",
+            "title": "Crystalline/glass-like",
             "min": 4,
             "max": 4
           },
@@ -4442,25 +4479,25 @@
           },
           {
             "tag": "gaseous_smokey",
-            "title": "gaseous/smokey",
+            "title": "Gaseous/smokey",
             "min": 6,
             "max": 6
           },
           {
             "tag": "mirage_illusion",
-            "title": "mirage/illusion",
+            "title": "Mirage/illusion",
             "min": 7,
             "max": 7
           },
           {
             "tag": "volcanic_explosive",
-            "title": "volcanic/explosive",
+            "title": "Volcanic/explosive",
             "min": 8,
             "max": 8
           },
           {
             "tag": "magnetic_repellant",
-            "title": "magnetic/repellant",
+            "title": "Magnetic/repellant",
             "min": 9,
             "max": 9
           },
@@ -4487,6 +4524,7 @@
       },
       {
         "tag": "orientation",
+        "dice": "d12",
         "variants": [
           {
             "tag": "down_earthward",
@@ -4544,6 +4582,7 @@
       },
       {
         "tag": "ruination",
+        "dice": "d12",
         "variants": [
           {
             "tag": "arcane_disaster",
@@ -4552,19 +4591,19 @@
           },
           {
             "tag": "damnation_curse",
-            "title": "damnation/curse",
+            "title": "Damnation/curse",
             "min": 2,
             "max": 2
           },
           {
             "tag": "earthquake_fire_flood",
-            "title": "earthquake/fire/flood",
+            "title": "Earthquake/fire/flood",
             "min": 3,
             "max": 4
           },
           {
             "tag": "plague_famine_drought",
-            "title": "plague/famine/drought",
+            "title": "Plague/famine/drought",
             "min": 5,
             "max": 6
           },
@@ -4575,7 +4614,7 @@
           },
           {
             "tag": "war_invasion",
-            "title": "war/invasion",
+            "title": "War/invasion",
             "min": 9,
             "max": 10
           },
@@ -4593,6 +4632,7 @@
       },
       {
         "tag": "size",
+        "dice": "d12",
         "variants": [
           {
             "tag": "tiny",
@@ -4608,7 +4648,7 @@
           },
           {
             "tag": "medium_sized",
-            "title": "medium-sized",
+            "title": "Medium-sized",
             "min": 4,
             "max": 9
           },
@@ -4628,6 +4668,7 @@
       },
       {
         "tag": "tags",
+        "dice": "d12",
         "variants": [
           {
             "tag": "Amorphous",
@@ -4702,28 +4743,29 @@
       },
       {
         "tag": "terrain",
+        "dice": "d12",
         "variants": [
           {
             "tag": "wasteland_desert",
-            "title": "wasteland/desert",
+            "title": "Wasteland/desert",
             "min": 1,
             "max": 1
           },
           {
             "tag": "flatland_plain",
-            "title": "flatland/plain",
+            "title": "Flatland/plain",
             "min": 2,
             "max": 3
           },
           {
             "tag": "wetland_marsh_swamp",
-            "title": "wetland/marsh/swamp",
+            "title": "Wetland/marsh/swamp",
             "min": 4,
             "max": 4
           },
           {
             "tag": "woodland_forest_jungle",
-            "title": "woodland/forest/jungle",
+            "title": "Woodland/forest/jungle",
             "min": 5,
             "max": 7
           },
@@ -4747,22 +4789,23 @@
       },
       {
         "tag": "visibility",
+        "dice": "d12",
         "variants": [
           {
             "tag": "buried_camouflaged_nigh_invisible",
-            "title": "buried/camouflaged/nigh invisible",
+            "title": "Buried/camouflaged/nigh invisible",
             "min": 1,
             "max": 2
           },
           {
             "tag": "partly_covered_overgrown_hidden",
-            "title": "partly covered/overgrown/hidden",
+            "title": "Partly covered/overgrown/hidden",
             "min": 3,
             "max": 6
           },
           {
             "tag": "obvious_in_plain_sight",
-            "title": "obvious/in plain sight",
+            "title": "Obvious/in plain sight",
             "min": 7,
             "max": 9
           },
@@ -4773,7 +4816,7 @@
           },
           {
             "tag": "visible_at_great_distance_focal_point",
-            "title": "visible at great distance/focal point",
+            "title": "Visible at great distance/focal point",
             "min": 12,
             "max": 12
           }
