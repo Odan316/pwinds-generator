@@ -2942,21 +2942,23 @@
         "title": "Unnatural Entity. Describe it—creepy, twisted, awe-inspiring.",
         "min": 1,
         "max": 1,
+        "dice": "d12",
         "variants": [
           {
             "tag": "undead",
             "min": 1,
             "max": 8,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "haunt_wisp",
-                "title": "haunt/wisp",
+                "title": "Haunt/wisp",
                 "min": 1,
                 "max": 4
               },
               {
                 "tag": "ghost_spectre",
-                "title": "ghost/spectre",
+                "title": "Ghost/spectre",
                 "min": 5,
                 "max": 8
               },
@@ -2967,13 +2969,13 @@
               },
               {
                 "tag": "wraith_wight",
-                "title": "wraith/wight",
+                "title": "Wraith/wight",
                 "min": 10,
                 "max": 11
               },
               {
                 "tag": "spirit_lord",
-                "title": "spirit lord/master",
+                "title": "Spirit lord/master",
                 "min": 12,
                 "max": 12
               }
@@ -2989,10 +2991,11 @@
             "tag": "planar",
             "min": 9,
             "max": 11,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "imp",
-                "title": "imp (Small)",
+                "title": "Imp (Small)",
                 "min": 1,
                 "max": 3
               },
@@ -3003,7 +3006,7 @@
               },
               {
                 "tag": "lesser_demon",
-                "title": "lesser demon/horror",
+                "title": "Lesser demon/horror",
                 "min": 7,
                 "max": 9
               },
@@ -3014,13 +3017,13 @@
               },
               {
                 "tag": "greater_demon",
-                "title": "greater demon/horror",
+                "title": "Greater demon/horror",
                 "min": 11,
                 "max": 11
               },
               {
                 "tag": "devil",
-                "title": "devil/elemental lord",
+                "title": "Fevil/elemental lord",
                 "min": 12,
                 "max": 12
               }
@@ -3039,6 +3042,7 @@
             "tag": "divine",
             "min": 12,
             "max": 12,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "agent",
@@ -3052,12 +3056,12 @@
               },
               {
                 "tag": "army",
-                "title": "army (Horde)",
+                "title": "Army (Horde)",
                 "min": 10,
                 "max": 11
               },
               {
-                "tag": "avatar",
+                "tag": "Avatar",
                 "min": 12,
                 "max": 12
               }
@@ -3080,27 +3084,29 @@
         "title": "Hazard . Threaten them (or their stuff).",
         "min": 2,
         "max": 6,
+        "dice": "d12",
         "variants": [
           {
             "tag": "unnatural",
             "min": 1,
             "max": 2,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "taint_blight_curse",
-                "title": "taint/blight/curse",
+                "title": "Taint/blight/curse",
                 "min": 1,
                 "max": 3
               },
               {
                 "tag": "arcane_trap",
-                "title": "arcane trap/effect",
+                "title": "Arcane trap/effect",
                 "min": 4,
                 "max": 8
               },
               {
                 "tag": "planar_trap",
-                "title": "taint/blight/curse",
+                "title": "Planar trap/effect",
                 "min": 9,
                 "max": 11
               },
@@ -3119,39 +3125,40 @@
             "tag": "natural",
             "min": 3,
             "max": 10,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "blinding_mist",
-                "title": "blinding mist/fog",
+                "title": "Blinding mist/fog",
                 "min": 1,
                 "max": 2
               },
               {
                 "tag": "bog_mire_quicksand",
-                "title": "bog/mire/quicksand",
+                "title": "Bog/mire/quicksand",
                 "min": 3,
                 "max": 4
               },
               {
                 "tag": "pitfall_sinkhole_chasm",
-                "title": "pitfall/sinkhole/chasm",
+                "title": "Pitfall/sinkhole/chasm",
                 "min": 5,
                 "max": 7
               },
               {
                 "tag": "poison_disease",
-                "title": "poison/disease",
+                "title": "Poison/disease",
                 "min": 8,
                 "max": 9
               },
               {
                 "tag": "flood_fire_tornado",
-                "title": "flood/fire/tornado",
+                "title": "Flood/fire/tornado",
                 "min": 10,
                 "max": 11
               },
               {
-                "tag": "Oddity",
+                "tag": "oddity",
                 "min": 12,
                 "max": 12,
                 "generate_outer": "details.oddity"
@@ -3162,6 +3169,7 @@
             "tag": "trap",
             "min": 11,
             "max": 12,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "alarm",
@@ -3170,19 +3178,19 @@
               },
               {
                 "tag": "ensnaring_paralyzing",
-                "title": "ensnaring/paralyzing",
+                "title": "Ensnaring/paralyzing",
                 "min": 3,
                 "max": 5
               },
               {
                 "tag": "injurious",
-                "title": "injurious (pit, etc.)",
+                "title": "Injurious (pit, etc.)",
                 "min": 6,
                 "max": 8
               },
               {
                 "tag": "gas_fire_poison",
-                "title": "gas/fire/poison",
+                "title": "Gas/fire/poison",
                 "min": 9,
                 "max": 9
               },
@@ -3454,7 +3462,7 @@
         "additional": [
           "details.activity",
           "details.disposition",
-          "details.no_appearing",
+          "details.number_appearing",
           "details.size"
         ]
       },
@@ -3466,7 +3474,7 @@
           "details.activity",
           "details.alignment",
           "details.disposition",
-          "details.no_appearing",
+          "details.number_appearing",
           "details.npc_tables"
         ]
       },
@@ -3611,7 +3619,7 @@
           "details.activity",
           "details.alignment",
           "details.disposition",
-          "details.no_appearing",
+          "details.number_appearing",
           "details.npc_tables"
         ]
       },
@@ -3764,7 +3772,7 @@
           "details.activity",
           "details.alignment",
           "details.disposition",
-          "details.no_appearing",
+          "details.number_appearing",
           "details.size"
         ],
         "optional": [
@@ -3873,61 +3881,61 @@
         "variants": [
           {
             "tag": "laying_trap_ambush",
-            "title": "laying trap/ambush",
+            "title": "Laying trap/ambush",
             "min": 1,
             "max": 1
           },
           {
             "tag": "fighting_at_war",
-            "title": "fighting/at war",
+            "title": "Fighting/at war",
             "min": 2,
             "max": 2
           },
           {
             "tag": "prowling_on_patrol",
-            "title": "prowling/on patrol",
+            "title": "Prowling/on patrol",
             "min": 3,
             "max": 3
           },
           {
             "tag": "hunting_foraging",
-            "title": "hunting/foraging",
+            "title": "Hunting/foraging",
             "min": 4,
             "max": 4
           },
           {
             "tag": "eating_resting",
-            "title": "eating/resting",
+            "title": "Eating/resting",
             "min": 5,
             "max": 5
           },
           {
             "tag": "crafting_praying",
-            "title": "crafting/praying",
+            "title": "Crafting/praying",
             "min": 6,
             "max": 6
           },
           {
             "tag": "traveling_relocating",
-            "title": "traveling/relocating",
+            "title": "Traveling/relocating",
             "min": 7,
             "max": 7
           },
           {
             "tag": "exploring_lost",
-            "title": "exploring/lost",
+            "title": "Exploring/lost",
             "min": 8,
             "max": 8
           },
           {
             "tag": "returning_home",
-            "title": "returning home",
+            "title": "Returning home",
             "min": 9,
             "max": 9
           },
           {
             "tag": "building_excavating",
-            "title": "building/excavating",
+            "title": "Building/excavating",
             "min": 10,
             "max": 10
           },
@@ -3949,67 +3957,67 @@
         "variants": [
           {
             "tag": "slick_slimy",
-            "title": "slick/slimy",
+            "title": "Slick/slimy",
             "min": 1,
             "max": 1
           },
           {
             "tag": "rough_hard_sharp",
-            "title": "rough/hard/sharp",
+            "title": "Rough/hard/sharp",
             "min": 2,
             "max": 2
           },
           {
             "tag": "smooth_soft_dull",
-            "title": "smooth/soft/dull",
+            "title": "Smooth/soft/dull",
             "min": 3,
             "max": 3
           },
           {
             "tag": "corroded_rusty",
-            "title": "paralyze/petrify",
+            "title": "Paralyze/petrify",
             "min": 4,
             "max": 4
           },
           {
             "tag": "rotten_decaying",
-            "title": "rotten/decaying",
+            "title": "Rotten/decaying",
             "min": 5,
             "max": 5
           },
           {
             "tag": "broken_brittle",
-            "title": "broken/brittle",
+            "title": "Broken/brittle",
             "min": 6,
             "max": 6
           },
           {
             "tag": "stinking_smelly",
-            "title": "stinking/smelly",
+            "title": "Stinking/smelly",
             "min": 7,
             "max": 7
           },
           {
             "tag": "weak_thin_drained",
-            "title": "weak/thin/drained",
+            "title": "Weak/thin/drained",
             "min": 8,
             "max": 8
           },
           {
             "tag": "strong_fat_full",
-            "title": "strong/fat/full",
+            "title": "Strong/fat/full",
             "min": 9,
             "max": 9
           },
           {
             "tag": "pale_poor_shallow",
-            "title": "pale/poor/shallow",
+            "title": "Pale/poor/shallow",
             "min": 10,
             "max": 10
           },
           {
-            "tag": "dark/rich/deep",
-            "title": "dark/rich/deep",
+            "tag": "dark",
+            "title": "Dark/rich/deep",
             "min": 11,
             "max": 11
           },
@@ -4178,43 +4186,43 @@
         "variants": [
           {
             "tag": "being_born_built",
-            "title": "being born/built",
+            "title": "Being born/built",
             "min": 1,
             "max": 1
           },
           {
             "tag": "intact_healthy_stable",
-            "title": "intact/healthy/stable",
+            "title": "Intact/healthy/stable",
             "min": 2,
             "max": 4
           },
           {
             "tag": "occupied_active_alert",
-            "title": "occupied/active/alert",
+            "title": "Occupied/active/alert",
             "min": 5,
             "max": 7
           },
           {
             "tag": "worn_tired_weak",
-            "title": "worn/tired/weak",
+            "title": "Worn/tired/weak",
             "min": 8,
             "max": 9
           },
           {
             "tag": "vacant_lost",
-            "title": "vacant/lost",
+            "title": "Vacant/lost",
             "min": 10,
             "max": 10
           },
           {
             "tag": "ruined_defiled_dying",
-            "title": "ruined/defiled/dying",
+            "title": "Ruined/defiled/dying",
             "min": 11,
             "max": 11
           },
           {
             "tag": "disappeared_dead",
-            "title": "disappeared/dead",
+            "title": "Disappeared/dead",
             "min": 12,
             "max": 12
           }
@@ -4231,19 +4239,19 @@
           },
           {
             "tag": "hostile_aggressive",
-            "title": "hostile/aggressive",
+            "title": "Hostile/aggressive",
             "min": 2,
             "max": 4
           },
           {
             "tag": "cautious_doubtful",
-            "title": "cautious/doubtful",
+            "title": "Cautious/doubtful",
             "min": 5,
             "max": 6
           },
           {
             "tag": "fearful_fleeing",
-            "title": "fearful/fleeing",
+            "title": "Fearful/fleeing",
             "min": 7,
             "max": 7
           },
@@ -4254,7 +4262,7 @@
           },
           {
             "tag": "curious_hopeful",
-            "title": "curious/hopeful",
+            "title": "Curious/hopeful",
             "min": 11,
             "max": 11
           },
@@ -4312,31 +4320,31 @@
           },
           {
             "tag": "winged_flying",
-            "title": "winged/flying",
+            "title": "Winged/flying",
             "min": 2,
             "max": 3
           },
           {
             "tag": "multiple_heads_headless",
-            "title": "multiple heads/headless",
+            "title": "Multiple heads/headless",
             "min": 4,
             "max": 4
           },
           {
             "tag": "many_eyes_one_eye",
-            "title": "many eyes/one eye",
+            "title": "Many eyes/one eye",
             "min": 5,
             "max": 5
           },
           {
             "tag": "many_limbs_tails",
-            "title": "many limbs/tails",
+            "title": "Many limbs/tails",
             "min": 6,
             "max": 6
           },
           {
             "tag": "tentacles_tendrils",
-            "title": "tentacles/tendrils",
+            "title": "Tentacles/tendrils",
             "min": 7,
             "max": 7
           },
@@ -4420,7 +4428,7 @@
         ]
       },
       {
-        "tag": "no_appearing",
+        "tag": "number_appearing",
         "dice": "d12",
         "variants": [
           {
@@ -4434,14 +4442,24 @@
             "title": "Group: Usually seen in small numbers, 3–6 or so.",
             "min": 5,
             "max": 9,
-            "numbers": "1d6+2"
+            "additional": [
+              {
+                "tag": "amount",
+                "roll_result": "d6+2"
+              }
+            ]
           },
           {
             "tag": "horde",
             "title": "Horde: Where there’s one, there’s more. A lot more.",
             "min": 10,
             "max": 12,
-            "numbers": "4d6"
+            "additional": [
+              {
+                "tag": "amount",
+                "roll_result": "4d6"
+              }
+            ]
           }
         ]
       },
@@ -4528,7 +4546,7 @@
         "variants": [
           {
             "tag": "down_earthward",
-            "title": "down/earthward",
+            "title": "Down/earthward",
             "min": 1,
             "max": 2
           },
@@ -4574,7 +4592,7 @@
           },
           {
             "tag": "up_skyward",
-            "title": "up/skyward",
+            "title": "Up/skyward",
             "min": 11,
             "max": 12
           }
