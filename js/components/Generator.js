@@ -126,39 +126,26 @@ define([
                     generatedEntity.variant = generateEntity(entity.getChildEntityByRoll(roll));
                 }
             }
-                // Generate additional entities
-                if (entity.hasAdditional()) {
-                    _.forEach(entity.getAdditionalEntitiesLinks(), function (additionalEntityData) {
-                        let additionalEntity = null;
-                        let customDice = null;
-                        if (additionalEntityData instanceof StorageLink) {
-                            additionalEntity = additionalEntityData.getEntity(self.getStorage(), _vars);
-                            customDice = additionalEntityData.getDice();
-                        } else if (additionalEntityData instanceof VariantEntity) {
-                            additionalEntity = additionalEntityData;
+            // Generate additional entities
+            if (entity.hasAdditional()) {
+                generatedEntity.additionalTitle = entity.getAdditionalTitle();
+                _.forEach(entity.getAdditionalEntitiesLinks(), function (additionalEntityData) {
+                    let additionalEntity = null;
+                    let customDice = null;
+                    if (additionalEntityData instanceof StorageLink) {
+                        additionalEntity = additionalEntityData.getEntity(self.getStorage(), _vars);
+                        customDice = additionalEntityData.getDice();
+                    } else if (additionalEntityData instanceof VariantEntity) {
+                        additionalEntity = additionalEntityData;
+                    }
+
+                    if (additionalEntity !== null) {
+                        for (let i = 0; i < additionalEntity.getRepeat(); i++) {
+                            generatedEntity.additional.push(generateEntity(additionalEntity, customDice));
                         }
-
-                        if (additionalEntity !== null) {
-                            for (let i = 0; i < additionalEntity.getRepeat(); i++) {
-                                generatedEntity.additional.push(generateEntity(additionalEntity, customDice));
-                            }
-                        }
-                    });
-                }
-
-                // Generate optional entities
-                if (entity.hasOptional()) {
-                    _.forEach(entity.getOptionalEntitiesLinks(), function (additionalEntityLink) {
-                        var additionalEntity = additionalEntityLink.getEntity(self.getStorage(), _vars);
-                        generatedEntity.optional.push(generateEntity(additionalEntity, additionalEntityLink.getDice()));
-                    });
-                }
-
-                // DEPRECATED! Generate numbers property
-                if (entity instanceof VariantEntity && entity.hasNumbers()) {
-                    generatedEntity.numbers = _dice.roll(entity.getNumbers())
-                }
-
+                    }
+                });
+            }
 
             return generatedEntity;
         };

@@ -11,8 +11,8 @@ define([
      * @constructor
      * @inheritDoc Entity
      */
-    var VariantEntity = function() {
-        var Entity = require('components/Entity');
+    let VariantEntity = function() {
+        let Entity = require('components/Entity');
         Entity.call(this);
 
         /**
@@ -21,14 +21,14 @@ define([
          * @type {int|null}
          * @private
          */
-        var _min = null;
+        let _min = null;
 
         /**
          * Maximal dice value, when finding randomized result in _variants
          * @type {int|null}
          * @private
          */
-        var _max = null;
+        let _max = null;
 
         /**
          * Link on other entity for generating instead of child entity
@@ -36,17 +36,7 @@ define([
          * @type {StorageLink|null}
          * @private
          */
-        var _generate_outer = null;
-
-        /**
-         * Dice formula that calculates in-game number of entities.
-         * DEPRECATED, use "static" or "roll_result" instead
-         *
-         * @type {String[]|null}
-         * @private
-         * @deprecated
-         */
-        var _numbers = null;
+        let _generate_outer = null;
 
         /**
          * Dice formula that calculates in-game number as value
@@ -54,9 +44,9 @@ define([
          * @type {String|null}
          * @private
          */
-        var _roll_result = null;
+        let _roll_result = null;
 
-        var parentLoad = this.load;
+        let parentLoad = this.load;
 
         this.getMin = function() {
             return _min;
@@ -64,22 +54,6 @@ define([
 
         this.getMax = function() {
             return _max;
-        };
-
-        /**
-         * @deprecated
-         * @returns {boolean}
-         */
-        this.hasNumbers = function() {
-            return _numbers != null;
-        };
-
-        /**
-         * @deprecated
-         * @returns {String[]}
-         */
-        this.getNumbers = function() {
-            return _numbers;
         };
 
         this.hasOuterLink = function() {
@@ -122,9 +96,6 @@ define([
             }
             if("max" in data){
                 _max = data.max;
-            }
-            if("numbers" in data){
-                _numbers = data.numbers;
             }
             if("generate_outer" in data) {
                 _generate_outer = new StorageLink(data.generate_outer);

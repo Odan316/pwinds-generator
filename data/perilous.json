@@ -2651,7 +2651,7 @@
                 "tag": "treasure",
                 "min": 10,
                 "max": 12,
-                "additional":  [
+                "additional": [
                   "treasure"
                 ]
               }
@@ -3159,9 +3159,12 @@
               },
               {
                 "tag": "oddity",
+                "title": "ODDITY",
                 "min": 12,
                 "max": 12,
-                "generate_outer": "details.oddity"
+                "additional": [
+                  "details.oddity"
+                ]
               }
             ]
           },
@@ -3225,45 +3228,47 @@
         "title": "Beast . Start with a real-world creature, then put a spin in it.",
         "min": 1,
         "max": 4,
+        "dice": "d12",
         "variants": [
           {
             "tag": "earthbound",
             "min": 1,
             "max": 7,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "termite_tick_louse",
-                "title": "termite/tick/louse",
+                "title": "Termite/tick/louse",
                 "min": 1,
                 "max": 1
               },
               {
                 "tag": "snail_slug_worm",
-                "title": "snail/slug/worm",
+                "title": "Snail/slug/worm",
                 "min": 2,
                 "max": 2
               },
               {
                 "tag": "ant_centipede_scorpion",
-                "title": "ant/centipede/scorpion",
+                "title": "Ant/centipede/scorpion",
                 "min": 3,
                 "max": 3
               },
               {
                 "tag": "snake_lizard",
-                "title": "snake/lizard",
+                "title": "Snake/lizard",
                 "min": 4,
                 "max": 4
               },
               {
                 "tag": "vole_rat_weasel",
-                "title": "vole/rat/weasel",
+                "title": "Vole/rat/weasel",
                 "min": 5,
                 "max": 5
               },
               {
                 "tag": "boar_pig",
-                "title": "boar/pig",
+                "title": "Boar/pig",
                 "min": 6,
                 "max": 6
               },
@@ -3275,31 +3280,31 @@
               },
               {
                 "tag": "cat_lion_panther",
-                "title": "cat/lion/panther",
+                "title": "Cat/lion/panther",
                 "min": 8,
                 "max": 8
               },
               {
                 "tag": "deer_horse_camel",
-                "title": "deer/horse/camel",
+                "title": "Deer/horse/camel",
                 "min": 9,
                 "max": 9
               },
               {
                 "tag": "ox_rhino",
-                "title": "ox/rhino",
+                "title": "Ox/rhino",
                 "min": 10,
                 "max": 10
               },
               {
                 "tag": "bear_ape_gorilla",
-                "title": "bear/ape/gorilla",
+                "title": "Bear/ape/gorilla",
                 "min": 11,
                 "max": 11
               },
               {
                 "tag": "mammoth_dinosaur",
-                "title": "mammoth/dinosaur",
+                "title": "Mammoth/dinosaur",
                 "min": 12,
                 "max": 12
               }
@@ -3309,64 +3314,65 @@
             "tag": "airborne",
             "min": 8,
             "max": 10,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "mosquito_firefly",
-                "title": "mosquito/firefly",
+                "title": "Mosquito/firefly",
                 "min": 1,
                 "max": 1
               },
               {
                 "tag": "locust_dragonfly_moth",
-                "title": "locust/dragonfly/moth",
+                "title": "Locust/dragonfly/moth",
                 "min": 2,
                 "max": 2
               },
               {
                 "tag": "bee_wasp",
-                "title": "bee/wasp",
+                "title": "Bee/wasp",
                 "min": 3,
                 "max": 3
               },
               {
                 "tag": "chicken_duck_goose",
-                "title": "chicken/duck/goose",
+                "title": "Chicken/duck/goose",
                 "min": 4,
                 "max": 4
               },
               {
                 "tag": "songbird_parrot",
-                "title": "songbird/parrot",
+                "title": "Songbird/parrot",
                 "min": 5,
                 "max": 5
               },
               {
                 "tag": "gull_waterbird",
-                "title": "gull/waterbird",
+                "title": "Gull/waterbird",
                 "min": 6,
                 "max": 6
               },
               {
                 "tag": "heron_crane_stork",
-                "title": "heron/crane/stork",
+                "title": "Heron/crane/stork",
                 "min": 7,
                 "max": 7
               },
               {
                 "tag": "crow_raven",
-                "title": "crow/raven",
+                "title": "Crow/raven",
                 "min": 8,
                 "max": 8
               },
               {
                 "tag": "hawk_falcon",
-                "title": "hawk/falcon",
+                "title": "Hawk/falcon",
                 "min": 9,
                 "max": 9
               },
               {
                 "tag": "eagle_owl",
-                "title": "eagle/owl",
+                "title": "Eagle/owl",
                 "min": 10,
                 "max": 10
               },
@@ -3387,6 +3393,7 @@
             "title": "Water-Going",
             "min": 11,
             "max": 12,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "insect",
@@ -3395,25 +3402,25 @@
               },
               {
                 "tag": "jelly_anemone",
-                "title": "jelly/anemone",
+                "title": "Jelly/anemone",
                 "min": 2,
                 "max": 2
               },
               {
                 "tag": "clam_oyster_snail",
-                "title": "clam/oyster/snail",
+                "title": "Clam/oyster/snail",
                 "min": 3,
                 "max": 3
               },
               {
                 "tag": "eel_snake",
-                "title": "eel/snake",
+                "title": "Eel/snake",
                 "min": 4,
                 "max": 4
               },
               {
                 "tag": "frog_toad",
-                "title": "frog/toad",
+                "title": "Frog/toad",
                 "min": 5,
                 "max": 5
               },
@@ -3424,7 +3431,7 @@
               },
               {
                 "tag": "crab_lobster",
-                "title": "crab/lobster",
+                "title": "Crab/lobster",
                 "min": 7,
                 "max": 7
               },
@@ -3435,19 +3442,19 @@
               },
               {
                 "tag": "alligator_crocodile",
-                "title": "alligator/crocodile",
+                "title": "Alligator/crocodile",
                 "min": 9,
                 "max": 9
               },
               {
                 "tag": "dolphin_shark",
-                "title": "dolphin/shark",
+                "title": "Dolphin/shark",
                 "min": 10,
                 "max": 10
               },
               {
                 "tag": "squid_octopus",
-                "title": "squid/octopus",
+                "title": "Squid/octopus",
                 "min": 11,
                 "max": 11
               },
@@ -3470,12 +3477,13 @@
         "tag": "human",
         "min": 5,
         "max": 6,
+        "dice": "d12",
         "additional": [
           "details.activity",
           "details.alignment",
           "details.disposition",
           "details.number_appearing",
-          "details.npc_tables"
+          "details.npc"
         ]
       },
       {
@@ -3483,39 +3491,41 @@
         "title": "Humanoid. If you roll a classic fantasy species, adapt it to your setting.",
         "min": 7,
         "max": 8,
+        "dice": "d12",
         "variants": [
           {
             "tag": "common",
             "min": 1,
             "max": 7,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "halfling",
-                "title": "halfling (Small: It’s about halfling size.)",
+                "title": "Halfling (Small: It’s about halfling size.)",
                 "min": 1,
                 "max": 3
               },
               {
                 "tag": "goblin_kobold",
-                "title": "goblin/kobold (Small: It’s about halfling size.)",
+                "title": "Goblin/kobold (Small: It’s about halfling size.)",
                 "min": 4,
                 "max": 5
               },
               {
                 "tag": "dwarf_gnome",
-                "title": "dwarf/gnome (Small: It’s about halfling size.)",
+                "title": "Dwarf/gnome (Small: It’s about halfling size.)",
                 "min": 6,
                 "max": 7
               },
               {
                 "tag": "orc_hobgoblin_gnoll",
-                "title": "orc/hobgoblin/gnoll",
+                "title": "Orc/hobgoblin/gnoll",
                 "min": 8,
                 "max": 9
               },
               {
                 "tag": "half-elf/half-orc, etc.",
-                "title": "half-elf/half-orc, etc.",
+                "title": "Half-elf/half-orc, etc.",
                 "min": 10,
                 "max": 11
               },
@@ -3530,40 +3540,40 @@
             "tag": "uncommon",
             "min": 8,
             "max": 10,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "fey",
-                "title": "fey (Tiny: It’s much smaller than a halfling.)",
+                "title": "Fey (Tiny: It’s much smaller than a halfling.)",
                 "min": 1,
                 "max": 1
               },
               {
                 "tag": "catfolk_dogfolk",
-                "title": "catfolk/dogfolk",
+                "title": "Catfolk/dogfolk",
                 "min": 2,
                 "max": 3
               },
               {
                 "tag": "lizardfolk_merfolk",
-                "title": "lizardfolk/merfolk",
+                "title": "Lizardfolk/merfolk",
                 "min": 4,
                 "max": 6
               },
               {
                 "tag": "birdfolk",
-                "title": "birdfolk",
                 "min": 7,
                 "max": 7
               },
               {
                 "tag": "ogre_troll",
-                "title": "ogre/troll (Large: It’s much bigger than a human, about as big as a cart.)",
+                "title": "Ogre/troll (Large: It’s much bigger than a human, about as big as a cart.)",
                 "min": 8,
                 "max": 10
               },
               {
                 "tag": "cyclops_giant",
-                "title": "cyclops/giant (Large: It’s much bigger than a human, about as big as a cart.)",
+                "title": "Cyclops/giant (Large: It’s much bigger than a human, about as big as a cart.)",
                 "min": 11,
                 "max": 12
               }
@@ -3573,6 +3583,7 @@
             "tag": "hybrid",
             "min": 11,
             "max": 12,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "centaur",
@@ -3581,33 +3592,34 @@
               },
               {
                 "tag": "werewolf_werebear",
-                "title": "werewolf/werebear",
+                "title": "Werewolf/werebear",
                 "min": 3,
                 "max": 5
               },
               {
                 "tag": "werecreature",
-                "title": "werecreature (human + Beast)",
+                "title": "Werecreature (human + BEAST)",
                 "min": 6,
-                "max": 6
+                "max": 6,
+                "additional": [
+                  "creature.beast"
+                ]
               },
               {
                 "tag": "human_beast",
-                "title": "human + Beast",
+                "title": "Human + BEAST",
                 "min": 7,
                 "max": 10,
                 "additional": [
-                  "creature.human",
                   "creature.beast"
                 ]
               },
               {
                 "tag": "human_2beast",
-                "title": "human + 2 Beast",
+                "title": "Human + 2 BEASTS",
                 "min": 11,
                 "max": 12,
                 "additional": [
-                  "creature.human",
                   "creature.beast",
                   "creature.beast"
                 ]
@@ -3620,7 +3632,7 @@
           "details.alignment",
           "details.disposition",
           "details.number_appearing",
-          "details.npc_tables"
+          "details.npc"
         ]
       },
       {
@@ -3628,11 +3640,13 @@
         "title": "Monster. Give every monster life!",
         "min": 9,
         "max": 12,
+        "dice": "d12",
         "variants": [
           {
             "tag": "unusual",
             "min": 1,
             "max": 7,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "plant_fungus",
@@ -3643,18 +3657,20 @@
               {
                 "tag": "undead_human",
                 "min": 4,
-                "max": 5,
-                "generate_outer": "creature.human"
+                "max": 5
               },
               {
                 "tag": "undead_humanoid",
+                "title": "Undead HUMANOID",
                 "min": 6,
                 "max": 6,
-                "generate_outer": "creature.humanoid"
+                "additional": [
+                  "creature.humanoid"
+                ]
               },
               {
                 "tag": "beast_beast",
-                "title": "Beast + Beast",
+                "title": "BEAST + BEAST",
                 "min": 7,
                 "max": 8,
                 "additional": [
@@ -3664,7 +3680,7 @@
               },
               {
                 "tag": "beast_ability",
-                "title": "Beast + Ability",
+                "title": "BEAST + ABILITY",
                 "min": 9,
                 "max": 10,
                 "additional": [
@@ -3673,8 +3689,8 @@
                 ]
               },
               {
-                "tag": "Beast_Feature",
-                "title": "Beast + Feature",
+                "tag": "beast_feature",
+                "title": "BEAST + FEATURE",
                 "min": 11,
                 "max": 12,
                 "additional": [
@@ -3688,22 +3704,23 @@
             "tag": "rare",
             "min": 8,
             "max": 10,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "slime_ooze",
-                "title": "slime/ooze (Amorphous: Its anatomy and organs are bizarre and unnatural.)",
+                "title": "Slime/ooze (Amorphous: Its anatomy and organs are bizarre and unnatural.)",
                 "min": 1,
                 "max": 3
               },
               {
                 "tag": "creation",
-                "title": "creation (Construct: It was made, not born)",
+                "title": "Creation (Construct: It was made, not born)",
                 "min": 4,
                 "max": 6
               },
               {
                 "tag": "beast_oddity",
-                "title": "Beast + Oddity",
+                "title": "BEAST + ODDITY",
                 "min": 7,
                 "max": 9,
                 "additional": [
@@ -3713,9 +3730,12 @@
               },
               {
                 "tag": "unnatural_entity",
+                "title": "UNNATURAL ENTITY",
                 "min": 10,
                 "max": 12,
-                "generate_outer": "danger.unnatural_entity"
+                "additional": [
+                  "danger.unnatural_entity"
+                ]
               }
             ]
           },
@@ -3723,47 +3743,58 @@
             "tag": "legendary",
             "min": 11,
             "max": 12,
+            "dice": "d12",
             "variants": [
               {
                 "tag": "dragon_colossus",
-                "title": "dragon/colossus (Huge: It’s as big as a small house or larger.)",
+                "title": "Dragon/colossus (Huge: It’s as big as a small house or larger.)",
                 "min": 1,
                 "max": 3
               },
               {
                 "tag": "unusual_huge",
-                "title": "Unusual + Huge (It’s as big as a small house or larger.)",
+                "title": "UNUSUAL + Huge (It’s as big as a small house or larger.)",
                 "min": 4,
                 "max": 6,
-                "generate_outer": "creature.monster.unusual"
+                "additional": [
+                  "creature.monster.unusual"
+                ]
               },
               {
                 "tag": "rare_huge",
-                "title": "Rare + Huge (It’s as big as a small house or larger.)",
+                "title": "RARE + Huge (It’s as big as a small house or larger.)",
                 "min": 7,
                 "max": 9,
-                "generate_outer": "creature.monster.rare"
+                "additional": [
+                  "creature.monster.rare"
+                ]
               },
               {
                 "tag": "beast_dragon",
-                "title": "Beast + dragon",
+                "title": "BEAST + dragon",
                 "min": 10,
                 "max": 10,
-                "generate_outer": "creature.beast"
+                "additional": [
+                  "creature.beast"
+                ]
               },
               {
                 "tag": "unusual_dragon",
-                "title": "Unusual + dragon",
+                "title": "UNUSUAL + dragon",
                 "min": 11,
                 "max": 11,
-                "generate_outer": "creature.monster.unusual"
+                "additional": [
+                  "creature.monster.unusual"
+                ]
               },
               {
                 "tag": "rare_dragon",
-                "title": "Rare + dragon",
+                "title": "RARE + dragon",
                 "min": 12,
                 "max": 12,
-                "generate_outer": "creature.monster.rare"
+                "additional": [
+                  "creature.monster.rare"
+                ]
               }
             ]
           }
@@ -3773,16 +3804,20 @@
           "details.alignment",
           "details.disposition",
           "details.number_appearing",
-          "details.size"
-        ],
-        "optional": [
-          "details.ability",
-          "details.adjective",
-          "details.age",
-          "details.aspect",
-          "details.condition",
-          "details.feature",
-          "details.tags"
+          "details.size",
+          {
+            "tag": "optional",
+            "additionalTitle": "Optional:",
+            "additional": [
+              "details.ability",
+              "details.adjective",
+              "details.age",
+              "details.aspect",
+              "details.condition",
+              "details.feature",
+              "details.tags"
+            ]
+          }
         ]
       }
     ]
@@ -5187,9 +5222,15 @@
             "additional": [
               "details.ability",
               "details.magic_type",
-              "details.aspect"
-            ],
-            "optional": "details.element"
+              "details.aspect",
+              {
+                "tag": "optional",
+                "additionalTitle": "Optional:",
+                "additional": [
+                  "details.element"
+                ]
+              }
+            ]
           },
           {
             "tag": "roll_twice",

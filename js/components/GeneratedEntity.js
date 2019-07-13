@@ -6,7 +6,7 @@ define([], function(){
      * @param tag
      * @param title
      */
-    var GeneratedEntity = function(tag, title) {
+    let GeneratedEntity = function(tag, title) {
         this.tag = tag;
         this.title = title;
         this.roll = null;
@@ -14,9 +14,7 @@ define([], function(){
         this.variant = null;
 
         this.additional = [];
-        this.optional = [];
-
-        this.numbers = null;
+        this.additionalTitle = "Additional:";
     };
 
     return GeneratedEntity;
