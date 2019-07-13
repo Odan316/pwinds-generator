@@ -2995,7 +2995,7 @@
             "variants": [
               {
                 "tag": "imp",
-                "title": "Imp (Small)",
+                "title": "Imp (<i>Small</i>)",
                 "min": 1,
                 "max": 3
               },
@@ -3023,7 +3023,7 @@
               },
               {
                 "tag": "devil",
-                "title": "Fevil/elemental lord",
+                "title": "Evil/elemental lord",
                 "min": 12,
                 "max": 12
               }
@@ -3056,7 +3056,7 @@
               },
               {
                 "tag": "army",
-                "title": "Army (Horde)",
+                "title": "Army (<i>Horde</i>)",
                 "min": 10,
                 "max": 11
               },
@@ -3501,19 +3501,19 @@
             "variants": [
               {
                 "tag": "halfling",
-                "title": "Halfling (Small: It’s about halfling size.)",
+                "title": "Halfling (<i>Small</i>)",
                 "min": 1,
                 "max": 3
               },
               {
                 "tag": "goblin_kobold",
-                "title": "Goblin/kobold (Small: It’s about halfling size.)",
+                "title": "Goblin/kobold (<i>Small</i>)",
                 "min": 4,
                 "max": 5
               },
               {
                 "tag": "dwarf_gnome",
-                "title": "Dwarf/gnome (Small: It’s about halfling size.)",
+                "title": "Dwarf/gnome (<i>Small</i>)",
                 "min": 6,
                 "max": 7
               },
@@ -3544,7 +3544,7 @@
             "variants": [
               {
                 "tag": "fey",
-                "title": "Fey (Tiny: It’s much smaller than a halfling.)",
+                "title": "Fey (<i>Tiny</i>)",
                 "min": 1,
                 "max": 1
               },
@@ -3567,13 +3567,13 @@
               },
               {
                 "tag": "ogre_troll",
-                "title": "Ogre/troll (Large: It’s much bigger than a human, about as big as a cart.)",
+                "title": "Ogre/troll (<i>Large</i>)",
                 "min": 8,
                 "max": 10
               },
               {
                 "tag": "cyclops_giant",
-                "title": "Cyclops/giant (Large: It’s much bigger than a human, about as big as a cart.)",
+                "title": "Cyclops/giant (<i>Large</i>)",
                 "min": 11,
                 "max": 12
               }
@@ -3656,12 +3656,13 @@
               },
               {
                 "tag": "undead_human",
+                "title": "<i>Undead</i> Human",
                 "min": 4,
                 "max": 5
               },
               {
                 "tag": "undead_humanoid",
-                "title": "Undead HUMANOID",
+                "title": "<i>Undead</i> HUMANOID",
                 "min": 6,
                 "max": 6,
                 "additional": [
@@ -3708,13 +3709,13 @@
             "variants": [
               {
                 "tag": "slime_ooze",
-                "title": "Slime/ooze (Amorphous: Its anatomy and organs are bizarre and unnatural.)",
+                "title": "Slime/ooze (<i>Amorphous:</i>)",
                 "min": 1,
                 "max": 3
               },
               {
                 "tag": "creation",
-                "title": "Creation (Construct: It was made, not born)",
+                "title": "Creation (<i>Construct</i>)",
                 "min": 4,
                 "max": 6
               },
@@ -3747,13 +3748,13 @@
             "variants": [
               {
                 "tag": "dragon_colossus",
-                "title": "Dragon/colossus (Huge: It’s as big as a small house or larger.)",
+                "title": "Dragon/colossus (<i>Huge</i>)",
                 "min": 1,
                 "max": 3
               },
               {
                 "tag": "unusual_huge",
-                "title": "UNUSUAL + Huge (It’s as big as a small house or larger.)",
+                "title": "UNUSUAL + <i>Huge</i>",
                 "min": 4,
                 "max": 6,
                 "additional": [
@@ -3762,7 +3763,7 @@
               },
               {
                 "tag": "rare_huge",
-                "title": "RARE + Huge (It’s as big as a small house or larger.)",
+                "title": "RARE + <i>Huge</i>",
                 "min": 7,
                 "max": 9,
                 "additional": [
@@ -3819,12 +3820,139 @@
           },
           {
             "tag": "tags",
-            "additionalTitle": "Tags (add if needed):",
+            "additionalTitle": "Tags (add more, if needed):",
             "additional": [
               "details.tags",
               "details.tags"
             ]
           }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "steading",
+    "dice": "d12",
+    "variants": [
+      {
+        "tag": "village",
+        "min": 1,
+        "max": 5,
+        "dice": "d12",
+        "static": "<i>Poor</i>, <i>Steady</i>, <i>Militia</i>, <i>Resource</i> (GM choice) and has an <i>Oath</i> (steading of GM's choice).",
+        "additional": [
+          {
+            "tag": "feature",
+            "title": "If the village is part of a kingdom or empire",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "natural_defenses",
+                "title": "Natural defenses: <i>Safe</i>, <i>-Defenses</i>",
+                "min": 1,
+                "max": 3
+              },
+              {
+                "tag": "abundant_resources",
+                "title": "Abundant resources: <i>+Prosperity</i>, <i>Resource</i> (GM choice), <i>Enmity</i> (GM choice)",
+                "min": 4,
+                "max": 6
+              },
+              {
+                "tag": "protected",
+                "title": "Protected by another steading: <i>Oath</i> (that steading), <i>+Defenses</i>",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "on_road",
+                "title": "On major road: <i>Trade</i> (GM choice), <i>+Prosperity</i>",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "wizards_tower",
+                "title": "Built around wizard's tower: <i>Personage</i> (that wizard), <i>Blight</i> (arcane creatures)",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "religious_significance",
+                "title": "Built on a site of religious significance: <i>Divine</i>, <i>History</i> (GM choice)",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "problem",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "arid_land",
+                "title": "Surrounded by arid or uncultivated land: <i>Need</i> (food)",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "dedicated",
+                "title": "Dedicated to a deity:<i>Religious</i> (that deity), <i>Enmity</i> (steading of opposing deity)",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "arid_land",
+                "title": "Surrounded by arid or uncultivated land: <i>Need (food)</i>",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "arid_land",
+                "title": "Surrounded by arid or uncultivated land: <i>Need (food)</i>",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "arid_land",
+                "title": "Surrounded by arid or uncultivated land: <i>Need (food)</i>",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "arid_land",
+                "title": "Surrounded by arid or uncultivated land: <i>Need (food)</i>",
+                "min": 11,
+                "max": 12
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "town",
+        "min": 6,
+        "max": 8,
+        "dice": "d12",
+        "variants": [
+
+        ]
+      },
+      {
+        "tag": "keep",
+        "min": 9,
+        "max": 11,
+        "dice": "d12",
+        "variants": [
+
+        ]
+      },
+      {
+        "tag": "city",
+        "min": 12,
+        "max": 12,
+        "dice": "d12",
+        "variants": [
+
         ]
       }
     ]
