@@ -113,7 +113,7 @@ define([
          * @type {String}
          * @private
          */
-        let _additionalTitle = null;
+        let _additionalTitle = "Additional:";
 
         /**
          * Number of entities to generate

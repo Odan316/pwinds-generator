@@ -14,7 +14,7 @@ define([], function(){
         this.variant = null;
 
         this.additional = [];
-        this.additionalTitle = "Additional:";
+        this.additionalTitle = "";
     };
 
     return GeneratedEntity;

@@ -3814,7 +3814,14 @@
               "details.age",
               "details.aspect",
               "details.condition",
-              "details.feature",
+              "details.feature"
+            ]
+          },
+          {
+            "tag": "tags",
+            "additionalTitle": "Tags (add if needed):",
+            "additional": [
+              "details.tags",
               "details.tags"
             ]
           }
