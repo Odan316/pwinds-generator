@@ -4225,6 +4225,1120 @@
     ]
   },
   {
+    "tag": "dungeon",
+    "additional": [
+      "map.place_name",
+      "dungeon.foundation",
+      "dungeon.ruination",
+      "dungeon.size"
+    ],
+    "dictionaries": [
+      {
+        "tag": "foundation",
+        "additionalTitle": "Foundation:",
+        "additional": [
+          {
+            "tag": "builder",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "aliens",
+                "title": "Aliens/precursors",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "demigod",
+                "title": "Demigod/demon",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "natural",
+                "title": "Natural (caves, etc.)",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "religious_order",
+                "title": "Religious order/cult",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "humanoid",
+                "title": "HUMANOID",
+                "min": 6,
+                "max": 7,
+                "additional": [
+                  "creature.humanoid"
+                ]
+              },
+              {
+                "tag": "dwarves",
+                "title": "Dwarves/gnomes",
+                "min": 8,
+                "max": 9
+              },
+              {
+                "tag": "elves",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "wizard",
+                "title": "Wizard/madman",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "monarch",
+                "title": "Monarch/warlord",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "function",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "source",
+                "title": "Source/portal",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "mine",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "tomb",
+                "title": "Tomb/crypt",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "prison",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "lair",
+                "title": "Lair/den/hideout",
+                "min": 6,
+                "max": 7
+              },
+              {
+                "tag": "stronghold",
+                "title": "Stronghold/sanctuary",
+                "min": 8,
+                "max": 9
+              },
+              {
+                "tag": "shrine",
+                "title": "Shrine/temple/oracle",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "archive",
+                "title": "Archive/library",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "unknown",
+                "title": "unknown/mystery",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "ruination",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "arcane_disaster",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "damnation",
+            "title": "Damnation/curse",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "earthquake",
+            "title": "Earthquake/fire/flood",
+            "min": 3,
+            "max": 4
+          },
+          {
+            "tag": "plague",
+            "title": "Plague/famine/drought",
+            "min": 5,
+            "max": 6
+          },
+          {
+            "tag": "overrun_by_monsters",
+            "min": 7,
+            "max": 8
+          },
+          {
+            "tag": "war",
+            "title": "War/invasion",
+            "min": 9,
+            "max": 10
+          },
+          {
+            "tag": "depleted_resources",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "better_prospects_elsewhere",
+            "min": 12,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "size",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "small",
+            "min": 1,
+            "max": 3,
+            "additional": [
+              {
+                "tag": "Themes: 2 or 1d4",
+                "roll_result": "d4",
+                "additional": [
+                  {
+                    "repeat": 2,
+                    "generate_outer":"dungeon.theme"
+                  }
+                ]
+              },
+              {
+                "tag": "Areas: 6 or 1d6+2",
+                "roll_result": "d6+2"
+              }
+            ]
+          },
+          {
+            "tag": "medium",
+            "min": 4,
+            "max": 9,
+            "additional": [
+              {
+                "tag": "Themes: 3 or 1d6",
+                "roll_result": "d6",
+                "additional": [
+                  {
+                    "repeat": 3,
+                    "generate_outer":"dungeon.theme"
+                  }
+                ]
+              },
+              {
+                "tag": "Areas: 12 or 2d6+4",
+                "roll_result": "2d6+4"
+              }
+            ]
+          },
+          {
+            "tag": "large",
+            "min": 10,
+            "max": 11,
+            "additional": [
+              {
+                "tag": "Themes: 4 or 1d6+1",
+                "roll_result": "1d6+1",
+                "additional": [
+                  {
+                    "repeat": 4,
+                    "generate_outer":"dungeon.theme"
+                  }
+                ]
+              },
+              {
+                "tag": "Areas: 16 or 3d6+6",
+                "roll_result": "3d6+6"
+              }
+            ]
+          },
+          {
+            "tag": "huge",
+            "min": 12,
+            "max": 12,
+            "additional": [
+              {
+                "tag": "Themes: 5 or 1d6+2",
+                "roll_result": "1d6+2",
+                "additional": [
+                  {
+                    "repeat": 5,
+                    "generate_outer":"dungeon.theme"
+                  }
+                ]
+              },
+              {
+                "tag": "Areas: 24 or 4d6+10",
+                "roll_result": "4d6+10"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "theme",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "mundane",
+            "min": 1,
+            "max": 5,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "rot",
+                "title": "rot/decay",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "torture",
+                "title": "Torture/agony",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "madness",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "all_is_lost",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "noble_sacrifice",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "savage_fury",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "survival",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "criminal_activity",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "secrets",
+                "title": "Secrets/treachery",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "tricks_and_traps",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "invasion",
+                "title": "Invasion/infestation",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "factions_at_war",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "unusual",
+            "min": 6,
+            "max": 9,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "creation",
+                "title": "Creation/invention",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "element",
+                "title": "ELEMENT",
+                "min": 2,
+                "max": 2,
+                "additional": [
+                  "details.element"
+                ]
+              },
+              {
+                "tag": "knowledge",
+                "title": "Knowledge/learning",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "growth",
+                "title": "Growth/expansion",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "deepening_mystery",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "transformation",
+                "title": "Transformation/change",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "chaos_and_destruction",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "shadowy_forces",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "forbidden_knowledge",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "poison",
+                "title": "Poison/disease",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "corruption",
+                "title": "Corruption/blight",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "impending_disaster",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "extraordinary",
+            "min": 11,
+            "max": 12,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "scheming_evil",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "divination",
+                "title": "Divination/scrying",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "blasphemy",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "arcane_research",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "occult_forces",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "an_ancient_curse",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "mutation",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "the_unquiet_dead",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "bottomless_hunger",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "incredible_power",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "unspeakable_horrors",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "holy_war",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "dungeon_area",
+    "dictionaries": [
+      {
+        "tag": "dungeons_content",
+        "title": "Area type & contents",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "common_empty",
+            "title": "Common, empty (Unthemed)",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "common_danger",
+            "title": "Common, Danger (Unthemed)",
+            "min": 2,
+            "max": 2,
+            "additional": [
+              "dungeons_danger"
+            ]
+          },
+          {
+            "tag": "common_discovery_danger",
+            "title": "Common, Discovery + Danger (Unthemed)",
+            "min": 3,
+            "max": 4,
+            "additional": [
+              "dungeons_discovery",
+              "dungeons_danger"
+            ]
+          },
+          {
+            "tag": "common_discovery",
+            "title": "Common, Discovery (Unthemed)",
+            "min": 5,
+            "max": 6,
+            "additional": [
+              "dungeons_discovery"
+            ]
+          },
+          {
+            "tag": "common_danger",
+            "title": "Common, Danger (Themed)",
+            "min": 7,
+            "max": 7,
+            "additional": [
+              "dungeons_danger"
+            ]
+          },
+          {
+            "tag": "common_discovery_danger",
+            "title": "Common, Discovery + Danger (Themed)",
+            "min": 8,
+            "max": 8,
+            "additional": [
+              "dungeons_discovery",
+              "dungeons_danger"
+            ]
+          },
+          {
+            "tag": "common_discovery",
+            "title": "Common, Discovery (Themed)",
+            "min": 9,
+            "max": 9,
+            "additional": [
+              "dungeons_discovery"
+            ]
+          },
+          {
+            "tag": "unique_danger",
+            "title": "Unique, Danger (Themed)",
+            "min": 10,
+            "max": 10,
+            "additional": [
+              "dungeons_danger"
+            ]
+          },
+          {
+            "tag": "unique_discovery_danger",
+            "title": "Unique, Discovery + Danger (Themed)",
+            "min": 11,
+            "max": 11,
+            "additional": [
+              "dungeons_discovery",
+              "dungeons_danger"
+            ]
+          },
+          {
+            "tag": "unique_discovery",
+            "title": "Unique, Discovery (Themed)",
+            "min": 12,
+            "max": 12,
+            "additional": [
+              "dungeons_discovery"
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "dungeons_discovery",
+        "title": "Dungeon Discovery. A starting point: extrapolate, embellish, integrate.",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "dressing",
+            "min": 1,
+            "max": 3,
+            "variants": [
+              {
+                "tag": "junk_debris",
+                "title": "junk/debris",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "tracks_marks",
+                "title": "tracks/marks",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "signs_of_battle",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "writing_carving",
+                "title": "writing/carving",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "warning",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "dead_creature",
+                "min": 6,
+                "max": 6,
+                "additional": [
+                  "creature"
+                ]
+              },
+              {
+                "tag": "bones_remains",
+                "title": "bones/remains",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "book_scroll_map",
+                "title": "book/scroll/map",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "broken_door_wall",
+                "title": "broken door/wall",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "breeze_wind_smell",
+                "title": "breeze/wind/smell",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "lichen_moss_fungus",
+                "title": "lichen/moss/fungus",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "oddity",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "details.oddity"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "feature",
+            "min": 4,
+            "max": 9,
+            "variants": [
+              {
+                "tag": "cave_in_collapse",
+                "title": "cave-in/collapse",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "pit_shaft_chasm",
+                "title": "pit/shaft/chasm",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "pillars_columns",
+                "title": "pillars/columns",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "locked_door_gate",
+                "title": "locked door/gate",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "alcoves_niches",
+                "title": "alcoves/niches",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "bridge_stairs_ramp",
+                "title": "bridge/stairs/ramp",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "fountain_well_pool",
+                "title": "fountain/well/pool",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "puzzle",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "altar_dais_platform",
+                "title": "altar/dais/platform",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "statue_idol",
+                "title": "statue/idol",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "magic_pool_statue_idol",
+                "title": "magic pool/statue/idol",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "connection_to_another_dungeon",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "find",
+            "min": 10,
+            "max": 12,
+            "variants": [
+              {
+                "tag": "trinkets",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "tools",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "weapons_armor",
+                "title": "weapons/armor",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "supplies_trade goods",
+                "title": "supplies/trade goods",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "coins_gems_jewelry",
+                "title": "coins/gems/jewelry",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "poisons_potions",
+                "title": "poisons/potions",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "adventurer_captive",
+                "title": "adventurer/captive",
+                "min": 7,
+                "max": 7,
+                "additional": [
+                  "creature",
+                  "1d4+4"
+                ]
+              },
+              {
+                "tag": "magic_item",
+                "min": 8,
+                "max": 8,
+                "additional": [
+                  "details.ability",
+                  "details.magic_type"
+                ]
+              },
+              {
+                "tag": "scroll_book",
+                "title": "scroll/book",
+                "min": 9,
+                "max": 9,
+                "additional": [
+                  "details.ability",
+                  "details.magic_type"
+                ]
+              },
+              {
+                "tag": "magic_weapon_armor",
+                "title": "magic weapon/armor",
+                "min": 10,
+                "max": 10,
+                "additional": [
+                  "details.ability",
+                  "details.magic_type"
+                ]
+              },
+              {
+                "tag": "artifact",
+                "min": 11,
+                "max": 11,
+                "additional": [
+                  "details.ability",
+                  "details.magic_type",
+                  "details.aspect",
+                  {
+                    "tag": "optional",
+                    "additionalTitle": "Optional:",
+                    "additional": [
+                      "details.element"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "roll_twice",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "dungeons_discovery.find",
+                  "dungeons_discovery.find"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "dungeons_danger",
+        "title": "Dungeon Danger. If they would notice, show signs of an approaching threat.",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "trap",
+            "min": 1,
+            "max": 4,
+            "variants": [
+              {
+                "tag": "alarm",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "ensnaring_paralyzing",
+                "title": "ensnaring/paralyzing",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "pit",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "crushing",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "piercing_puncturing",
+                "title": "piercing/puncturing",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "chopping_slashing",
+                "title": "chopping/slashing",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "confusing",
+                "title": "confusing (maze, etc.)",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "gas",
+                "title": "gas (poison, etc.)",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "element",
+                "min": 9,
+                "max": 9,
+                "additional": [
+                  "details.element"
+                ]
+              },
+              {
+                "tag": "ambush",
+                "min": 10,
+                "max": 10,
+                "additional": [
+                  "creature"
+                ]
+              },
+              {
+                "tag": "magical",
+                "min": 11,
+                "max": 11,
+                "additional": [
+                  "details.ability"
+                ]
+              },
+              {
+                "tag": "roll_twice",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "dungeons_danger.trap",
+                  "dungeons_danger.trap"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "creature",
+            "min": 5,
+            "max": 11,
+            "variants": [
+              {
+                "tag": "waiting_in_ambush",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "fighting_squabbling",
+                "title": "fighting/squabbling",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "prowling_on_patrol",
+                "title": "prowling/on patrol",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "looking_for_food",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "eating_resting",
+                "title": "eating/resting",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "guarding",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "on_the_move",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "searching_scavenging",
+                "title": "searching/scavenging",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "returning_to_den",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "making_plans",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "sleeping",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "dying",
+                "min": 12,
+                "max": 12
+              }
+            ],
+            "additional": [
+              "creature"
+            ]
+          },
+          {
+            "tag": "entity",
+            "min": 12,
+            "max": 12,
+            "variants": [
+              {
+                "tag": "alien_interloper",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "vermin_lord",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "criminal_mastermind",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "warlord",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "high_priest",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "oracle",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "wizard_witch_alchemist",
+                "title": "wizard/witch/alchemist",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "monster_lord",
+                "min": 8,
+                "max": 8,
+                "additional": [
+                  "creature.monster"
+                ]
+              },
+              {
+                "tag": "evil_spirit_ghost",
+                "title": "evil spirit/ghost",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "undead_lord",
+                "title": "undead lord (lich, etc.)",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "demon",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "dark_god",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "tag": "details",
     "dice": "d12",
     "dictionaries": [
@@ -5272,613 +6386,6 @@
           {
             "tag": "visible_at_great_distance_focal_point",
             "title": "Visible at great distance/focal point",
-            "min": 12,
-            "max": 12
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "tag": "dungeons_content",
-    "title": "Area type & contents",
-    "dice": "d12",
-    "variants": [
-      {
-        "tag": "common_empty",
-        "title": "Common, empty (Unthemed)",
-        "min": 1,
-        "max": 1
-      },
-      {
-        "tag": "common_danger",
-        "title": "Common, Danger (Unthemed)",
-        "min": 2,
-        "max": 2,
-        "additional": [
-          "dungeons_danger"
-        ]
-      },
-      {
-        "tag": "common_discovery_danger",
-        "title": "Common, Discovery + Danger (Unthemed)",
-        "min": 3,
-        "max": 4,
-        "additional": [
-          "dungeons_discovery",
-          "dungeons_danger"
-        ]
-      },
-      {
-        "tag": "common_discovery",
-        "title": "Common, Discovery (Unthemed)",
-        "min": 5,
-        "max": 6,
-        "additional": [
-          "dungeons_discovery"
-        ]
-      },
-      {
-        "tag": "common_danger",
-        "title": "Common, Danger (Themed)",
-        "min": 7,
-        "max": 7,
-        "additional": [
-          "dungeons_danger"
-        ]
-      },
-      {
-        "tag": "common_discovery_danger",
-        "title": "Common, Discovery + Danger (Themed)",
-        "min": 8,
-        "max": 8,
-        "additional": [
-          "dungeons_discovery",
-          "dungeons_danger"
-        ]
-      },
-      {
-        "tag": "common_discovery",
-        "title": "Common, Discovery (Themed)",
-        "min": 9,
-        "max": 9,
-        "additional": [
-          "dungeons_discovery"
-        ]
-      },
-      {
-        "tag": "unique_danger",
-        "title": "Unique, Danger (Themed)",
-        "min": 10,
-        "max": 10,
-        "additional": [
-          "dungeons_danger"
-        ]
-      },
-      {
-        "tag": "unique_discovery_danger",
-        "title": "Unique, Discovery + Danger (Themed)",
-        "min": 11,
-        "max": 11,
-        "additional": [
-          "dungeons_discovery",
-          "dungeons_danger"
-        ]
-      },
-      {
-        "tag": "unique_discovery",
-        "title": "Unique, Discovery (Themed)",
-        "min": 12,
-        "max": 12,
-        "additional": [
-          "dungeons_discovery"
-        ]
-      }
-    ]
-  },
-  {
-    "tag": "dungeons_discovery",
-    "title": "Dungeon Discovery. A starting point: extrapolate, embellish, integrate.",
-    "dice": "d12",
-    "variants": [
-      {
-        "tag": "dressing",
-        "min": 1,
-        "max": 3,
-        "variants": [
-          {
-            "tag": "junk_debris",
-            "title": "junk/debris",
-            "min": 1,
-            "max": 1
-          },
-          {
-            "tag": "tracks_marks",
-            "title": "tracks/marks",
-            "min": 2,
-            "max": 2
-          },
-          {
-            "tag": "signs_of_battle",
-            "min": 3,
-            "max": 3
-          },
-          {
-            "tag": "writing_carving",
-            "title": "writing/carving",
-            "min": 4,
-            "max": 4
-          },
-          {
-            "tag": "warning",
-            "min": 5,
-            "max": 5
-          },
-          {
-            "tag": "dead_creature",
-            "min": 6,
-            "max": 6,
-            "additional": [
-              "creature"
-            ]
-          },
-          {
-            "tag": "bones_remains",
-            "title": "bones/remains",
-            "min": 7,
-            "max": 7
-          },
-          {
-            "tag": "book_scroll_map",
-            "title": "book/scroll/map",
-            "min": 8,
-            "max": 8
-          },
-          {
-            "tag": "broken_door_wall",
-            "title": "broken door/wall",
-            "min": 9,
-            "max": 9
-          },
-          {
-            "tag": "breeze_wind_smell",
-            "title": "breeze/wind/smell",
-            "min": 10,
-            "max": 10
-          },
-          {
-            "tag": "lichen_moss_fungus",
-            "title": "lichen/moss/fungus",
-            "min": 11,
-            "max": 11
-          },
-          {
-            "tag": "oddity",
-            "min": 12,
-            "max": 12,
-            "additional": [
-              "details.oddity"
-            ]
-          }
-        ]
-      },
-      {
-        "tag": "feature",
-        "min": 4,
-        "max": 9,
-        "variants": [
-          {
-            "tag": "cave_in_collapse",
-            "title": "cave-in/collapse",
-            "min": 1,
-            "max": 1
-          },
-          {
-            "tag": "pit_shaft_chasm",
-            "title": "pit/shaft/chasm",
-            "min": 2,
-            "max": 2
-          },
-          {
-            "tag": "pillars_columns",
-            "title": "pillars/columns",
-            "min": 3,
-            "max": 3
-          },
-          {
-            "tag": "locked_door_gate",
-            "title": "locked door/gate",
-            "min": 4,
-            "max": 4
-          },
-          {
-            "tag": "alcoves_niches",
-            "title": "alcoves/niches",
-            "min": 5,
-            "max": 5
-          },
-          {
-            "tag": "bridge_stairs_ramp",
-            "title": "bridge/stairs/ramp",
-            "min": 6,
-            "max": 6
-          },
-          {
-            "tag": "fountain_well_pool",
-            "title": "fountain/well/pool",
-            "min": 7,
-            "max": 7
-          },
-          {
-            "tag": "puzzle",
-            "min": 8,
-            "max": 8
-          },
-          {
-            "tag": "altar_dais_platform",
-            "title": "altar/dais/platform",
-            "min": 9,
-            "max": 9
-          },
-          {
-            "tag": "statue_idol",
-            "title": "statue/idol",
-            "min": 10,
-            "max": 10
-          },
-          {
-            "tag": "magic_pool_statue_idol",
-            "title": "magic pool/statue/idol",
-            "min": 11,
-            "max": 11
-          },
-          {
-            "tag": "connection_to_another_dungeon",
-            "min": 12,
-            "max": 12
-          }
-        ]
-      },
-      {
-        "tag": "find",
-        "min": 10,
-        "max": 12,
-        "variants": [
-          {
-            "tag": "trinkets",
-            "min": 1,
-            "max": 1
-          },
-          {
-            "tag": "tools",
-            "min": 2,
-            "max": 2
-          },
-          {
-            "tag": "weapons_armor",
-            "title": "weapons/armor",
-            "min": 3,
-            "max": 3
-          },
-          {
-            "tag": "supplies_trade goods",
-            "title": "supplies/trade goods",
-            "min": 4,
-            "max": 4
-          },
-          {
-            "tag": "coins_gems_jewelry",
-            "title": "coins/gems/jewelry",
-            "min": 5,
-            "max": 5
-          },
-          {
-            "tag": "poisons_potions",
-            "title": "poisons/potions",
-            "min": 6,
-            "max": 6
-          },
-          {
-            "tag": "adventurer_captive",
-            "title": "adventurer/captive",
-            "min": 7,
-            "max": 7,
-            "additional": [
-              "creature",
-              "1d4+4"
-            ]
-          },
-          {
-            "tag": "magic_item",
-            "min": 8,
-            "max": 8,
-            "additional": [
-              "details.ability",
-              "details.magic_type"
-            ]
-          },
-          {
-            "tag": "scroll_book",
-            "title": "scroll/book",
-            "min": 9,
-            "max": 9,
-            "additional": [
-              "details.ability",
-              "details.magic_type"
-            ]
-          },
-          {
-            "tag": "magic_weapon_armor",
-            "title": "magic weapon/armor",
-            "min": 10,
-            "max": 10,
-            "additional": [
-              "details.ability",
-              "details.magic_type"
-            ]
-          },
-          {
-            "tag": "artifact",
-            "min": 11,
-            "max": 11,
-            "additional": [
-              "details.ability",
-              "details.magic_type",
-              "details.aspect",
-              {
-                "tag": "optional",
-                "additionalTitle": "Optional:",
-                "additional": [
-                  "details.element"
-                ]
-              }
-            ]
-          },
-          {
-            "tag": "roll_twice",
-            "min": 12,
-            "max": 12,
-            "additional": [
-              "dungeons_discovery.find",
-              "dungeons_discovery.find"
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "tag": "dungeons_danger",
-    "title": "Dungeon Danger. If they would notice, show signs of an approaching threat.",
-    "dice": "d12",
-    "variants": [
-      {
-        "tag": "trap",
-        "min": 1,
-        "max": 4,
-        "variants": [
-          {
-            "tag": "alarm",
-            "min": 1,
-            "max": 1
-          },
-          {
-            "tag": "ensnaring_paralyzing",
-            "title": "ensnaring/paralyzing",
-            "min": 2,
-            "max": 2
-          },
-          {
-            "tag": "pit",
-            "min": 3,
-            "max": 3
-          },
-          {
-            "tag": "crushing",
-            "min": 4,
-            "max": 4
-          },
-          {
-            "tag": "piercing_puncturing",
-            "title": "piercing/puncturing",
-            "min": 5,
-            "max": 5
-          },
-          {
-            "tag": "chopping_slashing",
-            "title": "chopping/slashing",
-            "min": 6,
-            "max": 6
-          },
-          {
-            "tag": "confusing",
-            "title": "confusing (maze, etc.)",
-            "min": 7,
-            "max": 7
-          },
-          {
-            "tag": "gas",
-            "title": "gas (poison, etc.)",
-            "min": 8,
-            "max": 8
-          },
-          {
-            "tag": "element",
-            "min": 9,
-            "max": 9,
-            "additional": [
-              "details.element"
-            ]
-          },
-          {
-            "tag": "ambush",
-            "min": 10,
-            "max": 10,
-            "additional": [
-              "creature"
-            ]
-          },
-          {
-            "tag": "magical",
-            "min": 11,
-            "max": 11,
-            "additional": [
-              "details.ability"
-            ]
-          },
-          {
-            "tag": "roll_twice",
-            "min": 12,
-            "max": 12,
-            "additional": [
-              "dungeons_danger.trap",
-              "dungeons_danger.trap"
-            ]
-          }
-        ]
-      },
-      {
-        "tag": "creature",
-        "min": 5,
-        "max": 11,
-        "variants": [
-          {
-            "tag": "waiting_in_ambush",
-            "min": 1,
-            "max": 1
-          },
-          {
-            "tag": "fighting_squabbling",
-            "title": "fighting/squabbling",
-            "min": 2,
-            "max": 2
-          },
-          {
-            "tag": "prowling_on_patrol",
-            "title": "prowling/on patrol",
-            "min": 3,
-            "max": 3
-          },
-          {
-            "tag": "looking_for_food",
-            "min": 4,
-            "max": 4
-          },
-          {
-            "tag": "eating_resting",
-            "title": "eating/resting",
-            "min": 5,
-            "max": 5
-          },
-          {
-            "tag": "guarding",
-            "min": 6,
-            "max": 6
-          },
-          {
-            "tag": "on_the_move",
-            "min": 7,
-            "max": 7
-          },
-          {
-            "tag": "searching_scavenging",
-            "title": "searching/scavenging",
-            "min": 8,
-            "max": 8
-          },
-          {
-            "tag": "returning_to_den",
-            "min": 9,
-            "max": 9
-          },
-          {
-            "tag": "making_plans",
-            "min": 10,
-            "max": 10
-          },
-          {
-            "tag": "sleeping",
-            "min": 11,
-            "max": 11
-          },
-          {
-            "tag": "dying",
-            "min": 12,
-            "max": 12
-          }
-        ],
-        "additional": [
-          "creature"
-        ]
-      },
-      {
-        "tag": "entity",
-        "min": 12,
-        "max": 12,
-        "variants": [
-          {
-            "tag": "alien_interloper",
-            "min": 1,
-            "max": 1
-          },
-          {
-            "tag": "vermin_lord",
-            "min": 2,
-            "max": 2
-          },
-          {
-            "tag": "criminal_mastermind",
-            "min": 3,
-            "max": 3
-          },
-          {
-            "tag": "warlord",
-            "min": 4,
-            "max": 4
-          },
-          {
-            "tag": "high_priest",
-            "min": 5,
-            "max": 5
-          },
-          {
-            "tag": "oracle",
-            "min": 6,
-            "max": 6
-          },
-          {
-            "tag": "wizard_witch_alchemist",
-            "title": "wizard/witch/alchemist",
-            "min": 7,
-            "max": 7
-          },
-          {
-            "tag": "monster_lord",
-            "min": 8,
-            "max": 8,
-            "additional": [
-              "creature.monster"
-            ]
-          },
-          {
-            "tag": "evil_spirit_ghost",
-            "title": "evil spirit/ghost",
-            "min": 9,
-            "max": 9
-          },
-          {
-            "tag": "undead_lord",
-            "title": "undead lord (lich, etc.)",
-            "min": 10,
-            "max": 10
-          },
-          {
-            "tag": "demon",
-            "min": 11,
-            "max": 11
-          },
-          {
-            "tag": "dark_god",
             "min": 12,
             "max": 12
           }
