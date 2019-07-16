@@ -3872,7 +3872,7 @@
               },
               {
                 "tag": "wizards_tower",
-                "title": "Built around wizard's tower: <i>Personage</i> (that wizard), <i>Blight</i> (arcane creatures)",
+                "title": "Built around a wizard's tower: <i>Personage</i> (that wizard), <i>Blight</i> (arcane creatures)",
                 "min": 11,
                 "max": 11
               },
@@ -3901,26 +3901,26 @@
                 "max": 4
               },
               {
-                "tag": "arid_land",
-                "title": "Surrounded by arid or uncultivated land: <i>Need (food)</i>",
+                "tag": "recently_at_war",
+                "title": "Recently at war: <i>-Population</i>, <i>-Prosperity</i> if they fought to the end, <i>-Defences</i> if they lost",
                 "min": 5,
                 "max": 6
               },
               {
-                "tag": "arid_land",
-                "title": "Surrounded by arid or uncultivated land: <i>Need (food)</i>",
+                "tag": "monster",
+                "title": "Monster problem: <i>Blight</i> (that monster), <i>Need</i> (adventurers)",
                 "min": 7,
                 "max": 8
               },
               {
-                "tag": "arid_land",
-                "title": "Surrounded by arid or uncultivated land: <i>Need (food)</i>",
+                "tag": "absorbed_village",
+                "title": "Absorbed another village: <i>+Population</i>, <i>Lawless</i>",
                 "min": 9,
                 "max": 10
               },
               {
-                "tag": "arid_land",
-                "title": "Surrounded by arid or uncultivated land: <i>Need (food)</i>",
+                "tag": "remote",
+                "title": "Remote or unwelcoming: <i>-Prosperity</i>, <i>Dwarven</i> or <i>Elven</i>or other non-human",
                 "min": 11,
                 "max": 12
               }
@@ -3933,8 +3933,93 @@
         "min": 6,
         "max": 8,
         "dice": "d12",
-        "variants": [
-
+        "static": "<i>Moderate</i>, <i>Steady</i>, <i>Watch</i> and <i>Trade</i> (with 2 places of GM's choice).",
+        "additional": [
+          {
+            "tag": "feature",
+            "title": "If the town is listed as Trade by another steading",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "booming",
+                "title": "Booming: <i>Booming</i>, <i>Lawless</i>",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "crossroads",
+                "title": "At a crossroads: <i>Market</i>, <i>+Prosperity</i>",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "defended",
+                "title": "Defended by another steading: <i>Oath</i> (that steading), <i>+Defenses</i>",
+                "min": 4,
+                "max": 5
+              },
+              {
+                "tag": "church",
+                "title": "Built around a church: <i>Power</i> (divine)",
+                "min": 6,
+                "max": 7
+              },
+              {
+                "tag": "craft",
+                "title": "Built around a craft: <i>Craft</i> (your choice), <i>Resource</i> (something required for that craft)",
+                "min": 8,
+                "max": 10
+              },
+              {
+                "tag": "military_post",
+                "title": "Built around a military post: <i>+Defences</i>",
+                "min": 11,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "problem",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "outgrowing",
+                "title": "Outgrowing a vital resource: <i>Need</i> (that resource), <i>Trade</i> (a steading with that resource)",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "offers_defence",
+                "title": "Offers defence to others: <i>Oath</i> (GM choice), <i>-Defence</i>",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "outlaw",
+                "title": "Outlaw rumoured to live there: <i>Personage</i> (the outlaw), <i>Enmity</i> (steading preyed upon)",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "controls_good",
+                "title": "Controls a good/service: <i>Exotic</i> (that good/service), <i>Enmity</i> (steading with ambition)",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "disease",
+                "title": "Suffers from disease: <i>-Population</i>",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "meeting_place",
+                "title": "Popular meeting place: <i>+Population</i>, <i>Lawless</i>",
+                "min": 11,
+                "max": 12
+              }
+            ]
+          }
         ]
       },
       {
@@ -3942,8 +4027,105 @@
         "min": 9,
         "max": 11,
         "dice": "d12",
-        "variants": [
-
+        "static": "<i>Poor</i>, <i>Shrinking</i>, <i>Guard</i>, <i>Need</i> (supplies), <i>Trade</i> (someplace with supplies), <i>Oath</i> (GM's choice).",
+        "additional": [
+          {
+            "tag": "feature",
+            "title": "If the keepis owed fealty by at least one ther steading",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "belongs",
+                "title": "Belongs to a noble family: <i>+Prosperity</i>, <i>Power</i> (political)",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "commander",
+                "title": "Run by a skilled commander: <i>Personage</i> (the commander), <i>+Defenses</i>",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "stands_watch",
+                "title": "Stands watch over a trade road: <i>+Prosperity</i>, <i>Guild</i> (trade)",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "special_troops",
+                "title": "Used t train special troops: <i>Arcane</i>, <i>-Population</i>",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "fertile_land",
+                "title": "Surrounded by fertile land: remove <i>Need</i> (supplies)",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "border",
+                "title": "Stands on a border: <i>+Defences</i>, <i>Enmity</i> (steading on the other side of the border",
+                "min": 11,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "problem",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "defensible_position",
+                "title": "Built on a naturally defensible position: <i>Safe</i>, <i>-Population</i>",
+                "min": 1,
+                "max": 3
+              },
+              {
+                "tag": "formerly_occupied",
+                "title": "Formerly occupied by another power: <i>Enmity</i> (steaing of thet power)",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "brigands",
+                "title": "Safe haven for brigands: <i>Lawless</i>",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "specific_threat",
+                "title": "Built to defend from specific threat: <i>Blight</i> (that threat)",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "horrible_war",
+                "title": "Has seen horrible bloody war: <i>History</i> (battle), <i>Blight</i> (restless spirits)",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "worst_of_the_worst",
+                "title": "Is given the worst of the worst: <i>Need</i> (skilled recruits)",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "disease",
+                "title": "Suffers from disease: <i>-Population</i>",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "meeting_place",
+                "title": "Popular meeting place: <i>+Population</i>, <i>-Law</i>",
+                "min": 11,
+                "max": 12
+              }
+            ]
+          }
         ]
       },
       {
@@ -3951,8 +4133,93 @@
         "min": 12,
         "max": 12,
         "dice": "d12",
-        "variants": [
-
+        "static": "<i>Moderate</i>, <i>Steady</i>, <i>Guard</i>, <i>Market</i>, <i>Guild</i> (GM's choice), 2+ <i>Oaths</i> (steadings of GM's choice)",
+        "additional": [
+          {
+            "tag": "feature",
+            "title": "If the city has trade with and fealty from at least 1 steading",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "permanent_defenses",
+                "title": "Permanent defenses, such as walls: <i>+Defenses</i>, <i>Oath</i> (GM's choice)",
+                "min": 1,
+                "max": 3
+              },
+              {
+                "tag": "vetinari",
+                "title": "Ruled by a single individual: <i>Personage</i> (the ruler), <i>Power</i> (political)",
+                "min": 4,
+                "max": 6
+              },
+              {
+                "tag": "diverse",
+                "title": "Diverse: <i>Dwarven</i> or <i>Elven</i> or both",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "trade_hub",
+                "title": "Trade hub: <i>Trade</i> (every nearby steading), <i>+Prosperity</i>",
+                "min": 8,
+                "max": 10
+              },
+              {
+                "tag": "ancient",
+                "title": "Ancient, built on top of its own ruins: <i>History</i> (your choice), <i>Divine</i>",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "center_of_learning",
+                "title": "Center of learning: <i>Arcane</i>, <i>Craft</i> (your choice), <i>Power</i> (arcane)",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "problem",
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "outgrowing",
+                "title": "Outgrown its resources: <i>+Population</i>, <i>Need</i> (food)",
+                "min": 1,
+                "max": 3
+              },
+              {
+                "tag": "designs",
+                "title": "Designs on nearby territory: <i>Enmity</i> (nearby steadings), <i>+Defence</i>",
+                "min": 4,
+                "max": 6
+              },
+              {
+                "tag": "theocracy",
+                "title": "Ruled by theocracy: <i>-Defenses</i>, <i>Power</i> (divine)",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "democracy",
+                "title": "Ruled by people: <i>-Defenses</i>, <i>+Population</i>",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "supernatural_defenses",
+                "title": "Supernatural defenses: <i>+Defenses</i>, <i>Blight</i> (related supernatural creatures)",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "place_of_power",
+                "title": "Occupies place of power: <i>Arcane</i>, <i>Personage</i> (whoever watches the place of power), <i>Blight</i> (arcane creatures)",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          }
         ]
       }
     ]
