@@ -4424,7 +4424,7 @@
                 "additional": [
                   {
                     "repeat": 2,
-                    "generate_outer":"dungeon.theme"
+                    "generate_outer": "dungeon.theme"
                   }
                 ]
               },
@@ -4445,7 +4445,7 @@
                 "additional": [
                   {
                     "repeat": 3,
-                    "generate_outer":"dungeon.theme"
+                    "generate_outer": "dungeon.theme"
                   }
                 ]
               },
@@ -4466,7 +4466,7 @@
                 "additional": [
                   {
                     "repeat": 4,
-                    "generate_outer":"dungeon.theme"
+                    "generate_outer": "dungeon.theme"
                   }
                 ]
               },
@@ -4487,7 +4487,7 @@
                 "additional": [
                   {
                     "repeat": 5,
-                    "generate_outer":"dungeon.theme"
+                    "generate_outer": "dungeon.theme"
                   }
                 ]
               },
@@ -5300,6 +5300,328 @@
                 "max": 12
               }
             ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "npc",
+    "title": "NPC",
+    "additional": [
+      "npc.context"
+    ],
+    "dictionaries": [
+      {
+        "tag": "context",
+        "title": "Context and occupation: Who are they and where they come from",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "wilderness",
+            "min": 1,
+            "max": 3,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "criminal",
+                "title": "CRIMINAL 1d12-4",
+                "min": 1,
+                "max": 2,
+                "additional": [
+                  [
+                    "npc.occupation.criminal",
+                    "d12-4"
+                  ]
+                ]
+              },
+              {
+                "tag": "adventurer",
+                "title": "Adventurer/explorer",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "hunter",
+                "title": "Hunter/gatherer",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "commoner",
+                "title": "COMMONER",
+                "min": 7,
+                "max": 8,
+                "additional": [
+                  "npc.occupation.commoner"
+                ]
+              },
+              {
+                "tag": "ranger",
+                "title": "Ranger/scout",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "soldier",
+                "title": "Soldier/mercenary",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "official",
+                "title": "OFFICIAL",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "npc.occupation.official"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "rural",
+            "min": 4,
+            "max": 9,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "beggar",
+                "title": "Beggar/urchin",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "criminal",
+                "title": "CRIMINAL 1d12-1",
+                "min": 2,
+                "max": 2,
+                "additional": [
+                  [
+                    "npc.occupation.criminal",
+                    "d12-1"
+                  ]
+                ]
+              },
+              {
+                "tag": "adventurer",
+                "title": "Adventurer/explorer",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "hunter",
+                "title": "Hunter/gatherer",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "commoner",
+                "title": "COMMONER",
+                "min": 5,
+                "max": 8,
+                "additional": [
+                  "npc.occupation.commoner"
+                ]
+              },
+              {
+                "tag": "tradesperson",
+                "title": "TRADESPERSON",
+                "min": 9,
+                "max": 9,
+                "additional": [
+                  "npc.occupation.tradesperson"
+                ]
+              },
+              {
+                "tag": "merchant",
+                "title": "MERCHANT 1d12-1",
+                "min": 10,
+                "max": 10,
+                "additional": [
+                  [
+                    "npc.occupation.merchant",
+                    "d12-1"
+                  ]
+                ]
+              },
+              {
+                "tag": "militia",
+                "title": "Militia/soldier/guard",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "official",
+                "title": "OFFICIAL",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "npc.occupation.official"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "urban",
+            "min": 10,
+            "max": 12,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "beggar",
+                "title": "Beggar/urchin",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "criminal",
+                "title": "CRIMINAL",
+                "min": 3,
+                "max": 3,
+                "additional": [
+                  "npc.occupation.criminal"
+                ]
+              },
+              {
+                "tag": "commoner",
+                "title": "COMMONER",
+                "min": 4,
+                "max": 7,
+                "additional": [
+                  "npc.occupation.commoner"
+                ]
+              },
+              {
+                "tag": "tradesperson",
+                "title": "TRADESPERSON",
+                "min": 8,
+                "max": 8,
+                "additional": [
+                  "npc.occupation.tradesperson"
+                ]
+              },
+              {
+                "tag": "merchant",
+                "title": "MERCHANT",
+                "min": 9,
+                "max": 9,
+                "additional": [
+                  "npc.occupation.merchant"
+                ]
+              },
+              {
+                "tag": "specialist",
+                "title": "SPECIALIST",
+                "min": 10,
+                "max": 10,
+                "additional": [
+                  "npc.occupation.specialist"
+                ]
+              },
+              {
+                "tag": "militia",
+                "title": "Militia/soldier/guard",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "official",
+                "title": "OFFICIAL",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "npc.occupation.official"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "occupation",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "criminal",
+            "min": 1,
+            "max": 1,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "bandit",
+                "title": "Bandit/brigand/thug",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "thief",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "bodyguard",
+                "title": "Bodyguard/tough",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "burglar",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "dealer",
+                "title": "Dealer/fence",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "racketeer",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "lieutenant",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "boss",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "commoner",
+            "min": 2,
+            "max": 6,
+            "dice": "d12"
+          },
+          {
+            "tag": "tradesperson",
+            "min": 7,
+            "max": 8,
+            "dice": "d12"
+          },
+          {
+            "tag": "merchant",
+            "min": 9,
+            "max": 10,
+            "dice": "d12"
+          },
+          {
+            "tag": "specialist",
+            "min": 11,
+            "max": 11,
+            "dice": "d12"
+          },
+          {
+            "tag": "official",
+            "min": 12,
+            "max": 12,
+            "dice": "d12"
           }
         ]
       }

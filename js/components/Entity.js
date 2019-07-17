@@ -391,8 +391,10 @@ define([
          */
         this.getChildEntityByRoll = function (roll) {
 
+            let rollForSearch = roll < 1 ? 1 : roll;
+
             let entity = _.find(_variants, function (o) {
-                return o.getMin() <= roll && o.getMax() >= roll;
+                return o.getMin() <= rollForSearch && o.getMax() >= rollForSearch;
             });
 
             // If exact variant is absent due to roll is too high - take variant with highest roll
