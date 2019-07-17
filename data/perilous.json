@@ -4655,7 +4655,7 @@
           },
           {
             "tag": "extraordinary",
-            "min": 11,
+            "min": 10,
             "max": 12,
             "dice": "d12",
             "variants": [
