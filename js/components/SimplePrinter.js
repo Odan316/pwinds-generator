@@ -58,8 +58,13 @@ define([
             } else {
                 if(generatedEntity.variant != null){
                     let $entityTitle = $("<h4 class=\"variantTitle\">");
+                    let $entityProperties = $("<div class=\"entityProperties\">");
                     if(propertyEntity){
-                        $entityTitle.append($("<span class=\"type\">").html("" + generatedEntity.title + ": "));
+                        if(generatedEntity.variant.variant !== null){
+                            $entityPropertiesOutput.append($("<h4 class=\"variantTitle\">").html(generatedEntity.title + ": "));
+                        } else {
+                            $entityTitle.append($("<span class=\"type\">").html(generatedEntity.title + ": "));
+                        }
                     }
                     if(generatedEntity.roll !== null){
                         $entityTitle.append($("<span class=\"roll\">").html("(" + generatedEntity.roll + ") "));
@@ -68,16 +73,28 @@ define([
                     if(generatedEntity.variant.description !== ""){
                         $entityTitle.append($("<span class=\"description\">").html(generatedEntity.variant.description));
                     }
-                    $entityPropertiesOutput.append($entityTitle);
-
-                    $entityPropertiesOutput.append(printEntityProperties(generatedEntity.variant, null));
+                    if(propertyEntity && generatedEntity.variant.variant !== null) {
+                        $entityProperties.append($entityTitle);
+                        $entityProperties.append(printEntityProperties(generatedEntity.variant, null));
+                        $entityPropertiesOutput.append($entityProperties);
+                    } else {
+                        $entityPropertiesOutput.append($entityTitle);
+                        $entityPropertiesOutput.append(printEntityProperties(generatedEntity.variant, null));
+                    }
                 }
 
                 if(generatedEntity.additional.length > 0){
-                    let $subTitle = $("<h5 class=\"propertiesTitle\">").html(generatedEntity.additionalTitle);
-                    $entityPropertiesOutput.append($subTitle);
+                    if(generatedEntity.variant != null){
+                        let $subTitle = $("<h5 class=\"propertiesTitle\">").html(generatedEntity.additionalTitle);
+                        $entityPropertiesOutput.append($subTitle);
+                    }
                     let $subProperties = $("<div class=\"entitySubProperties\">");
                     _.forEach(generatedEntity.additional, function(propertyEntity){
+                        if(propertyEntity.variant === null ){
+                            let $entityProperties = $("<div class=\"entityProperties\">");
+                            $entityProperties.append($("<h4 class=\"variantTitle\">").html(propertyEntity.title + ": "));
+                            $subProperties.append($entityProperties);
+                        }
                         $subProperties.append(printEntityProperties(propertyEntity, true));
                     });
                     $entityPropertiesOutput.append($subProperties);

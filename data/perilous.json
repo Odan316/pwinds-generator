@@ -2651,9 +2651,7 @@
                 "tag": "treasure",
                 "min": 10,
                 "max": 12,
-                "additional": [
-                  "treasure"
-                ]
+                "generate_outer": "treasure"
               }
             ]
           }
@@ -2866,54 +2864,54 @@
                 "tag": "infrastructure",
                 "min": 1,
                 "max": 2,
-                "additional": [
+                "generate_outer":
                   [
                     "discovery.structure.infrastructure",
                     "1d6+6"
                   ]
-                ]
+
               },
               {
                 "tag": "dwelling",
                 "min": 3,
                 "max": 4,
-                "additional": [
+                "generate_outer":
                   [
                     "discovery.structure.dwelling",
                     "1d8+4"
                   ]
-                ]
+
               },
               {
                 "tag": "burial_religious",
                 "title": "Burial/Religious",
                 "min": 5,
                 "max": 6,
-                "additional": [
+                "generate_outer":
                   [
                     "discovery.structure.burial_religious",
                     "1d8+4"
                   ]
-                ]
+
               },
               {
                 "tag": "steading",
                 "min": 7,
                 "max": 8,
-                "additional": [
+                "generate_outer":
                   [
                     "steading",
                     "1d10+2"
                   ]
-                ]
+
               },
               {
                 "tag": "dungeon",
                 "min": 9,
                 "max": 12,
-                "additional": [
+                "generate_outer":
                   "dungeon"
-                ]
+
               }
             ],
             "additional": [
@@ -2939,7 +2937,7 @@
     "variants": [
       {
         "tag": "unnatural_entity",
-        "title": "Unnatural Entity. Describe it—creepy, twisted, awe-inspiring.",
+        "description": "Describe it — creepy, twisted, awe-inspiring.",
         "min": 1,
         "max": 1,
         "dice": "d12",
@@ -3081,7 +3079,7 @@
       },
       {
         "tag": "hazard",
-        "title": "Hazard . Threaten them (or their stuff).",
+        "description": "Threaten them (or their stuff).",
         "min": 2,
         "max": 6,
         "dice": "d12",
@@ -3162,9 +3160,9 @@
                 "title": "ODDITY",
                 "min": 12,
                 "max": 12,
-                "additional": [
+                "generate_outer":
                   "details.oddity"
-                ]
+
               }
             ]
           },
@@ -3225,7 +3223,7 @@
     "variants": [
       {
         "tag": "beast",
-        "title": "Beast . Start with a real-world creature, then put a spin in it.",
+        "description": "Start with a real-world creature, then put a spin in it.",
         "min": 1,
         "max": 4,
         "dice": "d12",
@@ -3488,7 +3486,7 @@
       },
       {
         "tag": "humanoid",
-        "title": "Humanoid. If you roll a classic fantasy species, adapt it to your setting.",
+        "description": "If you roll a classic fantasy species, adapt it to your setting.",
         "min": 7,
         "max": 8,
         "dice": "d12",
@@ -3637,7 +3635,7 @@
       },
       {
         "tag": "monster",
-        "title": "Monster. Give every monster life!",
+        "description": "Give every monster life!",
         "min": 9,
         "max": 12,
         "dice": "d12",
@@ -3665,9 +3663,9 @@
                 "title": "<i>Undead</i> HUMANOID",
                 "min": 6,
                 "max": 6,
-                "additional": [
+                "generate_outer":
                   "creature.humanoid"
-                ]
+
               },
               {
                 "tag": "beast_beast",
@@ -3734,9 +3732,9 @@
                 "title": "UNNATURAL ENTITY",
                 "min": 10,
                 "max": 12,
-                "additional": [
+                "generate_outer":
                   "danger.unnatural_entity"
-                ]
+
               }
             ]
           },
@@ -4270,9 +4268,9 @@
                 "title": "HUMANOID",
                 "min": 6,
                 "max": 7,
-                "additional": [
+                "generate_outer":
                   "creature.humanoid"
-                ]
+
               },
               {
                 "tag": "dwarves",
@@ -4592,9 +4590,9 @@
                 "title": "ELEMENT",
                 "min": 2,
                 "max": 2,
-                "additional": [
+                "generate_outer":
                   "details.element"
-                ]
+
               },
               {
                 "tag": "knowledge",
@@ -4866,9 +4864,9 @@
                 "title": "Dead CREATURE",
                 "min": 6,
                 "max": 6,
-                "additional": [
+                "generate_outer":
                   "creature"
-                ]
+
               },
               {
                 "tag": "bones_remains",
@@ -4905,9 +4903,9 @@
                 "title": "ODDITY",
                 "min": 12,
                 "max": 12,
-                "additional": [
+                "generate_outer":
                   "details.oddity"
-                ]
+
               }
             ]
           },
@@ -5128,9 +5126,9 @@
                 "title": "ELEMENT",
                 "min": 9,
                 "max": 9,
-                "additional": [
+                "generate_outer":
                   "details.element"
-                ]
+
               },
               {
                 "tag": "ambush",
@@ -5273,9 +5271,9 @@
                 "title": "MONSTER lord",
                 "min": 8,
                 "max": 8,
-                "additional": [
+                "generate_outer":
                   "creature.monster"
-                ]
+
               },
               {
                 "tag": "evil_spirit_ghost",
@@ -5317,7 +5315,8 @@
     "dictionaries": [
       {
         "tag": "context",
-        "title": "Context and occupation: Who are they and where they come from",
+        "title": "Context and occupation",
+        "description": "Who are they and where they come from.",
         "dice": "d12",
         "variants": [
           {
@@ -5328,15 +5327,15 @@
             "variants": [
               {
                 "tag": "criminal",
-                "title": "CRIMINAL 1d12-4",
+                "title": "CRIMINAL (1d12-4)",
                 "min": 1,
                 "max": 2,
-                "additional": [
+                "generate_outer":
                   [
                     "npc.occupation.criminal",
                     "d12-4"
                   ]
-                ]
+
               },
               {
                 "tag": "adventurer",
@@ -5355,9 +5354,9 @@
                 "title": "COMMONER",
                 "min": 7,
                 "max": 8,
-                "additional": [
+                "generate_outer":
                   "npc.occupation.commoner"
-                ]
+
               },
               {
                 "tag": "ranger",
@@ -5376,9 +5375,9 @@
                 "title": "OFFICIAL",
                 "min": 12,
                 "max": 12,
-                "additional": [
+                "generate_outer":
                   "npc.occupation.official"
-                ]
+
               }
             ]
           },
@@ -5396,15 +5395,15 @@
               },
               {
                 "tag": "criminal",
-                "title": "CRIMINAL 1d12-1",
+                "title": "CRIMINAL (1d12-1)",
                 "min": 2,
                 "max": 2,
-                "additional": [
+                "generate_outer":
                   [
                     "npc.occupation.criminal",
                     "d12-1"
                   ]
-                ]
+
               },
               {
                 "tag": "adventurer",
@@ -5423,30 +5422,30 @@
                 "title": "COMMONER",
                 "min": 5,
                 "max": 8,
-                "additional": [
+                "generate_outer":
                   "npc.occupation.commoner"
-                ]
+
               },
               {
                 "tag": "tradesperson",
                 "title": "TRADESPERSON",
                 "min": 9,
                 "max": 9,
-                "additional": [
+                "generate_outer":
                   "npc.occupation.tradesperson"
-                ]
+
               },
               {
                 "tag": "merchant",
-                "title": "MERCHANT 1d12-1",
+                "title": "MERCHANT (1d12-1)",
                 "min": 10,
                 "max": 10,
-                "additional": [
+                "generate_outer":
                   [
                     "npc.occupation.merchant",
                     "d12-1"
                   ]
-                ]
+
               },
               {
                 "tag": "militia",
@@ -5459,9 +5458,9 @@
                 "title": "OFFICIAL",
                 "min": 12,
                 "max": 12,
-                "additional": [
+                "generate_outer":
                   "npc.occupation.official"
-                ]
+
               }
             ]
           },
@@ -5482,45 +5481,45 @@
                 "title": "CRIMINAL",
                 "min": 3,
                 "max": 3,
-                "additional": [
+                "generate_outer":
                   "npc.occupation.criminal"
-                ]
+
               },
               {
                 "tag": "commoner",
                 "title": "COMMONER",
                 "min": 4,
                 "max": 7,
-                "additional": [
+                "generate_outer":
                   "npc.occupation.commoner"
-                ]
+
               },
               {
                 "tag": "tradesperson",
                 "title": "TRADESPERSON",
                 "min": 8,
                 "max": 8,
-                "additional": [
+                "generate_outer":
                   "npc.occupation.tradesperson"
-                ]
+
               },
               {
                 "tag": "merchant",
                 "title": "MERCHANT",
                 "min": 9,
                 "max": 9,
-                "additional": [
+                "generate_outer":
                   "npc.occupation.merchant"
-                ]
+
               },
               {
                 "tag": "specialist",
                 "title": "SPECIALIST",
                 "min": 10,
                 "max": 10,
-                "additional": [
+                "generate_outer":
                   "npc.occupation.specialist"
-                ]
+
               },
               {
                 "tag": "militia",
@@ -5533,9 +5532,9 @@
                 "title": "OFFICIAL",
                 "min": 12,
                 "max": 12,
-                "additional": [
+                "generate_outer":
                   "npc.occupation.official"
-                ]
+
               }
             ]
           }
@@ -5543,6 +5542,7 @@
       },
       {
         "tag": "occupation",
+        "description": "If not already determined by context roll",
         "dice": "d12",
         "variants": [
           {
@@ -5950,7 +5950,7 @@
       },
       {
         "tag": "trait",
-        "title": "Trait: If you want someone memorable, roll for other categories additionally",
+        "description": "If you want someone memorable, roll for other categories additionally",
         "dice": "d12",
         "variants": [
           {
@@ -6203,13 +6203,13 @@
             ]
           }
         ]
-
       }
     ]
   },
   {
     "tag": "follower",
-    "title": "NPC follower: reconcile to the fiction, tag, and equip as you see fit",
+    "title": "NPC follower",
+    "description": "Reconcile to the fiction, tag, and equip as you see fit",
     "additional": [
       "follower.competence",
       "follower.background",
@@ -6527,9 +6527,9 @@
             "title": "Immunity: Element",
             "min": 10,
             "max": 10,
-            "additional": [
+            "generate_outer":
               "details.element"
-            ]
+
           },
           {
             "tag": "read_minds",
@@ -7025,33 +7025,33 @@
             "tag": "aspect",
             "min": 8,
             "max": 8,
-            "additional": [
+            "generate_outer":
               "details.aspect"
-            ]
+
           },
           {
             "tag": "element",
             "min": 9,
             "max": 9,
-            "additional": [
+            "generate_outer":
               "details.element"
-            ]
+
           },
           {
             "tag": "magic_type",
             "min": 10,
             "max": 10,
-            "additional": [
+            "generate_outer":
               "details.magic_type"
-            ]
+
           },
           {
             "tag": "oddity",
             "min": 11,
             "max": 11,
-            "additional": [
+            "generate_outer":
               "details.oddity"
-            ]
+
           },
           {
             "tag": "roll_twice_on_this_table",
@@ -7106,13 +7106,15 @@
         "variants": [
           {
             "tag": "solitary",
-            "title": "Solitary: It lives and fights alone.",
+            "title": "Solitary",
+            "description": "It lives and fights alone.",
             "min": 1,
             "max": 4
           },
           {
             "tag": "group",
-            "title": "Group: Usually seen in small numbers, 3–6 or so.",
+            "title": "Group",
+            "description": "Usually seen in small numbers, 3–6 or so.",
             "min": 5,
             "max": 9,
             "additional": [
@@ -7124,7 +7126,8 @@
           },
           {
             "tag": "horde",
-            "title": "Horde: Where there’s one, there’s more. A lot more.",
+            "title": "Horde",
+            "description": "Where there’s one, there’s more. A lot more.",
             "min": 10,
             "max": 12,
             "additional": [

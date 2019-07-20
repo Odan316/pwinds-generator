@@ -33,7 +33,7 @@ define([
          * @type {Dice}
          * @private
          */
-        let _dice = new Dice();
+        let _dice = new Dice([1, 1]);
 
         /**
          * Errors collection instance

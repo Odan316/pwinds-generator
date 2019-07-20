@@ -6,13 +6,13 @@ define([
      *
      * @constructor
      */
-    var Dice = function () {
+    let Dice = function (loadedDices) {
         /**
          * Property for debugging - you can set consequence of rolls
          *
          * @type {number[]}
          */
-        this.loadedDices = [];
+        this.loadedDices = loadedDices !== undefined ? loadedDices : [];
 
         /**
          * Returns random integer via dice formula
@@ -71,8 +71,8 @@ define([
          * @param {number} max
          * @returns {number}
          */
-        var randomInteger = function (min, max) {
-            var rand = min - 0.5 + Math.random() * (max - min + 1);
+        let randomInteger = function (min, max) {
+            let rand = min - 0.5 + Math.random() * (max - min + 1);
             rand = Math.round(rand);
             return rand;
         };
