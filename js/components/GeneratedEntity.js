@@ -9,6 +9,7 @@ define([], function(){
     let GeneratedEntity = function(tag, title) {
         this.tag = tag;
         this.title = title;
+        this.description = "";
         this.roll = null;
 
         this.variant = null;

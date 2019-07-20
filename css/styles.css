@@ -36,11 +36,28 @@ h2 .output-clear {
 .output .generatedOutput .entityTitle {
   text-decoration: underline;
 }
+.output .generatedOutput .entityDescription {
+  margin: 0;
+}
 .output .generatedOutput .entityProperties {
   margin-left: 20px;
 }
 .output .generatedOutput .entityProperties .variantTitle .title {
   font-weight: bold;
+}
+.output .generatedOutput .entityProperties .variantTitle .description {
+  font-size: 12px;
+  margin-left: 10px;
+  position: relative;
+  top: -1px;
+}
+.output .generatedOutput .entityProperties .variantTitle .description:before {
+  content: '.';
+  position: relative;
+  top: -3px;
+  left: -5px;
+  font-size: 28px;
+  line-height: 10px;
 }
 .output .generatedOutput .entityProperties h5 {
   font-size: 17px;

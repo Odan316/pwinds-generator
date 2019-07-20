@@ -50,12 +50,31 @@ h2 {
       text-decoration: underline;
     }
 
+    .entityDescription {
+      margin: 0;
+    }
+
     .entityProperties {
       margin-left: 20px;
 
       .variantTitle {
         .title {
           font-weight: bold;
+        }
+        .description {
+          font-size: 12px;
+          margin-left: 10px;
+          position: relative;
+          top: -1px;
+
+          &:before{
+            content: '.';
+            position: relative;
+            top: -3px;
+            left: -5px;
+            font-size: 28px;
+            line-height: 10px;
+          }
         }
       }
 

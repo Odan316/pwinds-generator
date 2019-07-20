@@ -26,7 +26,7 @@ define([
         console.log(dataFileName);
         $.ajax({
             type: "GET",
-            url: "data/" + dataFileName + ".json",
+            url: "data/" + dataFileName + ".json?v=" + Date.now(),
             async: true,
             success: function (generatorData) {
                 generator.loadStorage(generatorData);
@@ -41,8 +41,8 @@ define([
         });
     };
 
-    var run = function () {
-        var dice = new Dice();
+    let run = function () {
+        let dice = new Dice();
         var $outputDiv = $(".output");
         treeHelper = new TreeViewHelper();
         var printer = new SimplePrinter();

@@ -2,7 +2,7 @@
   {
     "tag": "map",
     "title": "Draw the map",
-    "static": "Choose one of the sub-entities",
+    "description": "It is collection of entities, you should generate something from sub-entities",
     "dictionaries": [
       {
         "tag": "region_name",
@@ -2168,7 +2168,7 @@
     "variants": [
       {
         "tag": "unnatural_feature",
-        "title": "Unnatural Feature. How does it affect its surroundings?",
+        "description": "How does it affect its surroundings?",
         "min": 1,
         "max": 1,
         "dice": "d12",
@@ -2289,7 +2289,7 @@
       },
       {
         "tag": "natural_feature",
-        "title": "Natural Feature. Describe how they notice it and what sets it apart.",
+        "description": "Describe how they notice it and what sets it apart.",
         "min": 2,
         "max": 4,
         "dice": "d12",
@@ -2525,7 +2525,7 @@
       },
       {
         "tag": "evidence",
-        "title": "Evidence. Consider the implications and be ready for them to take the bait.",
+        "description": "Consider the implications and be ready for them to take the bait.",
         "min": 5,
         "max": 6,
         "dice": "d12",
@@ -2661,14 +2661,14 @@
       },
       {
         "tag": "creature",
-        "title": "Creature. Not an immediate threat, but might become one.",
+        "description": "Not an immediate threat, but might become one.",
         "min": 7,
         "max": 8,
         "generate_outer": "creature"
       },
       {
         "tag": "structure",
-        "title": "Structure. Who built it? Is it connected to anything else they made nearby?",
+        "description": "Who built it? Is it connected to anything else they made nearby?",
         "min": 9,
         "max": 12,
         "dice": "d12",
@@ -3483,7 +3483,7 @@
           "details.alignment",
           "details.disposition",
           "details.number_appearing",
-          "details.npc"
+          "npc"
         ]
       },
       {
@@ -3632,7 +3632,7 @@
           "details.alignment",
           "details.disposition",
           "details.number_appearing",
-          "details.npc"
+          "npc"
         ]
       },
       {

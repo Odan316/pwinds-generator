@@ -9,6 +9,7 @@ define([
      * Class of child entity, that lies in entities tree (always in variants array)
      *
      * @constructor
+     * @extends Entity
      * @inheritDoc Entity
      */
     let VariantEntity = function() {

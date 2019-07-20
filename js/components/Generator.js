@@ -14,18 +14,18 @@ define([
      *
      * @constructor
      */
-    var Generator = function () {
+    let Generator = function () {
         /**
          * Save context in closure
          * @type {Generator}
          */
-        var self = this;
+        let self = this;
 
         /**
          * Link on entities tree container
          * @type {EntitiesStorage|null}
          */
-        var _storage = null;
+        let _storage = null;
 
         /**
          * Dice instance
@@ -33,7 +33,7 @@ define([
          * @type {Dice}
          * @private
          */
-        var _dice = new Dice();
+        let _dice = new Dice();
 
         /**
          * Errors collection instance
@@ -41,7 +41,7 @@ define([
          * @type {Errors}
          * @private
          */
-        var _errors = new Errors();
+        let _errors = new Errors();
 
         let _vars = {};
 
@@ -50,8 +50,8 @@ define([
          * @param {String} entityPath Path to entity in tree. Path "obj1.obj2.obj3" will generate obj3
          */
         this.generate = function (entityPath) {
-            var entityLink = new StorageLink(entityPath);
-            var entity = entityLink.getEntity(self.getStorage());
+            let entityLink = new StorageLink(entityPath);
+            let entity = entityLink.getEntity(self.getStorage(), _vars);
 
             // Reset generation variables
             _vars = {};
@@ -65,7 +65,7 @@ define([
          * @param customDice
          */
         let generateEntity = function (entity, customDice) {
-            var generatedEntity;
+            let generatedEntity;
 
             if (entity == null) {
                 // Generate error entity
@@ -79,20 +79,26 @@ define([
             if (entity.isStatic()) {
                 // Generate (simply return) static value
                 generatedEntity = new GeneratedEntity(entity.getTag(), entity.getTitle());
+                generatedEntity.description = entity.getDescription();
                 generatedEntity.variant = new GeneratedEntity("static", entity.getStaticValue());
 
             } else if (entity instanceof VariantEntity && entity.isRollResult()) {
                 // Generate (simply return) static value
                 generatedEntity = new GeneratedEntity(entity.getTag(), entity.getTitle());
+                generatedEntity.description = entity.getDescription();
+
                 let rollResult = _dice.roll(entity.getDiceResultFormula());
                 generatedEntity.variant = new GeneratedEntity();
                 generatedEntity.roll = rollResult;
 
             } else if (entity instanceof VariantEntity && entity.hasOuterLink()) {
+                generatedEntity = new GeneratedEntity(entity.getTag(), entity.getTitle());
+                generatedEntity.description = entity.getDescription();
+
                 // Generate entity by outer link
-                var outerEntityLink = entity.getOuterLink();
-                var outerEntity = outerEntityLink.getEntity(self.getStorage(), _vars);
-                generatedEntity = generateEntity(outerEntity, outerEntityLink.getDice());
+                let outerEntityLink = entity.getOuterLink();
+                let outerEntity = outerEntityLink.getEntity(self.getStorage(), _vars);
+                generatedEntity.variant = generateEntity(outerEntity, outerEntityLink.getDice()).variant;
 
             } else if (entity.hasTemplate()) {
                 // Generate entity by template
@@ -108,11 +114,13 @@ define([
                 });
 
                 generatedEntity = new GeneratedEntity(generatedEntityTag, generatedEntityTag.beautifyTag());
+                generatedEntity.description = entity.getDescription();
 
             } else {
                 // Generate entity by normal way
                 // Create entity object
                 generatedEntity = new GeneratedEntity(entity.getTag(), entity.getTitle());
+                generatedEntity.description = entity.getDescription();
 
                 // Generate variant
                 if (entity.hasVariants()) {

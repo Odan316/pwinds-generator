@@ -29,10 +29,11 @@ define([
 
         /**
          * Returns simplified tree of entities
+         *
          * @returns {Array}
          */
         this.getTree = function() {
-            var tree = [];
+            let tree = [];
 
             _.forEach(_rootEntities, function(entity){
                 tree.push(entity.getTreeNode());
@@ -49,9 +50,9 @@ define([
          */
         this.getRootEntity = function(tag) {
 
-            var entity = _.find(_rootEntities, function(o) { return o.getTag() == tag; });
+            let entity = _.find(_rootEntities, function(o) { return o.getTag() === tag; });
 
-            if(entity != undefined){
+            if(entity !== undefined){
                 return entity;
             } else {
                 //TODO: надо обрабатывать

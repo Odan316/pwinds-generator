@@ -1,5 +1,47 @@
 [
   {
+    "tag": "campaign",
+    "description": "It is collection of entities, you should generate something from sub-entities",
+    "dictionaries": [
+      {
+        "tag": "climate",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "frigid",
+            "title": "<i>Frigid</i>",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "tag": "temperate_frigid",
+            "title": "<i>Temperate</i> verging into <i>frigid</i>",
+            "min": 3,
+            "max": 4
+          },
+          {
+            "tag": "temperate_frigid",
+            "title": "<i>Temperate</i>",
+            "min": 5,
+            "max": 8
+          },
+          {
+            "tag": "temperate_frigid",
+            "title": "<i>Temperate</i> verging into <i>torrid</i>",
+            "min": 9,
+            "max": 10
+          },
+          {
+            "tag": "torrid",
+            "title": "<i>Torrid</i>",
+            "min": 11,
+            "max": 12
+          }
+        ]
+      }
+    ]
+  },
+  {
     "tag": "dungeon",
     "additional": [
       "dungeon.name",
@@ -1462,7 +1504,7 @@
             "vars": {
               "$dungeon_type": "caves"
             },
-            "generate_outer":  "details.area"
+            "generate_outer": "details.area"
           },
           {
             "tag": "cave_type",
@@ -2014,7 +2056,7 @@
             "vars": {
               "$dungeon_type": "ruined_settlement"
             },
-            "generate_outer":  "details.area"
+            "generate_outer": "details.area"
           },
           {
             "tag": "builder",
@@ -2522,7 +2564,7 @@
             "vars": {
               "$dungeon_type": "prison"
             },
-            "generate_outer":  "details.area"
+            "generate_outer": "details.area"
           },
           {
             "tag": "builder",
@@ -3072,7 +3114,7 @@
             "vars": {
               "$dungeon_type": "mine"
             },
-            "generate_outer":  "details.area"
+            "generate_outer": "details.area"
           },
           {
             "tag": "builder",
@@ -3670,7 +3712,7 @@
             "vars": {
               "$dungeon_type": "crypt"
             },
-            "generate_outer":  "details.area"
+            "generate_outer": "details.area"
           },
           {
             "tag": "builder",
@@ -4537,7 +4579,7 @@
             "vars": {
               "$dungeon_type": "stronghold"
             },
-            "generate_outer":  "details.area"
+            "generate_outer": "details.area"
           },
           {
             "tag": "builder",
@@ -5062,7 +5104,7 @@
             "vars": {
               "$dungeon_type": "temple"
             },
-            "generate_outer":  "details.area"
+            "generate_outer": "details.area"
           },
           {
             "tag": "builder",
@@ -5569,7 +5611,7 @@
             "vars": {
               "$dungeon_type": "archive"
             },
-            "generate_outer":  "details.area"
+            "generate_outer": "details.area"
           },
           {
             "tag": "builder",
@@ -6127,7 +6169,7 @@
             "vars": {
               "$dungeon_type": "origin_unknown"
             },
-            "generate_outer":  "details.area"
+            "generate_outer": "details.area"
           },
           {
             "tag": "entrance",

@@ -29,6 +29,14 @@ define([
         let _title = null;
 
         /**
+         * Entity description, for interface
+         *
+         * @type {String|null}
+         * @private
+         */
+        let _description = null;
+
+        /**
          * Entity hint, for interface. There are possibility to set fast tags, but it is in progress
          *
          * @type {String|null}
@@ -137,6 +145,7 @@ define([
          * @param data
          * @param data.tag
          * @param data.title
+         * @param data.description
          * @param data.hint
          * @param data.hide
          * @param data.dice
@@ -157,6 +166,9 @@ define([
             }
             if ("title" in data) {
                 _title = data.title;
+            }
+            if ("description" in data) {
+                _description = data.description;
             }
             if ("hint" in data) {
                 _hint = data.hint;
@@ -250,6 +262,19 @@ define([
         };
 
         /**
+         * Return entity title of (if it is empty) beautified tag
+         *
+         * @returns {String}
+         */
+        this.getDescription = function () {
+            if (_description !== null) {
+                return _description;
+            } else {
+                return "";
+            }
+        };
+
+        /**
          * Return hint text, if available, also convert fast hints from tag to text
          *
          * @returns {string}
@@ -321,12 +346,12 @@ define([
          * @returns {{text}}
          */
         this.getTreeNode = function () {
-            var node = {
+            let node = {
                 tag: this.getTag(),
                 title: this.getTag().beautifyTag(),
                 hint: this.getHint()
             };
-            var nodes = this.getSubTree();
+            let nodes = this.getSubTree();
             if (nodes.length > 0) {
                 node.nodes = nodes;
             }

@@ -10,7 +10,7 @@ define([
      *
      * @constructor
      */
-    var SimplePrinter = function() {
+    let SimplePrinter = function() {
 
         /**
          * Errors collection instance
@@ -18,7 +18,7 @@ define([
          * @type {Errors}
          * @private
          */
-        var _errors = new Errors();
+        let _errors = new Errors();
 
         /**
          * Prints generated Entity tree
@@ -27,32 +27,37 @@ define([
          * @returns {*|jQuery|HTMLElement}
          */
         this.printEntity = function(generatedEntity) {
-            var $output = $("<div class=\"generatedOutput\">");
+            let $output = $("<div class=\"generatedOutput\">");
 
-            var $entityTitle = $("<h3 class=\"entityTitle\">").html(generatedEntity.title);
+            let $entityTitle = $("<h3 class=\"entityTitle\">").html(generatedEntity.title);
             $output.append($entityTitle);
 
-            $output.append(printEntityProperties(generatedEntity));
+            if(generatedEntity.description !== ""){
+                $output.append($("<p class=\"entityDescription\">").html(generatedEntity.description));
+            }
+
+            $output.append(printEntityProperties(generatedEntity, false));
 
             return $output;
         };
 
         /**
          * Prints generated entity's properties (for calling recursive)
+         *
          * @param {GeneratedEntity} generatedEntity
          * @param {Boolean} propertyEntity
          * @returns {*|jQuery|HTMLElement}
          */
-        var printEntityProperties = function(generatedEntity, propertyEntity){
-            var $entityPropertiesOutput = $("<div class=\"entityProperties\">");
+        let printEntityProperties = function(generatedEntity, propertyEntity){
+            let $entityPropertiesOutput = $("<div class=\"entityProperties\">");
 
             if(generatedEntity instanceof GeneratedErrorEntity){
-                var $errorTitle = $("<h4 class=\"errorTitle\">").html(_errors.getErrorText(generatedEntity.type));
+                let $errorTitle = $("<h4 class=\"errorTitle\">").html(_errors.getErrorText(generatedEntity.type));
                 $entityPropertiesOutput.append($errorTitle);
-            } else {
 
+            } else {
                 if(generatedEntity.variant != null){
-                    var $entityTitle = $("<h4 class=\"variantTitle\">");
+                    let $entityTitle = $("<h4 class=\"variantTitle\">");
                     if(propertyEntity){
                         $entityTitle.append($("<span class=\"type\">").html("" + generatedEntity.title + ": "));
                     }
@@ -60,6 +65,9 @@ define([
                         $entityTitle.append($("<span class=\"roll\">").html("(" + generatedEntity.roll + ") "));
                     }
                     $entityTitle.append($("<span class=\"title\">").html(generatedEntity.variant.title));
+                    if(generatedEntity.variant.description !== ""){
+                        $entityTitle.append($("<span class=\"description\">").html(generatedEntity.variant.description));
+                    }
                     $entityPropertiesOutput.append($entityTitle);
 
                     $entityPropertiesOutput.append(printEntityProperties(generatedEntity.variant, null));
