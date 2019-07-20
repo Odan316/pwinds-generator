@@ -5309,7 +5309,10 @@
     "tag": "npc",
     "title": "NPC",
     "additional": [
-      "npc.context"
+      "npc.context",
+      "npc.trait",
+      "details.alignment",
+      "details.activity"
     ],
     "dictionaries": [
       {
@@ -5597,31 +5600,861 @@
             "tag": "commoner",
             "min": 2,
             "max": 6,
-            "dice": "d12"
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "housewife",
+                "title": "Housewife/husband",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "hunter",
+                "title": "Hunter/gatherer",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "farmer",
+                "title": "Farmer/herder",
+                "min": 4,
+                "max": 6
+              },
+              {
+                "tag": "laborer",
+                "title": "Laborer/servant",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "driver",
+                "title": "Driver/porter/guide",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "sailor",
+                "title": "Sailor/soldier/guard",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "clergy",
+                "title": "Clergy/monk",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "apprentice",
+                "title": "Apprentice/adventurer",
+                "min": 12,
+                "max": 12
+              }
+            ]
           },
           {
             "tag": "tradesperson",
             "min": 7,
             "max": 8,
-            "dice": "d12"
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "cobbler",
+                "title": "Cobbler/furrier/tailor",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "weaver",
+                "title": "Weaver/basketmaker",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "potter",
+                "title": "Potter/carpenter",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "mason",
+                "title": "Mason/baker/chandler",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "cooper",
+                "title": "Cooper/wheelwright",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "tanner",
+                "title": "Tanner/ropemaker",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "smith",
+                "title": "Smith/tinker",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "stablekeeper",
+                "title": "Stablekeeper/herbalist",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "vintner",
+                "title": "Vintner/jeweler",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "innkeeper",
+                "title": "Innkeeper/tavernkeeper",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "artist",
+                "title": "Artist/actor/minstrel",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "armorer",
+                "title": "Armorer/weaponsmith",
+                "min": 12,
+                "max": 12
+              }
+            ]
           },
           {
             "tag": "merchant",
             "min": 9,
             "max": 10,
-            "dice": "d12"
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "general_goods",
+                "title": "General goods/outfitter",
+                "min": 1,
+                "max": 3
+              },
+              {
+                "tag": "raw_materials",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "grain",
+                "title": "Grain/livestock",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "ale",
+                "title": "Ale/wine/spirits",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "clothing",
+                "title": "Clothing/jewelery",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "weapons",
+                "title": "Weapons/armor",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "spices",
+                "title": "Spices/tobacco",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "labor",
+                "title": "Labor/slaves",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "books",
+                "title": "Books/scrolls",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "magic_supplies",
+                "title": "Magic supplies/items",
+                "min": 12,
+                "max": 12
+              }
+            ]
           },
           {
             "tag": "specialist",
             "min": 11,
             "max": 11,
-            "dice": "d12"
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "undertaker",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "sage",
+                "title": "Sage/scholar/wizard",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "writer",
+                "title": "Writer/illuminator",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "perfumer",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "architect",
+                "title": "Architect/engineer",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "locksmith",
+                "title": "Locksmith/clockmaker",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "physician",
+                "title": "Physician/apothecary",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "navigator",
+                "title": "Navigator/guide",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "alchemist",
+                "title": "Alchemist/astrologer",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "spy",
+                "title": "Spy/diplomat",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "cartographer",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "inventor",
+                "min": 12,
+                "max": 12
+              }
+            ]
           },
           {
             "tag": "official",
             "min": 12,
             "max": 12,
-            "dice": "d12"
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "town_crier",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "tax_collector",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "armiger",
+                "title": "Armiger/gentry",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "reeve",
+                "title": "Reeve/sheriff/constable",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "mayor",
+                "title": "Mayor/magisrate",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "priest",
+                "title": "Priest/bishop/abbot",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "guildnaster",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "knight",
+                "title": "Knight/templar",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "elder",
+                "title": "Elder/high priest",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "noble",
+                "title": "Noble (baron, etc.)",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "lord",
+                "title": "Lord/lady/king/queen",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "trait",
+        "title": "Trait: If you want someone memorable, roll for other categories additionally",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "physical_appearance",
+            "min": 1,
+            "max": 6,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "disfigured",
+                "title": "Disfigured (missing teeth, eye, etc.)",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "lasting_injury",
+                "title": "Lasting injury (bad leg, arm, etc.)",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "tattooed",
+                "title": "Tattooed/pockmarked/scarred",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "unkempt",
+                "title": "Unkempt/shabby/grubby",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "big",
+                "title": "Big/thick/brawny",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "small",
+                "title": "Small/scrawny/emaciated",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "notable_hair",
+                "title": "Notable hair (wild, long, none, etc.)",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "notable_nose",
+                "title": "Notable nose (big, hooked, etc.)",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "notable_eyes",
+                "title": "Notable eyes (blue, bloodshot, etc.)",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "clean",
+                "title": "Clean/well-dressed/well-groomed",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "attractive",
+                "title": "Attractive/handsome/stunning",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "roll_again",
+                "title": "Roll again, but add contradictory detail of your choice",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "npc.trait.physical_appearance"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "personality",
+            "min": 7,
+            "max": 9,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "loner",
+                "title": "Loner/alienated/antisocial",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "cruel",
+                "title": "Cruel/belligerent/bully",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "anxious",
+                "title": "Anxious/fearful/cowardly",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "envious",
+                "title": "Envious/covetous/greedy",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "aloof",
+                "title": "Aloof/haughty/arrogant",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "awkward",
+                "title": "Awkward/shy/self-loathing",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "orderly",
+                "title": "Orderly/compulsive/controlling",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "confident",
+                "title": "Confident/impulsive/reckless",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "kind",
+                "title": "Kind/generous/compassionate",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "easygoing",
+                "title": "Easygoing/relaxed/peaceful",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "cheerful",
+                "title": "Cheerful/happy/optimistic",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "roll_again",
+                "title": "Roll again, but add contradictory detail of your choice",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "npc.trait.personality"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "quirk",
+            "min": 10,
+            "max": 12,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "insecure",
+                "title": "Insecure/racist/xenophobic",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "addict",
+                "title": "Addict (sweets, drugs, sex, etc.)",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "phobia",
+                "title": "Phobia (spiders, fire, darkness, etc.)",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "allergic",
+                "title": "Allergic/asthmatic/chronically ill",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "skeptic",
+                "title": "Skeptic/paranoid",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "superstitious",
+                "title": "Superstitious/devout/fanatical",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "miser",
+                "title": "Miser/pack-rat",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "spendthrift",
+                "title": "Spendthrift/wastrel",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "smart_aleck",
+                "title": "Smart aleck/know-it-all",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "artistic",
+                "title": "Artistic/dreamer/delusional",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "naive",
+                "title": "Naive/idealistic",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "roll_again",
+                "title": "Roll again, but add contradictory detail of your choice",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "npc.trait.quirk"
+                ]
+              }
+            ]
+          }
+        ]
+
+      }
+    ]
+  },
+  {
+    "tag": "follower",
+    "title": "NPC follower: reconcile to the fiction, tag, and equip as you see fit",
+    "additional": [
+      "follower.competence",
+      "follower.background",
+      "follower.loyalty",
+      "follower.instinct",
+      "follower.cost",
+      "follower.hp_damage"
+    ],
+    "dictionaries": [
+      {
+        "tag": "competence",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "liability",
+            "title": "A liability: Quality -1, +0 tags",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "tag": "competent",
+            "title": "Competent: Quality +0, +1 tags",
+            "min": 4,
+            "max": 9
+          },
+          {
+            "tag": "fully_capable",
+            "title": "Fully capable: Quality +1, +2 tags",
+            "min": 10,
+            "max": 11
+          },
+          {
+            "tag": "exceptional",
+            "title": "Exceptional: Quality +2, +4 tags",
+            "min": 12,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "background",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "life_of_servitude",
+            "title": "Life of servitude/oppression: <i>+Meek</i>",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "tag": "past_their_prime",
+            "title": "Past their prime: -1 to Quality, +1 Wise",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "has_lived_a_life_of_danger",
+            "title": "Has lived a life of danger: +2 tags",
+            "min": 4,
+            "max": 5
+          },
+          {
+            "tag": "unremarkable",
+            "min": 6,
+            "max": 9
+          },
+          {
+            "tag": "has_lived_a_life_of_privilege",
+            "title": "Has lived a life of privilege: +1 tag",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "specialist",
+            "title": "Specialist: +1 to Quality, -2 tags",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "roll_twice_on_this_table",
+            "min": 12,
+            "max": 12,
+            "additional": [
+              "follower.background",
+              "follower.background"
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "loyalty",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "0",
+            "title": "0 (little faith in leader’s cause)",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "tag": "+1",
+            "min": 3,
+            "max": 10
+          },
+          {
+            "tag": "+2",
+            "title": "+2 (great faith in leader’s cause)",
+            "min": 11,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "instinct",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "loot_pillage_and_burn",
+            "title": "Loot, pillage, and burn",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "hold_a_grudge_and_seek_payback",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "question_leadership_or_authority",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "lord_over_others",
+            "min": 4,
+            "max": 5
+          },
+          {
+            "tag": "act_impulsively",
+            "min": 6,
+            "max": 7
+          },
+          {
+            "tag": "give_in_to_temptation",
+            "min": 8,
+            "max": 9
+          },
+          {
+            "tag": "slack_off",
+            "min": 10,
+            "max": 11
+          },
+          {
+            "tag": "avoid_danger_or_punishment",
+            "min": 12,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "cost",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "debauchery",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "vengeance",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "lucre",
+            "min": 3,
+            "max": 5
+          },
+          {
+            "tag": "renown",
+            "min": 6,
+            "max": 7
+          },
+          {
+            "tag": "glory",
+            "min": 8,
+            "max": 9
+          },
+          {
+            "tag": "affection",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "knowledge",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "good",
+            "min": 12,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "hp_damage",
+        "variants": [
+          {
+            "tag": "3_d4",
+            "title": "3 HP, d4 damage die",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "tag": "6_d6",
+            "title": "3 HP, d6 damage die",
+            "min": 4,
+            "max": 9
+          },
+          {
+            "tag": "9_d8",
+            "title": "9 HP, d8 damage die",
+            "min": 10,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "damage_die",
+        "variants": [
+          {
+            "tag": "d4",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "tag": "d6",
+            "min": 4,
+            "max": 9
+          },
+          {
+            "tag": "d8",
+            "min": 10,
+            "max": 12
           }
         ]
       }
@@ -6676,243 +7509,6 @@
             "tag": "visible_at_great_distance_focal_point",
             "title": "Visible at great distance/focal point",
             "min": 12,
-            "max": 12
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "tag": "followers",
-    "dice": "d12",
-    "details": [
-      {
-        "tag": "competence",
-        "variants": [
-          {
-            "tag": "a_liability",
-            "title": "A liability: Quality -1, +0 tags",
-            "min": 1,
-            "max": 3
-          },
-          {
-            "tag": "competent",
-            "title": "Competent: Quality +0, +1 tags",
-            "min": 4,
-            "max": 9
-          },
-          {
-            "tag": "fully_capable",
-            "title": "Fully capable: Quality +1, +2 tags",
-            "min": 10,
-            "max": 11
-          },
-          {
-            "tag": "exceptional",
-            "title": "Exceptional: Quality +2, +4 tags",
-            "min": 12,
-            "max": 12
-          }
-        ]
-      },
-      {
-        "tag": "background",
-        "variants": [
-          {
-            "tag": "life_of_servitude",
-            "title": "Life of servitude/oppression: +Meek: they accept their lowly lot, and will do degrading or unreasonable things without needing to Follow Orders.",
-            "min": 1,
-            "max": 2
-          },
-          {
-            "tag": "past_their_prime",
-            "title": "Past their prime: -1 to Quality, +1 -Wise: they know all about ____, and can roll +Quality to Spout Lore about it on your behalf. Examples: Woods-wise, Sea-wise, Herb-wise.",
-            "min": 1,
-            "max": 3
-          },
-          {
-            "tag": "has_lived_a_life_of_danger",
-            "title": "Has lived a life of danger: +2 tags",
-            "min": 1,
-            "max": 3
-          },
-          {
-            "tag": "unremarkable",
-            "min": 6,
-            "max": 9
-          },
-          {
-            "tag": "has_lived_a_life_of_privilege",
-            "title": "Has lived a life of privilege: +1 tag",
-            "min": 10,
-            "max": 10
-          },
-          {
-            "tag": "specialist",
-            "title": "Specialist: +1 to Quality, -2 tags",
-            "min": 11,
-            "max": 11
-          },
-          {
-            "tag": "roll_twice_on_this_table",
-            "min": 12,
-            "max": 12,
-            "additional": [
-              "followers.details",
-              "followers.details"
-            ]
-          }
-        ]
-      },
-      {
-        "tag": "loyalty",
-        "variants": [
-          {
-            "tag": "0",
-            "title": "0 (little faith in leader’s cause)",
-            "min": 1,
-            "max": 2
-          },
-          {
-            "tag": "+1",
-            "min": 3,
-            "max": 10
-          },
-          {
-            "tag": "+2",
-            "title": "+2 (great faith in leader’s cause)",
-            "min": 11,
-            "max": 12
-          }
-        ]
-      },
-      {
-        "tag": "instinct",
-        "variants": [
-          {
-            "tag": "loot_pillage_and_burn",
-            "title": "Loot, pillage, and burn",
-            "min": 1,
-            "max": 1
-          },
-          {
-            "tag": "hold_a_grudge_and_seek_payback",
-            "min": 2,
-            "max": 2
-          },
-          {
-            "tag": "question_leadership_or_authority",
-            "min": 3,
-            "max": 3
-          },
-          {
-            "tag": "lord_over_others",
-            "min": 4,
-            "max": 5
-          },
-          {
-            "tag": "act_impulsively",
-            "min": 6,
-            "max": 7
-          },
-          {
-            "tag": "give_in_to_temptation",
-            "min": 8,
-            "max": 9
-          },
-          {
-            "tag": "slack_off",
-            "min": 10,
-            "max": 11
-          },
-          {
-            "tag": "avoid_danger_or_punishment",
-            "min": 12,
-            "max": 12
-          }
-        ]
-      },
-      {
-        "tag": "cost",
-        "variants": [
-          {
-            "tag": "Debauchery",
-            "min": 1,
-            "max": 1
-          },
-          {
-            "tag": "Vengeance",
-            "min": 2,
-            "max": 2
-          },
-          {
-            "tag": "Lucre",
-            "min": 3,
-            "max": 5
-          },
-          {
-            "tag": "Renown",
-            "min": 6,
-            "max": 7
-          },
-          {
-            "tag": "Glory",
-            "min": 8,
-            "max": 9
-          },
-          {
-            "tag": "Affection",
-            "min": 10,
-            "max": 10
-          },
-          {
-            "tag": "Knowledge",
-            "min": 11,
-            "max": 11
-          },
-          {
-            "tag": "Good",
-            "min": 12,
-            "max": 12
-          }
-        ]
-      },
-      {
-        "tag": "hit_points",
-        "variants": [
-          {
-            "tag": "3_hp",
-            "min": 1,
-            "max": 3
-          },
-          {
-            "tag": "6_hp",
-            "min": 4,
-            "max": 9
-          },
-          {
-            "tag": "9_hp",
-            "min": 10,
-            "max": 12
-          }
-        ]
-      },
-      {
-        "tag": "damage_die",
-        "variants": [
-          {
-            "tag": "d4",
-            "min": 1,
-            "max": 3
-          },
-          {
-            "tag": "d6",
-            "min": 4,
-            "max": 9
-          },
-          {
-            "tag": "d8",
-            "min": 10,
             "max": 12
           }
         ]
