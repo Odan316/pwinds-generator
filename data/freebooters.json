@@ -38,6 +38,312 @@
             "max": 12
           }
         ]
+      },
+      {
+        "tag": "campaign_feature",
+        "dice": "d100",
+        "variants": [
+          {
+            "tag": "comet",
+            "description": "A comet - harbringer of doom or great change - streaks slowly across thesky",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "tag": "great_deluge",
+            "description": "A great deluge has drowned the lowlands, leaving may settlements underwater",
+            "min": 3,
+            "max": 4
+          },
+          {
+            "tag": "terrible_plague",
+            "description": "A terrible plague sweeps the land, decimating centers of population.",
+            "min": 5,
+            "max": 6
+          },
+          {
+            "tag": "new_mineral",
+            "description": "A new mineral has been discovered which, when properly processed, extends life.",
+            "min": 7,
+            "max": 8
+          },
+          {
+            "tag": "great_chasms",
+            "description": "Long ago, terrible earthquakes created great chasms that divide the lands.",
+            "min": 9,
+            "max": 10
+          },
+          {
+            "tag": "floating_islands",
+            "description": "Islands drift across the sky, accessible only by winged or wizardly means.",
+            "min": 11,
+            "max": 12
+          },
+          {
+            "tag": "moon_falling",
+            "description": "The moon broke and fell to earth in pieces, leading to war over its celestial treasures.",
+            "min": 13,
+            "max": 14
+          },
+          {
+            "tag": "age_of_chivary",
+            "description": "The civilized lands are experiencing a golden age of chivalry.",
+            "min": 15,
+            "max": 16
+          },
+          {
+            "tag": "war_of_sorcerers",
+            "description": "A great war has broken out between the sorcerer-lords",
+            "min": 17,
+            "max": 18
+          },
+          {
+            "tag": "demon_lord",
+            "description": "A demon-lord has wrested control of one of the great kingdoms.",
+            "min": 19,
+            "max": 20
+          },
+          {
+            "tag": "demigod",
+            "description": "A demigod rules the most populous city.",
+            "min": 21,
+            "max": 22
+          },
+          {
+            "tag": "barbarian_invasion",
+            "description": "Outlander tribes, united under a new war chief, and have begun raiding in force.",
+            "min": 23,
+            "max": 24
+          },
+          {
+            "tag": "messiah",
+            "description": "A messianic figure has appeared in the outlands, promising immortality for all",
+            "min": 25,
+            "max": 26
+          },
+          {
+            "tag": "order_of_protectors",
+            "description": "An ancient order protects the civilized world from the forces of chaos.",
+            "min": 27,
+            "max": 28
+          },
+          {
+            "tag": "portals",
+            "description": "Magical portals connect the great cities of the world.",
+            "min": 29,
+            "max": 30
+          },
+          {
+            "tag": "species_conflict",
+            "description": "Due to recent events, tensions between certain species have reached a boiling point.",
+            "min": 31,
+            "max": 32
+          },
+          {
+            "tag": "child_sacrifices",
+            "description": "An enigmatic ruler demands the annual sacrifice of child from each community.",
+            "min": 33,
+            "max": 34
+          },
+          {
+            "tag": "return_of_first_folk",
+            "description": "The first folk left long ago, passing beyond the nether-lands, but now they return.",
+            "min": 35,
+            "max": 36
+          },
+          {
+            "tag": "merchant_cities",
+            "description": "The great merchant cities are ascendant.",
+            "min": 37,
+            "max": 38
+          },
+          {
+            "tag": "arcane_tempests",
+            "description": "Arcane tempests of unknown origin sweep across the land.",
+            "min": 39,
+            "max": 40
+          },
+          {
+            "tag": "antimagic_zones",
+            "description": "The world is pocked by zones, large and small, where magic does not work at all",
+            "min": 41,
+            "max": 42
+          },
+          {
+            "tag": "planar_rifts",
+            "description": "Planar rifts have begun to open in unexpected places.",
+            "min": 43,
+            "max": 44
+          },
+          {
+            "tag": "magic_is_crime",
+            "description": "The practice of unsanctioned magic is a criminal offense in most civilized settlements.",
+            "min": 45,
+            "max": 46
+          },
+          {
+            "tag": "spirits_of_ancestors",
+            "description": "The spirits of departed ancestors have begun to appear with increasing frequency.",
+            "min": 47,
+            "max": 48
+          },
+          {
+            "tag": "rise_of_the_dead",
+            "description": "The dead will always rise unless appropriate precautions are taken.",
+            "min": 49,
+            "max": 50
+          },
+          {
+            "tag": "conclave_of_witches",
+            "description": "A great conclave of witches is imminent, at which a new leader will be chosen.",
+            "min": 51,
+            "max": 52
+          },
+          {
+            "tag": "arcane_university",
+            "description": "There is a great arcane university is where all “legitimate” magic-users learn their art. ",
+            "min": 53,
+            "max": 54
+          },
+          {
+            "tag": "strange_crystals",
+            "description": "Strange crystals have begun to sprout and spread, but only under certain conditions.",
+            "min": 55,
+            "max": 56
+          },
+          {
+            "tag": "changelings",
+            "description": "An unknown force is replacing people with changelings",
+            "min": 57,
+            "max": 58
+          },
+          {
+            "tag": "tomb_kings",
+            "description": "The rulers of old have begun to rise from their tombs.",
+            "min": 59,
+            "max": 60
+          },
+          {
+            "tag": "expanding_empire",
+            "description": "A vast empire seeks to expand further.",
+            "min": 61,
+            "max": 62
+          },
+          {
+            "tag": "inquisition",
+            "description": "A dominant religion persecutes sages and philosophers as enemies of the church.",
+            "min": 63,
+            "max": 64
+          },
+          {
+            "tag": "primordial_cults",
+            "description": "Primordial mystery-cults wage a secret war for the fate of the free lands",
+            "min": 65,
+            "max": 66
+          },
+          {
+            "tag": "ancient_constructs",
+            "description": "Ancient constructs have begun to animate and emerge from their subterranean vaults.",
+            "min": 67,
+            "max": 68
+          },
+          {
+            "tag": "succession_crisis",
+            "description": "A great lord is dying; without a strong leader, their realm has fallen to turmoil",
+            "min": 69,
+            "max": 70
+          },
+          {
+            "tag": "explosives",
+            "description": "An alchemical concoction with explosive properties is changing the face of warfare.",
+            "min": 71,
+            "max": 72
+          },
+          {
+            "tag": "dark_lord_rises",
+            "description": "Dark forces gather in the outlands, mustered under the banner of some fell master",
+            "min": 73,
+            "max": 74
+          },
+          {
+            "tag": "holy_wars",
+            "description": "Open war has broken out between two dominant and opposing religions.",
+            "min": 75,
+            "max": 76
+          },
+          {
+            "tag": "isolationism",
+            "description": "One of the civilized, non-human cultures has recently chosen to isolate itself.",
+            "min": 77,
+            "max": 78
+          },
+          {
+            "tag": "the_magical_beacon",
+            "description": "The magical beacons that ward off the forces of darkness have begun to fail",
+            "min": 79,
+            "max": 80
+          },
+          {
+            "tag": "gods_and_titans",
+            "description": "Feuds between the gods are fought out by titans in the mundane world. ",
+            "min": 81,
+            "max": 82
+          },
+          {
+            "tag": "council",
+            "description": "An interculutural council of honorable rulers strives to maintain peace",
+            "min": 83,
+            "max": 84
+          },
+          {
+            "tag": "investiture",
+            "description": "A dominant religious order has declared one of the great rulers a heretic.",
+            "min": 85,
+            "max": 86
+          },
+          {
+            "tag": "war_suits",
+            "description": "The towering war-suits of the ancients litter the wilderness.",
+            "min": 87,
+            "max": 88
+          },
+          {
+            "tag": "postapocalypse",
+            "description": "In the wake of a great cataclysm, the survivors have begun to rebuild society.",
+            "min": 89,
+            "max": 90
+          },
+          {
+            "tag": "meteoric_showers",
+            "description": "Periodic meteor showers bring madness and mutation from beyond the stars.",
+            "min": 91,
+            "max": 92
+          },
+          {
+            "tag": "stone_magic",
+            "description": "Magic spells can only be cast by use of a certain gemstone.",
+            "min": 93,
+            "max": 94
+          },
+          {
+            "tag": "old_feuds",
+            "description": "The civilized species have at last united, but forgiveness does not come easily to all. ",
+            "min": 95,
+            "max": 96
+          },
+          {
+            "tag": "necromancy",
+            "description": "The undead are commonly exploited for economic or strategic gain.",
+            "min": 97,
+            "max": 98
+          },
+          {
+            "tag": "eternal_winter",
+            "description": "Winter has not passed as it should have; the frost-roots are spreading.",
+            "min": 99,
+            "max": 100
+          }
+        ]
       }
     ]
   },
