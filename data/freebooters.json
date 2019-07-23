@@ -348,6 +348,165 @@
     ]
   },
   {
+    "tag": "character",
+    "additional":  [
+      "character.class"
+    ],
+    "dictionaries": [
+      {
+        "tag": "class",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "fighter",
+            "min": 1,
+            "max": 6,
+            "additional":  [
+              "character.class.fighter.heritage"
+            ],
+            "dictionaries": [
+              {
+                "tag": "heritage",
+                "dice":  "d12",
+                "variants": [
+                  {
+                    "tag": "human",
+                    "min": 1,
+                    "max": 7
+                  },
+                  {
+                    "tag": "halfling",
+                    "min": 8,
+                    "max": 8
+                  },
+                  {
+                    "tag": "dwarf",
+                    "min": 9,
+                    "max": 11
+                  },
+                  {
+                    "tag": "elf",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "thief",
+            "min": 7,
+            "max": 9,
+            "additional":  [
+              "character.class.thief.heritage"
+            ],
+            "dictionaries": [
+              {
+                "tag": "heritage",
+                "dice":  "d12",
+                "variants": [
+                  {
+                    "tag": "human",
+                    "min": 1,
+                    "max": 7
+                  },
+                  {
+                    "tag": "halfling",
+                    "min": 8,
+                    "max": 10
+                  },
+                  {
+                    "tag": "dwarf",
+                    "min": 11,
+                    "max": 11
+                  },
+                  {
+                    "tag": "elf",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "cleric",
+            "min": 10,
+            "max": 11,
+            "additional":  [
+              "character.class.cleric.heritage"
+            ],
+            "dictionaries": [
+              {
+                "tag": "heritage",
+                "dice":  "d12",
+                "variants": [
+                  {
+                    "tag": "human",
+                    "min": 1,
+                    "max": 7
+                  },
+                  {
+                    "tag": "halfling",
+                    "min": 8,
+                    "max": 8
+                  },
+                  {
+                    "tag": "dwarf",
+                    "min": 9,
+                    "max": 11
+                  },
+                  {
+                    "tag": "elf",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "magic_user",
+            "title": "Magic-user",
+            "min": 12,
+            "max": 12,
+            "additional":  [
+              "character.class.magic_user.heritage"
+            ],
+            "dictionaries": [
+              {
+                "tag": "heritage",
+                "dice":  "d12",
+                "variants": [
+                  {
+                    "tag": "human",
+                    "min": 1,
+                    "max": 8
+                  },
+                  {
+                    "tag": "halfling",
+                    "min": 9,
+                    "max": 9
+                  },
+                  {
+                    "tag": "dwarf",
+                    "min": 10,
+                    "max": 10
+                  },
+                  {
+                    "tag": "elf",
+                    "min": 11,
+                    "max": 12
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "tag": "dungeon",
     "additional": [
       "dungeon.name",
