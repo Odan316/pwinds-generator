@@ -362,7 +362,14 @@
             "min": 1,
             "max": 6,
             "additional":  [
-              "character.class.fighter.heritage"
+              "character.attributes",
+              {
+                "tag": "hit_points",
+                "title": "Hit points (d10), add CON",
+                "roll_result": "d10"
+              },
+              "character.class.fighter.heritage",
+              "character.class.fighter.alignment"
             ],
             "dictionaries": [
               {
@@ -390,6 +397,61 @@
                     "max": 12
                   }
                 ]
+              },
+              {
+                "tag": "alignment",
+                "dice":  "d12",
+                "variants": [
+                  {
+                    "tag": "evil",
+                    "min": 1,
+                    "max": 2,
+                    "additional":  [
+                     "character.trait.vice",
+                      "character.trait.vice",
+                      "character.trait.vice"
+                    ]
+                  },
+                  {
+                    "tag": "chaotic",
+                    "min": 3,
+                    "max": 5,
+                    "additional":  [
+                      "character.trait.virtue",
+                      "character.trait.vice",
+                      "character.trait.vice"
+                    ]
+                  },
+                  {
+                    "tag": "neutral",
+                    "min": 6,
+                    "max": 8,
+                    "additional":  [
+                      "character.trait.virtue",
+                      "character.trait.vice"
+                    ]
+                  },
+                  {
+                    "tag": "lawful",
+                    "min": 9,
+                    "max": 10,
+                    "additional":  [
+                      "character.trait.virtue",
+                      "character.trait.virtue",
+                      "character.trait.vice"
+                    ]
+                  },
+                  {
+                    "tag": "good",
+                    "min": 11,
+                    "max": 12,
+                    "additional":  [
+                      "character.trait.virtue",
+                      "character.trait.virtue",
+                      "character.trait.virtue"
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -398,12 +460,19 @@
             "min": 7,
             "max": 9,
             "additional":  [
-              "character.class.thief.heritage"
+              "character.attributes",
+              {
+                "tag": "hit_points",
+                "title": "Hit points (d6), add CON",
+                "roll_result": "d6"
+              },
+              "character.class.thief.heritage",
+              "character.class.fighter.alignment"
             ],
             "dictionaries": [
               {
                 "tag": "heritage",
-                "dice":  "d12",
+                "dice":  "d6",
                 "variants": [
                   {
                     "tag": "human",
@@ -426,6 +495,51 @@
                     "max": 12
                   }
                 ]
+              },
+              {
+                "tag": "alignment",
+                "dice":  "d12",
+                "variants": [
+                  {
+                    "tag": "evil",
+                    "min": 1,
+                    "max": 2,
+                    "additional":  [
+                      "character.trait.vice",
+                      "character.trait.vice",
+                      "character.trait.vice"
+                    ]
+                  },
+                  {
+                    "tag": "chaotic",
+                    "min": 3,
+                    "max": 6,
+                    "additional":  [
+                      "character.trait.virtue",
+                      "character.trait.vice",
+                      "character.trait.vice"
+                    ]
+                  },
+                  {
+                    "tag": "neutral",
+                    "min": 7,
+                    "max": 10,
+                    "additional":  [
+                      "character.trait.virtue",
+                      "character.trait.vice"
+                    ]
+                  },
+                  {
+                    "tag": "good",
+                    "min": 11,
+                    "max": 12,
+                    "additional":  [
+                      "character.trait.virtue",
+                      "character.trait.virtue",
+                      "character.trait.virtue"
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -434,7 +548,14 @@
             "min": 10,
             "max": 11,
             "additional":  [
-              "character.class.cleric.heritage"
+              "character.attributes",
+              {
+                "tag": "hit_points",
+                "title": "Hit points (d8), add CON",
+                "roll_result": "d8"
+              },
+              "character.class.cleric.heritage",
+              "character.class.fighter.alignment"
             ],
             "dictionaries": [
               {
@@ -462,6 +583,61 @@
                     "max": 12
                   }
                 ]
+              },
+              {
+                "tag": "alignment",
+                "dice":  "d12",
+                "variants": [
+                  {
+                    "tag": "evil",
+                    "min": 1,
+                    "max": 2,
+                    "additional":  [
+                      "character.trait.vice",
+                      "character.trait.vice",
+                      "character.trait.vice"
+                    ]
+                  },
+                  {
+                    "tag": "chaotic",
+                    "min": 3,
+                    "max": 5,
+                    "additional":  [
+                      "character.trait.virtue",
+                      "character.trait.vice",
+                      "character.trait.vice"
+                    ]
+                  },
+                  {
+                    "tag": "neutral",
+                    "min": 6,
+                    "max": 7,
+                    "additional":  [
+                      "character.trait.virtue",
+                      "character.trait.vice"
+                    ]
+                  },
+                  {
+                    "tag": "lawful",
+                    "min": 8,
+                    "max": 10,
+                    "additional":  [
+                      "character.trait.virtue",
+                      "character.trait.virtue",
+                      "character.trait.vice"
+                    ]
+                  },
+                  {
+                    "tag": "good",
+                    "min": 11,
+                    "max": 12,
+                    "additional":  [
+                      "character.trait.virtue",
+                      "character.trait.virtue",
+                      "character.trait.virtue"
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -471,7 +647,14 @@
             "min": 12,
             "max": 12,
             "additional":  [
-              "character.class.magic_user.heritage"
+              "character.attributes",
+              {
+                "tag": "hit_points",
+                "title": "Hit points (d4), add CON",
+                "roll_result": "d4"
+              },
+              "character.class.magic_user.heritage",
+              "character.class.fighter.alignment"
             ],
             "dictionaries": [
               {
@@ -499,6 +682,612 @@
                     "max": 12
                   }
                 ]
+              },
+              {
+                "tag": "alignment",
+                "dice":  "d12",
+                "variants": [
+                  {
+                    "tag": "evil",
+                    "min": 1,
+                    "max": 3,
+                    "additional":  [
+                      "character.trait.vice",
+                      "character.trait.vice",
+                      "character.trait.vice"
+                    ]
+                  },
+                  {
+                    "tag": "chaotic",
+                    "min": 4,
+                    "max": 8,
+                    "additional":  [
+                      "character.trait.virtue",
+                      "character.trait.vice",
+                      "character.trait.vice"
+                    ]
+                  },
+                  {
+                    "tag": "neutral",
+                    "min": 9,
+                    "max": 9,
+                    "additional":  [
+                      "character.trait.virtue",
+                      "character.trait.vice"
+                    ]
+                  },
+                  {
+                    "tag": "lawful",
+                    "min": 10,
+                    "max": 10,
+                    "additional":  [
+                      "character.trait.virtue",
+                      "character.trait.virtue",
+                      "character.trait.vice"
+                    ]
+                  },
+                  {
+                    "tag": "good",
+                    "min": 11,
+                    "max": 12,
+                    "additional":  [
+                      "character.trait.virtue",
+                      "character.trait.virtue",
+                      "character.trait.virtue"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "attributes",
+        "additional": [
+          {
+            "tag": "strength",
+            "roll_result":  "3d6"
+          },
+          {
+            "tag": "constitution",
+            "roll_result":  "3d6"
+          },
+          {
+            "tag": "dexterity",
+            "roll_result":  "3d6"
+          },
+          {
+            "tag": "intelligence",
+            "roll_result":  "3d6"
+          },
+          {
+            "tag": "wisdom",
+            "roll_result":  "3d6"
+          },
+          {
+            "tag": "charisma",
+            "roll_result":  "3d6"
+          },
+          {
+            "tag": "luck",
+            "roll_result":  "3d6"
+          }
+        ]
+      },
+      {
+        "tag": "trait",
+        "dictionaries": [
+          {
+            "tag": "virtue",
+            "dice":  "d100",
+            "variants": [
+              {
+                "tag": "ambitious",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "benevolent",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "bold",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "brave",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "charitable",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "chaste",
+                "min": 11,
+                "max": 12
+              },
+              {
+                "tag": "cautious",
+                "min": 13,
+                "max": 14
+              },
+              {
+                "tag": "compassionate",
+                "min": 15,
+                "max": 16
+              },
+              {
+                "tag": "confident",
+                "min": 17,
+                "max": 18
+              },
+              {
+                "tag": "considerate",
+                "min": 19,
+                "max": 20
+              },
+              {
+                "tag": "cooperative",
+                "min": 21,
+                "max": 22
+              },
+              {
+                "tag": "courteous",
+                "min": 23,
+                "max": 24
+              },
+              {
+                "tag": "creative",
+                "min": 25,
+                "max": 26
+              },
+              {
+                "tag": "curious",
+                "min": 27,
+                "max": 28
+              },
+              {
+                "tag": "daring",
+                "min": 29,
+                "max": 30
+              },
+              {
+                "tag": "defiant",
+                "min": 31,
+                "max": 32
+              },
+              {
+                "tag": "dependable",
+                "min": 33,
+                "max": 34
+              },
+              {
+                "tag": "determined",
+                "min": 35,
+                "max": 36
+              },
+              {
+                "tag": "disciplined",
+                "min": 37,
+                "max": 38
+              },
+              {
+                "tag": "enthusiastic",
+                "min": 39,
+                "max": 40
+              },
+              {
+                "tag": "fair",
+                "min": 41,
+                "max": 42
+              },
+              {
+                "tag": "focused",
+                "min": 43,
+                "max": 44
+              },
+              {
+                "tag": "forgiving",
+                "min": 45,
+                "max": 46
+              },
+              {
+                "tag": "friendly",
+                "min": 47,
+                "max": 48
+              },
+              {
+                "tag": "frugal",
+                "min": 49,
+                "max": 50
+              },
+              {
+                "tag": "funny",
+                "min": 51,
+                "max": 52
+              },
+              {
+                "tag": "generous",
+                "min": 53,
+                "max": 54
+              },
+              {
+                "tag": "gregarious",
+                "min": 55,
+                "max": 56
+              },
+              {
+                "tag": "helpful",
+                "min": 57,
+                "max": 58
+              },
+              {
+                "tag": "honest",
+                "min": 59,
+                "max": 60
+              },
+              {
+                "tag": "honorable",
+                "min": 61,
+                "max": 62
+              },
+              {
+                "tag": "hopeful",
+                "min": 63,
+                "max": 64
+              },
+              {
+                "tag": "humble",
+                "min": 65,
+                "max": 66
+              },
+              {
+                "tag": "idealistic",
+                "min": 67,
+                "max": 68
+              },
+              {
+                "tag": "just",
+                "min": 69,
+                "max": 70
+              },
+              {
+                "tag": "kind",
+                "min": 71,
+                "max": 72
+              },
+              {
+                "tag": "loving",
+                "min": 73,
+                "max": 74
+              },
+              {
+                "tag": "loyal",
+                "min": 75,
+                "max": 76
+              },
+              {
+                "tag": "merciful",
+                "min": 77,
+                "max": 78
+              },
+              {
+                "tag": "orderly",
+                "min": 79,
+                "max": 80
+              },
+              {
+                "tag": "patient",
+                "min": 81,
+                "max": 82
+              },
+              {
+                "tag": "persistent",
+                "min": 83,
+                "max": 84
+              },
+              {
+                "tag": "pious",
+                "min": 85,
+                "max": 86
+              },
+              {
+                "tag": "resourceful",
+                "min": 87,
+                "max": 88
+              },
+              {
+                "tag": "respectful",
+                "min": 89,
+                "max": 90
+              },
+              {
+                "tag": "responsible",
+                "min": 91,
+                "max": 92
+              },
+              {
+                "tag": "selfless",
+                "min": 93,
+                "max": 94
+              },
+              {
+                "tag": "steadfast",
+                "min": 95,
+                "max": 96
+              },
+              {
+                "tag": "tactful",
+                "min": 97,
+                "max": 98
+              },
+              {
+                "tag": "tolerant",
+                "min": 99,
+                "max": 100
+              }
+            ]
+          },
+          {
+            "tag": "vice",
+            "dice":  "d100",
+            "variants": [
+              {
+                "tag": "addict",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "aggressive",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "alcoholic",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "antagonistic",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "arrogant",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "boastful",
+                "min": 11,
+                "max": 12
+              },
+              {
+                "tag": "cheater",
+                "min": 13,
+                "max": 14
+              },
+              {
+                "tag": "covetous",
+                "min": 15,
+                "max": 16
+              },
+              {
+                "tag": "cowardly",
+                "min": 17,
+                "max": 18
+              },
+              {
+                "tag": "cruel",
+                "min": 19,
+                "max": 20
+              },
+              {
+                "tag": "decadent",
+                "min": 21,
+                "max": 22
+              },
+              {
+                "tag": "deceitful",
+                "min": 23,
+                "max": 24
+              },
+              {
+                "tag": "disloyal",
+                "min": 25,
+                "max": 26
+              },
+              {
+                "tag": "doubtful",
+                "min": 27,
+                "max": 28
+              },
+              {
+                "tag": "egoistical",
+                "min": 29,
+                "max": 30
+              },
+              {
+                "tag": "envious",
+                "min": 31,
+                "max": 32
+              },
+              {
+                "tag": "gluttonous",
+                "min": 33,
+                "max": 34
+              },
+              {
+                "tag": "greedy",
+                "min": 35,
+                "max": 36
+              },
+              {
+                "tag": "hasty",
+                "min": 37,
+                "max": 38
+              },
+              {
+                "tag": "hedonist",
+                "min": 39,
+                "max": 40
+              },
+              {
+                "tag": "impatioent",
+                "min": 41,
+                "max": 42
+              },
+              {
+                "tag": "inflexible",
+                "min": 43,
+                "max": 44
+              },
+              {
+                "tag": "irritable",
+                "min": 45,
+                "max": 46
+              },
+              {
+                "tag": "lazy",
+                "min": 47,
+                "max": 48
+              },
+              {
+                "tag": "lewd",
+                "min": 49,
+                "max": 50
+              },
+              {
+                "tag": "liar",
+                "min": 51,
+                "max": 52
+              },
+              {
+                "tag": "lustful",
+                "min": 53,
+                "max": 54
+              },
+              {
+                "tag": "mad",
+                "min": 55,
+                "max": 56
+              },
+              {
+                "tag": "malicious",
+                "min": 57,
+                "max": 58
+              },
+              {
+                "tag": "manipulative",
+                "min": 59,
+                "max": 60
+              },
+              {
+                "tag": "meciless",
+                "min": 61,
+                "max": 62
+              },
+              {
+                "tag": "moody",
+                "min": 63,
+                "max": 64
+              },
+              {
+                "tag": "murderous",
+                "min": 65,
+                "max": 66
+              },
+              {
+                "tag": "obsessive",
+                "min": 67,
+                "max": 68
+              },
+              {
+                "tag": "petulant",
+                "min": 69,
+                "max": 70
+              },
+              {
+                "tag": "prejudiced",
+                "min": 71,
+                "max": 72
+              },
+              {
+                "tag": "reckless",
+                "min": 73,
+                "max": 74
+              },
+              {
+                "tag": "resentful",
+                "min": 75,
+                "max": 76
+              },
+              {
+                "tag": "rude",
+                "min": 77,
+                "max": 78
+              },
+              {
+                "tag": "ruthless",
+                "min": 79,
+                "max": 80
+              },
+              {
+                "tag": "self_pitying",
+                "title": "Self-pitying",
+                "min": 81,
+                "max": 82
+              },
+              {
+                "tag": "selfish",
+                "min": 83,
+                "max": 84
+              },
+              {
+                "tag": "snobbish",
+                "min": 85,
+                "max": 86
+              },
+              {
+                "tag": "stingy",
+                "min": 87,
+                "max": 88
+              },
+              {
+                "tag": "stubborn",
+                "min": 89,
+                "max": 90
+              },
+              {
+                "tag": "vain",
+                "min": 91,
+                "max": 92
+              },
+              {
+                "tag": "vengeful",
+                "min": 93,
+                "max": 94
+              },
+              {
+                "tag": "wasteful",
+                "min": 95,
+                "max": 96
+              },
+              {
+                "tag": "wrathful",
+                "min": 97,
+                "max": 98
+              },
+              {
+                "tag": "zealous",
+                "min": 99,
+                "max": 100
               }
             ]
           }

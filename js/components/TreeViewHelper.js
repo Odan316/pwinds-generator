@@ -3,8 +3,8 @@ define([], function () {
      * Helper, that transforms simple entities tree in treeView compatible data config
      * @constructor
      */
-    var TreeViewHelper = function () {
-        var self = this;
+    let TreeViewHelper = function () {
+        let self = this;
 
         this.prepareTree = function (tree, parentPath) {
             let parsedTree = [];

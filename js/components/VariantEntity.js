@@ -39,14 +39,6 @@ define([
          */
         let _generate_outer = null;
 
-        /**
-         * Dice formula that calculates in-game number as value
-         *
-         * @type {String|null}
-         * @private
-         */
-        let _roll_result = null;
-
         let parentLoad = this.load;
 
         this.getMin = function() {
@@ -65,19 +57,6 @@ define([
             return _generate_outer;
         };
 
-        this.isRollResult = function(){
-            return _roll_result != null;
-        };
-
-        /**
-         * Returns dice formula for number generating
-         *
-         * @returns {String}
-         */
-        this.getDiceResultFormula = function(){
-            return _roll_result;
-        };
-
         /**
          * @inherit
          *
@@ -87,7 +66,6 @@ define([
          * @param data.additional
          * @param data.optional
          * @param data.generate_outer
-         * @param data.roll_result
          */
         this.load = function(data) {
             parentLoad.call(this, data);
@@ -100,9 +78,6 @@ define([
             }
             if("generate_outer" in data) {
                 _generate_outer = new StorageLink(data.generate_outer);
-            }
-            if("roll_result" in data) {
-                _roll_result = data.roll_result;
             }
         };
     };

@@ -9,19 +9,19 @@ define([
      *
      * @constructor
      */
-    var EntitiesStorage = function() {
+    let EntitiesStorage = function() {
         /**
          * List of root entities
          *
          * @type {Entity[]|null}
          * @private
          */
-        var _rootEntities = null;
+        let _rootEntities = null;
 
         this.load = function(data) {
             _rootEntities = [];
             _.forEach(data, function(value){
-                var rootEntity = new Entity();
+                let rootEntity = new Entity();
                 rootEntity.load(value);
                 _rootEntities.push(rootEntity);
             });
@@ -36,7 +36,10 @@ define([
             let tree = [];
 
             _.forEach(_rootEntities, function(entity){
-                tree.push(entity.getTreeNode());
+                let subNode = entity.getTreeNode();
+                if(subNode !== null){
+                    tree.push(subNode);
+                }
             });
 
             return tree;

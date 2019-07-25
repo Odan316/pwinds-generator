@@ -86,6 +86,14 @@ define([
         let _static = null;
 
         /**
+         * Dice formula that calculates in-game number as value
+         *
+         * @type {String|null}
+         * @private
+         */
+        let _roll_result = null;
+
+        /**
          * List of child entities, calculator rolls _dice and finds appropriate child by _min and _max
          *
          * @type {VariantEntity[]|null}
@@ -152,6 +160,7 @@ define([
          * @param data.use_modifier
          * @param data.use_custom_dice
          * @param data.static
+         * @param data.roll_result
          * @param data.variants
          * @param data.dictionaries
          * @param data.additional
@@ -187,6 +196,9 @@ define([
             }
             if("static" in data) {
                 _static = data.static;
+            }
+            if("roll_result" in data) {
+                _roll_result = data.roll_result;
             }
             if ("variants" in data) {
                 _variants = [];
@@ -346,11 +358,16 @@ define([
          * @returns {{text}}
          */
         this.getTreeNode = function () {
+            if(this.isLeave()){
+                return null;
+            }
+
             let node = {
                 tag: this.getTag(),
                 title: this.getTag().beautifyTag(),
                 hint: this.getHint()
             };
+
             let nodes = this.getSubTree();
             if (nodes.length > 0) {
                 node.nodes = nodes;
@@ -365,20 +382,36 @@ define([
          * @returns {Array}
          */
         this.getSubTree = function () {
-            var subTree = [];
+            let subTree = [];
 
             _.forEach(_variants, function (entity) {
                 if (!entity.getHide()) {
-                    subTree.push(entity.getTreeNode());
+                    let subNode = entity.getTreeNode();
+                    if(subNode !== null){
+                        subTree.push(subNode);
+                    }
                 }
             });
             _.forEach(_dictionaries, function (entity) {
                 if (!entity.getHide()) {
-                    subTree.push(entity.getTreeNode());
+                    let subNode = entity.getTreeNode();
+                    if(subNode !== null){
+                        subTree.push(subNode);
+                    }
                 }
             });
 
             return subTree;
+        };
+
+        this.isLeave = function()
+        {
+            return _variants === null
+                && _dictionaries === null
+                && _static === null
+                && _roll_result === null
+                && _template === null
+                && _additional === null;
         };
 
         /**
@@ -446,6 +479,19 @@ define([
 
         this.getStaticValue = function(){
             return _static;
+        };
+
+        this.isRollResult = function(){
+            return _roll_result != null;
+        };
+
+        /**
+         * Returns dice formula for number generating
+         *
+         * @returns {String}
+         */
+        this.getDiceResultFormula = function(){
+            return _roll_result;
         };
 
         /**
