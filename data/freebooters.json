@@ -369,7 +369,8 @@
                 "roll_result": "d10"
               },
               "character.class.fighter.heritage",
-              "character.class.fighter.alignment"
+              "character.class.fighter.alignment",
+              "character.class.fighter.appearance"
             ],
             "dictionaries": [
               {
@@ -452,6 +453,270 @@
                     ]
                   }
                 ]
+              },
+              {
+                "tag": "appearance",
+                "dice":  "d100",
+                "variants": [
+                  {
+                    "tag": "big_feet",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "big_mouth",
+                    "min": 3,
+                    "max": 4
+                  },
+                  {
+                    "tag": "braids",
+                    "min": 5,
+                    "max": 6
+                  },
+                  {
+                    "tag": "broad_shoulders",
+                    "min": 7,
+                    "max": 8
+                  },
+                  {
+                    "tag": "broken_nose",
+                    "min": 9,
+                    "max": 10
+                  },
+                  {
+                    "tag": "chiseled",
+                    "min": 11,
+                    "max": 12
+                  },
+                  {
+                    "tag": "clear_eyed",
+                    "title": "Clear-eyed",
+                    "min": 13,
+                    "max": 14
+                  },
+                  {
+                    "tag": "cleft_chin",
+                    "min": 15,
+                    "max": 16
+                  },
+                  {
+                    "tag": "crooked_teeth",
+                    "min": 17,
+                    "max": 18
+                  },
+                  {
+                    "tag": "curly_hair",
+                    "min": 19,
+                    "max": 20
+                  },
+                  {
+                    "tag": "dark_skin",
+                    "min": 21,
+                    "max": 22
+                  },
+                  {
+                    "tag": "deep_voice",
+                    "min": 23,
+                    "max": 24
+                  },
+                  {
+                    "tag": "gap_toothed",
+                    "title": "Gap-toothed",
+                    "min": 25,
+                    "max": 26
+                  },
+                  {
+                    "tag": "goatee",
+                    "min": 27,
+                    "max": 28
+                  },
+                  {
+                    "tag": "grubby",
+                    "min": 29,
+                    "max": 30
+                  },
+                  {
+                    "tag": "high_cheekbones",
+                    "min": 31,
+                    "max": 32
+                  },
+                  {
+                    "tag": "hirsute",
+                    "min": 33,
+                    "max": 34
+                  },
+                  {
+                    "tag": "lantern_jaw",
+                    "min": 35,
+                    "max": 36
+                  },
+                  {
+                    "tag": "large_ears",
+                    "min": 37,
+                    "max": 38
+                  },
+                  {
+                    "tag": "large_hands",
+                    "min": 39,
+                    "max": 40
+                  },
+                  {
+                    "tag": "large_head",
+                    "min": 41,
+                    "max": 42
+                  },
+                  {
+                    "tag": "long_legged",
+                    "title": "Long-legged",
+                    "min": 43,
+                    "max": 44
+                  },
+                  {
+                    "tag": "matted_hair",
+                    "min": 45,
+                    "max": 46
+                  },
+                  {
+                    "tag": "missing_ear",
+                    "min": 47,
+                    "max": 48
+                  },
+                  {
+                    "tag": "missing_eye",
+                    "min": 49,
+                    "max": 50
+                  },
+                  {
+                    "tag": "missing_finger",
+                    "min": 51,
+                    "max": 52
+                  },
+                  {
+                    "tag": "missing_teeth",
+                    "min": 53,
+                    "max": 54
+                  },
+                  {
+                    "tag": "notable_facial_hair",
+                    "min": 55,
+                    "max": 56
+                  },
+                  {
+                    "tag": "notable_nose",
+                    "min": 57,
+                    "max": 58
+                  },
+                  {
+                    "tag": "notable_smell",
+                    "min": 59,
+                    "max": 60
+                  },
+                  {
+                    "tag": "perfect_posture",
+                    "min": 61,
+                    "max": 62
+                  },
+                  {
+                    "tag": "pockmarked",
+                    "min": 63,
+                    "max": 64
+                  },
+                  {
+                    "tag": "raspy_voice",
+                    "min": 65,
+                    "max": 66
+                  },
+                  {
+                    "tag": "rosy_cheeks",
+                    "min": 67,
+                    "max": 68
+                  },
+                  {
+                    "tag": "scarred",
+                    "min": 69,
+                    "max": 70
+                  },
+                  {
+                    "tag": "squinting_gaze",
+                    "min": 71,
+                    "max": 72
+                  },
+                  {
+                    "tag": "tatoos",
+                    "min": 73,
+                    "max": 74
+                  },
+                  {
+                    "tag": "shaved_head",
+                    "min": 75,
+                    "max": 76
+                  },
+                  {
+                    "tag": "smelly",
+                    "min": 77,
+                    "max": 78
+                  },
+                  {
+                    "tag": "smiling",
+                    "min": 79,
+                    "max": 80
+                  },
+                  {
+                    "tag": "squint",
+                    "min": 81,
+                    "max": 82
+                  },
+                  {
+                    "tag": "steely_gaze",
+                    "min": 83,
+                    "max": 84
+                  },
+                  {
+                    "tag": "stubble",
+                    "min": 85,
+                    "max": 86
+                  },
+                  {
+                    "tag": "tattoos",
+                    "min": 87,
+                    "max": 88
+                  },
+                  {
+                    "tag": "unibrow",
+                    "min": 89,
+                    "max": 90
+                  },
+                  {
+                    "tag": "unsmiling",
+                    "min": 91,
+                    "max": 92
+                  },
+                  {
+                    "tag": "well_scrubbed",
+                    "title": "Well-scrubbed",
+                    "min": 93,
+                    "max": 94
+                  },
+                  {
+                    "tag": "wild_hair",
+                    "min": 95,
+                    "max": 96
+                  },
+                  {
+                    "tag": "youthful",
+                    "min": 97,
+                    "max": 98
+                  },
+                  {
+                    "tag": "roll_thief",
+                    "title": "Roll on THIEF",
+                    "min": 99,
+                    "max": 100,
+                    "generate_outer": [
+                      "character.class.thief.appearance"
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -467,7 +732,8 @@
                 "roll_result": "d6"
               },
               "character.class.thief.heritage",
-              "character.class.fighter.alignment"
+              "character.class.thief.alignment",
+              "character.class.thief.appearance"
             ],
             "dictionaries": [
               {
@@ -555,7 +821,8 @@
                 "roll_result": "d8"
               },
               "character.class.cleric.heritage",
-              "character.class.fighter.alignment"
+              "character.class.cleric.alignment",
+              "character.class.cleric.appearance"
             ],
             "dictionaries": [
               {
@@ -654,7 +921,8 @@
                 "roll_result": "d4"
               },
               "character.class.magic_user.heritage",
-              "character.class.fighter.alignment"
+              "character.class.magic_user.alignment",
+              "character.class.magic_user.appearance"
             ],
             "dictionaries": [
               {
