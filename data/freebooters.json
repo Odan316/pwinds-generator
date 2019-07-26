@@ -370,7 +370,8 @@
               },
               "character.class.fighter.heritage",
               "character.class.fighter.alignment",
-              "character.class.fighter.appearance"
+              "character.class.fighter.appearance",
+              "character.class.fighter.starting_gear"
             ],
             "dictionaries": [
               {
@@ -717,6 +718,82 @@
                     ]
                   }
                 ]
+              },
+              {
+                "tag": "starting_gear",
+                "additional": [
+                  {
+                    "tag": "Default items",
+                    "static": "Favored weapon, backpack, waterskin, knife"
+                  },
+                  {
+                    "tag": "rations",
+                    "title": "Rations (1d6 uses)",
+                    "roll_result":  "d6"
+                  },
+                  {
+                    "tag": "RANDOM ITEM",
+                    "generate_outer": "character.random_item"
+                  },
+                  {
+                    "tag": "garb",
+                    "dice":  "d6",
+                    "variants": [
+                      {
+                        "tag": "poor_clothes",
+                        "min": 1,
+                        "max": 3
+                      },
+                      {
+                        "tag": "common_clothes",
+                        "min": 4,
+                        "max": 6
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "armor",
+                    "dice":  "d6",
+                    "variants": [
+                      {
+                        "tag": "leather_armor",
+                        "min": 1,
+                        "max": 2
+                      },
+                      {
+                        "tag": "scale_armor",
+                        "min": 3,
+                        "max": 4
+                      },
+                      {
+                        "tag": "chainmail",
+                        "min": 5,
+                        "max": 6
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "other_item",
+                    "dice":  "d6",
+                    "variants": [
+                      {
+                        "tag": "buckler",
+                        "min": 1,
+                        "max": 3
+                      },
+                      {
+                        "tag": "shield",
+                        "min": 4,
+                        "max": 5
+                      },
+                      {
+                        "tag": "adventuring_fear",
+                        "min": 6,
+                        "max": 6
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -733,7 +810,8 @@
               },
               "character.class.thief.heritage",
               "character.class.thief.alignment",
-              "character.class.thief.appearance"
+              "character.class.thief.appearance",
+              "character.class.thief.starting_gear"
             ],
             "dictionaries": [
               {
@@ -1072,6 +1150,110 @@
                     ]
                   }
                 ]
+              },
+              {
+                "tag": "starting_gear",
+                "additional": [
+                  {
+                    "tag": "Default items",
+                    "static": "Backpack, waterskin, knife"
+                  },
+                  {
+                    "tag": "rations",
+                    "title": "Rations (1d6 uses)",
+                    "roll_result":  "d6"
+                  },
+                  {
+                    "tag": "RANDOM ITEM",
+                    "generate_outer": "character.random_item"
+                  },
+                  {
+                    "tag": "garb",
+                    "dice":  "d6",
+                    "variants": [
+                      {
+                        "tag": "rags",
+                        "min": 1,
+                        "max": 1
+                      },
+                      {
+                        "tag": "poor_clothes",
+                        "min": 2,
+                        "max": 3
+                      },
+                      {
+                        "tag": "common_clothes",
+                        "min": 4,
+                        "max": 5
+                      },
+                      {
+                        "tag": "quality_clothes",
+                        "min": 6,
+                        "max": 6
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "weapon",
+                    "dice":  "d6",
+                    "variants": [
+                      {
+                        "tag": "dagger",
+                        "min": 1,
+                        "max": 2
+                      },
+                      {
+                        "tag": "blackjack",
+                        "title": "Blackjack/sap",
+                        "min": 3,
+                        "max": 3
+                      },
+                      {
+                        "tag": "club",
+                        "title": "Club/cudgel",
+                        "min": 4,
+                        "max": 4
+                      },
+                      {
+                        "tag": "shortsword",
+                        "min": 5,
+                        "max": 5
+                      },
+                      {
+                        "tag": "sling",
+                        "min": 6,
+                        "max": 6
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "other_item",
+                    "dice":  "d6",
+                    "variants": [
+                      {
+                        "tag": "flint",
+                        "title": "Flint&steel",
+                        "min": 1,
+                        "max": 1
+                      },
+                      {
+                        "tag": "lockpicks",
+                        "min": 2,
+                        "max": 3
+                      },
+                      {
+                        "tag": "leather_armour",
+                        "min": 4,
+                        "max": 5
+                      },
+                      {
+                        "tag": "adventuring_fear",
+                        "min": 6,
+                        "max": 6
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -1088,7 +1270,8 @@
               },
               "character.class.cleric.heritage",
               "character.class.cleric.alignment",
-              "character.class.cleric.appearance"
+              "character.class.cleric.appearance",
+              "character.class.cleric.starting_gear"
             ],
             "dictionaries": [
               {
@@ -1437,6 +1620,110 @@
                     ]
                   }
                 ]
+              },
+              {
+                "tag": "starting_gear",
+                "additional": [
+                  {
+                    "tag": "Default items",
+                    "static": "Holy symbol, backpack, waterskin"
+                  },
+                  {
+                    "tag": "rations",
+                    "title": "Rations (1d6 uses)",
+                    "roll_result":  "d6"
+                  },
+                  {
+                    "tag": "RANDOM ITEM",
+                    "generate_outer": "character.random_item"
+                  },
+                  {
+                    "tag": "garb",
+                    "dice":  "d6",
+                    "variants": [
+                      {
+                        "tag": "rags",
+                        "min": 1,
+                        "max": 1
+                      },
+                      {
+                        "tag": "hooded_tunic",
+                        "min": 2,
+                        "max": 2
+                      },
+                      {
+                        "tag": "cap_and_cassock",
+                        "min": 3,
+                        "max": 5
+                      },
+                      {
+                        "tag": "priestly_vestments",
+                        "min": 6,
+                        "max": 6
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "weapon",
+                    "dice":  "d6",
+                    "variants": [
+                      {
+                        "tag": "knife_or_staff",
+                        "min": 1,
+                        "max": 2
+                      },
+                      {
+                        "tag": "dagger",
+                        "title": "Dagger or club/cudgel",
+                        "min": 3,
+                        "max": 4
+                      },
+                      {
+                        "tag": "mace_or_warhammer",
+                        "min": 5,
+                        "max": 5
+                      },
+                      {
+                        "tag": "flail_or_spear",
+                        "min": 6,
+                        "max": 6
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "other_item",
+                    "dice":  "d6",
+                    "variants": [
+                      {
+                        "tag": "collection_cup",
+                        "title": "Collection cup (1d6sp)",
+                        "min": 1,
+                        "max": 1,
+                        "additional": [
+                          {
+                            "tag": "money",
+                            "roll_result":  "d6"
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "holy_book",
+                        "min": 2,
+                        "max": 3
+                      },
+                      {
+                        "tag": "leather_armour",
+                        "min": 4,
+                        "max": 5
+                      },
+                      {
+                        "tag": "chainmail",
+                        "min": 6,
+                        "max": 6
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -1454,7 +1741,8 @@
               },
               "character.class.magic_user.heritage",
               "character.class.magic_user.alignment",
-              "character.class.magic_user.appearance"
+              "character.class.magic_user.appearance",
+              "character.class.magic_user.starting_gear"
             ],
             "dictionaries": [
               {
@@ -1792,6 +2080,132 @@
                     "title": "Widow's peak",
                     "min": 99,
                     "max": 100
+                  }
+                ]
+              },
+              {
+                "tag": "starting_gear",
+                "additional": [
+                  {
+                    "tag": "Default items",
+                    "static": "Spellbook, shoulder bag, waterskin"
+                  },
+                  {
+                    "tag": "rations",
+                    "title": "Rations (1d6 uses)",
+                    "roll_result":  "d6"
+                  },
+                  {
+                    "tag": "RANDOM ITEM",
+                    "generate_outer": "character.random_item"
+                  },
+                  {
+                    "tag": "garb",
+                    "dice":  "d6",
+                    "variants": [
+                      {
+                        "tag": "shabby_robes",
+                        "min": 1,
+                        "max": 3
+                      },
+                      {
+                        "tag": "common_robes",
+                        "min": 3,
+                        "max": 5
+                      },
+                      {
+                        "tag": "quality_robes",
+                        "min": 6,
+                        "max": 6
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "headgear",
+                    "dice":  "d6",
+                    "variants": [
+                      {
+                        "tag": "turban",
+                        "min": 1,
+                        "max": 1
+                      },
+                      {
+                        "tag": "skullcap",
+                        "min": 2,
+                        "max": 2
+                      },
+                      {
+                        "tag": "hood",
+                        "min": 3,
+                        "max": 4
+                      },
+                      {
+                        "tag": "pointy_hat",
+                        "min": 5,
+                        "max": 6
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "weapon",
+                    "dice":  "d6",
+                    "variants": [
+                      {
+                        "tag": "knife",
+                        "min": 1,
+                        "max": 2
+                      },
+                      {
+                        "tag": "staff",
+                        "min": 3,
+                        "max": 5
+                      },
+                      {
+                        "tag": "dagger",
+                        "min": 6,
+                        "max": 6
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "other_item",
+                    "dice":  "d6",
+                    "variants": [
+                      {
+                        "tag": "antitoxin",
+                        "min": 1,
+                        "max": 1
+                      },
+                      {
+                        "tag": "writing_kit",
+                        "min": 2,
+                        "max": 3
+                      },
+                      {
+                        "tag": "books",
+                        "title": "1d4 books",
+                        "min": 4,
+                        "max": 5,
+                        "additional": [
+                          {
+                            "tag": "books",
+                            "roll_result": "d4"
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "components",
+                        "title": "1d6 uses of spell components",
+                        "min": 6,
+                        "max": 6,
+                        "additional": [
+                          {
+                            "tag": "uses",
+                            "roll_result": "d6"
+                          }
+                        ]
+                      }
+                    ]
                   }
                 ]
               }
@@ -2348,6 +2762,13 @@
               }
             ]
           }
+        ]
+      },
+      {
+        "tag": "random_item",
+        "dice": "d100",
+        "variants": [
+
         ]
       }
     ]
