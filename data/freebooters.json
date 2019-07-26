@@ -642,7 +642,7 @@
                     "max": 72
                   },
                   {
-                    "tag": "tatoos",
+                    "tag": "tattoos",
                     "min": 73,
                     "max": 74
                   },
@@ -828,7 +828,7 @@
                     "max": 6
                   },
                   {
-                    "tag": "clear-eyed",
+                    "tag": "clear_eyed",
                     "title": "Clear-eyed",
                     "min": 7,
                     "max": 8
@@ -1171,6 +1171,272 @@
                     ]
                   }
                 ]
+              },
+              {
+                "tag": "appearance",
+                "dice":  "d100",
+                "variants": [
+                  {
+                    "tag": "big_feet",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "lazing_eyes",
+                    "min": 3,
+                    "max": 4
+                  },
+                  {
+                    "tag": "bright_eyes",
+                    "min": 5,
+                    "max": 6
+                  },
+                  {
+                    "tag": "bushy_eyebrows",
+                    "min": 7,
+                    "max": 8
+                  },
+                  {
+                    "tag": "clean_shaved",
+                    "title": "Clean-shaved",
+                    "min": 9,
+                    "max": 10
+                  },
+                  {
+                    "tag": "clear_eyed",
+                    "title": "Clear-eyed",
+                    "min": 11,
+                    "max": 12
+                  },
+                  {
+                    "tag": "cleft_chin",
+                    "min": 13,
+                    "max": 14
+                  },
+                  {
+                    "tag": "crooked_teeth",
+                    "min": 15,
+                    "max": 16
+                  },
+                  {
+                    "tag": "curly_hair",
+                    "min": 17,
+                    "max": 18
+                  },
+                  {
+                    "tag": "dandruff",
+                    "min": 19,
+                    "max": 20
+                  },
+                  {
+                    "tag": "dark_skin",
+                    "min": 21,
+                    "max": 22
+                  },
+                  {
+                    "tag": "deep_voice",
+                    "min": 23,
+                    "max": 24
+                  },
+                  {
+                    "tag": "flagellant_scars",
+                    "min": 25,
+                    "max": 26
+                  },
+                  {
+                    "tag": "grunt",
+                    "min": 27,
+                    "max": 28
+                  },
+                  {
+                    "tag": "goatee",
+                    "min": 29,
+                    "max": 30
+                  },
+                  {
+                    "tag": "gray_hair",
+                    "min": 31,
+                    "max": 32
+                  },
+                  {
+                    "tag": "heavyset",
+                    "min": 33,
+                    "max": 34
+                  },
+                  {
+                    "tag": "haunted_eyes",
+                    "min": 35,
+                    "max": 36
+                  },
+                  {
+                    "tag": "high_forehead",
+                    "min": 37,
+                    "max": 38
+                  },
+                  {
+                    "tag": "hirsute",
+                    "min": 39,
+                    "max": 40
+                  },
+                  {
+                    "tag": "large_hands",
+                    "min": 41,
+                    "max": 42
+                  },
+                  {
+                    "tag": "long_beard",
+                    "min": 43,
+                    "max": 44
+                  },
+                  {
+                    "tag": "missing_teeth",
+                    "min": 45,
+                    "max": 46
+                  },
+                  {
+                    "tag": "notable_nose",
+                    "min": 47,
+                    "max": 48
+                  },
+                  {
+                    "tag": "notable_smell",
+                    "min": 49,
+                    "max": 50
+                  },
+                  {
+                    "tag": "pale_skin",
+                    "min": 51,
+                    "max": 52
+                  },
+                  {
+                    "tag": "perfect_posture",
+                    "min": 53,
+                    "max": 54
+                  },
+                  {
+                    "tag": "piercing_gaze",
+                    "min": 55,
+                    "max": 56
+                  },
+                  {
+                    "tag": "pockmarked",
+                    "min": 57,
+                    "max": 58
+                  },
+                  {
+                    "tag": "ragged",
+                    "min": 59,
+                    "max": 60
+                  },
+                  {
+                    "tag": "rosy_cheeks",
+                    "min": 61,
+                    "max": 62
+                  },
+                  {
+                    "tag": "scarred",
+                    "min": 63,
+                    "max": 64
+                  },
+                  {
+                    "tag": "shaved_head",
+                    "min": 65,
+                    "max": 66
+                  },
+                  {
+                    "tag": "shining_eyes",
+                    "min": 67,
+                    "max": 68
+                  },
+                  {
+                    "tag": "smelly",
+                    "min": 69,
+                    "max": 70
+                  },
+                  {
+                    "tag": "smiling",
+                    "min": 71,
+                    "max": 72
+                  },
+                  {
+                    "tag": "square_chin",
+                    "min": 73,
+                    "max": 74
+                  },
+                  {
+                    "tag": "square_shouldered",
+                    "title": "Square-shouldered",
+                    "min": 75,
+                    "max": 76
+                  },
+                  {
+                    "tag": "strange_marks",
+                    "min": 77,
+                    "max": 78
+                  },
+                  {
+                    "tag": "stubble",
+                    "min": 79,
+                    "max": 80
+                  },
+                  {
+                    "tag": "tattoos",
+                    "min": 81,
+                    "max": 82
+                  },
+                  {
+                    "tag": "thundering_voice",
+                    "min": 83,
+                    "max": 84
+                  },
+                  {
+                    "tag": "tonsure",
+                    "min": 85,
+                    "max": 86
+                  },
+                  {
+                    "tag": "unblinking_gaze",
+                    "min": 87,
+                    "max": 88
+                  },
+                  {
+                    "tag": "unwashed",
+                    "min": 89,
+                    "max": 90
+                  },
+                  {
+                    "tag": "warty",
+                    "min": 91,
+                    "max": 92
+                  },
+                  {
+                    "tag": "well_fed",
+                    "title": "Well-fed",
+                    "min": 93,
+                    "max": 94
+                  },
+                  {
+                    "tag": "well_scrubbed",
+                    "title": "Well-scrubbed",
+                    "min": 95,
+                    "max": 96
+                  },
+                  {
+                    "tag": "wild_eyed",
+                    "title": "Wild-eyed",
+                    "min": 97,
+                    "max": 98
+                  },
+                  {
+                    "tag": "roll_thief",
+                    "title": "Roll on FIGHTER",
+                    "min": 99,
+                    "max": 100,
+                    "generate_outer": [
+                      "character.class.fighter.appearance"
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -1269,6 +1535,263 @@
                       "character.trait.virtue",
                       "character.trait.virtue"
                     ]
+                  }
+                ]
+              },
+              {
+                "tag": "appearance",
+                "dice":  "d100",
+                "variants": [
+                  {
+                    "tag": "acid_scars",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "aged",
+                    "min": 3,
+                    "max": 4
+                  },
+                  {
+                    "tag": "bald",
+                    "min": 5,
+                    "max": 6
+                  },
+                  {
+                    "tag": "black_teeth",
+                    "min": 7,
+                    "max": 8
+                  },
+                  {
+                    "tag": "booming_voice",
+                    "min": 9,
+                    "max": 10
+                  },
+                  {
+                    "tag": "burn_scars",
+                    "min": 11,
+                    "max": 12
+                  },
+                  {
+                    "tag": "bushy_eyebrows",
+                    "min": 13,
+                    "max": 14
+                  },
+                  {
+                    "tag": "chin_whiskers",
+                    "min": 15,
+                    "max": 16
+                  },
+                  {
+                    "tag": "crooked_teeth",
+                    "min": 17,
+                    "max": 18
+                  },
+                  {
+                    "tag": "curly_hair",
+                    "min": 19,
+                    "max": 20
+                  },
+                  {
+                    "tag": "dark_skin",
+                    "min": 21,
+                    "max": 22
+                  },
+                  {
+                    "tag": "discoloured_skin",
+                    "min": 23,
+                    "max": 24
+                  },
+                  {
+                    "tag": "disfigured",
+                    "min": 25,
+                    "max": 26
+                  },
+                  {
+                    "tag": "forked_tongue",
+                    "min": 27,
+                    "max": 28
+                  },
+                  {
+                    "tag": "gaunt",
+                    "min": 29,
+                    "max": 30
+                  },
+                  {
+                    "tag": "glowing_eyes",
+                    "min": 31,
+                    "max": 32
+                  },
+                  {
+                    "tag": "gnarled_hands",
+                    "min": 33,
+                    "max": 34
+                  },
+                  {
+                    "tag": "goatee",
+                    "min": 35,
+                    "max": 36
+                  },
+                  {
+                    "tag": "gray_hair",
+                    "min": 37,
+                    "max": 38
+                  },
+                  {
+                    "tag": "haggard",
+                    "min": 39,
+                    "max": 40
+                  },
+                  {
+                    "tag": "hairless",
+                    "min": 41,
+                    "max": 42
+                  },
+                  {
+                    "tag": "high_forehead",
+                    "min": 43,
+                    "max": 44
+                  },
+                  {
+                    "tag": "hooded_eyes",
+                    "min": 45,
+                    "max": 46
+                  },
+                  {
+                    "tag": "hunchback",
+                    "min": 47,
+                    "max": 48
+                  },
+                  {
+                    "tag": "limp",
+                    "min": 49,
+                    "max": 50
+                  },
+                  {
+                    "tag": "long_beard",
+                    "min": 51,
+                    "max": 52
+                  },
+                  {
+                    "tag": "long_fingernails",
+                    "min": 53,
+                    "max": 54
+                  },
+                  {
+                    "tag": "long_hair",
+                    "min": 55,
+                    "max": 56
+                  },
+                  {
+                    "tag": "lumpy_skin",
+                    "min": 57,
+                    "max": 58
+                  },
+                  {
+                    "tag": "mismatched_eyes",
+                    "min": 59,
+                    "max": 60
+                  },
+                  {
+                    "tag": "missing_teeth",
+                    "min": 61,
+                    "max": 62
+                  },
+                  {
+                    "tag": "no_eyebrows",
+                    "min": 63,
+                    "max": 64
+                  },
+                  {
+                    "tag": "oily_skin",
+                    "min": 65,
+                    "max": 66
+                  },
+                  {
+                    "tag": "pale_skin",
+                    "min": 67,
+                    "max": 68
+                  },
+                  {
+                    "tag": "piercing_gaze",
+                    "min": 69,
+                    "max": 70
+                  },
+                  {
+                    "tag": "pockmarked",
+                    "min": 71,
+                    "max": 72
+                  },
+                  {
+                    "tag": "raspy_voice",
+                    "min": 73,
+                    "max": 74
+                  },
+                  {
+                    "tag": "sallow",
+                    "min": 75,
+                    "max": 76
+                  },
+                  {
+                    "tag": "scarred",
+                    "min": 77,
+                    "max": 78
+                  },
+                  {
+                    "tag": "skeletal_hands",
+                    "min": 79,
+                    "max": 80
+                  },
+                  {
+                    "tag": "smelly",
+                    "min": 81,
+                    "max": 82
+                  },
+                  {
+                    "tag": "strange_marks",
+                    "min": 83,
+                    "max": 84
+                  },
+                  {
+                    "tag": "striking_nose",
+                    "min": 85,
+                    "max": 86
+                  },
+                  {
+                    "tag": "sunken_eyes",
+                    "min": 87,
+                    "max": 88
+                  },
+                  {
+                    "tag": "tattoos",
+                    "min": 89,
+                    "max": 90
+                  },
+                  {
+                    "tag": "terrible_posture",
+                    "min": 91,
+                    "max": 92
+                  },
+                  {
+                    "tag": "warty",
+                    "min": 93,
+                    "max": 94
+                  },
+                  {
+                    "tag": "white_hair",
+                    "min": 95,
+                    "max": 96
+                  },
+                  {
+                    "tag": "wild_hair",
+                    "min": 97,
+                    "max": 98
+                  },
+                  {
+                    "tag": "widows_peak",
+                    "title": "Widow's peak",
+                    "min": 99,
+                    "max": 100
                   }
                 ]
               }
