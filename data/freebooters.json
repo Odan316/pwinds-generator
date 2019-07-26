@@ -806,6 +806,272 @@
                     ]
                   }
                 ]
+              },
+              {
+                "tag": "appearance",
+                "dice":  "d100",
+                "variants": [
+                  {
+                    "tag": "broken_nose",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "chin_whiskers",
+                    "min": 3,
+                    "max": 4
+                  },
+                  {
+                    "tag": "clean_shaved",
+                    "title": "Clean-shaved",
+                    "min": 5,
+                    "max": 6
+                  },
+                  {
+                    "tag": "clear-eyed",
+                    "title": "Clear-eyed",
+                    "min": 7,
+                    "max": 8
+                  },
+                  {
+                    "tag": "crooked_teeth",
+                    "min": 9,
+                    "max": 10
+                  },
+                  {
+                    "tag": "curly_hair",
+                    "min": 11,
+                    "max": 12
+                  },
+                  {
+                    "tag": "dark_skin",
+                    "min": 13,
+                    "max": 14
+                  },
+                  {
+                    "tag": "deep_voice",
+                    "min": 15,
+                    "max": 16
+                  },
+                  {
+                    "tag": "disfigured",
+                    "min": 17,
+                    "max": 18
+                  },
+                  {
+                    "tag": "disheveled",
+                    "min": 19,
+                    "max": 20
+                  },
+                  {
+                    "tag": "gap_toothed",
+                    "title": "Gap-toothed",
+                    "min": 21,
+                    "max": 22
+                  },
+                  {
+                    "tag": "gaunt",
+                    "min": 23,
+                    "max": 24
+                  },
+                  {
+                    "tag": "goatee",
+                    "min": 25,
+                    "max": 26
+                  },
+                  {
+                    "tag": "hirsute",
+                    "min": 27,
+                    "max": 28
+                  },
+                  {
+                    "tag": "lazy_eye",
+                    "min": 29,
+                    "max": 30
+                  },
+                  {
+                    "tag": "limp",
+                    "min": 31,
+                    "max": 32
+                  },
+                  {
+                    "tag": "little_mouth",
+                    "min": 33,
+                    "max": 34
+                  },
+                  {
+                    "tag": "long_fingers",
+                    "min": 35,
+                    "max": 36
+                  },
+                  {
+                    "tag": "matted_hair",
+                    "min": 37,
+                    "max": 38
+                  },
+                  {
+                    "tag": "missing_ear",
+                    "min": 39,
+                    "max": 40
+                  },
+                  {
+                    "tag": "missing_finger",
+                    "min": 41,
+                    "max": 42
+                  },
+                  {
+                    "tag": "missing_teeth",
+                    "min": 43,
+                    "max": 44
+                  },
+                  {
+                    "tag": "narrowed_eyes",
+                    "min": 45,
+                    "max": 46
+                  },
+                  {
+                    "tag": "notable_chin",
+                    "min": 47,
+                    "max": 48
+                  },
+                  {
+                    "tag": "notable_nose",
+                    "min": 49,
+                    "max": 50
+                  },
+                  {
+                    "tag": "overbite",
+                    "min": 51,
+                    "max": 52
+                  },
+                  {
+                    "tag": "pale_skin",
+                    "min": 53,
+                    "max": 54
+                  },
+                  {
+                    "tag": "pencil_mustache",
+                    "min": 55,
+                    "max": 56
+                  },
+                  {
+                    "tag": "perfect_posture",
+                    "min": 57,
+                    "max": 58
+                  },
+                  {
+                    "tag": "pockmarked",
+                    "min": 59,
+                    "max": 60
+                  },
+                  {
+                    "tag": "pointy_chin",
+                    "min": 61,
+                    "max": 62
+                  },
+                  {
+                    "tag": "poor_posture",
+                    "min": 63,
+                    "max": 64
+                  },
+                  {
+                    "tag": "raspy_voice",
+                    "min": 65,
+                    "max": 66
+                  },
+                  {
+                    "tag": "red_rimmed_eyes",
+                    "title": "Red-rimmed eyes",
+                    "min": 67,
+                    "max": 68
+                  },
+                  {
+                    "tag": "scarred",
+                    "min": 69,
+                    "max": 70
+                  },
+                  {
+                    "tag": "scruffy",
+                    "min": 71,
+                    "max": 72
+                  },
+                  {
+                    "tag": "shifty_eyes",
+                    "min": 73,
+                    "max": 74
+                  },
+                  {
+                    "tag": "small_hands",
+                    "min": 75,
+                    "max": 76
+                  },
+                  {
+                    "tag": "smelly",
+                    "min": 77,
+                    "max": 78
+                  },
+                  {
+                    "tag": "squint",
+                    "min": 79,
+                    "max": 80
+                  },
+                  {
+                    "tag": "stubble",
+                    "min": 81,
+                    "max": 82
+                  },
+                  {
+                    "tag": "stubby_fingers",
+                    "min": 83,
+                    "max": 84
+                  },
+                  {
+                    "tag": "tattoos",
+                    "min": 85,
+                    "max": 86
+                  },
+                  {
+                    "tag": "twitchy",
+                    "min": 87,
+                    "max": 88
+                  },
+                  {
+                    "tag": "unsmiling",
+                    "min": 89,
+                    "max": 90
+                  },
+                  {
+                    "tag": "unwashed",
+                    "min": 91,
+                    "max": 92
+                  },
+                  {
+                    "tag": "well_groomed",
+                    "title": "Well-groomed",
+                    "min": 93,
+                    "max": 94
+                  },
+                  {
+                    "tag": "whispery_voice",
+                    "min": 95,
+                    "max": 96
+                  },
+                  {
+                    "tag": "widows_peak",
+                    "title": "Widow's peak",
+                    "min": 97,
+                    "max": 98
+                  },
+                  {
+                    "tag": "roll_thief",
+                    "title": "Roll on MAGIC-USER",
+                    "min": 99,
+                    "max": 100,
+                    "generate_outer": [
+                      "character.class.magic_user.appearance"
+                    ]
+                  }
+                ]
               }
             ]
           },
