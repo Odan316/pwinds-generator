@@ -733,7 +733,7 @@
                   },
                   {
                     "tag": "RANDOM ITEM",
-                    "generate_outer": "character.random_item"
+                    "generate_outer": "miscellaneous.random_item"
                   },
                   {
                     "tag": "garb",
@@ -1165,7 +1165,7 @@
                   },
                   {
                     "tag": "RANDOM ITEM",
-                    "generate_outer": "character.random_item"
+                    "generate_outer": "miscellaneous.random_item"
                   },
                   {
                     "tag": "garb",
@@ -1635,7 +1635,7 @@
                   },
                   {
                     "tag": "RANDOM ITEM",
-                    "generate_outer": "character.random_item"
+                    "generate_outer": "miscellaneous.random_item"
                   },
                   {
                     "tag": "garb",
@@ -2097,7 +2097,7 @@
                   },
                   {
                     "tag": "RANDOM ITEM",
-                    "generate_outer": "character.random_item"
+                    "generate_outer": "miscellaneous.random_item"
                   },
                   {
                     "tag": "garb",
@@ -2762,13 +2762,6 @@
               }
             ]
           }
-        ]
-      },
-      {
-        "tag": "random_item",
-        "dice": "d100",
-        "variants": [
-
         ]
       }
     ]
@@ -13110,6 +13103,690 @@
             "tag": "up",
             "min": 12,
             "max": 12
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "miscellaneous",
+    "dictionaries": [
+
+      {
+        "tag": "random_item",
+        "dice": "d100",
+        "variants": [
+          {
+            "tag": "abacus",
+            "title": "Abacus (5 sp, 0 wt)",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "bag_of_salt",
+            "title": "Bag of salt (5 sp, 1 wt)",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "battered_helmet",
+            "title": "Battered helmet (2 sp, 0 wt)",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "battered_shield",
+            "title": "Battered shield (18 sp, 1 wt)",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "broken_sword",
+            "title": "Broken sword (1 wt)",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "bestiary",
+            "title": "Bestiary (5 sp, 1 wt)",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "bird",
+            "title": "Bird cage and pet bird (4 sp, 1 wt)",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "book",
+            "title": "Book (8 sp, specify subject, 1 wt)",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "bottle_of_perfume",
+            "title": "Bottle of perfume (1d4 sp, 0 wt)",
+            "min": 9,
+            "max": 9,
+            "additional": [
+              {
+                "tag": "cost",
+                "roll_result":  "d4"
+              }
+            ]
+          },
+          {
+            "tag": "box_of_candles",
+            "title": "Box of candles (2 sp, 0 wt)",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "bucket_of_pitch",
+            "title": "Abacus (1 sp, 1 wt)",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "bundle_of_furs",
+            "title": "Bundle of furs (1d6x10 sp, 3 wt)",
+            "min": 12,
+            "max": 12,
+            "additional": [
+              {
+                "tag": "cost",
+                "roll_result":  "d6x10"
+              }
+            ]
+          },
+          {
+            "tag": "cask_of_grog",
+            "title": "Cask of grog (4 sp, 2 wt)",
+            "min": 13,
+            "max": 13
+          },
+          {
+            "tag": "cast_iron_pot",
+            "title": "Cast iron pot (2 sp, 1 wt)",
+            "min": 14,
+            "max": 14
+          },
+          {
+            "tag": "cheap_jewelery",
+            "title": "Cheap jewelery/locket (1d4 sp, 0 wt)",
+            "min": 15,
+            "max": 15,
+            "additional": [
+              {
+                "tag": "cost",
+                "roll_result":  "d4"
+              }
+            ]
+          },
+          {
+            "tag": "doll",
+            "title": "Child's doll (1 sp, 0 wt)",
+            "min": 16,
+            "max": 16
+          },
+          {
+            "tag": "clay_jar_of_honey",
+            "title": "Clay jar of honey (3 sp, 0 wt)",
+            "min": 17,
+            "max": 17
+          },
+          {
+            "tag": "pipe",
+            "title": "Clay pipe and bag of tobacco (3 sp, 0 wt)",
+            "min": 18,
+            "max": 18
+          },
+          {
+            "tag": "pot_of_lard",
+            "title": "Clay pot of lard (1 wt)",
+            "min": 19,
+            "max": 19
+          },
+          {
+            "tag": "coded_message",
+            "title": "Coded message (0 wt)",
+            "min": 20,
+            "max": 20
+          },
+          {
+            "tag": "pouch",
+            "title": "Coin pouch (holding 3d6 sp, 0 wt)",
+            "min": 21,
+            "max": 21,
+            "additional": [
+              {
+                "tag": "money",
+                "roll_result":  "3d6"
+              }
+            ]
+          },
+          {
+            "tag": "lantern",
+            "title": "Copper lantern amd lamp oil (21 sp, 1 wt)",
+            "min": 22,
+            "max": 22
+          },
+          {
+            "tag": "cow",
+            "title": "Cow (30 sp)",
+            "min": 23,
+            "max": 23
+          },
+          {
+            "tag": "wine",
+            "title": "Crate of wine (25 sp, 4 wt)",
+            "min": 24,
+            "max": 24
+          },
+          {
+            "tag": "donkey",
+            "title": "Donkey (25 sp)",
+            "min": 25,
+            "max": 25
+          },
+          {
+            "tag": "eyepatch",
+            "title": "Eyepatch (0 wt)",
+            "min": 26,
+            "max": 26
+          },
+          {
+            "tag": "fancy_belt",
+            "title": "Fancy belt/girdle (5 sp, 0 wt)",
+            "min": 27,
+            "max": 27
+          },
+          {
+            "tag": "fine_dwarven_hammer",
+            "title": "<i>Fine</i> dwarven hammer & chisel (6 sp, 1 wt)",
+            "min": 28,
+            "max": 28
+          },
+          {
+            "tag": "fine_dwarven_warhammer",
+            "title": "<i>Fine</i> dwarven warhammer (24 sp, 1 wt)",
+            "min": 29,
+            "max": 29
+          },
+          {
+            "tag": "fine_elven_quiver",
+            "title": "<i>Fine</i> elven quiver & arrows (16 sp, 0 wt)",
+            "min": 30,
+            "max": 30
+          },
+          {
+            "tag": "fine_elven_shortbow",
+            "title": "<i>Fine</i> elven shortbow (32 sp, 1 wt)",
+            "min": 31,
+            "max": 31
+          },
+          {
+            "tag": "fine_leather_armor",
+            "title": "<i>Fine</i> leather armor (60 sp, 1 wt)",
+            "min": 32,
+            "max": 32
+          },
+          {
+            "tag": "fine_whetstone",
+            "title": "<i>Fine</i> whetstone (2 sp, 0 wt)",
+            "min": 33,
+            "max": 33
+          },
+          {
+            "tag": "fishing_net",
+            "title": "Fishing net (4 sp, 1 wt)",
+            "min": 34,
+            "max": 34
+          },
+          {
+            "tag": "fishing_pole",
+            "title": "Fishing pole & basket (4 sp, 1 wt)",
+            "min": 35,
+            "max": 35
+          },
+          {
+            "tag": "home_remedy",
+            "title": "Flask of home remedy (0 wt)",
+            "min": 36,
+            "max": 36
+          },
+          {
+            "tag": "flawed_gemstone",
+            "title": "Flawed gemstone (1d4x5 sp, 0 wt)",
+            "min": 37,
+            "max": 37,
+            "additional": [
+              {
+                "tag": "cost",
+                "roll_result":  "d4x5"
+              }
+            ]
+          },
+          {
+            "tag": "fur_cloak",
+            "title": "Fur-lined cloak (6 sp, 0 wt)",
+            "min": 38,
+            "max": 38
+          },
+          {
+            "tag": "gardening_tools",
+            "title": "Gardening tools (5 sp, 1 wt)",
+            "min": 39,
+            "max": 39
+          },
+          {
+            "tag": "luck_charm",
+            "title": "Good luck charm (0 wt)",
+            "min": 40,
+            "max": 40
+          },
+          {
+            "tag": "hand_mirror",
+            "title": "Hand mirror (3 sp, 0 wt)",
+            "min": 41,
+            "max": 41
+          },
+          {
+            "tag": "hand_of_glory",
+            "title": "Hand of glory (8 sp, 0 wt)",
+            "min": 42,
+            "max": 42
+          },
+          {
+            "tag": "strange_seeds",
+            "title": "Handful of strange seeds (0 wt)",
+            "min": 43,
+            "max": 43
+          },
+          {
+            "tag": "handsaw",
+            "title": "Handsaw (3 sp, 1 wt)",
+            "min": 44,
+            "max": 44
+          },
+          {
+            "tag": "hatchet",
+            "title": "Hatchet (10 sp, 1 wt)",
+            "min": 45,
+            "max": 45
+          },
+          {
+            "tag": "heirloom_banner",
+            "title": "Heirloom banner (2d6 sp, 1 wt)",
+            "min": 46,
+            "max": 46,
+            "additional": [
+              {
+                "tag": "cost",
+                "roll_result":  "2d6"
+              }
+            ]
+          },
+          {
+            "tag": "heirloom_chalice",
+            "title": "Heirloom chalice (1d12 sp, 1 wt)",
+            "min": 47,
+            "max": 47,
+            "additional": [
+              {
+                "tag": "cost",
+                "roll_result":  "d12"
+              }
+            ]
+          },
+          {
+            "tag": "heirloom_healers_kit",
+            "title": "Heirloom healer's kit (24 sp, 1 wt)",
+            "min": 48,
+            "max": 48
+          },
+          {
+            "tag": "heirloom_shield",
+            "title": "Heirloom shield (25 sp, 2 wt)",
+            "min": 49,
+            "max": 49
+          },
+          {
+            "tag": "heirloom_sword",
+            "title": "Heirloom sword (18 sp, 2 wt)",
+            "min": 50,
+            "max": 50
+          },
+          {
+            "tag": "abacus",
+            "title": "Abacus (5 sp, 0 wt)",
+            "min": 51,
+            "max": 51
+          },
+          {
+            "tag": "bag_of_salt",
+            "title": "Bag of salt (5 sp, 1 wt)",
+            "min": 52,
+            "max": 52
+          },
+          {
+            "tag": "battered_helmet",
+            "title": "Battered helmet (2 sp, 0 wt)",
+            "min": 53,
+            "max": 53
+          },
+          {
+            "tag": "battered_shield",
+            "title": "Battered shield (18 sp, 1 wt)",
+            "min": 54,
+            "max": 54
+          },
+          {
+            "tag": "broken_sword",
+            "title": "Broken sword (1 wt)",
+            "min": 55,
+            "max": 55
+          },
+          {
+            "tag": "bestiary",
+            "title": "Abacus (5 sp, 1 wt)",
+            "min": 56,
+            "max": 56
+          },
+          {
+            "tag": "bird",
+            "title": "Bird cage and pet bird (4 sp, 1 wt)",
+            "min": 57,
+            "max": 57
+          },
+          {
+            "tag": "book",
+            "title": "Book (8 sp, specify subject, 1 wt)",
+            "min": 58,
+            "max": 58
+          },
+          {
+            "tag": "bottle_of_perfume",
+            "title": "Bottle of perfume (1d4 sp, 0 wt)",
+            "min": 59,
+            "max": 59,
+            "additional": [
+              {
+                "tag": "cost",
+                "roll_result":  "d4"
+              }
+            ]
+          },
+          {
+            "tag": "box_of_candles",
+            "title": "Box of candles (2 sp, 0 wt)",
+            "min": 60,
+            "max": 60
+          },
+          {
+            "tag": "abacus",
+            "title": "Abacus (5 sp, 0 wt)",
+            "min": 61,
+            "max": 61
+          },
+          {
+            "tag": "bag_of_salt",
+            "title": "Bag of salt (5 sp, 1 wt)",
+            "min": 62,
+            "max": 62
+          },
+          {
+            "tag": "battered_helmet",
+            "title": "Battered helmet (2 sp, 0 wt)",
+            "min": 63,
+            "max": 63
+          },
+          {
+            "tag": "battered_shield",
+            "title": "Battered shield (18 sp, 1 wt)",
+            "min": 64,
+            "max": 64
+          },
+          {
+            "tag": "broken_sword",
+            "title": "Broken sword (1 wt)",
+            "min": 65,
+            "max": 65
+          },
+          {
+            "tag": "bestiary",
+            "title": "Abacus (5 sp, 1 wt)",
+            "min": 66,
+            "max": 66
+          },
+          {
+            "tag": "bird",
+            "title": "Bird cage and pet bird (4 sp, 1 wt)",
+            "min": 67,
+            "max": 67
+          },
+          {
+            "tag": "book",
+            "title": "Book (8 sp, specify subject, 1 wt)",
+            "min": 68,
+            "max": 68
+          },
+          {
+            "tag": "bottle_of_perfume",
+            "title": "Bottle of perfume (1d4 sp, 0 wt)",
+            "min": 69,
+            "max": 69,
+            "additional": [
+              {
+                "tag": "cost",
+                "roll_result":  "d4"
+              }
+            ]
+          },
+          {
+            "tag": "box_of_candles",
+            "title": "Box of candles (2 sp, 0 wt)",
+            "min": 70,
+            "max": 70
+          },
+          {
+            "tag": "abacus",
+            "title": "Abacus (5 sp, 0 wt)",
+            "min": 71,
+            "max": 71
+          },
+          {
+            "tag": "bag_of_salt",
+            "title": "Bag of salt (5 sp, 1 wt)",
+            "min": 72,
+            "max": 72
+          },
+          {
+            "tag": "battered_helmet",
+            "title": "Battered helmet (2 sp, 0 wt)",
+            "min": 73,
+            "max": 73
+          },
+          {
+            "tag": "battered_shield",
+            "title": "Battered shield (18 sp, 1 wt)",
+            "min": 74,
+            "max": 74
+          },
+          {
+            "tag": "broken_sword",
+            "title": "Broken sword (1 wt)",
+            "min": 75,
+            "max": 75
+          },
+          {
+            "tag": "bestiary",
+            "title": "Abacus (5 sp, 1 wt)",
+            "min": 76,
+            "max": 76
+          },
+          {
+            "tag": "bird",
+            "title": "Bird cage and pet bird (4 sp, 1 wt)",
+            "min": 77,
+            "max": 77
+          },
+          {
+            "tag": "book",
+            "title": "Book (8 sp, specify subject, 1 wt)",
+            "min": 78,
+            "max": 78
+          },
+          {
+            "tag": "bottle_of_perfume",
+            "title": "Bottle of perfume (1d4 sp, 0 wt)",
+            "min": 79,
+            "max": 79,
+            "additional": [
+              {
+                "tag": "cost",
+                "roll_result":  "d4"
+              }
+            ]
+          },
+          {
+            "tag": "box_of_candles",
+            "title": "Box of candles (2 sp, 0 wt)",
+            "min": 80,
+            "max": 80
+          },
+          {
+            "tag": "abacus",
+            "title": "Abacus (5 sp, 0 wt)",
+            "min": 81,
+            "max": 81
+          },
+          {
+            "tag": "bag_of_salt",
+            "title": "Bag of salt (5 sp, 1 wt)",
+            "min": 82,
+            "max": 82
+          },
+          {
+            "tag": "battered_helmet",
+            "title": "Battered helmet (2 sp, 0 wt)",
+            "min": 83,
+            "max": 83
+          },
+          {
+            "tag": "battered_shield",
+            "title": "Battered shield (18 sp, 1 wt)",
+            "min": 84,
+            "max": 84
+          },
+          {
+            "tag": "broken_sword",
+            "title": "Broken sword (1 wt)",
+            "min": 85,
+            "max": 85
+          },
+          {
+            "tag": "bestiary",
+            "title": "Abacus (5 sp, 1 wt)",
+            "min": 86,
+            "max": 86
+          },
+          {
+            "tag": "bird",
+            "title": "Bird cage and pet bird (4 sp, 1 wt)",
+            "min": 87,
+            "max": 87
+          },
+          {
+            "tag": "book",
+            "title": "Book (8 sp, specify subject, 1 wt)",
+            "min": 88,
+            "max": 88
+          },
+          {
+            "tag": "bottle_of_perfume",
+            "title": "Bottle of perfume (1d4 sp, 0 wt)",
+            "min": 89,
+            "max": 89,
+            "additional": [
+              {
+                "tag": "cost",
+                "roll_result":  "d4"
+              }
+            ]
+          },
+          {
+            "tag": "box_of_candles",
+            "title": "Box of candles (2 sp, 0 wt)",
+            "min": 90,
+            "max": 90
+          },
+          {
+            "tag": "abacus",
+            "title": "Abacus (5 sp, 0 wt)",
+            "min": 91,
+            "max": 91
+          },
+          {
+            "tag": "bag_of_salt",
+            "title": "Bag of salt (5 sp, 1 wt)",
+            "min": 92,
+            "max": 92
+          },
+          {
+            "tag": "battered_helmet",
+            "title": "Battered helmet (2 sp, 0 wt)",
+            "min": 93,
+            "max": 93
+          },
+          {
+            "tag": "battered_shield",
+            "title": "Battered shield (18 sp, 1 wt)",
+            "min": 94,
+            "max": 94
+          },
+          {
+            "tag": "broken_sword",
+            "title": "Broken sword (1 wt)",
+            "min": 95,
+            "max": 95
+          },
+          {
+            "tag": "bestiary",
+            "title": "Abacus (5 sp, 1 wt)",
+            "min": 96,
+            "max": 96
+          },
+          {
+            "tag": "bird",
+            "title": "Bird cage and pet bird (4 sp, 1 wt)",
+            "min": 97,
+            "max": 97
+          },
+          {
+            "tag": "book",
+            "title": "Book (8 sp, specify subject, 1 wt)",
+            "min": 98,
+            "max": 98
+          },
+          {
+            "tag": "bottle_of_perfume",
+            "title": "Bottle of perfume (1d4 sp, 0 wt)",
+            "min": 99,
+            "max": 99,
+            "additional": [
+              {
+                "tag": "cost",
+                "roll_result":  "d4"
+              }
+            ]
+          },
+          {
+            "tag": "box_of_candles",
+            "title": "Box of candles (2 sp, 0 wt)",
+            "min": 100,
+            "max": 100
           }
         ]
       }
