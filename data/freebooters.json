@@ -13111,7 +13111,6 @@
   {
     "tag": "miscellaneous",
     "dictionaries": [
-
       {
         "tag": "random_item",
         "dice": "d100",
@@ -13794,6 +13793,1200 @@
             "title": "Wooden mask (0 wt)",
             "min": 100,
             "max": 100
+          }
+        ]
+      },
+      {
+        "tag": "spell_name",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "element_form",
+            "title": "[ELEMENT] [FORM]",
+            "min": 1,
+            "max": 2,
+            "template": [
+              {
+                "generate_outer": "miscellaneous.spell_name.element"
+              },
+              {
+                "generate_outer": "miscellaneous.spell_name.form"
+              }
+            ]
+          },
+          {
+            "tag": "adjective_form",
+            "title": "[ADJECTIVE] [FORM]",
+            "min": 3,
+            "max": 4,
+            "template": [
+              {
+                "generate_outer": "miscellaneous.spell_name.adjective"
+              },
+              {
+                "generate_outer": "miscellaneous.spell_name.form"
+              }
+            ]
+          },
+          {
+            "tag": "adjective_element",
+            "title": "[ADJECTIVE] [ELEMENT]",
+            "min": 5,
+            "max": 6,
+            "template": [
+              {
+                "generate_outer": "miscellaneous.spell_name.adjective"
+              },
+              {
+                "generate_outer": "miscellaneous.spell_name.element"
+              }
+            ]
+          },
+          {
+            "tag": "form_of_element",
+            "title": "[FORM] of [ELEMENT]",
+            "min": 7,
+            "max": 7,
+            "template": [
+              {
+                "generate_outer": "miscellaneous.spell_name.form"
+              },
+              {
+                "static": "of"
+              },
+              {
+                "generate_outer": "miscellaneous.spell_name.element"
+              }
+            ]
+          },
+          {
+            "tag": "form_of_adjective_element",
+            "title": "[FORM] of [ADJECTIVE] [ELEMENT]",
+            "min": 8,
+            "max": 8,
+            "template": [
+              {
+                "generate_outer": "miscellaneous.spell_name.form"
+              },
+              {
+                "static": "of"
+              },
+              {
+                "generate_outer": "miscellaneous.spell_name.adjective"
+              },
+              {
+                "generate_outer": "miscellaneous.spell_name.element"
+              }
+            ]
+          },
+          {
+            "tag": "wizard_adjective_form",
+            "title": "[WIZARD]'s [ADJECTIVE] [FORM]",
+            "min": 9,
+            "max": 9,
+            "template": [
+              {
+                "generate_outer": "miscellaneous.spell_name.wizard1"
+              },
+              {
+                "generate_outer": "miscellaneous.spell_name.wizard2"
+              },
+              {
+                "static": "'s"
+              },
+              {
+                "generate_outer": "miscellaneous.spell_name.adjective"
+              },
+              {
+                "generate_outer": "miscellaneous.spell_name.form"
+              }
+            ]
+          },
+          {
+            "tag": "wizard_adjective_element",
+            "title": "[WIZARD]'s [ADJECTIVE] [ELEMENT]",
+            "min": 10,
+            "max": 10,
+            "template": [
+              {
+                "generate_outer": "miscellaneous.spell_name.wizard1"
+              },
+              {
+                "generate_outer": "miscellaneous.spell_name.wizard2"
+              },
+              {
+                "static": "'s"
+              },
+              {
+                "generate_outer": "miscellaneous.spell_name.adjective"
+              },
+              {
+                "generate_outer": "miscellaneous.spell_name.element"
+              }
+            ]
+          },
+          {
+            "tag": "wizard_adjective_element",
+            "title": "[WIZARD]'s [FORM] of [ELEMENT]",
+            "min": 11,
+            "max": 12,
+            "template": [
+              {
+                "generate_outer": "miscellaneous.spell_name.wizard1"
+              },
+              {
+                "generate_outer": "miscellaneous.spell_name.wizard2"
+              },
+              {
+                "static": "'s"
+              },
+              {
+                "generate_outer": "miscellaneous.spell_name.form"
+              },
+              {
+                "static": "of"
+              },
+              {
+                "generate_outer": "miscellaneous.spell_name.element"
+              }
+            ]
+          },
+          {
+            "tag": "wizard_element_form",
+            "title": "[WIZARD]'s [ELEMENT] [FORM]",
+            "min": 12,
+            "max": 12,
+            "template": [
+              {
+                "generate_outer": "miscellaneous.spell_name.wizard1"
+              },
+              {
+                "generate_outer": "miscellaneous.spell_name.wizard2"
+              },
+              {
+                "static": "'s"
+              },
+              {
+                "generate_outer": "miscellaneous.spell_name.element"
+              },
+              {
+                "generate_outer": "miscellaneous.spell_name.form"
+              }
+            ]
+          }
+        ],
+        "dictionaries": [
+          {
+            "tag": "form",
+            "dice": "d100",
+            "variants": [
+              {
+                "tag": "armor",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "arrow",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "aura",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "bane",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "beast",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "blade",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "blast",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "blessing",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "blob",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "blood",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "bolt",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "bond",
+                "min": 12,
+                "max": 12
+              },
+              {
+                "tag": "boon",
+                "min": 13,
+                "max": 13
+              },
+              {
+                "tag": "brain",
+                "min": 14,
+                "max": 14
+              },
+              {
+                "tag": "burst",
+                "min": 15,
+                "max": 15
+              },
+              {
+                "tag": "call",
+                "min": 16,
+                "max": 16
+              },
+              {
+                "tag": "charm",
+                "min": 17,
+                "max": 17
+              },
+              {
+                "tag": "circle",
+                "min": 18,
+                "max": 18
+              },
+              {
+                "tag": "claw",
+                "min": 19,
+                "max": 19
+              },
+              {
+                "tag": "cloak",
+                "min": 20,
+                "max": 20
+              },
+              {
+                "tag": "cone",
+                "min": 21,
+                "max": 21
+              },
+              {
+                "tag": "crown",
+                "min": 22,
+                "max": 22
+              },
+              {
+                "tag": "cube",
+                "min": 23,
+                "max": 23
+              },
+              {
+                "tag": "cup",
+                "min": 24,
+                "max": 24
+              },
+              {
+                "tag": "curse",
+                "min": 25,
+                "max": 25
+              },
+              {
+                "tag": "dagger",
+                "min": 26,
+                "max": 26
+              },
+              {
+                "tag": "dart",
+                "min": 27,
+                "max": 27
+              },
+              {
+                "tag": "demon",
+                "min": 28,
+                "max": 28
+              },
+              {
+                "tag": "disturbance",
+                "min": 29,
+                "max": 29
+              },
+              {
+                "tag": "door",
+                "min": 30,
+                "max": 30
+              },
+              {
+                "tag": "eye",
+                "min": 31,
+                "max": 31
+              },
+              {
+                "tag": "eyes",
+                "min": 32,
+                "max": 32
+              },
+              {
+                "tag": "face",
+                "min": 33,
+                "max": 33
+              },
+              {
+                "tag": "fang",
+                "min": 34,
+                "max": 34
+              },
+              {
+                "tag": "feast",
+                "min": 35,
+                "max": 35
+              },
+              {
+                "tag": "finger",
+                "min": 36,
+                "max": 36
+              },
+              {
+                "tag": "fissure",
+                "min": 37,
+                "max": 37
+              },
+              {
+                "tag": "fist",
+                "min": 38,
+                "max": 38
+              },
+              {
+                "tag": "gate",
+                "min": 39,
+                "max": 39
+              },
+              {
+                "tag": "gaze",
+                "min": 40,
+                "max": 40
+              },
+              {
+                "tag": "glamor",
+                "min": 41,
+                "max": 41
+              },
+              {
+                "tag": "globe",
+                "min": 42,
+                "max": 42
+              },
+              {
+                "tag": "golem",
+                "min": 43,
+                "max": 43
+              },
+              {
+                "tag": "guard",
+                "min": 44,
+                "max": 44
+              },
+              {
+                "tag": "guide",
+                "min": 45,
+                "max": 45
+              },
+              {
+                "tag": "guise",
+                "min": 46,
+                "max": 46
+              },
+              {
+                "tag": "halo",
+                "min": 47,
+                "max": 47
+              },
+              {
+                "tag": "hammer",
+                "min": 48,
+                "max": 48
+              },
+              {
+                "tag": "hand",
+                "min": 49,
+                "max": 49
+              },
+              {
+                "tag": "heart",
+                "min": 50,
+                "max": 50
+              },
+              {
+                "tag": "helm",
+                "min": 51,
+                "max": 51
+              },
+              {
+                "tag": "horn",
+                "min": 52,
+                "max": 52
+              },
+              {
+                "tag": "lock",
+                "min": 53,
+                "max": 53
+              },
+              {
+                "tag": "mantle",
+                "min": 54,
+                "max": 54
+              },
+              {
+                "tag": "mark",
+                "min": 55,
+                "max": 55
+              },
+              {
+                "tag": "memory",
+                "min": 56,
+                "max": 56
+              },
+              {
+                "tag": "mind",
+                "min": 57,
+                "max": 57
+              },
+              {
+                "tag": "mouth",
+                "min": 58,
+                "max": 58
+              },
+              {
+                "tag": "noose",
+                "min": 59,
+                "max": 59
+              },
+              {
+                "tag": "oath",
+                "min": 60,
+                "max": 60
+              },
+              {
+                "tag": "oracle",
+                "min": 61,
+                "max": 61
+              },
+              {
+                "tag": "pattern",
+                "min": 62,
+                "max": 62
+              },
+              {
+                "tag": "pet",
+                "min": 63,
+                "max": 63
+              },
+              {
+                "tag": "pillar",
+                "min": 64,
+                "max": 64
+              },
+              {
+                "tag": "pocket",
+                "min": 65,
+                "max": 65
+              },
+              {
+                "tag": "portal",
+                "min": 66,
+                "max": 66
+              },
+              {
+                "tag": "pyramid",
+                "min": 67,
+                "max": 67
+              },
+              {
+                "tag": "ray",
+                "min": 68,
+                "max": 68
+              },
+              {
+                "tag": "rune",
+                "min": 69,
+                "max": 69
+              },
+              {
+                "tag": "scream",
+                "min": 70,
+                "max": 70
+              },
+              {
+                "tag": "seal",
+                "min": 71,
+                "max": 71
+              },
+              {
+                "tag": "sentinel",
+                "min": 72,
+                "max": 72
+              },
+              {
+                "tag": "servant",
+                "min": 73,
+                "max": 73
+              },
+              {
+                "tag": "shaft",
+                "min": 74,
+                "max": 74
+              },
+              {
+                "tag": "shield",
+                "min": 75,
+                "max": 75
+              },
+              {
+                "tag": "sigil",
+                "min": 76,
+                "max": 76
+              },
+              {
+                "tag": "sign",
+                "min": 77,
+                "max": 77
+              },
+              {
+                "tag": "song",
+                "min": 78,
+                "max": 78
+              },
+              {
+                "tag": "spear",
+                "min": 79,
+                "max": 79
+              },
+              {
+                "tag": "spell",
+                "min": 80,
+                "max": 80
+              },
+              {
+                "tag": "sphere",
+                "min": 81,
+                "max": 81
+              },
+              {
+                "tag": "spray",
+                "min": 82,
+                "max": 82
+              },
+              {
+                "tag": "staff",
+                "min": 83,
+                "max": 83
+              },
+              {
+                "tag": "storm",
+                "min": 84,
+                "max": 84
+              },
+              {
+                "tag": "strike",
+                "min": 85,
+                "max": 85
+              },
+              {
+                "tag": "sword",
+                "min": 86,
+                "max": 86
+              },
+              {
+                "tag": "tendril",
+                "min": 87,
+                "max": 87
+              },
+              {
+                "tag": "tongue",
+                "min": 88,
+                "max": 88
+              },
+              {
+                "tag": "tooth",
+                "min": 89,
+                "max": 89
+              },
+              {
+                "tag": "trap",
+                "min": 90,
+                "max": 90
+              },
+              {
+                "tag": "veil",
+                "min": 91,
+                "max": 91
+              },
+              {
+                "tag": "voice",
+                "min": 92,
+                "max": 92
+              },
+              {
+                "tag": "wall",
+                "min": 93,
+                "max": 93
+              },
+              {
+                "tag": "ward",
+                "min": 94,
+                "max": 94
+              },
+              {
+                "tag": "wave",
+                "min": 95,
+                "max": 95
+              },
+              {
+                "tag": "weapon",
+                "min": 96,
+                "max": 96
+              },
+              {
+                "tag": "weave",
+                "min": 97,
+                "max": 97
+              },
+              {
+                "tag": "whisper",
+                "min": 98,
+                "max": 98
+              },
+              {
+                "tag": "wings",
+                "min": 99,
+                "max": 99
+              },
+              {
+                "tag": "word",
+                "min": 100,
+                "max": 100
+              }
+            ]
+          },
+          {
+            "tag": "element",
+            "dice": "d100",
+            "variants": [
+              {
+                "tag": "acid",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "aether",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "air",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "anger",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "ash",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "avarice",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "balance",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "blight",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "blood",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "bone",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "bones",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "brimstone",
+                "min": 12,
+                "max": 12
+              },
+              {
+                "tag": "clay",
+                "min": 13,
+                "max": 13
+              },
+              {
+                "tag": "cloud",
+                "min": 14,
+                "max": 14
+              },
+              {
+                "tag": "copper",
+                "min": 15,
+                "max": 15
+              },
+              {
+                "tag": "cosmos",
+                "min": 16,
+                "max": 16
+              },
+              {
+                "tag": "dark",
+                "min": 17,
+                "max": 17
+              },
+              {
+                "tag": "death",
+                "min": 18,
+                "max": 18
+              },
+              {
+                "tag": "deceit",
+                "min": 19,
+                "max": 19
+              },
+              {
+                "tag": "despair",
+                "min": 20,
+                "max": 20
+              },
+              {
+                "tag": "destiny",
+                "min": 21,
+                "max": 21
+              },
+              {
+                "tag": "dimension",
+                "min": 22,
+                "max": 22
+              },
+              {
+                "tag": "doom",
+                "min": 23,
+                "max": 23
+              },
+              {
+                "tag": "dust",
+                "min": 24,
+                "max": 24
+              },
+              {
+                "tag": "earth",
+                "min": 25,
+                "max": 25
+              },
+              {
+                "tag": "ember",
+                "min": 26,
+                "max": 26
+              },
+              {
+                "tag": "energy",
+                "min": 27,
+                "max": 27
+              },
+              {
+                "tag": "envy",
+                "min": 28,
+                "max": 28
+              },
+              {
+                "tag": "fear",
+                "min": 29,
+                "max": 29
+              },
+              {
+                "tag": "fire",
+                "min": 30,
+                "max": 30
+              },
+              {
+                "tag": "fog",
+                "min": 31,
+                "max": 31
+              },
+              {
+                "tag": "force",
+                "min": 32,
+                "max": 32
+              },
+              {
+                "tag": "fury",
+                "min": 33,
+                "max": 33
+              },
+              {
+                "tag": "glory",
+                "min": 34,
+                "max": 34
+              },
+              {
+                "tag": "gluttony",
+                "min": 35,
+                "max": 35
+              },
+              {
+                "tag": "gold",
+                "min": 36,
+                "max": 36
+              },
+              {
+                "tag": "greed",
+                "min": 37,
+                "max": 37
+              },
+              {
+                "tag": "hate",
+                "min": 38,
+                "max": 38
+              },
+              {
+                "tag": "hatred",
+                "min": 39,
+                "max": 39
+              },
+              {
+                "tag": "health",
+                "min": 40,
+                "max": 40
+              },
+              {
+                "tag": "heat",
+                "min": 41,
+                "max": 41
+              },
+              {
+                "tag": "history",
+                "min": 42,
+                "max": 42
+              },
+              {
+                "tag": "hope",
+                "min": 43,
+                "max": 43
+              },
+              {
+                "tag": "ice",
+                "min": 44,
+                "max": 44
+              },
+              {
+                "tag": "iron",
+                "min": 45,
+                "max": 45
+              },
+              {
+                "tag": "justice",
+                "min": 46,
+                "max": 46
+              },
+              {
+                "tag": "knowledge",
+                "min": 47,
+                "max": 47
+              },
+              {
+                "tag": "lead",
+                "min": 48,
+                "max": 48
+              },
+              {
+                "tag": "lies",
+                "min": 49,
+                "max": 49
+              },
+              {
+                "tag": "life",
+                "min": 50,
+                "max": 50
+              },
+              {
+                "tag": "light",
+                "min": 51,
+                "max": 51
+              },
+              {
+                "tag": "lightning",
+                "min": 52,
+                "max": 52
+              },
+              {
+                "tag": "lore",
+                "min": 53,
+                "max": 53
+              },
+              {
+                "tag": "love",
+                "min": 54,
+                "max": 54
+              },
+              {
+                "tag": "lust",
+                "min": 55,
+                "max": 55
+              },
+              {
+                "tag": "metal",
+                "min": 56,
+                "max": 56
+              },
+              {
+                "tag": "might",
+                "min": 57,
+                "max": 57
+              },
+              {
+                "tag": "mist",
+                "min": 58,
+                "max": 58
+              },
+              {
+                "tag": "moon",
+                "min": 59,
+                "max": 59
+              },
+              {
+                "tag": "mud",
+                "min": 60,
+                "max": 60
+              },
+              {
+                "tag": "nature",
+                "min": 61,
+                "max": 61
+              },
+              {
+                "tag": "oil",
+                "min": 62,
+                "max": 62
+              },
+              {
+                "tag": "pain",
+                "min": 63,
+                "max": 63
+              },
+              {
+                "tag": "perception",
+                "min": 64,
+                "max": 64
+              },
+              {
+                "tag": "plane",
+                "min": 65,
+                "max": 65
+              },
+              {
+                "tag": "plant",
+                "min": 66,
+                "max": 66
+              },
+              {
+                "tag": "poison",
+                "min": 67,
+                "max": 67
+              },
+              {
+                "tag": "quicksilver",
+                "min": 68,
+                "max": 68
+              },
+              {
+                "tag": "revulsion",
+                "min": 69,
+                "max": 69
+              },
+              {
+                "tag": "rot",
+                "min": 70,
+                "max": 70
+              },
+              {
+                "tag": "salt",
+                "min": 71,
+                "max": 71
+              },
+              {
+                "tag": "shadow",
+                "min": 72,
+                "max": 72
+              },
+              {
+                "tag": "sight",
+                "min": 73,
+                "max": 73
+              },
+              {
+                "tag": "silver",
+                "min": 74,
+                "max": 74
+              },
+              {
+                "tag": "smoke",
+                "min": 75,
+                "max": 75
+              },
+              {
+                "tag": "soil",
+                "min": 76,
+                "max": 76
+              },
+              {
+                "tag": "soul",
+                "min": 77,
+                "max": 77
+              },
+              {
+                "tag": "souls",
+                "min": 78,
+                "max": 78
+              },
+              {
+                "tag": "sound",
+                "min": 79,
+                "max": 79
+              },
+              {
+                "tag": "spirit",
+                "min": 80,
+                "max": 80
+              },
+              {
+                "tag": "stars",
+                "min": 81,
+                "max": 81
+              },
+              {
+                "tag": "steam",
+                "min": 82,
+                "max": 82
+              },
+              {
+                "tag": "steel",
+                "min": 83,
+                "max": 83
+              },
+              {
+                "tag": "stone",
+                "min": 84,
+                "max": 84
+              },
+              {
+                "tag": "storm",
+                "min": 85,
+                "max": 85
+              },
+              {
+                "tag": "sun",
+                "min": 86,
+                "max": 86
+              },
+              {
+                "tag": "terror",
+                "min": 87,
+                "max": 87
+              },
+              {
+                "tag": "time",
+                "min": 88,
+                "max": 88
+              },
+              {
+                "tag": "treasure",
+                "min": 89,
+                "max": 89
+              },
+              {
+                "tag": "truth",
+                "min": 90,
+                "max": 90
+              },
+              {
+                "tag": "vanity",
+                "min": 91,
+                "max": 91
+              },
+              {
+                "tag": "venom",
+                "min": 92,
+                "max": 92
+              },
+              {
+                "tag": "vermin",
+                "min": 93,
+                "max": 93
+              },
+              {
+                "tag": "void",
+                "min": 94,
+                "max": 94
+              },
+              {
+                "tag": "water",
+                "min": 95,
+                "max": 95
+              },
+              {
+                "tag": "will",
+                "min": 96,
+                "max": 96
+              },
+              {
+                "tag": "wind",
+                "min": 97,
+                "max": 97
+              },
+              {
+                "tag": "wisdom",
+                "min": 98,
+                "max": 98
+              },
+              {
+                "tag": "wood",
+                "min": 99,
+                "max": 99
+              },
+              {
+                "tag": "youth",
+                "min": 100,
+                "max": 100
+              }
+            ]
           }
         ]
       }
