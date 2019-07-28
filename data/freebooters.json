@@ -13886,10 +13886,10 @@
             "max": 9,
             "template": [
               {
-                "generate_outer": "miscellaneous.spell_name.wizard1"
+                "generate_outer": "miscellaneous.spell_name.wizard_name_1"
               },
               {
-                "generate_outer": "miscellaneous.spell_name.wizard2"
+                "generate_outer": "miscellaneous.spell_name.wizard_name_2"
               },
               {
                 "static": "'s"
@@ -13909,10 +13909,10 @@
             "max": 10,
             "template": [
               {
-                "generate_outer": "miscellaneous.spell_name.wizard1"
+                "generate_outer": "miscellaneous.spell_name.wizard_name_1"
               },
               {
-                "generate_outer": "miscellaneous.spell_name.wizard2"
+                "generate_outer": "miscellaneous.spell_name.wizard_name_2"
               },
               {
                 "static": "'s"
@@ -13932,10 +13932,10 @@
             "max": 12,
             "template": [
               {
-                "generate_outer": "miscellaneous.spell_name.wizard1"
+                "generate_outer": "miscellaneous.spell_name.wizard_name_1"
               },
               {
-                "generate_outer": "miscellaneous.spell_name.wizard2"
+                "generate_outer": "miscellaneous.spell_name.wizard_name_2"
               },
               {
                 "static": "'s"
@@ -13958,10 +13958,10 @@
             "max": 12,
             "template": [
               {
-                "generate_outer": "miscellaneous.spell_name.wizard1"
+                "generate_outer": "miscellaneous.spell_name.wizard_name_1"
               },
               {
-                "generate_outer": "miscellaneous.spell_name.wizard2"
+                "generate_outer": "miscellaneous.spell_name.wizard_name_2"
               },
               {
                 "static": "'s"
@@ -14983,6 +14983,1530 @@
               },
               {
                 "tag": "youth",
+                "min": 100,
+                "max": 100
+              }
+            ]
+          },
+          {
+            "tag": "adjective",
+            "dice": "d100",
+            "variants": [
+              {
+                "tag": "all_knowing",
+                "title": "All-knowing",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "all_seeing",
+                "title": "All-seeing",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "arcane",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "befuddling",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "binding",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "black",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "blazing",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "blinding",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "bloody",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "bright",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "cacophonous",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "cerulean",
+                "min": 12,
+                "max": 12
+              },
+              {
+                "tag": "concealing",
+                "min": 13,
+                "max": 13
+              },
+              {
+                "tag": "confusing",
+                "min": 14,
+                "max": 14
+              },
+              {
+                "tag": "consuming",
+                "min": 15,
+                "max": 15
+              },
+              {
+                "tag": "crimson",
+                "min": 16,
+                "max": 16
+              },
+              {
+                "tag": "damnable",
+                "min": 17,
+                "max": 17
+              },
+              {
+                "tag": "dark",
+                "min": 18,
+                "max": 18
+              },
+              {
+                "tag": "deflecting",
+                "min": 19,
+                "max": 19
+              },
+              {
+                "tag": "delicate",
+                "min": 20,
+                "max": 20
+              },
+              {
+                "tag": "demonic",
+                "min": 21,
+                "max": 21
+              },
+              {
+                "tag": "devastating",
+                "min": 22,
+                "max": 22
+              },
+              {
+                "tag": "devilish",
+                "min": 23,
+                "max": 23
+              },
+              {
+                "tag": "diminishing",
+                "min": 24,
+                "max": 24
+              },
+              {
+                "tag": "draining",
+                "min": 25,
+                "max": 25
+              },
+              {
+                "tag": "eldritch",
+                "min": 26,
+                "max": 26
+              },
+              {
+                "tag": "empowering",
+                "min": 27,
+                "max": 27
+              },
+              {
+                "tag": "enlightening",
+                "min": 28,
+                "max": 28
+              },
+              {
+                "tag": "ensorcelling",
+                "min": 29,
+                "max": 29
+              },
+              {
+                "tag": "entangling",
+                "min": 30,
+                "max": 30
+              },
+              {
+                "tag": "enveloping",
+                "min": 31,
+                "max": 31
+              },
+              {
+                "tag": "erratic",
+                "min": 32,
+                "max": 32
+              },
+              {
+                "tag": "evil",
+                "min": 33,
+                "max": 33
+              },
+              {
+                "tag": "excruciating",
+                "min": 34,
+                "max": 34
+              },
+              {
+                "tag": "expanding",
+                "min": 35,
+                "max": 35
+              },
+              {
+                "tag": "extra_planar",
+                "title": "Extra-planar",
+                "min": 36,
+                "max": 36
+              },
+              {
+                "tag": "fearsome",
+                "min": 37,
+                "max": 37
+              },
+              {
+                "tag": "flaming",
+                "min": 38,
+                "max": 38
+              },
+              {
+                "tag": "floating",
+                "min": 39,
+                "max": 39
+              },
+              {
+                "tag": "freezing",
+                "min": 40,
+                "max": 40
+              },
+              {
+                "tag": "glittering",
+                "min": 41,
+                "max": 41
+              },
+              {
+                "tag": "gyrating",
+                "min": 42,
+                "max": 42
+              },
+              {
+                "tag": "helpful",
+                "min": 43,
+                "max": 43
+              },
+              {
+                "tag": "hindering",
+                "min": 44,
+                "max": 44
+              },
+              {
+                "tag": "icy",
+                "min": 45,
+                "max": 45
+              },
+              {
+                "tag": "illusory",
+                "min": 46,
+                "max": 46
+              },
+              {
+                "tag": "incredible",
+                "min": 47,
+                "max": 47
+              },
+              {
+                "tag": "inescapable",
+                "min": 48,
+                "max": 48
+              },
+              {
+                "tag": "ingenious",
+                "min": 49,
+                "max": 49
+              },
+              {
+                "tag": "instant",
+                "min": 50,
+                "max": 50
+              },
+              {
+                "tag": "invigorating",
+                "min": 51,
+                "max": 51
+              },
+              {
+                "tag": "invisible",
+                "min": 52,
+                "max": 52
+              },
+              {
+                "tag": "invulnerable",
+                "min": 53,
+                "max": 53
+              },
+              {
+                "tag": "liberating",
+                "min": 54,
+                "max": 54
+              },
+              {
+                "tag": "maddening",
+                "min": 55,
+                "max": 55
+              },
+              {
+                "tag": "magnificent",
+                "min": 56,
+                "max": 56
+              },
+              {
+                "tag": "many_colored",
+                "title": "Many-colored",
+                "min": 57,
+                "max": 57
+              },
+              {
+                "tag": "mighty",
+                "min": 58,
+                "max": 58
+              },
+              {
+                "tag": "most_excellent",
+                "min": 59,
+                "max": 59
+              },
+              {
+                "tag": "omnipotent",
+                "min": 60,
+                "max": 60
+              },
+              {
+                "tag": "oozing",
+                "min": 61,
+                "max": 61
+              },
+              {
+                "tag": "penultimate",
+                "min": 62,
+                "max": 62
+              },
+              {
+                "tag": "pestilential",
+                "min": 63,
+                "max": 63
+              },
+              {
+                "tag": "piercing",
+                "min": 64,
+                "max": 64
+              },
+              {
+                "tag": "poisonous",
+                "min": 65,
+                "max": 65
+              },
+              {
+                "tag": "prismatic",
+                "min": 66,
+                "max": 66
+              },
+              {
+                "tag": "raging",
+                "min": 67,
+                "max": 67
+              },
+              {
+                "tag": "rejuvenating",
+                "min": 68,
+                "max": 68
+              },
+              {
+                "tag": "restorative",
+                "min": 69,
+                "max": 69
+              },
+              {
+                "tag": "screaming",
+                "min": 70,
+                "max": 70
+              },
+              {
+                "tag": "sensitive",
+                "min": 71,
+                "max": 71
+              },
+              {
+                "tag": "shimmering",
+                "min": 72,
+                "max": 72
+              },
+              {
+                "tag": "shining",
+                "min": 73,
+                "max": 73
+              },
+              {
+                "tag": "silent",
+                "min": 74,
+                "max": 74
+              },
+              {
+                "tag": "sleeping",
+                "min": 75,
+                "max": 75
+              },
+              {
+                "tag": "slow",
+                "min": 76,
+                "max": 76
+              },
+              {
+                "tag": "smoking",
+                "min": 77,
+                "max": 77
+              },
+              {
+                "tag": "sorcerers",
+                "title": "Sorcerer's",
+                "min": 78,
+                "max": 78
+              },
+              {
+                "tag": "strange",
+                "min": 79,
+                "max": 79
+              },
+              {
+                "tag": "stupefying",
+                "min": 80,
+                "max": 80
+              },
+              {
+                "tag": "terrible",
+                "min": 81,
+                "max": 81
+              },
+              {
+                "tag": "thirsty",
+                "min": 82,
+                "max": 82
+              },
+              {
+                "tag": "thundering",
+                "min": 83,
+                "max": 83
+              },
+              {
+                "tag": "trans_dimensional",
+                "title": "Trans-dimensional",
+                "min": 84,
+                "max": 84
+              },
+              {
+                "tag": "transmuting",
+                "min": 85,
+                "max": 85
+              },
+              {
+                "tag": "ultimate",
+                "min": 86,
+                "max": 86
+              },
+              {
+                "tag": "uncontrollable",
+                "min": 87,
+                "max": 87
+              },
+              {
+                "tag": "unseen",
+                "min": 88,
+                "max": 88
+              },
+              {
+                "tag": "unstoppable",
+                "min": 89,
+                "max": 89
+              },
+              {
+                "tag": "untiring",
+                "min": 90,
+                "max": 90
+              },
+              {
+                "tag": "vengeful",
+                "min": 91,
+                "max": 91
+              },
+              {
+                "tag": "vexing",
+                "min": 92,
+                "max": 92
+              },
+              {
+                "tag": "violent",
+                "min": 93,
+                "max": 93
+              },
+              {
+                "tag": "violet",
+                "min": 94,
+                "max": 94
+              },
+              {
+                "tag": "viridian",
+                "min": 95,
+                "max": 95
+              },
+              {
+                "tag": "voracious",
+                "min": 96,
+                "max": 96
+              },
+              {
+                "tag": "weakening",
+                "min": 97,
+                "max": 97
+              },
+              {
+                "tag": "white",
+                "min": 98,
+                "max": 98
+              },
+              {
+                "tag": "wondrous",
+                "min": 99,
+                "max": 99
+              },
+              {
+                "tag": "yellow",
+                "min": 100,
+                "max": 100
+              }
+            ]
+          },
+          {
+            "tag": "wizard_name_1",
+            "dice": "d100",
+            "variants": [
+              {
+                "tag": "a",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "ab",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "aga",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "alha",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "appol",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "apu",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "arne",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "asmo",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "baha",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "bal",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "barba",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "bol",
+                "min": 12,
+                "max": 12
+              },
+              {
+                "tag": "by",
+                "min": 13,
+                "max": 13
+              },
+              {
+                "tag": "can",
+                "min": 14,
+                "max": 14
+              },
+              {
+                "tag": "cinni",
+                "min": 15,
+                "max": 15
+              },
+              {
+                "tag": "cir",
+                "min": 16,
+                "max": 16
+              },
+              {
+                "tag": "cyn",
+                "min": 17,
+                "max": 17
+              },
+              {
+                "tag": "cyto",
+                "min": 18,
+                "max": 18
+              },
+              {
+                "tag": "dar",
+                "min": 19,
+                "max": 19
+              },
+              {
+                "tag": "darg",
+                "min": 20,
+                "max": 20
+              },
+              {
+                "tag": "de",
+                "min": 21,
+                "max": 21
+              },
+              {
+                "tag": "des",
+                "min": 22,
+                "max": 22
+              },
+              {
+                "tag": "dra",
+                "min": 23,
+                "max": 23
+              },
+              {
+                "tag": "dul",
+                "min": 24,
+                "max": 24
+              },
+              {
+                "tag": "elez",
+                "min": 25,
+                "max": 25
+              },
+              {
+                "tag": "ely",
+                "min": 26,
+                "max": 26
+              },
+              {
+                "tag": "ez",
+                "min": 27,
+                "max": 27
+              },
+              {
+                "tag": "fal",
+                "min": 28,
+                "max": 28
+              },
+              {
+                "tag": "faral",
+                "min": 29,
+                "max": 29
+              },
+              {
+                "tag": "flo",
+                "min": 30,
+                "max": 30
+              },
+              {
+                "tag": "fol",
+                "min": 31,
+                "max": 31
+              },
+              {
+                "tag": "gaili",
+                "min": 32,
+                "max": 32
+              },
+              {
+                "tag": "garg",
+                "min": 33,
+                "max": 33
+              },
+              {
+                "tag": "gast",
+                "min": 34,
+                "max": 34
+              },
+              {
+                "tag": "gil",
+                "min": 35,
+                "max": 35
+              },
+              {
+                "tag": "gy",
+                "min": 36,
+                "max": 36
+              },
+              {
+                "tag": "haz",
+                "min": 37,
+                "max": 37
+              },
+              {
+                "tag": "heca",
+                "min": 38,
+                "max": 38
+              },
+              {
+                "tag": "her",
+                "min": 39,
+                "max": 39
+              },
+              {
+                "tag": "hog",
+                "min": 40,
+                "max": 40
+              },
+              {
+                "tag": "hur",
+                "min": 41,
+                "max": 41
+              },
+              {
+                "tag": "i",
+                "min": 42,
+                "max": 42
+              },
+              {
+                "tag": "ik",
+                "min": 43,
+                "max": 43
+              },
+              {
+                "tag": "ilde",
+                "min": 44,
+                "max": 44
+              },
+              {
+                "tag": "in",
+                "min": 45,
+                "max": 45
+              },
+              {
+                "tag": "jas",
+                "min": 46,
+                "max": 46
+              },
+              {
+                "tag": "jir",
+                "min": 47,
+                "max": 47
+              },
+              {
+                "tag": "ju",
+                "min": 48,
+                "max": 48
+              },
+              {
+                "tag": "krak",
+                "min": 49,
+                "max": 49
+              },
+              {
+                "tag": "kul",
+                "min": 50,
+                "max": 50
+              },
+              {
+                "tag": "laf",
+                "min": 51,
+                "max": 51
+              },
+              {
+                "tag": "long",
+                "min": 52,
+                "max": 52
+              },
+              {
+                "tag": "ma",
+                "min": 53,
+                "max": 53
+              },
+              {
+                "tag": "mer",
+                "min": 54,
+                "max": 54
+              },
+              {
+                "tag": "mercu",
+                "min": 55,
+                "max": 55
+              },
+              {
+                "tag": "mor",
+                "min": 56,
+                "max": 56
+              },
+              {
+                "tag": "mune",
+                "min": 57,
+                "max": 57
+              },
+              {
+                "tag": "munno",
+                "min": 58,
+                "max": 58
+              },
+              {
+                "tag": "murz",
+                "min": 59,
+                "max": 59
+              },
+              {
+                "tag": "naf",
+                "min": 60,
+                "max": 60
+              },
+              {
+                "tag": "o",
+                "min": 61,
+                "max": 61
+              },
+              {
+                "tag": "osh",
+                "min": 62,
+                "max": 62
+              },
+              {
+                "tag": "pande",
+                "min": 63,
+                "max": 63
+              },
+              {
+                "tag": "pander",
+                "min": 64,
+                "max": 64
+              },
+              {
+                "tag": "par",
+                "min": 65,
+                "max": 65
+              },
+              {
+                "tag": "per",
+                "min": 66,
+                "max": 66
+              },
+              {
+                "tag": "quel",
+                "min": 67,
+                "max": 67
+              },
+              {
+                "tag": "ra",
+                "min": 68,
+                "max": 68
+              },
+              {
+                "tag": "ragga",
+                "min": 69,
+                "max": 69
+              },
+              {
+                "tag": "rhi",
+                "min": 70,
+                "max": 70
+              },
+              {
+                "tag": "satan",
+                "min": 71,
+                "max": 71
+              },
+              {
+                "tag": "satur",
+                "min": 72,
+                "max": 72
+              },
+              {
+                "tag": "semi",
+                "min": 73,
+                "max": 73
+              },
+              {
+                "tag": "sera",
+                "min": 74,
+                "max": 74
+              },
+              {
+                "tag": "she",
+                "min": 75,
+                "max": 75
+              },
+              {
+                "tag": "shrue",
+                "min": 76,
+                "max": 76
+              },
+              {
+                "tag": "sloo",
+                "min": 77,
+                "max": 77
+              },
+              {
+                "tag": "sol",
+                "min": 78,
+                "max": 78
+              },
+              {
+                "tag": "t'",
+                "min": 79,
+                "max": 79
+              },
+              {
+                "tag": "tcha",
+                "min": 80,
+                "max": 80
+              },
+              {
+                "tag": "tol",
+                "min": 81,
+                "max": 81
+              },
+              {
+                "tag": "tub",
+                "min": 82,
+                "max": 82
+              },
+              {
+                "tag": "tur",
+                "min": 83,
+                "max": 83
+              },
+              {
+                "tag": "u",
+                "min": 84,
+                "max": 84
+              },
+              {
+                "tag": "vag",
+                "min": 85,
+                "max": 85
+              },
+              {
+                "tag": "val",
+                "min": 86,
+                "max": 86
+              },
+              {
+                "tag": "vance",
+                "min": 87,
+                "max": 87
+              },
+              {
+                "tag": "ver",
+                "min": 88,
+                "max": 88
+              },
+              {
+                "tag": "vish",
+                "min": 89,
+                "max": 89
+              },
+              {
+                "tag": "wa",
+                "min": 90,
+                "max": 90
+              },
+              {
+                "tag": "win",
+                "min": 91,
+                "max": 91
+              },
+              {
+                "tag": "xa",
+                "min": 92,
+                "max": 92
+              },
+              {
+                "tag": "yu",
+                "min": 93,
+                "max": 93
+              },
+              {
+                "tag": "za",
+                "min": 94,
+                "max": 94
+              },
+              {
+                "tag": "zal",
+                "min": 95,
+                "max": 95
+              },
+              {
+                "tag": "zan",
+                "min": 96,
+                "max": 96
+              },
+              {
+                "tag": "zili",
+                "min": 97,
+                "max": 97
+              },
+              {
+                "tag": "zim",
+                "min": 98,
+                "max": 98
+              },
+              {
+                "tag": "zuur",
+                "min": 99,
+                "max": 99
+              },
+              {
+                "tag": "zza",
+                "min": 100,
+                "max": 100
+              }
+            ]
+          },
+          {
+            "tag": "wizard_name_2",
+            "dice": "d100",
+            "variants": [
+              {
+                "tag": "ak",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "alto",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "ana",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "anti",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "aris",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "ark",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "asta",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "balia",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "bus",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "by",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "cas",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "ce",
+                "min": 12,
+                "max": 12
+              },
+              {
+                "tag": "derol",
+                "min": 13,
+                "max": 13
+              },
+              {
+                "tag": "deus",
+                "min": 14,
+                "max": 14
+              },
+              {
+                "tag": "din",
+                "min": 15,
+                "max": 15
+              },
+              {
+                "tag": "dok",
+                "min": 16,
+                "max": 16
+              },
+              {
+                "tag": "dor",
+                "min": 17,
+                "max": 17
+              },
+              {
+                "tag": "dred",
+                "min": 18,
+                "max": 18
+              },
+              {
+                "tag": "driar",
+                "min": 19,
+                "max": 19
+              },
+              {
+                "tag": "dula",
+                "min": 20,
+                "max": 20
+              },
+              {
+                "tag": "dun",
+                "min": 21,
+                "max": 21
+              },
+              {
+                "tag": "dustin",
+                "min": 22,
+                "max": 22
+              },
+              {
+                "tag": "er",
+                "min": 23,
+                "max": 23
+              },
+              {
+                "tag": "fant",
+                "min": 24,
+                "max": 24
+              },
+              {
+                "tag": "fia",
+                "min": 25,
+                "max": 25
+              },
+              {
+                "tag": "fonse",
+                "min": 26,
+                "max": 26
+              },
+              {
+                "tag": "gad",
+                "min": 27,
+                "max": 27
+              },
+              {
+                "tag": "gax",
+                "min": 28,
+                "max": 28
+              },
+              {
+                "tag": "glana",
+                "min": 29,
+                "max": 29
+              },
+              {
+                "tag": "goria",
+                "min": 30,
+                "max": 30
+              },
+              {
+                "tag": "goth",
+                "min": 31,
+                "max": 31
+              },
+              {
+                "tag": "heer",
+                "min": 32,
+                "max": 32
+              },
+              {
+                "tag": "houlik",
+                "min": 33,
+                "max": 33
+              },
+              {
+                "tag": "ia",
+                "min": 34,
+                "max": 34
+              },
+              {
+                "tag": "iala",
+                "min": 35,
+                "max": 35
+              },
+              {
+                "tag": "iana",
+                "min": 36,
+                "max": 36
+              },
+              {
+                "tag": "ingar",
+                "min": 37,
+                "max": 37
+              },
+              {
+                "tag": "ista",
+                "min": 38,
+                "max": 38
+              },
+              {
+                "tag": "jan",
+                "min": 39,
+                "max": 39
+              },
+              {
+                "tag": "jobulon",
+                "min": 40,
+                "max": 40
+              },
+              {
+                "tag": "kan",
+                "min": 41,
+                "max": 41
+              },
+              {
+                "tag": "kang",
+                "min": 42,
+                "max": 42
+              },
+              {
+                "tag": "konn",
+                "min": 43,
+                "max": 43
+              },
+              {
+                "tag": "lah",
+                "min": 44,
+                "max": 44
+              },
+              {
+                "tag": "leius",
+                "min": 45,
+                "max": 45
+              },
+              {
+                "tag": "leo",
+                "min": 46,
+                "max": 46
+              },
+              {
+                "tag": "leou",
+                "min": 47,
+                "max": 47
+              },
+              {
+                "tag": "lin",
+                "min": 48,
+                "max": 48
+              },
+              {
+                "tag": "lonia",
+                "min": 49,
+                "max": 49
+              },
+              {
+                "tag": "lonius",
+                "min": 50,
+                "max": 50
+              },
+              {
+                "tag": "loo",
+                "min": 51,
+                "max": 51
+              },
+              {
+                "tag": "lume",
+                "min": 52,
+                "max": 52
+              },
+              {
+                "tag": "ma",
+                "min": 53,
+                "max": 53
+              },
+              {
+                "tag": "mas",
+                "min": 54,
+                "max": 54
+              },
+              {
+                "tag": "mast",
+                "min": 55,
+                "max": 55
+              },
+              {
+                "tag": "mia",
+                "min": 56,
+                "max": 56
+              },
+              {
+                "tag": "miel",
+                "min": 57,
+                "max": 57
+              },
+              {
+                "tag": "motto",
+                "min": 58,
+                "max": 58
+              },
+              {
+                "tag": "moulian",
+                "min": 59,
+                "max": 59
+              },
+              {
+                "tag": "mut",
+                "min": 60,
+                "max": 60
+              },
+              {
+                "tag": "nak",
+                "min": 61,
+                "max": 61
+              },
+              {
+                "tag": "nia",
+                "min": 62,
+                "max": 62
+              },
+              {
+                "tag": "nish",
+                "min": 63,
+                "max": 63
+              },
+              {
+                "tag": "nob",
+                "min": 64,
+                "max": 64
+              },
+              {
+                "tag": "o",
+                "min": 65,
+                "max": 65
+              },
+              {
+                "tag": "ol",
+                "min": 66,
+                "max": 66
+              },
+              {
+                "tag": "ool",
+                "min": 67,
+                "max": 67
+              },
+              {
+                "tag": "pa",
+                "min": 68,
+                "max": 68
+              },
+              {
+                "tag": "pheus",
+                "min": 69,
+                "max": 69
+              },
+              {
+                "tag": "phim",
+                "min": 70,
+                "max": 70
+              },
+              {
+                "tag": "por",
+                "min": 71,
+                "max": 71
+              },
+              {
+                "tag": "quint",
+                "min": 72,
+                "max": 72
+              },
+              {
+                "tag": "ramis",
+                "min": 73,
+                "max": 73
+              },
+              {
+                "tag": "rezzin",
+                "min": 74,
+                "max": 74
+              },
+              {
+                "tag": "ro",
+                "min": 75,
+                "max": 75
+              },
+              {
+                "tag": "rrak",
+                "min": 76,
+                "max": 76
+              },
+              {
+                "tag": "ry",
+                "min": 77,
+                "max": 77
+              },
+              {
+                "tag": "sira",
+                "min": 78,
+                "max": 78
+              },
+              {
+                "tag": "sta",
+                "min": 79,
+                "max": 79
+              },
+              {
+                "tag": "te",
+                "min": 80,
+                "max": 80
+              },
+              {
+                "tag": "teria",
+                "min": 81,
+                "max": 81
+              },
+              {
+                "tag": "thakk",
+                "min": 82,
+                "max": 82
+              },
+              {
+                "tag": "thalon",
+                "min": 83,
+                "max": 83
+              },
+              {
+                "tag": "tine",
+                "min": 84,
+                "max": 84
+              },
+              {
+                "tag": "toomb",
+                "min": 85,
+                "max": 85
+              },
+              {
+                "tag": "torr",
+                "min": 86,
+                "max": 86
+              },
+              {
+                "tag": "troya",
+                "min": 87,
+                "max": 87
+              },
+              {
+                "tag": "tur",
+                "min": 88,
+                "max": 88
+              },
+              {
+                "tag": "tuva",
+                "min": 89,
+                "max": 89
+              },
+              {
+                "tag": "u",
+                "min": 90,
+                "max": 90
+              },
+              {
+                "tag": "valva",
+                "min": 91,
+                "max": 91
+              },
+              {
+                "tag": "vance",
+                "min": 92,
+                "max": 92
+              },
+              {
+                "tag": "vilk",
+                "min": 93,
+                "max": 93
+              },
+              {
+                "tag": "wink",
+                "min": 94,
+                "max": 94
+              },
+              {
+                "tag": "xa",
+                "min": 95,
+                "max": 95
+              },
+              {
+                "tag": "yop",
+                "min": 96,
+                "max": 96
+              },
+              {
+                "tag": "zant",
+                "min": 97,
+                "max": 97
+              },
+              {
+                "tag": "zark",
+                "min": 98,
+                "max": 98
+              },
+              {
+                "tag": "zirian",
+                "min": 99,
+                "max": 99
+              },
+              {
+                "tag": "zred",
                 "min": 100,
                 "max": 100
               }
