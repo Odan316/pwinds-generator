@@ -634,7 +634,8 @@
             "variants": [
               {
                 "tag": "name",
-                "title": "John Doe",
+                "title": "[Name]",
+                "description": "Choose a name appropriate to your setting",
                 "min": 1,
                 "max": 2
               },
@@ -1522,7 +1523,8 @@
             "variants": [
               {
                 "tag": "name",
-                "title": "John Doe",
+                "title": "[Name]",
+                "description": "Choose a name appropriate to your setting",
                 "min": 1,
                 "max": 2
               },
