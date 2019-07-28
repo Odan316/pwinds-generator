@@ -1742,7 +1742,14 @@
               "character.class.magic_user.heritage",
               "character.class.magic_user.alignment",
               "character.class.magic_user.appearance",
-              "character.class.magic_user.starting_gear"
+              "character.class.magic_user.starting_gear",
+              {
+                "tag": "spells",
+                "additional": [
+                  "miscellaneous.spell_name",
+                  "miscellaneous.spell_name"
+                ]
+              }
             ],
             "dictionaries": [
               {
@@ -2842,7 +2849,8 @@
                 "generate_outer": "dungeon.name_noun"
               },
               {
-                "static": "'s"
+                "static": "'s",
+                "concatenate": true
               },
               {
                 "generate_outer": "dungeon.name_place"
@@ -13889,10 +13897,12 @@
                 "generate_outer": "miscellaneous.spell_name.wizard_name_1"
               },
               {
-                "generate_outer": "miscellaneous.spell_name.wizard_name_2"
+                "generate_outer": "miscellaneous.spell_name.wizard_name_2",
+                "concatenate": true
               },
               {
-                "static": "'s"
+                "static": "'s",
+                "concatenate": true
               },
               {
                 "generate_outer": "miscellaneous.spell_name.adjective"
@@ -13912,10 +13922,12 @@
                 "generate_outer": "miscellaneous.spell_name.wizard_name_1"
               },
               {
-                "generate_outer": "miscellaneous.spell_name.wizard_name_2"
+                "generate_outer": "miscellaneous.spell_name.wizard_name_2",
+                "concatenate": true
               },
               {
-                "static": "'s"
+                "static": "'s",
+                "concatenate": true
               },
               {
                 "generate_outer": "miscellaneous.spell_name.adjective"
@@ -13935,10 +13947,12 @@
                 "generate_outer": "miscellaneous.spell_name.wizard_name_1"
               },
               {
-                "generate_outer": "miscellaneous.spell_name.wizard_name_2"
+                "generate_outer": "miscellaneous.spell_name.wizard_name_2",
+                "concatenate": true
               },
               {
-                "static": "'s"
+                "static": "'s",
+                "concatenate": true
               },
               {
                 "generate_outer": "miscellaneous.spell_name.form"
@@ -13961,10 +13975,12 @@
                 "generate_outer": "miscellaneous.spell_name.wizard_name_1"
               },
               {
-                "generate_outer": "miscellaneous.spell_name.wizard_name_2"
+                "generate_outer": "miscellaneous.spell_name.wizard_name_2",
+                "concatenate": true
               },
               {
-                "static": "'s"
+                "static": "'s",
+                "concatenate": true
               },
               {
                 "generate_outer": "miscellaneous.spell_name.element"

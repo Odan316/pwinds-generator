@@ -116,6 +116,14 @@ define([
         let _template = null;
 
         /**
+         * Whether to concatenate entity to previous
+         *
+         * @type {boolean}
+         * @private
+         */
+        let _concatenate = false;
+
+        /**
          * List of additional entities, calculator generates every entity from list. Each element is path to entity in tree.
          *
          * @type {VariantEntity[]|StorageLink[]|null}
@@ -166,6 +174,7 @@ define([
          * @param data.additional
          * @param data.additionalTitle
          * @param data.template
+         * @param data.concatenate
          * @param data.repeat
          * @param data.vars
          */
@@ -238,6 +247,9 @@ define([
                     innerEntity.load(value);
                     _template.push(innerEntity);
                 });
+            }
+            if ("concatenate" in data) {
+                _concatenate = data.concatenate;
             }
             if ("repeat" in data) {
                 _repeat = _.toString(data.repeat);
@@ -557,6 +569,15 @@ define([
          */
         this.getTemplate = function () {
             return _template;
+        };
+
+        /**
+         * Forces use of user-provided modifier
+         *
+         * @returns {Boolean}
+         */
+        this.toConcatenate = function () {
+            return _concatenate;
         };
 
         /**

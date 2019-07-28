@@ -102,14 +102,24 @@ define([
 
             } else if (entity.hasTemplate()) {
                 // Generate entity by template
-                var generatedEntityTag = "";
-                _.forEach(entity.getTemplate(), function (templatePartEntity) {
+                let generatedEntityTag = "";
+                _.forEach(entity.getTemplate(),
+                    /**
+                     * @param templatePartEntity {Entity}
+                     */
+                    function (templatePartEntity) {
                     let generatedEntityPart = generateEntity(templatePartEntity);
-                    let glue = generatedEntityTag !== "" || generatedEntityPart.variant.title.charAt(0) !== '\'' ? " " : "";
                     let partTitle = generatedEntityPart.variant.title;
                     if (generatedEntityPart.variant.variant !== null) {
                         partTitle = generatedEntityPart.variant.variant.title;
                     }
+
+                    // Choose how to add string - as separate word or as part
+                    let glue = generatedEntityTag === "" || templatePartEntity.toConcatenate() ? "" : " ";
+                    if(templatePartEntity.toConcatenate()){
+                        partTitle = _.lowerFirst(partTitle);
+                    }
+
                     generatedEntityTag += (glue + partTitle);
                 });
 

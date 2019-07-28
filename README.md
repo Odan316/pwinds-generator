@@ -75,6 +75,8 @@ File should be written in JSON format and placed under /data directory
                 "generate_outer": "dungeon.name_place"
               }
         ],
+        // If set and entity is part of template - concatenate entity as part of previous word
+        "concatenate": true
         // If set, entity will be generated multiple times, dice formula or integer
         "repeat": "2d3",
         // Array of varialbles, currently can be used only to create dynamic paths
