@@ -16229,10 +16229,9 @@
           },
           {
             "tag": "retainer",
-            "title": "Retainer/sidekick (roll NPC)",
+            "title": "Retainer/sidekick (roll NPC) - not realized yed",
             "min": 78,
-            "max": 78,
-            "generate_outer": "npc"
+            "max": 78
           },
           {
             "tag": "rope_n_hook",
