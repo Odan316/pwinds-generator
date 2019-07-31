@@ -15054,6 +15054,215 @@
         ]
       },
       {
+        "tag": "activity",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "laying_trap",
+            "title": "Laying trap/ambush",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "fighting_at_war",
+            "title": "Fighting/at war",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "prowling_on_patrol",
+            "title": "Prowling/on patrol",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "hunting",
+            "title": "Hunting/foraging",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "eating",
+            "title": "Eating/resting",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "arguing",
+            "title": "Arguing/infighting",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "traveling",
+            "title": "Traveling/exploring",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "trading",
+            "title": "Trading/negotiating",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "fleeing",
+            "title": "Fleeing/running away",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "building",
+            "title": "Building/excavating",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "sleeping",
+            "title": "Sleeping/unconscious",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "injury",
+            "title": "Nursing injury/dying",
+            "min": 12,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "adjective",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "slick",
+            "title": "Slick/slimy",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "rough",
+            "title": "Rough/hard/sharp",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "smooth",
+            "title": "Smooth/soft/dull",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "corroded",
+            "title": "Corroded/rusty",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "rotten",
+            "title": "Rotten/decaying",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "broken",
+            "title": "Broken/brittle",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "stinking",
+            "title": "Stinking/smelly",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "weak",
+            "title": "Weak/thin/drained",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "strong",
+            "title": "Strong/fat/full",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "pale",
+            "title": "Pale/poor/shallow",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "dark",
+            "title": "Dark/rich/deep",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "colorful",
+            "min": 12,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "age",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "unborn",
+            "title": "Unborn/nascent",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "being_born",
+            "title": "Being born/budding",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "newborn",
+            "title": "newborn/blossoming",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "young",
+            "title": "Young/green",
+            "min": 4,
+            "max": 6
+          },
+          {
+            "tag": "mature",
+            "title": "Mature/ripe",
+            "min": 7,
+            "max": 9
+          },
+          {
+            "tag": "old",
+            "title": "Old/going soft",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "dead",
+            "title": "Dead/withered/ancient",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "dust",
+            "title": "Dust/pre-historic",
+            "min": 12,
+            "max": 12
+          }
+        ]
+      },
+      {
         "tag": "aspect",
         "dice": "d12",
         "variants": [
@@ -15210,9 +15419,142 @@
         ]
       },
       {
+        "tag": "condition",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "being_born",
+            "title": "Being built/born",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "intact",
+            "title": "Intact/healthy",
+            "min": 2,
+            "max": 4
+          },
+          {
+            "tag": "active",
+            "title": "Active/alert",
+            "min": 5,
+            "max": 7
+          },
+          {
+            "tag": "weathered",
+            "title": "Weathered/tired/weak",
+            "min": 8,
+            "max": 9
+          },
+          {
+            "tag": "vacant",
+            "title": "Vacant/lost",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "damaged",
+            "title": "Damaged/hurt/dying",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "broken",
+            "title": "Broken/missing/dead",
+            "min": 12,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "design",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "blank",
+            "title": "Blank/plain",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "floral",
+            "title": "Floral/organic",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "circular",
+            "title": "Circular/curvilinear",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "geometric",
+            "title": "Geometric/triangular",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "asymmetrical",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "square",
+            "title": "Square/rectilinear",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "meandering",
+            "title": "Meandering/labyrinthine",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "oceanic",
+            "title": "Oceanic/wavelike",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "astrological",
+            "title": "Astrological/cosmic",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "balanced",
+            "title": "Balanced/harmonious",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "erratic",
+            "title": "Erratic/chaotic/random",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "roll_twice",
+            "title": "Roll 1d10+1 twice",
+            "min": 12,
+            "max": 12,
+            "additional": [
+              [
+                "details.design",
+                "d10+1"
+              ],
+              [
+                "details.design",
+                "d10+1"
+              ]
+            ]
+          }
+        ]
+      },
+      {
         "tag": "element",
-        "min": 1,
-        "max": 12,
         "dice": "d12",
         "variants": [
           {
@@ -15507,6 +15849,64 @@
         ]
       },
       {
+        "tag": "orientation",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "down_earthward",
+            "title": "Down/earthward",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "tag": "north",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "northeast",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "east",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "southeast",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "south",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "southwest",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "west",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "northwest",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "up_skyward",
+            "title": "Up/skyward",
+            "min": 11,
+            "max": 12
+          }
+        ]
+      },
+      {
         "tag": "terrain",
         "dice": "d12",
         "variants": [
@@ -15563,6 +15963,40 @@
               ],
               "details.oddity"
             ]
+          }
+        ]
+      },
+      {
+        "tag": "visibility",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "buried",
+            "title": "Buried/hidden/invisible",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "tag": "obscured",
+            "title": "Obscured//overgrown",
+            "min": 3,
+            "max": 6
+          },
+          {
+            "tag": "obvious",
+            "title": "Obvious/in plain sight",
+            "min": 7,
+            "max": 9
+          },
+          {
+            "tag": "visible_at_near_distance",
+            "min": 10,
+            "max": 11
+          },
+          {
+            "tag": "visible_at_far_distance",
+            "min": 12,
+            "max": 12
           }
         ]
       },

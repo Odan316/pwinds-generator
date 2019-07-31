@@ -6651,8 +6651,8 @@
             "max": 3
           },
           {
-            "tag": "corroded_rusty",
-            "title": "Paralyze/petrify",
+            "tag": "corroded",
+            "title": "Corroded/rusty",
             "min": 4,
             "max": 4
           },
