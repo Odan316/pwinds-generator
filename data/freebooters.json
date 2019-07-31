@@ -4770,6 +4770,178 @@
     ]
   },
   {
+    "tag": "incident",
+    "description": "It is collection of entities, you should generate something from sub-entities",
+    "dictionaries": [
+      {
+        "tag": "mishap",
+        "description": "An inconvenience or complication that might deplete resources",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "accident",
+            "description": "Examples: minor injury, sprain, concussion",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "navigational",
+            "description": "Examples: time lost, disorientation",
+            "min": 2,
+            "max": 3
+          },
+          {
+            "tag": "supplies",
+            "description": "Examples: spoiled rations, tainted water",
+            "min": 4,
+            "max": 5
+          },
+          {
+            "tag": "equipment",
+            "description": "Examples: breakage (boot, strap, <i>fragile</i> item",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "transportation",
+            "description": "Examples: problem with mount/pack animal",
+            "min": 7,
+            "max": 8
+          },
+          {
+            "tag": "animal",
+            "description": "Examples: scavengers, pests, hangers-on",
+            "min": 9,
+            "max": 10
+          },
+          {
+            "tag": "interpersonal",
+            "description": "Examples: misunderstanding, argument",
+            "min": 11,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "obstacle",
+        "description": "An obstruction to forward progress that must be overcome or circumnavigated",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "ODDITY",
+            "min": 1,
+            "max": 1,
+            "generate_outer": "details.oddity"
+          },
+          {
+            "tag": "vertical_barrier",
+            "description": "Examples: cliff face, wall, dropoff",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "deep_water",
+            "description": "Examples: river, lake",
+            "min": 3,
+            "max": 5
+          },
+          {
+            "tag": "gap",
+            "title": "Gap/void",
+            "description": "Examples: gorge, ravine, chasm, crevasse",
+            "min": 6,
+            "max": 7
+          },
+          {
+            "tag": "debris",
+            "description": "Examples: rockfall, deadfall",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "animal",
+            "description": "Examples: large herd travelling/grazing/resitng",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "barren_terrain",
+            "description": "Examples: desert, swampland, volcanic waste",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "impediment",
+            "description": "Examples: swampland, mud flats, deep snow",
+            "min": 11,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "hazard",
+        "description": "A potentially harmful problem that must be dealt with directly or avoided",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "ODDITY",
+            "min": 1,
+            "max": 1,
+            "generate_outer": "details.oddity"
+          },
+          {
+            "tag": "concealed",
+            "description": "Examples: snare trap, pit trap, ambush",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "sudden",
+            "description": "Examples: sinkhole, quicksand, mudslide",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "navigational",
+            "description": "Examples: disoriented, lost",
+            "min": 4,
+            "max": 5
+          },
+          {
+            "tag": "environmental",
+            "description": "Examples: wildfire, swamp gas, avalanche",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "animal",
+            "description": "Examples: stampede, mass migration",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "precarious",
+            "description": "Examples: ledge, precipice",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "meteorological",
+            "description": "Examples: rainstorm, sandstorm, blizzard",
+            "min": 9,
+            "max": 11
+          },
+          {
+            "tag": "treacherous",
+            "description": "Examples: icy/muddy ground, deadfall, scree",
+            "min": 12,
+            "max": 12
+          }
+        ]
+      }
+    ]
+  },
+  {
     "tag": "dungeon",
     "additional": [
       "dungeon.name",
