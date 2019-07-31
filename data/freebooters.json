@@ -14659,6 +14659,96 @@
         ]
       },
       {
+        "tag": "faction",
+        "min": 1,
+        "max": 12,
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "commoner",
+            "title": "Commoner/peasant",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "criminal",
+            "title": "Criminal/corrupt",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "revolutionary",
+            "title": "Revolutionary/subversive",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "military",
+            "title": "Military/mercenary/security",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "religious",
+            "title": "Religious/theological",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "craft",
+            "title": "Craft/guild",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "trade",
+            "title": "Trade/merchant",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "labor",
+            "title": "Labor/industrial",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "nationalist",
+            "title": "Nationalist/loyalist",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "outsider",
+            "title": "Outsider/foreign",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "academic",
+            "title": "Academic/arcane",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "roll_twice",
+            "title": "Roll 1d10 twice",
+            "min": 12,
+            "max": 12,
+            "additional":  [
+              [
+                "details.faction",
+                "d10"
+              ],
+              [
+                "details.faction",
+                "d10"
+              ]
+            ]
+          }
+        ]
+      },
+      {
         "tag": "magic_type",
         "dice": "d12",
         "variants": [

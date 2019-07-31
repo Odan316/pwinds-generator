@@ -98,7 +98,11 @@ define([
                 // Generate entity by outer link
                 let outerEntityLink = entity.getOuterLink();
                 let outerEntity = outerEntityLink.getEntity(self.getStorage(), _vars);
-                generatedEntity.variant = generateEntity(outerEntity, outerEntityLink.getDice()).variant;
+                let outerEntityGenerated = generateEntity(outerEntity, outerEntityLink.getDice());
+
+                generatedEntity.variant = outerEntityGenerated.variant;
+                generatedEntity.additionalTitle = outerEntityGenerated.additionalTitle;
+                generatedEntity.additional = outerEntityGenerated.additional;
 
             } else if (entity.hasTemplate()) {
                 // Generate entity by template
