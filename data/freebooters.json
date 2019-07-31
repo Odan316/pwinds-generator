@@ -12565,17 +12565,456 @@
       {
         "tag": "unnatural_feature",
         "min": 1,
-        "max": 1
+        "max": 1,
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "divine",
+            "min": 1,
+            "max": 1,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "presence",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "protected_place",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "cursed_place",
+                "title": "Cursed/defiled place",
+                "min": 4,
+                "max": 8
+              },
+              {
+                "tag": "blessed_place",
+                "title": "Blessed/marked place",
+                "min": 9,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "planar",
+            "title": "Planar/infernal",
+            "min": 2,
+            "max": 3,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "outpost",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "portal",
+                "title": "Portal/gate",
+                "min": 2,
+                "max": 4
+              },
+              {
+                "tag": "rift",
+                "title": "Rift/tear",
+                "min": 5,
+                "max": 8
+              },
+              {
+                "tag": "distortion",
+                "title": "Distortion/warp",
+                "min": 9,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "arcane",
+            "min": 4,
+            "max": 12,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "blight",
+                "title": "Blight/mutation",
+                "min": 1,
+                "max": 4
+              },
+              {
+                "tag": "enchantment",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "taint",
+                "title": "Taint/residue",
+                "min": 7,
+                "max": 11
+              },
+              {
+                "tag": "source",
+                "title": "Source/portal",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          }
+        ]
       },
       {
         "tag": "natural_feature",
         "min": 2,
-        "max": 6
+        "max": 6,
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "lair",
+            "min": 1,
+            "max": 2,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "ruins",
+                "title": "RUINS",
+                "min": 1,
+                "max": 4,
+                "generate_outer": "discovery.structure.ruin"
+              },
+              {
+                "tag": "cave",
+                "title": "Cave/tunnel",
+                "min": 5,
+                "max": 7
+              },
+              {
+                "tag": "hive",
+                "title": "Hive/aerie",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "nest",
+                "title": "Nest/den",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "burrow",
+                "title": "Burrow/warren",
+                "min": 11,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "terrain_change",
+            "min": 3,
+            "max": 5,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "hollow",
+                "title": "Hollow/cleft/defile",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "canyon",
+                "title": "Canyon/valley/vale/dale",
+                "min": 3,
+                "max": 6
+              },
+              {
+                "tag": "multilevel",
+                "title": "Multilevel/tiered",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "pocket_of_terrain",
+                "title": "Pocket of TERRAIN",
+                "min": 8,
+                "max": 9,
+                "generate_outer": "details.terrain"
+              },
+              {
+                "tag": "slope",
+                "title": "Slope up/down",
+                "min": 10,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "water_feature",
+            "min": 6,
+            "max": 8,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "sea",
+                "title": "Sea/ocean",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "river",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "lake",
+                "title": "Lake/pond/pool/tarn",
+                "min": 4,
+                "max": 6
+              },
+              {
+                "tag": "brook",
+                "title": "Brook/stream/rill",
+                "min": 7,
+                "max": 11
+              },
+              {
+                "tag": "spring",
+                "title": "Spring/jot spring",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "landmark",
+            "min": 9,
+            "max": 10,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "oddity",
+                "title": "ODDITY",
+                "min": 1,
+                "max": 1,
+                "generate_outer":  "details.oddity"
+              },
+              {
+                "tag": "earth",
+                "title": "Earth/rock-based",
+                "min": 2,
+                "max": 5
+              },
+              {
+                "tag": "plant_based",
+                "title": "Plant-based",
+                "min": 6,
+                "max": 9
+              },
+              {
+                "tag": "striking_landscape",
+                "min": 10,
+                "max": 11
+              },
+              {
+                "tag": "water_based",
+                "title": "Water-based",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "resource",
+            "min": 11,
+            "max": 12,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "game",
+                "title": "Game/fruit/vegetable",
+                "min": 1,
+                "max": 4
+              },
+              {
+                "tag": "timber",
+                "title": "Timber/stone",
+                "min": 5,
+                "max": 7
+              },
+              {
+                "tag": "herbs",
+                "title": "Herbs/spice/dye source",
+                "min": 8,
+                "max": 9
+              },
+              {
+                "tag": "copper",
+                "title": "Copper/tin/iron",
+                "min": 10,
+                "max": 11
+              },
+              {
+                "tag": "gold",
+                "title": "Gold/silver/gems",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          }
+        ]
       },
       {
         "tag": "evidence",
         "min": 7,
-        "max": 9
+        "max": 9,
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "tracks",
+            "title": "Tracks/spoor",
+            "min": 1,
+            "max": 6,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "trail_of_blood",
+                "title": "Trail of blood/fluid",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "signs_of_violence",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "multiple",
+                "title": "Multiple/many signs",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "definite",
+                "title": "Definite/recent/clear",
+                "min": 7,
+                "max": 9
+              },
+              {
+                "tag": "faint",
+                "title": "Faint/old/unclear",
+                "min": 10,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "remains",
+            "title": "Remains/debris",
+            "min": 7,
+            "max": 10,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "bones",
+                "title": "Bones of CREATURE",
+                "min": 1,
+                "max": 4,
+                "generate_outer": "creature"
+              },
+              {
+                "tag": "carcass",
+                "title": "CREATURE corpse/carcass",
+                "min": 5,
+                "max": 6,
+                "generate_outer": "creature"
+              },
+              {
+                "tag": "junk",
+                "title": "Junk/refuse",
+                "min": 7,
+                "max": 9
+              },
+              {
+                "tag": "items",
+                "title": "1d6 ITEMS",
+                "min": 10,
+                "max": 11,
+                "additional":  [
+                  {
+                    "tag": "item",
+                    "repeat": "d6",
+                    "generate_outer" : "miscellaneous.random_item"
+                  }
+                ]
+              },
+              {
+                "tag": "lost_good",
+                "title": "Lost TRADE GOOD",
+                "min": 12,
+                "max": 12,
+                "generate_outer": "booty.valuable.trade_good"
+              }
+            ]
+          },
+          {
+            "tag": "stash",
+            "title": "Stash/cache",
+            "min": 11,
+            "max": 12,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "booty1",
+                "title": "OWNED BOOTY (1d4)",
+                "min": 1,
+                "max": 4,
+                "generate_outer": [
+                  "booty.owned_booty",
+                  "d4"
+                ]
+              },
+              {
+                "tag": "booty2",
+                "title": "OWNED BOOTY (1d6)",
+                "min": 5,
+                "max": 7,
+                "generate_outer": [
+                  "booty.owned_booty",
+                  "d6"
+                ]
+              },
+              {
+                "tag": "booty3",
+                "title": "OWNED BOOTY (1d8)",
+                "min": 8,
+                "max": 10,
+                "generate_outer": [
+                  "booty.owned_booty",
+                  "d8"
+                ]
+              },
+              {
+                "tag": "booty4",
+                "title": "OWNED BOOTY (1d10)",
+                "min": 11,
+                "max": 12,
+                "generate_outer": [
+                  "booty.owned_booty",
+                  "d10"
+                ]
+              },
+              {
+                "tag": "booty5",
+                "title": "OWNED BOOTY (1d12)",
+                "min": 12,
+                "max": 12,
+                "generate_outer": [
+                  "booty.owned_booty",
+                  "d12"
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "tag": "structure",
@@ -12593,9 +13032,8 @@
                 "tag": "oddity",
                 "min": 1,
                 "max": 4,
-                "additional": [
-                  "details.oddity"
-                ]
+                "generate_outer":  "details.oddity"
+
               },
               {
                 "tag": "mound",
@@ -12725,11 +13163,10 @@
             "variants": [
               {
                 "tag": "dungeon",
+                "title": "DUNGEON",
                 "min": 1,
                 "max": 4,
-                "additional": [
-                  "dungeon"
-                ]
+                "generate_outer":  "dungeon"
               },
               {
                 "tag": "settlement",
@@ -12739,39 +13176,36 @@
               },
               {
                 "tag": "religious",
-                "title": "Religious ruin",
+                "title": "RELIGIOUS",
                 "min": 7,
                 "max": 8,
-                "additional": [
+                "generate_outer" :
                   [
                     "discovery.structure.religious",
                     "d8+4"
                   ]
-                ]
               },
               {
                 "tag": "dwelling",
-                "title": "Dwelling ruin",
+                "title": "DWELLING",
                 "min": 9,
                 "max": 10,
-                "additional": [
+                "generate_outer":
                   [
                     "discovery.structure.dwelling",
                     "d8+4"
                   ]
-                ]
               },
               {
                 "tag": "infrastructure",
-                "title": "Infrastructure ruin",
+                "title": "INFRASTRUCTURE",
                 "min": 11,
                 "max": 12,
-                "additional": [
+                "generate_outer":
                   [
                     "discovery.structure.infrastructure",
                     "d8+4"
                   ]
-                ]
               }
             ]
           },
@@ -14896,6 +15330,66 @@
                 "details.oddity",
                 "d10+1"
               ]
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "terrain",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "sea",
+            "title": "Sea/ocean",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "wasteland",
+            "title": "Wasteland/desert",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "lowland",
+            "title": "Lowland/plains",
+            "min": 3,
+            "max": 5
+          },
+          {
+            "tag": "wetland",
+            "title": "Wetland/swamp",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "woodland",
+            "title": "Woodland/jungle",
+            "min": 7,
+            "max": 8
+          },
+          {
+            "tag": "highland",
+            "title": "Highland/hills",
+            "min": 9,
+            "max": 10
+          },
+          {
+            "tag": "mountains",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "oddity",
+            "title": "Roll 1d10+1, +ODDITY",
+            "min": 12,
+            "max": 12,
+            "additional": [
+              [
+                "details.terrain",
+                "d10+1"
+              ],
+              "details.oddity"
             ]
           }
         ]
