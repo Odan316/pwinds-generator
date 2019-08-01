@@ -12742,7 +12742,8 @@
       "creature_adv.base",
       "creature_adv.adjust",
       "creature_adv.attack",
-      "creature_adv.defence"
+      "creature_adv.defence",
+      "creature_adv.common_tag"
     ],
     "dictionaries": [
       {
@@ -13454,6 +13455,163 @@
                 "static": "5"
               }
             ]
+          }
+        ]
+      },
+      {
+        "tag": "common_tag",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "vulnerable",
+            "description": "Suffers 150% of damage rolled from specific source",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "resistant",
+            "description": "Suffers 50% of damage rolled from specific source",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "stealthy",
+            "description": "Likes to sneak, hide, ambush; add 1 sneaky move",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "organized",
+            "description": "Knows how to strategize; add 1 move related to planning",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "intelligent",
+            "description": "Sees bigger picture; add 1 smart move",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "devious",
+            "description": "-1 damage (minimum 1); add 1 tricky move",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "cautious",
+            "description": "Avoids putting itself in harm's way; -25% base HP",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "hoarder",
+            "description": "Double booty rolls for cache and lair",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "unusual",
+            "description": "Roll UNCOMMON tag",
+            "min": 9,
+            "max": 10,
+            "generate_outer": "creature_adv.uncommon_tag"
+          },
+          {
+            "tag": "roll_twice",
+            "title": "Roll 1d10 twice",
+            "min": 11,
+            "max": 11,
+            "additional": [
+              [
+                "creature_adv.common_tag",
+                "d10"
+              ],
+              [
+                "creature_adv.common_tag",
+                "d10"
+              ]
+            ]
+          },
+          {
+            "tag": "roll_trice",
+            "title": "Roll 1d10 three times",
+            "min": 12,
+            "max": 12,
+            "additional": [
+              [
+                "creature_adv.common_tag",
+                "d10"
+              ],
+              [
+                "creature_adv.common_tag",
+                "d10"
+              ],
+              [
+                "creature_adv.common_tag",
+                "d10"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "uncommon_tag",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "flying",
+            "description": "Able to take the air; add 1 flying move",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "tag": "undead",
+            "description": "May be <i>unsubstantial</i>; unaffected by poison, disease, etc.",
+            "min": 4,
+            "max": 5
+          },
+          {
+            "tag": "amorphous",
+            "description": "Suffers lowest of 2 damage rolls",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "immune",
+            "description": "unaffected by damage from specific source",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "construct",
+            "description": "May be <i>mindless</i>; acts according to orders of master",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "magical",
+            "description": "Add 1 magic move (spell, power, etc.)",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "planar",
+            "description": "May be <i>unsubstantial</i>; Add 1 move related to home plane",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "terrifying",
+            "description": "Strikes fear into hearts of all who behold it",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "divine",
+            "description": "May be <i>planar</i>, +2 damage, base HP x 1.25",
+            "min": 12,
+            "max": 12
           }
         ]
       }
@@ -15987,6 +16145,37 @@
             "tag": "dust",
             "title": "Dust/pre-historic",
             "min": 12,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "alignment",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "evil",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "tag": "chaotic",
+            "min": 3,
+            "max": 4
+          },
+          {
+            "tag": "neutral",
+            "min": 5,
+            "max": 8
+          },
+          {
+            "tag": "lawful",
+            "min": 9,
+            "max": 10
+          },
+          {
+            "tag": "good",
+            "min": 11,
             "max": 12
           }
         ]
