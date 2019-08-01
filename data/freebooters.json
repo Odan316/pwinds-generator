@@ -15840,6 +15840,76 @@
             "max": 12
           }
         ]
+      },
+      {
+        "tag": "item_detail",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "dull",
+            "title": "Dull/worn/broken",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "rough",
+            "title": "Rough/hard/sharp",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "utilitarian",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "delicate",
+            "title": "Delicate/fragile",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "aspect",
+            "title": "Design motif (ASPECT)",
+            "min": 5,
+            "max": 6,
+            "additional": [
+             "details.aspect"
+            ]
+          },
+          {
+            "tag": "element",
+            "title": "Design motif (ELEMENT)",
+            "min": 7,
+            "max": 8,
+            "additional": [
+              "details.element"
+            ]
+          },
+          {
+            "tag": "etched",
+            "title": "Etched/engraved",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "bright",
+            "title": "Bright/colorful",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "makers_mark",
+            "title": "Maker's mark",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "mysterious inscription",
+            "min": 12,
+            "max": 12
+          }
+        ]
       }
     ]
   },
