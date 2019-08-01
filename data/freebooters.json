@@ -12746,7 +12746,8 @@
     ],
     "dictionaries": [
       {
-        "tag": "base",
+        "tag": "size",
+        "title": "Size and quantity",
         "dice": "d12",
         "variants": [
           {
