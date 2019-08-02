@@ -15914,6 +15914,517 @@
     ]
   },
   {
+    "tag": "culture",
+    "additional": [
+      "culture.originating_species",
+      "culture.alignment",
+      "culture.profile"
+    ],
+    "dictionaries": [
+      {
+        "tag": "originating_species",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "humanoid",
+            "min": 1,
+            "max": 4,
+            "generate_outer": "creature.humanoid"
+          },
+          {
+            "tag": "human",
+            "min": 5,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "alignment",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "good",
+            "min": 1,
+            "max": 2,
+            "additional": [
+              "culture.alignment.good.values",
+              "culture.alignment.good.values"
+            ],
+            "dictionaries": [
+              {
+                "tag": "values",
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "empathy",
+                    "min": 1,
+                    "max": 1
+                  },
+                  {
+                    "tag": "generosity",
+                    "min": 2,
+                    "max": 3
+                  },
+                  {
+                    "tag": "valor",
+                    "min": 4,
+                    "max": 5
+                  },
+                  {
+                    "tag": "trust",
+                    "min": 6,
+                    "max": 7
+                  },
+                  {
+                    "tag": "cooperation",
+                    "min": 8,
+                    "max": 9
+                  },
+                  {
+                    "tag": "love",
+                    "min": 10,
+                    "max": 10
+                  },
+                  {
+                    "tag": "roll_lawful",
+                    "min": 11,
+                    "max": 11,
+                    "additional": [
+                      "culture.alignment.lawful.values"
+                    ]
+                  },
+                  {
+                    "tag": "roll_neutral",
+                    "min": 12,
+                    "max": 12,
+                    "additional": [
+                      "culture.alignment.neutral.values"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "lawful",
+            "min": 3,
+            "max": 4,
+            "additional": [
+              "culture.alignment.lawful.values",
+              "culture.alignment.lawful.values"
+            ],
+            "dictionaries": [
+              {
+                "tag": "values",
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "truth",
+                    "min": 1,
+                    "max": 1
+                  },
+                  {
+                    "tag": "justice",
+                    "min": 2,
+                    "max": 3
+                  },
+                  {
+                    "tag": "discipline",
+                    "min": 4,
+                    "max": 5
+                  },
+                  {
+                    "tag": "loyalty",
+                    "min": 6,
+                    "max": 7
+                  },
+                  {
+                    "tag": "order",
+                    "min": 8,
+                    "max": 9
+                  },
+                  {
+                    "tag": "honor",
+                    "min": 10,
+                    "max": 10
+                  },
+                  {
+                    "tag": "roll_good",
+                    "min": 11,
+                    "max": 11,
+                    "additional": [
+                      "culture.alignment.good.values"
+                    ]
+                  },
+                  {
+                    "tag": "roll_neutral",
+                    "min": 12,
+                    "max": 12,
+                    "additional": [
+                      "culture.alignment.neutral.values"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "neutral",
+            "min": 5,
+            "max": 8,
+            "additional": [
+              "culture.alignment.neutral.values",
+              "culture.alignment.neutral.values"
+            ],
+            "dictionaries": [
+              {
+                "tag": "values",
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "knowledge",
+                    "min": 1,
+                    "max": 1
+                  },
+                  {
+                    "tag": "balance",
+                    "min": 2,
+                    "max": 3
+                  },
+                  {
+                    "tag": "advancement",
+                    "min": 4,
+                    "max": 5
+                  },
+                  {
+                    "tag": "independence",
+                    "min": 6,
+                    "max": 7
+                  },
+                  {
+                    "tag": "investment",
+                    "min": 8,
+                    "max": 9
+                  },
+                  {
+                    "tag": "fate",
+                    "min": 10,
+                    "max": 10
+                  },
+                  {
+                    "tag": "roll_lawful",
+                    "min": 11,
+                    "max": 11,
+                    "additional": [
+                      "culture.alignment.lawful.values"
+                    ]
+                  },
+                  {
+                    "tag": "roll_chaotic",
+                    "min": 12,
+                    "max": 12,
+                    "additional": [
+                      "culture.alignment.chaotic.values"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "chaotic",
+            "min": 9,
+            "max": 10,
+            "additional": [
+              "culture.alignment.chaotic.values",
+              "culture.alignment.chaotic.values"
+            ],
+            "dictionaries": [
+              {
+                "tag": "values",
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "satisfaction",
+                    "min": 1,
+                    "max": 1
+                  },
+                  {
+                    "tag": "impulse",
+                    "min": 2,
+                    "max": 3
+                  },
+                  {
+                    "tag": "conflict",
+                    "min": 4,
+                    "max": 5
+                  },
+                  {
+                    "tag": "celebration",
+                    "min": 6,
+                    "max": 7
+                  },
+                  {
+                    "tag": "disruption",
+                    "min": 8,
+                    "max": 9
+                  },
+                  {
+                    "tag": "passion",
+                    "min": 10,
+                    "max": 10
+                  },
+                  {
+                    "tag": "roll_evil",
+                    "min": 11,
+                    "max": 11,
+                    "additional": [
+                      "culture.alignment.evil.values"
+                    ]
+                  },
+                  {
+                    "tag": "roll_neutral",
+                    "min": 12,
+                    "max": 12,
+                    "additional": [
+                      "culture.alignment.neutral.values"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "evil",
+            "min": 11,
+            "max": 12,
+            "additional": [
+              "culture.alignment.evil.values",
+              "culture.alignment.evil.values"
+            ],
+            "dictionaries": [
+              {
+                "tag": "values",
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "ignorance",
+                    "min": 1,
+                    "max": 1
+                  },
+                  {
+                    "tag": "control",
+                    "min": 2,
+                    "max": 3
+                  },
+                  {
+                    "tag": "subjugation",
+                    "min": 4,
+                    "max": 5
+                  },
+                  {
+                    "tag": "greed",
+                    "min": 6,
+                    "max": 7
+                  },
+                  {
+                    "tag": "power",
+                    "min": 8,
+                    "max": 9
+                  },
+                  {
+                    "tag": "hatred",
+                    "min": 10,
+                    "max": 10
+                  },
+                  {
+                    "tag": "roll_chaotic",
+                    "min": 11,
+                    "max": 11,
+                    "additional": [
+                      "culture.alignment.chaotic.values"
+                    ]
+                  },
+                  {
+                    "tag": "roll_neutral",
+                    "min": 12,
+                    "max": 12,
+                    "additional": [
+                      "culture.alignment.neutral.values"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "profile",
+        "additional": [
+          "culture.profile.size",
+          "culture.profile.economy",
+          "culture.profile.military",
+          "culture.profile.populace"
+        ],
+        "dictionaries": [
+          {
+            "tag": "size",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "tiny",
+                "min": 1,
+                "max": 1,
+                "additional": [
+                  "culture.feature"
+                ]
+              },
+              {
+                "tag": "small",
+                "min": 2,
+                "max": 3,
+                "additional": [
+                  "culture.feature",
+                  "culture.feature"
+                ]
+              },
+              {
+                "tag": "sizable",
+                "min": 4,
+                "max": 9,
+                "additional": [
+                  "culture.feature",
+                  "culture.feature",
+                  "culture.feature"
+                ]
+              },
+              {
+                "tag": "large",
+                "min": 10,
+                "max": 11,
+                "additional": [
+                  "culture.feature",
+                  "culture.feature",
+                  "culture.feature",
+                  "culture.feature",
+                  "culture.feature"
+                ]
+              },
+              {
+                "tag": "expansive",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "culture.feature",
+                  "culture.feature",
+                  "culture.feature",
+                  "culture.feature",
+                  "culture.feature",
+                  "culture.feature",
+                  "culture.feature"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "economy",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "struggling",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "poor",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "comfortable",
+                "min": 4,
+                "max": 9
+              },
+              {
+                "tag": "wealthy",
+                "min": 10,
+                "max": 11
+              },
+              {
+                "tag": "booming",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "military",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "pathetic",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "weak",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "capable",
+                "min": 4,
+                "max": 9
+              },
+              {
+                "tag": "strong",
+                "min": 10,
+                "max": 11
+              },
+              {
+                "tag": "mighty",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "populace",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "rebellious",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "restive",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "resigned",
+                "min": 4,
+                "max": 9
+              },
+              {
+                "tag": "content",
+                "min": 10,
+                "max": 11
+              },
+              {
+                "tag": "exuberant",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "tag": "details",
     "description": "It is collection of entities, you should generate something from sub-entities",
     "dictionaries": [
