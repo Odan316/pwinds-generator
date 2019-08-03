@@ -16421,6 +16421,413 @@
             ]
           }
         ]
+      },
+      {
+        "tag": "feature",
+        "dice":  "d12",
+        "variants": [
+          {
+            "tag": "terrain",
+            "title":  "Renowned TERRAIN",
+            "min": 1,
+            "max": 2,
+            "additional": [
+              "details.terrain"
+            ]
+          },
+          {
+            "tag": "tradition",
+            "title":  "Signature TRADITION",
+            "min": 3,
+            "max": 4,
+            "additional": [
+              "culture.feature.tradition"
+            ]
+          },
+          {
+            "tag": "abundance",
+            "title":  "Abundance of TRADE GOOD",
+            "min": 5,
+            "max": 6,
+            "additional": [
+              "culture.feature.trade_good"
+            ]
+          },
+          {
+            "tag": "terrain",
+            "title":  "Lack of TRADE GOOD",
+            "min": 7,
+            "max": 8,
+            "additional": [
+              "culture.feature.trade_good"
+            ]
+          },
+          {
+            "tag": "faction",
+            "title":  "Renowned FACTION",
+            "min": 9,
+            "max": 10,
+            "additional": [
+              "details.faction"
+            ]
+          },
+          {
+            "tag": "person",
+            "title":  "Legendary/infamous PERSON",
+            "min": 11,
+            "max": 12,
+            "additional": [
+              "culture.feature.person"
+            ]
+          }
+        ],
+        "dictionaries": [
+          {
+            "tag": "tradition",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "food",
+                "title":  "Food/drink",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "clothing",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "architecture",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "landscaping",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "public_space",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "art_form",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "arms",
+                "title": "Arms/armor",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "trade_practice",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "fighting_style",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "spellcasting_style",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "prohibition",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "hierarchy",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "person",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "outsider",
+                "title": "OUTSIDER - not realised yet!",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "criminal",
+                "title": "CRIMINAL - not realised yet!",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "commoner",
+                "title": "COMMONER - not realised yet!",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "tradesperson",
+                "title": "TRADESPERSON - not realised yet!",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "merchant",
+                "title": "MERCHANT - not realised yet!",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "specialist",
+                "title": "SPECIALIST - not realised yet!",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "hero",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "scholarly_figure",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "military_figure",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "religious_figure",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "arcane_figure",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "authority_figure",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "trade_good",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "household",
+                "min": 1,
+                "max": 5,
+                "dice":  "d12",
+                "variants": [
+                  {
+                    "tag": "salt",
+                    "min": 1,
+                    "max": 1
+                  },
+                  {
+                    "tag": "grain",
+                    "min": 2,
+                    "max": 3
+                  },
+                  {
+                    "tag": "hides",
+                    "title": "Hides/furs/shell",
+                    "min": 4,
+                    "max": 4
+                  },
+                  {
+                    "tag": "flint",
+                    "title": "Flint/obsidian",
+                    "min": 5,
+                    "max": 5
+                  },
+                  {
+                    "tag": "ceramics",
+                    "title": "Ceramics/pottery",
+                    "min": 6,
+                    "max": 6
+                  },
+                  {
+                    "tag": "wool",
+                    "title": "Wool/cotton/flax",
+                    "min": 7,
+                    "max": 8
+                  },
+                  {
+                    "tag": "textiles",
+                    "title": "Textiles/fabric",
+                    "min": 9,
+                    "max": 9
+                  },
+                  {
+                    "tag": "oil",
+                    "title": "Oil/wax",
+                    "min": 10,
+                    "max": 10
+                  },
+                  {
+                    "tag": "livestock",
+                    "title": "Livestock/mounts",
+                    "min": 11,
+                    "max": 11
+                  },
+                  {
+                    "tag": "herbs",
+                    "title": "Herbs/medicine",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "industrial",
+                "min": 6,
+                "max": 9,
+                "dice":  "d12",
+                "variants": [
+                  {
+                    "tag": "slaves",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "timber",
+                    "min": 3,
+                    "max": 3
+                  },
+                  {
+                    "tag": "clay",
+                    "min": 4,
+                    "max": 4
+                  },
+                  {
+                    "tag": "coal",
+                    "title": "Coal/reat",
+                    "min": 5,
+                    "max": 5
+                  },
+                  {
+                    "tag": "copper",
+                    "title": "Copper/tin",
+                    "min": 6,
+                    "max": 7
+                  },
+                  {
+                    "tag": "bronze",
+                    "min": 8,
+                    "max": 8
+                  },
+                  {
+                    "tag": "iron",
+                    "min": 9,
+                    "max": 10
+                  },
+                  {
+                    "tag": "steel",
+                    "min": 11,
+                    "max": 11
+                  },
+                  {
+                    "tag": "arms",
+                    "title": "Arms/armor",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              },k
+              {
+                "tag": "luxury",
+                "min": 10,
+                "max": 12,
+                "dice":  "d12",
+                "variants": [
+                  {
+                    "tag": "slaves",
+                    "min": 1,
+                    "max": 1
+                  },
+                  {
+                    "tag": "wine",
+                    "title": "Wine/spirits",
+                    "min": 2,
+                    "max": 2
+                  },
+                  {
+                    "tag": "silk",
+                    "title": "Silk/rare fiber",
+                    "min": 3,
+                    "max": 3
+                  },
+                  {
+                    "tag": "dye",
+                    "title": "Dye/perfume",
+                    "min": 4,
+                    "max": 4
+                  },
+                  {
+                    "tag": "spices",
+                    "min": 5,
+                    "max": 5
+                  },
+                  {
+                    "tag": "honey",
+                    "title": "Honey/sugar",
+                    "min": 6,
+                    "max": 6
+                  },
+                  {
+                    "tag": "tea",
+                    "title": "Tea/tobacco",
+                    "min": 7,
+                    "max": 7
+                  },
+                  {
+                    "tag": "ivory",
+                    "title": "Ivory/amber/coral",
+                    "min": 8,
+                    "max": 8
+                  },
+                  {
+                    "tag": "gems",
+                    "title": "Gems/jewels/jewelry",
+                    "min": 9,
+                    "max": 9
+                  },
+                  {
+                    "tag": "silver",
+                    "title": "Silver/gold",
+                    "min": 10,
+                    "max": 10
+                  },
+                  {
+                    "tag": "vellum",
+                    "title": "Vellum/paper",
+                    "min": 11,
+                    "max": 11
+                  },
+                  {
+                    "tag": "arcane_resource",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
