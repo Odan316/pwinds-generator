@@ -18030,6 +18030,287 @@
             ]
           }
         ]
+      },
+      {
+        "tag": "details",
+        "additional": [
+          "npc.details.feature",
+          "npc.details.appearance",
+          "npc.details.reputation",
+          "npc.details.other"
+        ],
+        "dictionaries": [
+          {
+            "tag": "feature",
+            "dice":  "d100",
+            "variants": [
+              {
+                "tag": "alert",
+                "title": "Alert/well-rested",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "bald",
+                "title": "Bald/hairless",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "beautiful",
+                "title": "Beautiful/attractive",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "blank_stare",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "bright_eyes",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "broad_face",
+                "min": 11,
+                "max": 12
+              },
+              {
+                "tag": "dark_eyes",
+                "min": 13,
+                "max": 14
+              },
+              {
+                "tag": "darker_complexion",
+                "min": 15,
+                "max": 16
+              },
+              {
+                "tag": "dimples",
+                "min": 17,
+                "max": 18
+              },
+              {
+                "tag": "diseased",
+                "min": 19,
+                "max": 20
+              },
+              {
+                "tag": "disfigured",
+                "min": 21,
+                "max": 22
+              },
+              {
+                "tag": "doughy",
+                "min": 23,
+                "max": 24
+              },
+              {
+                "tag": "earrings",
+                "title": "Earrings/nose ring",
+                "min": 25,
+                "max": 26
+              },
+              {
+                "tag": "frowning",
+                "min": 27,
+                "max": 28
+              },
+              {
+                "tag": "gaunt",
+                "min": 29,
+                "max": 30
+              },
+              {
+                "tag": "haggard",
+                "title": "Haggard",
+                "min": 31,
+                "max": 32
+              },
+              {
+                "tag": "harsh_voice",
+                "min": 33,
+                "max": 34
+              },
+              {
+                "tag": "hatchet_faced",
+                "title": "Hatchet-faced",
+                "min": 35,
+                "max": 36
+              },
+              {
+                "tag": "heavy_brow",
+                "min": 37,
+                "max": 38
+              },
+              {
+                "tag": "high_forehead",
+                "min": 39,
+                "max": 40
+              },
+              {
+                "tag": "leonine",
+                "min": 41,
+                "max": 42
+              },
+              {
+                "tag": "lidded_gaze",
+                "min": 43,
+                "max": 44
+              },
+              {
+                "tag": "lighter_complexion",
+                "min": 45,
+                "max": 46
+              },
+              {
+                "tag": "long_beard",
+                "title": "Long beard/braids",
+                "min": 47,
+                "max": 48
+              },
+              {
+                "tag": "missing_ear",
+                "min": 49,
+                "max": 50
+              },
+              {
+                "tag": "missing_eye",
+                "title": "Missing eye/eyepatch",
+                "min": 51,
+                "max": 52
+              },
+              {
+                "tag": "missing_nose",
+                "min": 53,
+                "max": 54
+              },
+              {
+                "tag": "missing_teeth",
+                "title": "Missing/crooked teeth",
+                "min": 55,
+                "max": 56
+              },
+              {
+                "tag": "narrow_face",
+                "min": 57,
+                "max": 58
+              },
+              {
+                "tag": "notable_chin",
+                "min": 59,
+                "max": 60
+              },
+              {
+                "tag": "notable_ears",
+                "min": 61,
+                "max": 62
+              },
+              {
+                "tag": "notable_hair",
+                "min": 63,
+                "max": 64
+              },
+              {
+                "tag": "notable_facial_hair",
+                "min": 65,
+                "max": 66
+              },
+              {
+                "tag": "notable_voice",
+                "min": 67,
+                "max": 68
+              },
+              {
+                "tag": "old",
+                "min": 69,
+                "max": 70
+              },
+              {
+                "tag": "piercing",
+                "min": 71,
+                "max": 72
+              },
+              {
+                "tag": "pleasant_voice",
+                "min": 73,
+                "max": 74
+              },
+              {
+                "tag": "pock_marked",
+                "title": "Pock-marked",
+                "min": 75,
+                "max": 76
+              },
+              {
+                "tag": "porcine",
+                "min": 77,
+                "max": 78
+              },
+              {
+                "tag": "sallow",
+                "title": "Sallow/wan",
+                "min": 79,
+                "max": 80
+              },
+              {
+                "tag": "scarred",
+                "min": 81,
+                "max": 82
+              },
+              {
+                "tag": "sharp_cheekbones",
+                "min": 83,
+                "max": 84
+              },
+              {
+                "tag": "sharp_eyed",
+                "title": "Sharp-eyed",
+                "min": 85,
+                "max": 86
+              },
+              {
+                "tag": "square_jaw",
+                "min": 87,
+                "max": 88
+              },
+              {
+                "tag": "squints",
+                "title": "Squints/nearsighted",
+                "min": 89,
+                "max": 90
+              },
+              {
+                "tag": "striking_eyes",
+                "min": 91,
+                "max": 92
+              },
+              {
+                "tag": "striking_nose",
+                "min": 93,
+                "max": 94
+              },
+              {
+                "tag": "thick_eyebrows",
+                "min": 95,
+                "max": 96
+              },
+              {
+                "tag": "ugly",
+                "title": "Ugly/repellant",
+                "min": 97,
+                "max": 98
+              },
+              {
+                "tag": "young",
+                "min": 99,
+                "max": 100
+              }
+            ]
+          }
+        ]
       }
     ]
   },
