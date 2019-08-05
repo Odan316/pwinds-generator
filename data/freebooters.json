@@ -16556,39 +16556,45 @@
             "variants": [
               {
                 "tag": "outsider",
-                "title": "OUTSIDER - not realised yet!",
+                "title": "OUTSIDER",
                 "min": 1,
-                "max": 1
+                "max": 1,
+                "generate_outer": "npc.occupation.outsider"
               },
               {
                 "tag": "criminal",
-                "title": "CRIMINAL - not realised yet!",
+                "title": "CRIMINAL",
                 "min": 2,
-                "max": 2
+                "max": 2,
+                "generate_outer": "npc.occupation.criminal"
               },
               {
                 "tag": "commoner",
-                "title": "COMMONER - not realised yet!",
+                "title": "COMMONER",
                 "min": 3,
-                "max": 3
+                "max": 3,
+                "generate_outer": "npc.occupation.commoner"
               },
               {
                 "tag": "tradesperson",
-                "title": "TRADESPERSON - not realised yet!",
+                "title": "TRADESPERSON",
                 "min": 4,
-                "max": 4
+                "max": 4,
+                "generate_outer": "npc.occupation.tradesperson"
               },
               {
                 "tag": "merchant",
-                "title": "MERCHANT - not realised yet!",
+                "title": "MERCHANT",
                 "min": 5,
-                "max": 5
+                "max": 5,
+                "generate_outer": "npc.occupation.merchant"
               },
               {
                 "tag": "specialist",
-                "title": "SPECIALIST - not realised yet!",
+                "title": "SPECIALIST",
                 "min": 6,
-                "max": 6
+                "max": 6,
+                "generate_outer": "npc.occupation.specialist"
               },
               {
                 "tag": "hero",
@@ -16715,7 +16721,7 @@
                   },
                   {
                     "tag": "coal",
-                    "title": "Coal/reat",
+                    "title": "Coal/peat",
                     "min": 5,
                     "max": 5
                   },
@@ -16747,7 +16753,7 @@
                     "max": 12
                   }
                 ]
-              },k
+              },
               {
                 "tag": "luxury",
                 "min": 10,
@@ -16824,6 +16830,708 @@
                     "max": 12
                   }
                 ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "npc",
+    "description": "Currently serves only as collection of sub-entities, full generation will be created later",
+    "dictionaries": [
+      {
+        "tag": "heritage",
+        "description": "Choose prevailing heritage in area",
+        "dice": "d12",
+        "dictionaries": [
+          {
+            "tag": "human",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "human",
+                "min": 1,
+                "max": 7
+              },
+              {
+                "tag": "halfling",
+                "min": 8,
+                "max": 9
+              },
+              {
+                "tag": "dwarf",
+                "min": 10,
+                "max": 11
+              },
+              {
+                "tag": "elf",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "halfling",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "halfling",
+                "min": 1,
+                "max": 7
+              },
+              {
+                "tag": "human",
+                "min": 8,
+                "max": 9
+              },
+              {
+                "tag": "dwarf",
+                "min": 10,
+                "max": 11
+              },
+              {
+                "tag": "elf",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "dwarf",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "dwarf",
+                "min": 1,
+                "max": 7
+              },
+              {
+                "tag": "human",
+                "min": 8,
+                "max": 9
+              },
+              {
+                "tag": "halfling",
+                "min": 10,
+                "max": 11
+              },
+              {
+                "tag": "elf",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "elf",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "elf",
+                "min": 1,
+                "max": 7
+              },
+              {
+                "tag": "human",
+                "min": 8,
+                "max": 9
+              },
+              {
+                "tag": "halfling",
+                "min": 10,
+                "max": 11
+              },
+              {
+                "tag": "dwarf",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "occupation",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "outsider",
+            "min": 1,
+            "max": 1,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "hermit",
+                "title": "Hermit/prophet",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "fugitive",
+                "title": "Fugitive/outlaw/exile",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "barbarian",
+                "min": 4,
+                "max": 5
+              },
+              {
+                "tag": "beggar",
+                "title": "Beggar/vagrant/refugee",
+                "min": 6,
+                "max": 7
+              },
+              {
+                "tag": "herder",
+                "title": "Herder/hunter/trapper",
+                "min": 8,
+                "max": 9
+              },
+              {
+                "tag": "diplomat",
+                "title": "Diplomat/envoy",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "rare_humanoid",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "otherworldly",
+                "title": "Otherworldly/arcane",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "criminal",
+            "min": 2,
+            "max": 2,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "bandit",
+                "title": "Bandit/brigand/thug",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "thief",
+                "title": "Cutpurse/thief",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "bodyguard",
+                "title": "Bodyguard/tough",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "burglar",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "con_artist",
+                "title": "Con artist/swindler",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "dealer",
+                "title": "Dealer/fence",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "racketeer",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "lieutenant",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "boss",
+                "title": "Boss/kingpin",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "commoner",
+            "min": 3,
+            "max": 5,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "layabout",
+                "title": "Layabout/simpleton",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "beggar",
+                "title": "Beggar/urchin",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "child",
+                "min": 4,
+                "max": 5
+              },
+              {
+                "tag": "housewife",
+                "title": "Housewife/husband",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "farmer",
+                "title": "Farmer/herder/hunter",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "laborer",
+                "title": "Laborer/servant",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "driver",
+                "title": "Driver/porter/guide",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "sailor",
+                "title": "Sailor/guard",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "apprentice",
+                "title": "Apprentice/adventurer",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "tradesperson",
+            "min": 6,
+            "max": 7,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "musician",
+                "title": "Musician/troubadour",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "artist",
+                "title": "Artist/actor/acrobat",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "cobbler",
+                "title": "Cobbler/furrier/tailor",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "weaver",
+                "title": "Weaver/basketmaker",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "potter",
+                "title": "Potter/carpenter",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "mason",
+                "title": "Mason/baker/chandler",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "cooper",
+                "title": "Cooper/wheelwright",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "tanner",
+                "title": "Tanner/ropemaker",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "stablekeeper",
+                "title": "Stablekeeper/herbalist",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "vintner",
+                "title": "Vintner/jeweler",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "innkeeper",
+                "title": "Innkeeper/tavernkeeper",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "smith",
+                "title": "Smith/armorer",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "merchant",
+            "min": 8,
+            "max": 8,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "raw_materials",
+                "title": "Raw materials/supplies",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "general_goods",
+                "title": "General goods/outfitter",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "grain",
+                "title": "Grain/livestock",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "ale",
+                "title": "Ale/wine/spirits",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "clothing",
+                "title": "Clothing/jewelery",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "weapons",
+                "title": "Weapons/armor",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "spices",
+                "title": "Spices/tobacco",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "labor",
+                "title": "Labor/slaves",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "books",
+                "title": "Books/scrolls",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "magic_supplies",
+                "title": "Magic supplies/items",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "specialist",
+            "min": 9,
+            "max": 9,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "clerk",
+                "title": "Clerk/scribe",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "undertaker",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "perfumer",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "navigator",
+                "title": "Navigator/guide",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "spy",
+                "title": "Spy/diplomat",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "cartographer",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "locksmith",
+                "title": "Locksmith/tinker",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "architect",
+                "title": "Architect/engineer",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "physician",
+                "title": "Physician/apothecary",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "sage",
+                "title": "Sage/scholar",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "alchemist",
+                "title": "Alchemist/astrologer",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "inventor",
+                "title": "Inventor/wizard",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "religious",
+            "min": 10,
+            "max": 10,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "heretic",
+                "title": "Heretic/apostate",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "zealot",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "mendicant",
+                "title": "Mendicant/pilgrim",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "monk",
+                "title": "Monk/nun/cultist",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "preacher",
+                "title": "Preacher/prophet",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "missionary",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "templar",
+                "title": "Templar/protector",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "priest",
+                "title": "Priest/cult leader",
+                "min": 10,
+                "max": 11
+              },
+              {
+                "tag": "high_priest",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "security",
+            "min": 10,
+            "max": 10,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "militia",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "scout",
+                "title": "Scout/warden",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "watch",
+                "title": "Watch/patrol",
+                "min": 4,
+                "max": 5
+              },
+              {
+                "tag": "raw_recruit",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "foot_soldier",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "archer",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "officer",
+                "title": "Officer/protector",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "cavalry",
+                "title": "Cavalry/knight",
+                "min": 10,
+                "max": 11
+              },
+              {
+                "tag": "hero",
+                "title": "Hero/general",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "authority",
+            "min": 12,
+            "max": 12,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "courier",
+                "title": "COurier/messenger",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "town_crier",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "tax_collector",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "clerk",
+                "title": "Clerk/administrator",
+                "min": 4,
+                "max": 5
+              },
+              {
+                "tag": "armiger",
+                "title": "Armiger/gentry",
+                "min": 6,
+                "max": 7
+              },
+              {
+                "tag": "magistrate",
+                "title": "Magistrate/judge",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "guildmaster",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "lesser_nobility",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "greater_nobility",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "ruler",
+                "title": "Ruler/warlord",
+                "min": 12,
+                "max": 12
               }
             ]
           }
