@@ -17536,6 +17536,500 @@
             ]
           }
         ]
+      },
+      {
+        "tag": "alignment",
+        "description": "Choose prevailing alignment in area",
+        "dice": "d12",
+        "dictionaries": [
+          {
+            "tag": "good",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "good",
+                "min": 1,
+                "max": 5,
+                "additional": [
+                  "npc.motivation.good",
+                  "character.trait.virtue",
+                  "character.trait.virtue",
+                  "character.trait.virtue"
+                ]
+              },
+              {
+                "tag": "lawful",
+                "min": 6,
+                "max": 7,
+                "additional": [
+                  "npc.motivation.lawful",
+                  "character.trait.virtue",
+                  "character.trait.virtue",
+                  "character.trait.vice"
+                ]
+              },
+              {
+                "tag": "neutral",
+                "min": 8,
+                "max": 9,
+                "additional": [
+                  "npc.motivation.neutral",
+                  "character.trait.virtue",
+                  "character.trait.vice"
+                ]
+              },
+              {
+                "tag": "chaotic",
+                "min": 10,
+                "max": 11,
+                "additional": [
+                  "npc.motivation.chaotic",
+                  "character.trait.virtue",
+                  "character.trait.vice",
+                  "character.trait.vice"
+                ]
+              },
+              {
+                "tag": "evil",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "npc.motivation.evil",
+                  "character.trait.vice",
+                  "character.trait.vice",
+                  "character.trait.vice"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "lawful",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "good",
+                "min": 1,
+                "max": 2,
+                "additional": [
+                  "npc.motivation.good",
+                  "character.trait.virtue",
+                  "character.trait.virtue",
+                  "character.trait.virtue"
+                ]
+              },
+              {
+                "tag": "lawful",
+                "min": 3,
+                "max": 7,
+                "additional": [
+                  "npc.motivation.lawful",
+                  "character.trait.virtue",
+                  "character.trait.virtue",
+                  "character.trait.vice"
+                ]
+              },
+              {
+                "tag": "neutral",
+                "min": 8,
+                "max": 9,
+                "additional": [
+                  "npc.motivation.neutral",
+                  "character.trait.virtue",
+                  "character.trait.vice"
+                ]
+              },
+              {
+                "tag": "chaotic",
+                "min": 10,
+                "max": 10,
+                "additional": [
+                  "npc.motivation.chaotic",
+                  "character.trait.virtue",
+                  "character.trait.vice",
+                  "character.trait.vice"
+                ]
+              },
+              {
+                "tag": "evil",
+                "min": 11,
+                "max": 12,
+                "additional": [
+                  "npc.motivation.evil",
+                  "character.trait.vice",
+                  "character.trait.vice",
+                  "character.trait.vice"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "neutral",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "good",
+                "min": 1,
+                "max": 1,
+                "additional": [
+                  "npc.motivation.good",
+                  "character.trait.virtue",
+                  "character.trait.virtue",
+                  "character.trait.virtue"
+                ]
+              },
+              {
+                "tag": "lawful",
+                "min": 2,
+                "max": 3,
+                "additional": [
+                  "npc.motivation.lawful",
+                  "character.trait.virtue",
+                  "character.trait.virtue",
+                  "character.trait.vice"
+                ]
+              },
+              {
+                "tag": "neutral",
+                "min": 4,
+                "max": 9,
+                "additional": [
+                  "npc.motivation.neutral",
+                  "character.trait.virtue",
+                  "character.trait.vice"
+                ]
+              },
+              {
+                "tag": "chaotic",
+                "min": 10,
+                "max": 11,
+                "additional": [
+                  "npc.motivation.chaotic",
+                  "character.trait.virtue",
+                  "character.trait.vice",
+                  "character.trait.vice"
+                ]
+              },
+              {
+                "tag": "evil",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "npc.motivation.evil",
+                  "character.trait.vice",
+                  "character.trait.vice",
+                  "character.trait.vice"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "chaotic",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "good",
+                "min": 1,
+                "max": 2,
+                "additional": [
+                  "npc.motivation.good",
+                  "character.trait.virtue",
+                  "character.trait.virtue",
+                  "character.trait.virtue"
+                ]
+              },
+              {
+                "tag": "lawful",
+                "min": 3,
+                "max": 3,
+                "additional": [
+                  "npc.motivation.lawful",
+                  "character.trait.virtue",
+                  "character.trait.virtue",
+                  "character.trait.vice"
+                ]
+              },
+              {
+                "tag": "neutral",
+                "min": 4,
+                "max": 5,
+                "additional": [
+                  "npc.motivation.neutral",
+                  "character.trait.virtue",
+                  "character.trait.vice"
+                ]
+              },
+              {
+                "tag": "chaotic",
+                "min": 6,
+                "max": 10,
+                "additional": [
+                  "npc.motivation.chaotic",
+                  "character.trait.virtue",
+                  "character.trait.vice",
+                  "character.trait.vice"
+                ]
+              },
+              {
+                "tag": "evil",
+                "min": 11,
+                "max": 12,
+                "additional": [
+                  "npc.motivation.evil",
+                  "character.trait.vice",
+                  "character.trait.vice",
+                  "character.trait.vice"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "evil",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "good",
+                "min": 1,
+                "max": 1,
+                "additional": [
+                  "npc.motivation.good",
+                  "character.trait.virtue",
+                  "character.trait.virtue",
+                  "character.trait.virtue"
+                ]
+              },
+              {
+                "tag": "lawful",
+                "min": 2,
+                "max": 3,
+                "additional": [
+                  "npc.motivation.lawful",
+                  "character.trait.virtue",
+                  "character.trait.virtue",
+                  "character.trait.vice"
+                ]
+              },
+              {
+                "tag": "neutral",
+                "min": 4,
+                "max": 5,
+                "additional": [
+                  "npc.motivation.neutral",
+                  "character.trait.virtue",
+                  "character.trait.vice"
+                ]
+              },
+              {
+                "tag": "chaotic",
+                "min": 6,
+                "max": 7,
+                "additional": [
+                  "npc.motivation.chaotic",
+                  "character.trait.virtue",
+                  "character.trait.vice",
+                  "character.trait.vice"
+                ]
+              },
+              {
+                "tag": "evil",
+                "min": 8,
+                "max": 12,
+                "additional": [
+                  "npc.motivation.evil",
+                  "character.trait.vice",
+                  "character.trait.vice",
+                  "character.trait.vice"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "motivation",
+        "description": "Choose alignment",
+        "dice": "d12",
+        "dictionaries": [
+          {
+            "tag": "good",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "empathy",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "charity",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "valor",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "trust",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "cooperation",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "love",
+                "min": 11,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "lawful",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "truth",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "justice",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "discipline",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "loyalty",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "order",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "honor",
+                "min": 11,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "neutral",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "knowledge",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "balance",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "advancement",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "pragmatism",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "investment",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "luck",
+                "min": 11,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "chaotic",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "satisfaction",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "vengeance",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "impulse",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "celebration",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "disruption",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "passion",
+                "min": 11,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "evil",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "ignorance",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "control",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "fear",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "greed",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "power",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "hatred",
+                "min": 11,
+                "max": 12
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -17847,32 +18341,166 @@
       },
       {
         "tag": "alignment",
+        "description": "Choose prevailing alignment in sub-entities, here is generated value for NEUTRAL",
         "dice": "d12",
-        "variants": [
+        "additional": [
+          "details.alignment.neutral"
+        ],
+        "dictionaries": [
           {
-            "tag": "evil",
-            "min": 1,
-            "max": 2
-          },
-          {
-            "tag": "chaotic",
-            "min": 3,
-            "max": 4
-          },
-          {
-            "tag": "neutral",
-            "min": 5,
-            "max": 8
+            "tag": "good",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "good",
+                "min": 1,
+                "max": 5
+              },
+              {
+                "tag": "lawful",
+                "min": 6,
+                "max": 7
+              },
+              {
+                "tag": "neutral",
+                "min": 8,
+                "max": 9
+              },
+              {
+                "tag": "chaotic",
+                "min": 10,
+                "max": 11
+              },
+              {
+                "tag": "evil",
+                "min": 12,
+                "max": 12
+              }
+            ]
           },
           {
             "tag": "lawful",
-            "min": 9,
-            "max": 10
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "good",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "lawful",
+                "min": 3,
+                "max": 7
+              },
+              {
+                "tag": "neutral",
+                "min": 8,
+                "max": 9
+              },
+              {
+                "tag": "chaotic",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "evil",
+                "min": 11,
+                "max": 12
+              }
+            ]
           },
           {
-            "tag": "good",
-            "min": 11,
-            "max": 12
+            "tag": "neutral",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "good",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "lawful",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "neutral",
+                "min": 4,
+                "max": 9
+              },
+              {
+                "tag": "chaotic",
+                "min": 10,
+                "max": 11
+              },
+              {
+                "tag": "evil",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "chaotic",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "good",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "lawful",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "neutral",
+                "min": 4,
+                "max": 5
+              },
+              {
+                "tag": "chaotic",
+                "min": 6,
+                "max": 10
+              },
+              {
+                "tag": "evil",
+                "min": 11,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "evil",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "good",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "lawful",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "neutral",
+                "min": 4,
+                "max": 5
+              },
+              {
+                "tag": "chaotic",
+                "min": 6,
+                "max": 7
+              },
+              {
+                "tag": "evil",
+                "min": 8,
+                "max": 12
+              }
+            ]
           }
         ]
       },
