@@ -18309,6 +18309,834 @@
                 "max": 100
               }
             ]
+          },
+          {
+            "tag": "appearance",
+            "dice":  "d100",
+            "variants": [
+              {
+                "tag": "anemic",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "ascetic",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "bow_legged",
+                "title": "Bow-legged",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "broad_chested",
+                "title": "Broad-chested",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "clean",
+                "title": "Clean/tidy",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "clumsy",
+                "min": 11,
+                "max": 12
+              },
+              {
+                "tag": "composed",
+                "min": 13,
+                "max": 14
+              },
+              {
+                "tag": "dignified",
+                "min": 15,
+                "max": 16
+              },
+              {
+                "tag": "flashy_dressed",
+                "min": 17,
+                "max": 18
+              },
+              {
+                "tag": "graceful",
+                "min": 19,
+                "max": 20
+              },
+              {
+                "tag": "grimy",
+                "title": "Grimy/dirty",
+                "min": 21,
+                "max": 22
+              },
+              {
+                "tag": "haggard",
+                "title": "Haggard/tired",
+                "min": 23,
+                "max": 24
+              },
+              {
+                "tag": "heavyset",
+                "title": "Heavyset/stocky",
+                "min": 25,
+                "max": 26
+              },
+              {
+                "tag": "imposing",
+                "min": 27,
+                "max": 28
+              },
+              {
+                "tag": "limps",
+                "min": 29,
+                "max": 30
+              },
+              {
+                "tag": "missing_finger",
+                "title": "Missing finger(s)",
+                "min": 31,
+                "max": 32
+              },
+              {
+                "tag": "missing_hand",
+                "title": "Missing hand/foot",
+                "min": 33,
+                "max": 34
+              },
+              {
+                "tag": "missing_limb",
+                "min": 35,
+                "max": 36
+              },
+              {
+                "tag": "muscular",
+                "title": "Muscular/athletic",
+                "min": 37,
+                "max": 38
+              },
+              {
+                "tag": "notable_accessory",
+                "min": 39,
+                "max": 40
+              },
+              {
+                "tag": "notable_clothing",
+                "min": 41,
+                "max": 42
+              },
+              {
+                "tag": "notable_footwear",
+                "min": 43,
+                "max": 44
+              },
+              {
+                "tag": "notable_hands",
+                "min": 45,
+                "max": 46
+              },
+              {
+                "tag": "notable_hat",
+                "title": "Notable hat/headgear",
+                "min": 47,
+                "max": 48
+              },
+              {
+                "tag": "notable_weapon",
+                "min": 49,
+                "max": 50
+              },
+              {
+                "tag": "oily",
+                "title": "Oily/greasy",
+                "min": 51,
+                "max": 52
+              },
+              {
+                "tag": "overdressed",
+                "min": 53,
+                "max": 54
+              },
+              {
+                "tag": "perfumed",
+                "min": 55,
+                "max": 56
+              },
+              {
+                "tag": "pigeon_toed",
+                "title": "Pigeon-toed",
+                "min": 57,
+                "max": 58
+              },
+              {
+                "tag": "pocked",
+                "title": "Pocked/scarred",
+                "min": 59,
+                "max": 60
+              },
+              {
+                "tag": "ponderous",
+                "min": 61,
+                "max": 62
+              },
+              {
+                "tag": "quick_footed",
+                "title": "Quick-footed",
+                "min": 63,
+                "max": 64
+              },
+              {
+                "tag": "short",
+                "title": "Short/small/slight",
+                "min": 65,
+                "max": 66
+              },
+              {
+                "tag": "sick",
+                "title": "Sick/diseased",
+                "min": 67,
+                "max": 68
+              },
+              {
+                "tag": "simple_clothing",
+                "min": 69,
+                "max": 70
+              },
+              {
+                "tag": "slumped",
+                "title": "Slumped/sagging",
+                "min": 71,
+                "max": 72
+              },
+              {
+                "tag": "stained",
+                "title": "Stained/scorched",
+                "min": 73,
+                "max": 74
+              },
+              {
+                "tag": "stinky",
+                "title": "Stinky/smelly",
+                "min": 75,
+                "max": 76
+              },
+              {
+                "tag": "stylish",
+                "title": "Stylish/dandy",
+                "min": 77,
+                "max": 78
+              },
+              {
+                "tag": "swaggers",
+                "min": 79,
+                "max": 80
+              },
+              {
+                "tag": "tall",
+                "title": "Tall/big",
+                "min": 81,
+                "max": 82
+              },
+              {
+                "tag": "tattooed",
+                "title": "Tattooed/scarred",
+                "min": 83,
+                "max": 84
+              },
+              {
+                "tag": "thin",
+                "title": "Thin/wiry",
+                "min": 85,
+                "max": 86
+              },
+              {
+                "tag": "underdressed",
+                "min": 87,
+                "max": 88
+              },
+              {
+                "tag": "upright",
+                "title": "Upright/good posture",
+                "min": 89,
+                "max": 90
+              },
+              {
+                "tag": "waddles",
+                "min": 91,
+                "max": 92
+              },
+              {
+                "tag": "weathered",
+                "min": 93,
+                "max": 94
+              },
+              {
+                "tag": "well_accessorized",
+                "title": "Well-accessorized",
+                "min": 95,
+                "max": 96
+              },
+              {
+                "tag": "well_armed",
+                "title": "Well-armed",
+                "min": 97,
+                "max": 98
+              },
+              {
+                "tag": "well_proportioned",
+                "title": "Well-proportioned",
+                "min": 99,
+                "max": 100
+              }
+            ]
+          },
+          {
+            "tag": "reputation",
+            "dice":  "d100",
+            "variants": [
+              {
+                "tag": "accomplished",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "big_appetite",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "brash",
+                "title": "Brash/boisterous",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "brilliant",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "charismatic",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "collector",
+                "title": "Collector/pack rat",
+                "min": 11,
+                "max": 12
+              },
+              {
+                "tag": "competitive",
+                "min": 13,
+                "max": 14
+              },
+              {
+                "tag": "criminal",
+                "min": 15,
+                "max": 16
+              },
+              {
+                "tag": "dark_past",
+                "min": 17,
+                "max": 18
+              },
+              {
+                "tag": "drinker",
+                "title": "Drinker/drunkard",
+                "min": 19,
+                "max": 20
+              },
+              {
+                "tag": "dutiful",
+                "min": 21,
+                "max": 22
+              },
+              {
+                "tag": "failure",
+                "min": 23,
+                "max": 24
+              },
+              {
+                "tag": "fair",
+                "min": 25,
+                "max": 26
+              },
+              {
+                "tag": "foolish",
+                "min": 27,
+                "max": 28
+              },
+              {
+                "tag": "gambler",
+                "min": 29,
+                "max": 30
+              },
+              {
+                "tag": "good_child",
+                "title": "Good/bad child",
+                "min": 31,
+                "max": 32
+              },
+              {
+                "tag": "good_parent",
+                "title": "Good/bad parent",
+                "min": 33,
+                "max": 34
+              },
+              {
+                "tag": "good_sibling",
+                "title": "Good/bad sibling",
+                "min": 35,
+                "max": 36
+              },
+              {
+                "tag": "hardy",
+                "title": "Hardy/healthy",
+                "min": 37,
+                "max": 38
+              },
+              {
+                "tag": "honored",
+                "title": "Honored/revered",
+                "min": 39,
+                "max": 40
+              },
+              {
+                "tag": "killer",
+                "min": 41,
+                "max": 42
+              },
+              {
+                "tag": "know_it_all",
+                "title": "Know-it-all",
+                "min": 43,
+                "max": 44
+              },
+              {
+                "tag": "knowledgeable",
+                "min": 45,
+                "max": 46
+              },
+              {
+                "tag": "leader",
+                "min": 47,
+                "max": 48
+              },
+              {
+                "tag": "lover",
+                "min": 49,
+                "max": 50
+              },
+              {
+                "tag": "loyalist",
+                "min": 51,
+                "max": 52
+              },
+              {
+                "tag": "naive",
+                "min": 53,
+                "max": 54
+              },
+              {
+                "tag": "opinionated",
+                "min": 55,
+                "max": 56
+              },
+              {
+                "tag": "optimist",
+                "min": 57,
+                "max": 58
+              },
+              {
+                "tag": "perceptive",
+                "min": 59,
+                "max": 60
+              },
+              {
+                "tag": "pessimist",
+                "min": 61,
+                "max": 62
+              },
+              {
+                "tag": "philosophical",
+                "min": 63,
+                "max": 64
+              },
+              {
+                "tag": "provocative",
+                "min": 65,
+                "max": 66
+              },
+              {
+                "tag": "reclusive",
+                "min": 67,
+                "max": 68
+              },
+              {
+                "tag": "recovering",
+                "min": 69,
+                "max": 70
+              },
+              {
+                "tag": "religious_zealot",
+                "min": 71,
+                "max": 72
+              },
+              {
+                "tag": "sanguine",
+                "title": "Sanguine/relaxed",
+                "min": 73,
+                "max": 74
+              },
+              {
+                "tag": "secretive",
+                "min": 75,
+                "max": 76
+              },
+              {
+                "tag": "skeptic",
+                "min": 77,
+                "max": 78
+              },
+              {
+                "tag": "smart",
+                "min": 79,
+                "max": 80
+              },
+              {
+                "tag": "strong",
+                "min": 81,
+                "max": 82
+              },
+              {
+                "tag": "superstitious",
+                "min": 83,
+                "max": 84
+              },
+              {
+                "tag": "taciturn",
+                "min": 85,
+                "max": 86
+              },
+              {
+                "tag": "talkative",
+                "min": 87,
+                "max": 88
+              },
+              {
+                "tag": "temperamental",
+                "min": 89,
+                "max": 90
+              },
+              {
+                "tag": "traumatized",
+                "min": 91,
+                "max": 92
+              },
+              {
+                "tag": "trustworthy",
+                "min": 93,
+                "max": 94
+              },
+              {
+                "tag": "weak",
+                "min": 95,
+                "max": 96
+              },
+              {
+                "tag": "successful",
+                "min": 97,
+                "max": 98
+              },
+              {
+                "tag": "wise",
+                "min": 99,
+                "max": 100
+              }
+            ]
+          },
+          {
+            "tag": "other",
+            "dice":  "d100",
+            "variants": [
+              {
+                "tag": "adulterer",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "allergic",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "anxious",
+                "title": "Anxious/nervous",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "artist",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "atheist",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "coward",
+                "min": 11,
+                "max": 12
+              },
+              {
+                "tag": "cultist",
+                "min": 13,
+                "max": 14
+              },
+              {
+                "tag": "depressed",
+                "min": 15,
+                "max": 16
+              },
+              {
+                "tag": "disturbed",
+                "min": 17,
+                "max": 18
+              },
+              {
+                "tag": "ex_mercenary",
+                "title": "Ex-mercenary",
+                "min": 19,
+                "max": 20
+              },
+              {
+                "tag": "ex_soldier",
+                "title": "Ex-soldier",
+                "min": 21,
+                "max": 22
+              },
+              {
+                "tag": "fugitive",
+                "title": "Figitive/outlaw",
+                "min": 23,
+                "max": 24
+              },
+              {
+                "tag": "guilty",
+                "title": "Guilty/ashamed",
+                "min": 25,
+                "max": 26
+              },
+              {
+                "tag": "hard_hearted",
+                "title": "Hard-hearted",
+                "min": 27,
+                "max": 28
+              },
+              {
+                "tag": "has_assistant",
+                "min": 29,
+                "max": 30
+              },
+              {
+                "tag": "has_entourage",
+                "min": 31,
+                "max": 32
+              },
+              {
+                "tag": "has_mount",
+                "min": 33,
+                "max": 34
+              },
+              {
+                "tag": "has_pet",
+                "min": 35,
+                "max": 36
+              },
+              {
+                "tag": "heartbroken",
+                "min": 37,
+                "max": 38
+              },
+              {
+                "tag": "in_debt",
+                "min": 39,
+                "max": 40
+              },
+              {
+                "tag": "jaded",
+                "min": 41,
+                "max": 42
+              },
+              {
+                "tag": "loves_animals",
+                "title": "Loves/hates animals",
+                "min": 43,
+                "max": 44
+              },
+              {
+                "tag": "loves_children",
+                "title": "Loves/hates children",
+                "min": 45,
+                "max": 46
+              },
+              {
+                "tag": "loves_magic",
+                "title": "Loves/hates magic",
+                "min": 47,
+                "max": 48
+              },
+              {
+                "tag": "loves_nature",
+                "title": "Loves/hates nature",
+                "min": 49,
+                "max": 50
+              },
+              {
+                "tag": "loves_people",
+                "title": "Loves/hates people",
+                "min": 51,
+                "max": 52
+              },
+              {
+                "tag": "loves_religion",
+                "title": "Loves/hates religion",
+                "min": 53,
+                "max": 54
+              },
+              {
+                "tag": "loves_ruler",
+                "title": "Loves/hates ruler",
+                "min": 55,
+                "max": 56
+              },
+              {
+                "tag": "loves_violence",
+                "title": "Loves/hates violence",
+                "min": 57,
+                "max": 58
+              },
+              {
+                "tag": "mutters",
+                "title": "Mutters/mumbles",
+                "min": 59,
+                "max": 60
+              },
+              {
+                "tag": "outcast",
+                "title": "Outcast/exile/pariah",
+                "min": 61,
+                "max": 62
+              },
+              {
+                "tag": "paranoid",
+                "min": 63,
+                "max": 64
+              },
+              {
+                "tag": "particular",
+                "title": "Particular/picky",
+                "min": 65,
+                "max": 66
+              },
+              {
+                "tag": "phobic",
+                "min": 67,
+                "max": 68
+              },
+              {
+                "tag": "publicly_shamed",
+                "min": 69,
+                "max": 70
+              },
+              {
+                "tag": "rebel",
+                "min": 71,
+                "max": 72
+              },
+              {
+                "tag": "refugee",
+                "min": 73,
+                "max": 74
+              },
+              {
+                "tag": "romantic",
+                "min": 75,
+                "max": 76
+              },
+              {
+                "tag": "sadistic",
+                "title": "Sadistic/masochistic",
+                "min": 77,
+                "max": 78
+              },
+              {
+                "tag": "sensitive",
+                "min": 79,
+                "max": 80
+              },
+              {
+                "tag": "soft_spoken",
+                "title": "Soft-spoken",
+                "min": 81,
+                "max": 82
+              },
+              {
+                "tag": "spy",
+                "min": 83,
+                "max": 84
+              },
+              {
+                "tag": "student",
+                "min": 85,
+                "max": 86
+              },
+              {
+                "tag": "stutter",
+                "title": "Stutter/lisp",
+                "min": 87,
+                "max": 88
+              },
+              {
+                "tag": "traitor",
+                "min": 89,
+                "max": 90
+              },
+              {
+                "tag": "twin",
+                "min": 91,
+                "max": 92
+              },
+              {
+                "tag": "veteran",
+                "min": 93,
+                "max": 94
+              },
+              {
+                "tag": "well_read",
+                "title": "Well-read",
+                "min": 95,
+                "max": 96
+              },
+              {
+                "tag": "well_traveled",
+                "title": "Well-traveled",
+                "min": 97,
+                "max": 98
+              },
+              {
+                "tag": "whistles",
+                "title": "Whistles/hums",
+                "min": 99,
+                "max": 100
+              }
+            ]
           }
         ]
       }
