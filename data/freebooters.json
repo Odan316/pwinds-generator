@@ -16844,7 +16844,6 @@
       {
         "tag": "heritage",
         "description": "Choose prevailing heritage in area",
-        "dice": "d12",
         "dictionaries": [
           {
             "tag": "human",
@@ -19135,6 +19134,609 @@
                 "title": "Whistles/hums",
                 "min": 99,
                 "max": 100
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "activity",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "sick",
+            "title": "Sick/dying",
+            "description": "Perhaps with TASK or ITEM to impart.",
+            "min": 1,
+            "max": 1,
+            "additional": [
+              "details.item",
+              "npc.activity.task"
+            ]
+          },
+          {
+            "tag": "attacking",
+            "description": "Going after PC or NPC, to eliminate them or take an ITEM from them.",
+            "min": 2,
+            "max": 2,
+            "additional": [
+              "details.item"
+            ]
+          },
+          {
+            "tag": "abducting",
+            "description": "Capturing warm bodies for slavery/ransom/human sacrifice.",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "belligerent",
+            "description": "Looking for a fight because they bored/vengeful/frustrated/drunk etc.",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "victimized",
+            "description": "Being attacked/robbed/exploited/abducted by another NPC",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "distressed",
+            "description": "Hungry/heartbroken/anxious. May offer a TASK to ameliorate condition.",
+            "min": 6,
+            "max": 6,
+            "additional": [
+              "npc.activity.task"
+            ]
+          },
+          {
+            "tag": "watching",
+            "description": "Perceives PC as ally/enemy, and/or that they possess an important ITEM.",
+            "min": 7,
+            "max": 7,
+            "additional": [
+              "details.item"
+            ]
+          },
+          {
+            "tag": "fleeing",
+            "description": "Escaping harm/imprisonment/servitude.",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "seeking_aid",
+            "description": "Begs/demands help with TASK, with little or nothing to offer in return.",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "recruiting",
+            "description": "Looking for the right sort to join the watch/army/gang/cult.",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "hiring",
+            "description": "Seeking skilled individuals for an ongoing TASK.",
+            "min": 11,
+            "max": 11,
+            "additional": [
+              "npc.activity.task"
+            ]
+          },
+          {
+            "tag": "offering_reward",
+            "description": "Will grant a specific bounty upon proven completion of a TASK.",
+            "min": 12,
+            "max": 12,
+            "additional": [
+              "npc.activity.task"
+            ]
+          }
+        ],
+        "dictionaries": [
+          {
+            "tag": "task",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "venture",
+                "min": 1,
+                "max": 1,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "invest_in_business",
+                    "min": 1,
+                    "max": 1
+                  },
+                  {
+                    "tag": "invest_in_npc",
+                    "title": "Invest in NPC",
+                    "description": "Generate NPC manually",
+                    "min": 2,
+                    "max": 2
+                  },
+                  {
+                    "tag": "explore_nearby_region",
+                    "min": 3,
+                    "max": 4
+                  },
+                  {
+                    "tag": "locate_discovery",
+                    "title": "Locate DISCOVERY",
+                    "description": "Generate DISCOVERY manually",
+                    "min": 5,
+                    "max": 7
+                  },
+                  {
+                    "tag": "locate_resource",
+                    "description": "Locate RESOURCE",
+                    "min": 8,
+                    "max": 9,
+                    "additional": [
+                      "discovery.natural_feature.resource"
+                    ]
+                  },
+                  {
+                    "tag": "locate_treasure",
+                    "min": 10,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "investigate",
+                "min": 2,
+                "max": 2,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "stake_out_location",
+                    "title": "Stake out LOCATION",
+                    "min": 1,
+                    "max": 1
+                  },
+                  {
+                    "tag": "watch_npc",
+                    "title": "Watch/follow NPC",
+                    "description": "Generate NPC manually",
+                    "min": 2,
+                    "max": 3
+                  },
+                  {
+                    "tag": "search_location",
+                    "title": "Search LOCATION",
+                    "description": "There's no LOCATION generator in rules - improvise!",
+                    "min": 4,
+                    "max": 4
+                  },
+                  {
+                    "tag": "search_npc",
+                    "title": "Search NPC",
+                    "description": "Generate NPC manually",
+                    "min": 5,
+                    "max": 5
+                  },
+                  {
+                    "tag": "find_missing_item",
+                    "title": "Find missing ITEM",
+                    "min": 6,
+                    "max": 7,
+                    "additional": [
+                      "npc.activity.item"
+                    ]
+                  },
+                  {
+                    "tag": "find_missing_npc",
+                    "title": "Find missing NPC",
+                    "description": "Generate NPC manually",
+                    "min": 8,
+                    "max": 9
+                  },
+                  {
+                    "tag": "find_criminal",
+                    "title": "Find CRIMINAL",
+                    "description": "Generate CRIMINAL NPC manually",
+                    "min": 10,
+                    "max": 11
+                  },
+                  {
+                    "tag": "find_killer",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "deliver",
+                "min": 3,
+                "max": 4,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "deliver_bad_news",
+                    "title": "Deliver bad news to NPC",
+                    "description": "Generate NPC manually",
+                    "min": 1,
+                    "max": 1
+                  },
+                  {
+                    "tag": "deliver_message",
+                    "title": "Deliver message to NPC",
+                    "description": "Generate NPC manually",
+                    "min": 2,
+                    "max": 4
+                  },
+                  {
+                    "tag": "deliver_item",
+                    "title": "Deliver ITEM to NPC",
+                    "description": "Generate NPC manually",
+                    "min": 5,
+                    "max": 7,
+                    "additional": [
+                      "npc.activity.item"
+                    ]
+                  },
+                  {
+                    "tag": "escort_trade_caravan",
+                    "min": 8,
+                    "max": 9
+                  },
+                  {
+                    "tag": "escort_precious_cargo",
+                    "min": 10,
+                    "max": 10
+                  },
+                  {
+                    "tag": "escort_npc",
+                    "title": "Escort NPC",
+                    "description": "Generate NPC manually",
+                    "min": 11,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "fetch",
+                "min": 5,
+                "max": 8,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "obtain_oath",
+                    "title": "Obtain oath from NPC",
+                    "description": "Generate NPC manually",
+                    "min": 1,
+                    "max": 1
+                  },
+                  {
+                    "tag": "obtain_item",
+                    "title": "Obtain ITEM",
+                    "min": 2,
+                    "max": 3,
+                    "additional": [
+                      "npc.activity.item"
+                    ]
+                  },
+                  {
+                    "tag": "get_item_from_location",
+                    "title": "Get ITEM from LOCATION",
+                    "description": "There's no LOCATION generator in rules - improvise!",
+                    "min": 4,
+                    "max": 5,
+                    "additional": [
+                      "npc.activity.item"
+                    ]
+                  },
+                  {
+                    "tag": "get_item_from_npc",
+                    "title": "Get ITEM from NPC",
+                    "description": "Generate NPC manually",
+                    "min": 6,
+                    "max": 7,
+                    "additional": [
+                      "npc.activity.item"
+                    ]
+                  },
+                  {
+                    "tag": "capture_npc",
+                    "title": "Capture/abduct NPC",
+                    "description": "Generate NPC manually",
+                    "min": 8,
+                    "max": 8
+                  },
+                  {
+                    "tag": "capture_criminal",
+                    "title": "Capture CRIMINAL",
+                    "description": "Generate CRIMINAL NPC manually",
+                    "min": 9,
+                    "max": 10
+                  },
+                  {
+                    "tag": "rescue_npc",
+                    "title": "Rescue NPC",
+                    "description": "Generate NPC manually",
+                    "min": 11,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "protect",
+                "min": 9,
+                "max": 10,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "defend_personal_choices",
+                    "min": 1,
+                    "max": 1
+                  },
+                  {
+                    "tag": "defend_tenets_of_faith",
+                    "min": 2,
+                    "max": 2
+                  },
+                  {
+                    "tag": "patrol_area",
+                    "min": 3,
+                    "max": 3
+                  },
+                  {
+                    "tag": "patrol_trade_route",
+                    "min": 4,
+                    "max": 4
+                  },
+                  {
+                    "tag": "protect_item",
+                    "title": "Protect ITEM",
+                    "min": 5,
+                    "max": 7,
+                    "additional": [
+                      "npc.activity.item"
+                    ]
+                  },
+                  {
+                    "tag": "protect_location",
+                    "title": "Protect LOCATION",
+                    "description": "There's no LOCATION generator in rules - improvise!",
+                    "min": 8,
+                    "max": 9
+                  },
+                  {
+                    "tag": "protect_npc",
+                    "title": "Protect NPC",
+                    "description": "Generate NPC manually",
+                    "min": 10,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "eliminate",
+                "min": 11,
+                "max": 12,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "destroy_item",
+                    "title": "Destroy ITEM",
+                    "min": 1,
+                    "max": 2,
+                    "additional": [
+                      "npc.activity.item"
+                    ]
+                  },
+                  {
+                    "tag": "destroy_location",
+                    "title": "Destroy LOCATION",
+                    "description": "There's no LOCATION generator in rules - improvise!",
+                    "min": 3,
+                    "max": 4
+                  },
+                  {
+                    "tag": "slay_beast",
+                    "title": "Slay BEAST",
+                    "min": 5,
+                    "max": 6,
+                    "additional": [
+                      "creature.beast"
+                    ]
+                  },
+                  {
+                    "tag": "slay_monster",
+                    "title": "Slay MONSTER",
+                    "min": 7,
+                    "max": 8,
+                    "additional": [
+                      "creature.monster"
+                    ]
+                  },
+                  {
+                    "tag": "murder_npc",
+                    "title": "Murder NPC",
+                    "description": "Generate NPC manually",
+                    "min": 9,
+                    "max": 10
+                  },
+                  {
+                    "tag": "assassinate_official",
+                    "title": "Assassinate OFFICIAL",
+                    "description": "Generate OFFICIAL NPC manually",
+                    "min": 11,
+                    "max": 12
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "item",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "common_item",
+                "min": 1,
+                "max": 7,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "victim",
+                    "title": "Victim/corpse/remains",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "food",
+                    "title": "Food/drink/poison",
+                    "min": 3,
+                    "max": 3
+                  },
+                  {
+                    "tag": "flag",
+                    "title": "Flag/banner/symbol",
+                    "min": 4,
+                    "max": 4
+                  },
+                  {
+                    "tag": "lock",
+                    "title": "Lock/key/tool/utensil",
+                    "min": 5,
+                    "max": 5
+                  },
+                  {
+                    "tag": "information",
+                    "title": "Information/proof",
+                    "min": 6,
+                    "max": 8
+                  },
+                  {
+                    "tag": "book",
+                    "title": "Book/scroll/map",
+                    "min": 9,
+                    "max": 10
+                  },
+                  {
+                    "tag": "weapon",
+                    "title": "Weapon/armor",
+                    "min": 11,
+                    "max": 11
+                  },
+                  {
+                    "tag": "medical",
+                    "title": "Medical/healing supplies",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "valuable",
+                "min": 8,
+                "max": 10,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "trade_good",
+                    "title": "Trade good/cargo",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "heirloom",
+                    "title": "Heirloom/keepsake",
+                    "min": 3,
+                    "max": 4
+                  },
+                  {
+                    "tag": "purse",
+                    "title": "Purse/strongbox",
+                    "min": 5,
+                    "max": 6
+                  },
+                  {
+                    "tag": "painting",
+                    "title": "Painting/pottery",
+                    "min": 7,
+                    "max": 7
+                  },
+                  {
+                    "tag": "statuette",
+                    "title": "Statuette/idol",
+                    "min": 8,
+                    "max": 8
+                  },
+                  {
+                    "tag": "ring",
+                    "title": "Ring/bracelet/necklace",
+                    "min": 9,
+                    "max": 10
+                  },
+                  {
+                    "tag": "gem",
+                    "title": "Gem/jewel",
+                    "min": 11,
+                    "max": 11
+                  },
+                  {
+                    "tag": "medical",
+                    "title": "Medical/healing supplies",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "unusual_item",
+                "min": 11,
+                "max": 12,
+                "variants": [
+                  {
+                    "tag": "news_from_afar",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "animal",
+                    "title": "Animal/pet",
+                    "min": 3,
+                    "max": 3
+                  },
+                  {
+                    "tag": "rare_ingredient",
+                    "min": 4,
+                    "max": 5
+                  },
+                  {
+                    "tag": "scroll",
+                    "title": "Scroll/spellbook",
+                    "min": 6,
+                    "max": 7
+                  },
+                  {
+                    "tag": "holy_item",
+                    "title": "<i>Holy/magical</i> COMMON ITEM",
+                    "min": 8,
+                    "max": 9,
+                    "generate_outer": "npc.activity.item.common_item"
+                  },
+                  {
+                    "tag": "holy_item",
+                    "title": "<i>Holy/magical</i> VALUABLE",
+                    "min": 10,
+                    "max": 11,
+                    "generate_outer": "npc.activity.item.valuable"
+                  },
+                  {
+                    "tag": "holy_item",
+                    "title": "<i>Holy/magical</i> artifact",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
               }
             ]
           }
