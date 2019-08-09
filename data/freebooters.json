@@ -19741,6 +19741,141 @@
             ]
           }
         ]
+      },
+      {
+        "tag": "follower",
+        "dice": "d12",
+        "additional": [
+          "npc.follower.competence",
+          "npc.follower.loyalty",
+          "npc.follower.background"
+        ],
+        "dictionaries": [
+          {
+            "tag": "competence",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "liability",
+                "description": "Quality -2",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "incompetent",
+                "description": "Quality -1",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "competent",
+                "description": "Quality +0, +1 tag",
+                "min": 5,
+                "max": 8
+              },
+              {
+                "tag": "adept",
+                "description": "Quality +1, +2 tags",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "exceptional",
+                "description": "Quality +2, +2 tags",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "brilliant",
+                "description": "Quality +3, +4 tags",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "loyalty",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "desperate",
+                "title": "Desperate, ready to bolt",
+                "description": "Loyalty -2",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "doubtful_of_the_task_or_leader",
+                "title": "Doubtful of the task or leader",
+                "description": "Loyalty -1 ",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "resigned",
+                "title": "Resigned to their lot",
+                "description": "Loyalty +0",
+                "min": 4,
+                "max": 9
+              },
+              {
+                "tag": "dedicated",
+                "title": "Dedicated to the task or leader",
+                "description": "Loyalty +1",
+                "min": 10,
+                "max": 11
+              },
+              {
+                "tag": "devoted",
+                "title": "Devoted to the leader",
+                "description": "Loyalty +2",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "background",
+            "dice":  "d12",
+            "variants": [
+              {
+                "tag": "has_led_life_of_servitude",
+                "description": "+ <i>meek</i>",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "past_their_prime",
+                "description": "Quality -1, +1 <i>wise</i>",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "unremarkable",
+                "min": 5,
+                "max": 8
+              },
+              {
+                "tag": "has_led_privileged_life",
+                "description": "+1 tag",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "has_led_challenging_life",
+                "description": "+2 tags",
+                "min": 10,
+                "max": 11
+              },
+              {
+                "tag": "specialist",
+                "description": "Quality +1, -2 tags",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          }
+        ]
       }
     ]
   },
