@@ -16838,6 +16838,776 @@
     ]
   },
   {
+    "tag": "settlement",
+    "dice": "d12",
+    "variants": [
+      {
+        "tag": "hamlet",
+        "min": 1,
+        "max": 4,
+        "additional": [
+          "settlement.alignment",
+          "settlement.hamlet.feature",
+          "settlement.hamlet.problem"
+        ],
+        "dictionaries": [
+          {
+            "tag": "feature",
+            "dice": "d6",
+            "variants": [
+              {
+                "tag": "aspect",
+                "title": "Idiosyncratic ASPECT",
+                "min": 1,
+                "max": 2,
+                "additional": [
+                  "settlement.hamlet.aspect"
+                ]
+              },
+              {
+                "tag": "landmark",
+                "title": "Noted LANDMARK",
+                "min": 3,
+                "max": 4,
+                "additional": [
+                  "settlement.hamlet.landmark"
+                ]
+              },
+              {
+                "tag": "event",
+                "title": "Site of past EVENT",
+                "min": 5,
+                "max": 5,
+                "additional": [
+                  "settlement.hamlet.event"
+                ]
+              },
+              {
+                "tag": "person",
+                "title": "Home of renowned PERSON",
+                "min": 6,
+                "max": 6,
+                "additional": [
+                  "settlement.hamlet.person"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "problem",
+            "dice": "d6",
+            "variants": [
+              {
+                "tag": "nothing",
+                "title": "Nothing of note",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "shortage",
+                "title": "<i>Shortage</i> (RESOURCE)",
+                "min": 3,
+                "max": 4,
+                "additional": [
+                  "settlement.hamlet.resource"
+                ]
+              },
+              {
+                "tag": "disease",
+                "title": "<i>Disease</i>",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "threat",
+                "title": "<i>Threat</i> (THREAT)",
+                "min": 6,
+                "max": 6,
+                "additional": [
+                  "settlement.hamlet.threat"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "aspect",
+            "dice": "d6",
+            "variants": [
+              {
+                "tag": "food",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "clothing",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "custom",
+                "title": "Custom/tradition",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "architecture",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "livestock",
+                "title": "Livestok/mounts",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "local_craft",
+                "min": 6,
+                "max": 6
+              }
+            ]
+          },
+          {
+            "tag": "landmark",
+            "dice": "d6",
+            "variants": [
+              {
+                "tag": "distinct_natural_feature",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "unusual_terrain",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "pit",
+                "title": "Pit/mine/quarry",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "barrow",
+                "title": "Barrow/burial mound",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "Statue",
+                "title": "Statue/shrine/menhir",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "ruins",
+                "min": 6,
+                "max": 6
+              }
+            ]
+          },
+          {
+            "tag": "event",
+            "dice": "d6",
+            "variants": [
+              {
+                "tag": "murder",
+                "title": "Murder/massacre",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "fire",
+                "title": "Fire/flood/quake",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "battle",
+                "title": "Battle/fracas",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "exile",
+                "title": "Exile/ostracization",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "confrontation",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "arrival",
+                "title": "Arrival of PERSON",
+                "min": 6,
+                "max": 6,
+                "additional": [
+                  "settlement.hamlet.person"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "person",
+            "dice": "d6",
+            "variants": [
+              {
+                "tag": "hermit",
+                "title": "Hermit/recluse",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "outlaw",
+                "title": "Outlaw/criminal",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "exile",
+                "title": "Exile/runaway",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "hero",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "seer",
+                "title": "Seer/shaman/witch",
+                "min": 6,
+                "max": 6
+              }
+            ]
+          },
+          {
+            "tag": "resource",
+            "dice": "d6",
+            "variants": [
+              {
+                "tag": "water",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "food",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "population",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "fuel",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "building_material",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "morale",
+                "min": 6,
+                "max": 6
+              }
+            ]
+          },
+          {
+            "tag": "threat",
+            "dice": "d6",
+            "variants": [
+              {
+                "tag": "fire",
+                "title": "Fire/flood",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "internal_conflict",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "bandits",
+                "title": "Bandit/raiders",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "nearby_settlement",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "creature",
+                "title": "CREATURE",
+                "min": 5,
+                "max": 5,
+                "additional": [
+                  "creature"
+                ]
+              },
+              {
+                "tag": "monster",
+                "title": "MONSTER",
+                "min": 6,
+                "max": 6,
+                "additional": [
+                  "creature.monster"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "village",
+        "min": 5,
+        "max": 7,
+        "additional": [
+          "settlement.alignment",
+          "settlement.village.feature",
+          "settlement.village.feature",
+          "settlement.village.problem"
+        ],
+        "dictionaries": [
+          {
+            "tag": "feature",
+            "dice": "d8",
+            "variants": [
+              {
+                "tag": "aspect",
+                "title": "Idiosyncratic ASPECT",
+                "min": 1,
+                "max": 2,
+                "additional": [
+                  "settlement.village.aspect"
+                ]
+              },
+              {
+                "tag": "landmark",
+                "title": "Noted LANDMARK",
+                "min": 3,
+                "max": 3,
+                "additional": [
+                  "settlement.village.landmark"
+                ]
+              },
+              {
+                "tag": "event",
+                "title": "Site of past EVENT",
+                "min": 4,
+                "max": 4,
+                "additional": [
+                  "settlement.village.event"
+                ]
+              },
+              {
+                "tag": "person",
+                "title": "Home of renowned PERSON",
+                "min": 5,
+                "max": 5,
+                "additional": [
+                  "settlement.village.person"
+                ]
+              },
+              {
+                "tag": "defensible",
+                "title": "<i>Defensible</i> (due to terrain)",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "resource",
+                "title": "<i>Resource</i> (RESOURCE)",
+                "min": 7,
+                "max": 7,
+                "additional": [
+                  "settlement.village.resource"
+                ]
+              },
+              {
+                "tag": "roll_twice",
+                "title": "Roll 1d6+1 twice",
+                "min": 8,
+                "max": 8,
+                "additional": [
+                  [
+                    "settlement.village.feature",
+                    "d6+1"
+                  ],
+                  [
+                    "settlement.village.feature",
+                    "d6+1"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "problem",
+            "dice": "d8",
+            "variants": [
+              {
+                "tag": "nothing",
+                "title": "Nothing of note",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "shortage",
+                "title": "<i>Shortage</i> (RESOURCE)",
+                "min": 2,
+                "max": 3,
+                "additional": [
+                  "settlement.village.resource"
+                ]
+              },
+              {
+                "tag": "disease",
+                "title": "<i>Disease</i>",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "threat",
+                "title": "<i>Threat</i> (THREAT)",
+                "min": 5,
+                "max": 5,
+                "additional": [
+                  "settlement.village.threat"
+                ]
+              },
+              {
+                "tag": "unrest",
+                "title": "<i>Unrest</i>",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "lawless",
+                "title": "<i>Lawless</i>",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "roll_twice",
+                "title": "Roll 1d6+1 twice",
+                "min": 8,
+                "max": 8,
+                "additional": [
+                  [
+                    "settlement.village.problem",
+                    "d6+1"
+                  ],
+                  [
+                    "settlement.village.problem",
+                    "d6+1"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "aspect",
+            "dice": "d6",
+            "variants": [
+              {
+                "tag": "food",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "clothing",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "custom",
+                "title": "Custom/tradition",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "architecture",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "livestock",
+                "title": "Livestok/mounts",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "local_craft",
+                "min": 6,
+                "max": 6
+              }
+            ]
+          },
+          {
+            "tag": "landmark",
+            "dice": "d6",
+            "variants": [
+              {
+                "tag": "distinct_natural_feature",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "unusual_terrain",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "pit",
+                "title": "Pit/mine/quarry",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "barrow",
+                "title": "Barrow/burial mound",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "Statue",
+                "title": "Statue/shrine/menhir",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "ruins",
+                "min": 6,
+                "max": 6
+              }
+            ]
+          },
+          {
+            "tag": "event",
+            "dice": "d6",
+            "variants": [
+              {
+                "tag": "murder",
+                "title": "Murder/massacre",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "fire",
+                "title": "Fire/flood/quake",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "battle",
+                "title": "Battle/fracas",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "exile",
+                "title": "Exile/ostracization",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "confrontation",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "arrival",
+                "title": "Arrival of PERSON",
+                "min": 6,
+                "max": 6,
+                "additional": [
+                  "settlement.hamlet.person"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "person",
+            "dice": "d6",
+            "variants": [
+              {
+                "tag": "hermit",
+                "title": "Hermit/recluse",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "outlaw",
+                "title": "Outlaw/criminal",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "exile",
+                "title": "Exile/runaway",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "hero",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "seer",
+                "title": "Seer/shaman/witch",
+                "min": 6,
+                "max": 6
+              }
+            ]
+          },
+          {
+            "tag": "resource",
+            "dice": "d6",
+            "variants": [
+              {
+                "tag": "water",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "food",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "population",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "fuel",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "building_material",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "morale",
+                "min": 6,
+                "max": 6
+              }
+            ]
+          },
+          {
+            "tag": "threat",
+            "dice": "d6",
+            "variants": [
+              {
+                "tag": "fire",
+                "title": "Fire/flood",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "internal_conflict",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "bandits",
+                "title": "Bandit/raiders",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "nearby_settlement",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "creature",
+                "title": "CREATURE",
+                "min": 5,
+                "max": 5,
+                "additional": [
+                  "creature"
+                ]
+              },
+              {
+                "tag": "monster",
+                "title": "MONSTER",
+                "min": 6,
+                "max": 6,
+                "additional": [
+                  "creature.monster"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "keep",
+        "min": 8,
+        "max": 9
+      },
+      {
+        "tag": "town",
+        "min": 10,
+        "max": 11
+      },
+      {
+        "tag": "city",
+        "min": 12,
+        "max": 12
+      }
+    ],
+    "dictionaries": [
+      {
+        "tag": "alignment",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "good",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "tag": "lawful",
+            "min": 3,
+            "max": 4
+          },
+          {
+            "tag": "neutral",
+            "min": 5,
+            "max": 8
+          },
+          {
+            "tag": "chaotic",
+            "min": 9,
+            "max": 10
+          },
+          {
+            "tag": "evil",
+            "min": 11,
+            "max": 12
+          }
+        ]
+      }
+    ]
+  },
+  {
     "tag": "npc",
     "description": "Currently serves only as collection of sub-entities, full generation will be created later",
     "dictionaries": [
