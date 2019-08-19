@@ -16994,7 +16994,7 @@
                 "max": 4
               },
               {
-                "tag": "Statue",
+                "tag": "Ssatue",
                 "title": "Statue/shrine/menhir",
                 "min": 5,
                 "max": 5
@@ -17319,7 +17319,7 @@
           },
           {
             "tag": "aspect",
-            "dice": "d6",
+            "dice": "d8",
             "variants": [
               {
                 "tag": "food",
@@ -17352,12 +17352,23 @@
                 "tag": "local_craft",
                 "min": 6,
                 "max": 6
+              },
+              {
+                "tag": "form",
+                "title": "Form/structure",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "religious_practice",
+                "min": 8,
+                "max": 8
               }
             ]
           },
           {
             "tag": "landmark",
-            "dice": "d6",
+            "dice": "d8",
             "variants": [
               {
                 "tag": "distinct_natural_feature",
@@ -17382,7 +17393,7 @@
                 "max": 4
               },
               {
-                "tag": "Statue",
+                "tag": "statue",
                 "title": "Statue/shrine/menhir",
                 "min": 5,
                 "max": 5
@@ -17391,12 +17402,24 @@
                 "tag": "ruins",
                 "min": 6,
                 "max": 6
+              },
+              {
+                "tag": "temple",
+                "title": "Temple/tomb/monastery",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "tower",
+                "title": "Tower/watchtower",
+                "min": 8,
+                "max": 8
               }
             ]
           },
           {
             "tag": "event",
-            "dice": "d6",
+            "dice": "d8",
             "variants": [
               {
                 "tag": "murder",
@@ -17433,14 +17456,28 @@
                 "min": 6,
                 "max": 6,
                 "additional": [
-                  "settlement.hamlet.person"
+                  "settlement.village.person"
                 ]
+              },
+              {
+                "tag": "discovery",
+                "title": "Discovery (RESOURCE)",
+                "min": 7,
+                "max": 7,
+                "additional": [
+                  "settlement.village.resource"
+                ]
+              },
+              {
+                "tag": "decree",
+                "min": 8,
+                "max": 8
               }
             ]
           },
           {
             "tag": "person",
-            "dice": "d6",
+            "dice": "d8",
             "variants": [
               {
                 "tag": "hermit",
@@ -17462,6 +17499,7 @@
               },
               {
                 "tag": "hero",
+                "title": "Hero/healer",
                 "min": 5,
                 "max": 5
               },
@@ -17470,12 +17508,24 @@
                 "title": "Seer/shaman/witch",
                 "min": 6,
                 "max": 6
+              },
+              {
+                "tag": "trader",
+                "title": "Trader/pedlar",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "minstrel",
+                "title": "Minstrel/bard",
+                "min": 8,
+                "max": 8
               }
             ]
           },
           {
             "tag": "resource",
-            "dice": "d6",
+            "dice": "d8",
             "variants": [
               {
                 "tag": "water",
@@ -17506,16 +17556,28 @@
                 "tag": "morale",
                 "min": 6,
                 "max": 6
+              },
+              {
+                "tag": "wood",
+                "title": "Wood/clay/leather",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "copper",
+                "title": "Copper/tin/iron",
+                "min": 8,
+                "max": 8
               }
             ]
           },
           {
             "tag": "threat",
-            "dice": "d6",
+            "dice": "d8",
             "variants": [
               {
-                "tag": "fire",
-                "title": "Fire/flood",
+                "tag": "entropy",
+                "title": "Entropy/environmental",
                 "min": 1,
                 "max": 1
               },
@@ -17528,18 +17590,18 @@
                 "tag": "bandits",
                 "title": "Bandit/raiders",
                 "min": 3,
-                "max": 3
+                "max": 4
               },
               {
                 "tag": "nearby_settlement",
-                "min": 4,
-                "max": 4
+                "min": 5,
+                "max": 5
               },
               {
                 "tag": "creature",
                 "title": "CREATURE",
-                "min": 5,
-                "max": 5,
+                "min": 6,
+                "max": 6,
                 "additional": [
                   "creature"
                 ]
@@ -17547,11 +17609,16 @@
               {
                 "tag": "monster",
                 "title": "MONSTER",
-                "min": 6,
-                "max": 6,
+                "min": 7,
+                "max": 7,
                 "additional": [
                   "creature.monster"
                 ]
+              },
+              {
+                "tag": "enemy_force",
+                "min": 8,
+                "max": 8
               }
             ]
           }
