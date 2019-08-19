@@ -17627,7 +17627,438 @@
       {
         "tag": "keep",
         "min": 8,
-        "max": 9
+        "max": 9,
+        "additional": [
+          "settlement.alignment",
+          "settlement.keep.feature",
+          "settlement.keep.feature",
+          "settlement.keep.feature",
+          "settlement.keep.problem",
+          "settlement.keep.problem"
+        ],
+        "dictionaries": [
+          {
+            "tag": "feature",
+            "dice": "d8",
+            "variants": [
+              {
+                "tag": "aspect",
+                "title": "Idiosyncratic ASPECT",
+                "min": 1,
+                "max": 1,
+                "additional": [
+                  "settlement.keep.aspect"
+                ]
+              },
+              {
+                "tag": "landmark",
+                "title": "Noted LANDMARK",
+                "min": 2,
+                "max": 2,
+                "additional": [
+                  "settlement.keep.landmark"
+                ]
+              },
+              {
+                "tag": "event",
+                "title": "Site of past EVENT",
+                "min": 3,
+                "max": 3,
+                "additional": [
+                  "settlement.keep.event"
+                ]
+              },
+              {
+                "tag": "person",
+                "title": "Home of renowned PERSON",
+                "min": 4,
+                "max": 4,
+                "additional": [
+                  "settlement.keep.person"
+                ]
+              },
+              {
+                "tag": "defensible",
+                "title": "<i>Defensible</i> (due to terrain)",
+                "min": 4,
+                "max": 6
+              },
+              {
+                "tag": "resource",
+                "title": "<i>Resource</i> (RESOURCE)",
+                "min": 7,
+                "max": 7,
+                "additional": [
+                  "settlement.keep.resource"
+                ]
+              },
+              {
+                "tag": "roll_twice",
+                "title": "Roll 1d6+1 twice",
+                "min": 8,
+                "max": 8,
+                "additional": [
+                  [
+                    "settlement.keep.feature",
+                    "d6+1"
+                  ],
+                  [
+                    "settlement.keep.feature",
+                    "d6+1"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "problem",
+            "dice": "d8",
+            "variants": [
+              {
+                "tag": "nothing",
+                "title": "Nothing of note",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "shortage",
+                "title": "<i>Shortage</i> (RESOURCE)",
+                "min": 2,
+                "max": 2,
+                "additional": [
+                  "settlement.keep.resource"
+                ]
+              },
+              {
+                "tag": "disease",
+                "title": "<i>Disease</i>",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "threat",
+                "title": "<i>Threat</i> (THREAT)",
+                "min": 4,
+                "max": 4,
+                "additional": [
+                  "settlement.keep.threat"
+                ]
+              },
+              {
+                "tag": "unrest",
+                "title": "<i>Unrest</i>",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "mismanaged",
+                "title": "<i>Mismanaged</i>",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "overcrowded",
+                "title": "<i>Overcrowded</i>",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "roll_twice",
+                "title": "Roll 1d6+1 twice",
+                "min": 8,
+                "max": 8,
+                "additional": [
+                  [
+                    "settlement.keep.problem",
+                    "d6+1"
+                  ],
+                  [
+                    "settlement.keep.problem",
+                    "d6+1"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "aspect",
+            "dice": "d8",
+            "variants": [
+              {
+                "tag": "food",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "clothing",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "custom",
+                "title": "Custom/tradition",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "architecture",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "livestock",
+                "title": "Livestok/mounts",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "local_craft",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "fortification",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "religious_practice",
+                "min": 8,
+                "max": 8
+              }
+            ]
+          },
+          {
+            "tag": "landmark",
+            "dice": "d8",
+            "variants": [
+              {
+                "tag": "distinct_natural_feature",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "unusual_terrain",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "pit",
+                "title": "Pit/mine/quarry",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "barrow",
+                "title": "Barrow/burial mound",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "statue",
+                "title": "Statue/shrine/menhir",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "ruins",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "temple",
+                "title": "Temple/tomb/monastery",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "tower",
+                "title": "Tower/watchtower",
+                "min": 8,
+                "max": 8
+              }
+            ]
+          },
+          {
+            "tag": "event",
+            "dice": "d8",
+            "variants": [
+              {
+                "tag": "fire",
+                "title": "Fire/flood/quake",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "battle",
+                "title": "Battle/siege",
+                "min": 2,
+                "max": 4
+              },
+              {
+                "tag": "confrontation",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "arrival",
+                "title": "Arrival of PERSON",
+                "min": 6,
+                "max": 6,
+                "additional": [
+                  "settlement.keep.person"
+                ]
+              },
+              {
+                "tag": "discovery",
+                "title": "Discovery (RESOURCE)",
+                "min": 7,
+                "max": 7,
+                "additional": [
+                  "settlement.keep.resource"
+                ]
+              },
+              {
+                "tag": "decree",
+                "min": 8,
+                "max": 8
+              }
+            ]
+          },
+          {
+            "tag": "person",
+            "dice": "d8",
+            "variants": [
+              {
+                "tag": "outlaw",
+                "title": "Outlaw/criminal",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "tradesperson",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "merchant",
+                "title": "Merchant/guildmaster",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "hero",
+                "title": "Hero/healer",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "priest",
+                "title": "Priest/prophet",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "wizard",
+                "title": "Wizard/witch",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "leader",
+                "title": "Leader/warlord/general",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "noble",
+                "title": "Noble/authority figure",
+                "min": 8,
+                "max": 8
+              }
+            ]
+          },
+          {
+            "tag": "resource",
+            "dice": "d8",
+            "variants": [
+              {
+                "tag": "water",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "food",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "wool",
+                "title": "Wool/cotton/flax",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "wood",
+                "title": "Wood/stone",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "clay",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "morale",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "copper",
+                "title": "Copper/tin/iron",
+                "min": 7,
+                "max": 8
+              }
+            ]
+          },
+          {
+            "tag": "threat",
+            "dice": "d8",
+            "variants": [
+              {
+                "tag": "entropy",
+                "title": "Entropy/environmental",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "internal_conflict",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "nearby_settlement",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "monster",
+                "title": "MONSTER",
+                "min": 5,
+                "max": 6,
+                "additional": [
+                  "creature.monster"
+                ]
+              },
+              {
+                "tag": "enemy_force",
+                "min": 7,
+                "max": 8
+              }
+            ]
+          }
+        ]
       },
       {
         "tag": "town",
