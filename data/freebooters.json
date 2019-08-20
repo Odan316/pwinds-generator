@@ -17680,7 +17680,7 @@
               {
                 "tag": "defensible",
                 "title": "<i>Defensible</i> (due to terrain)",
-                "min": 4,
+                "min": 5,
                 "max": 6
               },
               {
@@ -18063,7 +18063,791 @@
       {
         "tag": "town",
         "min": 10,
-        "max": 11
+        "max": 11,
+        "additional": [
+          "settlement.alignment",
+          "settlement.town.feature",
+          "settlement.town.feature",
+          "settlement.town.feature",
+          "settlement.town.feature",
+          "settlement.town.problem",
+          "settlement.town.problem",
+          "settlement.town.problem",
+          {
+            "tag": "faction",
+            "static" : "Governmental"
+          },
+          {
+            "tag": "faction",
+            "repeat": "d4",
+            "generate_outer": "settlement.town.faction"
+          },
+          [
+            "settlement.town.district",
+            "8"
+          ],
+          {
+            "tag": "district",
+            "repeat": "d4",
+            "generate_outer": "settlement.town.district"
+          }
+        ],
+        "dictionaries": [
+          {
+            "tag": "feature",
+            "dice": "d10",
+            "variants": [
+              {
+                "tag": "aspect",
+                "title": "Idiosyncratic ASPECT",
+                "min": 1,
+                "max": 1,
+                "additional": [
+                  "settlement.town.aspect"
+                ]
+              },
+              {
+                "tag": "landmark",
+                "title": "Noted LANDMARK",
+                "min": 2,
+                "max": 2,
+                "additional": [
+                  "settlement.town.landmark"
+                ]
+              },
+              {
+                "tag": "event",
+                "title": "Site of past EVENT",
+                "min": 3,
+                "max": 3,
+                "additional": [
+                  "settlement.town.event"
+                ]
+              },
+              {
+                "tag": "defensible",
+                "title": "<i>Defensible</i> (due to terrain)",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "resource",
+                "title": "<i>Resource</i> (RESOURCE)",
+                "min": 5,
+                "max": 5,
+                "additional": [
+                  "settlement.town.resource"
+                ]
+              },
+              {
+                "tag": "fortified",
+                "title": "<i>Fortified</i>",
+                "min": 6,
+                "max": 8
+              },
+              {
+                "tag": "booming",
+                "title": "<i>Booming</i>",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "roll_twice",
+                "title": "Roll 1d8+1 twice",
+                "min": 10,
+                "max": 10,
+                "additional": [
+                  [
+                    "settlement.town.feature",
+                    "d8+1"
+                  ],
+                  [
+                    "settlement.town.feature",
+                    "d8+1"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "problem",
+            "dice": "d10",
+            "variants": [
+              {
+                "tag": "nothing",
+                "title": "Nothing of note",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "shortage",
+                "title": "<i>Shortage</i> (RESOURCE)",
+                "min": 2,
+                "max": 3,
+                "additional": [
+                  "settlement.town.resource"
+                ]
+              },
+              {
+                "tag": "disease",
+                "title": "<i>Disease</i>",
+                "min": 4,
+                "max": 5
+              },
+              {
+                "tag": "threat",
+                "title": "<i>Threat</i> (THREAT)",
+                "min": 6,
+                "max": 6,
+                "additional": [
+                  "settlement.town.threat"
+                ]
+              },
+              {
+                "tag": "unrest",
+                "title": "<i>Unrest</i>",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "lawless",
+                "title": "<i>Lawless</i>",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "overcrowded",
+                "title": "<i>Overcrowded</i>",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "roll_twice",
+                "title": "Roll 1d8+1 twice",
+                "min": 10,
+                "max": 10,
+                "additional": [
+                  [
+                    "settlement.town.problem",
+                    "d8+1"
+                  ],
+                  [
+                    "settlement.town.problem",
+                    "d8+1"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "aspect",
+            "dice": "d10",
+            "variants": [
+              {
+                "tag": "food",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "clothing",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "custom",
+                "title": "Custom/tradition",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "architecture",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "livestock",
+                "title": "Livestok/mounts",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "local_craft",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "fortification",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "religious_practice",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "fighting",
+                "title": "Fighting/spellcasting style",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "hierarchy",
+                "title": "Hierarchy/organisation",
+                "min": 10,
+                "max": 10
+              }
+            ]
+          },
+          {
+            "tag": "landmark",
+            "dice": "d10",
+            "variants": [
+              {
+                "tag": "distinct_natural_feature",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "unusual_terrain",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "pit",
+                "title": "Pit/mine/quarry",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "barrow",
+                "title": "Barrow/burial mound",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "statue",
+                "title": "Statue/shrine/menhir",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "ruins",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "temple",
+                "title": "Temple/tomb/monastery",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "tower",
+                "title": "Tower/watchtower",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "marketplace",
+                "title": "Marketplace/bazaar",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "academy",
+                "title": "Academy/university",
+                "min": 10,
+                "max": 10
+              }
+            ]
+          },
+          {
+            "tag": "event",
+            "dice": "d8",
+            "variants": [
+              {
+                "tag": "fire",
+                "title": "Fire/flood/quake",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "rebellion",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "battle",
+                "title": "Battle/siege",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "confrontation",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "arrival",
+                "title": "Arrival of PERSON",
+                "min": 6,
+                "max": 6,
+                "additional": [
+                  "settlement.town.person"
+                ]
+              },
+              {
+                "tag": "discovery",
+                "title": "Discovery (RESOURCE)",
+                "min": 7,
+                "max": 7,
+                "additional": [
+                  "settlement.town.resource"
+                ]
+              },
+              {
+                "tag": "decree",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "death",
+                "title": "Death of PERSON",
+                "min": 9,
+                "max": 9,
+                "additional": [
+                  "settlement.town.person"
+                ]
+              },
+              {
+                "tag": "turning_point",
+                "min": 10,
+                "max": 10
+              }
+            ]
+          },
+          {
+            "tag": "person",
+            "dice": "d10",
+            "variants": [
+              {
+                "tag": "outlaw",
+                "title": "Outlaw/criminal",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "tradesperson",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "merchant",
+                "title": "Merchant/guildmaster",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "hero",
+                "title": "Hero/healer",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "priest",
+                "title": "Priest/prophet",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "wizard",
+                "title": "Wizard/witch",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "scholar",
+                "title": "Scholar/philosopher",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "leader",
+                "title": "Leader/warlord/general",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "governor",
+                "title": "Governor/magistrate",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "noble",
+                "title": "Noble/authority figure",
+                "min": 10,
+                "max": 10
+              }
+            ]
+          },
+          {
+            "tag": "resource",
+            "dice": "d10",
+            "variants": [
+              {
+                "tag": "food",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "salt",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "wool",
+                "title": "Wool/cotton/flax",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "wood",
+                "title": "Wood/stone",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "clay",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "herbs",
+                "title": "Herbs/spices/dye",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "copper",
+                "title": "Copper/tin",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "iron",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "silver",
+                "title": "Silver/gold/gems",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "arcane_resource",
+                "min": 10,
+                "max": 10
+              }
+            ]
+          },
+          {
+            "tag": "threat",
+            "dice": "d10",
+            "variants": [
+              {
+                "tag": "environmental",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "criminal",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "internal_conflict",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "faction",
+                "title": "FACTION",
+                "min": 4,
+                "max": 4,
+                "additional": [
+                  "settlement.town.faction"
+                ]
+              },
+              {
+                "tag": "corruption",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "nearby_settlement",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "monster",
+                "title": "MONSTER",
+                "min": 7,
+                "max": 7,
+                "additional": [
+                  "creature.monster"
+                ]
+              },
+              {
+                "tag": "enemy_force",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "invaders",
+                "title": "Invaders/raiders",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "warlord",
+                "title": "Warlord/villain",
+                "min": 10,
+                "max": 10
+              }
+            ]
+          },
+          {
+            "tag": "faction",
+            "dice": "d10",
+            "variants": [
+              {
+                "tag": "commoner",
+                "title": "Commoner/peasant",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "criminal",
+                "title": "Criminal/corrupt",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "revolutionary",
+                "title": "Revolutionary/subversive",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "military",
+                "title": "Military/mercenary/security",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "religious",
+                "title": "Religious/theological",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "craft",
+                "title": "Craft/guild/mercantile",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "nationalist",
+                "title": "Nationalist/loyalist",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "outsider",
+                "title": "Outsider/foreign",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "academic",
+                "title": "Academic/arcane",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "roll_twice",
+                "title": "Roll 1d8+1 twice, combine",
+                "min": 10,
+                "max": 10,
+                "additional":  [
+                  [
+                    "settlement.town.faction",
+                    "d8+1"
+                  ],
+                  [
+                    "settlement.town.faction",
+                    "d8+1"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "district",
+            "dice": "d10",
+            "variants": [
+              {
+                "tag": "government",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "religious",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "wealthy",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "market",
+                "min": 5,
+                "max": 7
+              },
+              {
+                "tag": "poor",
+                "min": 8,
+                "max": 10
+              }
+            ],
+            "additional": [
+              "settlement.town.district.feature",
+              "settlement.town.district.problem"
+            ],
+            "dictionaries": [
+              {
+                "tag": "feature",
+                "dice": "d10",
+                "variants": [
+                  {
+                    "tag": "aspect",
+                    "title": "Idiosyncratic architecture",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "landmark",
+                    "title": "Noted LANDMARK",
+                    "min": 3,
+                    "max": 5,
+                    "additional": [
+                      "settlement.town.landmark"
+                    ]
+                  },
+                  {
+                    "tag": "event",
+                    "title": "Site of past EVENT",
+                    "min": 6,
+                    "max": 6,
+                    "additional": [
+                      "settlement.town.event"
+                    ]
+                  },
+                  {
+                    "tag": "person",
+                    "title": "Home of renowned PERSON",
+                    "min": 7,
+                    "max": 8,
+                    "additional": [
+                      "settlement.town.person"
+                    ]
+                  },
+                  {
+                    "tag": "person",
+                    "title": "Home of powerful FACTION",
+                    "min": 9,
+                    "max": 9,
+                    "additional": [
+                      "settlement.town.faction"
+                    ]
+                  },
+                  {
+                    "tag": "roll_twice",
+                    "title": "Roll 1d8+1 twice",
+                    "min": 10,
+                    "max": 10,
+                    "additional": [
+                      [
+                        "settlement.town.district.feature",
+                        "d8+1"
+                      ],
+                      [
+                        "settlement.town.district.feature",
+                        "d8+1"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "problem",
+                "dice": "d10",
+                "variants": [
+                  {
+                    "tag": "disease",
+                    "title": "<i>Disease</i>",
+                    "min": 1,
+                    "max": 3
+                  },
+                  {
+                    "tag": "factions_at_war",
+                    "min": 4,
+                    "max": 4
+                  },
+                  {
+                    "tag": "unrest",
+                    "title": "<i>Unrest</i>",
+                    "min": 5,
+                    "max": 7
+                  },
+                  {
+                    "tag": "lawless",
+                    "title": "<i>Lawless</i>",
+                    "min": 8,
+                    "max": 8
+                  },
+                  {
+                    "tag": "overcrowded",
+                    "title": "<i>Overcrowded</i>",
+                    "min": 9,
+                    "max": 9
+                  },
+                  {
+                    "tag": "roll_twice",
+                    "title": "Roll 1d8+1 twice",
+                    "min": 10,
+                    "max": 10,
+                    "additional": [
+                      [
+                        "settlement.town.district.problem",
+                        "d8+1"
+                      ],
+                      [
+                        "settlement.town.district.problem",
+                        "d8+1"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "tag": "city",
