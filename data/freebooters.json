@@ -19669,6 +19669,1035 @@
             "max": 12
           }
         ]
+      },
+      {
+        "tag": "event",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "unnatural",
+            "min": 1,
+            "max": 1,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "divine",
+                "min": 1,
+                "max": 1,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "omen",
+                    "min": 1,
+                    "max": 7
+                  },
+                  {
+                    "tag": "bane",
+                    "title": "Intervention, bane",
+                    "min": 8,
+                    "max": 9
+                  },
+                  {
+                    "tag": "boon",
+                    "title": "Intervention, boon",
+                    "min": 10,
+                    "max": 10
+                  },
+                  {
+                    "tag": "possession",
+                    "min": 11,
+                    "max": 11
+                  },
+                  {
+                    "tag": "avatar_appears",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "planar",
+                "title": "Planar/infernal",
+                "min": 2,
+                "max": 3,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "vibration",
+                    "min": 1,
+                    "max": 3
+                  },
+                  {
+                    "tag": "manifestation",
+                    "title": "Manifestation (ODDITY)",
+                    "min": 4,
+                    "max": 6,
+                    "additional": [
+                      "details.oddity"
+                    ]
+                  },
+                  {
+                    "tag": "presence",
+                    "min": 7,
+                    "max": 9
+                  },
+                  {
+                    "tag": "possession",
+                    "min": 10,
+                    "max": 10
+                  },
+                  {
+                    "tag": "planar_rift",
+                    "min": 11,
+                    "max": 11
+                  },
+                  {
+                    "tag": "invasion_force",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "arcane",
+                "min": 4,
+                "max": 12,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "spell_gone_awry",
+                    "min": 1,
+                    "max": 6
+                  },
+                  {
+                    "tag": "disturbance",
+                    "title": "Disturbance (ODDITY)",
+                    "min": 7,
+                    "max": 9,
+                    "additional": [
+                      "details.oddity"
+                    ]
+                  },
+                  {
+                    "tag": "wizard_duel",
+                    "min": 10,
+                    "max": 11
+                  },
+                  {
+                    "tag": "catastrophe",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "natural",
+            "min": 2,
+            "max": 2,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "astral",
+                "min": 2,
+                "max": 2,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "constellation_ascendant",
+                    "min": 1,
+                    "max": 3
+                  },
+                  {
+                    "tag": "astrological_omen",
+                    "min": 4,
+                    "max": 6
+                  },
+                  {
+                    "tag": "planetary_alignment",
+                    "min": 7,
+                    "max": 8
+                  },
+                  {
+                    "tag": "meteor_shower",
+                    "min": 9,
+                    "max": 10
+                  },
+                  {
+                    "tag": "eclipse",
+                    "min": 11,
+                    "max": 11
+                  },
+                  {
+                    "tag": "meteor_strike",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "tectonic",
+                "min": 2,
+                "max": 2,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "tremor",
+                    "min": 1,
+                    "max": 4
+                  },
+                  {
+                    "tag": "sinkhole",
+                    "min": 5,
+                    "max": 7
+                  },
+                  {
+                    "tag": "earthquake",
+                    "min": 8,
+                    "max": 9
+                  },
+                  {
+                    "tag": "rift_in_earth_appears",
+                    "min": 10,
+                    "max": 10
+                  },
+                  {
+                    "tag": "volcanic_activity",
+                    "min": 11,
+                    "max": 11
+                  },
+                  {
+                    "tag": "volcanic_eruption",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "seasonal",
+                "min": 2,
+                "max": 2,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "variant_1",
+                    "min": 1,
+                    "max": 4,
+                    "additional": [
+                      {
+                        "tag": "spring",
+                        "static": "Thick fog/mist"
+                      },
+                      {
+                        "tag": "summer",
+                        "static": "Welcome rain"
+                      },
+                      {
+                        "tag": "fall",
+                        "static": "Good harvest"
+                      },
+                      {
+                        "tag": "winter",
+                        "static": "Unseasonably warm"
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "variant_2",
+                    "min": 5,
+                    "max": 8,
+                    "additional": [
+                      {
+                        "tag": "spring",
+                        "static": "Rainstorms"
+                      },
+                      {
+                        "tag": "summer",
+                        "static": "Heat wave"
+                      },
+                      {
+                        "tag": "fall",
+                        "static": "Migrations/swarms"
+                      },
+                      {
+                        "tag": "winter",
+                        "static": "Extremely cold"
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "variant_3",
+                    "min": 9,
+                    "max": 10,
+                    "additional": [
+                      {
+                        "tag": "spring",
+                        "title": "Spring: CREATURE activity",
+                        "additional": [
+                          "creature"
+                        ]
+                      },
+                      {
+                        "tag": "summer",
+                        "static": "Drought"
+                      },
+                      {
+                        "tag": "fall",
+                        "static": "Windstorms"
+                      },
+                      {
+                        "tag": "winter",
+                        "static": "Heavy snows"
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "variant_4",
+                    "min": 11,
+                    "max": 12,
+                    "additional": [
+                      {
+                        "tag": "spring",
+                        "static": "Flooding"
+                      },
+                      {
+                        "tag": "summer",
+                        "static": "Wildfire/forest fire"
+                      },
+                      {
+                        "tag": "fall",
+                        "static": "Lightning storms"
+                      },
+                      {
+                        "tag": "winter",
+                        "static": "Blizzard/avalanche"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "criminal",
+            "min": 3,
+            "max": 4,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "conspiracy",
+                "min": 1,
+                "max": 2,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "social_manipulation",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "defamation",
+                    "min": 3,
+                    "max": 4
+                  },
+                  {
+                    "tag": "sabotage",
+                    "min": 5,
+                    "max": 6
+                  },
+                  {
+                    "tag": "frame_job",
+                    "min": 7,
+                    "max": 8
+                  },
+                  {
+                    "tag": "collusion",
+                    "title": "Collusion (FACTIONS)",
+                    "description": "Roll or choose any FACTIONs you like",
+                    "min": 9,
+                    "max": 10
+                  },
+                  {
+                    "tag": "assassination",
+                    "min": 11,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "back_room",
+                "min": 3,
+                "max": 5,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "recruitment",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "smuggling",
+                    "title": "Black market/smuggling",
+                    "min": 3,
+                    "max": 5
+                  },
+                  {
+                    "tag": "protection",
+                    "title": "Protection/extortion",
+                    "min": 6,
+                    "max": 7
+                  },
+                  {
+                    "tag": "arson",
+                    "min": 8,
+                    "max": 8
+                  },
+                  {
+                    "tag": "abduction",
+                    "title": "Abduction/press gang",
+                    "min": 9,
+                    "max": 10
+                  },
+                  {
+                    "tag": "rivalry",
+                    "title": "Rivalry/gang war",
+                    "min": 11,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "street_level",
+                "min": 6,
+                "max": 12,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "vandalism",
+                    "min": 1,
+                    "max": 1
+                  },
+                  {
+                    "tag": "pickpocket",
+                    "min": 2,
+                    "max": 4
+                  },
+                  {
+                    "tag": "theft",
+                    "title": "Theft/robbery",
+                    "min": 5,
+                    "max": 6
+                  },
+                  {
+                    "tag": "mugging",
+                    "min": 7,
+                    "max": 8
+                  },
+                  {
+                    "tag": "con",
+                    "title": "Con/swindle",
+                    "min": 9,
+                    "max": 10
+                  },
+                  {
+                    "tag": "murder",
+                    "min": 11,
+                    "max": 12
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "commercial",
+            "min": 5,
+            "max": 6,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "guild",
+                "min": 1,
+                "max": 2,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "ob_opening",
+                    "min": 1,
+                    "max": 3
+                  },
+                  {
+                    "tag": "price_fixing",
+                    "min": 4,
+                    "max": 5
+                  },
+                  {
+                    "tag": "supply_problem",
+                    "title": "Supply/demand problem",
+                    "min": 6,
+                    "max": 8
+                  },
+                  {
+                    "tag": "expedition_preparations",
+                    "min": 9,
+                    "max": 10
+                  },
+                  {
+                    "tag": "monopoly",
+                    "min": 11,
+                    "max": 11
+                  },
+                  {
+                    "tag": "guild_war",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "mercantile",
+                "min": 3,
+                "max": 6,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "destitution",
+                    "title": "Destitution/bankruptcy",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "prices",
+                    "title": "Prices rise/fall",
+                    "min": 3,
+                    "max": 4
+                  },
+                  {
+                    "tag": "important_trade",
+                    "min": 5,
+                    "max": 6
+                  },
+                  {
+                    "tag": "collector",
+                    "title": "Collector (SPECIALIST)",
+                    "min": 7,
+                    "max": 8,
+                    "additional": [
+                      "npc.occupation.specialist"
+                    ]
+                  },
+                  {
+                    "tag": "prospector",
+                    "title": "Prospector/investor",
+                    "min": 9,
+                    "max": 10
+                  },
+                  {
+                    "tag": "trade_mission",
+                    "title": "Trade mission/caravan",
+                    "min": 11,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "street_level",
+                "min": 7,
+                "max": 12,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "urchin",
+                    "title": "Urchin/beggar",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "cart",
+                    "title": "Cart/wagon accident",
+                    "min": 3,
+                    "max": 5
+                  },
+                  {
+                    "tag": "food_cart",
+                    "title": "Food cart/stall",
+                    "min": 6,
+                    "max": 6
+                  },
+                  {
+                    "tag": "pedlar",
+                    "title": "Pedlar/cheapjack",
+                    "min": 7,
+                    "max": 8
+                  },
+                  {
+                    "tag": "hawker",
+                    "title": "Hawker/monger",
+                    "min": 9,
+                    "max": 10
+                  },
+                  {
+                    "tag": "livestock",
+                    "title": "Livestock/mount for sale",
+                    "min": 11,
+                    "max": 11
+                  },
+                  {
+                    "tag": "psst",
+                    "title": "Psst, over there",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "religious",
+            "min": 7,
+            "max": 7,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "cult",
+                "min": 1,
+                "max": 2,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "recruitment",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "abduction",
+                    "min": 3,
+                    "max": 5
+                  },
+                  {
+                    "tag": "corruption",
+                    "min": 6,
+                    "max": 7
+                  },
+                  {
+                    "tag": "sacrifice",
+                    "min": 8,
+                    "max": 9
+                  },
+                  {
+                    "tag": "covert_manipulation",
+                    "min": 10,
+                    "max": 11
+                  },
+                  {
+                    "tag": "emerge",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "recognized",
+                "min": 3,
+                "max": 5,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "permission",
+                    "title": "Permission/prohibition",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "tithe",
+                    "min": 3,
+                    "max": 5
+                  },
+                  {
+                    "tag": "assistance",
+                    "title": "Assistance/charity",
+                    "min": 6,
+                    "max": 7
+                  },
+                  {
+                    "tag": "persecution",
+                    "min": 8,
+                    "max": 10
+                  },
+                  {
+                    "tag": "purge",
+                    "title": "Purge/inquisition",
+                    "min": 11,
+                    "max": 11
+                  },
+                  {
+                    "tag": "holy_war",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "street_level",
+                "min": 6,
+                "max": 12,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "prophet",
+                    "title": "Prophet/zealot",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "procession",
+                    "title": "Procession/ceremony",
+                    "min": 3,
+                    "max": 4
+                  },
+                  {
+                    "tag": "holy_day",
+                    "title": "Holy day/week",
+                    "min": 5,
+                    "max": 6
+                  },
+                  {
+                    "tag": "blessing",
+                    "title": "Blessing/curse",
+                    "min": 7,
+                    "max": 8
+                  },
+                  {
+                    "tag": "religious_feud",
+                    "title": "Religious feud/fight",
+                    "min": 9,
+                    "max": 10
+                  },
+                  {
+                    "tag": "conversion",
+                    "min": 11,
+                    "max": 12
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "municipal",
+            "min": 8,
+            "max": 8,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "military",
+                "min": 1,
+                "max": 2,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "recruitment",
+                    "min": 1,
+                    "max": 4
+                  },
+                  {
+                    "tag": "parade",
+                    "title": "Parade for hero/army",
+                    "min": 5,
+                    "max": 5
+                  },
+                  {
+                    "tag": "maneuvers",
+                    "min": 6,
+                    "max": 6
+                  },
+                  {
+                    "tag": "occupation",
+                    "min": 7,
+                    "max": 7
+                  },
+                  {
+                    "tag": "heightened_security",
+                    "min": 8,
+                    "max": 9
+                  },
+                  {
+                    "tag": "invasion_imminent",
+                    "min": 10,
+                    "max": 11
+                  },
+                  {
+                    "tag": "mobilization_for_war",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "town_watch",
+                "min": 3,
+                "max": 10,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "proclamation",
+                    "title": "Proclamation/reward",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "recruitment",
+                    "min": 3,
+                    "max": 4
+                  },
+                  {
+                    "tag": "pursuit",
+                    "title": "Pursuit/arrest/raid",
+                    "min": 5,
+                    "max": 6
+                  },
+                  {
+                    "tag": "imprisonment",
+                    "min": 7,
+                    "max": 7
+                  },
+                  {
+                    "tag": "public_trial",
+                    "title": "Public trial/execution",
+                    "min": 8,
+                    "max": 9
+                  },
+                  {
+                    "tag": "crowd_control",
+                    "min": 10,
+                    "max": 11
+                  },
+                  {
+                    "tag": "lockdown",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "government",
+                "min": 11,
+                "max": 12,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "proclamation",
+                    "title": "Proclamation/law",
+                    "min": 1,
+                    "max": 3
+                  },
+                  {
+                    "tag": "procession",
+                    "title": "Procession/ceremony",
+                    "min": 4,
+                    "max": 4
+                  },
+                  {
+                    "tag": "taxation",
+                    "min": 5,
+                    "max": 6
+                  },
+                  {
+                    "tag": "appearance",
+                    "title": "Royal/noble appearance",
+                    "min": 7,
+                    "max": 9
+                  },
+                  {
+                    "tag": "wedding",
+                    "title": "Royal/noble wedding",
+                    "min": 10,
+                    "max": 10
+                  },
+                  {
+                    "tag": "succession",
+                    "title": "Royal/noble succession",
+                    "min": 11,
+                    "max": 11
+                  },
+                  {
+                    "tag": "coup",
+                    "title": "Coup/assassination",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "general",
+            "min": 9,
+            "max": 12,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "environmental",
+                "min": 1,
+                "max": 2,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "sewage",
+                    "title": "Sewage/water problem",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "hunger",
+                    "title": "Hunger/squalor",
+                    "min": 3,
+                    "max": 5
+                  },
+                  {
+                    "tag": "structure_collapse",
+                    "min": 6,
+                    "max": 6
+                  },
+                  {
+                    "tag": "plague",
+                    "title": "Plague/blight/disease",
+                    "min": 7,
+                    "max": 8
+                  },
+                  {
+                    "tag": "fire",
+                    "min": 9,
+                    "max": 9
+                  },
+                  {
+                    "tag": "creature",
+                    "title": "Rampaging CREATURE",
+                    "min": 10,
+                    "max": 11,
+                    "additional": [
+                      "creature"
+                    ]
+                  },
+                  {
+                    "tag": "oddity",
+                    "title": "ODDITY",
+                    "min": 12,
+                    "max": 12,
+                    "additional": "details.oddity"
+                  }
+                ]
+              },
+              {
+                "tag": "personal",
+                "min": 3,
+                "max": 7,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "run_in",
+                    "title": "Run-in/offence",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "attraction",
+                    "title": "Attraction/attention",
+                    "min": 3,
+                    "max": 3
+                  },
+                  {
+                    "tag": "opportunity",
+                    "title": "Opportunity (TASK)",
+                    "min": 4,
+                    "max": 7,
+                    "additional": [
+                      "npc.activity.task"
+                    ]
+                  },
+                  {
+                    "tag": "judgement",
+                    "title": "Judgement/prejudice",
+                    "min": 8,
+                    "max": 9
+                  },
+                  {
+                    "tag": "invitation",
+                    "title": "Invitation/solicitation",
+                    "min": 10,
+                    "max": 10
+                  },
+                  {
+                    "tag": "recognition",
+                    "min": 11,
+                    "max": 11
+                  },
+                  {
+                    "tag": "mistaken_identity",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "incidental",
+                "min": 8,
+                "max": 12,
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "clue",
+                    "title": "Clue/evidence (ITEM)",
+                    "min": 1,
+                    "max": 2,
+                    "additional": [
+                      "npc.activity.item"
+                    ]
+                  },
+                  {
+                    "tag": "accident",
+                    "title": "Accident/aftermath",
+                    "min": 3,
+                    "max": 4
+                  },
+                  {
+                    "tag": "brawl",
+                    "title": "Brawl/duel",
+                    "min": 5,
+                    "max": 6
+                  },
+                  {
+                    "tag": "strike",
+                    "title": "Strike/protest/revolt",
+                    "min": 7,
+                    "max": 7
+                  },
+                  {
+                    "tag": "street_fight",
+                    "title": "Street fight (FACTIONS)",
+                    "description": "Roll or choose any FACTIONs you like",
+                    "min": 8,
+                    "max": 8
+                  },
+                  {
+                    "tag": "performance",
+                    "title": "Performance/circus",
+                    "min": 9,
+                    "max": 9
+                  },
+                  {
+                    "tag": "festival",
+                    "title": "Festival (ASPECT)",
+                    "min": 10,
+                    "max": 12,
+                    "additional":  [
+                      "details.aspect"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
