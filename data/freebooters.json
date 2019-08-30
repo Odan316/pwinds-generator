@@ -20698,6 +20698,860 @@
             ]
           }
         ]
+      },
+      {
+        "tag": "location",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "anywhere",
+            "min": 1,
+            "max": 2,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "sewer",
+                "title": "Sewer/ditch",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "alleyway",
+                "title": "Alleyway/plaza",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "street",
+                "title": "Street/corner",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "plaza",
+                "title": "Plaza/common/well",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "marketplace",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "residence",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "public_house",
+                "title": "Public house/inn",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "shop",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "shrine",
+                "title": "Shrine/temple",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "battlement",
+                "title": "Battlement/tower/keep",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "palace",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "unique",
+                "title": "Unique/landmark",
+                "min": 12,
+                "max": 12
+              }
+            ],
+            "additional": [
+              "settlement.location.anywhere.color",
+              "settlement.location.anywhere.npc_occupation"
+            ],
+            "dictionaries": [
+              {
+                "tag": "color",
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "stink",
+                    "title": "Stink of waste/rot",
+                    "min": 1,
+                    "max": 1
+                  },
+                  {
+                    "tag": "public_punishment",
+                    "min": 2,
+                    "max": 2
+                  },
+                  {
+                    "tag": "shouting",
+                    "title": "Shouting/fighting",
+                    "min": 3,
+                    "max": 3
+                  },
+                  {
+                    "tag": "crying",
+                    "title": "Crying/sobbing",
+                    "min": 4,
+                    "max": 4
+                  },
+                  {
+                    "tag": "livestock_activity",
+                    "min": 5,
+                    "max": 5
+                  },
+                  {
+                    "tag": "children_activity",
+                    "min": 6,
+                    "max": 6
+                  },
+                  {
+                    "tag": "hawking",
+                    "title": "Hawking/selling",
+                    "min": 7,
+                    "max": 7
+                  },
+                  {
+                    "tag": "smell_of_food",
+                    "min": 8,
+                    "max": 8
+                  },
+                  {
+                    "tag": "unexpected_quiet",
+                    "min": 9,
+                    "max": 9
+                  },
+                  {
+                    "tag": "laughter",
+                    "title": "Laughter/celebration",
+                    "min": 10,
+                    "max": 10
+                  },
+                  {
+                    "tag": "parade",
+                    "title": "Parade/procession",
+                    "min": 11,
+                    "max": 11
+                  },
+                  {
+                    "tag": "festival",
+                    "title": "festival/holy day",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "npc_occupation",
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "outsider",
+                    "min": 1,
+                    "max": 1,
+                    "generate_outer": "npc.occupation.outsider"
+                  },
+                  {
+                    "tag": "criminal",
+                    "min": 2,
+                    "max": 3,
+                    "generate_outer": "npc.occupation.criminal"
+                  },
+                  {
+                    "tag": "commoner",
+                    "min": 4,
+                    "max": 6,
+                    "generate_outer": "npc.occupation.commoner"
+                  },
+                  {
+                    "tag": "tradesperson",
+                    "min": 7,
+                    "max": 7,
+                    "generate_outer": "npc.occupation.tradesperson"
+                  },
+                  {
+                    "tag": "merchant",
+                    "min": 8,
+                    "max": 8,
+                    "generate_outer": "npc.occupation.merchant"
+                  },
+                  {
+                    "tag": "specialist",
+                    "min": 9,
+                    "max": 9,
+                    "generate_outer": "npc.occupation.specialist"
+                  },
+                  {
+                    "tag": "religious",
+                    "min": 10,
+                    "max": 10,
+                    "generate_outer": "npc.occupation.religious"
+                  },
+                  {
+                    "tag": "security",
+                    "min": 11,
+                    "max": 11,
+                    "generate_outer": "npc.occupation.security"
+                  },
+                  {
+                    "tag": "authority",
+                    "min": 12,
+                    "max": 12,
+                    "generate_outer": "npc.occupation.authority"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "poor_district",
+            "min": 3,
+            "max": 4,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "sewer",
+                "title": "Sewer/ditch",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "basement",
+                "title": "Basement/cellar",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "alleyway",
+                "title": "Alleyway/dead-end",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "corral",
+                "title": "Corral/pen",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "street",
+                "title": "Street/corner",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "shanty",
+                "title": "Shanty/hovel/hut",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "dive_bar",
+                "title": "Dive bar/flophouse",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "shantytown",
+                "title": "Shantytown/tenement",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "abandoned_building",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "ruin",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "rooftop",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "unique",
+                "title": "Unique/landmark",
+                "min": 12,
+                "max": 12
+              }
+            ],
+            "additional": [
+              "settlement.location.poor_district.color",
+              "settlement.location.poor_district.npc_occupation"
+            ],
+            "dictionaries": [
+              {
+                "tag": "color",
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "waste",
+                    "title": "Waste/rubbish",
+                    "min": 1,
+                    "max": 1
+                  },
+                  {
+                    "tag": "feral_animal",
+                    "title": "Feral animal/vermin",
+                    "min": 2,
+                    "max": 2
+                  },
+                  {
+                    "tag": "squalor",
+                    "title": "Squalor/suffering",
+                    "min": 3,
+                    "max": 3
+                  },
+                  {
+                    "tag": "town_watch_patrol",
+                    "min": 4,
+                    "max": 4
+                  },
+                  {
+                    "tag": "shouting",
+                    "title": "Shouting/fighting",
+                    "min": 5,
+                    "max": 5
+                  },
+                  {
+                    "tag": "livestock",
+                    "title": "Livestock/children",
+                    "min": 6,
+                    "max": 6
+                  },
+                  {
+                    "tag": "fire",
+                    "title": "Fire/smoke",
+                    "min": 7,
+                    "max": 7
+                  },
+                  {
+                    "tag": "swarms",
+                    "title": "Swarms of flies/bugs",
+                    "min": 8,
+                    "max": 8
+                  },
+                  {
+                    "tag": "romance",
+                    "title": "Romance/lovemaking",
+                    "min": 9,
+                    "max": 9
+                  },
+                  {
+                    "tag": "singing",
+                    "title": "Singing/music",
+                    "min": 10,
+                    "max": 10
+                  },
+                  {
+                    "tag": "laughter",
+                    "title": "Laughter/celebration",
+                    "min": 11,
+                    "max": 11
+                  },
+                  {
+                    "tag": "roll_market",
+                    "title": "Roll om MARKET DISTRICT",
+                    "min": 12,
+                    "max": 12,
+                    "generate_outer": "settlement.location.market_district.color"
+                  }
+                ]
+              },
+              {
+                "tag": "npc_occupation",
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "outsider",
+                    "min": 1,
+                    "max": 1,
+                    "generate_outer": "npc.occupation.outsider"
+                  },
+                  {
+                    "tag": "beggar",
+                    "title": "Beggar/urchin",
+                    "min": 2,
+                    "max": 3
+                  },
+                  {
+                    "tag": "criminal",
+                    "min": 4,
+                    "max": 5,
+                    "generate_outer": "npc.occupation.criminal"
+                  },
+                  {
+                    "tag": "commoner",
+                    "min": 6,
+                    "max": 8,
+                    "generate_outer": "npc.occupation.commoner"
+                  },
+                  {
+                    "tag": "tradesperson",
+                    "min": 9,
+                    "max": 9,
+                    "generate_outer": "npc.occupation.tradesperson"
+                  },
+                  {
+                    "tag": "religious",
+                    "min": 10,
+                    "max": 10,
+                    "generate_outer": "npc.occupation.religious"
+                  },
+                  {
+                    "tag": "security",
+                    "min": 11,
+                    "max": 12,
+                    "generate_outer": "npc.occupation.security"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "market_district",
+            "min": 5,
+            "max": 6,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "alleyway",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "courtyard",
+                "title": "Courtyard/park",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "corral",
+                "title": "Corral/pen",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "marketplace",
+                "title": "Marketplace/bazaar",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "inn",
+                "title": "Inn/tavern/residence",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "mine",
+                "title": "Mine/deposit/quarry",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "shop",
+                "title": "Shop/facility",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "warehouse",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "caravansary",
+                "title": "Caravansary/docks",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "caravan",
+                "title": "Caravan/ship",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "trade",
+                "title": "Trade/guild office",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "unique",
+                "title": "Unique/landmark",
+                "min": 12,
+                "max": 12
+              }
+            ],
+            "additional": [
+              "settlement.location.market_district.color",
+              "settlement.location.market_district.npc_occupation"
+            ],
+            "dictionaries": [
+              {
+                "tag": "color",
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "waste",
+                    "title": "Waste/refuse",
+                    "min": 1,
+                    "max": 1
+                  },
+                  {
+                    "tag": "beggars",
+                    "title": "Beggars/urchins",
+                    "min": 2,
+                    "max": 2
+                  },
+                  {
+                    "tag": "cargo_spill",
+                    "min": 3,
+                    "max": 3
+                  },
+                  {
+                    "tag": "shop_in_odd_place",
+                    "min": 4,
+                    "max": 4
+                  },
+                  {
+                    "tag": "crowded_streets",
+                    "min": 5,
+                    "max": 5
+                  },
+                  {
+                    "tag": "haggling",
+                    "title": "Haggling/bargaining",
+                    "min": 6,
+                    "max": 6
+                  },
+                  {
+                    "tag": "public_auction",
+                    "min": 7,
+                    "max": 7
+                  },
+                  {
+                    "tag": "caravan_passing",
+                    "min": 8,
+                    "max": 8
+                  },
+                  {
+                    "tag": "competition",
+                    "title": "Competition/rivalry",
+                    "min": 9,
+                    "max": 9
+                  },
+                  {
+                    "tag": "performance",
+                    "title": "Performance/circus",
+                    "min": 10,
+                    "max": 10
+                  },
+                  {
+                    "tag": "celebration",
+                    "title": "Celebration/windfall",
+                    "min": 11,
+                    "max": 11
+                  },
+                  {
+                    "tag": "roll_wealthy",
+                    "title": "Roll om WEALTHY DISTRICT",
+                    "min": 12,
+                    "max": 12,
+                    "generate_outer": "settlement.location.wealthy_district.color"
+                  }
+                ]
+              },
+              {
+                "tag": "npc_occupation",
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "outsider",
+                    "min": 1,
+                    "max": 1,
+                    "generate_outer": "npc.occupation.outsider"
+                  },
+                  {
+                    "tag": "criminal",
+                    "min": 2,
+                    "max": 2,
+                    "generate_outer": "npc.occupation.criminal"
+                  },
+                  {
+                    "tag": "commoner",
+                    "min": 3,
+                    "max": 4,
+                    "generate_outer": "npc.occupation.commoner"
+                  },
+                  {
+                    "tag": "tradesperson",
+                    "min": 5,
+                    "max": 6,
+                    "generate_outer": "npc.occupation.tradesperson"
+                  },
+                  {
+                    "tag": "merchant",
+                    "min": 7,
+                    "max": 8,
+                    "generate_outer": "npc.occupation.merchant"
+                  },
+                  {
+                    "tag": "specialist",
+                    "min": 9,
+                    "max": 9,
+                    "generate_outer": "npc.occupation.specialist"
+                  },
+                  {
+                    "tag": "religious",
+                    "min": 10,
+                    "max": 10,
+                    "generate_outer": "npc.occupation.religious"
+                  },
+                  {
+                    "tag": "security",
+                    "min": 11,
+                    "max": 11,
+                    "generate_outer": "npc.occupation.security"
+                  },
+                  {
+                    "tag": "authority",
+                    "min": 12,
+                    "max": 12,
+                    "generate_outer": "npc.occupation.authority"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "wealthy_district",
+            "min": 7,
+            "max": 7,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "courtyard",
+                "title": "Courtyard/garden",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "street",
+                "title": "Street/boulevard",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "plaza",
+                "title": "Plaza/fountain/park",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "promenade",
+                "title": "Promenade/terrace",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "public_house",
+                "title": "Public house/inn",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "residence",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "academy",
+                "title": "Academy/college/tower",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "manse",
+                "title": "Manse/estate",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "palace",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "unique",
+                "title": "Unique/landmark",
+                "min": 12,
+                "max": 12
+              }
+            ],
+            "additional": [
+              "settlement.location.wealthy_district.color",
+              "settlement.location.wealthy_district.npc_occupation"
+            ],
+            "dictionaries": [
+              {
+                "tag": "color",
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "punishment",
+                    "title": "Punishment/reprimand",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "argument",
+                    "title": "Argument/dismissal",
+                    "min": 3,
+                    "max": 3
+                  },
+                  {
+                    "tag": "watch_patrol",
+                    "min": 4,
+                    "max": 4
+                  },
+                  {
+                    "tag": "romance",
+                    "min": 5,
+                    "max": 5
+                  },
+                  {
+                    "tag": "sound_of_heels",
+                    "title": "Sound of heels/hooves",
+                    "min": 6,
+                    "max": 6
+                  },
+                  {
+                    "tag": "peace_and_quiet",
+                    "min": 7,
+                    "max": 8
+                  },
+                  {
+                    "tag": "sweet_odor",
+                    "title": "Sweet/exotic odor",
+                    "min": 9,
+                    "max": 9
+                  },
+                  {
+                    "tag": "colourful_displays",
+                    "min": 10,
+                    "max": 10
+                  },
+                  {
+                    "tag": "laughter",
+                    "title": "Laughter/singing/music",
+                    "min": 11,
+                    "max": 11
+                  },
+                  {
+                    "tag": "royal_ball",
+                    "title": "Royal ball/ceremony",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "npc_occupation",
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "criminal",
+                    "min": 1,
+                    "max": 1,
+                    "generate_outer": "npc.occupation.criminal"
+                  },
+                  {
+                    "tag": "commoner",
+                    "min": 2,
+                    "max": 2,
+                    "generate_outer": "npc.occupation.commoner"
+                  },
+                  {
+                    "tag": "tradesperson",
+                    "min": 3,
+                    "max": 3,
+                    "generate_outer": "npc.occupation.tradesperson"
+                  },
+                  {
+                    "tag": "merchant",
+                    "min": 4,
+                    "max": 5,
+                    "generate_outer": "npc.occupation.merchant"
+                  },
+                  {
+                    "tag": "specialist",
+                    "min": 6,
+                    "max": 7,
+                    "generate_outer": "npc.occupation.specialist"
+                  },
+                  {
+                    "tag": "religious",
+                    "min": 8,
+                    "max": 8,
+                    "generate_outer": "npc.occupation.religious"
+                  },
+                  {
+                    "tag": "security",
+                    "min": 9,
+                    "max": 10,
+                    "generate_outer": "npc.occupation.security"
+                  },
+                  {
+                    "tag": "authority",
+                    "min": 11,
+                    "max": 12,
+                    "generate_outer": "npc.occupation.authority"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "government_district",
+            "min": 8,
+            "max": 8,
+            "dice": "d12"
+          },
+          {
+            "tag": "religious_district",
+            "min": 9,
+            "max": 10,
+            "dice": "d12"
+          },
+          {
+            "tag": "outside_settlement",
+            "min": 11,
+            "max": 12,
+            "dice": "d12"
+          }
+        ]
       }
     ]
   },
