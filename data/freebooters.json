@@ -21537,19 +21537,513 @@
             "tag": "government_district",
             "min": 8,
             "max": 8,
-            "dice": "d12"
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "stocks",
+                "title": "Stocks/gallows",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "street",
+                "title": "Street/corner",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "plaza",
+                "title": "Plaza/fountain/well",
+                "min": 4,
+                "max": 5
+              },
+              {
+                "tag": "magistrate",
+                "title": "Magistrate/court of law",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "administrative_office",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "battlement",
+                "title": "Battlement/tower/keep",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "arena",
+                "title": "Arena/parade ground",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "barracks",
+                "title": "Barracks/quarter",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "prison",
+                "title": "Prison/gaol",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "unique",
+                "title": "Unique/landmark",
+                "min": 12,
+                "max": 12
+              }
+            ],
+            "additional": [
+              "settlement.location.government_district.color",
+              "settlement.location.government_district.npc_occupation"
+            ],
+            "dictionaries": [
+              {
+                "tag": "color",
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "public_flogging",
+                    "title": "Public flogging/hanging",
+                    "min": 1,
+                    "max": 1
+                  },
+                  {
+                    "tag": "watch_patrol",
+                    "min": 2,
+                    "max": 3
+                  },
+                  {
+                    "tag": "military_on_maneuvers",
+                    "min": 4,
+                    "max": 4
+                  },
+                  {
+                    "tag": "recruitment_drive",
+                    "min": 5,
+                    "max": 5
+                  },
+                  {
+                    "tag": "sound_of_boots",
+                    "title": "Sound of boots/hooves",
+                    "min": 6,
+                    "max": 7
+                  },
+                  {
+                    "tag": "prisoner_coffin",
+                    "min": 8,
+                    "max": 8
+                  },
+                  {
+                    "tag": "bonfire",
+                    "min": 9,
+                    "max": 9
+                  },
+                  {
+                    "tag": "smell_of_oil",
+                    "title": "Smell of oil/metal",
+                    "min": 10,
+                    "max": 10
+                  },
+                  {
+                    "tag": "dueling",
+                    "title": "Dueling/sparring",
+                    "min": 11,
+                    "max": 11
+                  },
+                  {
+                    "tag": "military_parade",
+                    "min": 12,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "npc_occupation",
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "outsider",
+                    "min": 1,
+                    "max": 1,
+                    "generate_outer": "npc.occupation.outsider"
+                  },
+                  {
+                    "tag": "criminal",
+                    "min": 2,
+                    "max": 3,
+                    "generate_outer": "npc.occupation.criminal"
+                  },
+                  {
+                    "tag": "commoner",
+                    "min": 4,
+                    "max": 4,
+                    "generate_outer": "npc.occupation.commoner"
+                  },
+                  {
+                    "tag": "tradesperson",
+                    "min": 5,
+                    "max": 5,
+                    "generate_outer": "npc.occupation.tradesperson"
+                  },
+                  {
+                    "tag": "merchant",
+                    "min": 6,
+                    "max": 6,
+                    "generate_outer": "npc.occupation.merchant"
+                  },
+                  {
+                    "tag": "specialist",
+                    "min": 7,
+                    "max": 7,
+                    "generate_outer": "npc.occupation.specialist"
+                  },
+                  {
+                    "tag": "religious",
+                    "min": 8,
+                    "max": 8,
+                    "generate_outer": "npc.occupation.religious"
+                  },
+                  {
+                    "tag": "security",
+                    "min": 9,
+                    "max": 10,
+                    "generate_outer": "npc.occupation.security"
+                  },
+                  {
+                    "tag": "authority",
+                    "min": 11,
+                    "max": 12,
+                    "generate_outer": "npc.occupation.authority"
+                  }
+                ]
+              }
+            ]
           },
           {
             "tag": "religious_district",
             "min": 9,
             "max": 10,
-            "dice": "d12"
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "alleyway",
+                "title": "Alleyway/courtyard",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "boulevard",
+                "title": "Boulevard/colonnade",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "plaza",
+                "title": "Plaza/fountain/well",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "park",
+                "title": "Park/garden/orchard",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "graveyard",
+                "title": "Graveyard/cemetery",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "monastery",
+                "title": "Monastery/school",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "shrine",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "temple",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "grand_temple",
+                "title": "Grand temple/zigurrat",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "unique",
+                "title": "Unique/landmark",
+                "min": 12,
+                "max": 12
+              }
+            ],
+            "additional": [
+              "settlement.location.religious_district.color",
+              "settlement.location.religious_district.npc_occupation"
+            ],
+            "dictionaries": [
+              {
+                "tag": "color",
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "self_flagellation",
+                    "title": "Self-flagellation",
+                    "min": 1,
+                    "max": 1
+                  },
+                  {
+                    "tag": "prophecy",
+                    "title": "Prophecy/zealotry",
+                    "min": 2,
+                    "max": 2
+                  },
+                  {
+                    "tag": "pilgrimage",
+                    "min": 3,
+                    "max": 3
+                  },
+                  {
+                    "tag": "prayer",
+                    "title": "Prayer/meditation",
+                    "min": 4,
+                    "max": 5
+                  },
+                  {
+                    "tag": "bells",
+                    "title": "Bells/drums",
+                    "min": 6,
+                    "max": 7
+                  },
+                  {
+                    "tag": "public_sermon",
+                    "min": 8,
+                    "max": 8
+                  },
+                  {
+                    "tag": "treatment_of_sick",
+                    "title": "Treatment of sick/injured",
+                    "min": 9,
+                    "max": 9
+                  },
+                  {
+                    "tag": "chanting",
+                    "title": "Chanting/chorus",
+                    "min": 10,
+                    "max": 10
+                  },
+                  {
+                    "tag": "holy_day",
+                    "title": "Holy day/festival",
+                    "min": 11,
+                    "max": 11
+                  },
+                  {
+                    "tag": "roll_wealthy",
+                    "title": "Roll om WEALTHY DISTRICT",
+                    "min": 12,
+                    "max": 12,
+                    "generate_outer": "settlement.location.wealthy_district.color"
+                  }
+                ]
+              },
+              {
+                "tag": "npc_occupation",
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "outsider",
+                    "min": 1,
+                    "max": 1,
+                    "generate_outer": "npc.occupation.outsider"
+                  },
+                  {
+                    "tag": "criminal",
+                    "min": 2,
+                    "max": 2,
+                    "generate_outer": "npc.occupation.criminal"
+                  },
+                  {
+                    "tag": "commoner",
+                    "min": 3,
+                    "max": 4,
+                    "generate_outer": "npc.occupation.commoner"
+                  },
+                  {
+                    "tag": "tradesperson",
+                    "min": 5,
+                    "max": 5,
+                    "generate_outer": "npc.occupation.tradesperson"
+                  },
+                  {
+                    "tag": "merchant",
+                    "min": 6,
+                    "max": 6,
+                    "generate_outer": "npc.occupation.merchant"
+                  },
+                  {
+                    "tag": "specialist",
+                    "min": 7,
+                    "max": 7,
+                    "generate_outer": "npc.occupation.specialist"
+                  },
+                  {
+                    "tag": "religious",
+                    "min": 8,
+                    "max": 10,
+                    "generate_outer": "npc.occupation.religious"
+                  },
+                  {
+                    "tag": "security",
+                    "min": 11,
+                    "max": 11,
+                    "generate_outer": "npc.occupation.security"
+                  },
+                  {
+                    "tag": "authority",
+                    "min": 12,
+                    "max": 12,
+                    "generate_outer": "npc.occupation.authority"
+                  }
+                ]
+              }
+            ]
           },
           {
             "tag": "outside_settlement",
             "min": 11,
             "max": 12,
-            "dice": "d12"
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "immediate_vicinity",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "nearby_settlement",
+                "title": "Nearby SETTLEMENT",
+                "min": 3,
+                "max": 4,
+                "additional": [
+                  "settlement.location.outside_settlement.settlement"
+                ]
+              },
+              {
+                "tag": "distant_settlement",
+                "title": "Distant SETTLEMENT",
+                "min": 5,
+                "max": 6,
+                "additional": [
+                  "settlement.location.outside_settlement.settlement"
+                ]
+              },
+              {
+                "tag": "wilderness_site",
+                "title": "WILDERNESS SITE",
+                "min": 7,
+                "max": 11,
+                "additional": [
+                  "settlement.location.outside_settlement.wilderness_site"
+                ]
+              },
+              {
+                "tag": "foreign_land",
+                "min": 12,
+                "max": 12
+              }
+            ],
+            "dictionaries": [
+              {
+                "tag": "settlement",
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "hamlet",
+                    "title": "<i>Hamlet</i>",
+                    "description": "Generate settlement manually, if needed",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "village",
+                    "title": "<i>Village</i>",
+                    "description": "Generate settlement manually, if needed",
+                    "min": 3,
+                    "max": 5
+                  },
+                  {
+                    "tag": "town",
+                    "title": "<i>Town</i>",
+                    "description": "Generate settlement manually, if needed",
+                    "min": 6,
+                    "max": 8
+                  },
+                  {
+                    "tag": "large_town",
+                    "title": "<i>Large town</i>",
+                    "description": "Generate settlement manually, if needed",
+                    "min": 9,
+                    "max": 10
+                  },
+                  {
+                    "tag": "city",
+                    "title": "<i>City</i>",
+                    "description": "Generate settlement manually, if needed",
+                    "min": 11,
+                    "max": 12
+                  }
+                ]
+              },
+              {
+                "tag": "wilderness_site",
+                "dice": "d12",
+                "variants": [
+                  {
+                    "tag": "unnatural_feature",
+                    "title": "UNNATURAL FEATURE",
+                    "min": 1,
+                    "max": 1,
+                    "generate_outer": "discovery.unnatural_feature"
+                  },
+                  {
+                    "tag": "natural_feature",
+                    "title": "NATURAL FEATURE",
+                    "min": 2,
+                    "max": 5,
+                    "generate_outer": "discovery.natural_feature"
+                  },
+                  {
+                    "tag": "structure",
+                    "title": "STRUCTURE",
+                    "min": 6,
+                    "max": 9,
+                    "generate_outer": "discovery.structure"
+                  },
+                  {
+                    "tag": "dungeon",
+                    "title": "DUNGEON",
+                    "min": 10,
+                    "max": 12,
+                    "generate_outer": "dungeon"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
