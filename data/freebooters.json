@@ -23062,6 +23062,7 @@
         "dictionaries": [
           {
             "tag": "good",
+            "title": "Motivation (good)",
             "dice":  "d12",
             "variants": [
               {
@@ -23098,6 +23099,7 @@
           },
           {
             "tag": "lawful",
+            "title": "Motivation (lawful)",
             "dice":  "d12",
             "variants": [
               {
@@ -23134,6 +23136,7 @@
           },
           {
             "tag": "neutral",
+            "title": "Motivation (neutral)",
             "dice":  "d12",
             "variants": [
               {
@@ -23170,6 +23173,7 @@
           },
           {
             "tag": "chaotic",
+            "title": "Motivation (chaotic)",
             "dice":  "d12",
             "variants": [
               {
@@ -23206,6 +23210,7 @@
           },
           {
             "tag": "evil",
+            "title": "Motivation (evil)",
             "dice":  "d12",
             "variants": [
               {
@@ -25085,6 +25090,456 @@
                 "min": 12,
                 "max": 12
               }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "pantheon",
+    "dice": "d12",
+    "additional": [
+      "pantheon.depiction",
+      {
+        "tag": "major_deity",
+        "repeat": "2d4+1",
+        "generate_outer": "pantheon.major_deity"
+      }
+    ],
+    "dictionaries": [
+      {
+        "tag": "depiction",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "imitative",
+            "min": 1,
+            "max": 5
+          },
+          {
+            "tag": "hybrid",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "dramatic_coloration",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "multi_limbed",
+            "title": "Multi-limbed",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "elemental",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "symbolic",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "abstract",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "combine",
+            "title": "Roll 1d6+4 twice and combine",
+            "min": 12,
+            "max": 12,
+            "additional": [
+              [
+                "pantheon.depiction",
+                "d6+4"
+              ],
+              [
+                "pantheon.depiction",
+                "d6+4"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "major_deity",
+        "dice": "d12",
+        "additional": [
+          "pantheon.alignment",
+          {
+            "tag": "minor_deities_amount",
+            "roll_result": "d4"
+          },
+          {
+            "tag": "mythos_figures_amount",
+            "roll_result": "2d4"
+          }
+        ]
+      },
+      {
+        "tag": "alignment",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "good",
+            "min": 1,
+            "max": 1,
+            "additional": [
+              "pantheon.alignment.good.primary_domain",
+              "pantheon.alignment.good.secondary_domain",
+              "npc.motivation.good",
+              "character.trait.virtue",
+              "character.trait.virtue",
+              "character.trait.virtue"
+            ],
+            "dictionaries": [
+              {
+                "tag": "primary_domain",
+                "dice": "d100",
+                "variants": [
+                  {
+                    "tag": "agriculture",
+                    "title": "Agriculture/aquaculture",
+                    "min": 1,
+                    "max": 4
+                  },
+                  {
+                    "tag": "air",
+                    "title": "Air/sky",
+                    "min": 5,
+                    "max": 6
+                  },
+                  {
+                    "tag": "charity",
+                    "title": "Charity/generosity",
+                    "min": 7,
+                    "max": 16
+                  },
+                  {
+                    "tag": "control",
+                    "title": "Control/restraint",
+                    "min": 17,
+                    "max": 18
+                  },
+                  {
+                    "tag": "creation",
+                    "min": 19,
+                    "max": 28
+                  },
+                  {
+                    "tag": "earth",
+                    "min": 29,
+                    "max": 30
+                  },
+                  {
+                    "tag": "family",
+                    "title": "Family/community",
+                    "min": 31,
+                    "max": 40
+                  },
+                  {
+                    "tag": "home",
+                    "title": "Home/hearth",
+                    "min": 41,
+                    "max": 50
+                  },
+                  {
+                    "tag": "life",
+                    "title": "Life/growth",
+                    "min": 51,
+                    "max": 60
+                  },
+                  {
+                    "tag": "light",
+                    "min": 61,
+                    "max": 70
+                  },
+                  {
+                    "tag": "love",
+                    "min": 71,
+                    "max": 78
+                  },
+                  {
+                    "tag": "moon",
+                    "min": 79,
+                    "max": 80
+                  },
+                  {
+                    "tag": "nature",
+                    "min": 81,
+                    "max": 82
+                  },
+                  {
+                    "tag": "peace",
+                    "title": "Peace/healing",
+                    "min": 83,
+                    "max": 92
+                  },
+                  {
+                    "tag": "stars",
+                    "min": 93,
+                    "max": 94
+                  },
+                  {
+                    "tag": "sun",
+                    "min": 95,
+                    "max": 96
+                  },
+                  {
+                    "tag": "water",
+                    "title": "Water/sea",
+                    "min": 97,
+                    "max": 98
+                  },
+                  {
+                    "tag": "work",
+                    "title": "Work/labor",
+                    "min": 99,
+                    "max": 100
+                  }
+                ]
+              },
+              {
+                "tag": "secondary_domain",
+                "dice": "d100",
+                "variants": [
+                  {
+                    "tag": "alacrity",
+                    "title": "Alacrity/dexterity",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "art",
+                    "title": "Art/craft",
+                    "min": 3,
+                    "max": 6
+                  },
+                  {
+                    "tag": "charm",
+                    "title": "Charm/charisma",
+                    "min": 7,
+                    "max": 10
+                  },
+                  {
+                    "tag": "civilization",
+                    "min": 11,
+                    "max": 12
+                  },
+                  {
+                    "tag": "desert",
+                    "min": 13,
+                    "max": 14
+                  },
+                  {
+                    "tag": "dreams",
+                    "title": "Dreams/prophecy",
+                    "min": 15,
+                    "max": 16
+                  },
+                  {
+                    "tag": "fauna",
+                    "title": "Fauna/wildlife",
+                    "min": 17,
+                    "max": 20
+                  },
+                  {
+                    "tag": "flora",
+                    "title": "Flora/plant life",
+                    "min": 21,
+                    "max": 24
+                  },
+                  {
+                    "tag": "forge",
+                    "title": "Forge/kin",
+                    "min": 25,
+                    "max": 26
+                  },
+                  {
+                    "tag": "freedom",
+                    "min": 27,
+                    "max": 32
+                  },
+                  {
+                    "tag": "health",
+                    "title": "Health/constitution",
+                    "min": 33,
+                    "max": 38
+                  },
+                  {
+                    "tag": "highland",
+                    "title": "Highland/mountains",
+                    "min": 39,
+                    "max": 40
+                  },
+                  {
+                    "tag": "hope",
+                    "min": 41,
+                    "max": 48
+                  },
+                  {
+                    "tag": "joy",
+                    "min": 49,
+                    "max": 52
+                  },
+                  {
+                    "tag": "ocean",
+                    "title": "Ocean/sea",
+                    "min": 53,
+                    "max": 54
+                  },
+                  {
+                    "tag": "outcasts",
+                    "title": "Outcasts/orphans",
+                    "min": 55,
+                    "max": 56
+                  },
+                  {
+                    "tag": "peasantry",
+                    "title": "Peasantry/humility",
+                    "min": 57,
+                    "max": 58
+                  },
+                  {
+                    "tag": "portals",
+                    "title": "Portals/gates/doors",
+                    "min": 59,
+                    "max": 60
+                  },
+                  {
+                    "tag": "protection",
+                    "title": "Protection/security",
+                    "min": 61,
+                    "max": 62
+                  },
+                  {
+                    "tag": "purification",
+                    "min": 63,
+                    "max": 64
+                  },
+                  {
+                    "tag": "rebirth",
+                    "title": "Rebirth/renewal",
+                    "min": 65,
+                    "max": 72
+                  },
+                  {
+                    "tag": "relief",
+                    "title": "Relief/succor",
+                    "min": 73,
+                    "max": 80
+                  },
+                  {
+                    "tag": "rivers",
+                    "title": "Rivers/waterways",
+                    "min": 81,
+                    "max": 82
+                  },
+                  {
+                    "tag": "roads",
+                    "title": "Roads/crossroads",
+                    "min": 83,
+                    "max": 84
+                  },
+                  {
+                    "tag": "sorrow",
+                    "title": "Sorrow/regrets",
+                    "min": 85,
+                    "max": 86
+                  },
+                  {
+                    "tag": "stability",
+                    "title": "Stability/tradition",
+                    "min": 87,
+                    "max": 88
+                  },
+                  {
+                    "tag": "wetlands",
+                    "title": "Wetlands/marsh",
+                    "min": 89,
+                    "max": 90
+                  },
+                  {
+                    "tag": "wilderness",
+                    "min": 91,
+                    "max": 92
+                  },
+                  {
+                    "tag": "will",
+                    "title": "Will/wisdom",
+                    "min": 93,
+                    "max": 96
+                  },
+                  {
+                    "tag": "wits",
+                    "title": "Wits/intelligence",
+                    "min": 97,
+                    "max": 98
+                  },
+                  {
+                    "tag": "woodlands",
+                    "title": "Woodlands/forest",
+                    "min": 99,
+                    "max": 100
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "lawful",
+            "min": 2,
+            "max": 3,
+            "additional": [
+              "pantheon.alignment.lawful.primary_domain",
+              "pantheon.alignment.lawful.secondary_domain",
+              "npc.motivation.lawful",
+              "character.trait.virtue",
+              "character.trait.virtue",
+              "character.trait.vice"
+            ]
+          },
+          {
+            "tag": "neutral",
+            "min": 4,
+            "max": 9,
+            "additional": [
+              "pantheon.alignment.neutral.primary_domain",
+              "pantheon.alignment.neutral.secondary_domain",
+              "npc.motivation.neutral",
+              "character.trait.virtue",
+              "character.trait.vice"
+            ]
+          },
+          {
+            "tag": "chaotic",
+            "min": 10,
+            "max": 11,
+            "additional": [
+              "pantheon.alignment.chaotic.primary_domain",
+              "pantheon.alignment.chaotic.secondary_domain",
+              "npc.motivation.chaotic",
+              "character.trait.virtue",
+              "character.trait.vice",
+              "character.trait.vice"
+            ]
+          },
+          {
+            "tag": "evil",
+            "min": 12,
+            "max": 12,
+            "additional": [
+              "pantheon.alignment.evil.primary_domain",
+              "pantheon.alignment.evil.secondary_domain",
+              "npc.motivation.evil",
+              "character.trait.vice",
+              "character.trait.vice",
+              "character.trait.vice"
             ]
           }
         ]
