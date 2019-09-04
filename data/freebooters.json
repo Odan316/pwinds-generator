@@ -25356,7 +25356,7 @@
                   },
                   {
                     "tag": "forge",
-                    "title": "Forge/kin",
+                    "title": "Forge/kiln",
                     "min": 25,
                     "max": 26
                   },
@@ -25502,6 +25502,299 @@
               "character.trait.virtue",
               "character.trait.virtue",
               "character.trait.vice"
+            ],
+            "dictionaries": [
+              {
+                "tag": "primary_domain",
+                "dice": "d100",
+                "variants": [
+                  {
+                    "tag": "agriculture",
+                    "title": "Agriculture/aquaculture",
+                    "min": 1,
+                    "max": 8
+                  },
+                  {
+                    "tag": "air",
+                    "title": "Air/sky",
+                    "min": 9,
+                    "max": 10
+                  },
+                  {
+                    "tag": "ambition",
+                    "min": 11,
+                    "max": 14
+                  },
+                  {
+                    "tag": "charity",
+                    "title": "Charity/generosity",
+                    "min": 15,
+                    "max": 16
+                  },
+                  {
+                    "tag": "control",
+                    "title": "Control/restraint",
+                    "min": 17,
+                    "max": 22
+                  },
+                  {
+                    "tag": "creation",
+                    "min": 23,
+                    "max": 24
+                  },
+                  {
+                    "tag": "earth",
+                    "min": 25,
+                    "max": 26
+                  },
+                  {
+                    "tag": "family",
+                    "title": "Family/community",
+                    "min": 27,
+                    "max": 34
+                  },
+                  {
+                    "tag": "home",
+                    "title": "Home/hearth",
+                    "min": 35,
+                    "max": 42
+                  },
+                  {
+                    "tag": "law",
+                    "title": "Law/order",
+                    "min": 43,
+                    "max": 56
+                  },
+                  {
+                    "tag": "light",
+                    "min": 57,
+                    "max": 62
+                  },
+                  {
+                    "tag": "love",
+                    "min": 63,
+                    "max": 64
+                  },
+                  {
+                    "tag": "moon",
+                    "min": 65,
+                    "max": 66
+                  },
+                  {
+                    "tag": "peace",
+                    "title": "Peace/healing",
+                    "min": 67,
+                    "max": 70
+                  },
+                  {
+                    "tag": "stars",
+                    "min": 71,
+                    "max": 72
+                  },
+                  {
+                    "tag": "sun",
+                    "min": 73,
+                    "max": 78
+                  },
+                  {
+                    "tag": "technology",
+                    "title": "Technology/invention",
+                    "min": 79,
+                    "max": 86
+                  },
+                  {
+                    "tag": "travel",
+                    "title": "Travel/trade",
+                    "min": 87,
+                    "max": 90
+                  },
+                  {
+                    "tag": "water",
+                    "title": "Water/sea",
+                    "min": 91,
+                    "max": 92
+                  },
+                  {
+                    "tag": "work",
+                    "title": "Work/labor",
+                    "min": 93,
+                    "max": 100
+                  }
+                ]
+              },
+              {
+                "tag": "secondary_domain",
+                "dice": "d100",
+                "variants": [
+                  {
+                    "tag": "alacrity",
+                    "title": "Alacrity/dexterity",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "art",
+                    "title": "Art/craft",
+                    "min": 3,
+                    "max": 6
+                  },
+                  {
+                    "tag": "charm",
+                    "title": "Charm/charisma",
+                    "min": 7,
+                    "max": 8
+                  },
+                  {
+                    "tag": "civilization",
+                    "min": 9,
+                    "max": 16
+                  },
+                  {
+                    "tag": "desert",
+                    "min": 17,
+                    "max": 18
+                  },
+                  {
+                    "tag": "dominance",
+                    "title": "Dominance/mastery",
+                    "min": 19,
+                    "max": 20
+                  },
+                  {
+                    "tag": "forge",
+                    "title": "Forge/kiln",
+                    "min": 21,
+                    "max": 26
+                  },
+                  {
+                    "tag": "freedom",
+                    "min": 27,
+                    "max": 28
+                  },
+                  {
+                    "tag": "glory",
+                    "min": 29,
+                    "max": 32
+                  },
+                  {
+                    "tag": "health",
+                    "title": "Health/constitution",
+                    "min": 33,
+                    "max": 34
+                  },
+                  {
+                    "tag": "highland",
+                    "title": "Highland/mountains",
+                    "min": 35,
+                    "max": 36
+                  },
+                  {
+                    "tag": "hope",
+                    "min": 37,
+                    "max": 40
+                  },
+                  {
+                    "tag": "might",
+                    "title": "Might/strength",
+                    "min": 41,
+                    "max": 42
+                  },
+                  {
+                    "tag": "nobility",
+                    "title": "Nobility/pride",
+                    "min": 43,
+                    "max": 48
+                  },
+                  {
+                    "tag": "ocean",
+                    "title": "Ocean/sea",
+                    "min": 49,
+                    "max": 50
+                  },
+                  {
+                    "tag": "peasantry",
+                    "title": "Peasantry/humility",
+                    "min": 51,
+                    "max": 54
+                  },
+                  {
+                    "tag": "portals",
+                    "title": "Portals/gates/doors",
+                    "min": 55,
+                    "max": 56
+                  },
+                  {
+                    "tag": "protection",
+                    "title": "Protection/security",
+                    "min": 57,
+                    "max": 64
+                  },
+                  {
+                    "tag": "purification",
+                    "min": 65,
+                    "max": 70
+                  },
+                  {
+                    "tag": "rivers",
+                    "title": "Rivers/waterways",
+                    "min": 71,
+                    "max": 72
+                  },
+                  {
+                    "tag": "roads",
+                    "title": "Roads/crossroads",
+                    "min": 73,
+                    "max": 80
+                  },
+                  {
+                    "tag": "stability",
+                    "title": "Stability/tradition",
+                    "min": 81,
+                    "max": 86
+                  },
+                  {
+                    "tag": "submission",
+                    "title": "Submission/servitude",
+                    "min": 87,
+                    "max": 88
+                  },
+                  {
+                    "tag": "threshold",
+                    "title": "threshold/transition",
+                    "min": 89,
+                    "max": 90
+                  },
+                  {
+                    "tag": "wetlands",
+                    "title": "Wetlands/marsh",
+                    "min": 91,
+                    "max": 92
+                  },
+                  {
+                    "tag": "wilderness",
+                    "min": 93,
+                    "max": 94
+                  },
+                  {
+                    "tag": "will",
+                    "title": "Will/wisdom",
+                    "min": 95,
+                    "max": 96
+                  },
+                  {
+                    "tag": "wits",
+                    "title": "Wits/intelligence",
+                    "min": 97,
+                    "max": 98
+                  },
+                  {
+                    "tag": "woodlands",
+                    "title": "Woodlands/forest",
+                    "min": 99,
+                    "max": 100
+                  }
+                ]
+              }
             ]
           },
           {
@@ -25514,6 +25807,395 @@
               "npc.motivation.neutral",
               "character.trait.virtue",
               "character.trait.vice"
+            ],
+            "dictionaries": [
+              {
+                "tag": "primary_domain",
+                "dice": "d100",
+                "variants": [
+                  {
+                    "tag": "agriculture",
+                    "title": "Agriculture/aquaculture",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "air",
+                    "title": "Air/sky",
+                    "min": 3,
+                    "max": 4
+                  },
+                  {
+                    "tag": "balance",
+                    "min": 5,
+                    "max": 14
+                  },
+                  {
+                    "tag": "change",
+                    "title": "Change/transformation",
+                    "min": 15,
+                    "max": 22
+                  },
+                  {
+                    "tag": "control",
+                    "title": "Control/restraint",
+                    "min": 23,
+                    "max": 24
+                  },
+                  {
+                    "tag": "creation",
+                    "min": 25,
+                    "max": 26
+                  },
+                  {
+                    "tag": "darkness",
+                    "min": 27,
+                    "max": 28
+                  },
+                  {
+                    "tag": "death",
+                    "title": "Death/decay",
+                    "min": 29,
+                    "max": 30
+                  },
+                  {
+                    "tag": "earth",
+                    "min": 31,
+                    "max": 36
+                  },
+                  {
+                    "tag": "family",
+                    "title": "Family/community",
+                    "min": 37,
+                    "max": 38
+                  },
+                  {
+                    "tag": "fate",
+                    "title": "Fate/destiny",
+                    "min": 39,
+                    "max": 44
+                  },
+                  {
+                    "tag": "fire",
+                    "min": 45,
+                    "max": 46
+                  },
+                  {
+                    "tag": "home",
+                    "title": "Home/hearth",
+                    "min": 47,
+                    "max": 48
+                  },
+                  {
+                    "tag": "life",
+                    "title": "Life/growth",
+                    "min": 49,
+                    "max": 50
+                  },
+                  {
+                    "tag": "light",
+                    "min": 51,
+                    "max": 52
+                  },
+                  {
+                    "tag": "love",
+                    "min": 53,
+                    "max": 54
+                  },
+                  {
+                    "tag": "moon",
+                    "min": 55,
+                    "max": 60
+                  },
+                  {
+                    "tag": "nature",
+                    "min": 61,
+                    "max": 70
+                  },
+                  {
+                    "tag": "pleasure",
+                    "min": 71,
+                    "max": 72
+                  },
+                  {
+                    "tag": "sloth",
+                    "min": 73,
+                    "max": 74
+                  },
+                  {
+                    "tag": "stars",
+                    "min": 75,
+                    "max": 80
+                  },
+                  {
+                    "tag": "sun",
+                    "min": 81,
+                    "max": 82
+                  },
+                  {
+                    "tag": "technology",
+                    "title": "Technology/invention",
+                    "min": 83,
+                    "max": 84
+                  },
+                  {
+                    "tag": "travel",
+                    "title": "Travel/trade",
+                    "min": 85,
+                    "max": 90
+                  },
+                  {
+                    "tag": "void",
+                    "min": 91,
+                    "max": 92
+                  },
+                  {
+                    "tag": "water",
+                    "title": "Water/sea",
+                    "min": 93,
+                    "max": 98
+                  },
+                  {
+                    "tag": "work",
+                    "title": "Work/labor",
+                    "min": 99,
+                    "max": 100
+                  }
+                ]
+              },
+              {
+                "tag": "secondary_domain",
+                "dice": "d100",
+                "variants": [
+                  {
+                    "tag": "alacrity",
+                    "title": "Alacrity/dexterity",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "art",
+                    "title": "Art/craft",
+                    "min": 3,
+                    "max": 4
+                  },
+                  {
+                    "tag": "chance",
+                    "title": "Chance/luck",
+                    "min": 5,
+                    "max": 12
+                  },
+                  {
+                    "tag": "charm",
+                    "title": "Charm/charisma",
+                    "min": 13,
+                    "max": 14
+                  },
+                  {
+                    "tag": "desert",
+                    "min": 15,
+                    "max": 16
+                  },
+                  {
+                    "tag": "dreams",
+                    "title": "Dreams/prophecy",
+                    "min": 17,
+                    "max": 18
+                  },
+                  {
+                    "tag": "entropy",
+                    "title": "Entropy/decay",
+                    "min": 19,
+                    "max": 20
+                  },
+                  {
+                    "tag": "fauna",
+                    "title": "Fauna/wildlife",
+                    "min": 21,
+                    "max": 26
+                  },
+                  {
+                    "tag": "flora",
+                    "title": "Flora/plant life",
+                    "min": 27,
+                    "max": 32
+                  },
+                  {
+                    "tag": "forge",
+                    "title": "Forge/kiln",
+                    "min": 33,
+                    "max": 34
+                  },
+                  {
+                    "tag": "freedom",
+                    "min": 35,
+                    "max": 36
+                  },
+                  {
+                    "tag": "health",
+                    "title": "Health/constitution",
+                    "min": 37,
+                    "max": 38
+                  },
+                  {
+                    "tag": "highland",
+                    "title": "Highland/mountains",
+                    "min": 39,
+                    "max": 40
+                  },
+                  {
+                    "tag": "hope",
+                    "min": 41,
+                    "max": 42
+                  },
+                  {
+                    "tag": "joy",
+                    "min": 43,
+                    "max": 44
+                  },
+                  {
+                    "tag": "might",
+                    "title": "Might/strength",
+                    "min": 45,
+                    "max": 46
+                  },
+                  {
+                    "tag": "ocean",
+                    "title": "Ocean/sea",
+                    "min": 47,
+                    "max": 48
+                  },
+                  {
+                    "tag": "outcasts",
+                    "title": "Outcasts/orphans",
+                    "min": 49,
+                    "max": 52
+                  },
+                  {
+                    "tag": "peasantry",
+                    "title": "Peasantry/humility",
+                    "min": 53,
+                    "max": 54
+                  },
+                  {
+                    "tag": "poison",
+                    "title": "Poison/narcotics",
+                    "min": 55,
+                    "max": 56
+                  },
+                  {
+                    "tag": "portals",
+                    "title": "Portals/gates/doors",
+                    "min": 57,
+                    "max": 60
+                  },
+                  {
+                    "tag": "protection",
+                    "title": "Protection/security",
+                    "min": 61,
+                    "max": 62
+                  },
+                  {
+                    "tag": "purification",
+                    "min": 63,
+                    "max": 64
+                  },
+                  {
+                    "tag": "rebirth",
+                    "title": "Rebirth/renewal",
+                    "min": 65,
+                    "max": 66
+                  },
+                  {
+                    "tag": "relief",
+                    "title": "Relief/succor",
+                    "min": 67,
+                    "max": 68
+                  },
+                  {
+                    "tag": "rivers",
+                    "title": "Rivers/waterways",
+                    "min": 69,
+                    "max": 70
+                  },
+                  {
+                    "tag": "roads",
+                    "title": "Roads/crossroads",
+                    "min": 71,
+                    "max": 72
+                  },
+                  {
+                    "tag": "sorrow",
+                    "title": "Sorrow/regret",
+                    "min": 73,
+                    "max": 74
+                  },
+                  {
+                    "tag": "stability",
+                    "title": "Stability/tradition",
+                    "min": 75,
+                    "max": 76
+                  },
+                  {
+                    "tag": "storm",
+                    "title": "Storm/tempest",
+                    "min": 77,
+                    "max": 78
+                  },
+                  {
+                    "tag": "threshold",
+                    "title": "Threshold/transition",
+                    "min": 79,
+                    "max": 80
+                  },
+                  {
+                    "tag": "undeath",
+                    "min": 81,
+                    "max": 82
+                  },
+                  {
+                    "tag": "underworld",
+                    "title": "Underworld/underground",
+                    "min": 83,
+                    "max": 84
+                  },
+                  {
+                    "tag": "wetlands",
+                    "title": "Wetlands/marsh",
+                    "min": 85,
+                    "max": 86
+                  },
+                  {
+                    "tag": "wilderness",
+                    "min": 87,
+                    "max": 88
+                  },
+                  {
+                    "tag": "will",
+                    "title": "Will/wisdom",
+                    "min": 89,
+                    "max": 92
+                  },
+                  {
+                    "tag": "wine",
+                    "title": "Wine/drink",
+                    "min": 93,
+                    "max": 94
+                  },
+                  {
+                    "tag": "wits",
+                    "title": "Wits/intelligence",
+                    "min": 95,
+                    "max": 98
+                  },
+                  {
+                    "tag": "woodlands",
+                    "title": "Woodlands/forest",
+                    "min": 99,
+                    "max": 100
+                  }
+                ]
+              }
             ]
           },
           {
@@ -25527,6 +26209,289 @@
               "character.trait.virtue",
               "character.trait.vice",
               "character.trait.vice"
+            ],
+            "dictionaries": [
+              {
+                "tag": "primary_domain",
+                "dice": "d100",
+                "variants": [
+                  {
+                    "tag": "air",
+                    "title": "Air/sky",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "ambition",
+                    "min": 3,
+                    "max": 4
+                  },
+                  {
+                    "tag": "change",
+                    "title": "Change/transformation",
+                    "min": 5,
+                    "max": 12
+                  },
+                  {
+                    "tag": "chaos",
+                    "title": "Chaos/corruption",
+                    "min": 13,
+                    "max": 22
+                  },
+                  {
+                    "tag": "destruction",
+                    "min": 23,
+                    "max": 30
+                  },
+                  {
+                    "tag": "earth",
+                    "min": 31,
+                    "max": 32
+                  },
+                  {
+                    "tag": "family",
+                    "title": "Family/community",
+                    "min": 33,
+                    "max": 34
+                  },
+                  {
+                    "tag": "fire",
+                    "min": 35,
+                    "max": 42
+                  },
+                  {
+                    "tag": "greed",
+                    "title": "Greed/avarice",
+                    "min": 43,
+                    "max": 48
+                  },
+                  {
+                    "tag": "hate",
+                    "min": 49,
+                    "max": 54
+                  },
+                  {
+                    "tag": "lust",
+                    "min": 55,
+                    "max": 62
+                  },
+                  {
+                    "tag": "moon",
+                    "min": 63,
+                    "max": 64
+                  },
+                  {
+                    "tag": "pain",
+                    "title": "Pain/strife/suffering",
+                    "min": 65,
+                    "max": 68
+                  },
+                  {
+                    "tag": "pleasure",
+                    "min": 69,
+                    "max": 76
+                  },
+                  {
+                    "tag": "sloth",
+                    "min": 77,
+                    "max": 80
+                  },
+                  {
+                    "tag": "sun",
+                    "min": 81,
+                    "max": 82
+                  },
+                  {
+                    "tag": "trickery",
+                    "title": "Trickery/deceit",
+                    "min": 83,
+                    "max": 88
+                  },
+                  {
+                    "tag": "void",
+                    "min": 89,
+                    "max": 90
+                  },
+                  {
+                    "tag": "war",
+                    "title": "War/violence",
+                    "min": 91,
+                    "max": 98
+                  },
+                  {
+                    "tag": "water",
+                    "title": "Water/sea",
+                    "min": 99,
+                    "max": 100
+                  }
+                ]
+              },
+              {
+                "tag": "secondary_domain",
+                "dice": "d100",
+                "variants": [
+                  {
+                    "tag": "alacrity",
+                    "title": "Alacrity/dexterity",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "chance",
+                    "title": "Chance/luck",
+                    "min": 3,
+                    "max": 8
+                  },
+                  {
+                    "tag": "charm",
+                    "title": "Charm/charisma",
+                    "min": 9,
+                    "max": 10
+                  },
+                  {
+                    "tag": "desert",
+                    "min": 11,
+                    "max": 12
+                  },
+                  {
+                    "tag": "dominance",
+                    "title": "Dominance/mastery",
+                    "min": 13,
+                    "max": 14
+                  },
+                  {
+                    "tag": "dreams",
+                    "title": "Dreams/prophecy",
+                    "min": 15,
+                    "max": 16
+                  },
+                  {
+                    "tag": "freedom",
+                    "min": 17,
+                    "max": 20
+                  },
+                  {
+                    "tag": "glory",
+                    "min": 21,
+                    "max": 24
+                  },
+                  {
+                    "tag": "gluttony",
+                    "title": "Gluttony/appetite",
+                    "min": 25,
+                    "max": 32
+                  },
+                  {
+                    "tag": "highland",
+                    "title": "Highland/mountains",
+                    "min": 33,
+                    "max": 34
+                  },
+                  {
+                    "tag": "joy",
+                    "min": 35,
+                    "max": 36
+                  },
+                  {
+                    "tag": "madness",
+                    "min": 37,
+                    "max": 40
+                  },
+                  {
+                    "tag": "might",
+                    "title": "Might/strength",
+                    "min": 41,
+                    "max": 44
+                  },
+                  {
+                    "tag": "ocean",
+                    "title": "Ocean/sea",
+                    "min": 45,
+                    "max": 46
+                  },
+                  {
+                    "tag": "outcasts",
+                    "title": "Outcasts/orphans",
+                    "min": 47,
+                    "max": 48
+                  },
+                  {
+                    "tag": "poison",
+                    "title": "Poison/narcotics",
+                    "min": 49,
+                    "max": 52
+                  },
+                  {
+                    "tag": "rebirth",
+                    "title": "Rebirth/renewal",
+                    "min": 53,
+                    "max": 54
+                  },
+                  {
+                    "tag": "storm",
+                    "title": "Storm/tempest",
+                    "min": 55,
+                    "max": 62
+                  },
+                  {
+                    "tag": "theft",
+                    "min": 63,
+                    "max": 68
+                  },
+                  {
+                    "tag": "threshold",
+                    "title": "threshold/transition",
+                    "min": 69,
+                    "max": 70
+                  },
+                  {
+                    "tag": "torment",
+                    "title": "Torment/suffering",
+                    "min": 71,
+                    "max": 76
+                  },
+                  {
+                    "tag": "undeath",
+                    "min": 77,
+                    "max": 80
+                  },
+                  {
+                    "tag": "underworld",
+                    "title": "Underworld/underground",
+                    "min": 79,
+                    "max": 80
+                  },
+                  {
+                    "tag": "wetlands",
+                    "title": "Wetlands/marsh",
+                    "min": 81,
+                    "max": 82
+                  },
+                  {
+                    "tag": "wilderness",
+                    "min": 83,
+                    "max": 84
+                  },
+                  {
+                    "tag": "wine",
+                    "title": "Wine/drink",
+                    "min": 85,
+                    "max": 90
+                  },
+                  {
+                    "tag": "woodlands",
+                    "title": "Woodlands/forest",
+                    "min": 91,
+                    "max": 92
+                  },
+                  {
+                    "tag": "wrath",
+                    "title": "Wrath/anger",
+                    "min": 93,
+                    "max": 100
+                  }
+                ]
+              }
             ]
           },
           {
@@ -25540,6 +26505,296 @@
               "character.trait.vice",
               "character.trait.vice",
               "character.trait.vice"
+            ],
+            "dictionaries": [
+              {
+                "tag": "primary_domain",
+                "dice": "d100",
+                "variants": [
+                  {
+                    "tag": "air",
+                    "title": "Air/sky",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "ambition",
+                    "min": 3,
+                    "max": 4
+                  },
+                  {
+                    "tag": "chaos",
+                    "title": "Chaos/corruption",
+                    "min": 5,
+                    "max": 8
+                  },
+                  {
+                    "tag": "control",
+                    "title": "Control/restraint",
+                    "min": 9,
+                    "max": 10
+                  },
+                  {
+                    "tag": "darkness",
+                    "min": 11,
+                    "max": 18
+                  },
+                  {
+                    "tag": "death",
+                    "title": "Death/decay",
+                    "min": 19,
+                    "max": 26
+                  },
+                  {
+                    "tag": "destruction",
+                    "min": 27,
+                    "max": 34
+                  },
+                  {
+                    "tag": "earth",
+                    "min": 35,
+                    "max": 36
+                  },
+                  {
+                    "tag": "fire",
+                    "min": 37,
+                    "max": 44
+                  },
+                  {
+                    "tag": "greed",
+                    "title": "Greed/avarice",
+                    "min": 45,
+                    "max": 52
+                  },
+                  {
+                    "tag": "hate",
+                    "min": 53,
+                    "max": 60
+                  },
+                  {
+                    "tag": "lust",
+                    "min": 61,
+                    "max": 62
+                  },
+                  {
+                    "tag": "moon",
+                    "min": 63,
+                    "max": 64
+                  },
+                  {
+                    "tag": "pain",
+                    "title": "Pain/strife/suffering",
+                    "min": 65,
+                    "max": 70
+                  },
+                  {
+                    "tag": "pleasure",
+                    "min": 71,
+                    "max": 72
+                  },
+                  {
+                    "tag": "sloth",
+                    "min": 73,
+                    "max": 74
+                  },
+                  {
+                    "tag": "stars",
+                    "min": 75,
+                    "max": 76
+                  },
+                  {
+                    "tag": "sun",
+                    "min": 77,
+                    "max": 78
+                  },
+                  {
+                    "tag": "technology",
+                    "title": "Technology/invention",
+                    "min": 79,
+                    "max": 80
+                  },
+                  {
+                    "tag": "trickery",
+                    "title": "Trickery/deceit",
+                    "min": 81,
+                    "max": 88
+                  },
+                  {
+                    "tag": "void",
+                    "min": 89,
+                    "max": 90
+                  },
+                  {
+                    "tag": "war",
+                    "title": "War/violence",
+                    "min": 91,
+                    "max": 98
+                  },
+                  {
+                    "tag": "water",
+                    "title": "Water/sea",
+                    "min": 99,
+                    "max": 100
+                  }
+                ]
+              },
+              {
+                "tag": "secondary_domain",
+                "dice": "d100",
+                "variants": [
+                  {
+                    "tag": "alacrity",
+                    "title": "Alacrity/dexterity",
+                    "min": 1,
+                    "max": 2
+                  },
+                  {
+                    "tag": "art",
+                    "title": "Art/craft",
+                    "min": 3,
+                    "max": 4
+                  },
+                  {
+                    "tag": "charm",
+                    "title": "Charm/charisma",
+                    "min": 5,
+                    "max": 6
+                  },
+                  {
+                    "tag": "civilization",
+                    "min": 7,
+                    "max": 8
+                  },
+                  {
+                    "tag": "desert",
+                    "min": 9,
+                    "max": 10
+                  },
+                  {
+                    "tag": "dominance",
+                    "title": "Dominance/mastery",
+                    "min": 11,
+                    "max": 18
+                  },
+                  {
+                    "tag": "dreams",
+                    "title": "Dreams/prophecy",
+                    "min": 19,
+                    "max": 20
+                  },
+                  {
+                    "tag": "entropy",
+                    "title": "Entropy/decay",
+                    "min": 21,
+                    "max": 26
+                  },
+                  {
+                    "tag": "forge",
+                    "title": "Forge/kiln",
+                    "min": 27,
+                    "max": 28
+                  },
+                  {
+                    "tag": "gluttony",
+                    "title": "Gluttony/appetite",
+                    "min": 29,
+                    "max": 30
+                  },
+                  {
+                    "tag": "highland",
+                    "title": "Highland/mountains",
+                    "min": 31,
+                    "max": 32
+                  },
+                  {
+                    "tag": "might",
+                    "title": "Might/strength",
+                    "min": 33,
+                    "max": 36
+                  },
+                  {
+                    "tag": "ocean",
+                    "title": "Ocean/sea",
+                    "min": 37,
+                    "max": 38
+                  },
+                  {
+                    "tag": "poison",
+                    "title": "Poison/narcotics",
+                    "min": 39,
+                    "max": 42
+                  },
+                  {
+                    "tag": "portals",
+                    "title": "Portals/doors",
+                    "min": 43,
+                    "max": 44
+                  },
+                  {
+                    "tag": "storm",
+                    "title": "Storm/tempest",
+                    "min": 45,
+                    "max": 48
+                  },
+                  {
+                    "tag": "submission",
+                    "title": "Submission/servitude",
+                    "min": 49,
+                    "max": 56
+                  },
+                  {
+                    "tag": "theft",
+                    "min": 57,
+                    "max": 62
+                  },
+                  {
+                    "tag": "torment",
+                    "title": "Torment/suffering",
+                    "min": 63,
+                    "max": 70
+                  },
+                  {
+                    "tag": "undeath",
+                    "min": 71,
+                    "max": 78
+                  },
+                  {
+                    "tag": "underworld",
+                    "title": "Underworld/underground",
+                    "min": 79,
+                    "max": 84
+                  },
+                  {
+                    "tag": "wetlands",
+                    "title": "Wetlands/marsh",
+                    "min": 85,
+                    "max": 86
+                  },
+                  {
+                    "tag": "wilderness",
+                    "min": 87,
+                    "max": 88
+                  },
+                  {
+                    "tag": "wits",
+                    "title": "Wits/intelligence",
+                    "min": 89,
+                    "max": 90
+                  },
+                  {
+                    "tag": "woodlands",
+                    "title": "Woodlands/forest",
+                    "min": 91,
+                    "max": 92
+                  },
+                  {
+                    "tag": "wrath",
+                    "title": "Wrath/anger",
+                    "min": 93,
+                    "max": 100
+                  }
+                ]
+              }
             ]
           }
         ]
