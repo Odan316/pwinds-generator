@@ -31977,6 +31977,302 @@
             "max": 100
           }
         ]
+      },
+      {
+        "tag": "theme",
+        "dice": "d100",
+        "variants": [
+          {
+            "tag": "allegiance",
+            "title": "Allegiance/loyalty",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "tag": "authority",
+            "title": "Authority/rebellion",
+            "min": 3,
+            "max": 4
+          },
+          {
+            "tag": "avarice",
+            "title": "Avarice/greed",
+            "min": 5,
+            "max": 6
+          },
+          {
+            "tag": "birth",
+            "title": "Birth/growth",
+            "min": 7,
+            "max": 8
+          },
+          {
+            "tag": "blessing",
+            "title": "Blessing/curse",
+            "min": 9,
+            "max": 10
+          },
+          {
+            "tag": "change",
+            "title": "Change/transformation",
+            "min": 11,
+            "max": 12
+          },
+          {
+            "tag": "corruption",
+            "min": 13,
+            "max": 14
+          },
+          {
+            "tag": "deception",
+            "title": "Deception/illusion",
+            "min": 15,
+            "max": 16
+          },
+          {
+            "tag": "desire",
+            "title": "Desire/lust",
+            "min": 17,
+            "max": 18
+          },
+          {
+            "tag": "destruction",
+            "title": "Destruction/collapse",
+            "min": 19,
+            "max": 20
+          },
+          {
+            "tag": "discovery",
+            "title": "Discovery/invention",
+            "min": 21,
+            "max": 22
+          },
+          {
+            "tag": "disease",
+            "title": "Disease/sickness",
+            "min": 23,
+            "max": 24
+          },
+          {
+            "tag": "disillusionment",
+            "min": 25,
+            "max": 26
+          },
+          {
+            "tag": "dreams",
+            "title": "Dreams/nightmare",
+            "min": 27,
+            "max": 28
+          },
+          {
+            "tag": "envy",
+            "title": "Envy/temptation",
+            "min": 29,
+            "max": 30
+          },
+          {
+            "tag": "family",
+            "title": "Family/parenthood",
+            "min": 31,
+            "max": 32
+          },
+          {
+            "tag": "fate",
+            "title": "Fate/destiny",
+            "min": 33,
+            "max": 34
+          },
+          {
+            "tag": "fear",
+            "title": "Fear/cowardice",
+            "min": 35,
+            "max": 36
+          },
+          {
+            "tag": "friendship",
+            "title": "Friendship/kinship",
+            "min": 37,
+            "max": 38
+          },
+          {
+            "tag": "heartbreak",
+            "title": "Heartbreak/betrayal",
+            "min": 39,
+            "max": 40
+          },
+          {
+            "tag": "hierarchy",
+            "title": "Hierarchy/structure",
+            "min": 41,
+            "max": 42
+          },
+          {
+            "tag": "honor",
+            "title": "Honor/glory",
+            "min": 43,
+            "max": 44
+          },
+          {
+            "tag": "hope",
+            "min": 45,
+            "max": 46
+          },
+          {
+            "tag": "hypocrisy",
+            "min": 47,
+            "max": 48
+          },
+          {
+            "tag": "identity",
+            "min": 49,
+            "max": 50
+          },
+          {
+            "tag": "injustice",
+            "min": 51,
+            "max": 52
+          },
+          {
+            "tag": "innocence",
+            "min": 53,
+            "max": 54
+          },
+          {
+            "tag": "isolation",
+            "title": "Isolation/loneliness",
+            "min": 55,
+            "max": 56
+          },
+          {
+            "tag": "judgement",
+            "title": "Judgement/punishment",
+            "min": 57,
+            "max": 58
+          },
+          {
+            "tag": "knowledge",
+            "title": "Knowledge/information",
+            "min": 59,
+            "max": 60
+          },
+          {
+            "tag": "lore",
+            "title": "Lore/mythology",
+            "min": 61,
+            "max": 62
+          },
+          {
+            "tag": "love",
+            "min": 63,
+            "max": 64
+          },
+          {
+            "tag": "magic",
+            "min": 65,
+            "max": 66
+          },
+          {
+            "tag": "nature",
+            "title": "Nature/civilization",
+            "min": 67,
+            "max": 68
+          },
+          {
+            "tag": "order",
+            "title": "Order/chaos",
+            "min": 69,
+            "max": 70
+          },
+          {
+            "tag": "prejudice",
+            "title": "Prejudice/tolerance",
+            "min": 71,
+            "max": 72
+          },
+          {
+            "tag": "pride",
+            "title": "Pride/vanity",
+            "min": 73,
+            "max": 74
+          },
+          {
+            "tag": "progress",
+            "title": "Progress/technology",
+            "min": 75,
+            "max": 76
+          },
+          {
+            "tag": "religion",
+            "title": "Religion/ideology",
+            "min": 77,
+            "max": 78
+          },
+          {
+            "tag": "sacrifice",
+            "min": 79,
+            "max": 80
+          },
+          {
+            "tag": "salvation",
+            "title": "Salvation/damnation",
+            "min": 81,
+            "max": 82
+          },
+          {
+            "tag": "separation",
+            "title": "Separation/reunion",
+            "min": 83,
+            "max": 84
+          },
+          {
+            "tag": "tradition",
+            "title": "Tradition/values",
+            "min": 85,
+            "max": 86
+          },
+          {
+            "tag": "tragedy",
+            "title": "Tragedy/loss",
+            "min": 87,
+            "max": 88
+          },
+          {
+            "tag": "truth",
+            "title": "Truth/secrets",
+            "min": 89,
+            "max": 90
+          },
+          {
+            "tag": "war",
+            "title": "War/conflict",
+            "min": 91,
+            "max": 92
+          },
+          {
+            "tag": "wealth",
+            "title": "Wealth/comfort",
+            "min": 93,
+            "max": 94
+          },
+          {
+            "tag": "words",
+            "title": "Words/language",
+            "min": 95,
+            "max": 96
+          },
+          {
+            "tag": "work",
+            "title": "Work/labor",
+            "min": 97,
+            "max": 98
+          },
+          {
+            "tag": "youth",
+            "title": "Youth/beauty",
+            "min": 99,
+            "max": 100
+          }
+        ]
       }
     ]
   }
