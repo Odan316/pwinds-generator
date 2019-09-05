@@ -31726,6 +31726,257 @@
             ]
           }
         ]
+      },
+      {
+        "tag": "action",
+        "dice": "d100",
+        "variants": [
+          {
+            "tag": "abandon",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "tag": "acquire",
+            "min": 3,
+            "max": 4
+          },
+          {
+            "tag": "aggravate",
+            "min": 5,
+            "max": 6
+          },
+          {
+            "tag": "allow",
+            "min": 7,
+            "max": 8
+          },
+          {
+            "tag": "attack",
+            "min": 9,
+            "max": 10
+          },
+          {
+            "tag": "avenge",
+            "min": 11,
+            "max": 12
+          },
+          {
+            "tag": "blunder",
+            "min": 13,
+            "max": 14
+          },
+          {
+            "tag": "capture",
+            "min": 15,
+            "max": 16
+          },
+          {
+            "tag": "celebrate",
+            "min": 17,
+            "max": 18
+          },
+          {
+            "tag": "conceal",
+            "min": 19,
+            "max": 20
+          },
+          {
+            "tag": "concede",
+            "min": 21,
+            "max": 22
+          },
+          {
+            "tag": "create",
+            "min": 23,
+            "max": 24
+          },
+          {
+            "tag": "defend",
+            "min": 25,
+            "max": 26
+          },
+          {
+            "tag": "demand",
+            "min": 27,
+            "max": 28
+          },
+          {
+            "tag": "destroy",
+            "min": 29,
+            "max": 30
+          },
+          {
+            "tag": "endure",
+            "min": 31,
+            "max": 32
+          },
+          {
+            "tag": "escape",
+            "min": 33,
+            "max": 34
+          },
+          {
+            "tag": "forgive",
+            "min": 35,
+            "max": 36
+          },
+          {
+            "tag": "give",
+            "min": 37,
+            "max": 38
+          },
+          {
+            "tag": "help",
+            "min": 39,
+            "max": 40
+          },
+          {
+            "tag": "hinder",
+            "min": 41,
+            "max": 42
+          },
+          {
+            "tag": "ignore",
+            "min": 43,
+            "max": 44
+          },
+          {
+            "tag": "influence",
+            "min": 45,
+            "max": 46
+          },
+          {
+            "tag": "intimidate",
+            "min": 47,
+            "max": 48
+          },
+          {
+            "tag": "invest",
+            "min": 49,
+            "max": 50
+          },
+          {
+            "tag": "investigate",
+            "min": 51,
+            "max": 52
+          },
+          {
+            "tag": "lose",
+            "min": 53,
+            "max": 54
+          },
+          {
+            "tag": "maintain",
+            "min": 55,
+            "max": 56
+          },
+          {
+            "tag": "mediate",
+            "min": 57,
+            "max": 58
+          },
+          {
+            "tag": "mourn",
+            "min": 59,
+            "max": 60
+          },
+          {
+            "tag": "negotiate",
+            "min": 61,
+            "max": 62
+          },
+          {
+            "tag": "prevent",
+            "min": 63,
+            "max": 66
+          },
+          {
+            "tag": "provoke",
+            "min": 67,
+            "max": 68
+          },
+          {
+            "tag": "release",
+            "min": 69,
+            "max": 70
+          },
+          {
+            "tag": "rescue",
+            "min": 71,
+            "max": 72
+          },
+          {
+            "tag": "retreat",
+            "min": 73,
+            "max": 74
+          },
+          {
+            "tag": "reveal",
+            "min": 75,
+            "max": 76
+          },
+          {
+            "tag": "scheme",
+            "min": 77,
+            "max": 78
+          },
+          {
+            "tag": "seize",
+            "min": 79,
+            "max": 80
+          },
+          {
+            "tag": "strengthen",
+            "min": 81,
+            "max": 82
+          },
+          {
+            "tag": "subdue",
+            "min": 83,
+            "max": 84
+          },
+          {
+            "tag": "submit",
+            "min": 85,
+            "max": 86
+          },
+          {
+            "tag": "surrender",
+            "min": 87,
+            "max": 88
+          },
+          {
+            "tag": "take",
+            "min": 89,
+            "max": 90
+          },
+          {
+            "tag": "trade",
+            "min": 91,
+            "max": 92
+          },
+          {
+            "tag": "transform",
+            "min": 93,
+            "max": 94
+          },
+          {
+            "tag": "weaken",
+            "min": 95,
+            "max": 96
+          },
+          {
+            "tag": "win",
+            "min": 97,
+            "max": 98
+          },
+          {
+            "tag": "work",
+            "min": 99,
+            "max": 100
+          }
+        ]
       }
     ]
   }
