@@ -32554,6 +32554,284 @@
             "max": 100
           }
         ]
+      },
+      {
+        "tag": "thing",
+        "dice": "d100",
+        "variants": [
+          {
+            "tag": "armor",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "tag": "blood_money",
+            "min": 3,
+            "max": 4
+          },
+          {
+            "tag": "book",
+            "min": 5,
+            "max": 6
+          },
+          {
+            "tag": "coded_message",
+            "min": 7,
+            "max": 8
+          },
+          {
+            "tag": "contract",
+            "title": "Contract/oath",
+            "min": 9,
+            "max": 10
+          },
+          {
+            "tag": "crown",
+            "title": "Crown/diadem",
+            "min": 11,
+            "max": 12
+          },
+          {
+            "tag": "cure",
+            "title": "Cure/antidote",
+            "min": 13,
+            "max": 14
+          },
+          {
+            "tag": "currency",
+            "min": 15,
+            "max": 16
+          },
+          {
+            "tag": "device",
+            "title": "Device/construct",
+            "min": 17,
+            "max": 18
+          },
+          {
+            "tag": "evidence",
+            "title": "Evidence/proof",
+            "min": 19,
+            "max": 20
+          },
+          {
+            "tag": "flag",
+            "title": "Flag/banner",
+            "min": 21,
+            "max": 22
+          },
+          {
+            "tag": "food_supply",
+            "min": 23,
+            "max": 24
+          },
+          {
+            "tag": "gate",
+            "title": "Gate/portal",
+            "min": 25,
+            "max": 26
+          },
+          {
+            "tag": "gemstone",
+            "min": 27,
+            "max": 28
+          },
+          {
+            "tag": "guild_mark",
+            "min": 29,
+            "max": 30
+          },
+          {
+            "tag": "helmet",
+            "min": 31,
+            "max": 32
+          },
+          {
+            "tag": "holy_book",
+            "min": 33,
+            "max": 34
+          },
+          {
+            "tag": "idol",
+            "title": "Idol/figurine",
+            "min": 35,
+            "max": 36
+          },
+          {
+            "tag": "information",
+            "min": 37,
+            "max": 38
+          },
+          {
+            "tag": "key",
+            "min": 39,
+            "max": 40
+          },
+          {
+            "tag": "location",
+            "min": 41,
+            "max": 42
+          },
+          {
+            "tag": "map",
+            "title": "Map/chart",
+            "min": 43,
+            "max": 44
+          },
+          {
+            "tag": "mount",
+            "title": "Mount/livestock",
+            "min": 45,
+            "max": 46
+          },
+          {
+            "tag": "murder_weapon",
+            "min": 47,
+            "max": 48
+          },
+          {
+            "tag": "musical_instrument",
+            "min": 49,
+            "max": 50
+          },
+          {
+            "tag": "necklace",
+            "title": "Necklace/bracelet",
+            "min": 51,
+            "max": 52
+          },
+          {
+            "tag": "note",
+            "title": "Note/message",
+            "min": 53,
+            "max": 54
+          },
+          {
+            "tag": "orb",
+            "title": "Orb/scepter",
+            "min": 55,
+            "max": 56
+          },
+          {
+            "tag": "pet",
+            "min": 57,
+            "max": 58
+          },
+          {
+            "tag": "phrase",
+            "title": "Phrase/incantation",
+            "min": 59,
+            "max": 60
+          },
+          {
+            "tag": "plans",
+            "min": 61,
+            "max": 62
+          },
+          {
+            "tag": "potion",
+            "title": "Potion/elixir",
+            "min": 63,
+            "max": 64
+          },
+          {
+            "tag": "ring",
+            "min": 65,
+            "max": 66
+          },
+          {
+            "tag": "scroll",
+            "min": 67,
+            "max": 68
+          },
+          {
+            "tag": "secret",
+            "min": 69,
+            "max": 70
+          },
+          {
+            "tag": "shield",
+            "min": 71,
+            "max": 72
+          },
+          {
+            "tag": "source_of_light",
+            "min": 73,
+            "max": 74
+          },
+          {
+            "tag": "spellbook",
+            "min": 75,
+            "max": 76
+          },
+          {
+            "tag": "statue",
+            "title": "Statue/sculpture",
+            "min": 77,
+            "max": 78
+          },
+          {
+            "tag": "strongbox",
+            "title": "Strongbox/chest",
+            "min": 79,
+            "max": 80
+          },
+          {
+            "tag": "tool",
+            "min": 81,
+            "max": 82
+          },
+          {
+            "tag": "trade_goods",
+            "min": 83,
+            "max": 84
+          },
+          {
+            "tag": "treaty",
+            "title": "Treaty/agreement",
+            "min": 85,
+            "max": 86
+          },
+          {
+            "tag": "trinket",
+            "title": "Trinket/charm",
+            "min": 87,
+            "max": 88
+          },
+          {
+            "tag": "trophy",
+            "title": "Trophy/keepsake",
+            "min": 89,
+            "max": 90
+          },
+          {
+            "tag": "true_name",
+            "min": 91,
+            "max": 92
+          },
+          {
+            "tag": "water_supply",
+            "min": 93,
+            "max": 94
+          },
+          {
+            "tag": "weapon",
+            "min": 95,
+            "max": 96
+          },
+          {
+            "tag": "wine",
+            "title": "Wine/spirits",
+            "min": 97,
+            "max": 98
+          },
+          {
+            "tag": "reroll",
+            "title": "Reroll, +<i>magic</i>",
+            "min": 99,
+            "max": 100
+          }
+        ]
       }
     ]
   }
