@@ -32273,6 +32273,287 @@
             "max": 100
           }
         ]
+      },
+      {
+        "tag": "relationship",
+        "dice": "d100",
+        "variants": [
+          {
+            "tag": "abductee",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "tag": "abductor",
+            "title": "Abductor/kidnapper",
+            "min": 3,
+            "max": 4
+          },
+          {
+            "tag": "advisee",
+            "min": 5,
+            "max": 6
+          },
+          {
+            "tag": "adviser",
+            "title": "Adviser/council",
+            "min": 7,
+            "max": 8
+          },
+          {
+            "tag": "advocate",
+            "title": "Advocate/representative",
+            "min": 9,
+            "max": 10
+          },
+          {
+            "tag": "apprentice",
+            "min": 11,
+            "max": 12
+          },
+          {
+            "tag": "aspirant",
+            "title": "Aspirant/applicant",
+            "min": 13,
+            "max": 14
+          },
+          {
+            "tag": "aunt",
+            "title": "Aunt/uncle",
+            "min": 15,
+            "max": 16
+          },
+          {
+            "tag": "authority",
+            "min": 17,
+            "max": 18
+          },
+          {
+            "tag": "believer",
+            "title": "Believer/adherent",
+            "min": 19,
+            "max": 20
+          },
+          {
+            "tag": "child",
+            "min": 21,
+            "max": 22
+          },
+          {
+            "tag": "client",
+            "title": "Client/customer",
+            "min": 23,
+            "max": 24
+          },
+          {
+            "tag": "competitor",
+            "title": "Competitor/rival",
+            "min": 25,
+            "max": 26
+          },
+          {
+            "tag": "cousin",
+            "min": 27,
+            "max": 28
+          },
+          {
+            "tag": "defender",
+            "title": "Defender/protector",
+            "min": 29,
+            "max": 30
+          },
+          {
+            "tag": "enemy",
+            "title": "Enemy/nemesis",
+            "min": 31,
+            "max": 32
+          },
+          {
+            "tag": "escort",
+            "title": "Escort/guide",
+            "min": 33,
+            "max": 34
+          },
+          {
+            "tag": "fan",
+            "title": "Fan/admirer",
+            "min": 35,
+            "max": 36
+          },
+          {
+            "tag": "follower",
+            "min": 37,
+            "max": 38
+          },
+          {
+            "tag": "former_friend",
+            "title": "Former friend/ally",
+            "min": 39,
+            "max": 40
+          },
+          {
+            "tag": "former_lover",
+            "title": "Former lover/spouse",
+            "min": 41,
+            "max": 42
+          },
+          {
+            "tag": "friend",
+            "title": "Friend/ally",
+            "min": 43,
+            "max": 44
+          },
+          {
+            "tag": "guard",
+            "min": 45,
+            "max": 46
+          },
+          {
+            "tag": "hunter",
+            "min": 47,
+            "max": 48
+          },
+          {
+            "tag": "idol",
+            "title": "Idol/hero",
+            "min": 49,
+            "max": 50
+          },
+          {
+            "tag": "inferior",
+            "min": 51,
+            "max": 52
+          },
+          {
+            "tag": "investigator",
+            "min": 53,
+            "max": 54
+          },
+          {
+            "tag": "judge",
+            "title": "Judge/evaluator",
+            "min": 55,
+            "max": 56
+          },
+          {
+            "tag": "lover",
+            "min": 57,
+            "max": 58
+          },
+          {
+            "tag": "master",
+            "min": 59,
+            "max": 60
+          },
+          {
+            "tag": "niece",
+            "title": "Niece/nephew",
+            "min": 61,
+            "max": 62
+          },
+          {
+            "tag": "oathmate",
+            "min": 63,
+            "max": 64
+          },
+          {
+            "tag": "parent",
+            "min": 65,
+            "max": 66
+          },
+          {
+            "tag": "peer",
+            "title": "Peer/equal",
+            "min": 67,
+            "max": 68
+          },
+          {
+            "tag": "perpetrator",
+            "min": 69,
+            "max": 70
+          },
+          {
+            "tag": "preacher",
+            "title": "Preacher/promoter",
+            "min": 71,
+            "max": 72
+          },
+          {
+            "tag": "prey",
+            "title": "Prey/victim",
+            "min": 73,
+            "max": 74
+          },
+          {
+            "tag": "prisoner",
+            "min": 75,
+            "max": 76
+          },
+          {
+            "tag": "proprietor",
+            "min": 77,
+            "max": 78
+          },
+          {
+            "tag": "provider",
+            "min": 79,
+            "max": 80
+          },
+          {
+            "tag": "pupil",
+            "title": "Pupil/student",
+            "min": 81,
+            "max": 82
+          },
+          {
+            "tag": "recipient",
+            "min": 83,
+            "max": 84
+          },
+          {
+            "tag": "recruit",
+            "title": "Recruit/inductee",
+            "min": 85,
+            "max": 86
+          },
+          {
+            "tag": "servant",
+            "title": "Servant/slave",
+            "min": 87,
+            "max": 88
+          },
+          {
+            "tag": "sibling",
+            "min": 89,
+            "max": 90
+          },
+          {
+            "tag": "spouse",
+            "title": "Spouse/bondmate",
+            "min": 91,
+            "max": 92
+          },
+          {
+            "tag": "suitor",
+            "min": 93,
+            "max": 94
+          },
+          {
+            "tag": "superior",
+            "min": 95,
+            "max": 96
+          },
+          {
+            "tag": "teacher",
+            "min": 97,
+            "max": 98
+          },
+          {
+            "tag": "victim",
+            "min": 99,
+            "max": 100
+          }
+        ]
       }
     ]
   }
