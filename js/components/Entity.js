@@ -53,6 +53,14 @@ define([
         let _hide = false;
 
         /**
+         * Whether to force show entity in tree
+         *
+         * @type {boolean}
+         * @private
+         */
+        let _forceShow = false;
+
+        /**
          * Dice formula, for randomizing result from _variants
          * Has default value as d12
          *
@@ -194,6 +202,9 @@ define([
             if ("hide" in data) {
                 _hide = data.hide;
             }
+            if ("forceShow" in data) {
+                _forceShow = data.forceShow;
+            }
             if ("dice" in data) {
                 _dice = data.dice;
             }
@@ -321,6 +332,13 @@ define([
             return _hide;
         };
 
+        /**
+         * Returns whether to show entity regardless of leaf it or no
+         * @returns {boolean}
+         */
+        this.getForceShow = function() {
+            return _forceShow;
+        };
 
         /**
          * Returns entity dice
@@ -370,7 +388,7 @@ define([
          * @returns {{text}}
          */
         this.getTreeNode = function () {
-            if(this.isLeave()){
+            if(this.isLeave() && !this.getForceShow()){
                 return null;
             }
 

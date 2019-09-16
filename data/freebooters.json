@@ -6402,6 +6402,7 @@
           {
             "tag": "area",
             "hint": "$modifier",
+            "forceShow": true,
             "vars": {
               "$dungeon_type": "caves"
             },
@@ -6954,6 +6955,7 @@
           {
             "tag": "area",
             "hint": "$modifier",
+            "forceShow": true,
             "vars": {
               "$dungeon_type": "ruined_settlement"
             },
@@ -7462,6 +7464,7 @@
           {
             "tag": "area",
             "hint": "$modifier",
+            "forceShow": true,
             "vars": {
               "$dungeon_type": "prison"
             },
@@ -8012,6 +8015,7 @@
           {
             "tag": "area",
             "hint": "$modifier",
+            "forceShow": true,
             "vars": {
               "$dungeon_type": "mine"
             },
@@ -8610,6 +8614,7 @@
           {
             "tag": "area",
             "hint": "$modifier",
+            "forceShow": true,
             "vars": {
               "$dungeon_type": "crypt"
             },
@@ -9322,7 +9327,7 @@
                 "min": 1,
                 "max": 3,
                 "additional": [
-                  "dungeon_type.cave.area"
+                  "dungeon_type.caves.area"
                 ]
               },
               {
@@ -9477,6 +9482,7 @@
           {
             "tag": "area",
             "hint": "$modifier",
+            "forceShow": true,
             "vars": {
               "$dungeon_type": "stronghold"
             },
@@ -10002,6 +10008,7 @@
           {
             "tag": "area",
             "hint": "$modifier",
+            "forceShow": true,
             "vars": {
               "$dungeon_type": "temple"
             },
@@ -10509,6 +10516,7 @@
           {
             "tag": "area",
             "hint": "$modifier",
+            "forceShow": true,
             "vars": {
               "$dungeon_type": "archive"
             },
@@ -11067,6 +11075,7 @@
           {
             "tag": "area",
             "hint": "$modifier",
+            "forceShow": true,
             "vars": {
               "$dungeon_type": "origin_unknown"
             },
@@ -11193,7 +11202,7 @@
                 "min": 1,
                 "max": 3,
                 "additional": [
-                  "dungeon_type.cave.common_area"
+                  "dungeon_type.caves.common_area"
                 ]
               },
               {
@@ -11262,7 +11271,7 @@
                 "min": 1,
                 "max": 1,
                 "additional": [
-                  "dungeon_type.cave.unique_area"
+                  "dungeon_type.caves.unique_area"
                 ]
               },
               {
