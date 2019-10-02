@@ -27764,7 +27764,9 @@
             "title": "ELEMENTAL",
             "min": 9,
             "max": 10,
-            "additional": "details.element"
+            "additional": [
+              "details.element"
+            ]
           },
           {
             "tag": "restoration",
@@ -28027,7 +28029,8 @@
         "variants": [
           {
             "tag": "common1",
-            "title": "Common",
+            "title": "Common area",
+            "description": "1 DANGER",
             "min": 1,
             "max": 3,
             "additional": [
@@ -28043,7 +28046,8 @@
           },
           {
             "tag": "common2",
-            "title": "Common",
+            "title": "Common area",
+            "description": "1 DANGER, 1 DISCOVERY",
             "min": 4,
             "max": 6,
             "additional": [
@@ -28060,7 +28064,8 @@
           },
           {
             "tag": "common3",
-            "title": "Common",
+            "title": "Common area",
+            "description": "1 DANGER, 2 DISCOVERIES",
             "min": 7,
             "max": 8,
             "additional": [
@@ -28078,7 +28083,8 @@
           },
           {
             "tag": "common1",
-            "title": "Common",
+            "title": "Common area",
+            "description": "Nothing usual",
             "min": 9,
             "max": 11,
             "additional": [
@@ -28097,7 +28103,8 @@
           },
           {
             "tag": "common5",
-            "title": "Common",
+            "title": "Common area",
+            "description": "1 DISCOVERY",
             "min": 12,
             "max": 12,
             "additional": [
@@ -28113,7 +28120,8 @@
           },
           {
             "tag": "unique1",
-            "title": "Unique",
+            "title": "Unique area",
+            "description": "1 DANGER",
             "min": 13,
             "max": 13,
             "additional": [
@@ -28129,7 +28137,8 @@
           },
           {
             "tag": "unique2",
-            "title": "Unique",
+            "title": "Unique area",
+            "description": "Nothing unusual",
             "min": 14,
             "max": 14,
             "additional": [
@@ -28148,7 +28157,8 @@
           },
           {
             "tag": "unique3",
-            "title": "Unique",
+            "title": "Unique area",
+            "description": "1 DANGER, 1 DISCOVERY",
             "min": 15,
             "max": 15,
             "additional": [
@@ -28165,7 +28175,8 @@
           },
           {
             "tag": "unique4",
-            "title": "Unique",
+            "title": "Unique area",
+            "description": "1 DANGER, 2 DISCOVERIES",
             "min": 16,
             "max": 16,
             "additional": [
@@ -28183,7 +28194,8 @@
           },
           {
             "tag": "unique5",
-            "title": "Unique",
+            "title": "Unique area",
+            "description": "1d4 DISCOVERIES",
             "min": 17,
             "max": 17,
             "additional": [
