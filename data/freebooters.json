@@ -6402,7 +6402,7 @@
           {
             "tag": "area",
             "hint": "$modifier",
-            "forceShow": true,
+            "force_show": true,
             "vars": {
               "$dungeon_type": "caves"
             },
@@ -6955,7 +6955,7 @@
           {
             "tag": "area",
             "hint": "$modifier",
-            "forceShow": true,
+            "force_show": true,
             "vars": {
               "$dungeon_type": "ruined_settlement"
             },
@@ -7464,7 +7464,7 @@
           {
             "tag": "area",
             "hint": "$modifier",
-            "forceShow": true,
+            "force_show": true,
             "vars": {
               "$dungeon_type": "prison"
             },
@@ -8015,7 +8015,7 @@
           {
             "tag": "area",
             "hint": "$modifier",
-            "forceShow": true,
+            "force_show": true,
             "vars": {
               "$dungeon_type": "mine"
             },
@@ -8614,7 +8614,7 @@
           {
             "tag": "area",
             "hint": "$modifier",
-            "forceShow": true,
+            "force_show": true,
             "vars": {
               "$dungeon_type": "crypt"
             },
@@ -9482,7 +9482,7 @@
           {
             "tag": "area",
             "hint": "$modifier",
-            "forceShow": true,
+            "force_show": true,
             "vars": {
               "$dungeon_type": "stronghold"
             },
@@ -10008,7 +10008,7 @@
           {
             "tag": "area",
             "hint": "$modifier",
-            "forceShow": true,
+            "force_show": true,
             "vars": {
               "$dungeon_type": "temple"
             },
@@ -10516,7 +10516,7 @@
           {
             "tag": "area",
             "hint": "$modifier",
-            "forceShow": true,
+            "force_show": true,
             "vars": {
               "$dungeon_type": "archive"
             },
@@ -11075,7 +11075,7 @@
           {
             "tag": "area",
             "hint": "$modifier",
-            "forceShow": true,
+            "force_show": true,
             "vars": {
               "$dungeon_type": "origin_unknown"
             },
@@ -14289,248 +14289,104 @@
   },
   {
     "tag": "booty",
-    "static": "Please generate either \"Inherent booty\", or \"Owned booty\" (they are inside this entity)",
+    "static": "Please generate one of following \"Inherent\", \"Carried\", \"Stashed\" or \"In lair\" (they are inside this entity)",
     "dictionaries": [
       {
-        "tag": "inherent_booty",
+        "tag": "inherent_booty_roll",
         "hint": "$dice",
-        "dice": "d16",
-        "use_custom_dice": true,
+        "force_show": true,
+        "additional": [
+          {
+            "tag": "booty",
+            "use_custom_dice": true,
+            "repeat": "1",
+            "generate_outer" : "booty.inherent_booty"
+          }
+        ]
+      },
+      {
+        "tag": "inherent_booty",
+        "dice": "d12",
         "variants": [
           {
             "tag": "booty_1",
-            "title": "Booty",
+            "title": "Nothing of note",
             "min": 1,
-            "max": 1,
-            "static": "Nothing",
-            "additional": [
-              {
-                "tag": "value",
-                "static": "0"
-              }
-            ]
-          },
-          {
-            "tag": "booty_2",
-            "title": "Booty",
-            "min": 2,
-            "max": 2,
-            "static": "1 ration",
-            "additional": [
-              {
-                "tag": "value",
-                "title": "Value - 1d4",
-                "roll_result": "d4"
-              }
-            ]
+            "max": 2
           },
           {
             "tag": "booty_3",
-            "title": "Booty",
+            "title": "Nutriment worth (HP/4) rations",
             "min": 3,
-            "max": 3,
-            "static": "BODY PART",
-            "additional": [
-              {
-                "tag": "value",
-                "title": "Value - 2d6",
-                "roll_result": "2d6"
-              },
-              "booty.body_part"
-            ]
+            "max": 3
           },
           {
             "tag": "booty_4",
-            "title": "Booty",
+            "title": "BODY PART",
             "min": 4,
             "max": 4,
-            "static": "(HP/5) rations",
             "additional": [
-              {
-                "tag": "value",
-                "title": "Value - 4d6",
-                "roll_result": "4d6"
-              }
+              "booty.body_part"
             ]
           },
           {
             "tag": "booty_5",
-            "title": "Booty",
+            "title": "Nutriment worth (HP/3) rations",
             "min": 5,
-            "max": 5,
-            "static": "BODY PART",
-            "additional": [
-              {
-                "tag": "value",
-                "title": "Value - 4d6 x 2",
-                "roll_result": "4d6x2"
-              },
-              "booty.body_part"
-            ]
+            "max": 5
           },
           {
             "tag": "booty_6",
-            "title": "Booty",
+            "title": "BODY PART",
             "min": 6,
             "max": 6,
-            "static": "(HP/4) rations",
             "additional": [
-              {
-                "tag": "value",
-                "title": "Value - 6d6 x 2",
-                "roll_result": "6d6x2"
-              }
+              "booty.body_part"
             ]
           },
           {
             "tag": "booty_7",
-            "title": "Booty",
+            "title": "Nutriment worth (HP/2) rations",
             "min": 7,
-            "max": 7,
-            "static": "BODY PART",
-            "additional": [
-              {
-                "tag": "value",
-                "title": "Value - 3d8 x 5",
-                "roll_result": "3d8x5"
-              },
-              "booty.body_part"
-            ]
+            "max": 7
           },
           {
             "tag": "booty_8",
-            "title": "Booty",
+            "title": "BODY PART",
             "min": 8,
             "max": 8,
-            "static": "(HP/3) rations",
             "additional": [
-              {
-                "tag": "value",
-                "title": "Value - 4d8 x 5",
-                "roll_result": "4d8x5"
-              }
+              "booty.body_part"
             ]
           },
           {
             "tag": "booty_9",
-            "title": "Booty",
+            "title": "Nutriment worth (HP) rations",
             "min": 9,
-            "max": 9,
-            "static": "(HP/2) rations",
-            "additional": [
-              {
-                "tag": "value",
-                "title": "Value - 5d8 x 5",
-                "roll_result": "5d8x5"
-              }
-            ]
+            "max": 9
           },
           {
             "tag": "booty_10",
-            "title": "Booty",
+            "title": "BODY PART",
             "min": 10,
             "max": 10,
-            "static": "BODY PART, and roll again",
             "additional": [
-              {
-                "tag": "value",
-                "title": "Value - 6d8 x 5",
-                "roll_result": "6d8x5"
-              },
-              "booty.body_part",
-              "booty.inherent_booty"
+              "booty.body_part"
             ]
           },
           {
             "tag": "booty_11",
-            "title": "Booty",
+            "title": "Nutriment worth (HP) rations",
             "min": 11,
-            "max": 11,
-            "static": "(HP) rations",
-            "additional": [
-              {
-                "tag": "value",
-                "title": "Value - 8d8 x 5",
-                "roll_result": "8d8x5"
-              }
-            ]
+            "max": 11
           },
           {
             "tag": "booty_12",
-            "title": "Booty",
+            "title": "BODY PART",
             "min": 12,
             "max": 12,
-            "static": "BODY PART, and roll again",
             "additional": [
-              {
-                "tag": "value",
-                "title": "Value - 10d8 x 5",
-                "roll_result": "10d8x5"
-              },
-              "booty.body_part",
-              "booty.inherent_booty"
-            ]
-          },
-          {
-            "tag": "booty_13",
-            "title": "Booty",
-            "min": 13,
-            "max": 13,
-            "static": "BODY PART",
-            "additional": [
-              {
-                "tag": "value",
-                "title": "Value - 5d10 x 10",
-                "roll_result": "5d10x10"
-              },
               "booty.body_part"
-            ]
-          },
-          {
-            "tag": "booty_14",
-            "title": "Booty",
-            "min": 14,
-            "max": 14,
-            "static": "BODY PART, and roll again",
-            "additional": [
-              {
-                "tag": "value",
-                "title": "Value - 6d10 x 10",
-                "roll_result": "6d10x10"
-              },
-              "booty.body_part",
-              "booty.inherent_booty"
-            ]
-          },
-          {
-            "tag": "booty_15",
-            "title": "Booty",
-            "min": 15,
-            "max": 15,
-            "static": "BODY PART",
-            "additional": [
-              {
-                "tag": "value",
-                "title": "Value - 8d10 x 10",
-                "roll_result": "8d10x10"
-              },
-              "booty.body_part"
-            ]
-          },
-          {
-            "tag": "booty_16",
-            "title": "Booty",
-            "min": 16,
-            "max": 16,
-            "static": "BODY PART, and roll again",
-            "additional": [
-              {
-                "tag": "value",
-                "title": "Value - 10d10 x 10",
-                "roll_result": "10d10x10"
-              },
-              "booty.body_part",
-              "booty.inherent_booty"
             ]
           }
         ]

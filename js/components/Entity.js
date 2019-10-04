@@ -58,7 +58,7 @@ define([
          * @type {boolean}
          * @private
          */
-        let _forceShow = false;
+        let _force_show = false;
 
         /**
          * Dice formula, for randomizing result from _variants
@@ -172,6 +172,7 @@ define([
          * @param data.description
          * @param data.hint
          * @param data.hide
+         * @param data.force_show
          * @param data.dice
          * @param data.use_modifier
          * @param data.use_custom_dice
@@ -202,8 +203,8 @@ define([
             if ("hide" in data) {
                 _hide = data.hide;
             }
-            if ("forceShow" in data) {
-                _forceShow = data.forceShow;
+            if ("force_show" in data) {
+                _force_show = data.force_show;
             }
             if ("dice" in data) {
                 _dice = data.dice;
@@ -337,7 +338,7 @@ define([
          * @returns {boolean}
          */
         this.getForceShow = function() {
-            return _forceShow;
+            return _force_show;
         };
 
         /**
@@ -604,6 +605,16 @@ define([
          */
         this.getRepeat = function () {
             let formula = _repeat !== null ? _repeat : "1";
+console.log(formula);
+            console.log(this.useCustomDice());
+            if (this.useCustomDice()) {
+                let customDice = $("#diceRoller").val();
+                if (!_.isEmpty(customDice)) {
+                    formula = customDice;
+                }
+            }
+            console.log(formula);
+
             let dice = new Dice();
             return dice.roll(formula);
         };
