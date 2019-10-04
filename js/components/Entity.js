@@ -605,15 +605,13 @@ define([
          */
         this.getRepeat = function () {
             let formula = _repeat !== null ? _repeat : "1";
-console.log(formula);
-            console.log(this.useCustomDice());
+
             if (this.useCustomDice()) {
                 let customDice = $("#diceRoller").val();
                 if (!_.isEmpty(customDice)) {
                     formula = customDice;
                 }
             }
-            console.log(formula);
 
             let dice = new Dice();
             return dice.roll(formula);
