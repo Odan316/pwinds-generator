@@ -14301,6 +14301,45 @@
         ]
       },
       {
+        "tag": "carried_booty_roll",
+        "hint": "$dice",
+        "force_show": true,
+        "additional": [
+          {
+            "tag": "booty",
+            "use_custom_dice": true,
+            "repeat": "1",
+            "generate_outer": "booty.carried_booty"
+          }
+        ]
+      },
+      {
+        "tag": "stashed_booty_roll",
+        "hint": "$dice",
+        "force_show": true,
+        "additional": [
+          {
+            "tag": "booty",
+            "use_custom_dice": true,
+            "repeat": "1",
+            "generate_outer": "booty.stashed_booty"
+          }
+        ]
+      },
+      {
+        "tag": "in_lair_booty_roll",
+        "hint": "$dice",
+        "force_show": true,
+        "additional": [
+          {
+            "tag": "booty",
+            "use_custom_dice": true,
+            "repeat": "1",
+            "generate_outer": "booty.in_lair_booty"
+          }
+        ]
+      },
+      {
         "tag": "inherent_booty",
         "dice": "d12",
         "variants": [
@@ -14388,255 +14427,346 @@
         ]
       },
       {
-        "tag": "owned_booty",
-        "hint": "$dice",
-        "dice": "d16",
-        "use_custom_dice": true,
+        "tag": "carried_booty",
+        "dice": "d12",
         "variants": [
           {
             "tag": "booty_1",
-            "title": "Booty",
+            "title": "Nothing of note",
             "min": 1,
-            "max": 1,
-            "static": "Nothing",
-            "additional": [
-              {
-                "tag": "value",
-                "static": "0"
-              }
-            ]
+            "max": 1
           },
           {
             "tag": "booty_2",
-            "title": "Booty",
-            "min": 2,
-            "max": 2,
-            "static": "Currency 1d4",
+            "title": "Currency worth 1d10 sp",
+            "min": 3,
+            "max": 3,
+            "roll_result": "1d10"
+          },
+          {
+            "tag": "booty_3",
+            "title": "PERSONAL ITEM",
+            "min": 3,
+            "max": 3,
+            "additional": [
+              "booty.personal_item"
+            ]
+          },
+          {
+            "tag": "booty_4",
+            "title": "TRINKET",
+            "min": 4,
+            "max": 4,
+            "additional": [
+              "booty.trinket"
+            ]
+          },
+          {
+            "tag": "booty_5",
+            "title": "Currency worth 2d10 sp",
+            "min": 5,
+            "max": 5,
+            "roll_result": "2d10"
+          },
+          {
+            "tag": "booty_6",
+            "title": "GEM",
+            "min": 6,
+            "max": 6,
+            "additional": [
+              "booty.gem"
+            ]
+          },
+          {
+            "tag": "booty_7",
+            "title": "Currency worth 4d10 sp",
+            "min": 7,
+            "max": 7,
+            "roll_result": "4d10"
+          },
+          {
+            "tag": "booty_8",
+            "title": "JEWELRY",
+            "min": 8,
+            "max": 8,
+            "additional": [
+              "booty.jewelry"
+            ]
+          },
+          {
+            "tag": "booty_9",
+            "title": "Currency worth 8d10 sp",
+            "min": 9,
+            "max": 9,
+            "roll_result": "8d10"
+          },
+          {
+            "tag": "booty_10",
+            "title": "RARITY",
+            "min": 10,
+            "max": 10,
+            "additional": [
+              "booty.rarity"
+            ]
+          },
+          {
+            "tag": "booty_11",
+            "title": "Currency worth 10d10 sp",
+            "min": 11,
+            "max": 11,
+            "roll_result": "10d10"
+          },
+          {
+            "tag": "booty_12",
+            "title": "MAGIC ITEM",
+            "min": 12,
+            "max": 12,
+            "additional": [
+              "booty.magic_item"
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "stashed_booty",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "booty_1",
+            "title": "Currency worth 1d10 sp",
+            "min": 1,
+            "max": 1,
+            "roll_result": "1d10"
+          },
+          {
+            "tag": "booty_2",
+            "title": "PERSONAL ITEM x 1d4",
+            "min": 3,
+            "max": 3,
             "additional": [
               {
-                "tag": "value",
-                "title": "Value - 1d4",
-                "roll_result": "d4"
+                "tag": "personal_item",
+                "repeat": "d4",
+                "generate_outer": "booty.personal_item"
               }
             ]
           },
           {
             "tag": "booty_3",
-            "title": "Booty",
+            "title": "TRINKET x1d4",
             "min": 3,
             "max": 3,
-            "static": "ITEM (d10)",
             "additional": [
               {
-                "tag": "value",
-                "title": "Value - 2d6",
-                "roll_result": "2d6"
-              },
-              [
-                "booty.item",
-                "d10"
-              ]
+                "tag": "trinket",
+                "repeat": "d4",
+                "generate_outer": "booty.trinket"
+              }
             ]
           },
           {
             "tag": "booty_4",
-            "title": "Booty",
+            "title": "Currency worth 2d10 sp",
             "min": 4,
             "max": 4,
-            "static": "Currency 4d6 and roll again",
-            "additional": [
-              {
-                "tag": "value",
-                "roll_result": "4d6"
-              },
-              "booty.owned_booty"
-            ]
+            "roll_result": "2d10"
           },
           {
             "tag": "booty_5",
-            "title": "Booty",
+            "title": "GEM",
             "min": 5,
             "max": 5,
-            "static": "Currency 4d6 x 2",
+            "additional": [
+              "booty.gem"
+            ]
+          },
+          {
+            "tag": "booty_6",
+            "title": "JEWELRY x1d4",
+            "min": 6,
+            "max": 6,
             "additional": [
               {
-                "tag": "value",
-                "roll_result": "4d6x2"
+                "tag": "jewelry",
+                "repeat": "d4",
+                "generate_outer": "booty.jewelry"
+              }
+            ]
+          },
+          {
+            "tag": "booty_7",
+            "title": "Currency worth 6d10 sp",
+            "min": 7,
+            "max": 7,
+            "roll_result": "6d10"
+          },
+          {
+            "tag": "booty_8",
+            "title": "RARITY",
+            "min": 8,
+            "max": 8,
+            "additional": [
+              "booty.rarity"
+            ]
+          },
+          {
+            "tag": "booty_9",
+            "title": "Currency worth 10d10 sp",
+            "min": 9,
+            "max": 9,
+            "roll_result": "10d10"
+          },
+          {
+            "tag": "booty_10",
+            "title": "RARITY",
+            "min": 10,
+            "max": 10,
+            "additional": [
+              "booty.rarity"
+            ]
+          },
+          {
+            "tag": "booty_11",
+            "title": "Currency worth 10d10x5 sp",
+            "min": 11,
+            "max": 11,
+            "roll_result": "10d10x5"
+          },
+          {
+            "tag": "booty_12",
+            "title": "MAGIC ITEM",
+            "min": 12,
+            "max": 12,
+            "additional": [
+              "booty.magic_item"
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "in_lair_booty",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "booty_1",
+            "title": "Currency worth 2d10 sp",
+            "min": 1,
+            "max": 1,
+            "roll_result": "2d10"
+          },
+          {
+            "tag": "booty_2",
+            "title": "PERSONAL ITEM x 1d6",
+            "min": 3,
+            "max": 3,
+            "additional": [
+              {
+                "tag": "personal_item",
+                "repeat": "d6",
+                "generate_outer": "booty.personal_item"
+              }
+            ]
+          },
+          {
+            "tag": "booty_3",
+            "title": "TRINKET x1d6",
+            "min": 3,
+            "max": 3,
+            "additional": [
+              {
+                "tag": "trinket",
+                "repeat": "d6",
+                "generate_outer": "booty.trinket"
+              }
+            ]
+          },
+          {
+            "tag": "booty_4",
+            "title": "Currency worth 4d10 sp",
+            "min": 4,
+            "max": 4,
+            "roll_result": "4d10"
+          },
+          {
+            "tag": "booty_5",
+            "title": "GEM x1d6",
+            "min": 5,
+            "max": 5,
+            "additional": [
+              {
+                "tag": "gem",
+                "repeat": "d6",
+                "generate_outer": "booty.gem"
               }
             ]
           },
           {
             "tag": "booty_6",
-            "title": "Booty",
+            "title": "JEWELRY x1d4",
             "min": 6,
             "max": 6,
-            "static": "ITEM, and roll again",
             "additional": [
               {
-                "tag": "value",
-                "title": "Value - 6d6 x 2",
-                "roll_result": "6d6x2"
-              },
-              "booty.item",
-              "booty.owned_booty"
-            ]
-          },
-          {
-            "tag": "booty_7",
-            "title": "Booty",
-            "min": 7,
-            "max": 7,
-            "static": "VALUABLE (d10)",
-            "additional": [
-              {
-                "tag": "value",
-                "title": "Value - 3d8 x 5",
-                "roll_result": "3d8x5"
-              },
-              [
-                "booty.valuable",
-                "d10"
-              ]
-            ]
-          },
-          {
-            "tag": "booty_8",
-            "title": "Booty",
-            "min": 8,
-            "max": 8,
-            "static": "Currency 4d8 x 5 and roll again",
-            "additional": [
-              {
-                "tag": "value",
-                "roll_result": "4d8x5"
-              },
-              "booty.owned_booty"
-            ]
-          },
-          {
-            "tag": "booty_9",
-            "title": "Booty",
-            "min": 9,
-            "max": 9,
-            "static": "Currency",
-            "additional": [
-              {
-                "tag": "value",
-                "roll_result": "5d8x5"
+                "tag": "jewelry",
+                "repeat": "d4",
+                "generate_outer": "booty.jewelry"
               }
             ]
           },
           {
-            "tag": "booty_10",
-            "title": "Booty",
-            "min": 10,
-            "max": 10,
-            "static": "VALUABLE, and roll again",
+            "tag": "booty_7",
+            "title": "Currency worth 10d10 sp",
+            "min": 7,
+            "max": 7,
+            "roll_result": "10d10"
+          },
+          {
+            "tag": "booty_8",
+            "title": "JEWELRY x1d6",
+            "min": 8,
+            "max": 8,
             "additional": [
               {
-                "tag": "value",
-                "title": "Value - 6d8 x 5",
-                "roll_result": "6d8x5"
-              },
-              "booty.valuable",
-              "booty.owned_booty"
+                "tag": "jewelry",
+                "repeat": "d6",
+                "generate_outer": "booty.jewelry"
+              }
+            ]
+          },
+          {
+            "tag": "booty_9",
+            "title": "Currency worth 10d10x5 sp",
+            "min": 9,
+            "max": 9,
+            "roll_result": "10d10x5"
+          },
+          {
+            "tag": "booty_10",
+            "title": "RARITY x1d4",
+            "min": 10,
+            "max": 10,
+            "additional": [
+              {
+                "tag": "rarity",
+                "repeat": "d4",
+                "generate_outer": "booty.rarity"
+              }
             ]
           },
           {
             "tag": "booty_11",
-            "title": "Booty",
+            "title": "Currency worth 10d10x10 sp",
             "min": 11,
             "max": 11,
-            "static": "VALUABLE",
-            "additional": [
-              {
-                "tag": "value",
-                "title": "Value - 8d8 x 5",
-                "roll_result": "8d8x5"
-              },
-              "booty.valuable"
-            ]
+            "roll_result": "10d10x10"
           },
           {
             "tag": "booty_12",
-            "title": "Booty",
+            "title": "MAGIC ITEM",
             "min": 12,
             "max": 12,
-            "static": "Currency, and roll again",
             "additional": [
-              {
-                "tag": "value",
-                "roll_result": "10d8x5"
-              },
-              "booty.owned_booty"
-            ]
-          },
-          {
-            "tag": "booty_13",
-            "title": "Booty",
-            "min": 13,
-            "max": 13,
-            "static": "VALUABLE",
-            "additional": [
-              {
-                "tag": "value",
-                "title": "Value - 5d10 x 10",
-                "roll_result": "5d10x10"
-              },
-              "booty.valuable"
-            ]
-          },
-          {
-            "tag": "booty_14",
-            "title": "Booty",
-            "min": 14,
-            "max": 14,
-            "static": "VALUABLE, and roll again",
-            "additional": [
-              {
-                "tag": "value",
-                "title": "Value - 6d10 x 10",
-                "roll_result": "6d10x10"
-              },
-              "booty.valuable",
-              "booty.owned_booty"
-            ]
-          },
-          {
-            "tag": "booty_15",
-            "title": "Booty",
-            "min": 15,
-            "max": 15,
-            "static": "VALUABLE (1d8+4)",
-            "additional": [
-              {
-                "tag": "value",
-                "title": "Value - 8d10x 10",
-                "roll_result": "8d10x10"
-              },
-              [
-                "booty.valuable",
-                "d8+4"
-              ]
-            ]
-          },
-          {
-            "tag": "booty_16",
-            "title": "Booty",
-            "min": 16,
-            "max": 16,
-            "static": "VALUABLE (1d6+6), and roll again",
-            "additional": [
-              {
-                "tag": "value",
-                "title": "Value - 10d10 x 10",
-                "roll_result": "10d10x10"
-              },
-              [
-                "booty.valuable",
-                "d6+6"
-              ],
-              "booty.owned_booty"
+              "booty.magic_item"
             ]
           }
         ]
@@ -14792,49 +14922,334 @@
             "title": "1d10 sp",
             "min": 1,
             "max": 3,
-            "roll_result": "1d10"
+            "additional": [
+              {
+                "tag" : "value",
+                "roll_result": "d10"
+              }
+            ]
           },
           {
             "tag": "value_2",
             "title": "1d10x2 sp",
             "min": 4,
             "max": 5,
-            "roll_result": "1d10x2"
+            "additional": [
+              {
+                "tag" : "value",
+                "roll_result": "d10x2"
+              }
+            ]
           },
           {
             "tag": "value_3",
             "title": "2d10x2 sp",
             "min": 6,
             "max": 7,
-            "roll_result": "2d10x2"
+            "additional": [
+              {
+                "tag" : "value",
+                "roll_result": "2d10x2"
+              }
+            ]
           },
           {
             "tag": "value_4",
             "title": "4d10x2 sp",
             "min": 8,
             "max": 9,
-            "roll_result": "4d10x2"
+            "additional": [
+              {
+                "tag" : "value",
+                "roll_result": "4d10x2"
+              }
+            ]
           },
           {
             "tag": "value_5",
             "title": "8d10x2 sp",
             "min": 10,
             "max": 10,
-            "roll_result": "8d10x2"
+            "additional": [
+              {
+                "tag" : "value",
+                "roll_result": "8d10x2"
+              }
+            ]
           },
           {
             "tag": "value_6",
             "title": "10d10x2 sp",
             "min": 11,
             "max": 11,
-            "roll_result": "10d10x2"
+            "additional": [
+              {
+                "tag" : "value",
+                "roll_result": "10d10x2"
+              }
+            ]
           },
           {
             "tag": "value_7",
             "title": "10d10x5 sp",
             "min": 12,
             "max": 12,
-            "roll_result": "10d10x5"
+            "additional": [
+              {
+                "tag" : "value",
+                "roll_result": "10d10x5"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "personal_item",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "clothing",
+            "min": 1,
+            "max": 4,
+            "variants": [
+              {
+                "tag": "shoes",
+                "title": "Notable shoes/boots",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "trousers",
+                "title": "Notable trousers/skirt",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "dress",
+                "title": "Notable dress/robe",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "tunic",
+                "title": "Notable tunic/blouse",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "belt",
+                "title": "Notable belt/girdle",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "gloves",
+                "title": "Notable gloves/gauntlets",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "cape",
+                "title": "Notable cape/cloak",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "scarf",
+                "title": "Notable scarf/wrap",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "fine",
+                "title": "Roll 1d8, add <i>fine</i>",
+                "min": 9,
+                "max": 11,
+                "additional": [
+                  [
+                    "booty.personal_item",
+                    "d8"
+                  ]
+                ]
+              },
+              {
+                "tag": "exquisite",
+                "title": "Roll 1d8, add <i>exquisite</i>",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  [
+                    "booty.personal_item",
+                    "d8"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "gear",
+            "min": 5,
+            "max": 8,
+            "variants": [
+              {
+                "tag": "bedroll",
+                "title": "Bedroll/bedding",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "pouch",
+                "title": "Pouch/bag/quiver/vial",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "rope",
+                "title": "Rope/cord/chain",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "tools",
+                "title": "Tools/prybar/shovel",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "spirits",
+                "title": "Spirits/wine (1d6 uses)",
+                "min": 5,
+                "max": 5,
+                "additional": [
+                  {
+                    "tag" : "uses",
+                    "roll_result": "d6"
+                  }
+                ]
+              },
+              {
+                "tag": "rations",
+                "title": "Rations (1d6 uses)",
+                "min": 6,
+                "max": 7,
+                "additional": [
+                  {
+                    "tag" : "uses",
+                    "roll_result": "d6"
+                  }
+                ]
+              },
+              {
+                "tag": "torches",
+                "title": "Torches/candles/lamp",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "healing_supplies",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "healing_potion",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "weapon",
+                "title": "WEAPON (roll 1d4)",
+                "min": 11,
+                "max": 12,
+                "additional": [
+                  [
+                    "booty.weapon",
+                    "d4"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "miscellaneous",
+            "min": 9,
+            "max": 12,
+            "variants": [
+              {
+                "tag": "instrument",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "soap",
+                "title": "Soap/musk/perfume",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "fuel",
+                "title": "Fuel/ammo (1d6 uses)",
+                "min": 3,
+                "max": 4,
+                "additional": [
+                  {
+                    "tag" : "uses",
+                    "roll_result": "d6"
+                  }
+                ]
+              },
+              {
+                "tag": "trap",
+                "title": "Trap/snare/net",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "lockpicks",
+                "title": "Lockpicks/key",
+                "min": 6,
+                "max": 7
+              },
+              {
+                "tag": "note",
+                "title": "Note/token/map",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "poison",
+                "title": "Poison/antitoxin",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "book",
+                "title": "Book/scroll",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "specialty",
+                "title": "SPECIALTY kit/tools",
+                "min": 11,
+                "max": 11,
+                "additional": [
+                  "booty.specialty"
+                ]
+              },
+              {
+                "tag": "trade_good",
+                "title": "TRADE GOOD 1d6 wt",
+                "min": 11,
+                "max": 12,
+                "additional": [
+                  "booty.rarity.trade_good",
+                  {
+                    "tag" : "weight",
+                    "roll_result": "d6"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -15718,20 +16133,20 @@
         "dice": "d12",
         "variants": [
           {
-            "tag": "staff",
-            "min": 1,
-            "max": 1
-          },
-          {
             "tag": "knife",
             "title": "Knife/dagger/shortsword",
-            "min": 2,
-            "max": 3
+            "min": 1,
+            "max": 2
           },
           {
             "tag": "club",
             "title": "Club/cudgel/mace",
-            "min": 4,
+            "min": 3,
+            "max": 4
+          },
+          {
+            "tag": "staff",
+            "min": 5,
             "max": 5
           },
           {
@@ -15741,14 +16156,14 @@
             "max": 6
           },
           {
-            "tag": "sword",
-            "title": "Sword/axe/warhammer",
+            "tag": "axe",
+            "title": "Axe/warhammer",
             "min": 7,
-            "max": 8
+            "max": 7
           },
           {
-            "tag": "great_weapon",
-            "min": 9,
+            "tag": "sword",
+            "min": 8,
             "max": 9
           },
           {
@@ -15759,7 +16174,7 @@
           },
           {
             "tag": "exotic",
-            "title": "Exotic/unusual",
+            "title": "Great weapon/exotic",
             "min": 12,
             "max": 12
           }
