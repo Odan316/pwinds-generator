@@ -14915,7 +14915,7 @@
       },
       {
         "tag": "body_part_value",
-        "dice": "d12",
+        "use_custom_dice": true,
         "variants": [
           {
             "tag": "value_1",
@@ -14924,7 +14924,7 @@
             "max": 3,
             "additional": [
               {
-                "tag" : "value",
+                "tag": "value",
                 "roll_result": "d10"
               }
             ]
@@ -14936,7 +14936,7 @@
             "max": 5,
             "additional": [
               {
-                "tag" : "value",
+                "tag": "value",
                 "roll_result": "d10x2"
               }
             ]
@@ -14948,7 +14948,7 @@
             "max": 7,
             "additional": [
               {
-                "tag" : "value",
+                "tag": "value",
                 "roll_result": "2d10x2"
               }
             ]
@@ -14960,7 +14960,7 @@
             "max": 9,
             "additional": [
               {
-                "tag" : "value",
+                "tag": "value",
                 "roll_result": "4d10x2"
               }
             ]
@@ -14972,7 +14972,7 @@
             "max": 10,
             "additional": [
               {
-                "tag" : "value",
+                "tag": "value",
                 "roll_result": "8d10x2"
               }
             ]
@@ -14984,7 +14984,7 @@
             "max": 11,
             "additional": [
               {
-                "tag" : "value",
+                "tag": "value",
                 "roll_result": "10d10x2"
               }
             ]
@@ -14996,7 +14996,7 @@
             "max": 12,
             "additional": [
               {
-                "tag" : "value",
+                "tag": "value",
                 "roll_result": "10d10x5"
               }
             ]
@@ -15122,7 +15122,7 @@
                 "max": 5,
                 "additional": [
                   {
-                    "tag" : "uses",
+                    "tag": "uses",
                     "roll_result": "d6"
                   }
                 ]
@@ -15134,7 +15134,7 @@
                 "max": 7,
                 "additional": [
                   {
-                    "tag" : "uses",
+                    "tag": "uses",
                     "roll_result": "d6"
                   }
                 ]
@@ -15192,7 +15192,7 @@
                 "max": 4,
                 "additional": [
                   {
-                    "tag" : "uses",
+                    "tag": "uses",
                     "roll_result": "d6"
                   }
                 ]
@@ -15244,9 +15244,182 @@
                 "additional": [
                   "booty.rarity.trade_good",
                   {
-                    "tag" : "weight",
+                    "tag": "weight",
                     "roll_result": "d6"
                   }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "trinket",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "ornament",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "miniature",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "toy",
+            "title": "Toy/plaything",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "puzzle",
+            "title": "Puzzle/oddment",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "instrument",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "box",
+            "title": "Box/case",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "locket",
+            "title": "Locket/keepsake",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "ring",
+            "title": "Ring/loop/hoop",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "brooch",
+            "title": "Brooch/pin",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "charm",
+            "title": "Charm/amulet",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "symbol",
+            "title": "Religious/arcane symbol",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "figurine",
+            "title": "Figurine/likeness",
+            "min": 12,
+            "max": 12
+          }
+        ],
+        "additional": [
+          "booty.trinket_material"
+        ]
+      },
+      {
+        "tag": "trinket_material",
+        "use_custom_dice": true,
+        "variants": [
+          {
+            "tag": "stone",
+            "title": "Stone/shell/bone/hair/horn (1 sp)",
+            "min": 1,
+            "max": 1,
+            "additional": [
+              {
+                "tag": "value",
+                "roll_result": "1"
+              }
+            ]
+          },
+          {
+            "tag": "wood",
+            "title": "Wood/ceramic/leather (1d4 sp)",
+            "min": 2,
+            "max": 2,
+            "additional": [
+              {
+                "tag": "value",
+                "roll_result": "d4"
+              }
+            ]
+          },
+          {
+            "tag": "brass",
+            "title": "Brass/bronze/iron/tin (1d6 sp)",
+            "min": 3,
+            "max": 3,
+            "additional": [
+              {
+                "tag": "value",
+                "roll_result": "d6"
+              }
+            ]
+          },
+          {
+            "tag": "copper (1d8 sp)",
+            "min": 4,
+            "max": 4,
+            "additional": [
+              {
+                "tag": "value",
+                "roll_result": "d8"
+              }
+            ]
+          },
+          {
+            "tag": "silver",
+            "title": "Silver/glass (1d10 sp)",
+            "min": 5,
+            "max": 5,
+            "additional": [
+              {
+                "tag": "value",
+                "roll_result": "d10"
+              }
+            ]
+          },
+          {
+            "tag": "fine",
+            "title": "<i>Fine</i>",
+            "min": 6,
+            "max": 9,
+            "additional": [
+              {
+                "tag": "material",
+                "generate_outer": [
+                  "booty.trinket_material",
+                  "d4+1"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "exquisite",
+            "title": "<i>Exquisite</i>",
+            "min": 10,
+            "max": 12,
+            "additional": [
+              {
+                "tag": "material",
+                "generate_outer": [
+                  "booty.trinket_material",
+                  "d4+1"
                 ]
               }
             ]
