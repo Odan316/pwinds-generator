@@ -6401,7 +6401,7 @@
         "dictionaries": [
           {
             "tag": "area",
-            "hint": "$modifier",
+            "hint": "$modifierHint",
             "force_show": true,
             "vars": {
               "$dungeon_type": "caves"
@@ -6954,7 +6954,7 @@
         "dictionaries": [
           {
             "tag": "area",
-            "hint": "$modifier",
+            "hint": "$modifierHint",
             "force_show": true,
             "vars": {
               "$dungeon_type": "ruined_settlement"
@@ -7463,7 +7463,7 @@
         "dictionaries": [
           {
             "tag": "area",
-            "hint": "$modifier",
+            "hint": "$modifierHint",
             "force_show": true,
             "vars": {
               "$dungeon_type": "prison"
@@ -8014,7 +8014,7 @@
         "dictionaries": [
           {
             "tag": "area",
-            "hint": "$modifier",
+            "hint": "$modifierHint",
             "force_show": true,
             "vars": {
               "$dungeon_type": "mine"
@@ -8613,7 +8613,7 @@
         "dictionaries": [
           {
             "tag": "area",
-            "hint": "$modifier",
+            "hint": "$modifierHint",
             "force_show": true,
             "vars": {
               "$dungeon_type": "crypt"
@@ -9481,7 +9481,7 @@
         "dictionaries": [
           {
             "tag": "area",
-            "hint": "$modifier",
+            "hint": "$modifierHint",
             "force_show": true,
             "vars": {
               "$dungeon_type": "stronghold"
@@ -10007,7 +10007,7 @@
         "dictionaries": [
           {
             "tag": "area",
-            "hint": "$modifier",
+            "hint": "$modifierHint",
             "force_show": true,
             "vars": {
               "$dungeon_type": "temple"
@@ -10515,7 +10515,7 @@
         "dictionaries": [
           {
             "tag": "area",
-            "hint": "$modifier",
+            "hint": "$modifierHint",
             "force_show": true,
             "vars": {
               "$dungeon_type": "archive"
@@ -11074,7 +11074,7 @@
         "dictionaries": [
           {
             "tag": "area",
-            "hint": "$modifier",
+            "hint": "$modifierHint",
             "force_show": true,
             "vars": {
               "$dungeon_type": "origin_unknown"
@@ -14289,58 +14289,56 @@
     "dictionaries": [
       {
         "tag": "inherent_booty_roll",
-        "hint": "$dice",
+        "hint": "$diceHint",
         "force_show": true,
         "additional": [
           {
             "tag": "booty",
-            "use_custom_dice": true,
-            "repeat": "1",
+            "repeat": "$dice",
             "generate_outer": "booty.inherent_booty"
           }
         ]
       },
       {
         "tag": "carried_booty_roll",
-        "hint": "$dice",
+        "hint": "$diceHint",
         "force_show": true,
         "additional": [
           {
             "tag": "booty",
-            "use_custom_dice": true,
-            "repeat": "1",
+            "repeat": "$dice",
             "generate_outer": "booty.carried_booty"
           }
         ]
       },
       {
         "tag": "stashed_booty_roll",
-        "hint": "$dice",
+        "hint": "$diceHint",
         "force_show": true,
         "additional": [
           {
             "tag": "booty",
-            "use_custom_dice": true,
-            "repeat": "1",
+            "repeat": "$dice",
             "generate_outer": "booty.stashed_booty"
           }
         ]
       },
       {
         "tag": "in_lair_booty_roll",
-        "hint": "$dice",
+        "hint": "$diceHint",
         "force_show": true,
         "additional": [
           {
             "tag": "booty",
-            "use_custom_dice": true,
-            "repeat": "1",
+            "repeat": "$dice",
             "generate_outer": "booty.in_lair_booty"
           }
         ]
       },
       {
         "tag": "inherent_booty",
+        "hint": "$diceHint",
+        "use_custom_dice": true,
         "dice": "d12",
         "variants": [
           {

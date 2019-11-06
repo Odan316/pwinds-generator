@@ -150,7 +150,7 @@ define([
         /**
          * Number of entities to generate
          *
-         * @type {null}
+         * @type {null|String}
          * @private
          */
         let _repeat = null;
@@ -316,9 +316,9 @@ define([
          * @returns {string}
          */
         this.getHint = function () {
-            if (_hint === "$dice") {
+            if (_hint === "$diceHint") {
                 _hint = "Use 'Roll' field to enter dice formula for this entity";
-            } else if (_hint === "$modifier") {
+            } else if (_hint === "$modifierHint") {
                 _hint = "Use 'Mod +' field to enter dynamic modifier for this roll";
             }
 
@@ -606,7 +606,7 @@ define([
         this.getRepeat = function () {
             let formula = _repeat !== null ? _repeat : "1";
 
-            if (this.useCustomDice()) {
+            if (formula === '$dice') {
                 let customDice = $("#diceRoller").val();
                 if (!_.isEmpty(customDice)) {
                     formula = customDice;

@@ -11,11 +11,20 @@ File should be written in JSON format and placed under /data directory
         // only lowercase latin characters, digits and underscore symbol
         "tag": "entity_tag",
         // If set - used as generated entity title, if not - tag is used
+        // Support html tags
         "title" : "Entity Title",
+        // Description for entity, displayed at generated output
+        // Support html tags
+        "description": "Some long text here" 
         // Hint for pop-up near entity name
+        // Can be any text, or hardcocer shortcuts :
+        // $diceHint (hint tio use dice formula field)
+        // $modifierHint (hint tio use modifier field)
         "hint": "Use it wisely",
-        // If set and set as true - this entity will be hidden from entity tree
+        // If set and set as true - this entity will be hidden from entity tree even if it has children
         "hide" : true,
+         // If set and set as true - this entity will be displayed in entity tree even if it has no children
+        "force_show": false
         // dice formula, used for getting value for variants generation
         "dice": "d12+1",
         // If set as true, modified from field MOD will be applied to dice formula AFTER roll
@@ -24,8 +33,11 @@ File should be written in JSON format and placed under /data directory
         "use_custom_dice" : true,
         // Static value to be returned instead of generation with dice
         "static": "Always one value",
+        // If set, number will be rolled and returned
+        "roll_result": "2d4+5",
         // Array of entity variants for generation. 
         // all entities lower that top-levelcan have additional fields
+        // Counts as children
         "variants": [
         {
             "tag": "variant_tag",
@@ -37,17 +49,16 @@ File should be written in JSON format and placed under /data directory
             // Path to other entity. 
             // If set, instead of generating this entity, other entity fill be found and generated.
             // Used for gemerate similar entities in different places
+            Can be path string or array with custom dice formula
             "generate_outer": "outer_entity_tag",
-            // If set, number will be rolled and returned
-            "roll_result": "2d4+5",
-            // DEPRECATED - for ol data files only, use "static" or "roll_result" instead
-            "numbers": 1
+            "generate_outer": ["outer_entity_tag", "2d6+3"],
             // Variant of next-level entity and etc.
             "variants": [],
         }
         ],
         // Array of entities, that will not be generated automatically, 
-        //but can be used to direct generation by path
+        // but can be used to direct generation by path. 
+        // Counts as children
         "dictionaries": [
         ]
         // Array of links or entties, that shoud be generated alongside with variant
@@ -59,6 +70,9 @@ File should be written in JSON format and placed under /data directory
                "static": "you can write any common entity here"
             }
         ],
+        // Custom title for Additional section in output
+        // Default as "Additional:"
+        "additionalTitle": "Some props:"
         // DEPRECATED - another array, similar to adiitional, 
         // use entitiy with repeat at "additional" instead
         "optional": [
@@ -77,7 +91,8 @@ File should be written in JSON format and placed under /data directory
         ],
         // If set and entity is part of template - concatenate entity as part of previous word
         "concatenate": true
-        // If set, entity will be generated multiple times, dice formula or integer
+        // If set, entity will be generated multiple times, 
+        // can be dice formula, integer or "$dice" (for using user-provided dice formula)
         "repeat": "2d3",
         // Array of varialbles, currently can be used only to create dynamic paths
         // Each variable name must start with "$" symbol
