@@ -15331,6 +15331,7 @@
       },
       {
         "tag": "trinket_material",
+        "hint": "$diceHint",
         "use_custom_dice": true,
         "variants": [
           {
@@ -15370,7 +15371,8 @@
             ]
           },
           {
-            "tag": "copper (1d8 sp)",
+            "tag": "copper",
+            "title": "Copper (1d8 sp)",
             "min": 4,
             "max": 4,
             "additional": [
@@ -15394,7 +15396,7 @@
           },
           {
             "tag": "fine",
-            "title": "<i>Fine</i>",
+            "title": "<i>Fine</i>, multiply value x2",
             "min": 6,
             "max": 9,
             "additional": [
@@ -15409,7 +15411,7 @@
           },
           {
             "tag": "exquisite",
-            "title": "<i>Exquisite</i>",
+            "title": "<i>Exquisite</i>, multiply value x4",
             "min": 10,
             "max": 12,
             "additional": [
@@ -15419,6 +15421,115 @@
                   "booty.trinket_material",
                   "d4+1"
                 ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "gem",
+        "hint": "$diceHint",
+        "use_custom_dice": true,
+        "variants": [
+          {
+            "tag": "flawed",
+            "title": "<i>Flawed</i>, roll bd+2 for type, multiply value x.25",
+            "min": 1,
+            "max": 1,
+            "additional": [
+              {
+                "tag": "type",
+                "generate_outer": [
+                  "booty.gem",
+                  "$dice+2"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "uncut",
+            "title": "<i>Uncut</i>, roll bd+2 for type, multiply value x.5",
+            "min": 2,
+            "max": 2,
+            "additional": [
+              {
+                "tag": "type",
+                "generate_outer": [
+                  "booty.gem",
+                  "$dice+2"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "quartz",
+            "title": "Quartz/lapis lazuli/malachite/obsidian/turquoise (1d10 sp)",
+            "min": 3,
+            "max": 3,
+            "additional": [
+              {
+                "tag": "value",
+                "roll_result": "d10"
+              }
+            ]
+          },
+          {
+            "tag": "bloodstone",
+            "title": "Bloodstone/carnelian/citrine/jasper/moonstone/onyx/peridot (2d10x2 sp)",
+            "min": 4,
+            "max": 5,
+            "additional": [
+              {
+                "tag": "value",
+                "roll_result": "2d10x2"
+              }
+            ]
+          },
+          {
+            "tag": "amber",
+            "title": "Amber/amethyst/garnet/jade/pearl/tourmaline (2d10x5 sp)",
+            "min": 6,
+            "max": 7,
+            "additional": [
+              {
+                "tag": "value",
+                "roll_result": "2d10x5"
+              }
+            ]
+          },
+          {
+            "tag": "alexandrite",
+            "title": "Alexandrite/aquamarine/garnet/topaz (5d10x5 sp)",
+            "min": 8,
+            "max": 9,
+            "additional": [
+              {
+                "tag": "value",
+                "roll_result": "5d10x5"
+              }
+            ]
+          },
+          {
+            "tag": "emerald",
+            "title": "Emerald/opal/sapphire/ruby (5d10x15 sp)",
+            "min": 10,
+            "max": 11,
+            "additional": [
+              {
+                "tag": "value",
+                "roll_result": "5d10x15"
+              }
+            ]
+          },
+          {
+            "tag": "diamond",
+            "title": "Diamond/exotic (10d10x10 sp)",
+            "min": 12,
+            "max": 12,
+            "additional": [
+              {
+                "tag": "value",
+                "roll_result": "10d10x10"
               }
             ]
           }

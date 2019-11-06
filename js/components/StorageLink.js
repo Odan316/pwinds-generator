@@ -69,8 +69,16 @@ define([
          * @returns {String|null}
          */
         this.getDice = function() {
-            return _dice;
-        }
+            let formula = _dice !== null ? _dice : "1";
+
+            let customDice = $("#diceRoller").val();
+
+            if (!_.isEmpty(customDice)) {
+                formula = _.replace(formula, '$dice', customDice);
+            }
+
+            return formula;
+        };
     };
 
     return StorageLink;

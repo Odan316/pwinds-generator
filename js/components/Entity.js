@@ -606,11 +606,9 @@ define([
         this.getRepeat = function () {
             let formula = _repeat !== null ? _repeat : "1";
 
-            if (formula === '$dice') {
-                let customDice = $("#diceRoller").val();
-                if (!_.isEmpty(customDice)) {
-                    formula = customDice;
-                }
+            let customDice = $("#diceRoller").val();
+            if (!_.isEmpty(customDice)) {
+                _.replace(formula,"$dice",customDice);
             }
 
             let dice = new Dice();

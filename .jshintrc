@@ -88,6 +88,7 @@
 
   // Custom Globals
   "globals"       : {
+    "_": false,
     "$": false,
     "define": false
   }
