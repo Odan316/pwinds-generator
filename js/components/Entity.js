@@ -6,6 +6,7 @@ define([
     'components/StorageLink',
     'components/Dice'
 ], function (require, $, _, VariantEntity, StorageLink, Dice) {
+    "use strict";
     /**
      * Base entity class, also serves as root entity class
      *

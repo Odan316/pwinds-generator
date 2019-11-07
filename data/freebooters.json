@@ -15402,6 +15402,9 @@
             "additional": [
               {
                 "tag": "material",
+                "vars": {
+                  "$rollResultMultiply": "2"
+                },
                 "generate_outer": [
                   "booty.trinket_material",
                   "d4+1"
@@ -15417,6 +15420,9 @@
             "additional": [
               {
                 "tag": "material",
+                "vars": {
+                  "$rollResultMultiply": "4"
+                },
                 "generate_outer": [
                   "booty.trinket_material",
                   "d4+1"
@@ -15439,6 +15445,9 @@
             "additional": [
               {
                 "tag": "type",
+                "vars": {
+                  "$rollResultMultiply": "0.25"
+                },
                 "generate_outer": [
                   "booty.gem",
                   "$dice+2"
@@ -15454,6 +15463,9 @@
             "additional": [
               {
                 "tag": "type",
+                "vars": {
+                  "$rollResultMultiply": "0.5"
+                },
                 "generate_outer": [
                   "booty.gem",
                   "$dice+2"

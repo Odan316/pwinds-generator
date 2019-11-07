@@ -88,6 +88,13 @@ define([
                 generatedEntity.description = entity.getDescription();
 
                 let rollResult = _dice.roll(entity.getDiceResultFormula());
+                let multiply = _.toNumber(_vars["$rollResultMultiply"]);
+                console.log("rollResult 1", rollResult);
+                console.log("multiply var", multiply);
+                if(!_.isNaN(multiply)){
+                    rollResult = rollResult * multiply;
+                    console.log("rollResult 2", rollResult);
+                }
                 generatedEntity.variant = new GeneratedEntity();
                 generatedEntity.roll = rollResult;
 

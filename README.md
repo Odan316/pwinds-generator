@@ -97,7 +97,9 @@ File should be written in JSON format and placed under /data directory
         // Array of varialbles, currently can be used only to create dynamic paths
         // Each variable name must start with "$" symbol
         "vars": {
-            "$some_var_name": "some_var_value"
+            "$some_var_name": "some_var_value",
+            // System recognizable vars
+            "$rollResultMultiply": "0.25" // multiplies next roll_result value, must be Number
         }
      }
     ]
