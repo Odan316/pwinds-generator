@@ -100,6 +100,7 @@ File should be written in JSON format and placed under /data directory
             "$some_var_name": "some_var_value",
             // System recognizable vars
             "$rollResultMultiply": "0.25" // multiplies next roll_result value, must be Number
+            "$diceResultAdd": 2 // add value to next dice roll result, must be integer
         }
      }
     ]

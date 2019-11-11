@@ -89,12 +89,12 @@ define([
 
                 let rollResult = _dice.roll(entity.getDiceResultFormula());
                 let multiply = _.toNumber(_vars["$rollResultMultiply"]);
-                console.log("rollResult 1", rollResult);
-                console.log("multiply var", multiply);
+
                 if(!_.isNaN(multiply)){
                     rollResult = rollResult * multiply;
-                    console.log("rollResult 2", rollResult);
+                    _vars["$rollResultMultiply"] = undefined;
                 }
+
                 generatedEntity.variant = new GeneratedEntity();
                 generatedEntity.roll = rollResult;
 
@@ -145,11 +145,20 @@ define([
 
                 // Generate variant
                 if (entity.hasVariants()) {
+                    let roll = 1;
                     if (customDice) {
-                        var roll = _dice.roll(customDice);
+                        roll = _dice.roll(customDice);
                     } else {
                         roll = _dice.roll(entity.getDice());
                     }
+
+                    let diceAdd = _.toNumber(_vars["$diceResultAdd"]);
+
+                    if(!_.isNaN(diceAdd)){
+                        roll = roll + diceAdd;
+                        _vars["$diceResultAdd"] = undefined;
+                    }
+
                     generatedEntity.roll = roll;
 
                     generatedEntity.variant = generateEntity(entity.getChildEntityByRoll(roll));
