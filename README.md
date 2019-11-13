@@ -34,6 +34,7 @@ File should be written in JSON format and placed under /data directory
         // Static value to be returned instead of generation with dice
         "static": "Always one value",
         // If set, number will be rolled and returned
+        // can be dice formula, integer or "$dice" (for using user-provided dice formula)
         "roll_result": "2d4+5",
         // Array of entity variants for generation. 
         // all entities lower that top-levelcan have additional fields
@@ -67,7 +68,7 @@ File should be written in JSON format and placed under /data directory
             "another_outer_entity_tag.second_level_entity_tag",
             {
                 "tag": "more_complex_entity",
-               "static": "you can write any common entity here"
+                "static": "you can write any common entity here"
             }
         ],
         // Custom title for Additional section in output

@@ -523,7 +523,15 @@ define([
          * @returns {String}
          */
         this.getDiceResultFormula = function(){
-            return _roll_result;
+            let formula = _roll_result !== null ? _roll_result : "1";
+
+            let customDice = $("#diceRoller").val();
+
+            if (!_.isEmpty(customDice)) {
+                formula = _.replace(formula,"$dice",customDice);
+            }
+
+            return formula;
         };
 
         /**
@@ -609,7 +617,7 @@ define([
 
             let customDice = $("#diceRoller").val();
             if (!_.isEmpty(customDice)) {
-                _.replace(formula,"$dice",customDice);
+                formula = _.replace(formula,"$dice",customDice);
             }
 
             let dice = new Dice();
