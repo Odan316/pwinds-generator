@@ -25,32 +25,34 @@ define([
             let result = this.loadedDices.shift();
             // If not, calculate roll
             if (result === undefined) {
-                let regexp = /^(\d*)[d]*(\d*)([-+]*)(\d*)([-+]*)(\d*)[x]*(\d*)$/;
+                let regexp = /^(\d*)[x]*(\d*)[d]*(\d*)([-+]*)(\d*)([-+]*)(\d*)[x]*(\d*)$/;
                 let formulaArray = diceFormula.match(regexp);
 
                 if (formulaArray != null) {
                     // Dice params
-                    let diceMultiplier = (formulaArray[1] !== "" ? parseInt(formulaArray[1]) : 1);
-                    let dice = (formulaArray[2] !== "" ? parseInt(formulaArray[2]) : null);
+                    let diceMultiplierSecondary = (formulaArray[1] !== "" ? parseInt(formulaArray[1]) : 1);
+                    let diceMultiplierMain = (formulaArray[2] !== "" ? parseInt(formulaArray[2]) : 1);
+                    let dice = (formulaArray[3] !== "" ? parseInt(formulaArray[3]) : null);
 
                     // Additional result modifiers
-                    let addSign1 = (formulaArray[3] !== "" ? formulaArray[3] : '+');
-                    let addNumber1 = (formulaArray[4] !== "" ? parseInt(formulaArray[4]) : 0);
+                    let addSign1 = (formulaArray[4] !== "" ? formulaArray[4] : '+');
+                    let addNumber1 = (formulaArray[5] !== "" ? parseInt(formulaArray[5]) : 0);
                     if(addSign1 === "-"){
-                        addNumber1 = addNumber1*-1
+                        addNumber1 = addNumber1*-1;
                     }
-                    let addSign2 = (formulaArray[5] !== "" ? formulaArray[5] : '+');
-                    let addNumber2 = (formulaArray[6] !== "" ? parseInt(formulaArray[6]) : 0);
+                    let addSign2 = (formulaArray[6] !== "" ? formulaArray[6] : '+');
+                    let addNumber2 = (formulaArray[7] !== "" ? parseInt(formulaArray[7]) : 0);
                     if(addSign2 === "-"){
-                        addNumber2 = addNumber2*-1
+                        addNumber2 = addNumber2*-1;
                     }
 
                     // Final result multiplier
-                    let resultMultiplier = (formulaArray[7] !== "" ? formulaArray[7] : 1);
+                    let resultMultiplier = (formulaArray[8] !== "" ? formulaArray[8] : 1);
 
                     // Roll the dice
 
                     let rollResult = 0;
+                    let diceMultiplier = diceMultiplierSecondary*diceMultiplierMain;
                     for(let i = 0; i < diceMultiplier; i++){
                         rollResult += (dice !== null ? randomInteger(1, dice) : 1);
                     }

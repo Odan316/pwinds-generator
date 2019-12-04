@@ -15756,7 +15756,8 @@
       },
       {
         "tag": "rarity",
-        "dice": "d12",
+        "hint": "$diceHint",
+        "use_custom_dice": true,
         "variants": [
           {
             "tag": "trade_good",
@@ -16127,820 +16128,164 @@
             "dice": "d12",
             "variants": [
               {
-                "tag": "box",
-                "title": "Box/case",
-                "min": 1,
-                "max": 1
-              },
-              {
-                "tag": "locket",
-                "title": "Locket/keepsake",
-                "min": 2,
-                "max": 2
-              },
-              {
-                "tag": "earrings",
-                "title": "Earrings/studs",
-                "min": 3,
-                "max": 3
-              },
-              {
-                "tag": "ring",
-                "min": 4,
-                "max": 4
-              },
-              {
-                "tag": "bracelet",
-                "title": "Bracelet/anklet/armband",
-                "min": 5,
-                "max": 5
-              },
-              {
-                "tag": "brooch",
-                "title": "Brooch/buckle/pin",
-                "min": 6,
-                "max": 6
-              },
-              {
-                "tag": "Belt",
-                "title": "belt/girdle/harness",
-                "min": 7,
-                "max": 7
-              },
-              {
-                "tag": "necklace",
-                "title": "Necklace/periapt",
-                "min": 8,
-                "max": 8
-              },
-              {
-                "tag": "scepter",
-                "title": "Scepter/orb",
-                "min": 9,
-                "max": 9
-              },
-              {
-                "tag": "armor",
-                "title": "Jeweled/gilded ARMOR",
-                "min": 10,
-                "max": 10,
-                "additional": [
-                  "booty.armor"
-                ]
-              },
-              {
-                "tag": "weapon",
-                "title": "Jeweled/gilded WEAPON",
-                "min": 11,
-                "max": 11,
-                "additional": [
-                  "booty.weapon"
-                ]
-              },
-              {
-                "tag": "circlet",
-                "title": "Circlet/tiara/crown",
-                "min": 12,
-                "max": 12
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "tag": "item",
-        "dice": "d12",
-        "variants": [
-          {
-            "tag": "incidental_item",
-            "dice": "d12",
-            "min": 1,
-            "max": 4,
-            "variants": [
-              {
-                "tag": "decanter",
-                "title": "Decanter/vessel/cup",
-                "min": 1,
-                "max": 1
-              },
-              {
-                "tag": "pots",
-                "title": "Pots/pans/cauldron",
-                "min": 2,
-                "max": 2
-              },
-              {
-                "tag": "dishware",
-                "title": "Dishware/utensils",
-                "min": 3,
-                "max": 3
-              },
-              {
-                "tag": "tools",
-                "title": "Tools/harsware",
-                "min": 4,
-                "max": 4
-              },
-              {
-                "tag": "bedding",
-                "min": 5,
-                "max": 5
-              },
-              {
-                "tag": "trophy",
-                "title": "Trophy/keepsake",
-                "min": 6,
-                "max": 6
-              },
-              {
-                "tag": "candlestick",
-                "title": "Candlestick/lamp",
-                "min": 7,
-                "max": 7
-              },
-              {
-                "tag": "rope",
-                "title": "Rope/chain/net",
-                "min": 8,
-                "max": 8
-              },
-              {
-                "tag": "rug",
-                "title": "Rug/mat/carpet",
-                "min": 9,
-                "max": 9
-              },
-              {
-                "tag": "flag",
-                "title": "Flag/banner",
-                "min": 10,
-                "max": 10
-              },
-              {
-                "tag": "fine",
-                "title": "Roll again, add 'fine'",
-                "min": 11,
-                "max": 11,
-                "additional": [
-                  [
-                    "booty.item.incidental_item",
-                    "d10"
-                  ]
-                ]
-              },
-              {
-                "tag": "common",
-                "title": "Roll 'Common item'",
-                "min": 12,
-                "max": 12,
-                "additional": [
-                  "booty.item.common_item"
-                ]
-              }
-            ]
-          },
-          {
-            "tag": "common_item",
-            "dice": "d12",
-            "min": 5,
-            "max": 8,
-            "variants": [
-              {
-                "tag": "footwear",
-                "title": "Footwear/shoes/boots",
-                "min": 1,
-                "max": 1
-              },
-              {
-                "tag": "clothing",
-                "title": "Clothing/gloves/cloak",
-                "min": 2,
-                "max": 2
-              },
-              {
-                "tag": "hat",
-                "title": "Hat/helmet/mask",
-                "min": 3,
-                "max": 3
-              },
-              {
-                "tag": "trinket",
-                "title": "Trinket/charm/talisman",
-                "min": 4,
-                "max": 4
-              },
-              {
-                "tag": "grog",
-                "title": "Grog/spirit/wine",
-                "min": 5,
-                "max": 5
-              },
-              {
-                "tag": "pouch",
-                "title": "Pouch/pack/saddlebags",
-                "min": 6,
-                "max": 6
-              },
-              {
-                "tag": "box",
-                "title": "Box/barrrel/coffer/chest",
-                "min": 7,
-                "max": 7
-              },
-              {
-                "tag": "soap",
-                "title": "Soap/musk/perfume",
-                "min": 8,
-                "max": 8
-              },
-              {
-                "tag": "holy",
-                "title": "Holy/arcane symbol",
-                "min": 9,
-                "max": 9
-              },
-              {
-                "tag": "conveyance",
-                "title": "Conveyance/cart/wagon",
-                "min": 10,
-                "max": 10
-              },
-              {
-                "tag": "fine",
-                "title": "Roll again, add 'fine'",
-                "min": 11,
-                "max": 11,
-                "additional": [
-                  [
-                    "booty.item.common_item",
-                    "d10"
-                  ]
-                ]
-              },
-              {
-                "tag": "useful",
-                "title": "Roll 'Useful item'",
-                "min": 12,
-                "max": 12,
-                "additional": [
-                  "booty.item.useful_item"
-                ]
-              }
-            ]
-          },
-          {
-            "tag": "useful_item",
-            "dice": "d12",
-            "min": 9,
-            "max": 12,
-            "variants": [
-              {
-                "tag": "evidence",
-                "title": "Evidence/message/map",
-                "min": 1,
-                "max": 1
-              },
-              {
-                "tag": "tools",
-                "title": "Tools/crowbar/shovel",
-                "min": 2,
-                "max": 2
-              },
-              {
-                "tag": "foodstuffs",
-                "min": 3,
-                "max": 3,
-                "additional": [
-                  {
-                    "tag": "rations",
-                    "roll_result": "d6"
-                  }
-                ]
-              },
-              {
-                "tag": "book",
-                "title": "Book/scroll",
-                "min": 4,
-                "max": 4
-              },
-              {
-                "tag": "key",
-                "title": "Key/lockpick/password",
-                "min": 5,
-                "max": 5
-              },
-              {
-                "tag": "healing_supplies",
-                "min": 6,
-                "max": 6
-              },
-              {
-                "tag": "illumination",
-                "min": 7,
-                "max": 7
-              },
-              {
-                "tag": "fuel",
-                "title": "Fuel/ammunition",
-                "min": 8,
-                "max": 8
-              },
-              {
-                "tag": "tools",
-                "title": "SPECIALTY tools",
-                "min": 9,
-                "max": 9,
-                "additional": [
-                  "booty.specialty"
-                ]
-              },
-              {
-                "tag": "weapon",
-                "title": "WEAPON/ARMOR",
-                "min": 10,
-                "max": 10,
-                "additional": [
-                  "booty.weapon",
-                  "booty.armor"
-                ]
-              },
-              {
-                "tag": "fine",
-                "title": "Roll again, add 'fine'",
-                "min": 11,
-                "max": 11,
-                "additional": [
-                  [
-                    "booty.item.useful_item",
-                    "d10"
-                  ]
-                ]
-              },
-              {
-                "tag": "valuable",
-                "title": "Roll 'Valuable'",
-                "min": 12,
-                "max": 12,
-                "additional": [
-                  "booty.valuable"
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "tag": "valuable",
-        "dice": "d12",
-        "variants": [
-          {
-            "tag": "trade_good",
-            "dice": "d12",
-            "min": 1,
-            "max": 3,
-            "variants": [
-              {
-                "tag": "grain",
-                "title": "Grain/lumber/stone",
-                "min": 1,
-                "max": 1
-              },
-              {
-                "tag": "preserved_food",
-                "min": 2,
-                "max": 2
-              },
-              {
-                "tag": "pottery",
-                "title": "Pottery/glassware",
-                "min": 3,
-                "max": 3
-              },
-              {
-                "tag": "furs",
-                "title": "Furs/hides/textiles",
-                "min": 4,
-                "max": 4
-              },
-              {
-                "tag": "herbs",
-                "title": "Herbs/ingredients",
-                "min": 5,
-                "max": 5
-              },
-              {
-                "tag": "ore",
-                "title": "Raw ore/ingots",
-                "min": 6,
-                "max": 6
-              },
-              {
-                "tag": "beer",
-                "title": "Beer/wine/spirits",
-                "min": 7,
-                "max": 7
-              },
-              {
-                "tag": "spices",
-                "title": "Spices/tea/tobacco",
-                "min": 8,
-                "max": 8
-              },
-              {
-                "tag": "body_parts",
-                "title": "Monster BODY PART",
-                "min": 9,
-                "max": 9,
-                "additional": [
-                  "booty.body_part"
-                ]
-              },
-              {
-                "tag": "contraband",
-                "min": 10,
-                "max": 10
-              },
-              {
-                "tag": "weapon",
-                "title": "WEAPON/ARMOR (not realised yet)",
-                "min": 11,
-                "max": 11,
-                "additional": [
-                  "booty.weapon",
-                  "booty.armor"
-                ]
-              },
-              {
-                "tag": "specialty",
-                "title": "SPECIALTY supplies",
-                "min": 12,
-                "max": 12,
-                "additional": [
-                  "booty.specialty"
-                ]
-              }
-            ]
-          },
-          {
-            "tag": "art_object",
-            "dice": "d12",
-            "min": 4,
-            "max": 6,
-            "variants": [
-              {
-                "tag": "fine_common",
-                "title": "'Fine' COMMON ITEM",
-                "min": 1,
-                "max": 1,
-                "additional": [
-                  "booty.item.common_item"
-                ]
-              },
-              {
-                "tag": "exquisite_common",
-                "title": "'Exquisite' COMMON ITEM",
-                "min": 2,
-                "max": 2,
-                "additional": [
-                  "booty.item.common_item"
-                ]
-              },
-              {
-                "tag": "desk",
-                "title": "Desk/table/shelving",
-                "min": 3,
-                "max": 3
-              },
-              {
-                "tag": "dresser",
-                "title": "Dresser/armoire",
-                "min": 4,
-                "max": 4
-              },
-              {
-                "tag": "sculpture",
-                "title": "Sculpture/painting",
-                "min": 5,
-                "max": 5
-              },
-              {
-                "tag": "carpet",
-                "title": "Carpet/rug/tapestry",
-                "min": 6,
-                "max": 6
-              },
-              {
-                "tag": "idol",
-                "title": "Idol/statue/figurine",
-                "min": 7,
-                "max": 7
-              },
-              {
-                "tag": "mirror",
-                "title": "Mirror/hourglass",
-                "min": 8,
-                "max": 8
-              },
-              {
-                "tag": "musical_instrument",
-                "min": 9,
-                "max": 9
-              },
-              {
-                "tag": "fine",
-                "title": "Roll again, add 'fine'",
-                "min": 10,
-                "max": 10,
-                "additional": [
-                  "booty.valuable.art_object"
-                ]
-              },
-              {
-                "tag": "exquisite",
-                "title": "Roll again, add 'exquisite'",
-                "min": 11,
-                "max": 11,
-                "additional": [
-                  "booty.valuable.art_object"
-                ]
-              },
-              {
-                "tag": "rarity",
-                "title": "Roll RARITY valuable",
-                "min": 12,
-                "max": 12,
-                "additional": [
-                  "booty.valuable.rarity"
-                ]
-              }
-            ]
-          },
-          {
-            "tag": "gem",
-            "title": "Gem/jewelry",
-            "dice": "d12",
-            "min": 7,
-            "max": 9,
-            "variants": [
-              {
-                "tag": "uncut",
-                "title": "Uncut/small/flawed gem",
-                "min": 1,
-                "max": 1
-              },
-              {
-                "tag": "handful",
-                "title": "Handful of gems/jewels",
-                "min": 2,
-                "max": 2
-              },
-              {
-                "tag": "large",
-                "title": "Large gem/jewel",
-                "min": 3,
-                "max": 3
-              },
-              {
-                "tag": "charm",
-                "title": "Charm/holy symbol",
-                "min": 4,
-                "max": 4
-              },
-              {
-                "tag": "ring",
-                "title": "Ring/earring",
-                "min": 5,
-                "max": 5
-              },
-              {
-                "tag": "bracelet",
-                "title": "Bracelet/anklet/armlet",
-                "min": 6,
-                "max": 6
-              },
-              {
-                "tag": "necklace",
-                "title": "Necklace/amulet/periapt",
-                "min": 7,
-                "max": 7
-              },
-              {
-                "tag": "broach",
-                "title": "Broach/buckle/pin",
-                "min": 8,
-                "max": 8
-              },
-              {
-                "tag": "circlet",
-                "title": "Circlet/tiara/crown",
-                "min": 9,
-                "max": 9
-              },
-              {
-                "tag": "scepter",
-                "title": "Scepter/sign of office",
-                "min": 10,
-                "max": 10
-              },
-              {
-                "tag": "armor",
-                "title": "Jewelled ARMOR",
-                "min": 11,
-                "max": 11,
-                "additional": [
-                  "booty.armor"
-                ]
-              },
-              {
-                "tag": "weapon",
-                "title": "Jewelled WEAPON",
-                "min": 12,
-                "max": 12,
-                "additional": [
-                  "booty.weapon"
-                ]
-              }
-            ]
-          },
-          {
-            "tag": "rarity",
-            "dice": "d12",
-            "min": 10,
-            "max": 11,
-            "variants": [
-              {
                 "tag": "salve",
                 "title": "Salve/ointment/potion/elixir",
                 "min": 1,
-                "max": 2
+                "max": 2,
+                "additional": [
+                  {
+                    "tag": "uses",
+                    "roll_result": "$dice"
+                  },
+                  {
+                    "tag": "value",
+                    "title": "Value per use",
+                    "vars": {
+                      "$rollResultMultiply": "5"
+                    },
+                    "roll_result": "2x$dice"
+                  }
+                ]
               },
               {
                 "tag": "spell_scroll",
                 "min": 3,
-                "max": 3
-              },
-              {
-                "tag": "magical_incidental",
-                "title": "Magical INCIDENTAL ITEM",
-                "min": 4,
-                "max": 4,
-                "additional": [
-                  "booty.item.incidental_item"
-                ]
-              },
-              {
-                "tag": "magical_common",
-                "title": "Magical COMMON ITEM",
-                "min": 5,
-                "max": 5,
-                "additional": [
-                  [
-                    "booty.item.common_item",
-                    "d10"
-                  ]
-                ]
-              },
-              {
-                "tag": "magical_useful",
-                "title": "Magical USEFUL ITEM",
-                "min": 6,
-                "max": 6,
-                "additional": [
-                  [
-                    "booty.item.useful_item",
-                    "d10"
-                  ]
-                ]
-              },
-              {
-                "tag": "magical_gem",
-                "title": "Magical GEM/JEWELRY",
-                "min": 7,
-                "max": 7,
-                "additional": [
-                  "booty.valuable.gem"
-                ]
-              },
-              {
-                "tag": "magical_wand",
-                "title": "Magical wand/staff/rod/orb",
-                "min": 8,
-                "max": 8
-              },
-              {
-                "tag": "spellbook",
-                "min": 9,
-                "max": 9,
+                "max": 3,
                 "additional": [
                   {
-                    "tag": "spells_amount",
-                    "roll_result": "2d4"
+                    "tag": "uses",
+                    "static": "1"
+                  },
+                  {
+                    "tag": "value",
+                    "vars": {
+                      "$rollResultMultiply": "10"
+                    },
+                    "roll_result": "5x$dice"
                   }
                 ]
               },
               {
-                "tag": "magical_weapon",
-                "title": "Magical WEAPON",
-                "min": 10,
-                "max": 10,
-                "additional": [
-                  "booty.weapon"
-                ]
-              },
-              {
-                "tag": "magical_armor",
-                "title": "Magical ARMOR",
-                "min": 11,
-                "max": 11,
-                "additional": [
-                  "booty.armor"
-                ]
-              },
-              {
-                "tag": "divine",
-                "title": "'Divine' symbol/object",
-                "min": 12,
-                "max": 12
-              }
-            ]
-          },
-          {
-            "tag": "unique_artifact",
-            "dice": "d12",
-            "min": 12,
-            "max": 12,
-            "variants": [
-              {
-                "tag": "magical_incidental",
-                "title": "Magical INCIDENTAL ITEM",
-                "min": 1,
-                "max": 1,
-                "additional": [
-                  "booty.item.incidental_item"
-                ]
-              },
-              {
-                "tag": "magical_common",
-                "title": "Magical COMMON ITEM",
-                "min": 2,
-                "max": 2,
-                "additional": [
-                  [
-                    "booty.item.common_item",
-                    "d10"
-                  ]
-                ]
-              },
-              {
-                "tag": "magical_useful",
-                "title": "Magical USEFUL ITEM",
-                "min": 3,
+                "tag": "personal_item",
+                "title": "<i>Magical</i> PERSONAL ITEM",
+                "min": 4,
                 "max": 4,
                 "additional": [
-                  [
-                    "booty.item.useful_item",
-                    "d10"
-                  ]
+                  "booty.personal_item",
+                  {
+                    "tag": "value",
+                    "static": "as rolled, but x10"
+                  }
                 ]
               },
               {
-                "tag": "magical_gem",
-                "title": "Magical GEM/JEWELRY",
+                "tag": "trinket",
+                "title": "<i>Magical</i> TRINKET",
                 "min": 5,
                 "max": 5,
                 "additional": [
-                  "booty.valuable.gem"
+                  "booty.trinket",
+                  {
+                    "tag": "value",
+                    "static": "as rolled, but x10"
+                  }
                 ]
               },
               {
-                "tag": "magical_wand",
-                "title": "Magical wand/staff/rod/orb",
+                "tag": "gem",
+                "title": "<i>Magical</i> GEM",
                 "min": 6,
-                "max": 6
+                "max": 6,
+                "additional": [
+                  "booty.gem",
+                  {
+                    "tag": "value",
+                    "static": "as rolled, but x10"
+                  }
+                ]
               },
               {
-                "tag": "magical_weapon",
-                "title": "Magical WEAPON",
+                "tag": "jewelry",
+                "title": "<i>Magical</i> JEWELRY",
                 "min": 7,
+                "max": 7,
+                "additional": [
+                  "booty.jewelry",
+                  {
+                    "tag": "value",
+                    "static": "as rolled, but x10"
+                  }
+                ]
+              },
+              {
+                "tag": "art_object",
+                "title": "<i>Magical</i> ART OBJECT",
+                "min": 8,
                 "max": 8,
                 "additional": [
-                  "booty.weapon"
+                  "booty.rarity.art_object",
+                  {
+                    "tag": "value",
+                    "static": "as rolled, but x10"
+                  }
                 ]
               },
               {
-                "tag": "magical_armor",
-                "title": "Magical ARMOR",
+                "tag": "wand",
+                "title": "<i>Magical</i> wand/staff/rod/orb",
                 "min": 9,
-                "max": 10,
+                "max": 9,
                 "additional": [
-                  "booty.armor"
+                  {
+                    "tag": "value",
+                    "title": "Value per use",
+                    "vars": {
+                      "$rollResultMultiply": "5"
+                    },
+                    "roll_result": "2x$dice"
+                  }
                 ]
               },
               {
-                "tag": "divine",
-                "title": "'Divine' symbol/object",
+                "tag": "spellbook",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "armor",
+                "title": "<i>Magical</i> ARMOR",
                 "min": 11,
-                "max": 12
+                "max": 11,
+                "additional": [
+                  "booty.armor",
+                  {
+                    "tag": "value",
+                    "static": "(market value + 1bd) x10"
+                  },
+                  {
+                    "tag": "bd_roll",
+                    "title": "BD roll",
+                    "roll_result": "$dice"
+                  }
+                ]
+              },
+              {
+                "tag": "weapon",
+                "title": "<i>Magical</i> WEAPON",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "booty.weapon",
+                  {
+                    "tag": "value",
+                    "static": "(market value + 1bd) x10"
+                  },
+                  {
+                    "tag": "bd_roll",
+                    "title": "BD roll",
+                    "roll_result": "$dice"
+                  }
+                ]
               }
             ]
           }
@@ -16984,6 +16329,7 @@
           },
           {
             "tag": "plate_armor",
+            "title": "Plate armor/exotic",
             "min": 10,
             "max": 10
           },
@@ -17001,7 +16347,7 @@
           },
           {
             "tag": "fine",
-            "title": "Roll 1d10, add 'fine'",
+            "title": "Roll 1d10, add <i>fine</i>",
             "min": 12,
             "max": 12,
             "additional": [
