@@ -14437,8 +14437,8 @@
           {
             "tag": "booty_2",
             "title": "Currency worth 1d10 sp",
-            "min": 3,
-            "max": 3,
+            "min": 2,
+            "max": 2,
             "roll_result": "1d10"
           },
           {
