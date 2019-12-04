@@ -526,11 +526,10 @@ define([
             let formula = _roll_result !== null ? _roll_result : "1";
 
             let customDice = $("#diceRoller").val();
-console.log(formula);
+
             if (!_.isEmpty(customDice)) {
                 formula = _.replace(formula,"$dice",customDice);
             }
-            console.log(formula);
 
             return formula;
         };

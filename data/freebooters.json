@@ -14833,169 +14833,168 @@
           }
         ],
         "additional": [
-          "booty.body_part_property",
-          "booty.body_part_value"
-        ]
-      },
-      {
-        "tag": "body_part_property",
-        "dice": "d12",
-        "variants": [
           {
-            "tag": "protection",
-            "title": "Protection/ward",
-            "min": 1,
-            "max": 2
-          },
-          {
-            "tag": "augmentation",
-            "title": "Augmentation/offence",
-            "min": 3,
-            "max": 3
-          },
-          {
-            "tag": "spice",
-            "title": "Spice/ingredient",
-            "min": 4,
-            "max": 4
-          },
-          {
-            "tag": "ink",
-            "title": "Ink/dye/stain",
-            "min": 5,
-            "max": 5
-          },
-          {
-            "tag": "narcotic",
-            "title": "Narcotic/soporific",
-            "min": 6,
-            "max": 6
-          },
-          {
-            "tag": "perfume",
-            "title": "Perfume/aphrodisiac",
-            "min": 7,
-            "max": 7
-          },
-          {
-            "tag": "decorative",
-            "title": "Decorative/beautiful",
-            "min": 8,
-            "max": 8
-          },
-          {
-            "tag": "poison",
-            "title": "Poison/venom/toxin",
-            "min": 9,
-            "max": 9
-          },
-          {
-            "tag": "curative",
-            "title": "Curative/restorative",
-            "min": 10,
-            "max": 10
-          },
-          {
-            "tag": "spell_component",
-            "min": 11,
-            "max": 11
-          },
-          {
-            "tag": "supply",
-            "title": "Supply (SPECIALTY)",
-            "min": 12,
-            "max": 12,
-            "additional": [
-              "booty.specialty"
-            ]
-          }
-        ]
-      },
-      {
-        "tag": "body_part_value",
-        "use_custom_dice": true,
-        "variants": [
-          {
-            "tag": "value_1",
-            "title": "1d10 sp",
-            "min": 1,
-            "max": 3,
-            "additional": [
+            "tag": "property",
+            "dice": "d12",
+            "variants": [
               {
-                "tag": "value",
-                "roll_result": "d10"
+                "tag": "protection",
+                "title": "Protection/ward",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "augmentation",
+                "title": "Augmentation/offence",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "spice",
+                "title": "Spice/ingredient",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "ink",
+                "title": "Ink/dye/stain",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "narcotic",
+                "title": "Narcotic/soporific",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "perfume",
+                "title": "Perfume/aphrodisiac",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "decorative",
+                "title": "Decorative/beautiful",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "poison",
+                "title": "Poison/venom/toxin",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "curative",
+                "title": "Curative/restorative",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "spell_component",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "supply",
+                "title": "Supply (SPECIALTY)",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  "booty.specialty"
+                ]
               }
             ]
           },
           {
-            "tag": "value_2",
-            "title": "1d10x2 sp",
-            "min": 4,
-            "max": 5,
-            "additional": [
+            "tag": "value",
+            "hint": "$diceHint",
+            "use_custom_dice": true,
+            "variants": [
               {
-                "tag": "value",
-                "roll_result": "d10x2"
-              }
-            ]
-          },
-          {
-            "tag": "value_3",
-            "title": "2d10x2 sp",
-            "min": 6,
-            "max": 7,
-            "additional": [
+                "tag": "value_1",
+                "title": "1d10 sp",
+                "min": 1,
+                "max": 3,
+                "additional": [
+                  {
+                    "tag": "value",
+                    "roll_result": "d10"
+                  }
+                ]
+              },
               {
-                "tag": "value",
-                "roll_result": "2d10x2"
-              }
-            ]
-          },
-          {
-            "tag": "value_4",
-            "title": "4d10x2 sp",
-            "min": 8,
-            "max": 9,
-            "additional": [
+                "tag": "value_2",
+                "title": "1d10x2 sp",
+                "min": 4,
+                "max": 5,
+                "additional": [
+                  {
+                    "tag": "value",
+                    "roll_result": "d10x2"
+                  }
+                ]
+              },
               {
-                "tag": "value",
-                "roll_result": "4d10x2"
-              }
-            ]
-          },
-          {
-            "tag": "value_5",
-            "title": "8d10x2 sp",
-            "min": 10,
-            "max": 10,
-            "additional": [
+                "tag": "value_3",
+                "title": "2d10x2 sp",
+                "min": 6,
+                "max": 7,
+                "additional": [
+                  {
+                    "tag": "value",
+                    "roll_result": "2d10x2"
+                  }
+                ]
+              },
               {
-                "tag": "value",
-                "roll_result": "8d10x2"
-              }
-            ]
-          },
-          {
-            "tag": "value_6",
-            "title": "10d10x2 sp",
-            "min": 11,
-            "max": 11,
-            "additional": [
+                "tag": "value_4",
+                "title": "4d10x2 sp",
+                "min": 8,
+                "max": 9,
+                "additional": [
+                  {
+                    "tag": "value",
+                    "roll_result": "4d10x2"
+                  }
+                ]
+              },
               {
-                "tag": "value",
-                "roll_result": "10d10x2"
-              }
-            ]
-          },
-          {
-            "tag": "value_7",
-            "title": "10d10x5 sp",
-            "min": 12,
-            "max": 12,
-            "additional": [
+                "tag": "value_5",
+                "title": "8d10x2 sp",
+                "min": 10,
+                "max": 10,
+                "additional": [
+                  {
+                    "tag": "value",
+                    "roll_result": "8d10x2"
+                  }
+                ]
+              },
               {
-                "tag": "value",
-                "roll_result": "10d10x5"
+                "tag": "value_6",
+                "title": "10d10x2 sp",
+                "min": 11,
+                "max": 11,
+                "additional": [
+                  {
+                    "tag": "value",
+                    "roll_result": "10d10x2"
+                  }
+                ]
+              },
+              {
+                "tag": "value_7",
+                "title": "10d10x5 sp",
+                "min": 12,
+                "max": 12,
+                "additional": [
+                  {
+                    "tag": "value",
+                    "roll_result": "10d10x5"
+                  }
+                ]
               }
             ]
           }
@@ -15326,106 +15325,108 @@
           }
         ],
         "additional": [
-          "booty.trinket_material"
-        ]
-      },
-      {
-        "tag": "trinket_material",
-        "hint": "$diceHint",
-        "use_custom_dice": true,
-        "variants": [
+          "booty.trinket.material"
+        ],
+        "dictionaries": [
           {
-            "tag": "stone",
-            "title": "Stone/shell/bone/hair/horn (1 sp)",
-            "min": 1,
-            "max": 1,
-            "additional": [
+            "tag": "material",
+            "hint": "$diceHint",
+            "use_custom_dice": true,
+            "variants": [
               {
-                "tag": "value",
-                "roll_result": "1"
-              }
-            ]
-          },
-          {
-            "tag": "wood",
-            "title": "Wood/ceramic/leather (1d4 sp)",
-            "min": 2,
-            "max": 2,
-            "additional": [
-              {
-                "tag": "value",
-                "roll_result": "d4"
-              }
-            ]
-          },
-          {
-            "tag": "brass",
-            "title": "Brass/bronze/iron/tin (1d6 sp)",
-            "min": 3,
-            "max": 3,
-            "additional": [
-              {
-                "tag": "value",
-                "roll_result": "d6"
-              }
-            ]
-          },
-          {
-            "tag": "copper",
-            "title": "Copper (1d8 sp)",
-            "min": 4,
-            "max": 4,
-            "additional": [
-              {
-                "tag": "value",
-                "roll_result": "d8"
-              }
-            ]
-          },
-          {
-            "tag": "silver",
-            "title": "Silver/glass (1d10 sp)",
-            "min": 5,
-            "max": 5,
-            "additional": [
-              {
-                "tag": "value",
-                "roll_result": "d10"
-              }
-            ]
-          },
-          {
-            "tag": "fine",
-            "title": "<i>Fine</i>, multiply value x2",
-            "min": 6,
-            "max": 9,
-            "additional": [
-              {
-                "tag": "material",
-                "vars": {
-                  "$rollResultMultiply": "2"
-                },
-                "generate_outer": [
-                  "booty.trinket_material",
-                  "d4+1"
+                "tag": "stone",
+                "title": "Stone/shell/bone/hair/horn (1 sp)",
+                "min": 1,
+                "max": 1,
+                "additional": [
+                  {
+                    "tag": "value",
+                    "roll_result": "1"
+                  }
                 ]
-              }
-            ]
-          },
-          {
-            "tag": "exquisite",
-            "title": "<i>Exquisite</i>, multiply value x4",
-            "min": 10,
-            "max": 12,
-            "additional": [
+              },
               {
-                "tag": "material",
-                "vars": {
-                  "$rollResultMultiply": "4"
-                },
-                "generate_outer": [
-                  "booty.trinket_material",
-                  "d4+1"
+                "tag": "wood",
+                "title": "Wood/ceramic/leather (1d4 sp)",
+                "min": 2,
+                "max": 2,
+                "additional": [
+                  {
+                    "tag": "value",
+                    "roll_result": "d4"
+                  }
+                ]
+              },
+              {
+                "tag": "brass",
+                "title": "Brass/bronze/iron/tin (1d6 sp)",
+                "min": 3,
+                "max": 3,
+                "additional": [
+                  {
+                    "tag": "value",
+                    "roll_result": "d6"
+                  }
+                ]
+              },
+              {
+                "tag": "copper",
+                "title": "Copper (1d8 sp)",
+                "min": 4,
+                "max": 4,
+                "additional": [
+                  {
+                    "tag": "value",
+                    "roll_result": "d8"
+                  }
+                ]
+              },
+              {
+                "tag": "silver",
+                "title": "Silver/glass (1d10 sp)",
+                "min": 5,
+                "max": 5,
+                "additional": [
+                  {
+                    "tag": "value",
+                    "roll_result": "d10"
+                  }
+                ]
+              },
+              {
+                "tag": "fine",
+                "title": "<i>Fine</i>, multiply value x2",
+                "min": 6,
+                "max": 9,
+                "additional": [
+                  {
+                    "tag": "material",
+                    "vars": {
+                      "$rollResultMultiply": "2"
+                    },
+                    "generate_outer": [
+                      "booty.trinket.material",
+                      "d4+1"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "exquisite",
+                "title": "<i>Exquisite</i>, multiply value x4",
+                "min": 10,
+                "max": 12,
+                "additional": [
+                  {
+                    "tag": "material",
+                    "vars": {
+                      "$rollResultMultiply": "4"
+                    },
+                    "generate_outer": [
+                      "booty.trinket.material",
+                      "d4+1"
+                    ]
+                  }
                 ]
               }
             ]
@@ -15630,124 +15631,126 @@
           }
         ],
         "additional": [
-          "booty.jewelry_material"
-        ]
-      },
-      {
-        "tag": "jewelry_material",
-        "hint": "$diceHint",
-        "use_custom_dice": true,
-        "variants": [
+          "booty.material"
+        ],
+        "dictionaries": [
           {
-            "tag": "copper",
-            "title": "Copper (1d8 sp)",
-            "min": 1,
-            "max": 2,
-            "additional": [
+            "tag": "material",
+            "hint": "$diceHint",
+            "use_custom_dice": true,
+            "variants": [
               {
-                "tag": "value",
-                "roll_result": "d8"
-              }
-            ]
-          },
-          {
-            "tag": "silver",
-            "title": "Silver (2d10x2 sp)",
-            "min": 3,
-            "max": 3,
-            "additional": [
-              {
-                "tag": "value",
-                "roll_result": "2d10x2"
-              }
-            ]
-          },
-          {
-            "tag": "gold",
-            "title": "Gold (4d10x5 sp)",
-            "min": 4,
-            "max": 4,
-            "additional": [
-              {
-                "tag": "value",
-                "roll_result": "4d10x5"
-              }
-            ]
-          },
-          {
-            "tag": "silver_gem",
-            "title": "Silver + GEM, roll bd+2 for GEM (2d10x2 sp + GEM value)",
-            "min": 5,
-            "max": 5,
-            "additional": [
-              {
-                "tag": "value",
-                "roll_result": "2d10x2"
+                "tag": "copper",
+                "title": "Copper (1d8 sp)",
+                "min": 1,
+                "max": 2,
+                "additional": [
+                  {
+                    "tag": "value",
+                    "roll_result": "d8"
+                  }
+                ]
               },
               {
-                "tag": "gem",
-                "vars": {
-                  "$diceResultAdd": "2"
-                },
-                "generate_outer": [
-                  "booty.gem"
+                "tag": "silver",
+                "title": "Silver (2d10x2 sp)",
+                "min": 3,
+                "max": 3,
+                "additional": [
+                  {
+                    "tag": "value",
+                    "roll_result": "2d10x2"
+                  }
                 ]
-              }
-            ]
-          },
-          {
-            "tag": "gold_gem",
-            "title": "Gold + GEM, roll bd+2 for GEM (4d10x5 sp + GEM value)",
-            "min": 6,
-            "max": 6,
-            "additional": [
-              {
-                "tag": "value",
-                "roll_result": "4d10x5"
               },
               {
-                "tag": "gem",
-                "vars": {
-                  "$diceResultAdd": "2"
-                },
-                "generate_outer": [
-                  "booty.gem"
+                "tag": "gold",
+                "title": "Gold (4d10x5 sp)",
+                "min": 4,
+                "max": 4,
+                "additional": [
+                  {
+                    "tag": "value",
+                    "roll_result": "4d10x5"
+                  }
                 ]
-              }
-            ]
-          },
-          {
-            "tag": "fine",
-            "title": "<i>Fine</i>, multiply value x2",
-            "min": 7,
-            "max": 9,
-            "additional": [
+              },
               {
-                "tag": "material",
-                "vars": {
-                  "$rollResultMultiply": "2"
-                },
-                "generate_outer": [
-                  "booty.jewelry_material",
-                  "d6"
+                "tag": "silver_gem",
+                "title": "Silver + GEM, roll bd+2 for GEM (2d10x2 sp + GEM value)",
+                "min": 5,
+                "max": 5,
+                "additional": [
+                  {
+                    "tag": "value",
+                    "roll_result": "2d10x2"
+                  },
+                  {
+                    "tag": "gem",
+                    "vars": {
+                      "$diceResultAdd": "2"
+                    },
+                    "generate_outer": [
+                      "booty.gem"
+                    ]
+                  }
                 ]
-              }
-            ]
-          },
-          {
-            "tag": "exquisite",
-            "title": "<i>Exquisite</i>, multiply value x4",
-            "min": 10,
-            "max": 12,
-            "additional": [
+              },
               {
-                "tag": "material",
-                "vars": {
-                  "$rollResultMultiply": "4"
-                },
-                "generate_outer": [
-                  "booty.jewelry_material",
-                  "d6"
+                "tag": "gold_gem",
+                "title": "Gold + GEM, roll bd+2 for GEM (4d10x5 sp + GEM value)",
+                "min": 6,
+                "max": 6,
+                "additional": [
+                  {
+                    "tag": "value",
+                    "roll_result": "4d10x5"
+                  },
+                  {
+                    "tag": "gem",
+                    "vars": {
+                      "$diceResultAdd": "2"
+                    },
+                    "generate_outer": [
+                      "booty.gem"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "fine",
+                "title": "<i>Fine</i>, multiply value x2",
+                "min": 7,
+                "max": 9,
+                "additional": [
+                  {
+                    "tag": "material",
+                    "vars": {
+                      "$rollResultMultiply": "2"
+                    },
+                    "generate_outer": [
+                      "booty.jewelry.material",
+                      "d6"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "exquisite",
+                "title": "<i>Exquisite</i>, multiply value x4",
+                "min": 10,
+                "max": 12,
+                "additional": [
+                  {
+                    "tag": "material",
+                    "vars": {
+                      "$rollResultMultiply": "4"
+                    },
+                    "generate_outer": [
+                      "booty.jewelry.material",
+                      "d6"
+                    ]
+                  }
                 ]
               }
             ]
@@ -16240,7 +16243,7 @@
                     "tag": "value",
                     "title": "Value per use",
                     "vars": {
-                      "$rollResultMultiply": "5"
+                      "$rollResultMultiply": "50"
                     },
                     "roll_result": "2x$dice"
                   }
@@ -16249,7 +16252,13 @@
               {
                 "tag": "spellbook",
                 "min": 10,
-                "max": 10
+                "max": 10,
+                "additional": [
+                  {
+                    "tag": "value",
+                    "static": "priceless"
+                  }
+                ]
               },
               {
                 "tag": "armor",
