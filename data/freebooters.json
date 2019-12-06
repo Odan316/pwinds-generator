@@ -14038,7 +14038,7 @@
                 "additional": [
                   {
                     "tag": "items",
-                    "repeat": "d4",
+                    "forceDiceRoller": "1d4",
                     "generate_outer": "booty.stashed_booty"
                   }
                 ]
@@ -14051,7 +14051,7 @@
                 "additional": [
                   {
                     "tag": "items",
-                    "repeat": "d6",
+                    "forceDiceRoller": "1d6",
                     "generate_outer": "booty.stashed_booty"
                   }
                 ]
@@ -14064,7 +14064,7 @@
                 "additional": [
                   {
                     "tag": "items",
-                    "repeat": "d8",
+                    "forceDiceRoller": "1d8",
                     "generate_outer": "booty.stashed_booty"
                   }
                 ]
@@ -14077,7 +14077,7 @@
                 "additional": [
                   {
                     "tag": "items",
-                    "repeat": "d10",
+                    "forceDiceRoller": "1d8",
                     "generate_outer": "booty.stashed_booty"
                   }
                 ]
@@ -14090,7 +14090,7 @@
                 "additional": [
                   {
                     "tag": "items",
-                    "repeat": "d12",
+                    "forceDiceRoller": "1d8",
                     "generate_outer": "booty.stashed_booty"
                   }
                 ]

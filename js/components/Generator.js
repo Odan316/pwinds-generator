@@ -55,6 +55,7 @@ define([
 
             // Reset generation variables
             _vars = {};
+            $("#diceRollerCache").val($("#diceRoller").val());
 
             return generateEntity(entity, entityLink.getDice());
         };
@@ -74,6 +75,9 @@ define([
                 return generatedEntity;
             } else {
                 $.extend(_vars, entity.getVars());
+                if(entity.getForceDiceRoller() !== false){
+                    $("#diceRollerCache").val(entity.getForceDiceRoller());
+                }
             }
 
             if (entity.isStatic()) {

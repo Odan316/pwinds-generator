@@ -71,7 +71,7 @@ define([
         this.getDice = function() {
             let formula = _dice !== null ? _dice : "1";
 
-            let customDice = $("#diceRoller").val();
+            let customDice = $("#diceRollerCache").val();
 
             if (!_.isEmpty(customDice)) {
                 formula = _.replace(formula, '$dice', customDice);

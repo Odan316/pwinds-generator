@@ -165,6 +165,13 @@ define([
         let _vars = {};
 
         /**
+         *
+         * @type {boolean|String}
+         * @private
+         */
+        let _forceDiceRoller = false;
+
+        /**
          * Loads JSON data in Entity object
          *
          * @param data
@@ -187,6 +194,7 @@ define([
          * @param data.concatenate
          * @param data.repeat
          * @param data.vars
+         * @param data.forceDiceRoller
          */
         this.load = function (data) {
             if ("tag" in data) {
@@ -251,7 +259,7 @@ define([
                 });
             }
             if("additionalTitle" in data){
-                _additionalTitle = data.additionalTitle
+                _additionalTitle = data.additionalTitle;
             }
             if ("template" in data) {
                 _template = [];
@@ -270,6 +278,9 @@ define([
             if ("vars" in data) {
                 _vars = data.vars;
             }
+            if ("forceDiceRoller" in data) {
+                _forceDiceRoller = data.forceDiceRoller;
+            }
         };
 
         /**
@@ -278,7 +289,7 @@ define([
          * @returns {String|null}
          */
         this.getTag = function () {
-            if (_tag != null) {
+            if (_tag !== null) {
                 return _tag;
             } else {
                 return "no_tag";
@@ -350,7 +361,7 @@ define([
         this.getDice = function () {
             let dice = _dice;
             if (this.useCustomDice()) {
-                let customDice = $("#diceRoller").val();
+                let customDice = $("#diceRollerCache").val();
                 if (!_.isEmpty(customDice)) {
                     dice = customDice;
                 }
@@ -525,7 +536,7 @@ define([
         this.getDiceResultFormula = function(){
             let formula = _roll_result !== null ? _roll_result : "1";
 
-            let customDice = $("#diceRoller").val();
+            let customDice = $("#diceRollerCache").val();
 
             if (!_.isEmpty(customDice)) {
                 formula = _.replace(formula,"$dice",customDice);
@@ -615,7 +626,7 @@ define([
         this.getRepeat = function () {
             let formula = _repeat !== null ? _repeat : "1";
 
-            let customDice = $("#diceRoller").val();
+            let customDice = $("#diceRollerCache").val();
             if (!_.isEmpty(customDice)) {
                 formula = _.replace(formula,"$dice",customDice);
             }
@@ -630,6 +641,10 @@ define([
          */
         this.getVars = function () {
             return _vars;
+        };
+
+        this.getForceDiceRoller = function() {
+            return _forceDiceRoller;
         };
     };
 
