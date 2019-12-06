@@ -2356,7 +2356,7 @@
           {
             "tag": "fighter",
             "min": 1,
-            "max": 6,
+            "max": 5,
             "additional": [
               "character.attributes",
               {
@@ -2795,8 +2795,8 @@
           },
           {
             "tag": "thief",
-            "min": 7,
-            "max": 9,
+            "min": 6,
+            "max": 8,
             "additional": [
               "character.attributes",
               {
@@ -3255,8 +3255,8 @@
           },
           {
             "tag": "cleric",
-            "min": 10,
-            "max": 11,
+            "min": 9,
+            "max": 10,
             "additional": [
               "character.attributes",
               {
@@ -3726,7 +3726,7 @@
           {
             "tag": "magic_user",
             "title": "Magic-user",
-            "min": 12,
+            "min": 11,
             "max": 12,
             "additional": [
               "character.attributes",
@@ -27832,26 +27832,26 @@
               {
                 "tag": "good",
                 "min": 1,
-                "max": 1
+                "max": 2
               },
               {
                 "tag": "lawful",
-                "min": 2,
-                "max": 3
+                "min": 3,
+                "max": 4
               },
               {
                 "tag": "neutral",
-                "min": 4,
-                "max": 9
+                "min": 5,
+                "max": 8
               },
               {
                 "tag": "chaotic",
-                "min": 10,
-                "max": 11
+                "min": 9,
+                "max": 10
               },
               {
                 "tag": "evil",
-                "min": 12,
+                "min": 11,
                 "max": 12
               }
             ]
