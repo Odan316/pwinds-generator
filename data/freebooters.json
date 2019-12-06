@@ -4840,7 +4840,7 @@
             "max": 2
           },
           {
-            "tag": "deep_water",
+            "tag": "water_obstacle",
             "description": "Examples: river, lake",
             "min": 3,
             "max": 5
@@ -4860,7 +4860,7 @@
           },
           {
             "tag": "animal",
-            "description": "Examples: large herd travelling/grazing/resitng",
+            "description": "Examples: large herd travelling/grazing/resting",
             "min": 9,
             "max": 9
           },
@@ -14003,14 +14003,14 @@
               },
               {
                 "tag": "items",
-                "title": "1d6 ITEMS",
+                "title": "1d6 PERSONAL ITEMS",
                 "min": 10,
                 "max": 11,
                 "additional": [
                   {
                     "tag": "item",
                     "repeat": "d6",
-                    "generate_outer": "miscellaneous.random_item"
+                    "generate_outer": "booty.personal_item"
                   }
                 ]
               },
@@ -14019,7 +14019,7 @@
                 "title": "Lost TRADE GOOD",
                 "min": 12,
                 "max": 12,
-                "generate_outer": "booty.valuable.trade_good"
+                "generate_outer": "booty.rarity.trade_good"
               }
             ]
           },
@@ -14032,52 +14032,67 @@
             "variants": [
               {
                 "tag": "booty1",
-                "title": "OWNED BOOTY (1d4)",
+                "title": "1d4 STASH BOOTY",
                 "min": 1,
                 "max": 4,
-                "generate_outer": [
-                  "booty.owned_booty",
-                  "d4"
+                "additional": [
+                  {
+                    "tag": "items",
+                    "repeat": "d4",
+                    "generate_outer": "booty.stashed_booty"
+                  }
                 ]
               },
               {
                 "tag": "booty2",
-                "title": "OWNED BOOTY (1d6)",
+                "title": "1d6 STASH BOOTY",
                 "min": 5,
                 "max": 7,
-                "generate_outer": [
-                  "booty.owned_booty",
-                  "d6"
+                "additional": [
+                  {
+                    "tag": "items",
+                    "repeat": "d6",
+                    "generate_outer": "booty.stashed_booty"
+                  }
                 ]
               },
               {
                 "tag": "booty3",
-                "title": "OWNED BOOTY (1d8)",
+                "title": "1d8 STASH BOOTY",
                 "min": 8,
                 "max": 10,
-                "generate_outer": [
-                  "booty.owned_booty",
-                  "d8"
+                "additional": [
+                  {
+                    "tag": "items",
+                    "repeat": "d8",
+                    "generate_outer": "booty.stashed_booty"
+                  }
                 ]
               },
               {
                 "tag": "booty4",
-                "title": "OWNED BOOTY (1d10)",
+                "title": "1d10 STASH BOOTY",
                 "min": 11,
-                "max": 12,
-                "generate_outer": [
-                  "booty.owned_booty",
-                  "d10"
+                "max": 11,
+                "additional": [
+                  {
+                    "tag": "items",
+                    "repeat": "d10",
+                    "generate_outer": "booty.stashed_booty"
+                  }
                 ]
               },
               {
                 "tag": "booty5",
-                "title": "OWNED BOOTY (1d12)",
+                "title": "1d12 STASH BOOTY",
                 "min": 12,
                 "max": 12,
-                "generate_outer": [
-                  "booty.owned_booty",
-                  "d12"
+                "additional": [
+                  {
+                    "tag": "items",
+                    "repeat": "d12",
+                    "generate_outer": "booty.stashed_booty"
+                  }
                 ]
               }
             ]
@@ -14275,9 +14290,42 @@
           },
           {
             "tag": "settlement",
-            "title": "SETTLEMENT - generation not realised yet",
+            "title": "SETTLEMENT - generate settlement details manually",
             "min": 12,
-            "max": 12
+            "max": 12,
+            "roll": "d12",
+            "variants": [
+              {
+                "tag": "hamlet",
+                "title": "<i>Hamlet</i>",
+                "min": 1,
+                "max": 4
+              },
+              {
+                "tag": "village",
+                "title": "<i>Village</i>",
+                "min": 5,
+                "max": 7
+              },
+              {
+                "tag": "keep",
+                "title": "<i>Keep</i>",
+                "min": 8,
+                "max": 9
+              },
+              {
+                "tag": "town",
+                "title": "<i>Town</i>",
+                "min": 10,
+                "max": 11
+              },
+              {
+                "tag": "city",
+                "title": "<i>City</i>",
+                "min": 12,
+                "max": 12
+              }
+            ]
           }
         ]
       }
