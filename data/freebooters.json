@@ -12749,7 +12749,6 @@
     "additional": [
       "creature",
       "creature_adv.size",
-      "creature_adv.base",
       "creature_adv.adjust",
       "creature_adv.attack",
       "creature_adv.defence",
