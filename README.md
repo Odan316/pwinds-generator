@@ -18,8 +18,8 @@ File should be written in JSON format and placed under /data directory
         "description": "Some long text here" 
         // Hint for pop-up near entity name
         // Can be any text, or hardcocer shortcuts :
-        // $diceHint (hint tio use dice formula field)
-        // $modifierHint (hint tio use modifier field)
+        // $diceHint (hint to use dice formula field)
+        // $modifierHint (hint to use modifier field)
         "hint": "Use it wisely",
         // If set and set as true - this entity will be hidden from entity tree even if it has children
         "hide" : true,
@@ -136,6 +136,6 @@ All of variants are valid:
 Engine will search entities by link in "variants" and "dictionaries" sections by their tags. 
 Links must be provided in string format, composed of tags, separated by dot
 
-    first_lvel_entity.entity_from_variants.third_level_entity
+    first_level_entity.entity_from_variants.third_level_entity
     
 Entities can be stored on infinite depth, so entity path can be eny length.
