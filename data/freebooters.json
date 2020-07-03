@@ -15260,8 +15260,8 @@
           {
             "tag": "booty_2",
             "title": "PERSONAL ITEM x 1d6",
-            "min": 3,
-            "max": 3,
+            "min": 2,
+            "max": 2,
             "additional": [
               {
                 "tag": "personal_item",
