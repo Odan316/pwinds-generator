@@ -4945,13 +4945,7 @@
     "tag": "dungeon",
     "additional": [
       "dungeon.name",
-      "dungeon.size",
-      {
-        "tag": "alignment",
-        "title": "Alignment and safety",
-        "static": "Generate this manually from corresponding dictionary"
-      },
-      "dungeon.overview"
+      "dungeon.size"
     ],
     "dictionaries": [
       {
@@ -5863,7 +5857,13 @@
                 "tag": "theme",
                 "generate_outer": "dungeon.theme",
                 "repeat": 2
-              }
+              },
+              {
+                "tag": "alignment",
+                "title": "Alignment and safety",
+                "static": "Generate this manually from corresponding dictionary"
+              },
+              "dungeon.overview"
             ]
           },
           {
@@ -5879,7 +5879,13 @@
                 "tag": "theme",
                 "generate_outer": "dungeon.theme",
                 "repeat": 3
-              }
+              },
+              {
+                "tag": "alignment",
+                "title": "Alignment and safety",
+                "static": "Generate this manually from corresponding dictionary"
+              },
+              "dungeon.overview"
             ]
           },
           {
@@ -5895,7 +5901,13 @@
                 "tag": "theme",
                 "generate_outer": "dungeon.theme",
                 "repeat": 4
-              }
+              },
+              {
+                "tag": "alignment",
+                "title": "Alignment and safety",
+                "static": "Generate this manually from corresponding dictionary"
+              },
+              "dungeon.overview"
             ]
           },
           {
@@ -5911,7 +5923,13 @@
                 "tag": "theme",
                 "generate_outer": "dungeon.theme",
                 "repeat": 5
-              }
+              },
+              {
+                "tag": "alignment",
+                "title": "Alignment and safety",
+                "static": "Generate this manually from corresponding dictionary"
+              },
+              "dungeon.overview"
             ]
           },
           {
