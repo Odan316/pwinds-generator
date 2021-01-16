@@ -1,0 +1,30 @@
+version: '3.4'
+
+x-app: &app
+  build:
+    context: .
+    dockerfile: ./build/local/Dockerfile
+  volumes:
+    - .:/opt/app
+  restart: always
+
+services:
+  webapp:
+    <<: *app
+
+  webserver:
+    image: nginx:1.17-alpine
+    ports:
+      - "8085:80"
+    volumes:
+      - .:/opt/app
+      - ./build/local/nginx/conf.d:/etc/nginx/conf.d
+    restart: always
+    depends_on:
+      - webapp
+#    logging:
+#      driver: gelf
+#      options:
+#        gelf-address: udp://udp:4001
+
+
