@@ -77,8 +77,8 @@ define([
                 $formulaInput.val(formula);
             }
             var result = dice.roll(formula);
-            $outputDiv.prepend("<div class='generatedOutput'><h3 class='entityTitle'>Custom roll ("
-                + formula + ")</h3><p class=\"customRollResult\">" + result + "</p></div>");
+            $outputDiv.prepend("<div class='generatedOutput'><h3 class='entityTitle'>Custom roll (" +
+                formula + ")</h3><p class=\"customRollResult\">" + result + "</p></div>");
         });
     };
 

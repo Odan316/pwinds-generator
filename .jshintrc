@@ -90,6 +90,8 @@
   "globals"       : {
     "_": false,
     "$": false,
-    "define": false
+    "define": false,
+    "requirejs": false,
+    "require": false
   }
 }
