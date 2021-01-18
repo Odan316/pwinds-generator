@@ -4774,51 +4774,177 @@
     "description": "It is collection of entities, you should generate something from sub-entities",
     "dictionaries": [
       {
-        "tag": "mishap",
-        "description": "An inconvenience or complication that might deplete resources",
+        "tag": "settlement",
         "dice": "d12",
         "variants": [
           {
-            "tag": "accident",
-            "description": "Examples: minor injury, sprain, concussion",
+            "tag": "hazard",
+            "min": 1,
+            "max": 1,
+            "generate_outer": "incident.hazard"
+          },
+          {
+            "tag": "obstacle",
+            "min": 2,
+            "max": 3,
+            "generate_outer": "incident.obstacle"
+          },
+          {
+            "tag": "mishap",
+            "min": 4,
+            "max": 5,
+            "generate_outer": "incident.mishap"
+          },
+          {
+            "tag": "event",
+            "min": 6,
+            "max": 12,
+            "generate_outer": "settlement.event"
+          }
+        ]
+      },
+      {
+        "tag": "road",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "creature",
+            "min": 1,
+            "max": 7,
+            "generate_outer": "creature_adv"
+          },
+          {
+            "tag": "hazard",
+            "min": 8,
+            "max": 8,
+            "generate_outer": "incident.hazard"
+          },
+          {
+            "tag": "obstacle",
+            "min": 9,
+            "max": 9,
+            "generate_outer": "incident.obstacle"
+          },
+          {
+            "tag": "mishap",
+            "min": 10,
+            "max": 11,
+            "generate_outer": "incident.mishap"
+          },
+          {
+            "tag": "discovery",
+            "min": 12,
+            "max": 12,
+            "generate_outer": "discovery"
+          }
+        ]
+      },
+      {
+        "tag": "wilderness",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "creature",
+            "min": 1,
+            "max": 4,
+            "generate_outer": "creature_adv"
+          },
+          {
+            "tag": "hazard",
+            "min": 5,
+            "max": 6,
+            "generate_outer": "incident.hazard"
+          },
+          {
+            "tag": "obstacle",
+            "min": 7,
+            "max": 8,
+            "generate_outer": "incident.obstacle"
+          },
+          {
+            "tag": "mishap",
+            "min": 9,
+            "max": 10,
+            "generate_outer": "incident.mishap"
+          },
+          {
+            "tag": "discovery",
+            "min": 11,
+            "max": 12,
+            "generate_outer": "discovery"
+          }
+        ]
+      },
+      {
+        "tag": "dungeon",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "creature",
+            "min": 1,
+            "max": 6,
+            "generate_outer": "creature_adv"
+          },
+          {
+            "tag": "mishap",
+            "min": 7,
+            "max": 12,
+            "generate_outer": "incident.mishap"
+          }
+        ]
+      },
+      {
+        "tag": "mishap",
+        "description": "An inconvenience or complication that might deplete resources, cause ability damage, or cause problems within the party.",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "injurious",
+            "description": "Examples: broken hand/foot/limb, conscussion, etc.",
             "min": 1,
             "max": 1
           },
           {
-            "tag": "navigational",
-            "description": "Examples: time lost, disorientation",
+            "tag": "debilitating",
+            "description": "Examples: exposure, frostbite, heatstroke, etc.",
             "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "impeding",
+            "description": "Examples: twisted ankle, sprain, dizziness, etc.",
+            "min": 3,
             "max": 3
           },
           {
-            "tag": "supplies",
-            "description": "Examples: spoiled rations, tainted water",
+            "tag": "exhausting",
+            "description": "Examples: physical strain causes 1d4/1d6/1d8 ability damage",
             "min": 4,
             "max": 5
           },
           {
-            "tag": "equipment",
-            "description": "Examples: breakage (boot, strap, <i>fragile</i> item",
+            "tag": "gear-depleting",
+            "description": "Examples: gear lost/damaged, etc.",
             "min": 6,
-            "max": 6
+            "max": 7
           },
           {
-            "tag": "transportation",
-            "description": "Examples: problem with mount/pack animal",
-            "min": 7,
-            "max": 8
-          },
-          {
-            "tag": "animal",
-            "description": "Examples: scavengers, pests, hangers-on",
-            "min": 9,
-            "max": 10
+            "tag": "supply-depleting",
+            "description": "Examples: loss of food/water to spoilage, vermin, carelessness, etc.",
+            "min": 8,
+            "max": 9
           },
           {
             "tag": "interpersonal",
-            "description": "Examples: misunderstanding, argument",
-            "min": 11,
-            "max": 12
+            "description": "Examples: tension, misunderstanding, argument, etc.",
+            "min": 10,
+            "max": 11
+          },
+          {
+            "tag": "bothersome",
+            "description": "Examples: distracting/annoying insects, pests, people, etc.",
+            "min": 10,
+            "max": 11
           }
         ]
       },
@@ -4828,114 +4954,194 @@
         "dice": "d12",
         "variants": [
           {
-            "tag": "ODDITY",
+            "tag": "unnatural",
             "min": 1,
             "max": 1,
-            "generate_outer": "details.oddity"
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "magical",
+                "description": "magical: roll natural obstacle, add magic type",
+                "min": 1,
+                "max": 7,
+                "generate_outer": [
+                  "incident.obstacle.natural",
+                  "details.magic_type"
+                ]
+              },
+              {
+                "tag": "planar",
+                "description": "roll natural obstacle, add element",
+                "min": 8,
+                "max": 11,
+                "generate_outer": [
+                  "incident.obstacle.natural",
+                  "details.element"
+                ]
+              },
+              {
+                "tag": "divine",
+                "description": "roll natural obstacle, attach deity",
+                "min": 12,
+                "max": 12,
+                "generate_outer": [
+                  "incident.obstacle.natural",
+                  "pantheon.major_deity"
+                ]
+              }
+            ]
           },
           {
-            "tag": "vertical_barrier",
-            "description": "Examples: cliff face, wall, dropoff",
+            "tag": "natural",
             "min": 2,
-            "max": 2
-          },
-          {
-            "tag": "water_obstacle",
-            "description": "Examples: river, lake, waterfall, dry riverbed",
-            "min": 3,
-            "max": 5
-          },
-          {
-            "tag": "gap",
-            "title": "Gap/void",
-            "description": "Examples: gorge, ravine, chasm, crevasse",
-            "min": 6,
-            "max": 7
-          },
-          {
-            "tag": "debris",
-            "description": "Examples: rockfall, deadfall",
-            "min": 8,
-            "max": 8
-          },
-          {
-            "tag": "animal",
-            "description": "Examples: large herd travelling/grazing/resting",
-            "min": 9,
-            "max": 9
-          },
-          {
-            "tag": "barren_terrain",
-            "description": "Examples: desert, swampland, volcanic waste",
-            "min": 10,
-            "max": 10
-          },
-          {
-            "tag": "impediment",
-            "description": "Examples: swampland, mud flats, deep snow",
-            "min": 11,
-            "max": 12
+            "max": 12,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "oddity-based",
+                "title": "oddity-based",
+                "min": 1,
+                "max": 1,
+                "generate_outer": "details.oddity"
+              },
+              {
+                "tag": "defensive",
+                "description": "Examples: barrier created by local creature/faction",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "impenetrable",
+                "description": "Examples: cliff, escarpment, dense jungle, etc.",
+                "min": 4,
+                "max": 6
+              },
+              {
+                "tag": "penetrable",
+                "description": "Examples: dense undergrowth, etc.",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "traversable",
+                "description": "Examples: river, ravine, crevasse, chasm, abyss, etc.",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "impeding",
+                "description": "Examples: wetland, sand dunes, deep snow, etc.",
+                "min": 11,
+                "max": 12
+              }
+            ]
           }
         ]
       },
       {
         "tag": "hazard",
-        "description": "A potentially harmful problem that must be dealt with directly or avoided",
+        "description": "A potentially harmful problem that must be dealt with directly.",
         "dice": "d12",
         "variants": [
           {
-            "tag": "ODDITY",
+            "tag": "unnatural",
             "min": 1,
             "max": 1,
-            "generate_outer": "details.oddity"
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "taint/blight/curse",
+                "min": 1,
+                "max": 5
+              },
+              {
+                "tag": "magical",
+                "description": "magical: roll natural hazard, add magic type",
+                "min": 6,
+                "max": 9,
+                "generate_outer": [
+                  "incident.hazard.natural",
+                  "details.magic_type"
+                ]
+              },
+              {
+                "tag": "planar",
+                "description": "roll natural hazard, add element",
+                "min": 10,
+                "max": 11,
+                "generate_outer": [
+                  "incident.hazard.natural",
+                  "details.element"
+                ]
+              },
+              {
+                "tag": "divine",
+                "description": "roll natural hazard, attach deity",
+                "min": 12,
+                "max": 12,
+                "generate_outer": [
+                  "incident.hazard.natural",
+                  "pantheon.major_deity"
+                ]
+              }
+            ]
           },
           {
-            "tag": "concealed",
-            "description": "Examples: snare trap, pit trap, ambush",
+            "tag": "natural",
             "min": 2,
-            "max": 2
-          },
-          {
-            "tag": "sudden",
-            "description": "Examples: sinkhole, quicksand, mudslide",
-            "min": 3,
-            "max": 3
-          },
-          {
-            "tag": "navigational",
-            "description": "Examples: disoriented, lost",
-            "min": 4,
-            "max": 5
-          },
-          {
-            "tag": "environmental",
-            "description": "Examples: wildfire, swamp gas, avalanche",
-            "min": 6,
-            "max": 6
-          },
-          {
-            "tag": "animal",
-            "description": "Examples: stampede, mass migration",
-            "min": 7,
-            "max": 7
-          },
-          {
-            "tag": "precarious",
-            "description": "Examples: ledge, precipice",
-            "min": 8,
-            "max": 8
-          },
-          {
-            "tag": "meteorological",
-            "description": "Examples: rainstorm, sandstorm, blizzard",
-            "min": 9,
-            "max": 11
-          },
-          {
-            "tag": "treacherous",
-            "description": "Examples: icy/muddy ground, deadfall, scree",
-            "min": 12,
-            "max": 12
+            "max": 12,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "oddity-based",
+                "title": "oddity-based",
+                "min": 1,
+                "max": 1,
+                "generate_outer": "details.oddity"
+              },
+              {
+                "tag": "tectonic/volcanic",
+                "title": "tectonic/volcanic",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "unseen pitfall",
+                "description": "Examples: chasm, crevasse, abyss, rift",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "ensnaring",
+                "description": "Examples: bog, mire, tarpit, quicksand, etc.",
+                "min": 5,
+                "max": 6
+              },
+              {
+                "tag": "defensive",
+                "description": "Examples: trap created by local creature /faction",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "meteorological",
+                "description": "Examples: blizzard, thunderstorm, sandstorm, etc.",
+                "min": 8,
+                "max": 10
+              },
+              {
+                "tag": "seasonal",
+                "description": "Examples: fire, flood, avalanche, etc.",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "impairing",
+                "description": "Examples: mist, fog, murk, gloom, miasma, etc.",
+                "min": 8,
+                "max": 10
+              }
+            ]
           }
         ]
       }
@@ -7344,7 +7550,7 @@
                         "additional": [
                           {
                             "generate_outer": "booty.personal_item",
-                            "repeat" : "d8"
+                            "repeat": "d8"
                           }
                         ]
                       },
@@ -11930,7 +12136,7 @@
               "dungeon.type.$dungeon_type.dressing",
               "dungeon.type.$dungeon_type.exits",
               {
-                "generate_outer": "danger",
+                "generate_outer": "dungeon_danger",
                 "repeat": "d4"
               }
             ]
@@ -11944,7 +12150,7 @@
               "dungeon.type.$dungeon_type.area",
               "dungeon.type.$dungeon_type.dressing",
               "dungeon.type.$dungeon_type.exits",
-              "danger"
+              "dungeon_danger"
             ]
           },
           {
@@ -11967,7 +12173,7 @@
               "dungeon.type.$dungeon_type.area",
               "dungeon.type.$dungeon_type.dressing",
               "dungeon.type.$dungeon_type.exits",
-              "danger",
+              "dungeon_danger",
               "dungeon.type.$dungeon_type.discovery"
             ]
           },
@@ -11982,7 +12188,7 @@
               "dungeon.type.$dungeon_type.exits",
               "dungeon.type.$dungeon_type.discovery",
               {
-                "generate_outer": "danger",
+                "generate_outer": "dungeon_danger",
                 "repeat": "d4"
               }
             ]
@@ -12013,7 +12219,7 @@
                 "repeat": "d4"
               },
               {
-                "generate_outer": "danger",
+                "generate_outer": "dungeon_danger",
                 "repeat": "d4"
               }
             ]
@@ -12027,7 +12233,7 @@
               "dungeon.type.$dungeon_type.unique_area",
               "dungeon.type.$dungeon_type.dressing",
               "dungeon.type.$dungeon_type.exits",
-              "danger",
+              "dungeon_danger",
               {
                 "generate_outer": "dungeon.type.$dungeon_type.discovery",
                 "repeat": "d4"
@@ -12317,13 +12523,233 @@
     ]
   },
   {
-    "tag": "danger",
+    "tag": "dungeon_danger",
+    "title": "Dangers in dungeon",
     "dice": "d12",
     "variants": [
       {
-        "tag": "hazard",
+        "tag": "leader",
         "min": 1,
-        "max": 5,
+        "max": 1,
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "human",
+            "min": 1,
+            "max": 4,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "scavenger",
+                "title": "Scavenger/robber",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "wanted_criminal",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "bandit_chief",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "mercenary_captain",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "adventurer",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "shaman",
+                "title": "Shaman/priest/cultist",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "hih_priest",
+                "title": "High priest/oracle",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "sage",
+                "title": "Sage/alchemist",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "boss",
+                "title": "Boss/lord/chief",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "warchief",
+                "title": "Warchief/warlord",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "wizard",
+                "title": "Wizard/witch/warlock",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "figure_of_renown",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "humanoid",
+            "min": 5,
+            "max": 11,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "scavenger",
+                "title": "Scavenger/robber",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "wanted_criminal",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "bandit_chief",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "mercenary_captain",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "adventurer",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "shaman",
+                "title": "Shaman/priest/cultist",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "hih_priest",
+                "title": "High priest/oracle",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "sage",
+                "title": "Sage/alchemist",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "boss",
+                "title": "Boss/lord/chief",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "warchief",
+                "title": "Warchief/warlord",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "wizard",
+                "title": "Wizard/witch/warlock",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "figure_of_renown",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "other",
+            "min": 12,
+            "max": 12,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "vermin_lord",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "spirit",
+                "title": "Spirit/specter/ghost",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "undead_lieutenant",
+                "min": 4,
+                "max": 5
+              },
+              {
+                "tag": "undead_lord",
+                "title": "Undead lord/lich",
+                "min": 6,
+                "max": 7
+              },
+              {
+                "tag": "demon",
+                "min": 8,
+                "max": 9
+              },
+              {
+                "tag": "monster_lord",
+                "title": "MONSTER lord",
+                "min": 10,
+                "max": 10,
+                "additional": [
+                  "creature.monster"
+                ]
+              },
+              {
+                "tag": "demon_lord",
+                "title": "Demon lord/devil",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "alien_interloper",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "creature",
+        "min": 2,
+        "max": 7,
+        "generate_outer": "creature"
+      },
+      {
+        "tag": "hazard",
+        "min": 8,
+        "max": 12,
         "dice": "d12",
         "variants": [
           {
@@ -12554,225 +12980,6 @@
                     "d10+1"
                   ]
                 ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "tag": "creature",
-        "min": 6,
-        "max": 11,
-        "generate_outer": "creature"
-      },
-      {
-        "tag": "leader",
-        "min": 12,
-        "max": 12,
-        "dice": "d12",
-        "variants": [
-          {
-            "tag": "human",
-            "min": 1,
-            "max": 4,
-            "dice": "d12",
-            "variants": [
-              {
-                "tag": "scavenger",
-                "title": "Scavenger/robber",
-                "min": 1,
-                "max": 1
-              },
-              {
-                "tag": "wanted_criminal",
-                "min": 2,
-                "max": 2
-              },
-              {
-                "tag": "bandit_chief",
-                "min": 3,
-                "max": 3
-              },
-              {
-                "tag": "mercenary_captain",
-                "min": 4,
-                "max": 4
-              },
-              {
-                "tag": "adventurer",
-                "min": 5,
-                "max": 5
-              },
-              {
-                "tag": "shaman",
-                "title": "Shaman/priest/cultist",
-                "min": 6,
-                "max": 6
-              },
-              {
-                "tag": "hih_priest",
-                "title": "High priest/oracle",
-                "min": 7,
-                "max": 7
-              },
-              {
-                "tag": "sage",
-                "title": "Sage/alchemist",
-                "min": 8,
-                "max": 8
-              },
-              {
-                "tag": "boss",
-                "title": "Boss/lord/chief",
-                "min": 9,
-                "max": 9
-              },
-              {
-                "tag": "warchief",
-                "title": "Warchief/warlord",
-                "min": 10,
-                "max": 10
-              },
-              {
-                "tag": "wizard",
-                "title": "Wizard/witch/warlock",
-                "min": 11,
-                "max": 11
-              },
-              {
-                "tag": "figure_of_renown",
-                "min": 12,
-                "max": 12
-              }
-            ]
-          },
-          {
-            "tag": "humanoid",
-            "min": 5,
-            "max": 11,
-            "dice": "d12",
-            "variants": [
-              {
-                "tag": "scavenger",
-                "title": "Scavenger/robber",
-                "min": 1,
-                "max": 1
-              },
-              {
-                "tag": "wanted_criminal",
-                "min": 2,
-                "max": 2
-              },
-              {
-                "tag": "bandit_chief",
-                "min": 3,
-                "max": 3
-              },
-              {
-                "tag": "mercenary_captain",
-                "min": 4,
-                "max": 4
-              },
-              {
-                "tag": "adventurer",
-                "min": 5,
-                "max": 5
-              },
-              {
-                "tag": "shaman",
-                "title": "Shaman/priest/cultist",
-                "min": 6,
-                "max": 6
-              },
-              {
-                "tag": "hih_priest",
-                "title": "High priest/oracle",
-                "min": 7,
-                "max": 7
-              },
-              {
-                "tag": "sage",
-                "title": "Sage/alchemist",
-                "min": 8,
-                "max": 8
-              },
-              {
-                "tag": "boss",
-                "title": "Boss/lord/chief",
-                "min": 9,
-                "max": 9
-              },
-              {
-                "tag": "warchief",
-                "title": "Warchief/warlord",
-                "min": 10,
-                "max": 10
-              },
-              {
-                "tag": "wizard",
-                "title": "Wizard/witch/warlock",
-                "min": 11,
-                "max": 11
-              },
-              {
-                "tag": "figure_of_renown",
-                "min": 12,
-                "max": 12
-              }
-            ]
-          },
-          {
-            "tag": "other",
-            "min": 12,
-            "max": 12,
-            "dice": "d12",
-            "variants": [
-              {
-                "tag": "vermin_lord",
-                "min": 1,
-                "max": 1
-              },
-              {
-                "tag": "spirit",
-                "title": "Spirit/specter/ghost",
-                "min": 2,
-                "max": 3
-              },
-              {
-                "tag": "undead_lieutenant",
-                "min": 4,
-                "max": 5
-              },
-              {
-                "tag": "undead_lord",
-                "title": "Undead lord/lich",
-                "min": 6,
-                "max": 7
-              },
-              {
-                "tag": "demon",
-                "min": 8,
-                "max": 9
-              },
-              {
-                "tag": "monster_lord",
-                "title": "MONSTER lord",
-                "min": 10,
-                "max": 10,
-                "additional": [
-                  "creature.monster"
-                ]
-              },
-              {
-                "tag": "demon_lord",
-                "title": "Demon lord/devil",
-                "min": 11,
-                "max": 11
-              },
-              {
-                "tag": "alien_interloper",
-                "min": 12,
-                "max": 12
               }
             ]
           }
@@ -26215,9 +26422,7 @@
         "tag": "follower",
         "dice": "d12",
         "additional": [
-          "npc.follower.competence",
-          "npc.follower.loyalty",
-          "npc.follower.background"
+          "npc.follower.competence"
         ],
         "dictionaries": [
           {
@@ -26226,119 +26431,224 @@
             "variants": [
               {
                 "tag": "liability",
-                "description": "Quality -2",
+                "description": "Quality -2, 4 negative tags",
                 "min": 1,
-                "max": 2
+                "max": 1,
+                "generate_outer": [
+                  "npc.follower.negative_tags",
+                  "npc.follower.negative_tags",
+                  "npc.follower.negative_tags",
+                  "npc.follower.negative_tags"
+                ]
               },
               {
                 "tag": "incompetent",
-                "description": "Quality -1",
-                "min": 3,
-                "max": 4
+                "description": "Quality -1, 3 negative tags",
+                "min": 2,
+                "max": 3,
+                "generate_outer": [
+                  "npc.follower.negative_tags",
+                  "npc.follower.negative_tags",
+                  "npc.follower.negative_tags"
+                ]
               },
               {
                 "tag": "competent",
-                "description": "Quality +0, +1 tag",
-                "min": 5,
-                "max": 8
+                "description": "Quality +0, 1 positive tag, 1 negative tag",
+                "min": 4,
+                "max": 7,
+                "generate_outer": [
+                  "npc.follower.positive_tags",
+                  "npc.follower.negative_tags"
+                ]
               },
               {
                 "tag": "adept",
-                "description": "Quality +1, +2 tags",
-                "min": 9,
-                "max": 10
+                "description": "Quality +1, 2 positive tags, 1 negative tag",
+                "min": 8,
+                "max": 10,
+                "generate_outer": [
+                  "npc.follower.positive_tags",
+                  "npc.follower.positive_tags",
+                  "npc.follower.negative_tags"
+                ]
               },
               {
                 "tag": "exceptional",
-                "description": "Quality +2, +2 tags",
+                "description": "Quality +2, 3 positive tags",
                 "min": 11,
-                "max": 11
+                "max": 11,
+                "generate_outer": [
+                  "npc.follower.positive_tags",
+                  "npc.follower.positive_tags",
+                  "npc.follower.positive_tags"
+                ]
               },
               {
-                "tag": "brilliant",
-                "description": "Quality +3, +4 tags",
+                "tag": "masterful",
+                "description": "Quality +3, 3 positive tags",
                 "min": 12,
-                "max": 12
+                "max": 12,
+                "generate_outer": [
+                  "npc.follower.positive_tags",
+                  "npc.follower.positive_tags",
+                  "npc.follower.positive_tags",
+                  "npc.follower.positive_tags"
+                ]
               }
             ]
           },
           {
-            "tag": "loyalty",
+            "tag": "positive_tag",
             "dice": "d12",
             "variants": [
               {
-                "tag": "desperate",
-                "title": "Desperate, ready to bolt",
-                "description": "Loyalty -2",
+                "tag": "strong",
+                "title": "strong",
                 "min": 1,
                 "max": 1
               },
               {
-                "tag": "doubtful_of_the_task_or_leader",
-                "title": "Doubtful of the task or leader",
-                "description": "Loyalty -1 ",
+                "tag": "hardy",
+                "title": "hardy",
                 "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "agile",
+                "title": "agile",
+                "min": 3,
                 "max": 3
               },
               {
-                "tag": "resigned",
-                "title": "Resigned to their lot",
-                "description": "Loyalty +0",
+                "tag": "smart",
+                "title": "smart",
                 "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "wise",
+                "title": "wise",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "charming",
+                "title": "charming",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "lucky",
+                "title": "lucky",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "cautious",
+                "title": "cautious",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "perceptive",
+                "title": "perceptive",
+                "min": 9,
                 "max": 9
               },
               {
-                "tag": "dedicated",
-                "title": "Dedicated to the task or leader",
-                "description": "Loyalty +1",
+                "tag": "stealthy",
+                "title": "stealthy",
                 "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "connected",
+                "title": "connected",
+                "min": 11,
                 "max": 11
               },
               {
-                "tag": "devoted",
-                "title": "Devoted to the leader",
-                "description": "Loyalty +2",
+                "tag": "leader",
+                "title": "leader",
                 "min": 12,
                 "max": 12
               }
             ]
           },
           {
-            "tag": "background",
+            "tag": "negative_tags",
             "dice": "d12",
             "variants": [
               {
-                "tag": "has_led_life_of_servitude",
-                "description": "+ <i>meek</i>",
+                "tag": "weak",
+                "title": "weak",
                 "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "sickly",
+                "title": "sickly",
+                "min": 2,
                 "max": 2
               },
               {
-                "tag": "past_their_prime",
-                "description": "Quality -1, +1 <i>wise</i>",
+                "tag": "clumsy",
+                "title": "clumsy",
                 "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "stupid",
+                "title": "stupid",
+                "min": 4,
                 "max": 4
               },
               {
-                "tag": "unremarkable",
+                "tag": "naive",
+                "title": "naive",
                 "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "repulsive",
+                "title": "repulsive",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "unlucky",
+                "title": "unlucky",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "foolhardy",
+                "title": "foolhardy",
+                "min": 8,
                 "max": 8
               },
               {
-                "tag": "has_led_privileged_life",
-                "description": "+1 tag",
+                "tag": "obtuse",
+                "title": "obtuse",
                 "min": 9,
                 "max": 9
               },
               {
-                "tag": "has_led_challenging_life",
-                "description": "+2 tags",
+                "tag": "obvious",
+                "title": "obvious",
                 "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "shunned",
+                "title": "shunned",
+                "min": 11,
                 "max": 11
               },
               {
-                "tag": "specialist",
-                "description": "Quality +1, -2 tags",
+                "tag": "follower",
+                "title": "follower",
                 "min": 12,
                 "max": 12
               }
