@@ -2367,10 +2367,7 @@
               "character.class.fighter.heritage",
               "character.class.fighter.alignment",
               "character.class.fighter.appearance",
-              "character.class.fighter.starting_gear",
-              "character.class.fighter.upbringing",
-              "character.class.fighter.experience",
-              "character.class.fighter.past_event"
+              "character.class.fighter.starting_gear"
             ],
             "dictionaries": [
               {
@@ -2793,231 +2790,6 @@
                     ]
                   }
                 ]
-              },
-              {
-                "tag": "upbringing",
-                "dice": "d12",
-                "variants": [
-                  {
-                    "tag": "raised_in_the_wild",
-                    "title": "raised in the wild",
-                    "min": 1,
-                    "max": 1
-                  },
-                  {
-                    "tag": "orphan/foundling",
-                    "min": 2,
-                    "max": 2
-                  },
-                  {
-                    "tag": "refugees/outcasts",
-                    "min": 3,
-                    "max": 3
-                  },
-                  {
-                    "tag": "beggars/thieves",
-                    "min": 4,
-                    "max": 4
-                  },
-                  {
-                    "tag": "nomads/wanderers",
-                    "min": 5,
-                    "max": 5
-                  },
-                  {
-                    "tag": "laborers",
-                    "min": 6,
-                    "max": 6
-                  },
-                  {
-                    "tag": "farmers/fishers",
-                    "min": 7,
-                    "max": 7
-                  },
-                  {
-                    "tag": "tradesfolk/crafters",
-                    "min": 8,
-                    "max": 8
-                  },
-                  {
-                    "tag": "military/mercenary",
-                    "min": 9,
-                    "max": 10
-                  },
-                  {
-                    "tag": "nobility",
-                    "min": 11,
-                    "max": 11
-                  },
-                  {
-                    "tag": "adopted",
-                    "title": "adopted by 1d8+2",
-                    "min": 12,
-                    "max": 12,
-                    "generate_outer": [
-                      "character.class.fighter.upbringing",
-                      "d8+2"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "experience",
-                "dice": "d12",
-                "variants": [
-                  {
-                    "tag": "bandit/outlaw/pirate",
-                    "min": 1,
-                    "max": 1
-                  },
-                  {
-                    "tag": "brawler/tough/thug",
-                    "min": 2,
-                    "max": 2
-                  },
-                  {
-                    "tag": "guard/bodyguard/lackey",
-                    "min": 3,
-                    "max": 3
-                  },
-                  {
-                    "tag": "laborer/roustabout",
-                    "min": 4,
-                    "max": 4
-                  },
-                  {
-                    "tag": "mercenary/freelance",
-                    "min": 5,
-                    "max": 5
-                  },
-                  {
-                    "tag": "militia/soldier/archer",
-                    "min": 6,
-                    "max": 6
-                  },
-                  {
-                    "tag": "sailor/deckhand/sea dog",
-                    "min": 7,
-                    "max": 7
-                  },
-                  {
-                    "tag": "scout/hunter/trapper",
-                    "min": 8,
-                    "max": 8
-                  },
-                  {
-                    "tag": "servant/attendant/retainer",
-                    "min": 9,
-                    "max": 9
-                  },
-                  {
-                    "tag": "warden/ranger",
-                    "min": 10,
-                    "max": 10
-                  },
-                  {
-                    "tag": "roll_twice",
-                    "title": "roll 1d10 twice",
-                    "min": 11,
-                    "max": 11,
-                    "generate_outer": [
-                      [
-                        "character.class.fighter.experience",
-                        "d10"
-                      ],
-                      [
-                        "character.class.fighter.experience",
-                        "d10"
-                      ]
-                    ]
-                  },
-                  {
-                    "tag": "Thief",
-                    "title": "roll on Thief table",
-                    "min": 12,
-                    "max": 12,
-                    "generate_outer": "character.class.thief.experience"
-                  }
-                ]
-              },
-              {
-                "tag": "event",
-                "title": "past event",
-                "dice": "d12",
-                "variants": [
-                  {
-                    "tag": "tragedy",
-                    "title": "tragedy, personal or shared",
-                    "min": 1,
-                    "max": 1
-                  },
-                  {
-                    "tag": "destruction",
-                    "title": "destruction, of home or people",
-                    "min": 2,
-                    "max": 2
-                  },
-                  {
-                    "tag": "betrayal",
-                    "title": "betrayal, suffered or perpetrated",
-                    "min": 3,
-                    "max": 3
-                  },
-                  {
-                    "tag": "exile",
-                    "title": "exile, from settlement or country",
-                    "min": 4,
-                    "max": 4
-                  },
-                  {
-                    "tag": "crime",
-                    "title": "crime, suffered or perpetrated",
-                    "min": 5,
-                    "max": 5
-                  },
-                  {
-                    "tag": "debt",
-                    "title": "debt, owed or to be collected",
-                    "min": 6,
-                    "max": 6
-                  },
-                  {
-                    "tag": "bounty",
-                    "title": "bounty, on self or another",
-                    "min": 7,
-                    "max": 7
-                  },
-                  {
-                    "tag": "falling",
-                    "title": "falling out, family or associates",
-                    "min": 8,
-                    "max": 8
-                  },
-                  {
-                    "tag": "love",
-                    "title": "love, long-lost or unrequited",
-                    "min": 9,
-                    "max": 9
-                  },
-                  {
-                    "tag": "battle",
-                    "title": "battle, won or lost",
-                    "min": 10,
-                    "max": 10
-                  },
-                  {
-                    "tag": "duel",
-                    "title": "duel, won or lost",
-                    "min": 11,
-                    "max": 11
-                  },
-                  {
-                    "tag": "training",
-                    "title": "training, solitary or under master",
-                    "min": 12,
-                    "max": 12
-                  }
-                ]
               }
             ]
           },
@@ -3035,10 +2807,7 @@
               "character.class.thief.heritage",
               "character.class.thief.alignment",
               "character.class.thief.appearance",
-              "character.class.thief.starting_gear",
-              "character.class.thief.upbringing",
-              "character.class.thief.experience",
-              "character.class.thief.past_event"
+              "character.class.thief.starting_gear"
             ],
             "dictionaries": [
               {
@@ -3481,231 +3250,6 @@
                     ]
                   }
                 ]
-              },
-              {
-                "tag": "upbringing",
-                "dice": "d12",
-                "variants": [
-                  {
-                    "tag": "orphan/foundling",
-                    "min": 1,
-                    "max": 1
-                  },
-                  {
-                    "tag": "refugees/outcasts",
-                    "min": 2,
-                    "max": 2
-                  },
-                  {
-                    "tag": "beggars/thieves",
-                    "min": 3,
-                    "max": 4
-                  },
-                  {
-                    "tag": "nomads/wanderers",
-                    "min": 5,
-                    "max": 5
-                  },
-                  {
-                    "tag": "laborers",
-                    "min": 6,
-                    "max": 6
-                  },
-                  {
-                    "tag": "farmers/fishers",
-                    "min": 7,
-                    "max": 7
-                  },
-                  {
-                    "tag": "tradesfolk/crafters",
-                    "min": 8,
-                    "max": 8
-                  },
-                  {
-                    "tag": "military/mercenary",
-                    "min": 9,
-                    "max": 9
-                  },
-                  {
-                    "tag": "academics/scholars",
-                    "min": 10,
-                    "max": 10
-                  },
-                  {
-                    "tag": "nobility",
-                    "min": 11,
-                    "max": 11
-                  },
-                  {
-                    "tag": "adopted",
-                    "title": "adopted by 1d8+2",
-                    "min": 12,
-                    "max": 12,
-                    "generate_outer": [
-                      "character.class.thief.upbringing",
-                      "d8+2"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "experience",
-                "dice": "d12",
-                "variants": [
-                  {
-                    "tag": "bandit/outlaw/pirate",
-                    "min": 1,
-                    "max": 1
-                  },
-                  {
-                    "tag": "burglar/footpad/graverobber",
-                    "min": 2,
-                    "max": 2
-                  },
-                  {
-                    "tag": "courier/messenger/spy",
-                    "min": 3,
-                    "max": 3
-                  },
-                  {
-                    "tag": "gambler/con_artist/charlatan",
-                    "title": "gambler/conartist/charlatan",
-                    "min": 4,
-                    "max": 4
-                  },
-                  {
-                    "tag": "minstrel/storyteller",
-                    "min": 5,
-                    "max": 5
-                  },
-                  {
-                    "tag": "peddler/dealer/fixer",
-                    "min": 6,
-                    "max": 6
-                  },
-                  {
-                    "tag": "pickpocket/cutpurse",
-                    "min": 7,
-                    "max": 7
-                  },
-                  {
-                    "tag": "fence/forger",
-                    "min": 8,
-                    "max": 8
-                  },
-                  {
-                    "tag": "vagrant/vagabond/beggar",
-                    "min": 9,
-                    "max": 9
-                  },
-                  {
-                    "tag": "rustler/smuggler",
-                    "min": 10,
-                    "max": 10
-                  },
-                  {
-                    "tag": "roll_twice",
-                    "title": "roll 1d10 twice",
-                    "min": 11,
-                    "max": 11,
-                    "generate_outer": [
-                      [
-                        "character.class.thief.experience",
-                        "d10"
-                      ],
-                      [
-                        "character.class.thief.experience",
-                        "d10"
-                      ]
-                    ]
-                  },
-                  {
-                    "tag": "Fighter",
-                    "title": "roll on Fighter table",
-                    "min": 12,
-                    "max": 12,
-                    "generate_outer": "character.class.Fighter.experience"
-                  }
-                ]
-              },
-              {
-                "tag": "event",
-                "title": "past event",
-                "dice": "d12",
-                "variants": [
-                  {
-                    "tag": "tragedy,",
-                    "title": "tragedy, personal or shared",
-                    "min": 1,
-                    "max": 1
-                  },
-                  {
-                    "tag": "destruction,",
-                    "title": "destruction, of home or people",
-                    "min": 2,
-                    "max": 2
-                  },
-                  {
-                    "tag": "betrayal",
-                    "title": "betrayal, suffered or perpetrated",
-                    "min": 3,
-                    "max": 3
-                  },
-                  {
-                    "tag": "imprisonment",
-                    "title": "imprisonment, just or unjust",
-                    "min": 4,
-                    "max": 4
-                  },
-                  {
-                    "tag": "crime",
-                    "title": "crime, suffered or perpetrated",
-                    "min": 5,
-                    "max": 5
-                  },
-                  {
-                    "tag": "debt",
-                    "title": "debt, owed or to be collected",
-                    "min": 6,
-                    "max": 6
-                  },
-                  {
-                    "tag": "shame",
-                    "title": "shame, secret or public",
-                    "min": 7,
-                    "max": 7
-                  },
-                  {
-                    "tag": "falling",
-                    "title": "falling out, family or associates",
-                    "min": 8,
-                    "max": 8
-                  },
-                  {
-                    "tag": "love",
-                    "title": "love, long-lost or unrequited",
-                    "min": 9,
-                    "max": 9
-                  },
-                  {
-                    "tag": "heist",
-                    "title": "heist, successful or unsuccessful",
-                    "min": 10,
-                    "max": 10
-                  },
-                  {
-                    "tag": "bounty",
-                    "title": "bounty, deserved or undeserved",
-                    "min": 11,
-                    "max": 11
-                  },
-                  {
-                    "tag": "training",
-                    "title": "training, solitary or under master",
-                    "min": 12,
-                    "max": 12
-                  }
-                ]
               }
             ]
           },
@@ -3723,10 +3267,7 @@
               "character.class.cleric.heritage",
               "character.class.cleric.alignment",
               "character.class.cleric.appearance",
-              "character.class.cleric.starting_gear",
-              "character.class.cleric.upbringing",
-              "character.class.cleric.experience",
-              "character.class.cleric.past_event"
+              "character.class.cleric.starting_gear"
             ],
             "dictionaries": [
               {
@@ -4179,230 +3720,6 @@
                     ]
                   }
                 ]
-              },
-              {
-                "tag": "upbringing",
-                "dice": "d12",
-                "variants": [
-                  {
-                    "tag": "orphan/foundling",
-                    "min": 1,
-                    "max": 1
-                  },
-                  {
-                    "tag": "refugees/outcasts",
-                    "min": 2,
-                    "max": 2
-                  },
-                  {
-                    "tag": "beggars/thieves",
-                    "min": 3,
-                    "max": 3
-                  },
-                  {
-                    "tag": "nomads/wanderers",
-                    "min": 4,
-                    "max": 4
-                  },
-                  {
-                    "tag": "laborers",
-                    "min": 5,
-                    "max": 5
-                  },
-                  {
-                    "tag": "farmers/fishers",
-                    "min": 6,
-                    "max": 6
-                  },
-                  {
-                    "tag": "tradesfolk/crafters",
-                    "min": 7,
-                    "max": 7
-                  },
-                  {
-                    "tag": "religious/clergy",
-                    "min": 8,
-                    "max": 9
-                  },
-                  {
-                    "tag": "military/mercenary",
-                    "min": 10,
-                    "max": 10
-                  },
-                  {
-                    "tag": "nobility",
-                    "min": 11,
-                    "max": 11
-                  },
-                  {
-                    "tag": "adopted",
-                    "title": "adopted by 1d8+2",
-                    "min": 12,
-                    "max": 12,
-                    "generate_outer": [
-                      "character.class.thief.upbringing",
-                      "d8+2"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "experience",
-                "dice": "d12",
-                "variants": [
-                  {
-                    "tag": "hermit/outcast",
-                    "min": 1,
-                    "max": 1
-                  },
-                  {
-                    "tag": "mendicant/vagabond",
-                    "min": 2,
-                    "max": 2
-                  },
-                  {
-                    "tag": "apprentice/assistant",
-                    "min": 3,
-                    "max": 3
-                  },
-                  {
-                    "tag": "herbalist/apothecary",
-                    "min": 4,
-                    "max": 4
-                  },
-                  {
-                    "tag": "acolyte/attendant",
-                    "min": 5,
-                    "max": 5
-                  },
-                  {
-                    "tag": "novice/initiate",
-                    "min": 6,
-                    "max": 6
-                  },
-                  {
-                    "tag": "scribe/clerk",
-                    "min": 7,
-                    "max": 7
-                  },
-                  {
-                    "tag": "monk/nun/cultist",
-                    "min": 8,
-                    "max": 8
-                  },
-                  {
-                    "tag": "seer/soothsayer",
-                    "min": 9,
-                    "max": 9
-                  },
-                  {
-                    "tag": "village priest/heretic",
-                    "min": 10,
-                    "max": 10
-                  },
-                  {
-                    "tag": "roll_twice",
-                    "title": "roll 1d10 twice",
-                    "min": 11,
-                    "max": 11,
-                    "generate_outer": [
-                      [
-                        "character.class.cleric.experience",
-                        "d10"
-                      ],
-                      [
-                        "character.class.cleric.experience",
-                        "d10"
-                      ]
-                    ]
-                  },
-                  {
-                    "tag": "Fighter",
-                    "title": "roll on Fighter table",
-                    "min": 12,
-                    "max": 12,
-                    "generate_outer": "character.class.Fighter.experience"
-                  }
-                ]
-              },
-              {
-                "tag": "event",
-                "title": "past event",
-                "dice": "d12",
-                "variants": [
-                  {
-                    "tag": "tragedy,",
-                    "title": "tragedy, personal or shared",
-                    "min": 1,
-                    "max": 1
-                  },
-                  {
-                    "tag": "destruction,",
-                    "title": "destruction, of home or temple",
-                    "min": 2,
-                    "max": 2
-                  },
-                  {
-                    "tag": "betrayal",
-                    "title": "betrayal, suffered or perpetrated",
-                    "min": 3,
-                    "max": 3
-                  },
-                  {
-                    "tag": "exile",
-                    "title": "exile, from settlement or faith",
-                    "min": 4,
-                    "max": 4
-                  },
-                  {
-                    "tag": "crime",
-                    "title": "crime, suffered or perpetrated",
-                    "min": 5,
-                    "max": 5
-                  },
-                  {
-                    "tag": "debt",
-                    "title": "debt, owed or to be collected",
-                    "min": 6,
-                    "max": 6
-                  },
-                  {
-                    "tag": "shame",
-                    "title": "shame, secret or public",
-                    "min": 7,
-                    "max": 7
-                  },
-                  {
-                    "tag": "apostasy",
-                    "title": "apostasy, committed or avoided",
-                    "min": 8,
-                    "max": 8
-                  },
-                  {
-                    "tag": "sacrifice",
-                    "title": "sacrifice, personal or consigned",
-                    "min": 9,
-                    "max": 9
-                  },
-                  {
-                    "tag": "revelation",
-                    "title": "revelation, of truth or mystery",
-                    "min": 10,
-                    "max": 10
-                  },
-                  {
-                    "tag": "penitence",
-                    "title": "penitence, sincere or hollow",
-                    "min": 11,
-                    "max": 11
-                  },
-                  {
-                    "tag": "study",
-                    "title": "study, lengthy or cut short",
-                    "min": 12,
-                    "max": 12
-                  }
-                ]
               }
             ]
           },
@@ -4422,9 +3739,6 @@
               "character.class.magic_user.alignment",
               "character.class.magic_user.appearance",
               "character.class.magic_user.starting_gear",
-              "character.class.magic_user.upbringing",
-              "character.class.magic_user.experience",
-              "character.class.magic_user.past_event",
               {
                 "tag": "spells",
                 "additional": [
@@ -4895,239 +4209,6 @@
                         ]
                       }
                     ]
-                  }
-                ]
-              },
-              {
-                "tag": "upbringing",
-                "dice": "d12",
-                "variants": [
-                  {
-                    "tag": "raised_in_the_wild",
-                    "title": "raised in the wild",
-                    "min": 1,
-                    "max": 1
-                  },
-                  {
-                    "tag": "orphan/foundling",
-                    "min": 2,
-                    "max": 2
-                  },
-                  {
-                    "tag": "refugees/outcasts",
-                    "min": 3,
-                    "max": 3
-                  },
-                  {
-                    "tag": "beggars/thieves",
-                    "min": 4,
-                    "max": 4
-                  },
-                  {
-                    "tag": "nomads/wanderers",
-                    "min": 5,
-                    "max": 5
-                  },
-                  {
-                    "tag": "tradesfolk/crafters",
-                    "min": 6,
-                    "max": 6
-                  },
-                  {
-                    "tag": "academics/scholars",
-                    "min": 7,
-                    "max": 8
-                  },
-                  {
-                    "tag": "magicians/sorcerers",
-                    "min": 9,
-                    "max": 10
-                  },
-                  {
-                    "tag": "nobility",
-                    "min": 11,
-                    "max": 11
-                  },
-                  {
-                    "tag": "adopted",
-                    "title": "adopted by 1d8+2",
-                    "min": 12,
-                    "max": 12,
-                    "generate_outer": [
-                      "character.class.thief.upbringing",
-                      "d8+2"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "experience",
-                "dice": "d12",
-                "variants": [
-                  {
-                    "tag": "hermit/outcast",
-                    "min": 1,
-                    "max": 1
-                  },
-                  {
-                    "tag": "mendicant/vagabond",
-                    "min": 2,
-                    "max": 2
-                  },
-                  {
-                    "tag": "scribe/clerk",
-                    "min": 3,
-                    "max": 3
-                  },
-                  {
-                    "tag": "apprentice/assistant",
-                    "min": 4,
-                    "max": 4
-                  },
-                  {
-                    "tag": "librarian/archivist",
-                    "min": 5,
-                    "max": 5
-                  },
-                  {
-                    "tag": "engineer/tinker",
-                    "min": 6,
-                    "max": 6
-                  },
-                  {
-                    "tag": "seer/soothsayer",
-                    "min": 7,
-                    "max": 7
-                  },
-                  {
-                    "tag": "alchemist/apothecary",
-                    "min": 8,
-                    "max": 8
-                  },
-                  {
-                    "tag": "academic/scholar",
-                    "min": 9,
-                    "max": 9
-                  },
-                  {
-                    "tag": "magician/prestidigitator",
-                    "min": 10,
-                    "max": 10
-                  },
-                  {
-                    "tag": "roll_twice",
-                    "title": "roll 1d10 twice",
-                    "min": 11,
-                    "max": 11,
-                    "generate_outer": [
-                      [
-                        "character.class.magic_user.experience",
-                        "d10"
-                      ],
-                      [
-                        "character.class.magic_user.experience",
-                        "d10"
-                      ]
-                    ]
-                  },
-                  {
-                    "tag": "roll_three",
-                    "title": "roll 1d10 tree times",
-                    "min": 12,
-                    "max": 12,
-                    "generate_outer": [
-                      [
-                        "character.class.magic_user.experience",
-                        "d10"
-                      ],
-                      [
-                        "character.class.magic_user.experience",
-                        "d10"
-                      ],
-                      [
-                        "character.class.magic_user.experience",
-                        "d10"
-                      ]
-                    ]
-                  }
-                ]
-              },
-              {
-                "tag": "event",
-                "title": "past event",
-                "dice": "d12",
-                "variants": [
-                  {
-                    "tag": "tragedy,",
-                    "title": "tragedy, personal or shared",
-                    "min": 1,
-                    "max": 1
-                  },
-                  {
-                    "tag": "destruction,",
-                    "title": "destruction, of home or people",
-                    "min": 2,
-                    "max": 2
-                  },
-                  {
-                    "tag": "betrayal",
-                    "title": "betrayal, suffered or perpetrated",
-                    "min": 3,
-                    "max": 3
-                  },
-                  {
-                    "tag": "exile",
-                    "title": "exile, from settlement or country",
-                    "min": 4,
-                    "max": 4
-                  },
-                  {
-                    "tag": "crime",
-                    "title": "crime, suffered or perpetrated",
-                    "min": 5,
-                    "max": 5
-                  },
-                  {
-                    "tag": "debt",
-                    "title": "debt, owed or to be collected",
-                    "min": 6,
-                    "max": 6
-                  },
-                  {
-                    "tag": "precious",
-                    "title": "precious item, lost or found",
-                    "min": 7,
-                    "max": 7
-                  },
-                  {
-                    "tag": "sacrifice",
-                    "title": "sacrifice, personal or consigned",
-                    "min": 8,
-                    "max": 8
-                  },
-                  {
-                    "tag": "arcane",
-                    "title": "arcane trouble, observed or created",
-                    "min": 9,
-                    "max": 9
-                  },
-                  {
-                    "tag": "secret",
-                    "title": "ancient secret, known or sought",
-                    "min": 10,
-                    "max": 10
-                  },
-                  {
-                    "tag": "duel",
-                    "title": "magic duel, won or lost",
-                    "min": 11,
-                    "max": 11
-                  },
-                  {
-                    "tag": "study",
-                    "title": "study, solitary or under master",
-                    "min": 12,
-                    "max": 12
                   }
                 ]
               }
@@ -5884,12 +4965,8 @@
                 "min": 1,
                 "max": 7,
                 "generate_outer": [
-                  [
-                    "incident.obstacle.natural"
-                  ],
-                  [
-                    "details.magic_type"
-                  ]
+                  "incident.obstacle.natural",
+                  "details.magic_type"
                 ]
               },
               {
@@ -5898,12 +4975,8 @@
                 "min": 8,
                 "max": 11,
                 "generate_outer": [
-                  [
-                    "incident.obstacle.natural"
-                  ],
-                  [
-                    "details.element"
-                  ]
+                  "incident.obstacle.natural",
+                  "details.element"
                 ]
               },
               {
@@ -5912,12 +4985,8 @@
                 "min": 12,
                 "max": 12,
                 "generate_outer": [
-                  [
-                    "incident.obstacle.natural"
-                  ],
-                  [
-                    "pantheon.major_deity"
-                  ]
+                  "incident.obstacle.natural",
+                  "pantheon.major_deity"
                 ]
               }
             ]
@@ -5991,12 +5060,8 @@
                 "min": 6,
                 "max": 9,
                 "generate_outer": [
-                  [
-                    "incident.hazard.natural"
-                  ],
-                  [
-                    "details.magic_type"
-                  ]
+                  "incident.hazard.natural",
+                  "details.magic_type"
                 ]
               },
               {
@@ -6005,12 +5070,8 @@
                 "min": 10,
                 "max": 11,
                 "generate_outer": [
-                  [
-                    "incident.hazard.natural"
-                  ],
-                  [
-                    "details.element"
-                  ]
+                  "incident.hazard.natural",
+                  "details.element"
                 ]
               },
               {
@@ -6019,12 +5080,8 @@
                 "min": 12,
                 "max": 12,
                 "generate_outer": [
-                  [
-                    "incident.hazard.natural"
-                  ],
-                  [
-                    "pantheon.major_deity"
-                  ]
+                  "incident.hazard.natural",
+                  "pantheon.major_deity"
                 ]
               }
             ]
