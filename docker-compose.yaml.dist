@@ -15,7 +15,7 @@ services:
   webserver:
     image: nginx:1.17-alpine
     ports:
-      - "8085:80"
+      - "8081:80"
     volumes:
       - .:/opt/app
       - ./build/local/nginx/conf.d:/etc/nginx/conf.d
