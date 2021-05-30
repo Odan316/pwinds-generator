@@ -13969,6 +13969,7 @@
     "tag": "creature",
     "hint": "Generates only creature type",
     "dice": "d12",
+    "use_modifier": true,
     "variants": [
       {
         "tag": "monster",
