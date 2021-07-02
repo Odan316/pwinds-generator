@@ -13184,7 +13184,7 @@
             ]
           },
           {
-            "tag": "area8",
+            "tag": "area7",
             "title": "1d4 DANGERS, 1d4 DISCOVERIES",
             "min": 10,
             "max": 10,
@@ -13203,12 +13203,12 @@
             ]
           },
           {
-            "tag": "area9",
+            "tag": "area8",
             "title": "1 DANGER, 1d4 DISCOVERIES",
             "min": 11,
             "max": 11,
             "additional": [
-              "dungeon.type.$dungeon_type.unique_area",
+              "dungeon.type.$dungeon_type.area",
               "dungeon.type.$dungeon_type.dressing",
               "dungeon.type.$dungeon_type.exits",
               "dungeon_danger",
@@ -13219,12 +13219,12 @@
             ]
           },
           {
-            "tag": "area10",
+            "tag": "area9",
             "title": "1d4 DISCOVERIES",
             "min": 12,
             "max": 12,
             "additional": [
-              "dungeon.type.$dungeon_type.unique_area",
+              "dungeon.type.$dungeon_type.area",
               "dungeon.type.$dungeon_type.dressing",
               "dungeon.type.$dungeon_type.exits",
               {
@@ -13512,159 +13512,9 @@
         "dice": "d12",
         "variants": [
           {
-            "tag": "human",
+            "tag": "monstrous",
             "min": 1,
-            "max": 4,
-            "dice": "d12",
-            "variants": [
-              {
-                "tag": "scavenger",
-                "title": "Scavenger/robber",
-                "min": 1,
-                "max": 1
-              },
-              {
-                "tag": "wanted_criminal",
-                "min": 2,
-                "max": 2
-              },
-              {
-                "tag": "bandit_chief",
-                "min": 3,
-                "max": 3
-              },
-              {
-                "tag": "mercenary_captain",
-                "min": 4,
-                "max": 4
-              },
-              {
-                "tag": "adventurer",
-                "min": 5,
-                "max": 5
-              },
-              {
-                "tag": "shaman",
-                "title": "Shaman/priest/cultist",
-                "min": 6,
-                "max": 6
-              },
-              {
-                "tag": "hih_priest",
-                "title": "High priest/oracle",
-                "min": 7,
-                "max": 7
-              },
-              {
-                "tag": "sage",
-                "title": "Sage/alchemist",
-                "min": 8,
-                "max": 8
-              },
-              {
-                "tag": "boss",
-                "title": "Boss/lord/chief",
-                "min": 9,
-                "max": 9
-              },
-              {
-                "tag": "warchief",
-                "title": "Warchief/warlord",
-                "min": 10,
-                "max": 10
-              },
-              {
-                "tag": "wizard",
-                "title": "Wizard/witch/warlock",
-                "min": 11,
-                "max": 11
-              },
-              {
-                "tag": "figure_of_renown",
-                "min": 12,
-                "max": 12
-              }
-            ]
-          },
-          {
-            "tag": "humanoid",
-            "min": 5,
-            "max": 11,
-            "dice": "d12",
-            "variants": [
-              {
-                "tag": "scavenger",
-                "title": "Scavenger/robber",
-                "min": 1,
-                "max": 1
-              },
-              {
-                "tag": "wanted_criminal",
-                "min": 2,
-                "max": 2
-              },
-              {
-                "tag": "bandit_chief",
-                "min": 3,
-                "max": 3
-              },
-              {
-                "tag": "mercenary_captain",
-                "min": 4,
-                "max": 4
-              },
-              {
-                "tag": "adventurer",
-                "min": 5,
-                "max": 5
-              },
-              {
-                "tag": "shaman",
-                "title": "Shaman/priest/cultist",
-                "min": 6,
-                "max": 6
-              },
-              {
-                "tag": "hih_priest",
-                "title": "High priest/oracle",
-                "min": 7,
-                "max": 7
-              },
-              {
-                "tag": "sage",
-                "title": "Sage/alchemist",
-                "min": 8,
-                "max": 8
-              },
-              {
-                "tag": "boss",
-                "title": "Boss/lord/chief",
-                "min": 9,
-                "max": 9
-              },
-              {
-                "tag": "warchief",
-                "title": "Warchief/warlord",
-                "min": 10,
-                "max": 10
-              },
-              {
-                "tag": "wizard",
-                "title": "Wizard/witch/warlock",
-                "min": 11,
-                "max": 11
-              },
-              {
-                "tag": "figure_of_renown",
-                "min": 12,
-                "max": 12
-              }
-            ]
-          },
-          {
-            "tag": "other",
-            "min": 12,
-            "max": 12,
+            "max": 1,
             "dice": "d12",
             "variants": [
               {
@@ -13674,7 +13524,7 @@
               },
               {
                 "tag": "spirit",
-                "title": "Spirit/specter/ghost",
+                "title": "wraith/spirit/ghost",
                 "min": 2,
                 "max": 3
               },
@@ -13711,6 +13561,156 @@
               },
               {
                 "tag": "alien_interloper",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "humanoid",
+            "min": 2,
+            "max": 8,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "scavenger",
+                "title": "Scavenger/robber",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "wanted_criminal",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "bandit_chief",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "mercenary_captain",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "adventurer",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "shaman",
+                "title": "Shaman/priest/cultist",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "hih_priest",
+                "title": "High priest/oracle",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "sage",
+                "title": "Sage/alchemist",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "boss",
+                "title": "Boss/lord/chief",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "warchief",
+                "title": "Warchief/warlord",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "wizard",
+                "title": "Wizard/witch/warlock",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "figure_of_renown",
+                "min": 12,
+                "max": 12
+              }
+            ]
+          },
+          {
+            "tag": "human",
+            "min": 9,
+            "max": 12,
+            "dice": "d12",
+            "variants": [
+              {
+                "tag": "scavenger",
+                "title": "Scavenger/robber",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "wanted_criminal",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "bandit_chief",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "mercenary_captain",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "adventurer",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "shaman",
+                "title": "Shaman/priest/cultist",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "hih_priest",
+                "title": "High priest/oracle",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "sage",
+                "title": "Sage/alchemist",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "boss",
+                "title": "Boss/lord/chief",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "warchief",
+                "title": "Warchief/warlord",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "wizard",
+                "title": "Wizard/witch/warlock",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "figure_of_renown",
                 "min": 12,
                 "max": 12
               }
@@ -16854,7 +16854,7 @@
                 "max": 11,
                 "additional": [
                   [
-                    "booty.personal_item",
+                    "booty.personal_item.clothing",
                     "d8"
                   ]
                 ]
@@ -16866,7 +16866,7 @@
                 "max": 12,
                 "additional": [
                   [
-                    "booty.personal_item",
+                    "booty.personal_item.clothing",
                     "d8"
                   ]
                 ]
@@ -17421,7 +17421,7 @@
           }
         ],
         "additional": [
-          "booty.material"
+          "booty.jewelry.material"
         ],
         "dictionaries": [
           {
@@ -27461,7 +27461,7 @@
               },
               {
                 "tag": "masterful",
-                "description": "Quality +3, 3 positive tags",
+                "description": "Quality +3, 4 positive tags",
                 "min": 12,
                 "max": 12,
                 "additional": [
