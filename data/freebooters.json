@@ -5758,26 +5758,38 @@
           {
             "tag": "hazard",
             "min": 1,
-            "max": 1,
+            "max": 2,
             "generate_outer": "incident.hazard"
           },
           {
+            "tag": "weather_worsens",
+            "title": "Weather_worsens",
+            "min": 3,
+            "max": 3
+          },
+          {
             "tag": "obstacle",
-            "min": 2,
-            "max": 3,
+            "min": 4,
+            "max": 4,
             "generate_outer": "incident.obstacle"
           },
           {
             "tag": "mishap",
-            "min": 4,
-            "max": 5,
+            "min": 5,
+            "max": 6,
             "generate_outer": "incident.mishap"
           },
           {
             "tag": "event",
-            "min": 6,
-            "max": 12,
+            "min": 7,
+            "max": 11,
             "generate_outer": "settlement.event"
+          },
+          {
+            "tag": "weather_improves",
+            "title": "Weather_improves",
+            "min": 12,
+            "max": 12
           }
         ]
       },
@@ -5786,8 +5798,30 @@
         "dice": "d12",
         "variants": [
           {
-            "tag": "creature",
+            "tag": "roll_twice",
+            "title": "Roll 1d10+2 twice",
             "min": 1,
+            "max": 1,
+            "additional": [
+              [
+                "incident.road",
+                "d10+2"
+              ],
+              [
+                "incident.road",
+                "d10+2"
+              ]
+            ]
+          },
+          {
+            "tag": "weather_worsens",
+            "title": "Weather_worsens",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "creature",
+            "min": 3,
             "max": 7,
             "generate_outer": "creature_adv"
           },
@@ -5806,14 +5840,20 @@
           {
             "tag": "mishap",
             "min": 10,
-            "max": 11,
+            "max": 10,
             "generate_outer": "incident.mishap"
           },
           {
             "tag": "discovery",
-            "min": 12,
-            "max": 12,
+            "min": 11,
+            "max": 11,
             "generate_outer": "discovery"
+          },
+          {
+            "tag": "weather_improves",
+            "title": "Weather_improves",
+            "min": 12,
+            "max": 12
           }
         ]
       },
@@ -5822,34 +5862,62 @@
         "dice": "d12",
         "variants": [
           {
-            "tag": "creature",
+            "tag": "roll_twice",
+            "title": "Roll 1d10+2 twice",
             "min": 1,
-            "max": 4,
+            "max": 1,
+            "additional": [
+              [
+                "incident.wilderness",
+                "d10+2"
+              ],
+              [
+                "incident.wilderness",
+                "d10+2"
+              ]
+            ]
+          },
+          {
+            "tag": "weather_worsens",
+            "title": "Weather_worsens",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "creature",
+            "min": 3,
+            "max": 6,
             "generate_outer": "creature_adv"
           },
           {
             "tag": "hazard",
-            "min": 5,
-            "max": 6,
+            "min": 7,
+            "max": 7,
             "generate_outer": "incident.hazard"
           },
           {
             "tag": "obstacle",
-            "min": 7,
+            "min": 8,
             "max": 8,
             "generate_outer": "incident.obstacle"
           },
           {
             "tag": "mishap",
             "min": 9,
-            "max": 10,
+            "max": 9,
             "generate_outer": "incident.mishap"
           },
           {
             "tag": "discovery",
-            "min": 11,
-            "max": 12,
+            "min": 10,
+            "max": 11,
             "generate_outer": "discovery"
+          },
+          {
+            "tag": "weather_improves",
+            "title": "Weather_improves",
+            "min": 12,
+            "max": 12
           }
         ]
       },
@@ -5860,12 +5928,12 @@
           {
             "tag": "creature",
             "min": 1,
-            "max": 6,
+            "max": 7,
             "generate_outer": "creature_adv"
           },
           {
             "tag": "mishap",
-            "min": 7,
+            "min": 8,
             "max": 12,
             "generate_outer": "incident.mishap"
           }
@@ -8051,7 +8119,7 @@
                         "max": 11,
                         "additional": [
                           [
-                            "booty.stashed_booty",
+                            "booty.stashed_booty_roll",
                             "d4+1"
                           ]
                         ]
@@ -8063,7 +8131,7 @@
                         "max": 12,
                         "additional": [
                           [
-                            "booty.stashed_booty",
+                            "booty.stashed_booty_roll",
                             "d6+1"
                           ]
                         ]
@@ -8539,7 +8607,7 @@
                         "max": 11,
                         "additional": [
                           [
-                            "booty.stashed_booty",
+                            "booty.stashed_booty_roll",
                             "d4+1"
                           ]
                         ]
@@ -8551,7 +8619,7 @@
                         "max": 12,
                         "additional": [
                           [
-                            "booty.stashed_booty",
+                            "booty.stashed_booty_roll",
                             "d8+1"
                           ]
                         ]
@@ -9092,7 +9160,7 @@
                         "max": 11,
                         "additional": [
                           [
-                            "booty.stashed_booty",
+                            "booty.stashed_booty_roll",
                             "d4+1"
                           ]
                         ]
@@ -9104,7 +9172,7 @@
                         "max": 12,
                         "additional": [
                           [
-                            "booty.stashed_booty",
+                            "booty.stashed_booty_roll",
                             "d6+1"
                           ]
                         ]
@@ -9662,7 +9730,7 @@
                         "max": 11,
                         "additional": [
                           [
-                            "booty.stashed_booty",
+                            "booty.stashed_booty_roll",
                             "d4+1"
                           ]
                         ]
@@ -9674,7 +9742,7 @@
                         "max": 12,
                         "additional": [
                           [
-                            "booty.stashed_booty",
+                            "booty.stashed_booty_roll",
                             "d6+1"
                           ]
                         ]
@@ -10209,7 +10277,7 @@
                         "max": 9,
                         "additional": [
                           [
-                            "booty.stashed_booty",
+                            "booty.stashed_booty_roll",
                             "d6+1"
                           ]
                         ]
@@ -10221,7 +10289,7 @@
                         "max": 10,
                         "additional": [
                           [
-                            "booty.stashed_booty",
+                            "booty.stashed_booty_roll",
                             "d8+1"
                           ]
                         ]
@@ -10233,7 +10301,7 @@
                         "max": 11,
                         "additional": [
                           [
-                            "booty.stashed_booty",
+                            "booty.stashed_booty_roll",
                             "d10+1"
                           ]
                         ]
@@ -10245,7 +10313,7 @@
                         "max": 12,
                         "additional": [
                           [
-                            "booty.stashed_booty",
+                            "booty.stashed_booty_roll",
                             "d12+1"
                           ]
                         ]
@@ -11024,7 +11092,7 @@
                         "max": 11,
                         "additional": [
                           [
-                            "booty.stashed_booty",
+                            "booty.stashed_booty_roll",
                             "d6+1"
                           ]
                         ]
@@ -11036,7 +11104,7 @@
                         "max": 12,
                         "additional": [
                           [
-                            "booty.stashed_booty",
+                            "booty.stashed_booty_roll",
                             "d8+1"
                           ]
                         ]
@@ -11482,7 +11550,7 @@
                         "max": 11,
                         "additional": [
                           [
-                            "booty.stashed_booty",
+                            "booty.stashed_booty_roll",
                             "2d4"
                           ]
                         ]
@@ -11494,7 +11562,7 @@
                         "max": 12,
                         "additional": [
                           [
-                            "booty.stashed_booty",
+                            "booty.stashed_booty_roll",
                             "2d6"
                           ]
                         ]
@@ -12020,7 +12088,7 @@
                         "max": 10,
                         "additional": [
                           [
-                            "booty.stashed_booty",
+                            "booty.stashed_booty_roll",
                             "d4+1"
                           ]
                         ]
@@ -12032,7 +12100,7 @@
                         "max": 11,
                         "additional": [
                           [
-                            "booty.stashed_booty",
+                            "booty.stashed_booty_roll",
                             "d6+1"
                           ]
                         ]
@@ -12044,7 +12112,7 @@
                         "max": 12,
                         "additional": [
                           [
-                            "booty.stashed_booty",
+                            "booty.stashed_booty_roll",
                             "d8+1"
                           ]
                         ]
@@ -12637,7 +12705,7 @@
                         "max": 10,
                         "additional": [
                           [
-                            "booty.stashed_booty",
+                            "booty.stashed_booty_roll",
                             "d6+1"
                           ]
                         ]
@@ -12649,7 +12717,7 @@
                         "max": 11,
                         "additional": [
                           [
-                            "booty.stashed_booty",
+                            "booty.stashed_booty_roll",
                             "d8+1"
                           ]
                         ]
@@ -12661,7 +12729,7 @@
                         "max": 12,
                         "additional": [
                           [
-                            "booty.stashed_booty",
+                            "booty.stashed_booty_roll",
                             "d10+1"
                           ]
                         ]
@@ -15790,7 +15858,7 @@
                   {
                     "tag": "items",
                     "forceDiceRoller": "1d4",
-                    "generate_outer": "booty.stashed_booty"
+                    "generate_outer": "booty.stashed_booty_roll"
                   }
                 ]
               },
@@ -15803,7 +15871,7 @@
                   {
                     "tag": "items",
                     "forceDiceRoller": "1d6",
-                    "generate_outer": "booty.stashed_booty"
+                    "generate_outer": "booty.stashed_booty_roll"
                   }
                 ]
               },
@@ -15816,7 +15884,7 @@
                   {
                     "tag": "items",
                     "forceDiceRoller": "1d8",
-                    "generate_outer": "booty.stashed_booty"
+                    "generate_outer": "booty.stashed_booty_roll"
                   }
                 ]
               },
@@ -15829,7 +15897,7 @@
                   {
                     "tag": "items",
                     "forceDiceRoller": "1d8",
-                    "generate_outer": "booty.stashed_booty"
+                    "generate_outer": "booty.stashed_booty_roll"
                   }
                 ]
               },
@@ -15842,7 +15910,7 @@
                   {
                     "tag": "items",
                     "forceDiceRoller": "1d8",
-                    "generate_outer": "booty.stashed_booty"
+                    "generate_outer": "booty.stashed_booty_roll"
                   }
                 ]
               }
@@ -20518,7 +20586,7 @@
           },
           [
             "settlement.town.district",
-            "8"
+            "1"
           ],
           {
             "tag": "district",
@@ -20562,13 +20630,13 @@
                 "tag": "defensible",
                 "title": "<i>Defensible</i> (due to terrain)",
                 "min": 4,
-                "max": 4
+                "max": 5
               },
               {
                 "tag": "resource",
                 "title": "<i>Resource</i> (RESOURCE)",
-                "min": 5,
-                "max": 5,
+                "min": 6,
+                "max": 6,
                 "additional": [
                   "settlement.town.resource"
                 ]
@@ -20576,19 +20644,19 @@
               {
                 "tag": "fortified",
                 "title": "<i>Fortified</i>",
-                "min": 6,
-                "max": 8
+                "min": 7,
+                "max": 7
               },
               {
                 "tag": "booming",
                 "title": "<i>Booming</i>",
-                "min": 9,
-                "max": 9
+                "min": 8,
+                "max": 8
               },
               {
                 "tag": "roll_twice",
                 "title": "Roll 1d8+1 twice",
-                "min": 10,
+                "min": 9,
                 "max": 10,
                 "additional": [
                   [
@@ -21134,28 +21202,28 @@
             "dice": "d10",
             "variants": [
               {
-                "tag": "government",
+                "tag": "poor",
                 "min": 1,
-                "max": 1
-              },
-              {
-                "tag": "religious",
-                "min": 2,
                 "max": 3
               },
               {
-                "tag": "wealthy",
+                "tag": "religious",
                 "min": 4,
-                "max": 4
+                "max": 5
               },
               {
                 "tag": "market",
-                "min": 5,
+                "min": 6,
                 "max": 7
               },
               {
-                "tag": "poor",
+                "tag": "wealthy",
                 "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "government",
+                "min": 9,
                 "max": 10
               }
             ],
@@ -21240,8 +21308,15 @@
                   },
                   {
                     "tag": "factions_at_war",
+                    "title": "1d4+1 factions in conflict",
                     "min": 4,
-                    "max": 4
+                    "max": 4,
+                    "additional": [
+                      {
+                        "tag": "factions",
+                        "roll_result": "d4+1"
+                      }
+                    ]
                   },
                   {
                     "tag": "unrest",
@@ -21313,7 +21388,7 @@
           ],
           [
             "settlement.city.district",
-            "10"
+            "11"
           ],
           {
             "tag": "district",
@@ -21324,7 +21399,7 @@
         "dictionaries": [
           {
             "tag": "feature",
-            "dice": "d10",
+            "dice": "d12",
             "variants": [
               {
                 "tag": "aspect",
@@ -21339,7 +21414,7 @@
                 "tag": "landmark",
                 "title": "Renowned LANDMARK",
                 "min": 3,
-                "max": 3,
+                "max": 4,
                 "additional": [
                   "settlement.city.landmark"
                 ]
@@ -21347,8 +21422,8 @@
               {
                 "tag": "event",
                 "title": "Site of past EVENT",
-                "min": 4,
-                "max": 4,
+                "min": 5,
+                "max": 5,
                 "additional": [
                   "settlement.city.event"
                 ]
@@ -21356,14 +21431,14 @@
               {
                 "tag": "defensible",
                 "title": "<i>Defensible</i> (due to terrain)",
-                "min": 5,
-                "max": 5
+                "min": 6,
+                "max": 7
               },
               {
                 "tag": "resource",
-                "title": "<i>Resource</i> (RESOURCE)",
-                "min": 6,
-                "max": 6,
+                "title": "<i>abundance</i> of resource",
+                "min": 8,
+                "max": 8,
                 "additional": [
                   "settlement.city.resource"
                 ]
@@ -21371,22 +21446,22 @@
               {
                 "tag": "fortified",
                 "title": "<i>Fortified</i>",
-                "min": 7,
-                "max": 9
+                "min": 9,
+                "max": 11
               },
               {
                 "tag": "roll_twice",
-                "title": "Roll 1d8+1 twice",
-                "min": 10,
-                "max": 10,
+                "title": "Roll 1d10 twice",
+                "min": 12,
+                "max": 12,
                 "additional": [
                   [
                     "settlement.city.feature",
-                    "d8+1"
+                    "d10"
                   ],
                   [
                     "settlement.city.feature",
-                    "d8+1"
+                    "d10"
                   ]
                 ]
               }
@@ -21394,11 +21469,11 @@
           },
           {
             "tag": "problem",
-            "dice": "d10",
+            "dice": "d12",
             "variants": [
               {
                 "tag": "shortage",
-                "title": "<i>Shortage</i> (RESOURCE)",
+                "title": "<i>Shortage</i> of (RESOURCE)",
                 "min": 1,
                 "max": 2,
                 "additional": [
@@ -21424,33 +21499,33 @@
                 "tag": "unrest",
                 "title": "<i>Unrest</i>",
                 "min": 7,
-                "max": 7
+                "max": 8
               },
               {
                 "tag": "lawless",
                 "title": "<i>Lawless</i>",
-                "min": 8,
-                "max": 8
-              },
-              {
-                "tag": "overcrowded",
-                "title": "<i>Overcrowded</i>",
                 "min": 9,
                 "max": 9
               },
               {
-                "tag": "roll_twice",
-                "title": "Roll 1d8+1 twice",
+                "tag": "overcrowded",
+                "title": "<i>Overcrowded</i>",
                 "min": 10,
-                "max": 10,
+                "max": 11
+              },
+              {
+                "tag": "roll_twice",
+                "title": "Roll 1d10 twice",
+                "min": 12,
+                "max": 12,
                 "additional": [
                   [
                     "settlement.city.problem",
-                    "d8+1"
+                    "d10"
                   ],
                   [
                     "settlement.city.problem",
-                    "d8+1"
+                    "d10"
                   ]
                 ]
               }
@@ -21458,7 +21533,7 @@
           },
           {
             "tag": "aspect",
-            "dice": "d10",
+            "dice": "d12",
             "variants": [
               {
                 "tag": "food",
@@ -21474,51 +21549,50 @@
                 "tag": "custom",
                 "title": "Custom/tradition",
                 "min": 3,
-                "max": 3
+                "max": 4
               },
               {
                 "tag": "architecture",
-                "min": 4,
-                "max": 4
+                "min": 5,
+                "max": 6
               },
               {
                 "tag": "livestock",
                 "title": "Livestok/mounts",
-                "min": 5,
-                "max": 5
-              },
-              {
-                "tag": "local_craft",
-                "min": 6,
-                "max": 6
-              },
-              {
-                "tag": "fortification",
                 "min": 7,
                 "max": 7
               },
               {
-                "tag": "religious_practice",
+                "tag": "local_craft",
                 "min": 8,
                 "max": 8
               },
               {
-                "tag": "fighting",
-                "title": "Fighting/spellcasting style",
+                "tag": "fortification",
                 "min": 9,
                 "max": 9
               },
               {
-                "tag": "hierarchy",
-                "title": "Hierarchy/organisation",
+                "tag": "religious_practice",
                 "min": 10,
                 "max": 10
+              },
+              {
+                "tag": "public_punishment",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "hierarchy",
+                "title": "Hierarchy/organisation",
+                "min": 12,
+                "max": 12
               }
             ]
           },
           {
             "tag": "landmark",
-            "dice": "d10",
+            "dice": "d12",
             "variants": [
               {
                 "tag": "distinct_natural_feature",
@@ -21552,60 +21626,71 @@
                 "tag": "temple",
                 "title": "Temple/tomb/monastery",
                 "min": 6,
-                "max": 6
+                "max": 7
               },
               {
                 "tag": "tower",
                 "title": "Tower/watchtower",
-                "min": 7,
-                "max": 7
-              },
-              {
-                "tag": "marketplace",
-                "title": "Marketplace/bazaar",
                 "min": 8,
                 "max": 8
               },
               {
-                "tag": "academy",
-                "title": "Academy/university",
+                "tag": "marketplace",
+                "title": "Marketplace/bazaar",
                 "min": 9,
                 "max": 9
               },
               {
-                "tag": "palace",
-                "title": "Palace/stronghold",
+                "tag": "academy",
+                "title": "Academy/university",
                 "min": 10,
                 "max": 10
+              },
+              {
+                "tag": "palace",
+                "title": "Palace/stronghold",
+                "min": 11,
+                "max": 12
               }
             ]
           },
           {
             "tag": "event",
-            "dice": "d8",
+            "dice": "d12",
             "variants": [
               {
                 "tag": "fire",
                 "title": "Fire/flood/quake",
                 "min": 1,
-                "max": 1
+                "max": 2
               },
               {
                 "tag": "rebellion",
-                "min": 2,
-                "max": 2
+                "title": "Rebellion/coup",
+                "min": 3,
+                "max": 3
               },
               {
                 "tag": "battle",
                 "title": "Battle/siege",
-                "min": 3,
+                "min": 4,
                 "max": 4
               },
               {
-                "tag": "elimination",
-                "title": "FACTION elimination",
+                "tag": "conflict",
+                "title": "FACTION conflict",
                 "min": 5,
                 "max": 5,
+                "additional": [
+                  "settlement.city.faction",
+                  "settlement.city.faction"
+                ]
+              },
+              {
+                "tag": "founding",
+                "title": "founding of FACTION",
+                "min": 6,
+                "max": 6,
                 "additional": [
                   "settlement.city.faction"
                 ]
@@ -21613,45 +21698,46 @@
               {
                 "tag": "arrival",
                 "title": "Arrival of PERSON",
-                "min": 6,
-                "max": 6,
+                "min": 7,
+                "max": 7,
                 "additional": [
                   "settlement.city.person"
                 ]
               },
               {
                 "tag": "discovery",
-                "title": "Discovery (RESOURCE)",
-                "min": 7,
-                "max": 7,
+                "title": "Discovery of RESOURCE",
+                "min": 8,
+                "max": 8,
                 "additional": [
                   "settlement.city.resource"
                 ]
               },
               {
                 "tag": "decree",
-                "min": 8,
-                "max": 8
+                "min": 9,
+                "max": 10
               },
               {
                 "tag": "death",
                 "title": "Death of PERSON",
-                "min": 9,
-                "max": 9,
+                "min": 11,
+                "max": 11,
                 "additional": [
                   "settlement.city.person"
                 ]
               },
               {
                 "tag": "turning_point",
-                "min": 10,
-                "max": 10
+                "title": "Historic turning point",
+                "min": 12,
+                "max": 12
               }
             ]
           },
           {
             "tag": "person",
-            "dice": "d10",
+            "dice": "d12",
             "variants": [
               {
                 "tag": "outlaw",
@@ -21668,116 +21754,116 @@
                 "tag": "merchant",
                 "title": "Merchant/guildmaster",
                 "min": 3,
-                "max": 3
+                "max": 4
               },
               {
                 "tag": "hero",
                 "title": "Hero/healer",
-                "min": 4,
-                "max": 4
+                "min": 5,
+                "max": 6
               },
               {
                 "tag": "priest",
                 "title": "Priest/prophet",
-                "min": 5,
-                "max": 5
-              },
-              {
-                "tag": "wizard",
-                "title": "Wizard/witch",
-                "min": 6,
-                "max": 6
-              },
-              {
-                "tag": "scholar",
-                "title": "Scholar/philosopher",
                 "min": 7,
                 "max": 7
               },
               {
-                "tag": "leader",
-                "title": "Leader/warlord/general",
+                "tag": "wizard",
+                "title": "Wizard/witch",
                 "min": 8,
                 "max": 8
               },
               {
-                "tag": "governor",
-                "title": "Governor/magistrate",
+                "tag": "scholar",
+                "title": "Scholar/philosopher",
                 "min": 9,
                 "max": 9
               },
               {
-                "tag": "noble",
-                "title": "Noble/authority figure",
+                "tag": "leader",
+                "title": "Leader/warlord/general",
                 "min": 10,
                 "max": 10
+              },
+              {
+                "tag": "governor",
+                "title": "Governor/magistrate",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "noble",
+                "title": "Noble/authority figure",
+                "min": 12,
+                "max": 12
               }
             ]
           },
           {
             "tag": "resource",
-            "dice": "d10",
+            "dice": "d12",
             "variants": [
               {
                 "tag": "food",
                 "min": 1,
-                "max": 1
-              },
-              {
-                "tag": "salt",
-                "min": 2,
                 "max": 2
               },
               {
-                "tag": "wool",
-                "title": "Wool/cotton/flax",
+                "tag": "salt",
                 "min": 3,
                 "max": 3
               },
               {
-                "tag": "wood",
-                "title": "Wood/stone",
+                "tag": "wool",
+                "title": "Wool/cotton/flax",
                 "min": 4,
                 "max": 4
               },
               {
-                "tag": "clay",
+                "tag": "wood",
+                "title": "Wood/stone",
                 "min": 5,
-                "max": 5
-              },
-              {
-                "tag": "herbs",
-                "title": "Herbs/spices/dye",
-                "min": 6,
                 "max": 6
               },
               {
-                "tag": "copper",
-                "title": "Copper/tin",
+                "tag": "clay",
                 "min": 7,
                 "max": 7
               },
               {
-                "tag": "iron",
+                "tag": "herbs",
+                "title": "Herbs/spices/dye",
                 "min": 8,
                 "max": 8
               },
               {
-                "tag": "silver",
-                "title": "Silver/gold/gems",
+                "tag": "copper",
+                "title": "Copper/tin",
                 "min": 9,
                 "max": 9
               },
               {
-                "tag": "arcane_resource",
+                "tag": "iron",
                 "min": 10,
                 "max": 10
+              },
+              {
+                "tag": "silver",
+                "title": "Silver/gold/gems",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "arcane_resource",
+                "min": 12,
+                "max": 12
               }
             ]
           },
           {
             "tag": "threat",
-            "dice": "d10",
+            "dice": "d12",
             "variants": [
               {
                 "tag": "environmental",
@@ -21787,63 +21873,63 @@
               {
                 "tag": "criminal",
                 "min": 2,
-                "max": 2
+                "max": 3
               },
               {
                 "tag": "internal_conflict",
-                "min": 3,
-                "max": 3
+                "min": 4,
+                "max": 4
               },
               {
                 "tag": "faction",
                 "title": "FACTION",
-                "min": 4,
-                "max": 4,
+                "min": 5,
+                "max": 5,
                 "additional": [
                   "settlement.city.faction"
                 ]
               },
               {
                 "tag": "corruption",
-                "min": 5,
-                "max": 5
+                "min": 6,
+                "max": 7
               },
               {
                 "tag": "nearby_settlement",
-                "min": 6,
-                "max": 6
+                "min": 8,
+                "max": 8
               },
               {
                 "tag": "monster",
                 "title": "MONSTER",
-                "min": 7,
-                "max": 7,
+                "min": 9,
+                "max": 9,
                 "additional": [
                   "creature.monster"
                 ]
               },
               {
                 "tag": "enemy_force",
-                "min": 8,
-                "max": 8
+                "min": 10,
+                "max": 10
               },
               {
                 "tag": "invaders",
                 "title": "Invaders/raiders",
-                "min": 9,
-                "max": 9
+                "min": 11,
+                "max": 11
               },
               {
                 "tag": "warlord",
                 "title": "Warlord/villain",
-                "min": 10,
-                "max": 10
+                "min": 12,
+                "max": 12
               }
             ]
           },
           {
             "tag": "faction",
-            "dice": "d10",
+            "dice": "d12",
             "variants": [
               {
                 "tag": "commoner",
@@ -21855,63 +21941,63 @@
                 "tag": "criminal",
                 "title": "Criminal/corrupt",
                 "min": 2,
-                "max": 2
+                "max": 3
               },
               {
                 "tag": "revolutionary",
                 "title": "Revolutionary/subversive",
-                "min": 3,
-                "max": 3
-              },
-              {
-                "tag": "military",
-                "title": "Military/mercenary/security",
                 "min": 4,
                 "max": 4
               },
               {
-                "tag": "religious",
-                "title": "Religious/theological",
+                "tag": "military",
+                "title": "Military/mercenary/security",
                 "min": 5,
                 "max": 5
               },
               {
-                "tag": "craft",
-                "title": "Craft/guild/mercantile",
+                "tag": "religious",
+                "title": "Religious/theological",
                 "min": 6,
                 "max": 6
               },
               {
-                "tag": "nationalist",
-                "title": "Nationalist/loyalist",
+                "tag": "craft",
+                "title": "Craft/guild/mercantile",
                 "min": 7,
                 "max": 7
               },
               {
-                "tag": "outsider",
-                "title": "Outsider/foreign",
+                "tag": "nationalist",
+                "title": "Nationalist/loyalist",
                 "min": 8,
                 "max": 8
               },
               {
-                "tag": "academic",
-                "title": "Academic/arcane",
+                "tag": "outsider",
+                "title": "Outsider/foreign",
                 "min": 9,
                 "max": 9
               },
               {
-                "tag": "roll_twice",
-                "title": "Roll 1d8+1 twice, combine",
+                "tag": "academic",
+                "title": "Academic/arcane",
                 "min": 10,
-                "max": 10,
+                "max": 10
+              },
+              {
+                "tag": "roll_twice",
+                "title": "Roll 1d10 twice, combine",
+                "min": 11,
+                "max": 12,
                 "additional": [
                   [
                     "settlement.city.faction",
-                    "d8+1"
+                    "d10"
                   ],
                   [
                     "settlement.city.faction",
-                    "d8+1"
+                    "d10"
                   ]
                 ]
               }
@@ -21922,28 +22008,28 @@
             "dice": "d12",
             "variants": [
               {
-                "tag": "government",
+                "tag": "poor",
                 "min": 1,
-                "max": 1
-              },
-              {
-                "tag": "religious",
-                "min": 2,
                 "max": 4
               },
               {
-                "tag": "wealthy",
+                "tag": "religious",
                 "min": 5,
                 "max": 6
               },
               {
                 "tag": "market",
                 "min": 7,
-                "max": 9
+                "max": 8
               },
               {
-                "tag": "poor",
-                "min": 10,
+                "tag": "wealthy",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "tag": "government",
+                "min": 11,
                 "max": 12
               }
             ],
@@ -21954,7 +22040,7 @@
             "dictionaries": [
               {
                 "tag": "feature",
-                "dice": "d10",
+                "dice": "d12",
                 "variants": [
                   {
                     "tag": "aspect",
@@ -22002,7 +22088,7 @@
                     "tag": "roll_twice",
                     "title": "Roll 1d8+1 twice",
                     "min": 10,
-                    "max": 10,
+                    "max": 12,
                     "additional": [
                       [
                         "settlement.city.district.feature",
@@ -22018,7 +22104,7 @@
               },
               {
                 "tag": "problem",
-                "dice": "d10",
+                "dice": "d12",
                 "variants": [
                   {
                     "tag": "disease",
@@ -22028,8 +22114,15 @@
                   },
                   {
                     "tag": "factions_at_war",
+                    "title": "1d4+1 factions in conflict",
                     "min": 4,
-                    "max": 4
+                    "max": 4,
+                    "additional": [
+                      {
+                        "tag": "factions",
+                        "roll_result": "d4+1"
+                      }
+                    ]
                   },
                   {
                     "tag": "unrest",
@@ -22053,7 +22146,7 @@
                     "tag": "roll_twice",
                     "title": "Roll 1d8+1 twice",
                     "min": 10,
-                    "max": 10,
+                    "max": 12,
                     "additional": [
                       [
                         "settlement.city.district.problem",
