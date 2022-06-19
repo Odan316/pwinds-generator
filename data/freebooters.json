@@ -2351,12 +2351,12 @@
     "dictionaries": [
       {
         "tag": "class",
-        "dice": "d12",
+        "dice": "d20",
         "variants": [
           {
             "tag": "fighter",
             "min": 1,
-            "max": 5,
+            "max": 10,
             "additional": [
               "character.attributes",
               {
@@ -2364,7 +2364,7 @@
                 "title": "Hit points (d10), add CON",
                 "roll_result": "d10"
               },
-              "character.class.fighter.heritage",
+              "character.heritage",
               "character.class.fighter.alignment",
               "character.class.fighter.appearance",
               "character.class.fighter.starting_gear",
@@ -2374,58 +2374,32 @@
             ],
             "dictionaries": [
               {
-                "tag": "heritage",
-                "dice": "d12",
-                "variants": [
-                  {
-                    "tag": "human",
-                    "min": 1,
-                    "max": 7
-                  },
-                  {
-                    "tag": "halfling",
-                    "min": 8,
-                    "max": 8
-                  },
-                  {
-                    "tag": "dwarf",
-                    "min": 9,
-                    "max": 11
-                  },
-                  {
-                    "tag": "elf",
-                    "min": 12,
-                    "max": 12
-                  }
-                ]
-              },
-              {
                 "tag": "alignment",
                 "dice": "d12",
                 "variants": [
                   {
-                    "tag": "evil",
+                    "tag": "good",
                     "min": 1,
-                    "max": 2,
+                    "max": 1,
                     "additional": [
-                      "character.trait.vice",
-                      "character.trait.vice",
-                      "character.trait.vice"
+                      "character.trait.virtue",
+                      "character.trait.virtue",
+                      "character.trait.virtue"
                     ]
                   },
                   {
-                    "tag": "chaotic",
-                    "min": 3,
-                    "max": 5,
+                    "tag": "lawful",
+                    "min": 2,
+                    "max": 4,
                     "additional": [
                       "character.trait.virtue",
-                      "character.trait.vice",
+                      "character.trait.virtue",
                       "character.trait.vice"
                     ]
                   },
                   {
                     "tag": "neutral",
-                    "min": 6,
+                    "min": 5,
                     "max": 8,
                     "additional": [
                       "character.trait.virtue",
@@ -2433,23 +2407,23 @@
                     ]
                   },
                   {
-                    "tag": "lawful",
+                    "tag": "chaotic",
                     "min": 9,
-                    "max": 10,
+                    "max": 11,
                     "additional": [
                       "character.trait.virtue",
-                      "character.trait.virtue",
+                      "character.trait.vice",
                       "character.trait.vice"
                     ]
                   },
                   {
-                    "tag": "good",
-                    "min": 11,
+                    "tag": "evil",
+                    "min": 12,
                     "max": 12,
                     "additional": [
-                      "character.trait.virtue",
-                      "character.trait.virtue",
-                      "character.trait.virtue"
+                      "character.trait.vice",
+                      "character.trait.vice",
+                      "character.trait.vice"
                     ]
                   }
                 ]
@@ -3037,8 +3011,8 @@
           },
           {
             "tag": "thief",
-            "min": 6,
-            "max": 8,
+            "min": 11,
+            "max": 15,
             "additional": [
               "character.attributes",
               {
@@ -3046,7 +3020,7 @@
                 "title": "Hit points (d6), add CON",
                 "roll_result": "d6"
               },
-              "character.class.thief.heritage",
+              "character.heritage",
               "character.class.thief.alignment",
               "character.class.thief.appearance",
               "character.class.thief.starting_gear",
@@ -3056,72 +3030,56 @@
             ],
             "dictionaries": [
               {
-                "tag": "heritage",
-                "dice": "d6",
-                "variants": [
-                  {
-                    "tag": "human",
-                    "min": 1,
-                    "max": 7
-                  },
-                  {
-                    "tag": "halfling",
-                    "min": 8,
-                    "max": 10
-                  },
-                  {
-                    "tag": "dwarf",
-                    "min": 11,
-                    "max": 11
-                  },
-                  {
-                    "tag": "elf",
-                    "min": 12,
-                    "max": 12
-                  }
-                ]
-              },
-              {
                 "tag": "alignment",
                 "dice": "d12",
                 "variants": [
                   {
-                    "tag": "evil",
+                    "tag": "good",
                     "min": 1,
                     "max": 2,
                     "additional": [
-                      "character.trait.vice",
-                      "character.trait.vice",
-                      "character.trait.vice"
+                      "character.trait.virtue",
+                      "character.trait.virtue",
+                      "character.trait.virtue"
                     ]
                   },
                   {
-                    "tag": "chaotic",
+                    "tag": "lawful",
                     "min": 3,
-                    "max": 6,
+                    "max": 3,
                     "additional": [
                       "character.trait.virtue",
-                      "character.trait.vice",
+                      "character.trait.virtue",
                       "character.trait.vice"
                     ]
                   },
                   {
                     "tag": "neutral",
-                    "min": 7,
-                    "max": 10,
+                    "min": 4,
+                    "max": 6,
                     "additional": [
                       "character.trait.virtue",
                       "character.trait.vice"
                     ]
                   },
                   {
-                    "tag": "good",
-                    "min": 11,
-                    "max": 12,
+                    "tag": "chaotic",
+                    "min": 7,
+                    "max": 9,
                     "additional": [
                       "character.trait.virtue",
-                      "character.trait.virtue",
-                      "character.trait.virtue"
+                      "character.trait.vice",
+                      "character.trait.vice"
+                    ]
+                  },
+                  {
+                    "tag": "evil",
+                    "min": 10,
+                    "max": 12,
+                    "additional": [
+                      "character.trait.vice",
+                      "character.trait.vice",
+                      "character.trait.vice"
                     ]
                   }
                 ]
@@ -3739,8 +3697,8 @@
           },
           {
             "tag": "cleric",
-            "min": 9,
-            "max": 10,
+            "min": 16,
+            "max": 18,
             "additional": [
               "character.attributes",
               {
@@ -3748,7 +3706,7 @@
                 "title": "Hit points (d8), add CON",
                 "roll_result": "d8"
               },
-              "character.class.cleric.heritage",
+              "character.heritage",
               "character.class.cleric.alignment",
               "character.class.cleric.appearance",
               "character.class.cleric.starting_gear",
@@ -3758,52 +3716,26 @@
             ],
             "dictionaries": [
               {
-                "tag": "heritage",
-                "dice": "d12",
-                "variants": [
-                  {
-                    "tag": "human",
-                    "min": 1,
-                    "max": 7
-                  },
-                  {
-                    "tag": "halfling",
-                    "min": 8,
-                    "max": 8
-                  },
-                  {
-                    "tag": "dwarf",
-                    "min": 9,
-                    "max": 11
-                  },
-                  {
-                    "tag": "elf",
-                    "min": 12,
-                    "max": 12
-                  }
-                ]
-              },
-              {
                 "tag": "alignment",
                 "dice": "d12",
                 "variants": [
                   {
-                    "tag": "evil",
+                    "tag": "good",
                     "min": 1,
                     "max": 2,
                     "additional": [
-                      "character.trait.vice",
-                      "character.trait.vice",
-                      "character.trait.vice"
+                      "character.trait.virtue",
+                      "character.trait.virtue",
+                      "character.trait.virtue"
                     ]
                   },
                   {
-                    "tag": "chaotic",
+                    "tag": "lawful",
                     "min": 3,
                     "max": 5,
                     "additional": [
                       "character.trait.virtue",
-                      "character.trait.vice",
+                      "character.trait.virtue",
                       "character.trait.vice"
                     ]
                   },
@@ -3817,23 +3749,23 @@
                     ]
                   },
                   {
-                    "tag": "lawful",
+                    "tag": "chaotic",
                     "min": 8,
                     "max": 10,
                     "additional": [
                       "character.trait.virtue",
-                      "character.trait.virtue",
+                      "character.trait.vice",
                       "character.trait.vice"
                     ]
                   },
                   {
-                    "tag": "good",
+                    "tag": "evil",
                     "min": 11,
                     "max": 12,
                     "additional": [
-                      "character.trait.virtue",
-                      "character.trait.virtue",
-                      "character.trait.virtue"
+                      "character.trait.vice",
+                      "character.trait.vice",
+                      "character.trait.vice"
                     ]
                   }
                 ]
@@ -4452,8 +4384,8 @@
           {
             "tag": "magic_user",
             "title": "Magic-user",
-            "min": 11,
-            "max": 12,
+            "min": 19,
+            "max": 20,
             "additional": [
               "character.attributes",
               {
@@ -4461,7 +4393,7 @@
                 "title": "Hit points (d4), add CON",
                 "roll_result": "d4"
               },
-              "character.class.magic_user.heritage",
+              "character.heritage",
               "character.class.magic_user.alignment",
               "character.class.magic_user.appearance",
               "character.class.magic_user.starting_gear",
@@ -4478,82 +4410,56 @@
             ],
             "dictionaries": [
               {
-                "tag": "heritage",
-                "dice": "d12",
-                "variants": [
-                  {
-                    "tag": "human",
-                    "min": 1,
-                    "max": 8
-                  },
-                  {
-                    "tag": "halfling",
-                    "min": 9,
-                    "max": 9
-                  },
-                  {
-                    "tag": "dwarf",
-                    "min": 10,
-                    "max": 10
-                  },
-                  {
-                    "tag": "elf",
-                    "min": 11,
-                    "max": 12
-                  }
-                ]
-              },
-              {
                 "tag": "alignment",
                 "dice": "d12",
                 "variants": [
                   {
-                    "tag": "evil",
+                    "tag": "good",
                     "min": 1,
-                    "max": 3,
+                    "max": 1,
                     "additional": [
-                      "character.trait.vice",
-                      "character.trait.vice",
-                      "character.trait.vice"
+                      "character.trait.virtue",
+                      "character.trait.virtue",
+                      "character.trait.virtue"
                     ]
                   },
                   {
-                    "tag": "chaotic",
-                    "min": 4,
-                    "max": 8,
+                    "tag": "lawful",
+                    "min": 2,
+                    "max": 2,
                     "additional": [
                       "character.trait.virtue",
-                      "character.trait.vice",
+                      "character.trait.virtue",
                       "character.trait.vice"
                     ]
                   },
                   {
                     "tag": "neutral",
-                    "min": 9,
+                    "min": 3,
+                    "max": 5,
+                    "additional": [
+                      "character.trait.virtue",
+                      "character.trait.vice"
+                    ]
+                  },
+                  {
+                    "tag": "chaotic",
+                    "min": 6,
                     "max": 9,
                     "additional": [
                       "character.trait.virtue",
+                      "character.trait.vice",
                       "character.trait.vice"
                     ]
                   },
                   {
-                    "tag": "lawful",
+                    "tag": "evil",
                     "min": 10,
-                    "max": 10,
-                    "additional": [
-                      "character.trait.virtue",
-                      "character.trait.virtue",
-                      "character.trait.vice"
-                    ]
-                  },
-                  {
-                    "tag": "good",
-                    "min": 11,
                     "max": 12,
                     "additional": [
-                      "character.trait.virtue",
-                      "character.trait.virtue",
-                      "character.trait.virtue"
+                      "character.trait.vice",
+                      "character.trait.vice",
+                      "character.trait.vice"
                     ]
                   }
                 ]
@@ -5195,6 +5101,32 @@
         ]
       },
       {
+        "tag": "heritage",
+        "dice": "d20",
+        "variants": [
+          {
+            "tag": "human",
+            "min": 1,
+            "max": 10
+          },
+          {
+            "tag": "halfling",
+            "min": 11,
+            "max": 15
+          },
+          {
+            "tag": "dwarf",
+            "min": 16,
+            "max": 18
+          },
+          {
+            "tag": "elf",
+            "min": 19,
+            "max": 20
+          }
+        ]
+      },
+      {
         "tag": "attributes",
         "additional": [
           {
@@ -5753,107 +5685,76 @@
     "dictionaries": [
       {
         "tag": "settlement",
-        "dice": "d12",
+        "dice": "d8",
         "variants": [
           {
             "tag": "hazard",
             "min": 1,
-            "max": 2,
+            "max": 1,
             "generate_outer": "incident.hazard"
           },
           {
-            "tag": "weather_worsens",
-            "title": "Weather_worsens",
-            "min": 3,
-            "max": 3
-          },
-          {
             "tag": "obstacle",
-            "min": 4,
-            "max": 4,
+            "min": 2,
+            "max": 2,
             "generate_outer": "incident.obstacle"
           },
           {
-            "tag": "mishap",
-            "min": 5,
-            "max": 6,
-            "generate_outer": "incident.mishap"
-          },
-          {
             "tag": "event",
-            "min": 7,
-            "max": 11,
+            "min": 3,
+            "max": 6,
             "generate_outer": "settlement.event"
           },
           {
-            "tag": "weather_improves",
-            "title": "Weather_improves",
-            "min": 12,
-            "max": 12
+            "tag": "mishap",
+            "min": 7,
+            "max": 7,
+            "generate_outer": "incident.mishap"
+          },
+          {
+            "tag": "discovery",
+            "min": 8,
+            "max": 8,
+            "generate_outer": "discovery"
           }
         ]
       },
       {
         "tag": "road",
-        "dice": "d12",
+        "dice": "d8",
         "variants": [
           {
             "tag": "roll_twice",
-            "title": "Roll 1d10+2 twice",
+            "title": "Roll 2d4 twice",
             "min": 1,
             "max": 1,
             "additional": [
               [
                 "incident.road",
-                "d10+2"
+                "2d4"
               ],
               [
                 "incident.road",
-                "d10+2"
+                "2d4"
               ]
             ]
           },
           {
-            "tag": "weather_worsens",
-            "title": "Weather_worsens",
+            "tag": "hazard",
             "min": 2,
-            "max": 2
+            "max": 2,
+            "generate_outer": "incident.hazard"
           },
           {
             "tag": "creature",
             "min": 3,
-            "max": 7,
+            "max": 4,
             "generate_outer": "creature_adv"
           },
           {
-            "tag": "hazard",
-            "min": 8,
-            "max": 8,
-            "generate_outer": "incident.hazard"
-          },
-          {
-            "tag": "obstacle",
-            "min": 9,
-            "max": 9,
-            "generate_outer": "incident.obstacle"
-          },
-          {
-            "tag": "mishap",
-            "min": 10,
-            "max": 10,
-            "generate_outer": "incident.mishap"
-          },
-          {
-            "tag": "discovery",
-            "min": 11,
-            "max": 11,
-            "generate_outer": "discovery"
-          },
-          {
-            "tag": "weather_improves",
-            "title": "Weather_improves",
-            "min": 12,
-            "max": 12
+            "tag": "traveler",
+            "min": 5,
+            "max": 8
           }
         ]
       },
@@ -5863,61 +5764,49 @@
         "variants": [
           {
             "tag": "roll_twice",
-            "title": "Roll 1d10+2 twice",
+            "title": "Roll 2d4 twice",
             "min": 1,
             "max": 1,
             "additional": [
               [
                 "incident.wilderness",
-                "d10+2"
+                "2d4"
               ],
               [
                 "incident.wilderness",
-                "d10+2"
+                "2d4"
               ]
             ]
           },
           {
-            "tag": "weather_worsens",
-            "title": "Weather_worsens",
-            "min": 2,
-            "max": 2
-          },
-          {
-            "tag": "creature",
-            "min": 3,
-            "max": 6,
-            "generate_outer": "creature_adv"
-          },
-          {
             "tag": "hazard",
-            "min": 7,
-            "max": 7,
+            "min": 2,
+            "max": 2,
             "generate_outer": "incident.hazard"
           },
           {
             "tag": "obstacle",
-            "min": 8,
-            "max": 8,
+            "min": 3,
+            "max": 3,
             "generate_outer": "incident.obstacle"
           },
           {
+            "tag": "creature",
+            "min": 4,
+            "max": 6,
+            "generate_outer": "creature_adv"
+          },
+          {
             "tag": "mishap",
-            "min": 9,
-            "max": 9,
+            "min": 7,
+            "max": 7,
             "generate_outer": "incident.mishap"
           },
           {
             "tag": "discovery",
-            "min": 10,
-            "max": 11,
+            "min": 8,
+            "max": 8,
             "generate_outer": "discovery"
-          },
-          {
-            "tag": "weather_improves",
-            "title": "Weather_improves",
-            "min": 12,
-            "max": 12
           }
         ]
       },
@@ -5926,15 +5815,43 @@
         "dice": "d12",
         "variants": [
           {
-            "tag": "creature",
+            "tag": "roll_twice",
+            "title": "Roll 2d4 twice",
             "min": 1,
+            "max": 1,
+            "additional": [
+              [
+                "incident.dungeon",
+                "2d4"
+              ],
+              [
+                "incident.dungeon",
+                "2d4"
+              ]
+            ]
+          },
+          {
+            "tag": "hazard",
+            "min": 2,
+            "max": 2,
+            "generate_outer": "incident.hazard"
+          },
+          {
+            "tag": "obstacle",
+            "min": 3,
+            "max": 3,
+            "generate_outer": "incident.obstacle"
+          },
+          {
+            "tag": "creature",
+            "min": 4,
             "max": 7,
             "generate_outer": "creature_adv"
           },
           {
             "tag": "mishap",
             "min": 8,
-            "max": 12,
+            "max": 8,
             "generate_outer": "incident.mishap"
           }
         ]
@@ -5942,67 +5859,67 @@
       {
         "tag": "mishap",
         "description": "An inconvenience or complication that might deplete resources, cause ability damage, or cause problems within the party.",
-        "dice": "d12",
+        "dice": "d20",
         "variants": [
           {
             "tag": "injurious",
             "description": "Examples: broken hand/foot/limb, conscussion, etc.",
             "min": 1,
-            "max": 1
+            "max": 2
           },
           {
             "tag": "debilitating",
             "description": "Examples: exposure, frostbite, heatstroke, etc.",
-            "min": 2,
-            "max": 2
+            "min": 3,
+            "max": 4
           },
           {
             "tag": "impeding",
             "description": "Examples: twisted ankle, sprain, dizziness, etc.",
-            "min": 3,
-            "max": 3
+            "min": 5,
+            "max": 6
           },
           {
             "tag": "exhausting",
             "description": "Examples: physical strain causes 1d4/1d6/1d8 ability damage",
-            "min": 4,
-            "max": 5
+            "min": 7,
+            "max": 9
           },
           {
             "tag": "gear-depleting",
             "description": "Examples: gear lost/damaged, etc.",
-            "min": 6,
-            "max": 7
+            "min": 10,
+            "max": 12
           },
           {
             "tag": "supply-depleting",
             "description": "Examples: loss of food/water to spoilage, vermin, carelessness, etc.",
-            "min": 8,
-            "max": 9
+            "min": 13,
+            "max": 15
           },
           {
             "tag": "interpersonal",
             "description": "Examples: tension, misunderstanding, argument, etc.",
-            "min": 10,
-            "max": 11
+            "min": 16,
+            "max": 18
           },
           {
             "tag": "bothersome",
             "description": "Examples: distracting/annoying insects, pests, people, etc.",
-            "min": 10,
-            "max": 11
+            "min": 19,
+            "max": 20
           }
         ]
       },
       {
         "tag": "obstacle",
         "description": "An obstruction to forward progress that must be overcome or circumnavigated",
-        "dice": "d12",
+        "dice": "d20",
         "variants": [
           {
             "tag": "unnatural",
             "min": 1,
-            "max": 1,
+            "max": 2,
             "dice": "d12",
             "variants": [
               {
@@ -6039,8 +5956,8 @@
           },
           {
             "tag": "natural",
-            "min": 2,
-            "max": 12,
+            "min": 3,
+            "max": 20,
             "dice": "d12",
             "variants": [
               {
@@ -6087,12 +6004,12 @@
       {
         "tag": "hazard",
         "description": "A potentially harmful problem that must be dealt with directly.",
-        "dice": "d12",
+        "dice": "d20",
         "variants": [
           {
             "tag": "unnatural",
             "min": 1,
-            "max": 1,
+            "max": 2,
             "dice": "d12",
             "variants": [
               {
@@ -6134,8 +6051,8 @@
           },
           {
             "tag": "natural",
-            "min": 2,
-            "max": 12,
+            "min": 3,
+            "max": 20,
             "dice": "d12",
             "variants": [
               {
@@ -14043,63 +13960,13 @@
         "tag": "monster",
         "min": 1,
         "max": 4,
-        "dice": "d12",
+        "dice": "d10",
         "variants": [
           {
-            "tag": "legendary",
+            "tag": "extraplanar",
             "min": 1,
             "max": 1,
-            "dice": "d12",
-            "variants": [
-              {
-                "tag": "oddity",
-                "title": "ODDITY + <i>huge</i>",
-                "min": 1,
-                "max": 2,
-                "additional": [
-                  "details.oddity"
-                ]
-              },
-              {
-                "tag": "dragon1",
-                "title": "Dragon/titan + COLOR",
-                "min": 3,
-                "max": 4,
-                "additional": [
-                  "details.color"
-                ]
-              },
-              {
-                "tag": "dragon2",
-                "title": "Dragon/titan + BEAST",
-                "min": 5,
-                "max": 6,
-                "additional": [
-                  "creature.beast"
-                ]
-              },
-              {
-                "tag": "dragon3",
-                "title": "Dragon/titan",
-                "min": 7,
-                "max": 9
-              },
-              {
-                "tag": "beast",
-                "title": "BEAST + <i>huge</i>",
-                "min": 10,
-                "max": 12,
-                "additional": [
-                  "creature.beast"
-                ]
-              }
-            ]
-          },
-          {
-            "tag": "supernatural",
-            "min": 2,
-            "max": 3,
-            "dice": "d12",
+            "dice": "d8",
             "variants": [
               {
                 "tag": "lord",
@@ -14108,80 +13975,232 @@
                 "max": 1
               },
               {
+                "tag": "angel",
+                "title": "angel/demon",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "cherub",
+                "title": "cherub/imp",
+                "min": 3,
+                "max": 3
+              },
+              {
                 "tag": "elemental",
                 "title": "Elemental (ELEMENT)",
-                "min": 2,
-                "max": 3,
+                "min": 4,
+                "max": 8,
                 "additional": [
                   "details.element"
                 ]
-              },
-              {
-                "tag": "imp",
-                "title": "Imp/demon",
-                "min": 4,
-                "max": 6
-              },
-              {
-                "tag": "wight",
-                "title": "Wight/wraith",
-                "min": 7,
-                "max": 8
-              },
-              {
-                "tag": "wisp",
-                "title": "Wisp/ghost/specter",
-                "min": 9,
-                "max": 12
               }
             ]
           },
           {
-            "tag": "fearsome",
-            "min": 4,
-            "max": 12,
-            "dice": "d12",
+            "tag": "legendary",
+            "min": 2,
+            "max": 2,
+            "dice": "d8",
             "variants": [
               {
-                "tag": "beast_ability",
-                "title": "BEAST + ABILITY",
+                "tag": "oddity",
+                "title": "ODDITY + <i>huge</i>",
                 "min": 1,
-                "max": 3,
+                "max": 1,
+                "additional": [
+                  "details.oddity"
+                ]
+              },
+              {
+                "tag": "dragon1",
+                "title": "Dragon/giant + BEAST",
+                "min": 2,
+                "max": 2,
+                "additional": [
+                  "creature.beast"
+                ]
+              },
+              {
+                "tag": "dragon2",
+                "title": "Dragon/giant",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "beast",
+                "title": "BEAST + <i>huge</i>",
+                "min": 4,
+                "max": 8,
+                "additional": [
+                  "creature.beast"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "undead",
+            "min": 3,
+            "max": 4,
+            "dice": "d8",
+            "variants": [
+              {
+                "tag": "lich/vampire/mummy",
+                "title": "Lich/vampire/mummy",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "wight",
+                "title": "Wight/wraith",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "wisp",
+                "title": "Wisp/ghost/specter",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "skeleton",
+                "title": "Skeleton/zombie/ghoul",
+                "min": 4,
+                "max": 8
+              }
+            ]
+          },
+          {
+            "tag": "unusual",
+            "min": 5,
+            "max": 6,
+            "dice": "d8",
+            "variants": [
+              {
+                "tag": "slime",
+                "title": "Slime/ooze/jelly",
+                "min": 1,
+                "max": 3
+              },
+              {
+                "tag": "plant",
+                "title": "Plant/fungus",
+                "min": 4,
+                "max": 6
+              },
+              {
+                "tag": "golem",
+                "title": "Golem/homunculus",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "fey",
+                "title": "Fey/fairy",
+                "min": 8,
+                "max": 8
+              }
+            ]
+          },
+          {
+            "tag": "beastly",
+            "min": 7,
+            "max": 8,
+            "dice": "d8",
+            "variants": [
+              {
+                "tag": "beast_aberrance",
+                "title": "BEAST + ABERRANCE",
+                "min": 1,
+                "max": 1,
                 "additional": [
                   "creature.beast",
-                  "details.ability"
+                  "details.aberrance"
+                ]
+              },
+              {
+                "tag": "beast_element",
+                "title": "BEAST + ELEMENT",
+                "min": 2,
+                "max": 2,
+                "additional": [
+                  "creature.beast",
+                  "details.element"
                 ]
               },
               {
                 "tag": "beast_oddity",
                 "title": "BEAST + ODDITY",
-                "min": 4,
-                "max": 5,
+                "min": 3,
+                "max": 3,
                 "additional": [
                   "creature.beast",
                   "details.oddity"
                 ]
               },
               {
-                "tag": "beast_large",
-                "title": "BEAST + <i>large</i>",
-                "min": 6,
-                "max": 7,
+                "tag": "beast_ability",
+                "title": "BEAST + ABILITY",
+                "min": 4,
+                "max": 5,
                 "additional": [
-                  "creature.beast"
+                  "creature.beast",
+                  "details.ability"
                 ]
               },
               {
-                "tag": "slime",
-                "title": "Slime/ooze",
-                "min": 8,
-                "max": 10
+                "tag": "beast_beast",
+                "title": "BEAST + BEAST",
+                "min": 6,
+                "max": 8,
+                "additional": [
+                  "creature.beast",
+                  "creature.beast"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "wild humanoid",
+            "min": 9,
+            "max": 10,
+            "dice": "d8",
+            "variants": [
+              {
+                "tag": "ogre",
+                "title": "Ogre/troll",
+                "min": 1,
+                "max": 1
               },
               {
-                "tag": "plant",
-                "title": "Plant/fungus",
-                "min": 11,
-                "max": 12
+                "tag": "orc",
+                "title": "orc/hobgoblin/gnoll",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "tag": "goblin",
+                "title": "Goblin/kobold",
+                "min": 4,
+                "max": 6
+              },
+              {
+                "tag": "human_oddity",
+                "title": "Human + ODDITY",
+                "min": 7,
+                "max": 7,
+                "additional": [
+                  "details.oddity"
+                ]
+              },
+              {
+                "tag": "human_beast",
+                "title": "Human + BEAST",
+                "min": 8,
+                "max": 8,
+                "additional": [
+                  "creature.beast"
+                ]
               }
             ]
           }
@@ -14190,17 +14209,18 @@
       {
         "tag": "beast",
         "min": 5,
-        "max": 8,
-        "dice": "d12",
+        "max": 9,
+        "dice": "d10",
         "variants": [
           {
             "tag": "water-going",
             "min": 1,
             "max": 2,
-            "dice": "d12",
+            "dice": "d8",
             "variants": [
               {
                 "tag": "whale",
+                "title": "Whale/narwhal",
                 "min": 1,
                 "max": 1
               },
@@ -14212,219 +14232,151 @@
               },
               {
                 "tag": "dolphin",
-                "title": "Dolphin/shark",
+                "title": "Dolphin/shark/alligator",
                 "min": 3,
                 "max": 3
               },
               {
-                "tag": "alligator",
-                "title": "Alligator/crocodile",
+                "tag": "turtle",
+                "title": "Turtle/clam/snail/crab",
                 "min": 4,
                 "max": 4
               },
               {
-                "tag": "turtle",
+                "tag": "fish",
+                "title": "fish/eel/snake",
                 "min": 5,
                 "max": 5
               },
               {
-                "tag": "crab",
-                "title": "Crab/clam/lobster",
+                "tag": "frog",
+                "title": "frog/toad",
                 "min": 6,
                 "max": 6
               },
               {
-                "tag": "fish",
+                "tag": "jelly",
+                "title": "Jelly/anemone",
                 "min": 7,
                 "max": 7
               },
               {
-                "tag": "frog",
-                "title": "Frog/toad",
-                "min": 8,
-                "max": 8
-              },
-              {
-                "tag": "eel",
-                "title": "Eel/snake",
-                "min": 9,
-                "max": 9
-              },
-              {
-                "tag": "clam",
-                "title": "Clam/oyster/snail",
-                "min": 10,
-                "max": 10
-              },
-              {
-                "tag": "jelly",
-                "title": "Jelly/anemone",
-                "min": 11,
-                "max": 11
-              },
-              {
                 "tag": "insect",
                 "title": "Insect/barnacle",
-                "min": 12,
-                "max": 12
+                "min": 8,
+                "max": 8
               }
             ]
           },
           {
             "tag": "airborne",
             "min": 3,
-            "max": 5,
-            "dice": "d12",
+            "max": 4,
+            "dice": "d8",
             "variants": [
               {
                 "tag": "pteranadon",
+                "title": "pteranadon/condor",
                 "min": 1,
                 "max": 1
               },
               {
-                "tag": "condor",
+                "tag": "eagle",
+                "title": "eagle/owl/hawk/falcon",
                 "min": 2,
                 "max": 2
               },
               {
-                "tag": "owl",
-                "title": "eagle/owl",
+                "tag": "heron",
+                "title": "heron/crane/ostrich",
                 "min": 3,
                 "max": 3
               },
               {
-                "tag": "hawk",
-                "title": "Hawk/falcon",
+                "tag": "crow",
+                "title": "crow/raven/gull",
                 "min": 4,
                 "max": 4
               },
               {
-                "tag": "crow",
-                "title": "Crow/raven",
+                "tag": "songbird",
+                "title": "songbird/parrot",
                 "min": 5,
                 "max": 5
               },
               {
-                "tag": "heron",
-                "title": "Heron/crane/stork",
+                "tag": "chicken",
+                "title": "chicken/duck/goose",
                 "min": 6,
                 "max": 6
               },
               {
-                "tag": "gull",
-                "title": "Gull/waterbird",
+                "tag": "bee",
+                "title": "bee/wasp/hornet/locust",
                 "min": 7,
                 "max": 7
               },
               {
-                "tag": "songbird",
-                "title": "Songbird/parrot",
+                "tag": "butterfly",
+                "title": "butterfly/moth/mosquito",
                 "min": 8,
                 "max": 8
-              },
-              {
-                "tag": "chicken",
-                "title": "Chicken/duck/goose",
-                "min": 9,
-                "max": 9
-              },
-              {
-                "tag": "bee",
-                "title": "Bee/wasp/hornet",
-                "min": 10,
-                "max": 10
-              },
-              {
-                "tag": "moth",
-                "title": "Locust/dragonfly/moth",
-                "min": 11,
-                "max": 11
-              },
-              {
-                "tag": "gnat",
-                "title": "Gnat/mosquito/firefly",
-                "min": 12,
-                "max": 12
               }
             ]
           },
           {
             "tag": "earthbound",
-            "min": 6,
-            "max": 12,
-            "dice": "d12",
+            "min": 5,
+            "max": 10,
+            "dice": "d8",
             "variants": [
               {
                 "tag": "dinosaur",
-                "title": "Dinosaur/megafauna",
+                "title": "dinosaur/elephant",
                 "min": 1,
                 "max": 1
               },
               {
-                "tag": "elephant",
-                "title": "Elephant/mammoth",
+                "tag": "ox",
+                "title": "ox/rhino/bear/ape",
                 "min": 2,
                 "max": 2
               },
               {
-                "tag": "ox",
-                "title": "Ox/rhinoceros",
+                "tag": "deer",
+                "title": "deer/horse/camel",
                 "min": 3,
                 "max": 3
               },
               {
-                "tag": "bear",
-                "title": "Bear/ape/gorilla",
+                "tag": "panther",
+                "title": "panther/wolf/boar",
                 "min": 4,
                 "max": 4
               },
               {
-                "tag": "deer",
-                "title": "Deer/horse/camel",
+                "tag": "snake",
+                "title": "snake/lizard/armadillo",
                 "min": 5,
                 "max": 5
               },
               {
-                "tag": "cat",
-                "title": "Cat/lion/panther",
+                "tag": "mouse",
+                "title": "mouse/rat/weasel/cat",
                 "min": 6,
                 "max": 6
               },
               {
-                "tag": "dog",
-                "title": "Dog/wolf/boar/pig",
+                "tag": "ant",
+                "title": "ant/centipede/scorpion",
                 "min": 7,
                 "max": 7
               },
               {
-                "tag": "snake",
-                "title": "Snake/lizard/armadillo",
+                "tag": "slug",
+                "title": "slug/worm/tick/beetle",
                 "min": 8,
                 "max": 8
-              },
-              {
-                "tag": "mouse",
-                "title": "Mouse/rat/weasel",
-                "min": 9,
-                "max": 9
-              },
-              {
-                "tag": "ant",
-                "title": "Ant/centipede/scorpion",
-                "min": 10,
-                "max": 10
-              },
-              {
-                "tag": "snail",
-                "title": "Snail/slug/worm",
-                "min": 11,
-                "max": 11
-              },
-              {
-                "tag": "termite",
-                "title": "Termite/tick/louse",
-                "min": 12,
-                "max": 12
               }
             ]
           }
@@ -14432,153 +14384,67 @@
       },
       {
         "tag": "humanoid",
-        "min": 9,
-        "max": 10,
-        "dice": "d12",
+        "min": 11,
+        "max": 12,
+        "dice": "d10",
         "variants": [
           {
             "tag": "rare",
             "min": 1,
-            "max": 2,
-            "dice": "d12",
+            "max": 1,
+            "dice": "d8",
             "variants": [
               {
-                "tag": "human_monster",
-                "title": "Human + MONSTER",
-                "min": 1,
-                "max": 2,
-                "additional": [
-                  "creature.monster"
-                ]
-              },
-              {
-                "tag": "undead",
-                "title": "Major <i>undead</i>",
-                "min": 3,
-                "max": 4
-              },
-              {
-                "tag": "werebeast",
-                "title": "WereBEAST",
-                "min": 5,
-                "max": 6,
-                "additional": [
-                  "creature.beast"
-                ]
-              },
-              {
-                "tag": "human_beast",
-                "title": "Human + BEAST",
-                "min": 7,
-                "max": 8,
-                "additional": [
-                  "creature.beast"
-                ]
-              },
-              {
-                "tag": "fey",
-                "title": "Fey/fairy",
-                "min": 9,
-                "max": 10
-              },
-              {
                 "tag": "elf",
-                "description": "If dominant culture of the region is not human, substitute \"human\" instead",
-                "min": 11,
-                "max": 12
+                "description": "...or the fourth most populous heritage in the setting/region.",
+                "min": 1,
+                "max": 8
               }
             ]
           },
           {
             "tag": "uncommon",
-            "min": 3,
-            "max": 5,
-            "dice": "d12",
+            "min": 2,
+            "max": 4,
+            "dice": "d8",
             "variants": [
-              {
-                "tag": "cyclops",
-                "title": "Cyclops/giant (<i>large</i>)",
-                "min": 1,
-                "max": 1
-              },
-              {
-                "tag": "ogre",
-                "title": "Ogre/troll (<i>large</i>)",
-                "min": 2,
-                "max": 3
-              },
-              {
-                "tag": "undead",
-                "title": "Minor <i>undead</i>",
-                "min": 4,
-                "max": 7
-              },
-              {
-                "tag": "lizardfolk",
-                "title": "Lizardfolk/merfolk",
-                "min": 8,
-                "max": 8
-              },
-              {
-                "tag": "catfolk",
-                "title": "Catfolk/birdfolk",
-                "min": 9,
-                "max": 9
-              },
               {
                 "tag": "dwarf",
                 "title": "Dwarf/gnome (<i>small</i>)",
-                "description": "If dominant culture of the region is not human, substitute \"human\" instead",
-                "min": 10,
-                "max": 12
+                "description": "...or the third most populous heritage in the setting/region.",
+                "min": 1,
+                "max": 3
+              },
+              {
+                "tag": "halfling",
+                "title": "Halfling (<i>small</i>)",
+                "description": "...or the second most populous heritage in the setting/region.",
+                "min": 4,
+                "max": 8
               }
             ]
           },
           {
             "tag": "common",
-            "min": 6,
-            "max": 12,
-            "dice": "d12",
+            "min": 5,
+            "max": 10,
+            "dice": "d8",
             "variants": [
               {
-                "tag": "orc",
-                "title": "orc/hobgoblin/gnoll",
+                "tag": "mixed",
+                "title": "Mixed <i>group</i>",
+                "description": "...roll 1d6+1 for number of members, then roll humanoid for each member, treating any “mixed group” result as human",
                 "min": 1,
                 "max": 2
               },
               {
-                "tag": "goblin",
-                "title": "Goblin/kobold",
+                "tag": "human",
                 "min": 3,
-                "max": 5
-              },
-              {
-                "tag": "half",
-                "title": "Half-elf, half-orc, etc.",
-                "min": 6,
-                "max": 7
-              },
-              {
-                "tag": "halfling",
-                "title": "Halfling (<i>small</i>)",
-                "description": "If dominant culture of the region is not human, substitute \"human\" instead",
-                "min": 8,
-                "max": 9
-              },
-              {
-                "tag": "mixed",
-                "title": "Mixed party (<i>group</i>)",
-                "min": 10,
-                "max": 12
+                "max": 8
               }
             ]
           }
         ]
-      },
-      {
-        "tag": "human",
-        "min": 11,
-        "max": 12
       }
     ]
   },
@@ -14597,12 +14463,12 @@
       {
         "tag": "size",
         "title": "Size and quantity",
-        "dice": "d12",
+        "dice": "d20",
         "variants": [
           {
             "tag": "tiny",
             "min": 1,
-            "max": 1,
+            "max": 2,
             "additional": [
               {
                 "tag": "range",
@@ -14639,7 +14505,7 @@
                     "additional": [
                       {
                         "tag": "numbers",
-                        "title": "No.appearing (1d6+1)",
+                        "title": "No.appearing",
                         "roll_result": "d6+1"
                       },
                       {
@@ -14653,14 +14519,34 @@
                     ]
                   },
                   {
-                    "tag": "throng",
+                    "tag": "mob",
                     "min": 8,
-                    "max": 12,
+                    "max": 10,
                     "additional": [
                       {
                         "tag": "numbers",
                         "title": "No.appearing",
                         "roll_result": "3d6+5"
+                      },
+                      {
+                        "tag": "hp",
+                        "static": "1"
+                      },
+                      {
+                        "tag": "damage",
+                        "static": "1"
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "throng",
+                    "min": 11,
+                    "max": 12,
+                    "additional": [
+                      {
+                        "tag": "numbers",
+                        "title": "No.appearing",
+                        "roll_result": "6d6+24"
                       },
                       {
                         "tag": "hp",
@@ -14678,12 +14564,12 @@
           },
           {
             "tag": "small",
-            "min": 2,
-            "max": 3,
+            "min": 3,
+            "max": 8,
             "additional": [
               {
                 "tag": "range",
-                "static": "close"
+                "static": "hand"
               },
               {
                 "tag": "quantity",
@@ -14711,12 +14597,12 @@
                   },
                   {
                     "tag": "group",
-                    "min": 3,
+                    "min": 5,
                     "max": 9,
                     "additional": [
                       {
                         "tag": "numbers",
-                        "title": "No.appearing (1d6+1)",
+                        "title": "No.appearing",
                         "roll_result": "d6+1"
                       },
                       {
@@ -14730,9 +14616,9 @@
                     ]
                   },
                   {
-                    "tag": "horde",
+                    "tag": "mob",
                     "min": 10,
-                    "max": 12,
+                    "max": 11,
                     "additional": [
                       {
                         "tag": "numbers",
@@ -14748,6 +14634,26 @@
                         "static": "1d3"
                       }
                     ]
+                  },
+                  {
+                    "tag": "throng",
+                    "min": 12,
+                    "max": 12,
+                    "additional": [
+                      {
+                        "tag": "numbers",
+                        "title": "No.appearing",
+                        "roll_result": "6d6+24"
+                      },
+                      {
+                        "tag": "hp",
+                        "static": "1"
+                      },
+                      {
+                        "tag": "damage",
+                        "static": "1d2"
+                      }
+                    ]
                   }
                 ]
               }
@@ -14755,8 +14661,8 @@
           },
           {
             "tag": "medium",
-            "min": 4,
-            "max": 9,
+            "min": 9,
+            "max": 15,
             "additional": [
               {
                 "tag": "range",
@@ -14769,7 +14675,7 @@
                   {
                     "tag": "solitary",
                     "min": 1,
-                    "max": 4,
+                    "max": 5,
                     "additional": [
                       {
                         "tag": "numbers",
@@ -14788,12 +14694,12 @@
                   },
                   {
                     "tag": "group",
-                    "min": 5,
-                    "max": 10,
+                    "min": 6,
+                    "max": 9,
                     "additional": [
                       {
                         "tag": "numbers",
-                        "title": "No.appearing (1d6+1)",
+                        "title": "No.appearing",
                         "roll_result": "d6+1"
                       },
                       {
@@ -14807,9 +14713,9 @@
                     ]
                   },
                   {
-                    "tag": "horde",
-                    "min": 11,
-                    "max": 12,
+                    "tag": "mob",
+                    "min": 10,
+                    "max": 11,
                     "additional": [
                       {
                         "tag": "numbers",
@@ -14825,6 +14731,26 @@
                         "static": "1d6"
                       }
                     ]
+                  },
+                  {
+                    "tag": "throng",
+                    "min": 12,
+                    "max": 12,
+                    "additional": [
+                      {
+                        "tag": "numbers",
+                        "title": "No.appearing",
+                        "roll_result": "6d6+24"
+                      },
+                      {
+                        "tag": "hp",
+                        "static": "2"
+                      },
+                      {
+                        "tag": "damage",
+                        "static": "1d4"
+                      }
+                    ]
                   }
                 ]
               }
@@ -14832,8 +14758,8 @@
           },
           {
             "tag": "large",
-            "min": 10,
-            "max": 11,
+            "min": 16,
+            "max": 19,
             "additional": [
               {
                 "tag": "range",
@@ -14846,7 +14772,7 @@
                   {
                     "tag": "solitary",
                     "min": 1,
-                    "max": 9,
+                    "max": 8,
                     "additional": [
                       {
                         "tag": "numbers",
@@ -14865,12 +14791,12 @@
                   },
                   {
                     "tag": "group",
-                    "min": 10,
-                    "max": 12,
+                    "min": 9,
+                    "max": 11,
                     "additional": [
                       {
                         "tag": "numbers",
-                        "title": "No.appearing (1d6+1)",
+                        "title": "No.appearing",
                         "roll_result": "d6+1"
                       },
                       {
@@ -14882,6 +14808,26 @@
                         "static": "1d8"
                       }
                     ]
+                  },
+                  {
+                    "tag": "mob",
+                    "min": 12,
+                    "max": 12,
+                    "additional": [
+                      {
+                        "tag": "numbers",
+                        "title": "No.appearing",
+                        "roll_result": "3d6+5"
+                      },
+                      {
+                        "tag": "hp",
+                        "static": "8"
+                      },
+                      {
+                        "tag": "damage",
+                        "static": "1d6"
+                      }
+                    ]
                   }
                 ]
               }
@@ -14889,12 +14835,12 @@
           },
           {
             "tag": "huge",
-            "min": 12,
-            "max": 12,
+            "min": 20,
+            "max": 20,
             "additional": [
               {
                 "tag": "range",
-                "static": "near"
+                "static": "reach"
               },
               {
                 "tag": "quantity",
@@ -14903,7 +14849,7 @@
                   {
                     "tag": "solitary",
                     "min": 1,
-                    "max": 10,
+                    "max": 11,
                     "additional": [
                       {
                         "tag": "numbers",
@@ -14922,12 +14868,12 @@
                   },
                   {
                     "tag": "group",
-                    "min": 11,
+                    "min": 12,
                     "max": 12,
                     "additional": [
                       {
                         "tag": "numbers",
-                        "title": "No.appearing (1d6+1)",
+                        "title": "No.appearing",
                         "roll_result": "d6+1"
                       },
                       {
@@ -14949,13 +14895,13 @@
       {
         "tag": "adjust",
         "title": "Adjusted Hit Points & Damage",
-        "dice": "d12",
+        "dice": "d20",
         "variants": [
           {
             "tag": "weak",
-            "title": "Creature is fragile/weak/sheltered",
+            "title": "Creature is fragile/weak",
             "min": 1,
-            "max": 1,
+            "max": 2,
             "additional": [
               {
                 "tag": "hp",
@@ -14971,9 +14917,9 @@
           },
           {
             "tag": "civilized",
-            "title": "Creature is domesticated/civilized",
-            "min": 2,
-            "max": 3,
+            "title": "Creature is sheltered/civilized",
+            "min": 3,
+            "max": 5,
             "additional": [
               {
                 "tag": "hp",
@@ -14990,8 +14936,8 @@
           {
             "tag": "tough",
             "title": "Creature is tough/wild/uncivilized",
-            "min": 4,
-            "max": 7,
+            "min": 6,
+            "max": 12,
             "additional": [
               {
                 "tag": "hp",
@@ -15008,8 +14954,8 @@
           {
             "tag": "predator",
             "title": "Creature is predator/warrior",
-            "min": 8,
-            "max": 10,
+            "min": 13,
+            "max": 16,
             "additional": [
               {
                 "tag": "hp",
@@ -15026,8 +14972,8 @@
           {
             "tag": "leader",
             "title": "Creature is <i>leader</i>/veteran/durable",
-            "min": 11,
-            "max": 11,
+            "min": 17,
+            "max": 19,
             "additional": [
               {
                 "tag": "hp",
@@ -15044,8 +14990,8 @@
           {
             "tag": "legendary",
             "title": "Creature is legendary/ancient",
-            "min": 12,
-            "max": 12,
+            "min": 20,
+            "max": 20,
             "additional": [
               {
                 "tag": "hp",
@@ -15064,12 +15010,12 @@
       {
         "tag": "attack",
         "title": "Attack is ...",
-        "dice": "d12",
+        "dice": "d20",
         "variants": [
           {
             "tag": "mundane",
             "min": 1,
-            "max": 4,
+            "max": 6,
             "additional": [
               {
                 "tag": "add_tag",
@@ -15083,8 +15029,8 @@
           },
           {
             "tag": "deterring",
-            "min": 5,
-            "max": 5,
+            "min": 7,
+            "max": 8,
             "additional": [
               {
                 "tag": "add_tag",
@@ -15098,8 +15044,8 @@
           },
           {
             "tag": "ranged",
-            "min": 6,
-            "max": 6,
+            "min": 9,
+            "max": 10,
             "additional": [
               {
                 "tag": "add_tag",
@@ -15114,8 +15060,8 @@
           {
             "tag": "hard",
             "title": "Hard-hitting",
-            "min": 7,
-            "max": 7,
+            "min": 11,
+            "max": 12,
             "additional": [
               {
                 "tag": "add_tag",
@@ -15130,8 +15076,8 @@
           {
             "tag": "slicing",
             "title": "Slicing/ripping",
-            "min": 8,
-            "max": 8,
+            "min": 13,
+            "max": 14,
             "additional": [
               {
                 "tag": "add_tag",
@@ -15146,8 +15092,8 @@
           {
             "tag": "vicious",
             "title": "Vicious/brutal",
-            "min": 9,
-            "max": 9,
+            "min": 15,
+            "max": 16,
             "additional": [
               {
                 "tag": "add_tag",
@@ -15161,8 +15107,8 @@
           },
           {
             "tag": "penetrating",
-            "min": 10,
-            "max": 10,
+            "min": 17,
+            "max": 18,
             "additional": [
               {
                 "tag": "add_tag",
@@ -15176,8 +15122,8 @@
           },
           {
             "tag": "inescapable",
-            "min": 11,
-            "max": 11,
+            "min": 19,
+            "max": 19,
             "additional": [
               {
                 "tag": "add_tag",
@@ -15191,17 +15137,17 @@
           },
           {
             "tag": "twice",
-            "title": "Roll 1d10+1 twice",
-            "min": 12,
-            "max": 12,
+            "title": "Roll 1d12+7 twice",
+            "min": 20,
+            "max": 20,
             "additional": [
               [
                 "creature_adv.attack",
-                "d10+1"
+                "d12+7"
               ],
               [
                 "creature_adv.attack",
-                "d10+1"
+                "d12+7"
               ]
             ]
           }
@@ -15210,13 +15156,13 @@
       {
         "tag": "defence",
         "title": "Defence is ...",
-        "dice": "d12",
+        "dice": "d20",
         "variants": [
           {
             "tag": "skin",
             "title": "Skin/cloth",
             "min": 1,
-            "max": 4,
+            "max": 8,
             "additional": [
               {
                 "tag": "armor",
@@ -15227,8 +15173,8 @@
           {
             "tag": "hide",
             "title": "Hide/fur/leather/thin shell",
-            "min": 5,
-            "max": 7,
+            "min": 9,
+            "max": 13,
             "additional": [
               {
                 "tag": "armor",
@@ -15239,8 +15185,8 @@
           {
             "tag": "chainmail",
             "title": "Chainmail/scales/thick shell",
-            "min": 8,
-            "max": 9,
+            "min": 14,
+            "max": 16,
             "additional": [
               {
                 "tag": "armor",
@@ -15251,8 +15197,8 @@
           {
             "tag": "scale_armor",
             "title": "Scale armor/carapace/bone",
-            "min": 10,
-            "max": 10,
+            "min": 17,
+            "max": 18,
             "additional": [
               {
                 "tag": "armor",
@@ -15263,8 +15209,8 @@
           {
             "tag": "plate_armor",
             "title": "Plate armor/thick carapace",
-            "min": 11,
-            "max": 11,
+            "min": 19,
+            "max": 19,
             "additional": [
               {
                 "tag": "armor",
@@ -15275,8 +15221,8 @@
           {
             "tag": "dragonscale",
             "title": "Dragonscale/enchanted armor",
-            "min": 12,
-            "max": 12,
+            "min": 20,
+            "max": 20,
             "additional": [
               {
                 "tag": "armor",
@@ -15288,96 +15234,110 @@
       },
       {
         "tag": "common_tag",
-        "dice": "d12",
+        "dice": "d20",
         "variants": [
           {
-            "tag": "vulnerable",
-            "description": "Suffers 150% of damage rolled from specific source",
+            "tag": "no",
+            "description": "no additional tags",
             "min": 1,
-            "max": 1
-          },
-          {
-            "tag": "resistant",
-            "description": "Suffers 50% of damage rolled from specific source",
-            "min": 2,
-            "max": 2
-          },
-          {
-            "tag": "stealthy",
-            "description": "Likes to sneak, hide, ambush; add 1 sneaky move",
-            "min": 3,
             "max": 3
-          },
-          {
-            "tag": "organized",
-            "description": "Knows how to strategize; add 1 move related to planning",
-            "min": 4,
-            "max": 4
-          },
-          {
-            "tag": "intelligent",
-            "description": "Sees bigger picture; add 1 smart move",
-            "min": 5,
-            "max": 5
-          },
-          {
-            "tag": "devious",
-            "description": "-1 damage (minimum 1); add 1 tricky move",
-            "min": 6,
-            "max": 6
           },
           {
             "tag": "cautious",
             "description": "Avoids putting itself in harm's way; -25% base HP",
-            "min": 7,
-            "max": 7
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "devious",
+            "description": "-1 damage (minimum 1); +1 or more tricky moves",
+            "min": 5,
+            "max": 5
           },
           {
             "tag": "hoarder",
             "description": "Double booty rolls for cache and lair",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "intelligent",
+            "description": "Sees bigger picture; +1 or more smart moves",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "organized",
+            "description": "Knows how to strategize; +1 or more tactical moves",
             "min": 8,
             "max": 8
           },
           {
+            "tag": "resistant",
+            "description": "Suffers 50% of damage rolled from specific DAMAGE TYPE",
+            "min": 9,
+            "max": 9,
+            "generate_outer": "details.damage"
+          },
+          {
+            "tag": "stealthy",
+            "description": "Likes to sneak, hide, ambush; +1 or more sneaky moves",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "toxic",
+            "description": "+1 or more moves/effects related to poison/venom",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "vulnerable",
+            "description": "Suffers 150% of damage rolled from specific DAMAGE TYPE",
+            "min": 12,
+            "max": 12,
+            "generate_outer": "details.damage"
+          },
+          {
             "tag": "unusual",
             "description": "Roll UNCOMMON tag",
-            "min": 9,
-            "max": 10,
+            "min": 13,
+            "max": 15,
             "generate_outer": "creature_adv.uncommon_tag"
           },
           {
             "tag": "roll_twice",
-            "title": "Roll 1d10 twice",
-            "min": 11,
-            "max": 11,
+            "title": "Roll d12+3 twice",
+            "min": 16,
+            "max": 18,
             "additional": [
               [
                 "creature_adv.common_tag",
-                "d10"
+                "d12+3"
               ],
               [
                 "creature_adv.common_tag",
-                "d10"
+                "d12+3"
               ]
             ]
           },
           {
             "tag": "roll_trice",
-            "title": "Roll 1d10 three times",
-            "min": 12,
-            "max": 12,
+            "title": "Roll d12+3 three times",
+            "min": 19,
+            "max": 20,
             "additional": [
               [
                 "creature_adv.common_tag",
-                "d10"
+                "d12+3"
               ],
               [
                 "creature_adv.common_tag",
-                "d10"
+                "d12+3"
               ],
               [
                 "creature_adv.common_tag",
-                "d10"
+                "d12+3"
               ]
             ]
           }
@@ -15388,58 +15348,84 @@
         "dice": "d12",
         "variants": [
           {
-            "tag": "flying",
-            "description": "Able to take the air; add 1 flying move",
+            "tag": "aberrant",
+            "description": "possesses an ABERRANCE",
             "min": 1,
+            "max": 1,
+            "generate_outer": "details.aberrance"
+          },
+          {
+            "tag": "amorphous",
+            "description": "may subdivide or be <i>resistant/vulnerable</i>",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "construct",
+            "description": "May be <i>mindless</i>; serves a specific function",
+            "min": 3,
             "max": 3
           },
           {
-            "tag": "undead",
-            "description": "May be <i>unsubstantial</i>; unaffected by poison, disease, etc.",
+            "tag": "diseased",
+            "description": "+1 move related to infection, plague, or blight",
             "min": 4,
             "max": 5
           },
           {
-            "tag": "amorphous",
-            "description": "Suffers lowest of 2 damage rolls",
+            "tag": "divine",
+            "description": "+2 damage, base HP x 1.25",
             "min": 6,
             "max": 6
           },
           {
-            "tag": "immune",
-            "description": "unaffected by damage from specific source",
+            "tag": "flying",
+            "description": "Able to take the air; +1 or more flying moves",
             "min": 7,
-            "max": 7
-          },
-          {
-            "tag": "construct",
-            "description": "May be <i>mindless</i>; acts according to orders of master",
-            "min": 8,
-            "max": 8
-          },
-          {
-            "tag": "magical",
-            "description": "Add 1 magic move (spell, power, etc.)",
-            "min": 9,
             "max": 9
           },
           {
-            "tag": "planar",
-            "description": "May be <i>unsubstantial</i>; Add 1 move related to home plane",
+            "tag": "immune",
+            "description": "unaffected by damage from specific DAMAGE TYPE",
             "min": 10,
-            "max": 10
+            "max": 10,
+            "generate_outer": "details.damage"
           },
           {
-            "tag": "terrifying",
-            "description": "Strikes fear into hearts of all who behold it",
+            "tag": "insubstantial",
+            "description": "may be <i>immune</i> to physical harm",
             "min": 11,
             "max": 11
           },
           {
-            "tag": "divine",
-            "description": "May be <i>planar</i>, +2 damage, base HP x 1.25",
+            "tag": "magical",
+            "description": "Add 1 magic move (spell, power, etc.)",
             "min": 12,
-            "max": 12
+            "max": 13
+          },
+          {
+            "tag": "mindless",
+            "description": "<i>immune</i> to psychological effects",
+            "min": 14,
+            "max": 14
+          },
+          {
+            "tag": "planar",
+            "description": "+1 or more moves related to home plane",
+            "min": 15,
+            "max": 15
+          },
+          {
+            "tag": "terrifying",
+            "description": "foes may panic, freeze, or flee",
+            "min": 16,
+            "max": 16
+          },
+          {
+            "tag": "undead",
+            "description": "<i>immune</i> to poison, disease, etc.",
+            "min": 17,
+            "max": 20
           }
         ]
       }
@@ -15447,41 +15433,42 @@
   },
   {
     "tag": "discovery",
-    "roll": "d12",
+    "roll": "d20",
     "variants": [
       {
         "tag": "unnatural_feature",
         "min": 1,
-        "max": 1,
+        "max": 2,
         "dice": "d12",
         "variants": [
           {
             "tag": "divine",
             "min": 1,
             "max": 1,
-            "dice": "d12",
+            "dice": "d10",
             "variants": [
               {
                 "tag": "presence",
+                "title": "presence/manifestation",
                 "min": 1,
                 "max": 1
               },
               {
                 "tag": "protected_place",
                 "min": 2,
-                "max": 3
+                "max": 6
               },
               {
                 "tag": "cursed_place",
                 "title": "Cursed/defiled place",
-                "min": 4,
+                "min": 7,
                 "max": 8
               },
               {
                 "tag": "blessed_place",
-                "title": "Blessed/marked place",
+                "title": "Blessed/sacred place",
                 "min": 9,
-                "max": 12
+                "max": 10
               }
             ]
           },
@@ -15490,7 +15477,7 @@
             "title": "Planar/infernal",
             "min": 2,
             "max": 3,
-            "dice": "d12",
+            "dice": "d10",
             "variants": [
               {
                 "tag": "outpost",
@@ -15501,19 +15488,19 @@
                 "tag": "portal",
                 "title": "Portal/gate",
                 "min": 2,
-                "max": 4
+                "max": 3
               },
               {
                 "tag": "rift",
                 "title": "Rift/tear",
-                "min": 5,
-                "max": 8
+                "min": 4,
+                "max": 6
               },
               {
                 "tag": "distortion",
                 "title": "Distortion/warp",
-                "min": 9,
-                "max": 12
+                "min": 7,
+                "max": 10
               }
             ]
           },
@@ -15521,7 +15508,7 @@
             "tag": "arcane",
             "min": 4,
             "max": 12,
-            "dice": "d12",
+            "dice": "d10",
             "variants": [
               {
                 "tag": "blight",
@@ -15538,13 +15525,13 @@
                 "tag": "taint",
                 "title": "Taint/residue",
                 "min": 7,
-                "max": 11
+                "max": 9
               },
               {
                 "tag": "source",
                 "title": "Source/portal",
-                "min": 12,
-                "max": 12
+                "min": 10,
+                "max": 10
               }
             ]
           }
@@ -15552,46 +15539,40 @@
       },
       {
         "tag": "natural_feature",
-        "min": 2,
-        "max": 6,
+        "min": 3,
+        "max": 12,
         "dice": "d12",
         "variants": [
           {
             "tag": "lair",
             "min": 1,
             "max": 2,
-            "dice": "d12",
+            "dice": "d10",
             "variants": [
               {
                 "tag": "ruins",
                 "title": "RUINS",
                 "min": 1,
-                "max": 4,
+                "max": 3,
                 "generate_outer": "discovery.structure.ruin"
               },
               {
                 "tag": "cave",
                 "title": "Cave/tunnel",
-                "min": 5,
-                "max": 7
-              },
-              {
-                "tag": "hive",
-                "title": "Hive/aerie",
-                "min": 8,
-                "max": 8
+                "min": 4,
+                "max": 6
               },
               {
                 "tag": "nest",
-                "title": "Nest/den",
-                "min": 9,
-                "max": 10
+                "title": "nest/hive/aerie",
+                "min": 7,
+                "max": 8
               },
               {
-                "tag": "burrow",
-                "title": "Burrow/warren",
-                "min": 11,
-                "max": 12
+                "tag": "den",
+                "title": "den/burrow/warren",
+                "min": 9,
+                "max": 10
               }
             ]
           },
@@ -15599,18 +15580,18 @@
             "tag": "terrain_change",
             "min": 3,
             "max": 5,
-            "dice": "d12",
+            "dice": "d10",
             "variants": [
               {
                 "tag": "hollow",
                 "title": "Hollow/cleft/defile",
                 "min": 1,
-                "max": 2
+                "max": 3
               },
               {
                 "tag": "canyon",
                 "title": "Canyon/valley/vale/dale",
-                "min": 3,
+                "min": 4,
                 "max": 6
               },
               {
@@ -15630,15 +15611,15 @@
                 "tag": "slope",
                 "title": "Slope up/down",
                 "min": 10,
-                "max": 12
+                "max": 10
               }
             ]
           },
           {
             "tag": "water_feature",
             "min": 6,
-            "max": 8,
-            "dice": "d12",
+            "max": 6,
+            "dice": "d10",
             "variants": [
               {
                 "tag": "sea",
@@ -15655,26 +15636,26 @@
                 "tag": "lake",
                 "title": "Lake/pond/pool/tarn",
                 "min": 4,
-                "max": 6
+                "max": 5
               },
               {
                 "tag": "brook",
                 "title": "Brook/stream/rill",
-                "min": 7,
-                "max": 11
+                "min": 6,
+                "max": 9
               },
               {
                 "tag": "spring",
                 "title": "Spring/jot spring",
-                "min": 12,
-                "max": 12
+                "min": 10,
+                "max": 10
               }
             ]
           },
           {
             "tag": "landmark",
-            "min": 9,
-            "max": 10,
+            "min": 7,
+            "max": 8,
             "dice": "d12",
             "variants": [
               {
@@ -15710,40 +15691,81 @@
             ]
           },
           {
+            "tag": "flora",
+            "title": "flora/fauna",
+            "min": 9,
+            "max": 10,
+            "dice": "d10",
+            "variants": [
+              {
+                "tag": "plant",
+                "title": "notable plant/flower",
+                "min": 1,
+                "max": 2
+              },
+              {
+                "tag": "tree",
+                "title": "notable tree/brush",
+                "min": 3,
+                "max": 4
+              },
+              {
+                "tag": "beast",
+                "title": "notable BEAST",
+                "min": 5,
+                "max": 6,
+                "generate_outer": "creature.beast"
+              },
+              {
+                "tag": "useful_plant",
+                "title": "useful plant/herb/root",
+                "min": 7,
+                "max": 8
+              },
+              {
+                "tag": "useful_beast",
+                "title": "useful BEAST",
+                "min": 9,
+                "max": 10,
+                "generate_outer": "creature.beast"
+              }
+            ]
+          },
+          {
             "tag": "resource",
             "min": 11,
             "max": 12,
-            "dice": "d12",
+            "dice": "d10",
             "variants": [
               {
                 "tag": "game",
                 "title": "Game/fruit/vegetable",
                 "min": 1,
-                "max": 4
+                "max": 3
               },
               {
                 "tag": "timber",
                 "title": "Timber/stone",
-                "min": 5,
-                "max": 7
+                "min": 4,
+                "max": 5
               },
               {
                 "tag": "herbs",
                 "title": "Herbs/spice/dye source",
-                "min": 8,
-                "max": 9
+                "min": 6,
+                "max": 7
               },
               {
                 "tag": "copper",
                 "title": "Copper/tin/iron",
-                "min": 10,
-                "max": 11
+                "min": 8,
+                "max": 9
               },
               {
                 "tag": "gold",
                 "title": "Gold/silver/gems",
-                "min": 12,
-                "max": 12
+                "min": 10,
+                "max": 10
               }
             ]
           }
@@ -15751,8 +15773,8 @@
       },
       {
         "tag": "evidence",
-        "min": 7,
-        "max": 9,
+        "min": 13,
+        "max": 16,
         "dice": "d12",
         "variants": [
           {
@@ -15760,7 +15782,7 @@
             "title": "Tracks/spoor",
             "min": 1,
             "max": 6,
-            "dice": "d12",
+            "dice": "d10",
             "variants": [
               {
                 "tag": "trail_of_blood",
@@ -15783,13 +15805,13 @@
                 "tag": "definite",
                 "title": "Definite/recent/clear",
                 "min": 7,
-                "max": 9
+                "max": 8
               },
               {
                 "tag": "faint",
                 "title": "Faint/old/unclear",
-                "min": 10,
-                "max": 12
+                "min": 9,
+                "max": 10
               }
             ]
           },
@@ -15798,7 +15820,7 @@
             "title": "Remains/debris",
             "min": 7,
             "max": 10,
-            "dice": "d12",
+            "dice": "d10",
             "variants": [
               {
                 "tag": "bones",
@@ -15818,13 +15840,13 @@
                 "tag": "junk",
                 "title": "Junk/refuse",
                 "min": 7,
-                "max": 9
+                "max": 8
               },
               {
                 "tag": "items",
                 "title": "1d6 PERSONAL ITEMS",
-                "min": 10,
-                "max": 11,
+                "min": 9,
+                "max": 9,
                 "additional": [
                   {
                     "tag": "item",
@@ -15836,8 +15858,8 @@
               {
                 "tag": "lost_good",
                 "title": "Lost TRADE GOOD",
-                "min": 12,
-                "max": 12,
+                "min": 10,
+                "max": 10,
                 "generate_outer": "booty.rarity.trade_good"
               }
             ]
@@ -15847,7 +15869,7 @@
             "title": "Stash/cache",
             "min": 11,
             "max": 12,
-            "dice": "d12",
+            "dice": "d10",
             "variants": [
               {
                 "tag": "booty1",
@@ -15866,7 +15888,7 @@
                 "tag": "booty2",
                 "title": "1d6 STASH BOOTY",
                 "min": 5,
-                "max": 7,
+                "max": 6,
                 "additional": [
                   {
                     "tag": "items",
@@ -15878,8 +15900,8 @@
               {
                 "tag": "booty3",
                 "title": "1d8 STASH BOOTY",
-                "min": 8,
-                "max": 10,
+                "min": 7,
+                "max": 8,
                 "additional": [
                   {
                     "tag": "items",
@@ -15891,8 +15913,8 @@
               {
                 "tag": "booty4",
                 "title": "1d10 STASH BOOTY",
-                "min": 11,
-                "max": 11,
+                "min": 9,
+                "max": 9,
                 "additional": [
                   {
                     "tag": "items",
@@ -15904,8 +15926,8 @@
               {
                 "tag": "booty5",
                 "title": "1d12 STASH BOOTY",
-                "min": 12,
-                "max": 12,
+                "min": 10,
+                "max": 10,
                 "additional": [
                   {
                     "tag": "items",
@@ -15920,39 +15942,39 @@
       },
       {
         "tag": "structure",
-        "min": 10,
-        "max": 12,
+        "min": 17,
+        "max": 20,
         "dice": "d12",
         "variants": [
           {
             "tag": "enigmatic",
             "min": 1,
             "max": 1,
-            "roll": "d12",
+            "roll": "d10",
             "variants": [
               {
                 "tag": "oddity",
                 "min": 1,
-                "max": 4,
+                "max": 2,
                 "generate_outer": "details.oddity"
               },
               {
                 "tag": "mound",
                 "title": "Mound/earthwork",
-                "min": 5,
-                "max": 7
+                "min": 3,
+                "max": 5
               },
               {
                 "tag": "monument",
                 "title": "Monument/megalith",
-                "min": 8,
+                "min": 6,
                 "max": 8
               },
               {
                 "tag": "statue",
                 "title": "Statue/idol/totem",
                 "min": 9,
-                "max": 12
+                "max": 10
               }
             ]
           },
@@ -15960,7 +15982,7 @@
             "tag": "infrastructure",
             "min": 2,
             "max": 3,
-            "roll": "d12",
+            "roll": "d10",
             "variants": [
               {
                 "tag": "signpost",
@@ -15978,13 +16000,13 @@
                 "tag": "track",
                 "title": "Track/path/trail/road",
                 "min": 6,
-                "max": 11
+                "max": 9
               },
               {
                 "tag": "mine",
                 "title": "Mine/quarry",
-                "min": 12,
-                "max": 12
+                "min": 10,
+                "max": 10
               }
             ]
           },
@@ -15992,7 +16014,7 @@
             "tag": "dwelling",
             "min": 4,
             "max": 5,
-            "roll": "d12",
+            "roll": "d10",
             "variants": [
               {
                 "tag": "campsite",
@@ -16004,19 +16026,19 @@
                 "tag": "farmstead",
                 "title": "homestead/farmstead",
                 "min": 5,
-                "max": 8
+                "max": 7
               },
               {
                 "tag": "inn",
                 "title": "Inn/toll house/mill",
-                "min": 9,
-                "max": 10
+                "min": 8,
+                "max": 9
               },
               {
                 "tag": "tower",
                 "title": "Tower/keep/castle/quarry",
-                "min": 11,
-                "max": 12
+                "min": 10,
+                "max": 10
               }
             ]
           },
@@ -16024,7 +16046,7 @@
             "tag": "religious",
             "min": 6,
             "max": 7,
-            "roll": "d12",
+            "roll": "d10",
             "variants": [
               {
                 "tag": "grave_marker",
@@ -16035,25 +16057,25 @@
                 "tag": "graveyard",
                 "title": "Graveyard/burial ground",
                 "min": 4,
-                "max": 6
+                "max": 5
               },
               {
                 "tag": "tomb",
                 "title": "Tomb/crypt/barrow",
-                "min": 7,
-                "max": 9
+                "min": 6,
+                "max": 7
               },
               {
                 "tag": "temple",
                 "title": "Temple/monastery",
-                "min": 10,
-                "max": 11
+                "min": 8,
+                "max": 9
               },
               {
                 "tag": "great_temple",
                 "title": "Great temple/sanctuary",
-                "min": 12,
-                "max": 12
+                "min": 10,
+                "max": 10
               }
             ]
           },
@@ -16061,26 +16083,27 @@
             "tag": "ruin",
             "min": 8,
             "max": 11,
-            "roll": "d12",
+            "roll": "d10",
             "variants": [
               {
                 "tag": "dungeon",
                 "title": "DUNGEON",
                 "min": 1,
-                "max": 4,
+                "max": 3,
                 "generate_outer": "dungeon"
               },
               {
                 "tag": "settlement",
-                "title": "SETTLEMENT - generation not realised yet",
+                "title": "SETTLEMENT",
                 "min": 4,
-                "max": 6
+                "max": 5,
+                "generate_outer": "settlement"
               },
               {
                 "tag": "religious",
                 "title": "RELIGIOUS",
-                "min": 7,
-                "max": 8,
+                "min": 6,
+                "max": 7,
                 "generate_outer": [
                   "discovery.structure.religious",
                   "d8+4"
@@ -16089,8 +16112,8 @@
               {
                 "tag": "dwelling",
                 "title": "DWELLING",
-                "min": 9,
-                "max": 10,
+                "min": 8,
+                "max": 9,
                 "generate_outer": [
                   "discovery.structure.dwelling",
                   "d8+4"
@@ -16099,8 +16122,8 @@
               {
                 "tag": "infrastructure",
                 "title": "INFRASTRUCTURE",
-                "min": 11,
-                "max": 12,
+                "min": 10,
+                "max": 10,
                 "generate_outer": [
                   "discovery.structure.infrastructure",
                   "d8+4"
@@ -16110,40 +16133,45 @@
           },
           {
             "tag": "settlement",
-            "title": "SETTLEMENT - generate settlement details manually",
+            "title": "SETTLEMENT",
             "min": 12,
             "max": 12,
-            "roll": "d12",
+            "roll": "d10",
             "variants": [
               {
                 "tag": "hamlet",
                 "title": "<i>Hamlet</i>",
                 "min": 1,
-                "max": 4
+                "max": 3,
+                "generate_outer": "settlement.hamlet"
               },
               {
                 "tag": "village",
                 "title": "<i>Village</i>",
-                "min": 5,
-                "max": 7
+                "min": 4,
+                "max": 6,
+                "generate_outer": "settlement.village"
               },
               {
                 "tag": "keep",
                 "title": "<i>Keep</i>",
-                "min": 8,
-                "max": 9
+                "min": 7,
+                "max": 8,
+                "generate_outer": "settlement.keep"
               },
               {
                 "tag": "town",
                 "title": "<i>Town</i>",
-                "min": 10,
-                "max": 11
+                "min": 9,
+                "max": 9,
+                "generate_outer": "settlement.town"
               },
               {
                 "tag": "city",
                 "title": "<i>City</i>",
-                "min": 12,
-                "max": 12
+                "min": 10,
+                "max": 10,
+                "generate_outer": "settlement.city"
               }
             ]
           }
@@ -16629,142 +16657,51 @@
       },
       {
         "tag": "body_part",
-        "dice": "d12",
+        "dice": "d20",
         "variants": [
           {
-            "tag": "skin",
-            "title": "Skin/hide/fur/shell",
+            "tag": "hide",
+            "title": "hide/fur/shell",
             "min": 1,
-            "max": 3
-          },
-          {
-            "tag": "blood",
-            "title": "Blood/ichor",
-            "min": 4,
             "max": 4
           },
           {
-            "tag": "internal_organ",
+            "tag": "blood",
+            "title": "blood/ichor/juice",
             "min": 5,
-            "max": 5
-          },
-          {
-            "tag": "gland",
-            "title": "Gland/sac/node",
-            "min": 6,
-            "max": 6
-          },
-          {
-            "tag": "appendage",
-            "title": "Appendage/limb",
-            "min": 7,
-            "max": 7
-          },
-          {
-            "tag": "sinew",
-            "title": "Sinew/muscle/bone",
-            "min": 8,
             "max": 8
           },
           {
-            "tag": "teeth",
-            "title": "Teeth/tusk/horns",
+            "tag": "internal_organ",
+            "title": "organ/gland/sac/node",
             "min": 9,
-            "max": 9
+            "max": 12
           },
           {
-            "tag": "ears",
-            "title": "Ears/nose/tongue",
-            "min": 10,
-            "max": 10
+            "tag": "sinew",
+            "title": "sinew/muscle/bone",
+            "min": 13,
+            "max": 14
+          },
+          {
+            "tag": "teeth",
+            "title": "teeth/claws/horns",
+            "min": 15,
+            "max": 16
           },
           {
             "tag": "eyes",
-            "title": "Eyes/sensory organs",
-            "min": 11,
-            "max": 11
+            "title": "eyes/sensory organ",
+            "min": 17,
+            "max": 18
           },
           {
             "tag": "brain",
-            "min": 12,
-            "max": 12
+            "min": 19,
+            "max": 20
           }
         ],
         "additional": [
-          {
-            "tag": "property",
-            "dice": "d12",
-            "variants": [
-              {
-                "tag": "protection",
-                "title": "Protection/ward",
-                "min": 1,
-                "max": 2
-              },
-              {
-                "tag": "augmentation",
-                "title": "Augmentation/offence",
-                "min": 3,
-                "max": 3
-              },
-              {
-                "tag": "spice",
-                "title": "Spice/ingredient",
-                "min": 4,
-                "max": 4
-              },
-              {
-                "tag": "ink",
-                "title": "Ink/dye/stain",
-                "min": 5,
-                "max": 5
-              },
-              {
-                "tag": "narcotic",
-                "title": "Narcotic/soporific",
-                "min": 6,
-                "max": 6
-              },
-              {
-                "tag": "perfume",
-                "title": "Perfume/aphrodisiac",
-                "min": 7,
-                "max": 7
-              },
-              {
-                "tag": "decorative",
-                "title": "Decorative/beautiful",
-                "min": 8,
-                "max": 8
-              },
-              {
-                "tag": "poison",
-                "title": "Poison/venom/toxin",
-                "min": 9,
-                "max": 9
-              },
-              {
-                "tag": "curative",
-                "title": "Curative/restorative",
-                "min": 10,
-                "max": 10
-              },
-              {
-                "tag": "spell_component",
-                "min": 11,
-                "max": 11
-              },
-              {
-                "tag": "supply",
-                "title": "Supply (SPECIALTY)",
-                "min": 12,
-                "max": 12,
-                "additional": [
-                  "booty.specialty"
-                ]
-              }
-            ]
-          },
           {
             "tag": "value",
             "hint": "$diceHint",
@@ -16860,7 +16797,7 @@
       },
       {
         "tag": "personal_item",
-        "dice": "d12",
+        "dice": "d20",
         "variants": [
           {
             "tag": "clothing",
@@ -16944,7 +16881,7 @@
           {
             "tag": "gear",
             "min": 5,
-            "max": 8,
+            "max": 15,
             "variants": [
               {
                 "tag": "bedroll",
@@ -17026,8 +16963,8 @@
           },
           {
             "tag": "miscellaneous",
-            "min": 9,
-            "max": 12,
+            "min": 16,
+            "max": 20,
             "variants": [
               {
                 "tag": "instrument",
@@ -17110,76 +17047,91 @@
       },
       {
         "tag": "trinket",
-        "dice": "d12",
+        "dice": "d20",
         "variants": [
           {
-            "tag": "ornament",
+            "tag": "oddment",
+            "title": "oddment/fragment/piece/shard",
             "min": 1,
-            "max": 1
-          },
-          {
-            "tag": "miniature",
-            "min": 2,
             "max": 2
           },
           {
-            "tag": "toy",
-            "title": "Toy/plaything",
+            "tag": "tooth",
+            "title": "tooth/claw/scale/horn",
             "min": 3,
-            "max": 3
-          },
-          {
-            "tag": "puzzle",
-            "title": "Puzzle/oddment",
-            "min": 4,
             "max": 4
           },
           {
-            "tag": "instrument",
+            "tag": "ring",
+            "title": "ring/loop/hoop",
             "min": 5,
-            "max": 5
-          },
-          {
-            "tag": "box",
-            "title": "Box/case",
-            "min": 6,
             "max": 6
           },
           {
-            "tag": "locket",
-            "title": "Locket/keepsake",
+            "tag": "charm",
+            "title": "charm/keepsake/token/ornament",
             "min": 7,
-            "max": 7
-          },
-          {
-            "tag": "ring",
-            "title": "Ring/loop/hoop",
-            "min": 8,
             "max": 8
           },
           {
-            "tag": "brooch",
-            "title": "Brooch/pin",
+            "tag": "key",
+            "title": "key/utensil/tool",
             "min": 9,
             "max": 9
           },
           {
-            "tag": "charm",
-            "title": "Charm/amulet",
+            "tag": "figurine",
+            "title": "figurine/doll/miniature",
             "min": 10,
             "max": 10
           },
           {
-            "tag": "symbol",
-            "title": "Religious/arcane symbol",
+            "tag": "toy",
+            "title": "toy/game/puzzle",
             "min": 11,
             "max": 11
           },
           {
-            "tag": "figurine",
-            "title": "Figurine/likeness",
+            "tag": "box",
+            "title": "box/case/canister",
             "min": 12,
             "max": 12
+          },
+          {
+            "tag": "locket",
+            "title": "locket/brooch/pin",
+            "min": 13,
+            "max": 14
+          },
+          {
+            "tag": "cameo",
+            "title": "cameo/likeness",
+            "min": 15,
+            "max": 15
+          },
+          {
+            "tag": "sphere",
+            "title": "sphere/orb/egg/disc",
+            "min": 16,
+            "max": 16
+          },
+          {
+            "tag": "pipe",
+            "title": "pipe/whistle/drum/bell",
+            "min": 17,
+            "max": 17
+          },
+          {
+            "tag": "idol",
+            "title": "idol/icon/symbol/insignia",
+            "min": 18,
+            "max": 19
+          },
+          {
+            "tag": "necklace",
+            "title": "necklace/amulet/bracelet",
+            "min": 20,
+            "max": 20
           }
         ],
         "additional": [
@@ -17192,8 +17144,8 @@
             "use_custom_dice": true,
             "variants": [
               {
-                "tag": "stone",
-                "title": "Stone/shell/bone/hair/horn (1 sp)",
+                "tag": "wood",
+                "title": "wood/stone/cloth/shell/bone/horn/feather (1 sp)",
                 "min": 1,
                 "max": 1,
                 "additional": [
@@ -17204,8 +17156,8 @@
                 ]
               },
               {
-                "tag": "wood",
-                "title": "Wood/ceramic/leather (1d4 sp)",
+                "tag": "ceramic",
+                "title": "ceramic/leather/crystal (1d4 sp)",
                 "min": 2,
                 "max": 2,
                 "additional": [
@@ -17240,8 +17192,8 @@
                 ]
               },
               {
-                "tag": "silver",
-                "title": "Silver/glass (1d10 sp)",
+                "tag": "quartz",
+                "title": "quartz/lapis lazuli/malachite/obsidian (1d10 sp)",
                 "min": 5,
                 "max": 5,
                 "additional": [
@@ -17252,9 +17204,21 @@
                 ]
               },
               {
-                "tag": "fine",
-                "title": "<i>Fine</i>, multiply value x2",
+                "tag": "quartz",
+                "title": "silver/glass/citrine/jasper (1d12 sp)",
                 "min": 6,
+                "max": 6,
+                "additional": [
+                  {
+                    "tag": "value",
+                    "roll_result": "d12"
+                  }
+                ]
+              },
+              {
+                "tag": "fine",
+                "title": "<i>Fine</i>, roll 1d6 for material, double base value",
+                "min": 7,
                 "max": 9,
                 "additional": [
                   {
@@ -17264,14 +17228,14 @@
                     },
                     "generate_outer": [
                       "booty.trinket.material",
-                      "d4+1"
+                      "d6"
                     ]
                   }
                 ]
               },
               {
                 "tag": "exquisite",
-                "title": "<i>Exquisite</i>, multiply value x4",
+                "title": "<i>Exquisite</i>, roll 1d6 for material, quadruple base value",
                 "min": 10,
                 "max": 12,
                 "additional": [
@@ -17282,7 +17246,7 @@
                     },
                     "generate_outer": [
                       "booty.trinket.material",
-                      "d4+1"
+                      "d6"
                     ]
                   }
                 ]
@@ -17408,73 +17372,65 @@
       },
       {
         "tag": "jewelry",
-        "dice": "d12",
+        "dice": "d20",
         "variants": [
           {
-            "tag": "box",
-            "title": "Box/case",
+            "tag": "earrings",
+            "title": "earrings/studs, multiply base value by 0.5",
             "min": 1,
             "max": 1
           },
           {
             "tag": "locket",
-            "title": "Locket/keepsake",
+            "title": "locket/charm/brooch/pin, multiply base value by 0.5",
             "min": 2,
             "max": 2
           },
           {
-            "tag": "earrings",
-            "title": "Earrings/studs",
-            "min": 3,
-            "max": 3
-          },
-          {
             "tag": "ring",
+            "title": "ring, multiply value by 0.5",
             "min": 4,
             "max": 4
           },
           {
             "tag": "bracelet",
-            "title": "Bracelet/anklet/armband",
+            "title": "Bracelet/anklet/armband, multiply base value by 1",
             "min": 5,
             "max": 5
           },
           {
-            "tag": "brooch",
-            "title": "Brooch/buckle/pin",
+            "tag": "necklace",
+            "title": "necklace/amulet/periapt, multiply base value by 1",
             "min": 6,
             "max": 6
           },
           {
-            "tag": "Belt",
-            "title": "belt/girdle/harness",
-            "min": 7,
-            "max": 7
-          },
-          {
-            "tag": "necklace",
-            "title": "Necklace/periapt",
+            "tag": "box",
+            "title": "box/case/canister, multiply base value by 1",
             "min": 8,
             "max": 8
           },
           {
+            "tag": "Belt",
+            "title": "belt/girdle/harness, multiply base value by 1",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "idol",
+            "title": "idol/icon/symbol/insignia, multiply base value by 1",
+            "min": 6,
+            "max": 6
+          },
+          {
             "tag": "scepter",
-            "title": "Scepter/orb",
+            "title": "scepter/orb/staff/rod, multiply base value by 2",
             "min": 9,
             "max": 9
           },
           {
-            "tag": "armor",
-            "title": "Jeweled/gilded ARMOR",
-            "min": 10,
-            "max": 10,
-            "additional": [
-              "booty.armor"
-            ]
-          },
-          {
             "tag": "weapon",
-            "title": "Jeweled/gilded WEAPON",
+            "title": "Jeweled/gilded WEAPON, multiply base value by 3",
             "min": 11,
             "max": 11,
             "additional": [
@@ -17482,8 +17438,17 @@
             ]
           },
           {
+            "tag": "armor",
+            "title": "Jeweled/gilded ARMOR, multiply base value by 3",
+            "min": 10,
+            "max": 10,
+            "additional": [
+              "booty.armor"
+            ]
+          },
+          {
             "tag": "circlet",
-            "title": "Circlet/tiara/crown",
+            "title": "circlet/tiara/crown/diadem, multiply base value by 4",
             "min": 12,
             "max": 12
           }
@@ -17504,7 +17469,7 @@
                 "max": 2,
                 "additional": [
                   {
-                    "tag": "value",
+                    "tag": "base value",
                     "roll_result": "d8"
                   }
                 ]
@@ -17516,7 +17481,7 @@
                 "max": 3,
                 "additional": [
                   {
-                    "tag": "value",
+                    "tag": "base value",
                     "roll_result": "2d10x2"
                   }
                 ]
@@ -17528,7 +17493,7 @@
                 "max": 4,
                 "additional": [
                   {
-                    "tag": "value",
+                    "tag": "base value",
                     "roll_result": "4d10x5"
                   }
                 ]
@@ -17540,7 +17505,7 @@
                 "max": 5,
                 "additional": [
                   {
-                    "tag": "value",
+                    "tag": "base value",
                     "roll_result": "2d10x2"
                   },
                   {
@@ -17559,7 +17524,7 @@
                 "max": 6,
                 "additional": [
                   {
-                    "tag": "value",
+                    "tag": "base value",
                     "roll_result": "4d10x5"
                   },
                   {
@@ -17620,7 +17585,8 @@
             "tag": "trade_good",
             "min": 1,
             "max": 3,
-            "dice": "d12",
+            "hint": "$diceHint",
+            "use_custom_dice": true,
             "variants": [
               {
                 "tag": "grain",
@@ -17685,8 +17651,8 @@
                 ]
               },
               {
-                "tag": "ingots",
-                "title": "Iron/copper ingots",
+                "tag": "ore",
+                "title": "ore (copper/iron, etc.)",
                 "min": 4,
                 "max": 4,
                 "additional": [
@@ -17737,7 +17703,7 @@
               },
               {
                 "tag": "grog",
-                "title": "Grog/wine/spirits",
+                "title": "beer/wine/spirits",
                 "min": 7,
                 "max": 7,
                 "additional": [
@@ -17824,7 +17790,7 @@
               },
               {
                 "tag": "silver_ingots",
-                "title": "Silver/gold ingots",
+                "title": "silver/gold/jewels",
                 "min": 12,
                 "max": 12,
                 "additional": [
@@ -17844,80 +17810,121 @@
             "tag": "art_object",
             "min": 4,
             "max": 7,
-            "dice": "d12",
+            "dice": "d20",
             "variants": [
               {
-                "tag": "box",
-                "title": "Box/coffer/chest",
+                "tag": "pipe",
+                "title": "pipe/cup/utensil, multiply base value by 0.25, weight 0",
                 "min": 1,
-                "max": 1
-              },
-              {
-                "tag": "tapestry",
-                "title": "Tapestry/hanging/quilt",
-                "min": 2,
                 "max": 2
               },
               {
-                "tag": "painting",
+                "tag": "book",
+                "title": "book/scroll/map, multiply base value by 1, weight 0",
                 "min": 3,
-                "max": 3
-              },
-              {
-                "tag": "statue",
-                "title": "Statue/bust/likeness",
-                "min": 4,
                 "max": 4
               },
               {
-                "tag": "carving",
+                "tag": "vase",
+                "title": "vase/urn/bowl/pot, multiply base value by 0.5, weight 1d2-1",
                 "min": 5,
-                "max": 5
-              },
-              {
-                "tag": "cup",
-                "title": "Cup/goblet/chalice",
-                "min": 6,
-                "max": 6
-              },
-              {
-                "tag": "candelabra",
-                "title": "Candelabra/brazier",
-                "min": 7,
-                "max": 7
-              },
-              {
-                "tag": "book",
-                "title": "Book/scroll",
-                "min": 8,
-                "max": 8
-              },
-              {
-                "tag": "mirror",
-                "title": "Mirror/hourglass/device",
-                "min": 9,
-                "max": 9
-              },
-              {
-                "tag": "desk",
-                "title": "Desk/table/shelving",
-                "min": 10,
-                "max": 10,
+                "max": 6,
                 "additional": [
-                  "booty.armor"
+                  {
+                    "tag": "weight",
+                    "roll_result": "1d2-1"
+                  }
                 ]
               },
               {
+                "tag": "cup",
+                "title": "cup/goblet/chalice, multiply base value by 0.5, weight 1d2-1",
+                "min": 7,
+                "max": 8,
+                "additional": [
+                  {
+                    "tag": "weight",
+                    "roll_result": "1d2-1"
+                  }
+                ]
+              },
+              {
+                "tag": "mirror",
+                "title": "mirror/hourglass/device, multiply base value by 1.5, weight 1d2-1",
+                "min": 9,
+                "max": 9,
+                "additional": [
+                  {
+                    "tag": "weight",
+                    "roll_result": "1d2-1"
+                  }
+                ]
+              },
+              {
+                "tag": "box",
+                "title": "box/case/coffer/chest, multiply base value by 1, weight 1d4",
+                "min": 10,
+                "max": 11,
+                "additional": [
+                  {
+                    "tag": "weight",
+                    "roll_result": "1d4"
+                  }
+                ]
+              },
+              {
+                "tag": "painting",
+                "title": "painting/mosaic, multiply base value by 1, weight 1d2",
+                "min": 12,
+                "max": 13,
+                "additional": [
+                  {
+                    "tag": "weight",
+                    "roll_result": "1d2"
+                  }
+                ]
+              },
+              {
+                "tag": "candelabra",
+                "title": "candelabra/brazier, multiply base value by 1, weight 1d2",
+                "min": 14,
+                "max": 14,
+                "additional": [
+                  {
+                    "tag": "weight",
+                    "roll_result": "1d2"
+                  }
+                ]
+              },
+              {
+                "tag": "statue",
+                "title": "statue/idol/bust, multiply base value by 2, weight 1d8",
+                "min": 15,
+                "max": 17,
+                "additional": [
+                  {
+                    "tag": "weight",
+                    "roll_result": "1d8"
+                  }
+                ]
+              },
+              {
+                "tag": "desk",
+                "title": "desk/table/dais/stand, multiply base value by 2, weight <i>unwieldy</i>",
+                "min": 18,
+                "max": 18
+              },
+              {
                 "tag": "dresser",
-                "title": "Dresser/armoire",
-                "min": 11,
-                "max": 11
+                "title": "Dresser/armoire, multiply base value by 2, weight <i>unwieldy</i>",
+                "min": 19,
+                "max": 19
               },
               {
                 "tag": "chair",
-                "title": "Chair/settee/throne",
-                "min": 12,
-                "max": 12
+                "title": "Chair/settee/throne, multiply base value by 2, weight <i>unwieldy</i>",
+                "min": 20,
+                "max": 20
               }
             ],
             "additional": [
@@ -17926,7 +17933,7 @@
             "dictionaries": [
               {
                 "tag": "quality",
-                "dice": "d12",
+                "hint": "$diceHint",
                 "use_custom_dice": true,
                 "variants": [
                   {
