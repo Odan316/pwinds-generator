@@ -1,3 +1,5 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 bower install
+
+php-fpm

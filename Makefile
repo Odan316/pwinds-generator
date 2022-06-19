@@ -1,7 +1,7 @@
 all: build-images up
 
 build-images:
-	docker-compose build
+	docker compose -p pwinds build --pull --no-cache
 
 up:
-	docker-compose -p pbta up
+	docker compose -p pwinds up webapp webserver
