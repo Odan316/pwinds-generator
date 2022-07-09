@@ -5760,7 +5760,7 @@
       },
       {
         "tag": "wilderness",
-        "dice": "d12",
+        "dice": "d8",
         "variants": [
           {
             "tag": "roll_twice",
@@ -5812,7 +5812,7 @@
       },
       {
         "tag": "dungeon",
-        "dice": "d12",
+        "dice": "d8",
         "variants": [
           {
             "tag": "roll_twice",
@@ -14209,7 +14209,7 @@
       {
         "tag": "beast",
         "min": 5,
-        "max": 9,
+        "max": 10,
         "dice": "d10",
         "variants": [
           {
@@ -16403,7 +16403,7 @@
             "min": 12,
             "max": 12,
             "additional": [
-              "booty.magic_item"
+              "booty.rarity.magic_item"
             ]
           }
         ]
@@ -16521,7 +16521,7 @@
             "min": 12,
             "max": 12,
             "additional": [
-              "booty.magic_item"
+              "booty.rarity.magic_item"
             ]
           }
         ]
@@ -16650,7 +16650,7 @@
             "min": 12,
             "max": 12,
             "additional": [
-              "booty.magic_item"
+              "booty.rarity.magic_item"
             ]
           }
         ]
@@ -17989,175 +17989,3085 @@
             "tag": "magic_item",
             "min": 8,
             "max": 12,
-            "dice": "d12",
+            "dice": "d20",
             "variants": [
               {
-                "tag": "salve",
-                "title": "Salve/ointment/potion/elixir",
+                "tag": "miscellaneous",
+                "title": "miscellaneous",
                 "min": 1,
-                "max": 2,
+                "max": 3,
                 "additional": [
-                  {
-                    "tag": "uses",
-                    "roll_result": "$dice"
-                  },
+                  "booty.magic_miscellaneous",
+                  "booty.magic_item_name",
+                  "booty.magic_power",
                   {
                     "tag": "value",
-                    "title": "Value per use",
                     "vars": {
-                      "$rollResultMultiply": "5"
+                      "$rollResultMultiply": "10"
                     },
-                    "roll_result": "2x$dice"
+                    "roll_result": "$dice"
                   }
                 ]
               },
               {
                 "tag": "spell_scroll",
-                "min": 3,
-                "max": 3,
+                "min": 4,
+                "max": 5,
                 "additional": [
+                  "miscellaneous.spell_name",
+                  "booty.magic_power",
                   {
                     "tag": "uses",
                     "static": "1"
                   },
                   {
                     "tag": "value",
-                    "vars": {
-                      "$rollResultMultiply": "10"
-                    },
-                    "roll_result": "5x$dice"
+                    "static": "10"
                   }
                 ]
               },
               {
-                "tag": "personal_item",
-                "title": "<i>Magical</i> PERSONAL ITEM",
-                "min": 4,
-                "max": 4,
-                "additional": [
-                  "booty.personal_item",
-                  {
-                    "tag": "value",
-                    "static": "as rolled, but x10"
-                  }
-                ]
-              },
-              {
-                "tag": "trinket",
-                "title": "<i>Magical</i> TRINKET",
-                "min": 5,
-                "max": 5,
-                "additional": [
-                  "booty.trinket",
-                  {
-                    "tag": "value",
-                    "static": "as rolled, but x10"
-                  }
-                ]
-              },
-              {
-                "tag": "gem",
-                "title": "<i>Magical</i> GEM",
+                "tag": "potion",
+                "title": "<i>Magical</i> potion",
                 "min": 6,
-                "max": 6,
+                "max": 8,
                 "additional": [
-                  "booty.gem",
+                  "booty.magic_potion",
+                  "booty.magic_item_name",
+                  "booty.magic_power",
+                  {
+                    "tag": "uses",
+                    "roll_result": "d4"
+                  },
                   {
                     "tag": "value",
-                    "static": "as rolled, but x10"
+                    "static": "10 per use"
+                  }
+                ]
+              },
+              {
+                "tag": "garb",
+                "title": "<i>Magical</i> GARB",
+                "min": 9,
+                "max": 10,
+                "additional": [
+                  "booty.garb",
+                  "booty.magic_item_name",
+                  "booty.magic_power",
+                  {
+                    "tag": "value",
+                    "roll_result": "$dice+$dice"
                   }
                 ]
               },
               {
                 "tag": "jewelry",
                 "title": "<i>Magical</i> JEWELRY",
-                "min": 7,
-                "max": 7,
+                "min": 11,
+                "max": 12,
                 "additional": [
                   "booty.jewelry",
+                  "booty.magic_item_name",
+                  "booty.magic_power",
                   {
                     "tag": "value",
-                    "static": "as rolled, but x10"
-                  }
-                ]
-              },
-              {
-                "tag": "art_object",
-                "title": "<i>Magical</i> ART OBJECT",
-                "min": 8,
-                "max": 8,
-                "additional": [
-                  "booty.rarity.art_object",
-                  {
-                    "tag": "value",
-                    "static": "as rolled, but x10"
-                  }
-                ]
-              },
-              {
-                "tag": "wand",
-                "title": "<i>Magical</i> wand/staff/rod/orb",
-                "min": 9,
-                "max": 9,
-                "additional": [
-                  {
-                    "tag": "value",
-                    "title": "Value per use",
                     "vars": {
-                      "$rollResultMultiply": "50"
+                      "$rollResultMultiply": "5"
                     },
-                    "roll_result": "2x$dice"
+                    "roll_result": "$dice+$dice"
                   }
                 ]
               },
               {
-                "tag": "spellbook",
-                "min": 10,
-                "max": 10,
+                "tag": "WAND",
+                "title": "<i>Magical</i> WAND/STAFF/ROD",
+                "min": 13,
+                "max": 14,
                 "additional": [
+                  "booty.wand",
+                  "booty.magic_item_name",
+                  "booty.magic_power",
                   {
-                    "tag": "value",
-                    "static": "priceless"
-                  }
-                ]
-              },
-              {
-                "tag": "armor",
-                "title": "<i>Magical</i> ARMOR",
-                "min": 11,
-                "max": 11,
-                "additional": [
-                  "booty.armor",
-                  {
-                    "tag": "value",
-                    "static": "(market value + 1bd) x10"
+                    "tag": "uses",
+                    "roll_result": "$dice+$dice"
                   },
                   {
-                    "tag": "bd_roll",
-                    "title": "BD roll",
-                    "roll_result": "$dice"
+                    "tag": "value",
+                    "static": "15"
                   }
                 ]
               },
               {
                 "tag": "weapon",
                 "title": "<i>Magical</i> WEAPON",
-                "min": 12,
-                "max": 12,
+                "min": 15,
+                "max": 17,
                 "additional": [
-                  "booty.weapon",
+                  "booty.magic_weapon",
+                  "booty.magic_item_name",
+                  "booty.magic_power",
                   {
                     "tag": "value",
-                    "static": "(market value + 1bd) x10"
-                  },
+                    "static": "(market value) x2"
+                  }
+                ]
+              },
+              {
+                "tag": "armor",
+                "title": "<i>Magical</i> ARMOR",
+                "min": 19,
+                "max": 20,
+                "additional": [
+                  "booty.magic_armor",
+                  "booty.magic_item_name",
+                  "booty.magic_power",
                   {
-                    "tag": "bd_roll",
-                    "title": "BD roll",
-                    "roll_result": "$dice"
+                    "tag": "value",
+                    "static": "(market value) x2"
                   }
                 ]
               }
             ]
+          }
+        ]
+      },
+      {
+        "tag": "magic_power",
+        "hint": "$diceHint",
+        "use_custom_dice": true,
+        "variants": [
+          {
+            "tag": "minor",
+            "title": "Minor, price x5, Examples: glow brightly, detect alignment, boost morale, heal minor wounds",
+            "min": 1,
+            "max": 4
+          },
+          {
+            "tag": "moderate",
+            "title": "Moderate, price x10, Examples: burn with holy fire, discern intent, heal major wounds",
+            "min": 5,
+            "max": 7
+          },
+          {
+            "tag": "major",
+            "title": "Major, price x25, Examples: cut metal with ease, control mind, animate dead",
+            "min": 8,
+            "max": 9
+          },
+          {
+            "tag": "spectacular",
+            "title": "Spectacular, price x100, Examples: destroy fortification, possess army, resurrect",
+            "min": 10,
+            "max": 11
+          },
+          {
+            "tag": "legendary",
+            "title": "Legendary, price x500, Examples: slay a god, ascend celestial throne, live forever",
+            "min": 12,
+            "max": 12
+          }
+        ]
+      },
+      {
+        "tag": "magic_item_name",
+        "dice": "d12",
+        "variants": [
+          {
+            "tag": "noun_item",
+            "title": "(The) [NOUN] [ITEM]",
+            "min": 1,
+            "max": 2,
+            "template": [
+              {
+                "static": "(The)"
+              },
+              {
+                "generate_outer": "booty.magic_item_name.noun"
+              },
+              {
+                "static": "[ITEM]"
+              }
+            ]
+          },
+          {
+            "tag": "adjective_item",
+            "title": "(The)[ADJECTIVE] [ITEM]",
+            "min": 3,
+            "max": 4,
+            "template": [
+              {
+                "static": "(The)"
+              },
+              {
+                "generate_outer": "booty.magic_item_name.adjective"
+              },
+              {
+                "static": "[ITEM]"
+              }
+            ]
+          },
+          {
+            "tag": "item_noun",
+            "title": "(The) [ITEM] of (the) [NOUN]",
+            "min": 5,
+            "max": 6,
+            "template": [
+              {
+                "static": "(The) [ITEM] of (the)"
+              },
+              {
+                "generate_outer": "booty.magic_item_name.noun"
+              }
+            ]
+          },
+          {
+            "tag": "adjective_item_noun",
+            "title": "(The)[ADJECTIVE] [ITEM] of (the) [NOUN]",
+            "min": 7,
+            "max": 8,
+            "template": [
+              {
+                "static": "(The)"
+              },
+              {
+                "generate_outer": "booty.magic_item_name.adjective"
+              },
+              {
+                "static": "[ITEM] of (the)"
+              },
+              {
+                "generate_outer": "booty.magic_item_name.noun"
+              }
+            ]
+          },
+          {
+            "tag": "wizard_item",
+            "title": "[WIZARD]'s [ITEM]",
+            "min": 9,
+            "max": 9,
+            "template": [
+              {
+                "generate_outer": "miscellaneous.spell_name.wizard_name_1"
+              },
+              {
+                "generate_outer": "miscellaneous.spell_name.wizard_name_2",
+                "concatenate": true
+              },
+              {
+                "static": "'s",
+                "concatenate": true
+              },
+              {
+                "static": "[ITEM]"
+              }
+            ]
+          },
+          {
+            "tag": "wizard_item_noun",
+            "title": "[WIZARD]'s [ITEM] of (the) [NOUN]",
+            "min": 10,
+            "max": 10,
+            "template": [
+              {
+                "generate_outer": "miscellaneous.spell_name.wizard_name_1"
+              },
+              {
+                "generate_outer": "miscellaneous.spell_name.wizard_name_2",
+                "concatenate": true
+              },
+              {
+                "static": "'s",
+                "concatenate": true
+              },
+              {
+                "static": "[ITEM]"
+              },
+              {
+                "generate_outer": "booty.magic_item_name.noun"
+              }
+            ]
+          },
+          {
+            "tag": "wizard_adjective_item",
+            "title": "[WIZARD]'s [ADJECTIVE] [ITEM]",
+            "min": 11,
+            "max": 11,
+            "template": [
+              {
+                "generate_outer": "miscellaneous.spell_name.wizard_name_1"
+              },
+              {
+                "generate_outer": "miscellaneous.spell_name.wizard_name_2",
+                "concatenate": true
+              },
+              {
+                "static": "'s",
+                "concatenate": true
+              },
+              {
+                "generate_outer": "booty.magic_item_name.adjective"
+              },
+              {
+                "static": "[ITEM]"
+              }
+            ]
+          },
+          {
+            "tag": "wizard_noun_item",
+            "title": "[WIZARD]'s [NOUN] [ITEM]",
+            "min": 12,
+            "max": 12,
+            "template": [
+              {
+                "generate_outer": "miscellaneous.spell_name.wizard_name_1"
+              },
+              {
+                "generate_outer": "miscellaneous.spell_name.wizard_name_2",
+                "concatenate": true
+              },
+              {
+                "static": "'s",
+                "concatenate": true
+              },
+              {
+                "generate_outer": "booty.magic_item_name.noun"
+              },
+              {
+                "static": "[ITEM]"
+              }
+            ]
+          }
+        ],
+        "dictionaries": [
+          {
+            "tag": "noun",
+            "dice": "d100",
+            "variants": [
+              {
+                "tag": "Air",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "Alacrity",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "Autumn",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "Beast",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "Blood",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "Bone",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "Celestial",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "Charm",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "Agility",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "Control",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "Cosmos",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "Darkness",
+                "min": 12,
+                "max": 12
+              },
+              {
+                "tag": "Death",
+                "min": 13,
+                "max": 13
+              },
+              {
+                "tag": "Defense",
+                "min": 14,
+                "max": 14
+              },
+              {
+                "tag": "Deflection",
+                "min": 15,
+                "max": 15
+              },
+              {
+                "tag": "Destruction",
+                "min": 16,
+                "max": 16
+              },
+              {
+                "tag": "Dominance",
+                "min": 17,
+                "max": 17
+              },
+              {
+                "tag": "Earth",
+                "min": 18,
+                "max": 18
+              },
+              {
+                "tag": "Envy",
+                "min": 19,
+                "max": 19
+              },
+              {
+                "tag": "Fire",
+                "min": 20,
+                "max": 20
+              },
+              {
+                "tag": "Flight",
+                "min": 21,
+                "max": 21
+              },
+              {
+                "tag": "Foe",
+                "min": 22,
+                "max": 22
+              },
+              {
+                "tag": "Force",
+                "min": 23,
+                "max": 23
+              },
+              {
+                "tag": "Fortitude",
+                "min": 24,
+                "max": 24
+              },
+              {
+                "tag": "Fortune",
+                "min": 25,
+                "max": 25
+              },
+              {
+                "tag": "Fury",
+                "min": 26,
+                "max": 26
+              },
+              {
+                "tag": "Glory",
+                "min": 27,
+                "max": 27
+              },
+              {
+                "tag": "Gluttony",
+                "min": 28,
+                "max": 28
+              },
+              {
+                "tag": "Grace",
+                "min": 29,
+                "max": 29
+              },
+              {
+                "tag": "Greed",
+                "min": 30,
+                "max": 30
+              },
+              {
+                "tag": "Hand",
+                "min": 31,
+                "max": 31
+              },
+              {
+                "tag": "Hate",
+                "min": 32,
+                "max": 32
+              },
+              {
+                "tag": "Healing",
+                "min": 33,
+                "max": 33
+              },
+              {
+                "tag": "Health",
+                "min": 34,
+                "max": 34
+              },
+              {
+                "tag": "Heart",
+                "min": 35,
+                "max": 35
+              },
+              {
+                "tag": "Heroism",
+                "min": 36,
+                "max": 36
+              },
+              {
+                "tag": "Humility",
+                "min": 37,
+                "max": 37
+              },
+              {
+                "tag": "Ice",
+                "min": 38,
+                "max": 38
+              },
+              {
+                "tag": "Ineptitude",
+                "min": 39,
+                "max": 39
+              },
+              {
+                "tag": "Insight",
+                "min": 40,
+                "max": 40
+              },
+              {
+                "tag": "Intellect",
+                "min": 41,
+                "max": 41
+              },
+              {
+                "tag": "Invocation",
+                "min": 42,
+                "max": 42
+              },
+              {
+                "tag": "Invulnerability",
+                "min": 43,
+                "max": 43
+              },
+              {
+                "tag": "Judgement",
+                "min": 44,
+                "max": 44
+              },
+              {
+                "tag": "Levitation",
+                "min": 45,
+                "max": 45
+              },
+              {
+                "tag": "Life",
+                "min": 46,
+                "max": 46
+              },
+              {
+                "tag": "Light",
+                "min": 47,
+                "max": 47
+              },
+              {
+                "tag": "Love",
+                "min": 48,
+                "max": 48
+              },
+              {
+                "tag": "Luck",
+                "min": 49,
+                "max": 49
+              },
+              {
+                "tag": "Magic",
+                "min": 50,
+                "max": 50
+              },
+              {
+                "tag": "Mercy",
+                "min": 51,
+                "max": 51
+              },
+              {
+                "tag": "Might",
+                "min": 52,
+                "max": 52
+              },
+              {
+                "tag": "Mistake",
+                "min": 53,
+                "max": 53
+              },
+              {
+                "tag": "Moon",
+                "min": 54,
+                "max": 54
+              },
+              {
+                "tag": "Mountain",
+                "min": 55,
+                "max": 55
+              },
+              {
+                "tag": "Necromancy",
+                "min": 56,
+                "max": 56
+              },
+              {
+                "tag": "Night",
+                "min": 57,
+                "max": 57
+              },
+              {
+                "tag": "Patience",
+                "min": 58,
+                "max": 58
+              },
+              {
+                "tag": "Poison",
+                "min": 59,
+                "max": 59
+              },
+              {
+                "tag": "Power",
+                "min": 60,
+                "max": 60
+              },
+              {
+                "tag": "Pride",
+                "min": 61,
+                "max": 61
+              },
+              {
+                "tag": "Puissance",
+                "min": 62,
+                "max": 62
+              },
+              {
+                "tag": "Resistance",
+                "min": 63,
+                "max": 63
+              },
+              {
+                "tag": "River",
+                "min": 64,
+                "max": 64
+              },
+              {
+                "tag": "Sacrifice",
+                "min": 65,
+                "max": 65
+              },
+              {
+                "tag": "Sea",
+                "min": 66,
+                "max": 66
+              },
+              {
+                "tag": "Shadow",
+                "min": 67,
+                "max": 67
+              },
+              {
+                "tag": "Sight",
+                "min": 68,
+                "max": 68
+              },
+              {
+                "tag": "Silence",
+                "min": 69,
+                "max": 69
+              },
+              {
+                "tag": "Sloth",
+                "min": 70,
+                "max": 70
+              },
+              {
+                "tag": "Song",
+                "min": 71,
+                "max": 71
+              },
+              {
+                "tag": "Sorcery",
+                "min": 72,
+                "max": 72
+              },
+              {
+                "tag": "Soul",
+                "min": 73,
+                "max": 73
+              },
+              {
+                "tag": "Speed",
+                "min": 74,
+                "max": 74
+              },
+              {
+                "tag": "Spring",
+                "min": 75,
+                "max": 75
+              },
+              {
+                "tag": "Stars",
+                "min": 76,
+                "max": 76
+              },
+              {
+                "tag": "Stone",
+                "min": 77,
+                "max": 77
+              },
+              {
+                "tag": "Storm",
+                "min": 78,
+                "max": 78
+              },
+              {
+                "tag": "Strength",
+                "min": 79,
+                "max": 79
+              },
+              {
+                "tag": "Stride",
+                "min": 80,
+                "max": 80
+              },
+              {
+                "tag": "Submission",
+                "min": 81,
+                "max": 81
+              },
+              {
+                "tag": "Summer",
+                "min": 82,
+                "max": 82
+              },
+              {
+                "tag": "Summoning",
+                "min": 83,
+                "max": 83
+              },
+              {
+                "tag": "Sun",
+                "min": 84,
+                "max": 84
+              },
+              {
+                "tag": "Swimming",
+                "min": 85,
+                "max": 85
+              },
+              {
+                "tag": "Thunder",
+                "min": 86,
+                "max": 86
+              },
+              {
+                "tag": "Trickery",
+                "min": 87,
+                "max": 87
+              },
+              {
+                "tag": "Venom",
+                "min": 88,
+                "max": 88
+              },
+              {
+                "tag": "Voice",
+                "min": 89,
+                "max": 89
+              },
+              {
+                "tag": "Void",
+                "min": 90,
+                "max": 90
+              },
+              {
+                "tag": "Vulnerability",
+                "min": 91,
+                "max": 91
+              },
+              {
+                "tag": "Warding",
+                "min": 92,
+                "max": 92
+              },
+              {
+                "tag": "Water",
+                "min": 93,
+                "max": 93
+              },
+              {
+                "tag": "Weakness",
+                "min": 94,
+                "max": 94
+              },
+              {
+                "tag": "Wind",
+                "min": 95,
+                "max": 95
+              },
+              {
+                "tag": "Winter",
+                "min": 96,
+                "max": 96
+              },
+              {
+                "tag": "Wisdom",
+                "min": 97,
+                "max": 97
+              },
+              {
+                "tag": "Word",
+                "min": 98,
+                "max": 98
+              },
+              {
+                "tag": "Wrath",
+                "min": 99,
+                "max": 99
+              },
+              {
+                "tag": "Zeal",
+                "min": 100,
+                "max": 100
+              }
+            ]
+          },
+          {
+            "tag": "adjective",
+            "dice": "d100",
+            "variants": [
+              {
+                "tag": "Accursed",
+                "title": "Accursed",
+                "min": 1,
+                "max": 1
+              },
+              {
+                "tag": "all_seeing",
+                "title": "All-seeing",
+                "min": 2,
+                "max": 2
+              },
+              {
+                "tag": "arcane",
+                "min": 3,
+                "max": 3
+              },
+              {
+                "tag": "befuddling",
+                "min": 4,
+                "max": 4
+              },
+              {
+                "tag": "binding",
+                "min": 5,
+                "max": 5
+              },
+              {
+                "tag": "Bitter",
+                "min": 6,
+                "max": 6
+              },
+              {
+                "tag": "Black",
+                "min": 7,
+                "max": 7
+              },
+              {
+                "tag": "Blazing",
+                "min": 8,
+                "max": 8
+              },
+              {
+                "tag": "Blessed",
+                "min": 9,
+                "max": 9
+              },
+              {
+                "tag": "Blinding",
+                "min": 10,
+                "max": 10
+              },
+              {
+                "tag": "Bright",
+                "min": 11,
+                "max": 11
+              },
+              {
+                "tag": "Broken",
+                "min": 12,
+                "max": 12
+              },
+              {
+                "tag": "Burning",
+                "min": 13,
+                "max": 13
+              },
+              {
+                "tag": "Capacious",
+                "min": 14,
+                "max": 14
+              },
+              {
+                "tag": "Cerulean",
+                "min": 15,
+                "max": 15
+              },
+              {
+                "tag": "Concealing",
+                "min": 16,
+                "max": 16
+              },
+              {
+                "tag": "Confusing",
+                "min": 17,
+                "max": 17
+              },
+              {
+                "tag": "Consuming",
+                "min": 18,
+                "max": 18
+              },
+              {
+                "tag": "Crimson",
+                "min": 19,
+                "max": 19
+              },
+              {
+                "tag": "Dark",
+                "min": 20,
+                "max": 20
+              },
+              {
+                "tag": "Dazzling",
+                "min": 21,
+                "max": 21
+              },
+              {
+                "tag": "Deafening",
+                "min": 22,
+                "max": 22
+              },
+              {
+                "tag": "Delicate",
+                "min": 23,
+                "max": 23
+              },
+              {
+                "tag": "Demonic",
+                "min": 24,
+                "max": 24
+              },
+              {
+                "tag": "Devastating",
+                "min": 25,
+                "max": 25
+              },
+              {
+                "tag": "Devilish",
+                "min": 26,
+                "max": 26
+              },
+              {
+                "tag": "Dim",
+                "min": 27,
+                "max": 27
+              },
+              {
+                "tag": "Draining",
+                "min": 28,
+                "max": 28
+              },
+              {
+                "tag": "Dwarven",
+                "min": 29,
+                "max": 29
+              },
+              {
+                "tag": "Eldritch",
+                "min": 30,
+                "max": 30
+              },
+              {
+                "tag": "Elvish",
+                "min": 31,
+                "max": 31
+              },
+              {
+                "tag": "Empowering",
+                "min": 32,
+                "max": 32
+              },
+              {
+                "tag": "Enlightening",
+                "min": 33,
+                "max": 33
+              },
+              {
+                "tag": "Ensorcelling",
+                "min": 34,
+                "max": 34
+              },
+              {
+                "tag": "Entangling",
+                "min": 35,
+                "max": 35
+              },
+              {
+                "tag": "Enveloping",
+                "min": 36,
+                "max": 36
+              },
+              {
+                "tag": "Excruciating",
+                "min": 37,
+                "max": 37
+              },
+              {
+                "tag": "extra_planar",
+                "title": "Extra-planar",
+                "min": 38,
+                "max": 38
+              },
+              {
+                "tag": "Fearsome",
+                "min": 39,
+                "max": 39
+              },
+              {
+                "tag": "Flaming",
+                "min": 40,
+                "max": 40
+              },
+              {
+                "tag": "Floating",
+                "min": 41,
+                "max": 41
+              },
+              {
+                "tag": "Frozen",
+                "min": 42,
+                "max": 42
+              },
+              {
+                "tag": "Glittering",
+                "min": 43,
+                "max": 43
+              },
+              {
+                "tag": "Healing",
+                "min": 44,
+                "max": 44
+              },
+              {
+                "tag": "Hindering",
+                "min": 45,
+                "max": 45
+              },
+              {
+                "tag": "Icy",
+                "min": 46,
+                "max": 46
+              },
+              {
+                "tag": "Illusory",
+                "min": 47,
+                "max": 47
+              },
+              {
+                "tag": "Ingenious",
+                "min": 48,
+                "max": 48
+              },
+              {
+                "tag": "Instant",
+                "min": 49,
+                "max": 49
+              },
+              {
+                "tag": "Invigorating",
+                "min": 50,
+                "max": 50
+              },
+              {
+                "tag": "Invisible",
+                "min": 51,
+                "max": 51
+              },
+              {
+                "tag": "Invulnerable",
+                "min": 52,
+                "max": 52
+              },
+              {
+                "tag": "Iron",
+                "min": 53,
+                "max": 53
+              },
+              {
+                "tag": "Irresistible",
+                "min": 54,
+                "max": 54
+              },
+              {
+                "tag": "Liberating",
+                "min": 55,
+                "max": 55
+              },
+              {
+                "tag": "Lordly",
+                "min": 56,
+                "max": 56
+              },
+              {
+                "tag": "Maddening",
+                "min": 57,
+                "max": 57
+              },
+              {
+                "tag": "Magnificent",
+                "min": 58,
+                "max": 58
+              },
+              {
+                "tag": "many_colored",
+                "title": "Many-colored",
+                "min": 59,
+                "max": 59
+              },
+              {
+                "tag": "Mighty",
+                "min": 60,
+                "max": 60
+              },
+              {
+                "tag": "Most_Excellent",
+                "title": "Most_Excellent",
+                "min": 61,
+                "max": 61
+              },
+              {
+                "tag": "Oozing",
+                "min": 62,
+                "max": 62
+              },
+              {
+                "tag": "Piercing",
+                "min": 63,
+                "max": 63
+              },
+              {
+                "tag": "Poisonous",
+                "min": 64,
+                "max": 64
+              },
+              {
+                "tag": "Prismatic",
+                "min": 65,
+                "max": 65
+              },
+              {
+                "tag": "Radiant",
+                "min": 66,
+                "max": 66
+              },
+              {
+                "tag": "Red",
+                "min": 67,
+                "max": 67
+              },
+              {
+                "tag": "rejuvenating",
+                "min": 68,
+                "max": 68
+              },
+              {
+                "tag": "restorative",
+                "min": 69,
+                "max": 69
+              },
+              {
+                "tag": "Scintillating",
+                "min": 70,
+                "max": 70
+              },
+              {
+                "tag": "screaming",
+                "min": 71,
+                "max": 71
+              },
+              {
+                "tag": "shimmering",
+                "min": 72,
+                "max": 72
+              },
+              {
+                "tag": "shining",
+                "min": 73,
+                "max": 73
+              },
+              {
+                "tag": "Shivering",
+                "min": 74,
+                "max": 74
+              },
+              {
+                "tag": "sleeping",
+                "min": 75,
+                "max": 75
+              },
+              {
+                "tag": "slow",
+                "min": 76,
+                "max": 76
+              },
+              {
+                "tag": "Splintered",
+                "min": 77,
+                "max": 77
+              },
+              {
+                "tag": "Strange",
+                "min": 78,
+                "max": 78
+              },
+              {
+                "tag": "Stupefying",
+                "min": 79,
+                "max": 79
+              },
+              {
+                "tag": "Terrible",
+                "min": 80,
+                "max": 80
+              },
+              {
+                "tag": "Thirsty",
+                "min": 81,
+                "max": 81
+              },
+              {
+                "tag": "Thundering",
+                "min": 82,
+                "max": 82
+              },
+              {
+                "tag": "Transforming",
+                "min": 83,
+                "max": 83
+              },
+              {
+                "tag": "Uncontrollable",
+                "min": 84,
+                "max": 84
+              },
+              {
+                "tag": "Unseen",
+                "min": 85,
+                "max": 85
+              },
+              {
+                "tag": "Unstoppable",
+                "min": 86,
+                "max": 86
+              },
+              {
+                "tag": "Untiring",
+                "min": 87,
+                "max": 87
+              },
+              {
+                "tag": "Vengeful",
+                "min": 88,
+                "max": 88
+              },
+              {
+                "tag": "Vexing",
+                "min": 89,
+                "max": 89
+              },
+              {
+                "tag": "Violent",
+                "min": 90,
+                "max": 90
+              },
+              {
+                "tag": "Violet",
+                "min": 91,
+                "max": 91
+              },
+              {
+                "tag": "Viridian",
+                "min": 92,
+                "max": 92
+              },
+              {
+                "tag": "Weakening",
+                "min": 93,
+                "max": 93
+              },
+              {
+                "tag": "White",
+                "min": 94,
+                "max": 94
+              },
+              {
+                "tag": "Wondrous",
+                "min": 95,
+                "max": 95
+              },
+              {
+                "tag": "Yellow",
+                "min": 96,
+                "max": 96
+              },
+              {
+                "tag": "Weakening",
+                "min": 97,
+                "max": 97
+              },
+              {
+                "tag": "White",
+                "min": 98,
+                "max": 98
+              },
+              {
+                "tag": "Wondrous",
+                "min": 99,
+                "max": 99
+              },
+              {
+                "tag": "Yellow",
+                "min": 100,
+                "max": 100
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "magic_miscellaneous",
+        "dice": "d100",
+        "variants": [
+          {
+            "tag": "Bag",
+            "title": "Bag",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "Banner",
+            "title": "Banner",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "Barrel",
+            "title": "Barrel",
+            "min": 3,
+            "max": 3
+          },
+          {
+            "tag": "Bed",
+            "title": "Bed",
+            "min": 4,
+            "max": 4
+          },
+          {
+            "tag": "Blanket",
+            "title": "Blanket",
+            "min": 5,
+            "max": 5
+          },
+          {
+            "tag": "Boat",
+            "title": "Boat",
+            "min": 6,
+            "max": 6
+          },
+          {
+            "tag": "Book",
+            "title": "Book",
+            "min": 7,
+            "max": 7
+          },
+          {
+            "tag": "Bottle",
+            "title": "Bottle",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "Bowl",
+            "title": "Bowl",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "Box",
+            "title": "Box",
+            "min": 10,
+            "max": 10
+          },
+          {
+            "tag": "Bucket",
+            "title": "Bucket",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "Cabinet",
+            "title": "Cabinet",
+            "min": 12,
+            "max": 12
+          },
+          {
+            "tag": "Candle",
+            "title": "Candle",
+            "min": 13,
+            "max": 13
+          },
+          {
+            "tag": "Carpet",
+            "title": "Carpet",
+            "min": 14,
+            "max": 14
+          },
+          {
+            "tag": "Case",
+            "title": "Case",
+            "min": 15,
+            "max": 15
+          },
+          {
+            "tag": "Cauldron",
+            "title": "Cauldron",
+            "min": 16,
+            "max": 16
+          },
+          {
+            "tag": "Chain",
+            "title": "Chain",
+            "min": 17,
+            "max": 17
+          },
+          {
+            "tag": "Chair",
+            "title": "Chair",
+            "min": 18,
+            "max": 18
+          },
+          {
+            "tag": "Charm",
+            "title": "Charm",
+            "min": 19,
+            "max": 19
+          },
+          {
+            "tag": "Chest",
+            "title": "Chest",
+            "min": 20,
+            "max": 20
+          },
+          {
+            "tag": "Claw",
+            "title": "Claw",
+            "min": 21,
+            "max": 21
+          },
+          {
+            "tag": "Coffer",
+            "title": "Coffer",
+            "min": 22,
+            "max": 22
+          },
+          {
+            "tag": "Cup",
+            "title": "Cup",
+            "min": 23,
+            "max": 23
+          },
+          {
+            "tag": "Cushion",
+            "title": "Cushion",
+            "min": 24,
+            "max": 24
+          },
+          {
+            "tag": "Decanter",
+            "title": "Decanter",
+            "min": 25,
+            "max": 25
+          },
+          {
+            "tag": "Drum",
+            "title": "Drum",
+            "min": 26,
+            "max": 26
+          },
+          {
+            "tag": "Ewer",
+            "title": "Ewer",
+            "min": 27,
+            "max": 27
+          },
+          {
+            "tag": "Fang",
+            "title": "Fang",
+            "min": 28,
+            "max": 28
+          },
+          {
+            "tag": "Finger",
+            "title": "Finger",
+            "min": 29,
+            "max": 29
+          },
+          {
+            "tag": "Flag",
+            "title": "Flag",
+            "min": 30,
+            "max": 31
+          },
+          {
+            "tag": "Flagon",
+            "title": "Flagon",
+            "min": 31,
+            "max": 31
+          },
+          {
+            "tag": "Flask",
+            "title": "Flask",
+            "min": 32,
+            "max": 32
+          },
+          {
+            "tag": "Flute",
+            "title": "Flute",
+            "min": 33,
+            "max": 33
+          },
+          {
+            "tag": "Fork",
+            "title": "Fork",
+            "min": 34,
+            "max": 34
+          },
+          {
+            "tag": "Gem",
+            "title": "Gem",
+            "min": 35,
+            "max": 35,
+            "additional": [
+              "booty.gem"
+            ]
+          },
+          {
+            "tag": "Glass",
+            "title": "Glass",
+            "min": 36,
+            "max": 36
+          },
+          {
+            "tag": "Glyph",
+            "title": "Glyph",
+            "min": 37,
+            "max": 37
+          },
+          {
+            "tag": "Goblet",
+            "title": "Goblet",
+            "min": 38,
+            "max": 39
+          },
+          {
+            "tag": "Golem",
+            "title": "Golem",
+            "min": 39,
+            "max": 39
+          },
+          {
+            "tag": "Gong",
+            "title": "Gong",
+            "min": 40,
+            "max": 40
+          },
+          {
+            "tag": "Hand",
+            "title": "Hand",
+            "min": 41,
+            "max": 41
+          },
+          {
+            "tag": "Harp",
+            "title": "Harp",
+            "min": 42,
+            "max": 42
+          },
+          {
+            "tag": "Head",
+            "title": "Head",
+            "min": 43,
+            "max": 43
+          },
+          {
+            "tag": "Heart",
+            "title": "Heart",
+            "min": 44,
+            "max": 44
+          },
+          {
+            "tag": "Hook",
+            "title": "Hook",
+            "min": 45,
+            "max": 45
+          },
+          {
+            "tag": "Horn",
+            "title": "Horn",
+            "min": 46,
+            "max": 46
+          },
+          {
+            "tag": "Hourglass",
+            "title": "Hourglass",
+            "min": 47,
+            "max": 47
+          },
+          {
+            "tag": "Jewel",
+            "title": "Jewel",
+            "min": 48,
+            "max": 48
+          },
+          {
+            "tag": "Jug",
+            "title": "Jug",
+            "min": 49,
+            "max": 49
+          },
+          {
+            "tag": "Kettle",
+            "title": "Kettle",
+            "min": 50,
+            "max": 50
+          },
+          {
+            "tag": "Key",
+            "title": "Key",
+            "min": 51,
+            "max": 51
+          },
+          {
+            "tag": "Lamp",
+            "title": "Lamp",
+            "min": 52,
+            "max": 52
+          },
+          {
+            "tag": "Lantern",
+            "title": "Lantern",
+            "min": 53,
+            "max": 53
+          },
+          {
+            "tag": "Light",
+            "title": "Light",
+            "min": 54,
+            "max": 54
+          },
+          {
+            "tag": "Lock",
+            "title": "Lock",
+            "min": 55,
+            "max": 55
+          },
+          {
+            "tag": "Looking_Glass",
+            "title": "Looking Glass",
+            "min": 56,
+            "max": 56
+          },
+          {
+            "tag": "Lute",
+            "title": "Lute",
+            "min": 57,
+            "max": 57
+          },
+          {
+            "tag": "Lyre",
+            "title": "Lyre",
+            "min": 58,
+            "max": 58
+          },
+          {
+            "tag": "Manacles",
+            "title": "Manacles",
+            "min": 59,
+            "max": 59
+          },
+          {
+            "tag": "Map",
+            "title": "Map",
+            "min": 60,
+            "max": 60
+          },
+          {
+            "tag": "Mark",
+            "title": "Mark",
+            "min": 61,
+            "max": 61
+          },
+          {
+            "tag": "Mirror",
+            "title": "Mirror",
+            "min": 62,
+            "max": 62
+          },
+          {
+            "tag": "Net",
+            "title": "Net",
+            "min": 63,
+            "max": 63
+          },
+          {
+            "tag": "Orb",
+            "title": "Orb",
+            "min": 64,
+            "max": 64
+          },
+          {
+            "tag": "Phial",
+            "title": "Phial",
+            "min": 65,
+            "max": 65
+          },
+          {
+            "tag": "Pillow",
+            "title": "Pillow",
+            "min": 66,
+            "max": 66
+          },
+          {
+            "tag": "Pipes",
+            "title": "Pipes",
+            "min": 67,
+            "max": 67
+          },
+          {
+            "tag": "Pitchfork",
+            "title": "Pitchfork",
+            "min": 68,
+            "max": 68
+          },
+          {
+            "tag": "Pot",
+            "title": "Pot",
+            "min": 69,
+            "max": 69
+          },
+          {
+            "tag": "Pouch",
+            "title": "Pouch",
+            "min": 70,
+            "max": 70
+          },
+          {
+            "tag": "Purse",
+            "title": "Purse",
+            "min": 71,
+            "max": 71
+          },
+          {
+            "tag": "Quill",
+            "title": "Quill",
+            "min": 72,
+            "max": 72
+          },
+          {
+            "tag": "Quilt",
+            "title": "Quilt",
+            "min": 73,
+            "max": 73
+          },
+          {
+            "tag": "Rope",
+            "title": "Rope",
+            "min": 74,
+            "max": 74
+          },
+          {
+            "tag": "Rug",
+            "title": "Rug",
+            "min": 75,
+            "max": 75
+          },
+          {
+            "tag": "Rune",
+            "title": "Rune",
+            "min": 76,
+            "max": 76
+          },
+          {
+            "tag": "Sack",
+            "title": "Sack",
+            "min": 77,
+            "max": 77
+          },
+          {
+            "tag": "Scabbard",
+            "title": "Scabbard",
+            "min": 78,
+            "max": 78
+          },
+          {
+            "tag": "Shard",
+            "title": "Shard",
+            "min": 79,
+            "max": 79
+          },
+          {
+            "tag": "Sheath",
+            "title": "Sheath",
+            "min": 80,
+            "max": 80
+          },
+          {
+            "tag": "Ship",
+            "title": "Ship",
+            "min": 81,
+            "max": 81
+          },
+          {
+            "tag": "Sigil",
+            "title": "Sigil",
+            "min": 82,
+            "max": 82
+          },
+          {
+            "tag": "Skull",
+            "title": "Skull",
+            "min": 83,
+            "max": 83
+          },
+          {
+            "tag": "Sphere",
+            "title": "Sphere",
+            "min": 84,
+            "max": 84
+          },
+          {
+            "tag": "Splinter",
+            "title": "Splinter",
+            "min": 85,
+            "max": 85
+          },
+          {
+            "tag": "Spoon",
+            "title": "Spoon",
+            "min": 86,
+            "max": 86
+          },
+          {
+            "tag": "Steed",
+            "title": "Steed",
+            "min": 87,
+            "max": 87
+          },
+          {
+            "tag": "Stone",
+            "title": "Stone",
+            "min": 88,
+            "max": 88
+          },
+          {
+            "tag": "Sundial",
+            "title": "Sundial",
+            "min": 89,
+            "max": 89
+          },
+          {
+            "tag": "Symbol",
+            "title": "Symbol",
+            "min": 90,
+            "max": 90
+          },
+          {
+            "tag": "Throne",
+            "title": "Throne",
+            "min": 91,
+            "max": 91
+          },
+          {
+            "tag": "Tome",
+            "title": "Tome",
+            "min": 92,
+            "max": 92
+          },
+          {
+            "tag": "Tool",
+            "title": "Tool",
+            "min": 93,
+            "max": 93
+          },
+          {
+            "tag": "Tooth",
+            "title": "Tooth",
+            "min": 94,
+            "max": 94
+          },
+          {
+            "tag": "Totem",
+            "title": "Totem",
+            "min": 95,
+            "max": 95
+          },
+          {
+            "tag": "Urn",
+            "title": "Urn",
+            "min": 96,
+            "max": 96
+          },
+          {
+            "tag": "Vase",
+            "title": "Vase",
+            "min": 97,
+            "max": 97
+          },
+          {
+            "tag": "Well",
+            "title": "Well",
+            "min": 98,
+            "max": 98
+          },
+          {
+            "tag": "Wine",
+            "title": "Wine",
+            "min": 99,
+            "max": 99
+          },
+          {
+            "tag": "Yoke",
+            "title": "Yoke",
+            "min": 100,
+            "max": 100
+          }
+        ]
+      },
+      {
+        "tag": "magic_potion",
+        "dice": "d100",
+        "variants": [
+          {
+            "tag": "Balm",
+            "title": "Balm",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "tag": "Brew",
+            "title": "Brew",
+            "min": 3,
+            "max": 4
+          },
+          {
+            "tag": "Dust",
+            "title": "Dust",
+            "min": 5,
+            "max": 9
+          },
+          {
+            "tag": "Elixir",
+            "title": "Elixir",
+            "min": 10,
+            "max": 24
+          },
+          {
+            "tag": "Glue",
+            "title": "Glue",
+            "min": 25,
+            "max": 26
+          },
+          {
+            "tag": "Oil",
+            "title": "Oil",
+            "min": 27,
+            "max": 36
+          },
+          {
+            "tag": "Ointment",
+            "title": "Ointment",
+            "min": 37,
+            "max": 38
+          },
+          {
+            "tag": "Philter",
+            "title": "Philter",
+            "min": 39,
+            "max": 40
+          },
+          {
+            "tag": "Potation",
+            "title": "Potation",
+            "min": 41,
+            "max": 42
+          },
+          {
+            "tag": "Potion",
+            "title": "Potion",
+            "min": 43,
+            "max": 73
+          },
+          {
+            "tag": "Powder",
+            "title": "Powder",
+            "min": 74,
+            "max": 78
+          },
+          {
+            "tag": "Salve",
+            "title": "Salve",
+            "min": 79,
+            "max": 88
+          },
+          {
+            "tag": "Sap",
+            "title": "Sap",
+            "min": 89,
+            "max": 90
+          },
+          {
+            "tag": "Solution",
+            "title": "Solution",
+            "min": 91,
+            "max": 92
+          },
+          {
+            "tag": "Tincture",
+            "title": "Tincture",
+            "min": 93,
+            "max": 94
+          },
+          {
+            "tag": "Tonic",
+            "title": "Tonic",
+            "min": 95,
+            "max": 96
+          },
+          {
+            "tag": "Unguent",
+            "title": "Unguent",
+            "min": 97,
+            "max": 100
+          }
+        ]
+      },
+      {
+        "tag": "magic_garb",
+        "dice": "d100",
+        "variants": [
+          {
+            "tag": "Apron",
+            "title": "Apron",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "Band",
+            "title": "Band",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "Belt",
+            "title": "Belt",
+            "min": 3,
+            "max": 12
+          },
+          {
+            "tag": "Blouse",
+            "title": "Blouse",
+            "min": 13,
+            "max": 13
+          },
+          {
+            "tag": "Boots",
+            "title": "Boots",
+            "min": 14,
+            "max": 23
+          },
+          {
+            "tag": "Cap",
+            "title": "Cap",
+            "min": 24,
+            "max": 28
+          },
+          {
+            "tag": "Cape",
+            "title": "Cape",
+            "min": 29,
+            "max": 33
+          },
+          {
+            "tag": "Cloak",
+            "title": "Cloak",
+            "min": 34,
+            "max": 45
+          },
+          {
+            "tag": "Coat",
+            "title": "Coat",
+            "min": 46,
+            "max": 46
+          },
+          {
+            "tag": "Cowl",
+            "title": "Cowl",
+            "min": 47,
+            "max": 47
+          },
+          {
+            "tag": "Dress",
+            "title": "Dress",
+            "min": 48,
+            "max": 48
+          },
+          {
+            "tag": "Garb",
+            "title": "Garb",
+            "min": 49,
+            "max": 49
+          },
+          {
+            "tag": "Garment",
+            "title": "Garment",
+            "min": 50,
+            "max": 50
+          },
+          {
+            "tag": "Girdle",
+            "title": "Girdle",
+            "min": 51,
+            "max": 51
+          },
+          {
+            "tag": "Glove",
+            "title": "Glove(s)",
+            "min": 52,
+            "max": 61
+          },
+          {
+            "tag": "Gown",
+            "title": "Gown",
+            "min": 62,
+            "max": 62
+          },
+          {
+            "tag": "Hat",
+            "title": "Hat",
+            "min": 63,
+            "max": 63
+          },
+          {
+            "tag": "Hood",
+            "title": "Hood",
+            "min": 64,
+            "max": 64
+          },
+          {
+            "tag": "Jacket",
+            "title": "Jacket",
+            "min": 65,
+            "max": 65
+          },
+          {
+            "tag": "Jerkin",
+            "title": "Jerkin",
+            "min": 66,
+            "max": 66
+          },
+          {
+            "tag": "Mantle",
+            "title": "Mantle",
+            "min": 67,
+            "max": 67
+          },
+          {
+            "tag": "Mask",
+            "title": "Mask",
+            "min": 68,
+            "max": 68
+          },
+          {
+            "tag": "Raiment",
+            "title": "Raiment",
+            "min": 69,
+            "max": 69
+          },
+          {
+            "tag": "Robe",
+            "title": "Robe (s)",
+            "min": 70,
+            "max": 79
+          },
+          {
+            "tag": "Sandals",
+            "title": "Sandals",
+            "min": 80,
+            "max": 80
+          },
+          {
+            "tag": "Sash",
+            "title": "Sash",
+            "min": 81,
+            "max": 81
+          },
+          {
+            "tag": "Scarf",
+            "title": "Scarf",
+            "min": 82,
+            "max": 82
+          },
+          {
+            "tag": "Shawl",
+            "title": "Shawl",
+            "min": 83,
+            "max": 83
+          },
+          {
+            "tag": "Shoes",
+            "title": "Shoes",
+            "min": 84,
+            "max": 88
+          },
+          {
+            "tag": "Skirt",
+            "title": "Skirt",
+            "min": 89,
+            "max": 89
+          },
+          {
+            "tag": "Slippers",
+            "title": "Slippers",
+            "min": 90,
+            "max": 93
+          },
+          {
+            "tag": "Surcoat",
+            "title": "Surcoat",
+            "min": 94,
+            "max": 94
+          },
+          {
+            "tag": "Trews",
+            "title": "Trews",
+            "min": 95,
+            "max": 95
+          },
+          {
+            "tag": "Trousers",
+            "title": "Trousers",
+            "min": 96,
+            "max": 96
+          },
+          {
+            "tag": "Tunic",
+            "title": "Tunic",
+            "min": 97,
+            "max": 97
+          },
+          {
+            "tag": "Veil",
+            "title": "Veil",
+            "min": 98,
+            "max": 98
+          },
+          {
+            "tag": "Vestment",
+            "title": "Vestment",
+            "min": 99,
+            "max": 99
+          },
+          {
+            "tag": "Wrap",
+            "title": "Wrap",
+            "min": 100,
+            "max": 100
+          }
+        ]
+      },
+      {
+        "tag": "magic_jewelry",
+        "dice": "d100",
+        "variants": [
+          {
+            "tag": "Amulet",
+            "title": "Amulet",
+            "min": 1,
+            "max": 10
+          },
+          {
+            "tag": "Anklet",
+            "title": "Anklet",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "tag": "Armband",
+            "title": "Armband",
+            "min": 12,
+            "max": 12
+          },
+          {
+            "tag": "Armlet",
+            "title": "Armlet",
+            "min": 13,
+            "max": 13
+          },
+          {
+            "tag": "Band",
+            "title": "Band",
+            "min": 14,
+            "max": 18
+          },
+          {
+            "tag": "Bangle",
+            "title": "Bangle",
+            "min": 19,
+            "max": 19
+          },
+          {
+            "tag": "Bauble",
+            "title": "Bauble",
+            "min": 20,
+            "max": 20
+          },
+          {
+            "tag": "Bracelet",
+            "title": "Bracelet",
+            "min": 21,
+            "max": 25
+          },
+          {
+            "tag": "Brooch",
+            "title": "Brooch",
+            "min": 26,
+            "max": 26
+          },
+          {
+            "tag": "Buckle",
+            "title": "Buckle",
+            "min": 27,
+            "max": 27
+          },
+          {
+            "tag": "Charm",
+            "title": "Charm",
+            "min": 28,
+            "max": 28
+          },
+          {
+            "tag": "Choker",
+            "title": "Choker",
+            "min": 29,
+            "max": 29
+          },
+          {
+            "tag": "Circlet",
+            "title": "Circlet",
+            "min": 30,
+            "max": 30
+          },
+          {
+            "tag": "Collar",
+            "title": "Collar",
+            "min": 31,
+            "max": 31
+          },
+          {
+            "tag": "Crown",
+            "title": "Crown",
+            "min": 32,
+            "max": 36
+          },
+          {
+            "tag": "Diadem",
+            "title": "Diadem",
+            "min": 37,
+            "max": 37
+          },
+          {
+            "tag": "Earrings",
+            "title": "Earrings",
+            "min": 38,
+            "max": 38
+          },
+          {
+            "tag": "Figurine",
+            "title": "Figurine",
+            "min": 39,
+            "max": 39
+          },
+          {
+            "tag": "Fillet",
+            "title": "Fillet",
+            "min": 40,
+            "max": 40
+          },
+          {
+            "tag": "Garland",
+            "title": "Garland",
+            "min": 41,
+            "max": 41
+          },
+          {
+            "tag": "Gorget",
+            "title": "Gorget",
+            "min": 42,
+            "max": 42
+          },
+          {
+            "tag": "Headband",
+            "title": "Headband",
+            "min": 43,
+            "max": 43
+          },
+          {
+            "tag": "Icon",
+            "title": "Icon",
+            "min": 44,
+            "max": 44
+          },
+          {
+            "tag": "Idol",
+            "title": "Idol",
+            "min": 45,
+            "max": 45
+          },
+          {
+            "tag": "Locket",
+            "title": "Locket",
+            "min": 46,
+            "max": 46
+          },
+          {
+            "tag": "Loop",
+            "title": "Loop",
+            "min": 47,
+            "max": 47
+          },
+          {
+            "tag": "Medallion",
+            "title": "Medallion",
+            "min": 48,
+            "max": 48
+          },
+          {
+            "tag": "Necklace",
+            "title": "Necklace",
+            "min": 49,
+            "max": 59
+          },
+          {
+            "tag": "Nosering",
+            "title": "Nosering",
+            "min": 60,
+            "max": 60
+          },
+          {
+            "tag": "Ornament",
+            "title": "Ornament",
+            "min": 61,
+            "max": 61
+          },
+          {
+            "tag": "Pendant",
+            "title": "Pendant",
+            "min": 62,
+            "max": 62
+          },
+          {
+            "tag": "Pin",
+            "title": "Pin",
+            "min": 63,
+            "max": 63
+          },
+          {
+            "tag": "Prize",
+            "title": "Prize",
+            "min": 64,
+            "max": 64
+          },
+          {
+            "tag": "Regalia",
+            "title": "Regalia",
+            "min": 65,
+            "max": 65
+          },
+          {
+            "tag": "Ring",
+            "title": "Ring",
+            "min": 66,
+            "max": 95
+          },
+          {
+            "tag": "Signet",
+            "title": "Signet",
+            "min": 96,
+            "max": 96
+          },
+          {
+            "tag": "Talisman",
+            "title": "Talisman",
+            "min": 97,
+            "max": 97
+          },
+          {
+            "tag": "Tiara",
+            "title": "Tiara",
+            "min": 98,
+            "max": 98
+          },
+          {
+            "tag": "Treasure",
+            "title": "Treasure",
+            "min": 99,
+            "max": 99
+          },
+          {
+            "tag": "Trinket",
+            "title": "Trinket",
+            "min": 100,
+            "max": 100
+          }
+        ]
+      },
+      {
+        "tag": "magic_wand",
+        "dice": "d100",
+        "variants": [
+          {
+            "tag": "Baton",
+            "title": "Baton",
+            "min": 1,
+            "max": 5
+          },
+          {
+            "tag": "Cane",
+            "title": "Cane",
+            "min": 6,
+            "max": 10
+          },
+          {
+            "tag": "Crook",
+            "title": "Crook",
+            "min": 11,
+            "max": 15
+          },
+          {
+            "tag": "Rod",
+            "title": "Rod",
+            "min": 16,
+            "max": 30
+          },
+          {
+            "tag": "Scepter",
+            "title": "Scepter",
+            "min": 31,
+            "max": 40
+          },
+          {
+            "tag": "Staff",
+            "title": "Staff",
+            "min": 41,
+            "max": 70
+          },
+          {
+            "tag": "Stick",
+            "title": "Stick",
+            "min": 71,
+            "max": 75
+          },
+          {
+            "tag": "Wand",
+            "title": "Wand",
+            "min": 76,
+            "max": 100
+          }
+        ]
+      },
+      {
+        "tag": "magic_weapon",
+        "dice": "d100",
+        "variants": [
+          {
+            "tag": "Ally",
+            "title": "Ally",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "Arrow",
+            "title": "Arrow (s)",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "Axe",
+            "title": "Axe",
+            "min": 3,
+            "max": 7
+          },
+          {
+            "tag": "Bane",
+            "title": "Bane",
+            "min": 8,
+            "max": 8
+          },
+          {
+            "tag": "Battle_Axe",
+            "title": "Battle Axe",
+            "min": 9,
+            "max": 9
+          },
+          {
+            "tag": "Blade",
+            "title": "Blade",
+            "min": 10,
+            "max": 14
+          },
+          {
+            "tag": "Bludgeon",
+            "title": "Bludgeon",
+            "min": 15,
+            "max": 15
+          },
+          {
+            "tag": "Bolt",
+            "title": "Bolt (s)",
+            "min": 16,
+            "max": 16
+          },
+          {
+            "tag": "Bow",
+            "title": "Bow",
+            "min": 17,
+            "max": 21
+          },
+          {
+            "tag": "Brand",
+            "title": "Brand",
+            "min": 22,
+            "max": 22
+          },
+          {
+            "tag": "Club",
+            "title": "Club",
+            "min": 23,
+            "max": 23
+          },
+          {
+            "tag": "Companion",
+            "title": "Companion",
+            "min": 24,
+            "max": 24
+          },
+          {
+            "tag": "Crossbow",
+            "title": "Crossbow",
+            "min": 25,
+            "max": 25
+          },
+          {
+            "tag": "Cudgel",
+            "title": "Cudgel",
+            "min": 26,
+            "max": 26
+          },
+          {
+            "tag": "Curse",
+            "title": "Curse",
+            "min": 27,
+            "max": 27
+          },
+          {
+            "tag": "Dagger",
+            "title": "Dagger",
+            "min": 28,
+            "max": 32
+          },
+          {
+            "tag": "Dart",
+            "title": "Dart (s)",
+            "min": 33,
+            "max": 33
+          },
+          {
+            "tag": "Edge",
+            "title": "Edge",
+            "min": 34,
+            "max": 34
+          },
+          {
+            "tag": "Flail",
+            "title": "Flail",
+            "min": 35,
+            "max": 35
+          },
+          {
+            "tag": "Friend",
+            "title": "Friend",
+            "min": 36,
+            "max": 36
+          },
+          {
+            "tag": "Glaive",
+            "title": "Glaive",
+            "min": 37,
+            "max": 37
+          },
+          {
+            "tag": "Great_Axe",
+            "title": "Great Axe",
+            "min": 38,
+            "max": 38
+          },
+          {
+            "tag": "Great_Hammer",
+            "title": "Great Hammer",
+            "min": 39,
+            "max": 39
+          },
+          {
+            "tag": "Great_Sword",
+            "title": "Great Sword",
+            "min": 40,
+            "max": 40
+          },
+          {
+            "tag": "Halberd",
+            "title": "Halberd",
+            "min": 41,
+            "max": 41
+          },
+          {
+            "tag": "Hammer",
+            "title": "Hammer",
+            "min": 42,
+            "max": 46
+          },
+          {
+            "tag": "Hatchet",
+            "title": "Hatchet",
+            "min": 47,
+            "max": 47
+          },
+          {
+            "tag": "Javelin",
+            "title": "Javelin",
+            "min": 48,
+            "max": 48
+          },
+          {
+            "tag": "Knife",
+            "title": "Knife",
+            "min": 49,
+            "max": 53
+          },
+          {
+            "tag": "Lance",
+            "title": "Lance",
+            "min": 54,
+            "max": 54
+          },
+          {
+            "tag": "Longaxe",
+            "title": "Longaxe",
+            "min": 55,
+            "max": 55
+          },
+          {
+            "tag": "Longbow",
+            "title": "Longbow",
+            "min": 56,
+            "max": 56
+          },
+          {
+            "tag": "Longsword",
+            "title": "Longsword",
+            "min": 57,
+            "max": 57
+          },
+          {
+            "tag": "Mace",
+            "title": "Mace",
+            "min": 58,
+            "max": 62
+          },
+          {
+            "tag": "Maul",
+            "title": "Maul",
+            "min": 63,
+            "max": 63
+          },
+          {
+            "tag": "Morning_Star",
+            "title": "Morning Star",
+            "min": 64,
+            "max": 64
+          },
+          {
+            "tag": "Nail",
+            "title": "Nail",
+            "min": 65,
+            "max": 65
+          },
+          {
+            "tag": "Pick",
+            "title": "Pick",
+            "min": 66,
+            "max": 66
+          },
+          {
+            "tag": "Pike",
+            "title": "Pike",
+            "min": 67,
+            "max": 67
+          },
+          {
+            "tag": "Quarterstaff",
+            "title": "Quarterstaff",
+            "min": 68,
+            "max": 68
+          },
+          {
+            "tag": "Saber",
+            "title": "Saber",
+            "min": 69,
+            "max": 69
+          },
+          {
+            "tag": "Scourge",
+            "title": "Scourge",
+            "min": 70,
+            "max": 70
+          },
+          {
+            "tag": "Shortbow",
+            "title": "Shortbow",
+            "min": 71,
+            "max": 71
+          },
+          {
+            "tag": "Shortsword",
+            "title": "Shortsword",
+            "min": 72,
+            "max": 76
+          },
+          {
+            "tag": "Sling",
+            "title": "Sling",
+            "min": 77,
+            "max": 77
+          },
+          {
+            "tag": "Sparth",
+            "title": "Sparth",
+            "min": 78,
+            "max": 78
+          },
+          {
+            "tag": "Spear",
+            "title": "Spear",
+            "min": 79,
+            "max": 83
+          },
+          {
+            "tag": "Spike",
+            "title": "Spike",
+            "min": 84,
+            "max": 84
+          },
+          {
+            "tag": "Sword",
+            "title": "Sword",
+            "min": 85,
+            "max": 99
+          },
+          {
+            "tag": "Warhammer",
+            "title": "Warhammer",
+            "min": 100,
+            "max": 100
+          }
+        ]
+      },
+      {
+        "tag": "magic_armor",
+        "dice": "d100",
+        "variants": [
+          {
+            "tag": "Aegis",
+            "title": "Aegis",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "tag": "Bastion",
+            "title": "Bastion",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "tag": "Bracers",
+            "title": "Bracers",
+            "min": 3,
+            "max": 12
+          },
+          {
+            "tag": "Breastplate",
+            "title": "Breastplate",
+            "min": 13,
+            "max": 13
+          },
+          {
+            "tag": "Buckler",
+            "title": "Buckler",
+            "min": 14,
+            "max": 18
+          },
+          {
+            "tag": "Chainmail",
+            "title": "Chainmail",
+            "min": 19,
+            "max": 23
+          },
+          {
+            "tag": "Defense",
+            "title": "Defense",
+            "min": 24,
+            "max": 24
+          },
+          {
+            "tag": "Gauntlets",
+            "title": "Gauntlets",
+            "min": 25,
+            "max": 34
+          },
+          {
+            "tag": "Greaves",
+            "title": "Greaves",
+            "min": 35,
+            "max": 35
+          },
+          {
+            "tag": "Guard",
+            "title": "Guard",
+            "min": 36,
+            "max": 36
+          },
+          {
+            "tag": "Helm",
+            "title": "Helm",
+            "min": 37,
+            "max": 46
+          },
+          {
+            "tag": "Helmet",
+            "title": "Helmet",
+            "min": 47,
+            "max": 51
+          },
+          {
+            "tag": "Iron",
+            "title": "Iron",
+            "min": 52,
+            "max": 52
+          },
+          {
+            "tag": "Leather",
+            "title": "Leather",
+            "min": 53,
+            "max": 62
+          },
+          {
+            "tag": "Mail",
+            "title": "Mail",
+            "min": 63,
+            "max": 69
+          },
+          {
+            "tag": "Plate",
+            "title": "Plate",
+            "min": 70,
+            "max": 70
+          },
+          {
+            "tag": "Scale",
+            "title": "Scale",
+            "min": 71,
+            "max": 75
+          },
+          {
+            "tag": "Shell",
+            "title": "Shell",
+            "min": 76,
+            "max": 76
+          },
+          {
+            "tag": "Shield",
+            "title": "Shield",
+            "min": 77,
+            "max": 94
+          },
+          {
+            "tag": "Skin",
+            "title": "Skin",
+            "min": 95,
+            "max": 95
+          },
+          {
+            "tag": "Steel",
+            "title": "Steel",
+            "min": 96,
+            "max": 96
+          },
+          {
+            "tag": "Vambraces",
+            "title": "Vambraces",
+            "min": 97,
+            "max": 97
+          },
+          {
+            "tag": "Visor",
+            "title": "Visor",
+            "min": 98,
+            "max": 98
+          },
+          {
+            "tag": "Wall",
+            "title": "Wall",
+            "min": 99,
+            "max": 99
+          },
+          {
+            "tag": "Ward",
+            "title": "Ward",
+            "min": 100,
+            "max": 100
           }
         ]
       },
@@ -31528,13 +34438,13 @@
         "dice": "d12",
         "variants": [
           {
-            "tag": "element_form",
-            "title": "[ELEMENT] [FORM]",
+            "tag": "noun_form",
+            "title": "[NOUN] [FORM]",
             "min": 1,
             "max": 2,
             "template": [
               {
-                "generate_outer": "miscellaneous.spell_name.element"
+                "generate_outer": "miscellaneous.spell_name.noun"
               },
               {
                 "generate_outer": "miscellaneous.spell_name.form"
@@ -31556,8 +34466,8 @@
             ]
           },
           {
-            "tag": "adjective_element",
-            "title": "[ADJECTIVE] [ELEMENT]",
+            "tag": "adjective_noun",
+            "title": "[ADJECTIVE] [NOUN]",
             "min": 5,
             "max": 6,
             "template": [
@@ -31565,13 +34475,13 @@
                 "generate_outer": "miscellaneous.spell_name.adjective"
               },
               {
-                "generate_outer": "miscellaneous.spell_name.element"
+                "generate_outer": "miscellaneous.spell_name.noun"
               }
             ]
           },
           {
-            "tag": "form_of_element",
-            "title": "[FORM] of [ELEMENT]",
+            "tag": "form_of_noun",
+            "title": "[FORM] of [NOUN]",
             "min": 7,
             "max": 7,
             "template": [
@@ -31582,13 +34492,13 @@
                 "static": "of"
               },
               {
-                "generate_outer": "miscellaneous.spell_name.element"
+                "generate_outer": "miscellaneous.spell_name.noun"
               }
             ]
           },
           {
-            "tag": "form_of_adjective_element",
-            "title": "[FORM] of [ADJECTIVE] [ELEMENT]",
+            "tag": "form_of_adjective_noun",
+            "title": "[FORM] of [ADJECTIVE] [NOUN]",
             "min": 8,
             "max": 8,
             "template": [
@@ -31602,7 +34512,7 @@
                 "generate_outer": "miscellaneous.spell_name.adjective"
               },
               {
-                "generate_outer": "miscellaneous.spell_name.element"
+                "generate_outer": "miscellaneous.spell_name.noun"
               }
             ]
           },
@@ -31632,8 +34542,8 @@
             ]
           },
           {
-            "tag": "wizard_adjective_element",
-            "title": "[WIZARD]'s [ADJECTIVE] [ELEMENT]",
+            "tag": "wizard_adjective_noun",
+            "title": "[WIZARD]'s [ADJECTIVE] [NOUN]",
             "min": 10,
             "max": 10,
             "template": [
@@ -31652,13 +34562,13 @@
                 "generate_outer": "miscellaneous.spell_name.adjective"
               },
               {
-                "generate_outer": "miscellaneous.spell_name.element"
+                "generate_outer": "miscellaneous.spell_name.noun"
               }
             ]
           },
           {
-            "tag": "wizard_adjective_element",
-            "title": "[WIZARD]'s [FORM] of [ELEMENT]",
+            "tag": "wizard_adjective_noun",
+            "title": "[WIZARD]'s [FORM] of [NOUN]",
             "min": 11,
             "max": 12,
             "template": [
@@ -31680,13 +34590,13 @@
                 "static": "of"
               },
               {
-                "generate_outer": "miscellaneous.spell_name.element"
+                "generate_outer": "miscellaneous.spell_name.noun"
               }
             ]
           },
           {
-            "tag": "wizard_element_form",
-            "title": "[WIZARD]'s [ELEMENT] [FORM]",
+            "tag": "wizard_noun_form",
+            "title": "[WIZARD]'s [NOUN] [FORM]",
             "min": 12,
             "max": 12,
             "template": [
@@ -31702,7 +34612,7 @@
                 "concatenate": true
               },
               {
-                "generate_outer": "miscellaneous.spell_name.element"
+                "generate_outer": "miscellaneous.spell_name.noun"
               },
               {
                 "generate_outer": "miscellaneous.spell_name.form"
@@ -32218,7 +35128,7 @@
             ]
           },
           {
-            "tag": "element",
+            "tag": "noun",
             "dice": "d100",
             "variants": [
               {
