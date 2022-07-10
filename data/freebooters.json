@@ -17997,11 +17997,12 @@
                 "min": 1,
                 "max": 3,
                 "additional": [
-                  "booty.magic_miscellaneous",
+                  "booty.magic_miscellaneous_form",
                   "booty.magic_item_name",
                   "booty.magic_power",
                   {
                     "tag": "value",
+                    "title": "Base Value (in sp)",
                     "vars": {
                       "$rollResultMultiply": "10"
                     },
@@ -18022,6 +18023,7 @@
                   },
                   {
                     "tag": "value",
+                    "title": "Base Value (in sp)",
                     "static": "10"
                   }
                 ]
@@ -18032,7 +18034,7 @@
                 "min": 6,
                 "max": 8,
                 "additional": [
-                  "booty.magic_potion",
+                  "booty.magic_potion_form",
                   "booty.magic_item_name",
                   "booty.magic_power",
                   {
@@ -18041,6 +18043,7 @@
                   },
                   {
                     "tag": "value",
+                    "title": "Base Value (in sp)",
                     "static": "10 per use"
                   }
                 ]
@@ -18051,12 +18054,13 @@
                 "min": 9,
                 "max": 10,
                 "additional": [
-                  "booty.garb",
+                  "booty.magic_garb_form",
                   "booty.magic_item_name",
                   "booty.magic_power",
                   {
                     "tag": "value",
-                    "roll_result": "$dice+$dice"
+                    "title": "Base Value (in sp)",
+                    "roll_result": "2$dice"
                   }
                 ]
               },
@@ -18066,15 +18070,16 @@
                 "min": 11,
                 "max": 12,
                 "additional": [
-                  "booty.jewelry",
+                  "booty.magic_jewelry_form",
                   "booty.magic_item_name",
                   "booty.magic_power",
                   {
                     "tag": "value",
+                    "title": "Base Value (in sp)",
                     "vars": {
                       "$rollResultMultiply": "5"
                     },
-                    "roll_result": "$dice+$dice"
+                    "roll_result": "2$dice"
                   }
                 ]
               },
@@ -18084,15 +18089,16 @@
                 "min": 13,
                 "max": 14,
                 "additional": [
-                  "booty.wand",
+                  "booty.magic_wand_form",
                   "booty.magic_item_name",
                   "booty.magic_power",
                   {
                     "tag": "uses",
-                    "roll_result": "$dice+$dice"
+                    "roll_result": "2$dice"
                   },
                   {
                     "tag": "value",
+                    "title": "Base Value (in sp)",
                     "static": "15"
                   }
                 ]
@@ -18103,11 +18109,12 @@
                 "min": 15,
                 "max": 17,
                 "additional": [
-                  "booty.magic_weapon",
+                  "booty.magic_weapon_form",
                   "booty.magic_item_name",
                   "booty.magic_power",
                   {
                     "tag": "value",
+                    "title": "Base Value (in sp)",
                     "static": "(market value) x2"
                   }
                 ]
@@ -18115,14 +18122,15 @@
               {
                 "tag": "armor",
                 "title": "<i>Magical</i> ARMOR",
-                "min": 19,
+                "min": 18,
                 "max": 20,
                 "additional": [
-                  "booty.magic_armor",
+                  "booty.magic_armor_form",
                   "booty.magic_item_name",
                   "booty.magic_power",
                   {
                     "tag": "value",
+                    "title": "Base Value (in sp)",
                     "static": "(market value) x2"
                   }
                 ]
@@ -18314,7 +18322,7 @@
           },
           {
             "tag": "wizard_noun_item",
-            "title": "[WIZARD]'s [NOUN] [ITEM]",
+            "title": "[WIZARD]'s [NOUN] [FORM]",
             "min": 12,
             "max": 12,
             "template": [
@@ -18333,7 +18341,8 @@
                 "generate_outer": "booty.magic_item_name.noun"
               },
               {
-                "static": "[ITEM]"
+                "generate_outer": "miscellaneous.spell_name.form",
+                "concatenate": true
               }
             ]
           }
@@ -19359,7 +19368,7 @@
         ]
       },
       {
-        "tag": "magic_miscellaneous",
+        "tag": "magic_miscellaneous_form",
         "dice": "d100",
         "variants": [
           {
@@ -19968,7 +19977,7 @@
         ]
       },
       {
-        "tag": "magic_potion",
+        "tag": "magic_potion_form",
         "dice": "d100",
         "variants": [
           {
@@ -20076,7 +20085,7 @@
         ]
       },
       {
-        "tag": "magic_garb",
+        "tag": "magic_garb_form",
         "dice": "d100",
         "variants": [
           {
@@ -20310,7 +20319,7 @@
         ]
       },
       {
-        "tag": "magic_jewelry",
+        "tag": "magic_jewelry_form",
         "dice": "d100",
         "variants": [
           {
@@ -20556,7 +20565,7 @@
         ]
       },
       {
-        "tag": "magic_wand",
+        "tag": "magic_wand_form",
         "dice": "d100",
         "variants": [
           {
@@ -20610,7 +20619,7 @@
         ]
       },
       {
-        "tag": "magic_weapon",
+        "tag": "magic_weapon_form",
         "dice": "d100",
         "variants": [
           {
@@ -20916,7 +20925,7 @@
         ]
       },
       {
-        "tag": "magic_armor",
+        "tag": "magic_armor_form",
         "dice": "d100",
         "variants": [
           {
