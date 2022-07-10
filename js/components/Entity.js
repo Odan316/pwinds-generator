@@ -539,7 +539,7 @@ define([
             let customDice = $("#diceRollerCache").val();
 
             if (!_.isEmpty(customDice)) {
-                formula = _.replace(formula,"$dice",customDice);
+                formula = _.replace(formula, new RegExp('\\$dice', 'g'), customDice);
             }
 
             return formula;
@@ -628,7 +628,7 @@ define([
 
             let customDice = $("#diceRollerCache").val();
             if (!_.isEmpty(customDice)) {
-                formula = _.replace(formula,"$dice",customDice);
+                formula = _.replace(formula, new RegExp('\\$dice', 'g'), customDice);
             }
 
             let dice = new Dice();
