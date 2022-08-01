@@ -16275,7 +16275,7 @@
           },
           {
             "tag": "booty_7",
-            "title": "Nutriment worth (HP) uses of rations",
+            "title": "Nutriment worth (HP/2) uses of rations",
             "min": 7,
             "max": 7
           },
@@ -16290,7 +16290,7 @@
           },
           {
             "tag": "booty_9",
-            "title": "Nutriment worth (HP) rations",
+            "title": "Nutriment worth (HP/2) rations",
             "min": 9,
             "max": 9
           },
@@ -16456,24 +16456,24 @@
           },
           {
             "tag": "booty_5",
-            "title": "GEM",
+            "title": "GEM x1d4",
             "min": 5,
             "max": 5,
             "additional": [
-              "booty.gem"
+              {
+                "tag": "gem",
+                "repeat": "d4",
+                "generate_outer": "booty.gem"
+              }
             ]
           },
           {
             "tag": "booty_6",
-            "title": "JEWELRY x1d4",
+            "title": "JEWELRY",
             "min": 6,
             "max": 6,
             "additional": [
-              {
-                "tag": "jewelry",
-                "repeat": "d4",
-                "generate_outer": "booty.jewelry"
-              }
+              "booty.jewelry"
             ]
           },
           {
@@ -17378,61 +17378,61 @@
             "tag": "earrings",
             "title": "earrings/studs, multiply base value by 0.5",
             "min": 1,
-            "max": 1
+            "max": 2
           },
           {
             "tag": "locket",
             "title": "locket/charm/brooch/pin, multiply base value by 0.5",
-            "min": 2,
-            "max": 2
+            "min": 3,
+            "max": 4
           },
           {
             "tag": "ring",
             "title": "ring, multiply value by 0.5",
-            "min": 4,
-            "max": 4
+            "min": 5,
+            "max": 8
           },
           {
             "tag": "bracelet",
             "title": "Bracelet/anklet/armband, multiply base value by 1",
-            "min": 5,
-            "max": 5
+            "min": 9,
+            "max": 10
           },
           {
             "tag": "necklace",
             "title": "necklace/amulet/periapt, multiply base value by 1",
-            "min": 6,
-            "max": 6
+            "min": 11,
+            "max": 13
           },
           {
             "tag": "box",
             "title": "box/case/canister, multiply base value by 1",
-            "min": 8,
-            "max": 8
+            "min": 14,
+            "max": 14
           },
           {
             "tag": "Belt",
             "title": "belt/girdle/harness, multiply base value by 1",
-            "min": 7,
-            "max": 7
+            "min": 15,
+            "max": 15
           },
           {
             "tag": "idol",
             "title": "idol/icon/symbol/insignia, multiply base value by 1",
-            "min": 6,
-            "max": 6
+            "min": 16,
+            "max": 16
           },
           {
             "tag": "scepter",
             "title": "scepter/orb/staff/rod, multiply base value by 2",
-            "min": 9,
-            "max": 9
+            "min": 17,
+            "max": 17
           },
           {
             "tag": "weapon",
             "title": "Jeweled/gilded WEAPON, multiply base value by 3",
-            "min": 11,
-            "max": 11,
+            "min": 18,
+            "max": 18,
             "additional": [
               "booty.weapon"
             ]
@@ -17440,8 +17440,8 @@
           {
             "tag": "armor",
             "title": "Jeweled/gilded ARMOR, multiply base value by 3",
-            "min": 10,
-            "max": 10,
+            "min": 19,
+            "max": 19,
             "additional": [
               "booty.armor"
             ]
@@ -17449,8 +17449,8 @@
           {
             "tag": "circlet",
             "title": "circlet/tiara/crown/diadem, multiply base value by 4",
-            "min": 12,
-            "max": 12
+            "min": 20,
+            "max": 20
           }
         ],
         "additional": [
