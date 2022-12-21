@@ -11661,7 +11661,7 @@
                   {
                     "tag": "double",
                     "title": "Double subject",
-                    "min": 12,
+                    "min": 11,
                     "max": 12,
                     "additional": [
                       [
